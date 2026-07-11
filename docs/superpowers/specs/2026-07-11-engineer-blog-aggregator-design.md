@@ -43,15 +43,15 @@ One language (TypeScript) end to end. Vitest is the test runner for both package
 
 ```ts
 interface Article {
-  id: string;                // sha1 of normalized URL — stable dedup key
+  id: string; // sha1 of normalized URL — stable dedup key
   title: string;
   url: string;
-  source: string;            // source id, e.g. "meta"
-  publishedAt: string;       // ISO 8601
-  tags: string[];            // from RSS categories or scraped labels; may be empty
-  summary: string;           // RSS description, HTML-stripped, truncated to ~300 chars
-  thumbnail: string | null;  // cover image URL if the feed provides one
-  fetchedAt: string;         // ISO 8601, first time this article was seen
+  source: string; // source id, e.g. "meta"
+  publishedAt: string; // ISO 8601
+  tags: string[]; // from RSS categories or scraped labels; may be empty
+  summary: string; // RSS description, HTML-stripped, truncated to ~300 chars
+  thumbnail: string | null; // cover image URL if the feed provides one
+  fetchedAt: string; // ISO 8601, first time this article was seen
 }
 ```
 
@@ -74,9 +74,9 @@ fragment, strip trailing slash. Query parameters are kept as-is in v1.
 
 ```ts
 interface Source {
-  id: string;                          // "google", "meta", ...
-  name: string;                        // "Meta Engineering"
-  fetch: () => Promise<Article[]>;     // daily strategy (RSS for all v1 sources)
+  id: string; // "google", "meta", ...
+  name: string; // "Meta Engineering"
+  fetch: () => Promise<Article[]>; // daily strategy (RSS for all v1 sources)
   backfill?: () => Promise<Article[]>; // optional one-time archive scraper
 }
 ```
@@ -91,13 +91,13 @@ Two building blocks compose per source:
 
 ### Starter sources (v1)
 
-| id      | Blog                              | Daily fetch | Backfill scraper            |
-|---------|-----------------------------------|-------------|-----------------------------|
-| google  | developers.googleblog.com         | RSS         | Yes — paginated archive     |
-| meta    | engineering.fb.com                | RSS         | Yes — WordPress archive     |
-| netflix | netflixtechblog.com (Medium)      | RSS         | No — Medium blocks scraping |
-| uber    | uber.com/blog/engineering         | RSS         | Yes — paginated listing     |
-| airbnb  | medium.com/airbnb-engineering     | RSS         | No — Medium blocks scraping |
+| id      | Blog                          | Daily fetch | Backfill scraper            |
+| ------- | ----------------------------- | ----------- | --------------------------- |
+| google  | developers.googleblog.com     | RSS         | Yes — paginated archive     |
+| meta    | engineering.fb.com            | RSS         | Yes — WordPress archive     |
+| netflix | netflixtechblog.com (Medium)  | RSS         | No — Medium blocks scraping |
+| uber    | uber.com/blog/engineering     | RSS         | Yes — paginated listing     |
+| airbnb  | medium.com/airbnb-engineering | RSS         | No — Medium blocks scraping |
 
 Exact feed URLs are verified during implementation; if a listed feed has moved,
 the working feed for the same blog is substituted.
@@ -139,6 +139,7 @@ built from pure functions, unit-testable without mounting components.
 ## Workflows
 
 ### `fetch.yml` — daily
+
 - Triggers: cron at 02:00 UTC + `workflow_dispatch`.
 - Steps: checkout → install → run scraper over all sources → if `data/` changed,
   commit (`data: fetch 2026-07-11 (+12 articles)`) and push to `main`.
@@ -147,15 +148,18 @@ built from pure functions, unit-testable without mounting components.
   GitHub App token is used instead).
 
 ### `backfill.yml` — manual only
+
 - Trigger: `workflow_dispatch` with a `source` input.
 - Runs that source's `backfill()` scraper and commits results the same way.
 - Never runs on cron — keeps daily runs fast and polite to target sites.
 
 ### `deploy.yml`
+
 - Trigger: push to `main` (including data commits from the fetch workflow).
 - Steps: merge per-source JSON → build Vue app → deploy via `actions/deploy-pages`.
 
 ### `ci.yml` — quality checks
+
 - Trigger: push to `main` and pull requests. Skipped for data-only commits from the
   fetch bot (paths filter excludes `data/**`).
 - Checks, each a separate step so failures are easy to read (oxc toolchain
@@ -177,7 +181,7 @@ built from pure functions, unit-testable without mounting components.
   source logs the error, leaves its existing data untouched, and the run continues.
 - **Job summary:** the fetch workflow writes a per-source result table
   (fetched / new / failed) to the GitHub Actions job summary.
-- **Run status:** the workflow fails (red X) only if *every* source fails —
+- **Run status:** the workflow fails (red X) only if _every_ source fails —
   systemic problems are visible, per-source flakiness is not noisy.
 - **Breakage guard:** if a previously healthy source returns 0 articles, log a
   warning and keep existing data — never wipe a source's archive.
