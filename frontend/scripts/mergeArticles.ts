@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url";
 import type { Article } from "../src/types.js";
 
 export function mergeArticleFiles(perSource: Article[][]): Article[] {
-  return perSource.flat().sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt));
+  return perSource.flat().toSorted((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt));
 }
 
 async function main(): Promise<void> {

@@ -84,7 +84,7 @@ export function parseGrabArchivePage(html: string, pageUrl: string): ArchivePage
       dateAttr && !Number.isNaN(Date.parse(dateAttr)) ? new Date(dateAttr).toISOString() : "";
     const tags = post
       .find("span.post-card-tag")
-      .map((_i, tag) => $(tag).text().trim())
+      .map((_j, tag) => $(tag).text().trim())
       .get()
       .filter(Boolean);
 

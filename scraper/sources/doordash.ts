@@ -71,7 +71,7 @@ export function parseDoordashArchivePage(json: string, pageUrl: string): Archive
   const articles: Article[] = posts
     .filter((post) => post.link && post.title?.rendered)
     .map((post) => {
-      const categories = (post._embedded?.["wp:term"] ?? [])
+      const categories = (post["_embedded"]?.["wp:term"] ?? [])
         .flat()
         .filter((term) => term.taxonomy === "category")
         .map((term) => term.name);

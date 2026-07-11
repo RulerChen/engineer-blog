@@ -66,13 +66,13 @@ function countBy(keys: string[]): Map<string, number> {
 export function companyCounts(articles: Article[]): { id: string; count: number }[] {
   return [...countBy(articles.map((a) => a.source))]
     .map(([id, count]) => ({ id, count }))
-    .sort((a, b) => b.count - a.count || a.id.localeCompare(b.id));
+    .toSorted((a, b) => b.count - a.count || a.id.localeCompare(b.id));
 }
 
 export function topTags(articles: Article[], limit = 30): { tag: string; count: number }[] {
   return [...countBy(articles.flatMap((a) => a.tags))]
     .map(([tag, count]) => ({ tag, count }))
-    .sort((a, b) => b.count - a.count || a.tag.localeCompare(b.tag))
+    .toSorted((a, b) => b.count - a.count || a.tag.localeCompare(b.tag))
     .slice(0, limit);
 }
 

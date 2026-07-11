@@ -10,5 +10,7 @@ export function merge(existing: Article[], fetched: Article[]): Article[] {
     const prior = byId.get(incoming.id);
     byId.set(incoming.id, prior ? { ...incoming, fetchedAt: prior.fetchedAt } : incoming);
   }
-  return [...byId.values()].sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt));
+  return [...byId.values()].toSorted(
+    (a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt),
+  );
 }
