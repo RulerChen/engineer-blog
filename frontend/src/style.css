@@ -38,15 +38,20 @@
 * {
   box-sizing: border-box;
 }
+*,
+*::before,
+*::after {
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
 html,
 body {
   margin: 0;
   padding: 0;
   background: var(--bg);
   color: var(--ink);
-  transition:
-    background 0.25s ease,
-    color 0.25s ease;
 }
 a {
   color: var(--ink);
@@ -396,6 +401,9 @@ input::placeholder {
   align-items: flex-start;
   box-shadow: var(--shadow);
   transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
     box-shadow 0.2s ease,
     transform 0.2s ease;
 }
