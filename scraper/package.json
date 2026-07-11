@@ -1,0 +1,17 @@
+{
+  "name": "scraper",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "fetch": "tsx src/cli.ts fetch",
+    "backfill": "tsx src/cli.ts backfill"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "tsx": "^4.23.0",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.10"
+  }
+}
