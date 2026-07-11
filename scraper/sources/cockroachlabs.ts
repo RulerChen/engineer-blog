@@ -18,8 +18,8 @@ import type { Source } from "../src/types.js";
  * the raw XML, not just assumed). It's already a deep archive: 100 items
  * spanning 2021-02-22 through 2026-07-08 at capture time, so no separate
  * archive scraper is needed or available — `backfill` reuses the same feed
- * fetch, same as Datadog's. Items carry no `<category>`/tag or
- * enclosure/thumbnail data.
+ * fetch, same as Datadog's. Items carry no `<category>`/tag or enclosure
+ * data.
  */
 export const cockroachlabs: Source = {
   id: "cockroachlabs",

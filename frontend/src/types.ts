@@ -7,6 +7,5 @@ export interface Article {
   publishedAt: string; // ISO 8601
   tags: string[];
   summary: string;
-  thumbnail: string | null;
   fetchedAt: string; // ISO 8601
 }

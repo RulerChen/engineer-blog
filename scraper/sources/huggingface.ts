@@ -14,7 +14,7 @@ import type { Source } from "../src/types.js";
  * its static markup). `backfill` reuses the same feed fetch rather than a
  * separate archive scraper, since there is no fuller history available
  * anywhere else on the site. Items carry no `<category>`/tag, description,
- * or enclosure/thumbnail data.
+ * or enclosure data.
  */
 export const huggingface: Source = {
   id: "huggingface",

@@ -7,7 +7,6 @@
     "publishedAt": "2026-05-26T18:13:10.000Z",
     "tags": [],
     "summary": "Etsy’s marketplace is defined by the creativity and craftsmanship of our sellers and the hundreds of millions of highly diverse products they offer. You can find silversmiths who cold-forge recycled sterling silver, weavers who dye raw fleece with indigo and black walnut, and ceramicists who throw…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:37:26.292Z"
   },
   {
@@ -18,7 +17,6 @@
     "publishedAt": "2026-03-20T18:31:56.000Z",
     "tags": [],
     "summary": "When buyers search on Etsy, they need to quickly and easily find the perfect item. At the same time, sellers need to be confident their unique products are being seen by the right customers. Our Ads Search ranking model, which is built on a multitask learning foundation, is the critical link in…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:37:26.292Z"
   },
   {
@@ -29,7 +27,6 @@
     "publishedAt": "2026-03-19T21:03:54.000Z",
     "tags": [],
     "summary": "Etsy has maintained a sharded MySQL architecture since around 2010. This database cluster contains most of Etsy’s online data and is made up of ~1,000 tables distributed across ~1,000 shards. Over the last 16 years, it has grown significantly: combined, these tables have over 425 TB of data and…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:37:26.292Z"
   },
   {
@@ -40,7 +37,6 @@
     "publishedAt": "2026-01-16T20:02:28.000Z",
     "tags": [],
     "summary": "Ever searched for something specific, only to be met with results that are close, but not quite ? On Etsy’s Search Relevance team, that frustration is exactly what we are tackling. Our goal is simple yet ambitious: to help buyers find exactly what they’re looking for, and to help sellers reach the…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:37:26.292Z"
   },
   {
@@ -51,7 +47,6 @@
     "publishedAt": "2025-11-25T16:28:26.000Z",
     "tags": [],
     "summary": "I n 2021, we published a blog post titled “ Increasing experimentation accuracy and speed by using control variates ,” describing how we reduce the variance of metrics using CUPED in our experimentation platform. This is a follow-up on how CUPED has evolved at Etsy since then. Spoiler – It’s…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:37:26.292Z"
   },
   {
@@ -62,7 +57,6 @@
     "publishedAt": "2025-10-29T17:14:09.000Z",
     "tags": [],
     "summary": "Rarely are there opportunities for big, bold, game-changing improvements in web performance. The Speculation Rules API (SRA) is a recent browser development that offers just such an opportunity. This post details a joint effort between the search and the web performance teams at Etsy to implement…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:37:26.292Z"
   },
   {
@@ -73,7 +67,6 @@
     "publishedAt": "2025-10-13T17:58:39.000Z",
     "tags": [],
     "summary": "For more than 20 years, Etsy has been the destination for human creativity online. Our marketplace is home to more than 100 million special items made, handpicked and designed by more than 5 million sellers. These items and the real people behind them are what set us apart. But while the huge…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:37:26.292Z"
   },
   {
@@ -84,7 +77,6 @@
     "publishedAt": "2025-10-08T15:32:02.000Z",
     "tags": [],
     "summary": "Imagine you have a fabulous idea to drive more sales on Etsy by giving out free ice cream with every purchase. How would you know if it will actually work? One way to test this out is to run an experiment ! An experiment is a learning tool that can help us see if a new change really affects user…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:37:26.292Z"
   },
   {
@@ -95,7 +87,6 @@
     "publishedAt": "2025-09-03T21:40:15.000Z",
     "tags": [],
     "summary": "Every day, shoppers from Etsy's community of nearly 90M buyers visit our marketplace to search for unique, handmade, and vintage items. But with over 100 million listings, how do we help each buyer find exactly what they're looking for? Traditional search and recommendation systems often fall short…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:37:26.292Z"
   },
   {
@@ -106,7 +97,6 @@
     "publishedAt": "2025-08-19T20:04:41.000Z",
     "tags": [],
     "summary": "This post investigates the benefits and limitations of prompt engineering in two instances of AI-assisted onboarding relying on large language model (LLM) technology. Of particular interest is how truthful (and therefore reliable) LLM-generated answers turn out to be in the context of Etsy-specific…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:37:26.292Z"
   },
   {
@@ -117,7 +107,6 @@
     "publishedAt": "2025-03-29T10:03:23.000Z",
     "tags": [],
     "summary": "In the past, sellers were responsible for managing and fulfilling their own tax obligations. However, more and more jurisdictions are now requiring marketplaces such as Etsy to collect the tax from buyers and remit the tax to the relevant authorities. Etsy now plays an active role in collecting tax…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:37:26.292Z"
   },
   {
@@ -128,7 +117,6 @@
     "publishedAt": "2025-01-28T15:25:11.000Z",
     "tags": [],
     "summary": "One of our Guiding Principles at Etsy is that we “commit to our craft.” This means that we have a culture of learning, in which we’re constantly looking for opportunities to improve and learn, adopt industry best practices, and share our findings with our colleagues and our community. As part of…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:37:26.292Z"
   },
   {
@@ -139,7 +127,6 @@
     "publishedAt": "2024-08-06T11:15:03.000Z",
     "tags": [],
     "summary": "At Etsy, we’re focused on elevating the best of our marketplace to help creative entrepreneurs grow their businesses. We continue to invest in making Etsy a safe and trusted place to shop, so sellers’ extraordinary items can shine. Today, there are more than 100 million unique items available for…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:37:26.292Z"
   },
   {
@@ -150,7 +137,6 @@
     "publishedAt": "2024-06-17T13:58:16.000Z",
     "tags": [],
     "summary": "In 2020, Etsy concluded its migration from an on-premise data center to the Google Cloud Platform (GCP). During this transition, a dedicated team of program managers ensured the migration's success. Post-migration, this team evolved into the Etsy FinOps team, dedicated to maximizing the…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:37:26.292Z"
   },
   {
@@ -161,7 +147,6 @@
     "publishedAt": "2024-06-07T17:23:02.000Z",
     "tags": [],
     "summary": "Etsy features a diverse marketplace of unique handmade and vintage items. It’s a visually diverse marketplace as well, and computer vision has become increasingly important to Etsy as a way of enhancing our users’ shopping experience. We’ve developed applications like visual search and visually…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:37:26.292Z"
   },
   {
@@ -172,7 +157,6 @@
     "publishedAt": "2024-03-18T16:19:15.000Z",
     "tags": [],
     "summary": "Easily the most important and complex screen in the Buy on Etsy Android app is the listing screen, where all key information about an item for sale in the Etsy marketplace is displayed to buyers. Far from just a title and description, a price and a few images, over the years the listing screen has…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:37:26.292Z"
   },
   {
@@ -183,7 +167,6 @@
     "publishedAt": "2024-03-05T22:22:54.000Z",
     "tags": [],
     "summary": "Balancing Engineering Ambition with Product Realism Introduction In July of 2023, Etsy’s App Updates team, responsible for the Updates feed in Etsy’s mobile apps, set off with an ambitious goal: to revamp the Updates tab to become Deals, a home for a shopper’s coupons and sales, in time for Cyber…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:37:26.292Z"
   },
   {
@@ -194,7 +177,6 @@
     "publishedAt": "2023-09-18T20:11:58.000Z",
     "tags": [],
     "summary": "A little while ago, Etsy introduced a new feature in its iOS app that could place Etsy sellers' artwork on a user's wall using Apple's Augmented Reality (AR) tools. It let them visualize how a piece would look in their space, and even gave them an idea of its size options. When we launched the…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:37:26.292Z"
   },
   {
@@ -205,7 +187,6 @@
     "publishedAt": "2023-09-05T19:55:41.000Z",
     "tags": [],
     "summary": "Introduction Each year, Etsy hosts an event known as “CodeMosaic” - an internal hackathon in which Etsy admin propose and build bold advances quickly in our technology across a number of different themes. People across Etsy source ideas, organize into teams, and then have 2-3 days to build…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:37:26.292Z"
   },
   {
@@ -216,7 +197,6 @@
     "publishedAt": "2023-07-14T19:54:41.000Z",
     "tags": [],
     "summary": "Introduction Personalization is vital to connect our unique marketplace to the right buyer at the right time. Etsy has recently introduced a novel, general approach to personalizing ML models based on encoding and learning from short-term (one-hour) sequences of user actions through a reusable…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:37:26.292Z"
   }
 ]

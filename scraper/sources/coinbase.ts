@@ -17,7 +17,6 @@ interface ContentfulArticle {
   publicationDate?: string;
   content: {
     excerpt?: RichTextNode;
-    thumbnail?: { defaultImage?: { url?: string } };
     tags?: { name: string }[];
   };
 }
@@ -48,8 +47,8 @@ function extractText(node: RichTextNode | undefined): string {
  *
  * That page has no RSS feed and no `<time>`/date markup in its static HTML —
  * it's a Next.js app — but the initial server render embeds the full article
- * list (title, slug, ISO `publicationDate`, rich-text excerpt, thumbnail,
- * tags) as JSON inside `<script id="server-app-state" type="application/json">`,
+ * list (title, slug, ISO `publicationDate`, rich-text excerpt, tags) as JSON
+ * inside `<script id="server-app-state" type="application/json">`,
  * under `JSON.parse(state.suspenseBridgeData)[…].data.articles`. That embedded
  * list already carries a real per-article date, so no separate feed is
  * needed.
@@ -81,12 +80,6 @@ export function parseCoinbaseArchivePage(html: string, pageUrl: string): Archive
         item.publicationDate && !Number.isNaN(Date.parse(item.publicationDate))
           ? new Date(item.publicationDate).toISOString()
           : "";
-      const thumbnailUrl = item.content.thumbnail?.defaultImage?.url;
-      const thumbnail = thumbnailUrl
-        ? thumbnailUrl.startsWith("//")
-          ? `https:${thumbnailUrl}`
-          : thumbnailUrl
-        : null;
 
       return {
         id: articleId(absolute),
@@ -99,7 +92,6 @@ export function parseCoinbaseArchivePage(html: string, pageUrl: string): Archive
           "coinbase",
         ),
         summary: summarize(extractText(item.content.excerpt)),
-        thumbnail,
         fetchedAt,
       };
     });

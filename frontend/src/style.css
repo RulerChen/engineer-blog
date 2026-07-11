@@ -494,13 +494,6 @@ input::placeholder {
   font-weight: 800;
   font-size: 19px;
 }
-.article-card .thumb {
-  width: 42px;
-  height: 42px;
-  border-radius: 13px;
-  flex-shrink: 0;
-  object-fit: cover;
-}
 .article-card .body {
   flex: 1;
   min-width: 0;

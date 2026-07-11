@@ -7,7 +7,6 @@
     "publishedAt": "2026-07-09T23:55:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -18,7 +17,6 @@
     "publishedAt": "2026-07-09T16:00:00.000Z",
     "tags": [],
     "summary": "We’re asking the public for their hardest questions about AI, and committing to show our work as we address them.",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/3fe58a56e696628496e95871e00b8287035ea645-2000x1125.jpg",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -29,7 +27,6 @@
     "publishedAt": "2026-07-09T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -40,7 +37,6 @@
     "publishedAt": "2026-07-09T13:20:00.000Z",
     "tags": [],
     "summary": "Introducing a new way to reflect on and refine how you use Claude. It lets you easily track and visualize how you use Claude, and decide whether that time aligns with your goals.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -51,7 +47,6 @@
     "publishedAt": "2026-07-06T16:00:00.000Z",
     "tags": [],
     "summary": "Since 2025, the Government of Alberta has been using Claude Code with both Opus and Sonnet models to review its systems, find vulnerabilities, and fix them.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -62,7 +57,6 @@
     "publishedAt": "2026-07-02T21:07:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -75,7 +69,6 @@
       "product"
     ],
     "summary": "Sonnet 5 delivers frontier performance across coding, agents, and professional work at scale.",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/2039cc549c023bc855671308211d20d3382828a9-2880x1620.jpg",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -86,7 +79,6 @@
     "publishedAt": "2026-06-30T16:00:00.000Z",
     "tags": [],
     "summary": "Fable 5 returns globally July 1. We're also proposing an industry-wide framework for scoring jailbreak severity, together with Amazon, Microsoft, Google, and other Glasswing partners.",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/b7055119423427c40a0e4d84054aed17682b50a2-2880x1620.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -97,7 +89,6 @@
     "publishedAt": "2026-06-30T15:07:00.000Z",
     "tags": [],
     "summary": "Claude Science is a customizable app that integrates the tools and packages researchers most often use, produces auditable artifacts, and provides flexible access to computing resources.",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/0c547c61b24e6ad4985c64f04f212c7411609bfa-2880x1620.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -110,7 +101,6 @@
       "product"
     ],
     "summary": "Claude Tag is a new way for teams to work with Claude.",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/b9ba85fd4d8beaf4efe04a4cf6cec14761e52c78-2400x1260.jpg",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -121,7 +111,6 @@
     "publishedAt": "2026-06-17T19:34:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -132,7 +121,6 @@
     "publishedAt": "2026-06-12T23:38:00.000Z",
     "tags": [],
     "summary": "The US government has issued an export control directive to suspend all access to Fable 5 and Mythos 5.",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/b296093596b38f0a5fb56b85760baed37ea6798b-2400x1260.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -143,7 +131,6 @@
     "publishedAt": "2026-06-12T21:51:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -154,7 +141,6 @@
     "publishedAt": "2026-06-12T18:00:00.000Z",
     "tags": [],
     "summary": "We’re announcing a partnership with Tata Consultancy Services (TCS). TCS will provide Claude to 50,000 of its own employees across 56 countries; build Claude-powered products for clients in financial services, healthcare, the public sector, and other regulated industries; and join the Claude…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -165,7 +151,6 @@
     "publishedAt": "2026-06-11T18:00:00.000Z",
     "tags": [],
     "summary": "We’re announcing a multi-year global alliance with DXC Technology, one of the world’s largest IT services companies.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -176,7 +161,6 @@
     "publishedAt": "2026-06-11T13:00:00.000Z",
     "tags": [],
     "summary": "We’re launching Claude Corps, a national fellowship program for people early in their careers who are passionate about extending the benefits of AI to communities across America.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -187,7 +171,6 @@
     "publishedAt": "2026-06-09T17:00:00.000Z",
     "tags": [],
     "summary": "Our next generation of intelligence for the hardest knowledge work and coding problems.",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/b7055119423427c40a0e4d84054aed17682b50a2-2880x1620.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -198,7 +181,6 @@
     "publishedAt": "2026-06-03T13:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -209,7 +191,6 @@
     "publishedAt": "2026-06-03T10:55:00.000Z",
     "tags": [],
     "summary": "As AI transforms the nature of and methods behind cyberattacks, how well do the techniques and frameworks used by the security community hold up? In a new report, we seek to answer that question.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -220,7 +201,6 @@
     "publishedAt": "2026-06-02T11:00:00.000Z",
     "tags": [],
     "summary": "We’re extending Project Glasswing to approximately 150 new organizations in more than fifteen countries.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -231,7 +211,6 @@
     "publishedAt": "2026-06-01T16:00:00.000Z",
     "tags": [],
     "summary": "Anthropic has confidentially submitted a draft S-1 registration statement to the Securities and Exchange Commission",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -242,7 +221,6 @@
     "publishedAt": "2026-05-28T17:13:20.706Z",
     "tags": [],
     "summary": "Anthropic has raised $65 billion in Series H funding led by Altimeter Capital, Dragoneer, Greenoaks, and Sequoia Capital.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -255,7 +233,6 @@
       "product"
     ],
     "summary": "An upgrade to our Opus class of models, with stronger performance across coding, agentic tasks, and professional work, and the consistency to handle long-running work.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -266,7 +243,6 @@
     "publishedAt": "2026-05-27T21:16:00.842Z",
     "tags": [],
     "summary": "We're opening a new office in Milan, our sixth in Europe.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -277,7 +253,6 @@
     "publishedAt": "2026-05-26T23:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -288,7 +263,6 @@
     "publishedAt": "2026-05-25T17:10:00.000Z",
     "tags": [],
     "summary": "The full text of Chris Olah's remarks on the Pope's encyclical on AI.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -299,7 +273,6 @@
     "publishedAt": "2026-05-22T18:00:12.585Z",
     "tags": [],
     "summary": "An early update on what we've learned from Project Glasswing.",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/9f76163fe710723283a55b9f60d5caca6697dffd-1920x1080.jpg",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -310,7 +283,6 @@
     "publishedAt": "2026-05-19T21:55:00.000Z",
     "tags": [],
     "summary": "Over the past several months, we’ve been organizing dialogues with groups whose work and traditions bear on the questions raised by AI.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -321,7 +293,6 @@
     "publishedAt": "2026-05-19T12:30:10.501Z",
     "tags": [],
     "summary": "KPMG and Anthropic announce a global alliance, with Claude integrated into KPMG's Digital Gateway platform and available to all 276,000+ employees.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -332,7 +303,6 @@
     "publishedAt": "2026-05-18T17:02:00.000Z",
     "tags": [],
     "summary": "Anthropic is acquiring Stainless, a leader in SDKs and MCP server tooling.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -343,7 +313,6 @@
     "publishedAt": "2026-05-14T17:00:00.000Z",
     "tags": [],
     "summary": "PwC will roll out Claude Code and Cowork starting with U.S. teams and expanding toward a global workforce of hundreds of thousands of professionals, establish a joint Center of Excellence, and train and certify 30,000 PwC professionals on Claude.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -354,7 +323,6 @@
     "publishedAt": "2026-05-14T14:45:00.000Z",
     "tags": [],
     "summary": "We’re partnering with the Gates Foundation to commit $200 million in grant funding, Claude usage credits, and technical support for programs in global health, life sciences, education, and economic mobility over the next four years.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -365,7 +333,6 @@
     "publishedAt": "2026-05-13T16:00:00.000Z",
     "tags": [],
     "summary": "We're launching Claude for Small Business, a package of connectors and ready-to-run workflows that put Claude inside the tools small businesses use every day.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -376,7 +343,6 @@
     "publishedAt": "2026-05-06T14:36:27.834Z",
     "tags": [],
     "summary": "We’ve raised Claude's usage limits and agreed a new compute partnership with SpaceX that will substantially increase our capacity in the near term.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -387,7 +353,6 @@
     "publishedAt": "2026-05-05T16:00:00.000Z",
     "tags": [],
     "summary": "We're releasing ten new Cowork and Claude Code plugins, integrations with the Microsoft 365 suite, new connectors, and an MCP app for financial services and insurance organizations.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -398,7 +363,6 @@
     "publishedAt": "2026-05-04T15:42:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -409,7 +373,6 @@
     "publishedAt": "2026-04-28T19:22:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -420,7 +383,6 @@
     "publishedAt": "2026-04-27T21:53:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -431,7 +393,6 @@
     "publishedAt": "2026-04-24T09:47:00.000Z",
     "tags": [],
     "summary": "We explain what we’re doing to ensure Claude plays a positive role in the US midterms and other major elections around the world this year.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -442,7 +403,6 @@
     "publishedAt": "2026-04-24T03:52:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -453,7 +413,6 @@
     "publishedAt": "2026-04-20T15:50:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -466,7 +425,6 @@
       "product"
     ],
     "summary": "Today, we’re launching Claude Design, a new Anthropic Labs product that lets you collaborate with Claude to create polished visual work like designs, prototypes, slides, one-pagers, and more.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -479,7 +437,6 @@
       "product"
     ],
     "summary": "Our latest Opus model brings stronger performance across coding, agents, vision, and multi-step tasks, with greater thoroughness and consistency on the work that matters most.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -490,7 +447,6 @@
     "publishedAt": "2026-04-14T23:34:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -501,7 +457,6 @@
     "publishedAt": "2026-04-06T21:16:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -512,7 +467,6 @@
     "publishedAt": "2026-03-31T21:36:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -523,7 +477,6 @@
     "publishedAt": "2026-03-12T14:39:00.000Z",
     "tags": [],
     "summary": "We’re launching the Claude Partner Network, a program for partner organizations helping enterprises adopt Claude.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -534,7 +487,6 @@
     "publishedAt": "2026-03-11T10:45:00.000Z",
     "tags": [],
     "summary": "We’re launching The Anthropic Institute, a new effort to confront the most significant challenges that powerful AI will pose to our societies.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -545,7 +497,6 @@
     "publishedAt": "2026-03-10T18:22:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -556,7 +507,6 @@
     "publishedAt": "2026-03-06T10:30:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -567,7 +517,6 @@
     "publishedAt": "2026-03-05T21:43:00.000Z",
     "tags": [],
     "summary": "A statement from Dario Amodei.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -578,7 +527,6 @@
     "publishedAt": "2026-02-27T23:38:00.000Z",
     "tags": [],
     "summary": "Anthropic's response to the Secretary of War and advice to customers.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -589,7 +537,6 @@
     "publishedAt": "2026-02-26T21:55:36.531Z",
     "tags": [],
     "summary": "A statement from our CEO on national security uses of AI.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -600,7 +547,6 @@
     "publishedAt": "2026-02-25T17:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -611,7 +557,6 @@
     "publishedAt": "2026-02-24T14:59:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -622,7 +567,6 @@
     "publishedAt": "2026-02-23T18:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -633,7 +577,6 @@
     "publishedAt": "2026-02-20T17:59:00.000Z",
     "tags": [],
     "summary": "Claude Code Security, a new capability built into Claude Code on the web, is now available in a limited research preview. It scans codebases for security vulnerabilities and suggests targeted software patches for human review, allowing teams to find and fix security issues that traditional methods…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -644,7 +587,6 @@
     "publishedAt": "2026-02-17T20:37:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -657,7 +599,6 @@
       "product"
     ],
     "summary": "Sonnet 4.6 delivers frontier performance across coding, agents, and professional work at scale.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -668,7 +609,6 @@
     "publishedAt": "2026-02-17T06:19:07.669Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -679,7 +619,6 @@
     "publishedAt": "2026-02-16T13:49:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -690,7 +629,6 @@
     "publishedAt": "2026-02-13T20:47:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -701,7 +639,6 @@
     "publishedAt": "2026-02-13T14:57:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -712,7 +649,6 @@
     "publishedAt": "2026-02-12T19:00:00.000Z",
     "tags": [],
     "summary": "We have raised $30 billion in Series G funding led by GIC and Coatue, valuing Anthropic at $380 billion post-money. The investment will fuel the frontier research, product development, and infrastructure expansions that have made Anthropic the market leader in enterprise AI and coding. Our run-rate…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -723,7 +659,6 @@
     "publishedAt": "2026-02-12T11:45:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -734,7 +669,6 @@
     "publishedAt": "2026-02-11T20:23:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -745,7 +679,6 @@
     "publishedAt": "2026-02-05T18:00:00.000Z",
     "tags": [],
     "summary": "We’re upgrading our smartest model. Across agentic coding, computer use, tool use, search, and finance, Opus 4.6 is an industry-leading model, often by wide margin.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -756,7 +689,6 @@
     "publishedAt": "2026-02-04T18:00:00.000Z",
     "tags": [],
     "summary": "We’ve made a choice: Claude will remain ad-free. We explain why advertising incentives are incompatible with a genuinely helpful AI assistant, and how we plan to expand access without compromising user trust.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -769,7 +701,6 @@
       "product"
     ],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -780,7 +711,6 @@
     "publishedAt": "2026-02-02T14:02:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -791,7 +721,6 @@
     "publishedAt": "2026-01-28T21:15:36.668Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -802,7 +731,6 @@
     "publishedAt": "2026-01-27T08:01:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -813,7 +741,6 @@
     "publishedAt": "2026-01-22T04:15:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -824,7 +751,6 @@
     "publishedAt": "2026-01-21T05:28:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -835,7 +761,6 @@
     "publishedAt": "2026-01-21T00:20:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -846,7 +771,6 @@
     "publishedAt": "2026-01-16T00:09:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -857,7 +781,6 @@
     "publishedAt": "2026-01-15T20:46:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -868,7 +791,6 @@
     "publishedAt": "2026-01-15T10:01:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/b302589799164630e6b9407f46a44cfbbb473340-2000x2000.jpg",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -879,7 +801,6 @@
     "publishedAt": "2026-01-15T10:00:00.000Z",
     "tags": [],
     "summary": "This report introduces new metrics of AI usage to provide a rich portrait of interactions with Claude in November 2025, just prior to the release of Opus 4.5.",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/b302589799164630e6b9407f46a44cfbbb473340-2000x2000.jpg",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -890,7 +811,6 @@
     "publishedAt": "2026-01-13T19:05:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -901,7 +821,6 @@
     "publishedAt": "2026-01-11T16:00:00.000Z",
     "tags": [],
     "summary": "Claude for Healthcare introduces HIPAA-ready infrastructure for providers and payers, while expanded Life Sciences capabilities add connectors to Medidata and ClinicalTrials.gov for clinical trial operations and regulatory work.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -912,7 +831,6 @@
     "publishedAt": "2025-12-19T20:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -923,7 +841,6 @@
     "publishedAt": "2025-12-18T19:30:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -934,7 +851,6 @@
     "publishedAt": "2025-12-18T19:05:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -945,7 +861,6 @@
     "publishedAt": "2025-12-09T17:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -958,7 +873,6 @@
       "product"
     ],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -971,7 +885,6 @@
       "product"
     ],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -982,7 +895,6 @@
     "publishedAt": "2025-12-03T04:10:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -993,7 +905,6 @@
     "publishedAt": "2025-12-02T10:57:00.000Z",
     "tags": [],
     "summary": "Anthropic launches Claude for Nonprofits to help organizations maximize their impact, featuring free AI training and discounted rates.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1004,7 +915,6 @@
     "publishedAt": "2025-11-24T19:00:00.000Z",
     "tags": [],
     "summary": "The best model in the world for coding, agents, and computer use, with meaningful improvements to everyday tasks like slides and spreadsheets. Claude Opus 4.5 delivers frontier performance and dramatically improved token efficiency.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1017,7 +927,6 @@
       "product"
     ],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1028,7 +937,6 @@
     "publishedAt": "2025-11-18T15:00:24.254Z",
     "tags": [],
     "summary": "Microsoft, NVIDIA and Anthropic announced new strategic partnerships. Anthropic is scaling its rapidly-growing Claude AI model on Microsoft Azure, powered by NVIDIA, which will broaden access to Claude and provide Azure enterprise customers with expanded model choice and new capabilities. Anthropic…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1039,7 +947,6 @@
     "publishedAt": "2025-11-18T01:40:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1050,7 +957,6 @@
     "publishedAt": "2025-11-13T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1061,7 +967,6 @@
     "publishedAt": "2025-11-13T12:30:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1074,7 +979,6 @@
       "product"
     ],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1085,7 +989,6 @@
     "publishedAt": "2025-11-12T03:14:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1096,7 +999,6 @@
     "publishedAt": "2025-11-07T20:49:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1107,7 +1009,6 @@
     "publishedAt": "2025-11-05T07:48:51.082Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1118,7 +1019,6 @@
     "publishedAt": "2025-11-04T15:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1129,7 +1029,6 @@
     "publishedAt": "2025-11-04T13:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1140,7 +1039,6 @@
     "publishedAt": "2025-10-29T14:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1151,7 +1049,6 @@
     "publishedAt": "2025-10-27T19:24:00.000Z",
     "tags": [],
     "summary": "Claude for Financial Services now supports a native Excel plug-in, new connectors to real-time market, and pre-built skills for modeling, comp analysis, and earnings reports.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1162,7 +1059,6 @@
     "publishedAt": "2025-10-23T22:17:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1173,7 +1069,6 @@
     "publishedAt": "2025-10-23T18:46:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1184,7 +1079,6 @@
     "publishedAt": "2025-10-21T14:00:00.000Z",
     "tags": [],
     "summary": "A statement from Anthropic CEO, Dario Amodei, on Anthropic’s commitment to advancing America's leadership in building powerful and beneficial AI.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1195,7 +1089,6 @@
     "publishedAt": "2025-10-20T16:00:00.000Z",
     "tags": [],
     "summary": "Introducing Claude for Life Sciences, a series of improvements to make Claude a better partner for researchers, clinical coordinators, and others who work in life sciences.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1208,7 +1101,6 @@
       "product"
     ],
     "summary": "Claude Haiku 4.5 matches state-of-the-art coding capabilities from months ago while delivering unprecedented speed and cost-efficiency for complex tasks.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1221,7 +1113,6 @@
       "product"
     ],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1232,7 +1123,6 @@
     "publishedAt": "2025-10-07T23:45:00.000Z",
     "tags": [],
     "summary": "We’re expanding our global operations to India, with plans to open an office in Bengaluru in early 2026.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1243,7 +1133,6 @@
     "publishedAt": "2025-10-07T19:16:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1254,7 +1143,6 @@
     "publishedAt": "2025-10-06T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1265,7 +1153,6 @@
     "publishedAt": "2025-10-03T18:31:00.000Z",
     "tags": [],
     "summary": "As research and experience demonstrated the utility of frontier AI as a tool for cyber attackers, we invested in improving Claude’s ability to help defenders detect, analyze, and remediate vulnerabilities in code and deployed systems.",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/6f6f440f9f554ec19c6a90aa70753278adfe9a40-2000x2000.jpg",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1278,7 +1165,6 @@
       "product"
     ],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1289,7 +1175,6 @@
     "publishedAt": "2025-09-29T17:00:00.000Z",
     "tags": [],
     "summary": "Claude Sonnet 4.5 sets new benchmark records in coding, reasoning, and computer use while being Anthropic's most aligned model, accompanied by the release of the Claude Agent SDK for building capable agents",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1300,7 +1185,6 @@
     "publishedAt": "2025-09-26T15:00:00.000Z",
     "tags": [],
     "summary": "Chris Ciauri joins Anthropic as Managing Director of International, adding to our global leadership team as we expand our worldwide presence.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1313,7 +1197,6 @@
       "product"
     ],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/4e854252f651ac613beeb3a958ea3ee498a17af8-1680x1260.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1324,7 +1207,6 @@
     "publishedAt": "2025-09-15T20:33:00.000Z",
     "tags": [],
     "summary": "Claude usage has shifted toward educational and scientific tasks with users delegating complete work rather than collaborating. AI adoption concentrates in wealthy regions, with first-time analysis of enterprise API patterns.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1335,7 +1217,6 @@
     "publishedAt": "2025-09-15T09:00:00.000Z",
     "tags": [],
     "summary": "This report maps how Claude is used differently across US states and countries, finding strong correlations between income and AI adoption. It also tracks a notable shift: directive automation has risen from 27% to 39% of conversations since December 2024, with businesses automating far more than…",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/e6aa94d2bea8cac412284ac3f9dee562d8897f48-2000x2000.jpg",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1346,7 +1227,6 @@
     "publishedAt": "2025-09-12T18:37:00.000Z",
     "tags": [],
     "summary": "Over the past year, we've collaborated with the US Center for AI Standards and Innovation (CAISI) and UK AI Security Institute (AISI), government bodies established to measure and improve the security of AI systems.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1357,7 +1237,6 @@
     "publishedAt": "2025-09-08T11:01:00.000Z",
     "tags": [],
     "summary": "Anthropic is endorsing SB 53, the California bill that governs powerful AI systems built by frontier AI developers like Anthropic.",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/34aafcc7a4ae1374ed65106863aa0b47dcbf1618-1900x1000.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1368,7 +1247,6 @@
     "publishedAt": "2025-09-04T21:00:00.000Z",
     "tags": [],
     "summary": "To account for this reality and better align with our commitment to ensuring that transformative AI capabilities advance democratic interests, we are strengthening our regional restrictions.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1379,7 +1257,6 @@
     "publishedAt": "2025-09-04T18:35:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1390,7 +1267,6 @@
     "publishedAt": "2025-09-02T16:05:00.000Z",
     "tags": [],
     "summary": "Anthropic raised $13 billion in a Series F round at a $183 billion valuation to expand enterprise offerings, safety research, and international growth as revenue grew from $1 billion to over $5 billion in eight months.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1403,7 +1279,6 @@
       "product"
     ],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1414,7 +1289,6 @@
     "publishedAt": "2025-08-27T20:01:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/faffa5377164658980f804e5bee648fe07370268-2401x1261.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1425,7 +1299,6 @@
     "publishedAt": "2025-08-27T13:05:00.000Z",
     "tags": [],
     "summary": "We are announcing the formation of the Anthropic National Security and Public Sector Advisory Council, a group of leading bipartisan national security and public policy practitioners who will help Anthropic support the U.S. government and closely allied democracies in building and maintaining…",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/220ba398ed2cdbc37f29ed14e0b153f55ce023a4-1900x1000.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1436,7 +1309,6 @@
     "publishedAt": "2025-08-27T00:09:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1447,7 +1319,6 @@
     "publishedAt": "2025-08-21T20:49:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1458,7 +1329,6 @@
     "publishedAt": "2025-08-21T07:00:00.000Z",
     "tags": [],
     "summary": "Together with the NNSA and DOE national laboratories, we have co-developed a classifier that distinguishes between concerning and benign nuclear-related conversations with 96% accuracy in preliminary testing.",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/94afaf41cf9c82fa9ac91653b37f44a43632681e-2400x1260.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1471,7 +1341,6 @@
       "product"
     ],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/27e7273ed7d58f990040d38db7fa1da211b5c70e-1680x1260.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1482,7 +1351,6 @@
     "publishedAt": "2025-08-15T22:52:00.000Z",
     "tags": [],
     "summary": "Updates to our Usage Policy that reflect the growing capabilities and evolving usage of our products",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1495,7 +1363,6 @@
       "product"
     ],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1506,7 +1373,6 @@
     "publishedAt": "2025-08-12T13:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1517,7 +1383,6 @@
     "publishedAt": "2025-08-06T23:30:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1528,7 +1393,6 @@
     "publishedAt": "2025-08-05T16:00:00.000Z",
     "tags": [],
     "summary": "Our most powerful model for handling complex agent and coding tasks",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1539,7 +1403,6 @@
     "publishedAt": "2025-08-05T10:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1550,7 +1413,6 @@
     "publishedAt": "2025-08-04T19:18:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1561,7 +1423,6 @@
     "publishedAt": "2025-07-30T19:05:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/b1aeb70d1e0bd9933d6590e1bc9affd5fa3dd848-1000x1000.svg",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1572,7 +1433,6 @@
     "publishedAt": "2025-07-23T17:33:00.000Z",
     "tags": [],
     "summary": "Anthropic's response to the White House AI Action Plan supports infrastructure and safety measures while calling for stronger export controls and transparency requirements to maintain American AI leadership.",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/47176eb9b20f16959117dfa766266fab596c6eac-1600x1203.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1583,7 +1443,6 @@
     "publishedAt": "2025-07-23T15:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/93b98d31ef937d004a63853ef2f97ed98a253c95-1600x1203.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1594,7 +1453,6 @@
     "publishedAt": "2025-07-21T19:34:25.630Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/214a0bd0e0a4cb99e473242e7ed1f914dc5cbfa4-1600x1203.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1605,7 +1463,6 @@
     "publishedAt": "2025-07-21T09:06:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1616,7 +1473,6 @@
     "publishedAt": "2025-07-15T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1629,7 +1485,6 @@
       "product"
     ],
     "summary": "Helping finance professionals analyze markets, conduct research, and make investment decisions.",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/8b7ac99883746ee0a090750328686dbe67b57348-1680x1260.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1640,7 +1495,6 @@
     "publishedAt": "2025-07-15T11:30:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/6214650e82ff766d6f82c190ae4446c50704e3c7-3361x2521.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1651,7 +1505,6 @@
     "publishedAt": "2025-07-14T15:35:53.261Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1664,7 +1517,6 @@
       "product"
     ],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/8ac34a806ecc9eec48cfb21ebcf78ba055bdb158-1600x1203.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1675,7 +1527,6 @@
     "publishedAt": "2025-07-09T10:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/35c3cf6f17013234144a4065dfd8b7d876521be1-1680x1260.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1686,7 +1537,6 @@
     "publishedAt": "2025-07-07T17:30:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/47176eb9b20f16959117dfa766266fab596c6eac-1600x1203.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1697,7 +1547,6 @@
     "publishedAt": "2025-06-27T13:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/93b98d31ef937d004a63853ef2f97ed98a253c95-1600x1203.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1708,7 +1557,6 @@
     "publishedAt": "2025-06-27T06:51:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/77411b5a7049200a7021270a6c44101d5b228ab9-1681x1261.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1719,7 +1567,6 @@
     "publishedAt": "2025-06-11T18:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/d7744b463b49211ec94a83831640101da883d4f2-1681x1261.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1730,7 +1577,6 @@
     "publishedAt": "2025-06-07T02:28:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1741,7 +1587,6 @@
     "publishedAt": "2025-06-06T03:05:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/47176eb9b20f16959117dfa766266fab596c6eac-1600x1203.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1752,7 +1597,6 @@
     "publishedAt": "2025-05-28T15:59:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1763,7 +1607,6 @@
     "publishedAt": "2025-05-22T16:45:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/426acef2ccfa8bb61a7251a347de40761b73d1fb-1681x1261.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1774,7 +1617,6 @@
     "publishedAt": "2025-05-22T16:30:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/b2bccec246c6786ad49b1e55fe297b84c3089252-1680x1260.jpg",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1785,7 +1627,6 @@
     "publishedAt": "2025-05-14T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/05ad8715b4cc9f08c7858e7fd2a3ef35c4d36b5d-1600x1203.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1796,7 +1637,6 @@
     "publishedAt": "2025-05-05T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/b235baff40443ce8858b54e8d5d73ab7b8e55a13-1600x1203.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1807,7 +1647,6 @@
     "publishedAt": "2025-04-30T09:15:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/02a64107eca399bb4a0b7d9ef4265633ab8a7d9d-1600x1203.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1818,7 +1657,6 @@
     "publishedAt": "2025-04-28T12:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/93b98d31ef937d004a63853ef2f97ed98a253c95-1600x1203.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1829,7 +1667,6 @@
     "publishedAt": "2025-04-28T09:36:00.000Z",
     "tags": [],
     "summary": "Claude Code shows 79% automation versus 49% on Claude.ai. Web development dominates usage, and startups adopt agentic tools faster than enterprises—patterns previewing AI's impact on other occupations.",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/9b19db76a8c57d12425132f7e0e86dd9764525e1-2000x2000.jpg",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1840,7 +1677,6 @@
     "publishedAt": "2025-04-23T15:05:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/fbc2b3b568205a8ac3f47134dd21846ac72a7392-1600x1203.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1851,7 +1687,6 @@
     "publishedAt": "2025-04-21T18:46:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/69d30213eb0120f3c7a0a668d2b314bfe3714f5e-1680x1260.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1862,7 +1697,6 @@
     "publishedAt": "2025-04-08T15:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/16f763380c8565e697df3ea3f0f23d8580bb4d25-1680x1260.svg",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1873,7 +1707,6 @@
     "publishedAt": "2025-04-08T10:42:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1884,7 +1717,6 @@
     "publishedAt": "2025-04-03T15:26:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1895,7 +1727,6 @@
     "publishedAt": "2025-04-02T13:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/f5d0990ee33385000ff56ed82f3c5efb4e2d33da-2400x1260.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1906,7 +1737,6 @@
     "publishedAt": "2025-03-27T21:00:00.000Z",
     "tags": [],
     "summary": "Increased Claude 3.7 Sonnet usage for coding, education, and science since launch. Extended thinking mode favors technical tasks. New datasets reveal automation patterns across 630 granular usage categories.",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/93b98d31ef937d004a63853ef2f97ed98a253c95-1600x1203.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1917,7 +1747,6 @@
     "publishedAt": "2025-03-27T09:16:00.000Z",
     "tags": [],
     "summary": "Circuit tracing lets us watch Claude think, uncovering a shared conceptual space where reasoning happens before being translated into language—suggesting the model can learn something in one language and apply it in another.",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/66f4c451902f6310a5b24191c975825dc380db2b-2000x2000.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1928,7 +1757,6 @@
     "publishedAt": "2025-03-19T20:45:20.016Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/45c41da0a894deb7c2265fffc882caa4a716947d-1600x1203.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1939,7 +1767,6 @@
     "publishedAt": "2025-03-19T17:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/069ad784540fa37e9862e3c0e604b5be16708084-2000x2000.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1950,7 +1777,6 @@
     "publishedAt": "2025-03-06T10:45:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/45c41da0a894deb7c2265fffc882caa4a716947d-1600x1203.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1961,7 +1787,6 @@
     "publishedAt": "2025-03-03T17:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/f438a6545f4b5280560b58ee98eeca6c41ef82b7-1600x1203.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1972,7 +1797,6 @@
     "publishedAt": "2025-02-28T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1983,7 +1807,6 @@
     "publishedAt": "2025-02-27T23:48:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/1684a98e90b6bbc9e8e017b8a1a867ee75d1e8cf-1681x1261.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -1994,7 +1817,6 @@
     "publishedAt": "2025-02-26T17:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/f7b5f2335bdee9c00d889ae1e90249154fcd7db1-1680x1260.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2005,7 +1827,6 @@
     "publishedAt": "2025-02-24T18:30:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/3e3d5d28255c40851e855234d8391dc0a0649f64-1680x1260.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2016,7 +1837,6 @@
     "publishedAt": "2025-02-24T14:38:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/35c3cf6f17013234144a4065dfd8b7d876521be1-1680x1260.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2027,7 +1847,6 @@
     "publishedAt": "2025-02-14T00:01:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/514d2bd8aeadab490cc631badefe6aaca8e8a458-1600x1203.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2038,7 +1857,6 @@
     "publishedAt": "2025-02-11T10:29:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/84dfc3a6a5b8bf79a0cd430524c1f5a89e376531-1681x1261.svg",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2049,7 +1867,6 @@
     "publishedAt": "2025-02-10T13:00:00.000Z",
     "tags": [],
     "summary": "The Anthropic Economic Index analyzes millions of Claude.ai conversations showing AI usage concentrated in software development and technical writing, touching 25%+ of tasks in 36% of occupations. AI leans toward augmentation (57%) over automation (43%).",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/93b98d31ef937d004a63853ef2f97ed98a253c95-1600x1203.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2060,7 +1877,6 @@
     "publishedAt": "2025-02-06T21:52:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2071,7 +1887,6 @@
     "publishedAt": "2025-01-13T17:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/2ef75017975f8bc6aa910152bc68a09e18dc671a-1312x1312.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2082,7 +1897,6 @@
     "publishedAt": "2024-12-18T14:16:00.000Z",
     "tags": [],
     "summary": "This paper provides the first empirical example of a model engaging in alignment faking without being trained to do so—selectively complying with training objectives while strategically preserving existing preferences.",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/2983e5021d1090ef2dc16018a2d9b189843e310e-2000x2000.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2093,7 +1907,6 @@
     "publishedAt": "2024-12-12T20:06:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/f1d1a4c75433996f97b87ea0f3791022370e2765-1680x1260.svg",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2104,7 +1917,6 @@
     "publishedAt": "2024-11-25T15:50:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/0106dec137d4720d9ccccc9b01b1f9b5d72585e4-1312x1312.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2115,7 +1927,6 @@
     "publishedAt": "2024-11-22T13:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/919018bb005a47134a990389e76d9cc1766d17ca-2624x2624.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2126,7 +1937,6 @@
     "publishedAt": "2024-10-31T19:30:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/6b04f486cfe0b8a62e4632f3186f23afcd22a890-2880x1621.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2139,7 +1949,6 @@
       "product"
     ],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/85f273709539b4fd9b1909aa9feeabdc7712edf7-1312x1312.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2150,7 +1959,6 @@
     "publishedAt": "2024-10-29T16:15:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/2ee03b16aab67a255f6ddd5f35429b134acdf503-2624x2625.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2163,7 +1971,6 @@
       "product"
     ],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/f7cf518c495670a1fe932f76c8e06f4f76f51b72-1312x1312.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2174,7 +1981,6 @@
     "publishedAt": "2024-10-22T15:51:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/ed472910ff6fe8e8261435613a422048f27c5076-1312x1312.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2185,7 +1991,6 @@
     "publishedAt": "2024-10-15T13:30:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/591404bad10f6fb79c2561d72999e30d633792f2-1312x1312.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2196,7 +2001,6 @@
     "publishedAt": "2024-10-08T18:21:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/d349f9f92aaf574702f002fbb2b01159e6e4c659-1200x631.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2209,7 +2013,6 @@
       "product"
     ],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/98bc6d3ec0e065855c25d2f9a1dc912fe281bf45-1312x1312.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2220,7 +2023,6 @@
     "publishedAt": "2024-09-03T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/9ed5fc6354cc1fb1fffe7137f173dfa32d7af120-2000x2001.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2231,7 +2033,6 @@
     "publishedAt": "2024-08-08T13:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/2ef75017975f8bc6aa910152bc68a09e18dc671a-1312x1312.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2242,7 +2043,6 @@
     "publishedAt": "2024-08-01T18:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/c801bd032a7489f5fdd720b5e2fb0c842901e7aa-1312x1312.jpg",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2253,7 +2053,6 @@
     "publishedAt": "2024-07-17T16:05:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2266,7 +2065,6 @@
       "product"
     ],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2277,7 +2075,6 @@
     "publishedAt": "2024-07-01T19:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/edd06a55a33431380c89c1864a07859edb8065a7-1600x1600.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2288,7 +2085,6 @@
     "publishedAt": "2024-06-26T17:20:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2301,7 +2097,6 @@
       "product"
     ],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/7a925b4d2bd05668ef74dd6fe12919ba22184481-1312x1312.jpg",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2312,7 +2107,6 @@
     "publishedAt": "2024-06-21T03:28:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/5ad7d0ef82a489dc20e44f19ce313b09604e4252-1312x1312.jpg",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2323,7 +2117,6 @@
     "publishedAt": "2024-06-12T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/edd06a55a33431380c89c1864a07859edb8065a7-1600x1600.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2334,7 +2127,6 @@
     "publishedAt": "2024-06-06T13:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/409cb399d3cd156905d9094be74949756790a9ac-1312x1312.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2345,7 +2137,6 @@
     "publishedAt": "2024-06-05T15:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/5ad7d0ef82a489dc20e44f19ce313b09604e4252-1312x1312.jpg",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2356,7 +2147,6 @@
     "publishedAt": "2024-05-29T17:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2369,7 +2159,6 @@
       "product"
     ],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/d9032f7916a91e8a78003eb79c24ae0bf3cd3b9d-2000x2000.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2380,7 +2169,6 @@
     "publishedAt": "2024-05-21T08:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2391,7 +2179,6 @@
     "publishedAt": "2024-05-21T07:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/acfc9691aa6ed2708bcbbe2e9517bcfccdc9d346-1688x1688.jpg",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2402,7 +2189,6 @@
     "publishedAt": "2024-05-20T00:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/454127b470eed6d649e67d19afb6dd5ab354fb58-1600x1600.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2413,7 +2199,6 @@
     "publishedAt": "2024-05-15T14:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2424,7 +2209,6 @@
     "publishedAt": "2024-05-14T07:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/5ad7d0ef82a489dc20e44f19ce313b09604e4252-1312x1312.jpg",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2435,7 +2219,6 @@
     "publishedAt": "2024-05-10T17:00:36.698Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2446,7 +2229,6 @@
     "publishedAt": "2024-04-23T20:36:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2457,7 +2239,6 @@
     "publishedAt": "2024-04-02T16:05:09.100Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2468,7 +2249,6 @@
     "publishedAt": "2024-03-25T15:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/33ced8287c63ec94b50da01c1926e58750a7f67e-1312x1313.jpg",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2479,7 +2259,6 @@
     "publishedAt": "2024-03-20T14:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/c40f969caae8c6ae3c665bed90261655d45023fe-1312x1312.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2490,7 +2269,6 @@
     "publishedAt": "2024-03-19T23:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/b42db5b8558fab6b7452cfe30bd4f8aa734e8337-1312x1312.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2501,7 +2279,6 @@
     "publishedAt": "2024-03-13T21:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/9f8464f29d6f93067c69cc257db94bf04a661cc8-2880x1620.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2512,7 +2289,6 @@
     "publishedAt": "2024-03-04T08:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/5ad7d0ef82a489dc20e44f19ce313b09604e4252-1312x1312.jpg",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2525,7 +2301,6 @@
       "product"
     ],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/80ef16b1598c418c3c0876ea6607b47e33417bc6-1600x1600.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2536,7 +2311,6 @@
     "publishedAt": "2024-02-16T11:30:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/e8d6c1c10399c016ec89e36eb15bcfd2db8cb926-1600x1600.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2547,7 +2321,6 @@
     "publishedAt": "2023-12-19T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2560,7 +2333,6 @@
       "product"
     ],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/72d6358c4ac2a07fac44d1ea9abf63a1f0c7494d-1600x1600.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2571,7 +2343,6 @@
     "publishedAt": "2023-11-05T13:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/136e899a164e36ccd50bdda8725046b2006ff342-1600x1600.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2582,7 +2353,6 @@
     "publishedAt": "2023-11-01T13:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/29f7f151aac909fad9968c7fcc1dc0e8a6ca6b8c-1600x1600.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2593,7 +2363,6 @@
     "publishedAt": "2023-09-25T07:01:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/919018bb005a47134a990389e76d9cc1766d17ca-2624x2624.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2606,7 +2375,6 @@
       "product"
     ],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/4bebf8fe3ff16ccb67a680da906387a3c85fb36d-1600x1600.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2617,7 +2385,6 @@
     "publishedAt": "2023-09-19T14:00:00.000Z",
     "tags": [],
     "summary": "We’re publishing our Responsible Scaling Policy—a series of technical and organizational protocols that we’re adopting to help us manage the risks of developing increasingly capable AI systems.",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/454127b470eed6d649e67d19afb6dd5ab354fb58-1600x1600.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2628,7 +2395,6 @@
     "publishedAt": "2023-09-19T12:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/ecde3c5e01a286fc8353e0c8af70547956dde568-1600x1600.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2639,7 +2405,6 @@
     "publishedAt": "2023-09-14T12:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/d3d37e66de882d7f018f6f50b13ecf63bfb8b813-1600x1600.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2650,7 +2415,6 @@
     "publishedAt": "2023-09-07T13:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/211a1d4c9b92f5ae255d983934ac197200d2bf21-1312x1312.jpg",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2661,7 +2425,6 @@
     "publishedAt": "2023-08-15T14:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/0cba2996abd4346c54de05496c4f40f24f592f9f-1600x1600.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2672,7 +2435,6 @@
     "publishedAt": "2023-08-09T14:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/d5859a11467dde30ea2b3e9e8e6e595a0bf7b5c3-1600x1600.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2683,7 +2445,6 @@
     "publishedAt": "2023-07-26T07:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/edd06a55a33431380c89c1864a07859edb8065a7-1600x1600.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2694,7 +2455,6 @@
     "publishedAt": "2023-07-25T07:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/da71c470d15fe19a6291299e0a7641236d875de6-1600x1600.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2705,7 +2465,6 @@
     "publishedAt": "2023-07-11T07:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/72d6358c4ac2a07fac44d1ea9abf63a1f0c7494d-1600x1600.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2716,7 +2475,6 @@
     "publishedAt": "2023-06-13T07:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/5736ad2bdc8266d43112524e51c1fee5c2ee0398-1600x1600.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2727,7 +2485,6 @@
     "publishedAt": "2023-05-23T13:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/96e0eefdefd7319a54e805514c1b1c9a5aa31488-1600x1600.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2738,7 +2495,6 @@
     "publishedAt": "2023-05-16T14:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/06d6fc72126ce9fb19624017225a909d934cc2e9-1600x1600.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2749,7 +2505,6 @@
     "publishedAt": "2023-05-11T07:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/2f2baa4b5244b4a62797211bfb623caacb64c304-1600x1600.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2760,7 +2515,6 @@
     "publishedAt": "2023-05-09T07:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/9e41f1798059d807389adfc0f113b2d23dac126a-1600x1600.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2771,7 +2525,6 @@
     "publishedAt": "2023-04-26T07:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/05ef62035cbd5778eba10bc5c8fa40a6bf770b83-1600x1600.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2782,7 +2535,6 @@
     "publishedAt": "2023-04-20T07:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/ecde3c5e01a286fc8353e0c8af70547956dde568-1600x1600.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2793,7 +2545,6 @@
     "publishedAt": "2023-03-14T07:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/062fb15ea8d9570a4456391f2acc2b502e1b451e-1600x1600.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2804,7 +2555,6 @@
     "publishedAt": "2023-03-08T08:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.sanity.io/images/4zrzovbb/website/76f13c5f60cf0a73497a9e53e417b85a72a21d5e-2000x2000.png",
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2815,7 +2565,6 @@
     "publishedAt": "2023-02-03T08:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2826,7 +2575,6 @@
     "publishedAt": "2022-04-29T14:50:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   },
   {
@@ -2837,7 +2585,6 @@
     "publishedAt": "2021-05-28T07:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T14:05:14.765Z"
   }
 ]

@@ -59,7 +59,6 @@ export function parseAwsArchitectureArchivePage(html: string, pageUrl: string): 
       publishedAt,
       tags: resolveTags(categories, "aws-architecture"),
       summary: summarize(post.find("section.blog-post-excerpt p").first().html() ?? ""),
-      thumbnail: post.find("img.wp-post-image").first().attr("src") ?? null,
       fetchedAt,
     });
   });

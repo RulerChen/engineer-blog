@@ -7,7 +7,6 @@
     "publishedAt": "2026-07-01T00:00:00.000Z",
     "tags": [],
     "summary": "Learn how Datadog helps ensure data completeness at scale, enabling accurate alerts and safer automated decisions across distributed pipelines.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -18,7 +17,6 @@
     "publishedAt": "2026-06-23T00:00:00.000Z",
     "tags": [],
     "summary": "Using AI-assisted refactoring, we migrated our live routing brain to a relational model, safely validating changes against live production traffic.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -29,7 +27,6 @@
     "publishedAt": "2026-06-04T00:00:00.000Z",
     "tags": [],
     "summary": "During a reliability gameday, Datadog engineers discovered that their PostgreSQL clusters couldn’t safely fail over. Here’s how the team redesigned them for high availability using Patroni and synchronous replication.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -40,7 +37,6 @@
     "publishedAt": "2026-06-02T00:00:00.000Z",
     "tags": [],
     "summary": "By combining stacked LLM evaluations with tool-driven investigation, we scaled malicious code detection from pull requests to dependency packages without sacrificing accuracy or cost control.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -51,7 +47,6 @@
     "publishedAt": "2026-04-21T00:00:00.000Z",
     "tags": [],
     "summary": "Learn how we embed widget metadata into screenshots using invisible, resilient watermarks, enabling self-describing visualizations at scale.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -62,7 +57,6 @@
     "publishedAt": "2026-04-07T00:00:00.000Z",
     "tags": [],
     "summary": "Find out how we built a scalable evaluation platform for Datadog’s Bits AI SRE agent that replays real incidents, detects regressions, and measures agent performance across production scenarios.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -73,7 +67,6 @@
     "publishedAt": "2026-03-23T00:00:00.000Z",
     "tags": [],
     "summary": "When a high-volume upsert doubled disk writes, Datadog engineers traced the issue to Postgres WAL behavior and rewrote the query to eliminate hidden costs.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -84,7 +77,6 @@
     "publishedAt": "2026-03-09T00:00:00.000Z",
     "tags": [],
     "summary": "Learn how Datadog detected and resolved issues from hackerbot-claw, an AI-powered automated attack campaign.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -95,7 +87,6 @@
     "publishedAt": "2026-03-04T00:00:00.000Z",
     "tags": [],
     "summary": "We share lessons learned building Datadog’s MCP server, from designing agent-friendly tools and managing context windows to using queries instead of raw data retrieval.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -106,7 +97,6 @@
     "publishedAt": "2026-02-18T00:00:00.000Z",
     "tags": [],
     "summary": "Get an inside look at shrinking large Go binaries in the Datadog Agent through dependency and linker analysis.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -117,7 +107,6 @@
     "publishedAt": "2026-01-07T00:00:00.000Z",
     "tags": [],
     "summary": "Learn field-tested lessons for eBPF-powered workload protection.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -128,7 +117,6 @@
     "publishedAt": "2025-11-18T00:00:00.000Z",
     "tags": [],
     "summary": "Learn how Datadog scaled eBPF-powered file monitoring to handle more than 10 billion kernel events per minute while preserving full detection coverage.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -139,7 +127,6 @@
     "publishedAt": "2025-11-04T00:00:00.000Z",
     "tags": [],
     "summary": "Discover how Datadog engineered a scalable Change Data Capture (CDC) platform to replicate data across systems in near real time—reducing search latency by 87%, increasing availability, and powering diverse, multi-tenant use cases across the company.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -150,7 +137,6 @@
     "publishedAt": "2025-10-21T00:00:00.000Z",
     "tags": [],
     "summary": "Learn how Datadog’s SDLC Security team built an LLM-powered system to detect malicious pull requests at scale—without sacrificing developer velocity.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -161,7 +147,6 @@
     "publishedAt": "2025-10-15T00:00:00.000Z",
     "tags": [],
     "summary": "After a major outage, we re-architected Datadog systems to degrade gracefully under failure. Here’s what we learned—and how we’re building forward.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -172,7 +157,6 @@
     "publishedAt": "2025-10-01T00:00:00.000Z",
     "tags": [],
     "summary": "See how Husky enables interactive querying across 100 trillion events daily by combining caching, smart indexing, and query pruning.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -183,7 +167,6 @@
     "publishedAt": "2025-09-18T00:00:00.000Z",
     "tags": [],
     "summary": "Learn how we turned hot-path optimizations into a system for continuous, AI-assisted performance improvements and saved thousands of cores in the process.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -194,7 +177,6 @@
     "publishedAt": "2025-08-12T00:00:00.000Z",
     "tags": [],
     "summary": "We re-architected the real-time data pipeline for Datadog’s Processes and Containers views—cutting traffic by 100x and infrastructure use by 98%. This post explores the system challenges, architectural changes, and their impact.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -205,7 +187,6 @@
     "publishedAt": "2025-08-04T00:00:00.000Z",
     "tags": [],
     "summary": "Discover how we reengineered our metrics storage engine for massive scale with Rust, a shard-per-core model, and real-time performance.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -216,7 +197,6 @@
     "publishedAt": "2025-07-17T00:00:00.000Z",
     "tags": [],
     "summary": "Go 1.24’s Swiss Tables cut our map memory usage by up to 70% in high-traffic workloads. Here’s how we profiled the savings and improved performance.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -227,7 +207,6 @@
     "publishedAt": "2025-07-17T00:00:00.000Z",
     "tags": [],
     "summary": "We rolled out Go 1.24 and saw a memory regression. Here’s how we dug into system metrics, uncovered a bug in the runtime allocator, and worked with the Go team to help fix it.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -238,7 +217,6 @@
     "publishedAt": "2025-06-24T00:00:00.000Z",
     "tags": [],
     "summary": "Learn how we implemented and open-sourced a noise filter for real-time audio chat without compromising performance. Better yet, try the demo and add it to your own project today.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -249,7 +227,6 @@
     "publishedAt": "2025-06-23T00:00:00.000Z",
     "tags": [],
     "summary": "Learn how we built Datadog’s Log Forwarding system for low-latency, high-throughput delivery to thousands of unreliable third-party endpoints.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -260,7 +237,6 @@
     "publishedAt": "2025-06-17T00:00:00.000Z",
     "tags": [],
     "summary": "Learn how Datadog engineered a highly reliable, low-latency system to distribute per-tenant configuration data across thousands of containers, enabling real-time log processing at scale.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -271,7 +247,6 @@
     "publishedAt": "2025-06-17T00:00:00.000Z",
     "tags": [],
     "summary": "Learn how Datadog is breaking up a shared production database at scale—defining clear ownership boundaries, minimizing migration risk, and building the tooling to make decoupling safe, automated, and sustainable.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -282,7 +257,6 @@
     "publishedAt": "2025-06-03T00:00:00.000Z",
     "tags": [],
     "summary": "Learn how we developed Datadog Automatic Faulty Deployment Detection and improved precision, recall, and time to detection along the way.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -293,7 +267,6 @@
     "publishedAt": "2025-04-09T00:00:00.000Z",
     "tags": [],
     "summary": "Learn how we rewrote the Datadog Lambda Extension in Rust, cutting cold starts by 82 percent, shrinking the binary 87 percent, and slashing memory use without sacrificing observability.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -304,7 +277,6 @@
     "publishedAt": "2025-02-19T00:00:00.000Z",
     "tags": [],
     "summary": "Learn how we built the Streaming Platform at Datadog to provide more resilience and flexibility to our Kafka infrastructure.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -315,7 +287,6 @@
     "publishedAt": "2025-01-29T00:00:00.000Z",
     "tags": [],
     "summary": "A deep dive into Husky’s underlying data storage and compaction system.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -326,7 +297,6 @@
     "publishedAt": "2025-01-15T00:00:00.000Z",
     "tags": [],
     "summary": "Learn how an unassuming Postgres error led us to discover a bug in Postgres for Arm.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -337,7 +307,6 @@
     "publishedAt": "2024-12-23T00:00:00.000Z",
     "tags": [],
     "summary": "Learn some tips and strategies to stay connected, visible, and effective as a remote worker in a predominantly office-based company.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -348,7 +317,6 @@
     "publishedAt": "2024-11-20T00:00:00.000Z",
     "tags": [],
     "summary": "Learn how we used formal modeling and simulation to analyze a distributed, multi-tenant queueing system.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -359,7 +327,6 @@
     "publishedAt": "2024-11-01T00:00:00.000Z",
     "tags": [],
     "summary": "Learn how we built a test impact analysis library in Ruby, the challenges we faced, the solutions we found, and what we discovered about tracing the Ruby VM.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -370,7 +337,6 @@
     "publishedAt": "2024-09-23T00:00:00.000Z",
     "tags": [],
     "summary": "Learn about the challenges and solutions we discovered while using LLMs to automate writing postmortems.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -381,7 +347,6 @@
     "publishedAt": "2024-06-28T00:00:00.000Z",
     "tags": [],
     "summary": "Learn how we implemented a new timeseries indexing strategy when the amount of data we ingested increased significantly.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -392,7 +357,6 @@
     "publishedAt": "2024-05-23T00:00:00.000Z",
     "tags": [],
     "summary": "Learn how we enhanced our static analyzer by migrating from Java to Rust, tripling performance improvements and a 10x reduction in memory usage.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -403,7 +367,6 @@
     "publishedAt": "2024-05-21T00:00:00.000Z",
     "tags": [],
     "summary": "In this interview, Ivo Dimitrov, Distributed Data Systems VP of Engineering, describes the engineering career that led him to Datadog and his committment to helping build out our core backend platforms.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -414,7 +377,6 @@
     "publishedAt": "2024-05-20T00:00:00.000Z",
     "tags": [],
     "summary": "How we handle memory usage in our .NET continuous profiler.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -425,7 +387,6 @@
     "publishedAt": "2024-05-01T00:00:00.000Z",
     "tags": [],
     "summary": "Learn how we used DDSketch to enhance our heatmap visualizations, allowing us to represent and analyze high cardinality data distributions at scale.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -436,7 +397,6 @@
     "publishedAt": "2024-04-18T00:00:00.000Z",
     "tags": [],
     "summary": "Learn how we built an internal graphing library to support data visualization in iOS using Swift and SwiftUI.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -447,7 +407,6 @@
     "publishedAt": "2024-04-04T00:00:00.000Z",
     "tags": [],
     "summary": "How we handle exceptions and lock contention in our .NET continuous profiler.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -458,7 +417,6 @@
     "publishedAt": "2024-03-26T00:00:00.000Z",
     "tags": [],
     "summary": "In this interview, Marie-Laure Bardonnet, Log Management Senior Engineering Manager, describes the journey of learning, growing, and scaling a team of 4 backend engineers to over 30 frontend and backend engineers at Datadog.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -469,7 +427,6 @@
     "publishedAt": "2024-02-14T00:00:00.000Z",
     "tags": [],
     "summary": "Learn how Datadog’s Documentation team uses a linter to shift quality left.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -480,7 +437,6 @@
     "publishedAt": "2024-02-13T00:00:00.000Z",
     "tags": [],
     "summary": "How we implemented CPU and wall time profiling in our .NET continuous profiler.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -491,7 +447,6 @@
     "publishedAt": "2024-01-09T00:00:00.000Z",
     "tags": [],
     "summary": "Our .NET profiler was designed and implemented to run 24/7 in production, at any scale, with negligible impact. Here are the details of how we built it.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -502,7 +457,6 @@
     "publishedAt": "2023-12-21T00:00:00.000Z",
     "tags": [],
     "summary": "In this video, Jean-Mathieu Saponaro, Data & Analytics Senior Engineering Manager, describes the journey of leading, growing, and scaling self-serve analytics within Datadog.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -513,7 +467,6 @@
     "publishedAt": "2023-10-27T00:00:00.000Z",
     "tags": [],
     "summary": "Engineering spotlight: Jeromy Carriere",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -524,7 +477,6 @@
     "publishedAt": "2023-06-30T00:00:00.000Z",
     "tags": [],
     "summary": "How Datadog’s Frontend DevX team migrated a codebase from flaky, hard-to-maintain acceptance testing with Puppeteer to more robust Synthetic tests.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -535,7 +487,6 @@
     "publishedAt": "2023-06-16T00:00:00.000Z",
     "tags": [],
     "summary": "This post walks through how we restored our platform after it was affected by the outage of March 8, 2023.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -546,7 +497,6 @@
     "publishedAt": "2023-06-01T00:00:00.000Z",
     "tags": [],
     "summary": "This post sketches out our incident response process, where it succeeded and where it stumbled on March 8, and what we learned along the way.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -557,7 +507,6 @@
     "publishedAt": "2023-05-26T00:00:00.000Z",
     "tags": [],
     "summary": "Learn how we tackled a case of high network-latency in our usage estimation platform that required a multi-layered solution.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -568,7 +517,6 @@
     "publishedAt": "2023-05-24T00:00:00.000Z",
     "tags": [],
     "summary": "A deep dive into what happened at the platform level during the outage of March 8, 2023.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -579,7 +527,6 @@
     "publishedAt": "2023-04-17T00:00:00.000Z",
     "tags": [],
     "summary": "Learn how we developed a new scheduling algorithm for data fetching and rendering and how we built it for use across our suite of Datadog products.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -590,7 +537,6 @@
     "publishedAt": "2023-02-22T00:00:00.000Z",
     "tags": [],
     "summary": "A closer look at storage routing in Husky, Datadog’s third-generation event storage system.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -601,7 +547,6 @@
     "publishedAt": "2023-01-31T00:00:00.000Z",
     "tags": [],
     "summary": "We’ve recently improved the raw performance of the Datadog Agent, leading to 20% less CPU use on Agents flooded with custom metrics.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -612,7 +557,6 @@
     "publishedAt": "2022-09-29T00:00:00.000Z",
     "tags": [],
     "summary": "Learn about Datadog’s repeatable design elements that we’ve documented in our design style guide called DRUIDS.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -623,7 +567,6 @@
     "publishedAt": "2022-06-06T00:00:00.000Z",
     "tags": [],
     "summary": "Engineering spotlight: Tay Nishimura",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -634,7 +577,6 @@
     "publishedAt": "2022-05-17T00:00:00.000Z",
     "tags": [],
     "summary": "Husky is an unbundled, distributed, schemaless, vectorized column store. Here’s how we built it—and why.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -645,7 +587,6 @@
     "publishedAt": "2022-05-12T00:00:00.000Z",
     "tags": [],
     "summary": "Employees at all modern software companies use a ton of outside pieces of software to do their jobs. Learn how Datadog’s IT team expanded Clarity to automate monitoring these accounts for inactivity and optimizing how much we spend on them.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -656,7 +597,6 @@
     "publishedAt": "2022-04-13T00:00:00.000Z",
     "tags": [],
     "summary": "The story of a seemingly simple issue that led us into the hidden complexities of gRPC, DNS, and Kubernetes.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -667,7 +607,6 @@
     "publishedAt": "2022-03-25T00:00:00.000Z",
     "tags": [],
     "summary": "See Datadog’s proof of concept exploit for breaking out from unprivileged containers using the Dirty Pipe vulnerability.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -678,7 +617,6 @@
     "publishedAt": "2022-02-28T00:00:00.000Z",
     "tags": [],
     "summary": "How several patches and fixes in Go 1.18 bring improved profiling accuracy.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -689,7 +627,6 @@
     "publishedAt": "2022-02-22T00:00:00.000Z",
     "tags": [],
     "summary": "How the Datadog DesignOps team uses Datadog to understand our users and make well-informed design decisions",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -700,7 +637,6 @@
     "publishedAt": "2021-10-15T00:00:00.000Z",
     "tags": [],
     "summary": "Our story of contributing to kube-state-metrics, a popular open source Kubernetes service.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -711,7 +647,6 @@
     "publishedAt": "2021-09-30T00:00:00.000Z",
     "tags": [],
     "summary": "We identified a performance issue caused by the `ForkJoinPool` in our Java application based on the Akka framework. This is how we solved our issue.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -722,7 +657,6 @@
     "publishedAt": "2021-04-30T00:00:00.000Z",
     "tags": [],
     "summary": "Employees at all modern software companies use a ton of outside pieces of software to do their jobs. Learn how Datadog’s IT team built a tool to automate monitoring these accounts for security and compliance.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -733,7 +667,6 @@
     "publishedAt": "2021-02-22T00:00:00.000Z",
     "tags": [],
     "summary": "Solving performance problems when moving an application to Kubernetes",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -744,7 +677,6 @@
     "publishedAt": "2021-02-10T00:00:00.000Z",
     "tags": [],
     "summary": "Engineering spotlight: Maël Nison, maintainer of Yarn",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -755,7 +687,6 @@
     "publishedAt": "2021-02-02T00:00:00.000Z",
     "tags": [],
     "summary": "What the observer API means for PHP 8 and the future of observability",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -766,7 +697,6 @@
     "publishedAt": "2020-11-02T00:00:00.000Z",
     "tags": [],
     "summary": "Glommio (pronounced glom-io or |glomjəʊ|) is a cooperative thread-per-core crate for Rust & Linux based on io_uring. It allows you to write asynchronous code that takes advantage of rust async/await, but it doesn’t use helper threads anywhere.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -777,7 +707,6 @@
     "publishedAt": "2020-10-07T00:00:00.000Z",
     "tags": [],
     "summary": "Adventures in developing a Python profiler",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -788,7 +717,6 @@
     "publishedAt": "2020-09-23T00:00:00.000Z",
     "tags": [],
     "summary": "How I used Datadog to become a better sailor.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -799,7 +727,6 @@
     "publishedAt": "2019-09-23T00:00:00.000Z",
     "tags": [],
     "summary": "Introducing DDSketch, the first fully-mergeable, relative-error quantile sketching algorithm with formal guarantees.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -810,7 +737,6 @@
     "publishedAt": "2019-06-03T00:00:00.000Z",
     "tags": [],
     "summary": "How to guarantee end-to-end security when using automation to package and publish Datadog Agent integrations",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -821,7 +747,6 @@
     "publishedAt": "2019-04-02T00:00:00.000Z",
     "tags": [],
     "summary": "A look at how Datadog builds and operates data pipelines reliably at scale.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -832,7 +757,6 @@
     "publishedAt": "2019-01-22T00:00:00.000Z",
     "tags": [],
     "summary": "The introduction of advanced statistical methods is reshaping the UX of alerts",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -843,7 +767,6 @@
     "publishedAt": "2018-11-01T00:00:00.000Z",
     "tags": [],
     "summary": "Integrating Amazon Simple Email Service with Datadog to improve observability.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -854,7 +777,6 @@
     "publishedAt": "2018-08-13T00:00:00.000Z",
     "tags": [],
     "summary": "Today, we’re open-sourcing Kafka-Kit, a toolset for scaling and recovering Kafka.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -865,7 +787,6 @@
     "publishedAt": "2018-04-24T00:00:00.000Z",
     "tags": [],
     "summary": "Using Datadog to find performance bottlenecks, and contrasting tentative solutions using performance benchmarks.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -876,7 +797,6 @@
     "publishedAt": "2018-04-16T00:00:00.000Z",
     "tags": [],
     "summary": "How the new Datadog Agent written in Go runs Python checks.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -887,7 +807,6 @@
     "publishedAt": "2018-03-23T00:00:00.000Z",
     "tags": [],
     "summary": "How to be a better designer by being a better explainer.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -898,7 +817,6 @@
     "publishedAt": "2017-09-20T00:00:00.000Z",
     "tags": [],
     "summary": "If you are part of the team managing the AWS infrastructure at your organization, you’ve likely had to wrestle with the complexity of managing multiple accounts for some time now.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -909,7 +827,6 @@
     "publishedAt": "2017-09-06T00:00:00.000Z",
     "tags": [],
     "summary": "Designing powerful outlier and anomaly detection algorithms requires using the right tools. Discover how robust statistical distances can help.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -920,7 +837,6 @@
     "publishedAt": "2017-08-23T00:00:00.000Z",
     "tags": [],
     "summary": "The Datadog Solutions Team reproduces problems that customers run into while they try using our many integrations in their own, always-unique environments.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -931,7 +847,6 @@
     "publishedAt": "2017-08-15T00:00:00.000Z",
     "tags": [],
     "summary": "Highlights of our recent work to improve our cloud-based monitoring and alerting pipeline.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -942,7 +857,6 @@
     "publishedAt": "2017-07-11T00:00:00.000Z",
     "tags": [],
     "summary": "A piecewise regression can model multiple trends in a single data set. Learn how Datadog automates piecewise regression on our timeseries data.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -953,7 +867,6 @@
     "publishedAt": "2017-06-15T00:00:00.000Z",
     "tags": [],
     "summary": "At Datadog we see and gather metrics everywhere by using Datadog to monitor our applications and infrastructure. So our team thought it’d be fun to come up with creative solutions to “where can we display metrics?”",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -964,7 +877,6 @@
     "publishedAt": "2017-06-08T00:00:00.000Z",
     "tags": [],
     "summary": "Recently we extended the Datadog Agent to support extracting additional metrics from Kubernetes using the kube-state-metrics via protobufs.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -975,7 +887,6 @@
     "publishedAt": "2017-05-17T00:00:00.000Z",
     "tags": [],
     "summary": "Solutions Engineers at Datadog have to stay on top of what’s going on within the company and outside.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -986,7 +897,6 @@
     "publishedAt": "2017-01-23T00:00:00.000Z",
     "tags": [],
     "summary": "When some of our customers reported that their agents were freezing, sometimes for hours at a time, we tracked down the issue to their disk mount options.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -997,7 +907,6 @@
     "publishedAt": "2017-01-17T00:00:00.000Z",
     "tags": [],
     "summary": "It might surprise you to learn who built most of the prototype of the newest Datadog feature. Read more about Marie-Laure and her internship at Datadog.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -1008,7 +917,6 @@
     "publishedAt": "2016-11-14T00:00:00.000Z",
     "tags": [],
     "summary": "Today, we’re open-sourcing Redux-Doghouse, a library for Redux that helps you scope components so that they can be reused multiple times in multiple contexts without conflicting with one another.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -1019,7 +927,6 @@
     "publishedAt": "2016-10-27T00:00:00.000Z",
     "tags": [],
     "summary": "One of our colleagues, Christian, is participating in a tremendous 6-day-run challenge. Yes, you read that right, he will run around 850km (528 miles) over 6 days. As we like to graph everything, we thought it would be fun to cheer him on remotely and follow his progress in this crazy race via a…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -1030,7 +937,6 @@
     "publishedAt": "2016-08-23T00:00:00.000Z",
     "tags": [],
     "summary": "Do you ever walk to the bathroom across the office only to discover that it’s in use? Then you’ve got to decide if you want to awkwardly hover right outside, or hold it in for a while and try again later. This is obviously a first world problem, but bathroom contention was getting to be a challenge…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -1041,7 +947,6 @@
     "publishedAt": "2016-08-11T00:00:00.000Z",
     "tags": [],
     "summary": "We’ve been using Consul for about 18 months at Datadog and it’s an important part of our production stack. In this post we will discuss some of the lessons we have learned.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
   {
@@ -1052,7 +957,6 @@
     "publishedAt": "2016-07-11T00:00:00.000Z",
     "tags": [],
     "summary": "To commemorate the third annual GopherCon US in Denver this week, we’re releasing cgo bindings to two compression libraries that we’ve been using in production at Datadog for a while now: czlib and zstd.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   }
 ]

@@ -9,7 +9,6 @@
       "general"
     ],
     "summary": "State-of-the-art LLMs can now solve a majority of scoped coding problems, but it’s an open question whether they can fully autonomously manage software engineering projects. We spent months building evaluation environments to benchmark how well AI agents can create real Stripe integrations.",
-    "thumbnail": "https://images.stripeassets.com/fzn2n1nzq965/3eECFWnjwVnp7EForWM9lL/2ab86dd9a7c6b61fe6b7d6b8009f2598/Index-New_2x__1_.png?w=1080&q=80",
     "fetchedAt": "2026-07-11T13:20:51.541Z"
   },
   {
@@ -22,7 +21,6 @@
       "general"
     ],
     "summary": "Among global business leaders surveyed, 84% agree that adapting pricing quickly will be a key competitive advantage. Our new real-time analytics system for Stripe Billing helps them spot customer trends just as they emerge.",
-    "thumbnail": "https://images.stripeassets.com/fzn2n1nzq965/2tPGiM6bmk10U1TUUjQ5OP/230aea369d4cb8a7b0015e8cd5cff6d6/Billing_analytics_blog_hero.jpg?w=1080&q=80",
     "fetchedAt": "2026-07-11T13:20:51.541Z"
   },
   {
@@ -35,7 +33,6 @@
       "general"
     ],
     "summary": "Stripe’s users rely on us to calculate tax correctly and quickly, no matter where a transaction happens. Our new jurisdiction resolution system (JRS) is a faster, less resource-intensive solution to the challenging problem of determining tax obligations in places with complicated, overlapping tax…",
-    "thumbnail": "https://images.stripeassets.com/fzn2n1nzq965/4h8YMCtMemiC2iKsTj4742/15607bdbf81cd651d9da5c70ca626583/Tax_JRS_Index.jpg?w=1080&q=80",
     "fetchedAt": "2026-07-11T13:20:51.541Z"
   },
   {
@@ -48,7 +45,6 @@
       "general"
     ],
     "summary": "In this blog post we’ll share an overview of Stripe’s database infrastructure and discuss the design and application of the Data Movement Platform.",
-    "thumbnail": "https://images.stripeassets.com/fzn2n1nzq965/4Sl5p8FugS8KS2ZNmGjdZh/752969d3b2cf4ff37e27b22a68633c4d/Databases_Blog_Chart__900px_wide_5__2x.png?w=1080&q=80",
     "fetchedAt": "2026-07-11T13:20:51.541Z"
   },
   {
@@ -61,7 +57,6 @@
       "general"
     ],
     "summary": "Stripe Billing allows businesses to manage customer relationships with recurring payments, usage triggers, and other customizable features.",
-    "thumbnail": "https://images.stripeassets.com/fzn2n1nzq965/6HO1PGQRSR43TFMgyzOta1/595f64b1acad3cb95e990945043d1736/Test_Clocks_Hero_Image_4_3_2x_v2__1_.png?w=1080&q=80",
     "fetchedAt": "2026-07-11T13:20:51.541Z"
   },
   {
@@ -74,7 +69,6 @@
       "general"
     ],
     "summary": "This blog discusses the technical details of how we built Shepherd and how we are expanding the capabilities of Chronon to meet Stripe’s scale.",
-    "thumbnail": "https://images.stripeassets.com/fzn2n1nzq965/2EmQGwPLO419btJMcrbQlR/8c90cdfc6e361698c8351b8ce3da28a7/Blog_hero_image_2160x1572_Stripe-chronon.png?w=1080&q=80",
     "fetchedAt": "2026-07-11T13:20:51.541Z"
   },
   {
@@ -87,7 +81,6 @@
       "general"
     ],
     "summary": "In this blog post, we’ll share technical details on how we built this state-of-the-art money movement tracking system, and describe how teams at Stripe interact with the data quality metrics that underlie our payment processing network.",
-    "thumbnail": "https://images.stripeassets.com/fzn2n1nzq965/1kYCAIVuoYqTe5qrwOOY8K/005295f325509e41a3cf0d2dd3435019/Frame_1__14_.png?w=1080&q=80",
     "fetchedAt": "2026-07-11T13:20:51.541Z"
   },
   {
@@ -100,7 +93,6 @@
       "general"
     ],
     "summary": "You can now configure payment method settings from the Dashboard—no code required. We call this integration path dynamic payment methods.",
-    "thumbnail": "https://images.stripeassets.com/fzn2n1nzq965/2uGzdEPm7wTkHMKNmX1NhQ/c21806f3a9a186ed2ffa2fdff7d72574/Simplifying_payment_methods_code_in_our_new_API_version.png?w=1080&q=80",
     "fetchedAt": "2026-07-11T13:20:51.541Z"
   },
   {
@@ -113,7 +105,6 @@
       "general"
     ],
     "summary": "Radar is Stripe’s fraud prevention solution. This post covers what makes Radar so powerful and some of the key decisions we’ve made—and lessons we’ve learned—over the almost seven years we’ve been building it.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:20:51.541Z"
   },
   {
@@ -126,7 +117,6 @@
       "general"
     ],
     "summary": "Delivering a good user experience without compromising the authoring experience required us to develop an authoring format that enables writers to express interactivity and simple page logic without mixing code and content.",
-    "thumbnail": "https://images.stripeassets.com/fzn2n1nzq965/6iWKtXRcgBcZsnSu7e3QeL/247319c28a727a9c7ded090567b8cb02/markdoc-logo.png?w=1080&q=80",
     "fetchedAt": "2026-07-11T13:20:51.541Z"
   },
   {
@@ -139,7 +129,6 @@
       "general"
     ],
     "summary": "On Sunday, March 6, we migrated Stripe’s largest JavaScript codebase from Flow to TypeScript. In a single pull request, we converted more than 3.7 million lines of code. The next day, hundreds of engineers came in to start writing TypeScript for their projects.",
-    "thumbnail": "https://images.stripeassets.com/fzn2n1nzq965/5ibf033QPFRhoBSzQEKGc2/fa3aec6398800d21edbc9c5e9faf8581/llama_blog_gradient.png?w=1080&q=80&fm=jpg",
     "fetchedAt": "2026-07-11T13:20:51.541Z"
   },
   {
@@ -152,7 +141,6 @@
       "general"
     ],
     "summary": "Stripe's continuous integration (CI) system is responsible for orchestrating build pipelines and executing the tens of thousands of test suites that our engineers depend on to validate their changes. We lean on a combination of open-source technologies and novel engineering to deliver a CI system…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:20:51.541Z"
   },
   {
@@ -165,7 +153,6 @@
       "general"
     ],
     "summary": "Sorbet has been a crucial part of Stripe’s growth in recent years. Today, Sorbet runs over our entire Ruby codebase, currently amounting to over 15 million lines of code spread across 150,000 Ruby files. Sorbet increases productivity and fosters a collective engineering culture. Here’s why we love…",
-    "thumbnail": "https://images.stripeassets.com/fzn2n1nzq965/FVwqGUzZl6hH3MXS1YNZu/8a4b4645ef0eb07dc08f9679a5f60e20/blog-featured-image.png?w=1080&q=80",
     "fetchedAt": "2026-07-11T13:20:51.541Z"
   },
   {
@@ -178,7 +165,6 @@
       "general"
     ],
     "summary": "Abstracting away the complexity of payments has driven the evolution of our APIs over the last decade. This post provides the context and conceptual frameworks behind our API design—and the milestones that led to the PaymentIntents API .",
-    "thumbnail": "https://images.stripeassets.com/fzn2n1nzq965/0xFtL11Zftd7KEm3EViDU/de7c42ae48251578e312b17fe48d4e59/blog-payment-api-design-diagram-1.svg?w=1080&q=80",
     "fetchedAt": "2026-07-11T13:20:51.541Z"
   },
   {
@@ -191,7 +177,6 @@
       "general"
     ],
     "summary": "We set out to build a globe that inspires a sense of awe, invites people to explore, and conceals details for discovery. Along the way, we evaluated existing tools, designed our own solution, solved four interesting technical challenges, and improved the way we collaborate. Here’s what we learned.",
-    "thumbnail": "https://images.stripeassets.com/fzn2n1nzq965/4mErtIqApyu5hBSCHzvaHM/d78f1f23f2666c097c7716da4c8eecae/blog-globe-index.png?w=1080&q=80",
     "fetchedAt": "2026-07-11T13:20:51.541Z"
   },
   {
@@ -204,7 +189,6 @@
       "general"
     ],
     "summary": "Last May, Stripe launched our remote engineering hub, a virtual office coequal with our physical engineering offices in San Francisco, Seattle, Dublin, and Singapore. It’s now the backbone of a new working model for the whole company. Here is what we’ve learned.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:20:51.541Z"
   },
   {
@@ -217,7 +201,6 @@
       "general"
     ],
     "summary": "Stripe enables businesses in many countries worldwide to onboard easily so they can accept payments as quickly as possible. Stripe’s scale makes our platform a common target for payments fraud and cybercrime, so we’ve built a deep understanding of the patterns bad actors use. We take these threats…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:20:51.541Z"
   },
   {
@@ -230,7 +213,6 @@
       "general"
     ],
     "summary": "Building and testing a Stripe integration can require frequent switching between the terminal, your code editor, and the Dashboard. Today, we’re excited to launch the Stripe command-line interface (CLI). It lets you interact with Stripe right from the terminal and makes it easier to build, test,…",
-    "thumbnail": "https://images.stripeassets.com/fzn2n1nzq965/13NmRggFpDbCSt8Bd2tfgn/e472c01dac409a3f429be2f345d72171/blog-stripe-cli-index.png?w=1080&q=80",
     "fetchedAt": "2026-07-11T13:20:51.541Z"
   },
   {
@@ -243,7 +225,6 @@
       "general"
     ],
     "summary": "Color contrast is an important aspect of accessibility. Good contrast makes it easier for people with visual impairments to use products, and helps in imperfect conditions like low-light environments or older screens. With this in mind, we recently updated the colors in our user interfaces to be…",
-    "thumbnail": "https://images.stripeassets.com/fzn2n1nzq965/7g7H8gPOI5XLvzeW5QE2TF/5c46a4ba82437434b514cbf56be2141c/starting-colors-wide.png?w=1080&q=80",
     "fetchedAt": "2026-07-11T13:20:51.541Z"
   },
   {
@@ -256,7 +237,6 @@
       "general"
     ],
     "summary": "Stripe launched in Singapore in 2016. Since then, we’ve seen strong traction, and are proud to work with some of the fastest-growing companies in the region, including Grab, Mobike, and Carousell. Today, we’re increasing our investment: we’re very excited to announce that Singapore is joining…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:20:51.541Z"
   },
   {
@@ -269,7 +249,6 @@
       "general"
     ],
     "summary": "Logging is one of the oldest and most ubiquitous patterns in computing. We’ve found using a slight augmentation to traditional logging immensely useful at Stripe—an idea that we call canonical log lines. It’s a simple technique: in addition to their normal log traces, requests also emit one long…",
-    "thumbnail": "https://images.stripeassets.com/fzn2n1nzq965/Y0ofZ7xqW0QeptsnwNLKZ/b3aa1b4e19e41367068d5906f6b73bb5/dev-dashboard_2x-8d6b50fd630e96e4d83ad29d75a05f026dba5fec.png?w=1080&q=80",
     "fetchedAt": "2026-07-11T13:20:53.236Z"
   },
   {
@@ -282,7 +261,6 @@
       "general"
     ],
     "summary": "DNS is a critical piece of infrastructure used to facilitate communication across networks. DNS issues can quickly lead to crippling, widespread outages, and you could find yourself in a real bind. Here's how we monitor our DNS systems and how we used an array of tools to investigate and fix an…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:20:53.236Z"
   },
   {
@@ -295,7 +273,6 @@
       "general"
     ],
     "summary": "Stripe uses machine learning to respond to our users’ complex, real-world problems. Machine learning powers Radar to block fraud, and Billing to retry failed charges on the network. Our machine learning infrastructure scores hundreds of millions of predictions across many machine learning models.…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:20:53.236Z"
   },
   {
@@ -308,7 +285,6 @@
       "general"
     ],
     "summary": "Stripe has engineering hubs in San Francisco, Seattle, Dublin, and Singapore. We are establishing a fifth hub that is less traditional but no less important: Remote. We are doing this to situate product development closer to our customers, improve our ability to tap the 99.74% of talented engineers…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:20:53.236Z"
   },
   {
@@ -321,7 +297,6 @@
       "general"
     ],
     "summary": "Stripe builds economic infrastructure, and we’re designing for a global audience and market. In doing so, we carefully consider our technology and tools, organizational structure, and employee representation. Successful global organizations establish this mindset for different reasons. For some,…",
-    "thumbnail": "https://images.stripeassets.com/fzn2n1nzq965/5kM7bnKysbWcvbIIX4UfgX/a068eb03f994025e2c39ceb52edb5f4e/Stripe_Dublin_office.jpg?w=1080&q=80",
     "fetchedAt": "2026-07-11T13:20:53.236Z"
   },
   {
@@ -334,7 +309,6 @@
       "general"
     ],
     "summary": "Reserved instances are hard to purchase effectively. It’s easy to allocate the wrong number, and hard to predict future compute requirements over time. Deciding which and how many reserved instances to buy is a non-trivial exercise at the nexus of cloud strategy, bin packing, and capacity planning.…",
-    "thumbnail": "https://images.stripeassets.com/fzn2n1nzq965/5zm2sOw6b48g2V3TwSmYeT/41e8fa218098599342df64c9b946f531/illustration.jpg?w=1080&q=80",
     "fetchedAt": "2026-07-11T13:20:53.236Z"
   },
   {
@@ -347,7 +321,6 @@
       "general"
     ],
     "summary": "We built a distributed cron job scheduling system on top of Kubernetes, an exciting new platform for container orchestration. In this post, we’ll explain why we chose to build on top of Kubernetes, how we integrated Kubernetes into our existing infrastructure, our approach to building confidence in…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:20:53.236Z"
   },
   {
@@ -360,7 +333,6 @@
       "general"
     ],
     "summary": "At Stripe, we regularly contribute to open-source projects and rely on open-source software for developing many different parts of our stack. Stripe supported the development of Hypothesis, an open-source testing library for Python created by David MacIver. Hypothesis provides effective tooling for…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:20:53.236Z"
   },
   {
@@ -373,7 +345,6 @@
       "general"
     ],
     "summary": "Today, we’re excited to add .NET to our officially supported languages (alongside Ruby, Python, PHP, Java, Node, and Go). Going forward, we’ll regularly be updating the Stripe .NET library to support our latest products and features.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:20:53.236Z"
   },
   {
@@ -386,7 +357,6 @@
       "general"
     ],
     "summary": "When it comes to APIs, change isn’t popular. While software developers are used to iterating quickly and often, API developers lose that flexibility as soon as even one user starts consuming their interface. Many of us are familiar with how the Unix operating system evolved. In 1994, <em>The…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:20:53.236Z"
   },
   {
@@ -399,7 +369,6 @@
       "general"
     ],
     "summary": "We recently released a new and improved version of Connect, our suite of tools designed for platforms and marketplaces. Stripe’s design team works hard to create unique landing pages that tell a story for our major products. For this release, we designed Connect’s landing page to reflect its…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:20:53.236Z"
   },
   {
@@ -412,7 +381,6 @@
       "general"
     ],
     "summary": "Availability and reliability are paramount for all web applications and APIs. If you’re providing an API, chances are you’ve already experienced sudden increases in traffic that affect the quality of your service, potentially even leading to a service outage for all your users.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:20:53.236Z"
   },
   {
@@ -425,7 +393,6 @@
       "general"
     ],
     "summary": "The networks connecting our servers are, on average, more reliable than consumer-level last miles like cellular or home ISPs, but given enough information moving across the wire, they’re still going to fail in exotic ways. Outages, routing problems, and other intermittent failures may be…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:20:53.236Z"
   },
   {
@@ -438,7 +405,6 @@
       "general"
     ],
     "summary": "Engineering teams face a common challenge when building software: they eventually need to redesign the data models they use to support clean abstractions and more complex features. In production environments, this might mean migrating millions of active objects and refactoring thousands of lines of…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:20:53.236Z"
   },
   {
@@ -451,7 +417,6 @@
       "general"
     ],
     "summary": "We just launched version 1.1.0 of our Android SDK , which fixes a few bugs and adds some new features: threading control, brand instead of type for cards, look up a card’s funding source, and Javadoc.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:20:53.236Z"
   },
   {
@@ -464,7 +429,6 @@
       "general"
     ],
     "summary": "When people talk about their data infrastructure, they tend to focus on the technologies. However, we’ve found that just as important as the technologies themselves are the principles that guide their use. Here's our experience with one such principle that we’ve found useful: reproducibility.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:20:53.236Z"
   },
   {
@@ -477,7 +441,6 @@
       "general"
     ],
     "summary": "With so many new technologies coming out every year (like Kubernetes or Habitat ), it’s easy to become so entangled in our excitement about the future that we forget to pay homage to the tools that have been quietly supporting our production environments. One such tool we've been using at Stripe…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:20:53.236Z"
   },
   {
@@ -490,7 +453,6 @@
       "general"
     ],
     "summary": "Stripe Radar is a collection of tools to help businesses detect and prevent fraud. At Radar’s core is a machine learning engine that scans every card payment across Stripe’s 100,000+ businesses, aggregates information from those payments into behavioral signals that are predictive of fraud, and…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:20:53.236Z"
   },
   {
@@ -503,7 +465,6 @@
       "general"
     ],
     "summary": "When a company writes about their observability stack, they often focus on sweet visualizations, advanced anomaly detection or innovative data stores. Those are well and good, but today we’d like to talk about the tip of the spear when it comes to observing your systems: metrics pipelines! Metrics…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:20:53.236Z"
   },
   {
@@ -516,7 +477,6 @@
       "general"
     ],
     "summary": "This January, we invited three developers to come work on open-source projects full-time at Stripe. We specifically chose projects for this Open-Source Retreat that we felt would have deep impact in a variety of different areas. Over the past few months, our grantees have made significant progress…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:20:53.236Z"
   },
   {
@@ -529,7 +489,6 @@
       "general"
     ],
     "summary": "Like many developers, we often contribute to open-source software in bits and pieces over long periods of time. So we started the Open-Source Retreat to help open-source developers make concentrated progress on features and releases with the potential for significant impact. For 2016’s Retreat,…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:20:54.892Z"
   },
   {
@@ -542,7 +501,6 @@
       "general"
     ],
     "summary": "We increasingly rely on (and contribute back to!) a lot of open-source software to build Stripe, and we’d like to give back and get more people working on open-source.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:20:54.892Z"
   },
   {
@@ -555,7 +513,6 @@
       "general"
     ],
     "summary": "In February 2013, we blogged about email transparency at Stripe. Since then a number of other companies have implemented their own versions of it (which a few have talked about publicly). We often get asked whether email transparency is still around, and if so, how we've scaled it.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:20:54.892Z"
   },
   {
@@ -568,7 +525,6 @@
       "general"
     ],
     "summary": "A few months ago, we announced our Open-Source Retreat. Though we’d originally expected to sponsor two grantees, we ended up giving out three full grants (and then an additional shorter grant).",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:20:54.892Z"
   },
   {
@@ -581,7 +537,6 @@
       "general"
     ],
     "summary": "We rely on a lot of open-source software at Stripe, and over time we’ve contributed back our own share of patches and projects. We decided we’d like to do more, though, so we’re launching an open-source retreat program.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:20:54.892Z"
   },
   {
@@ -594,7 +549,6 @@
       "general"
     ],
     "summary": "People tend to have a narrow view of the problems they can solve using GDB. Many think that GDB is just for debugging segfaults or that it's only useful with C or C++ programs. In reality, GDB is an impressively general and powerful tool. When you know how to use it, you can debug just about…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:20:54.892Z"
   }
 ]

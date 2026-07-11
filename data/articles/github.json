@@ -11,7 +11,6 @@
       "general"
     ],
     "summary": "How migrating Copilot code review to shared Unix-style code exploration tools reduced review cost by reshaping agent workflows around pull request evidence. The post Better tools made Copilot code review worse. Here’s how we actually improved it. appeared first on The GitHub Blog .",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:23:40.981Z"
   },
   {
@@ -28,7 +27,6 @@
       "devops"
     ],
     "summary": "Explore how the Aspire team turns merged product changes into SME-reviewed docs pull requests, closing the gap between release and documentation. The post Automating cross-repo documentation with GitHub Agentic Workflows appeared first on The GitHub Blog .",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:23:40.981Z"
   },
   {
@@ -42,7 +40,6 @@
       "general"
     ],
     "summary": "How the GitHub Issues team used client-side caching, smart prefetching, and service workers to make navigation feel instant. The post From latency to instant: Modernizing GitHub Issues navigation performance appeared first on The GitHub Blog .",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:23:40.981Z"
   },
   {
@@ -57,7 +54,6 @@
       "devops"
     ],
     "summary": "Learn how Github uses eBPF to detect and prevent circular dependencies in its deployment tooling. The post How GitHub uses eBPF to improve deployment safety appeared first on The GitHub Blog .",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:23:40.981Z"
   },
   {
@@ -71,7 +67,6 @@
       "general"
     ],
     "summary": "The path to better performance is often found in simplicity. The post The uphill climb of making diff lines performant appeared first on The GitHub Blog .",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:23:40.981Z"
   },
   {
@@ -87,7 +82,6 @@
       "devops"
     ],
     "summary": "I used coding agents to build agents that automated part of my job. Here's what I learned about working better with coding agents. The post Agent-driven development in Copilot Applied Science appeared first on The GitHub Blog .",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:23:40.981Z"
   },
   {
@@ -102,7 +96,6 @@
       "general"
     ],
     "summary": "AI automates triage for accessibility feedback, allowing us to focus on fixing barriers—turning a chaotic backlog into continuous, rapid resolutions. The post Continuous AI for accessibility: How GitHub transforms feedback into inclusion appeared first on The GitHub Blog .",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:23:40.981Z"
   },
   {
@@ -116,7 +109,6 @@
       "general"
     ],
     "summary": "Here's how we made the search experience better, faster, and more resilient for GHES customers. The post How we rebuilt the search architecture for high availability in GitHub Enterprise Server appeared first on The GitHub Blog .",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:23:40.981Z"
   },
   {
@@ -129,7 +121,6 @@
       "general"
     ],
     "summary": "Learn how GitHub built an accessible, multi-terminal-safe ASCII animation for the Copilot CLI using custom tooling, ANSI color roles, and advanced terminal engineering. The post From pixels to characters: The engineering behind GitHub Copilot CLI’s animated ASCII banner appeared first on The GitHub…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:23:40.981Z"
   },
   {
@@ -145,7 +136,6 @@
       "devops"
     ],
     "summary": "User feedback led us to clean up outdated mitigations. See why observability and lifecycle management are critical for defense systems. The post When protections outlive their purpose: A lesson on managing defense systems at scale appeared first on The GitHub Blog .",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:23:40.981Z"
   },
   {
@@ -156,7 +146,6 @@
     "publishedAt": "2025-09-15T00:00:00.000Z",
     "tags": [],
     "summary": "GitHub is introducing post-quantum secure key exchange methods for SSH access to better protect Git data in transit.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2025/07/wallpaper-generic-blue.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:40.981Z"
   },
   {
@@ -167,7 +156,6 @@
     "publishedAt": "2025-06-10T00:00:00.000Z",
     "tags": [],
     "summary": "Our best practices for quickly identifying, resolving, and preventing issues at scale.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2025/05/github-generic-wallpaper-rubber-duck-invertocat.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:40.981Z"
   },
   {
@@ -178,7 +166,6 @@
     "publishedAt": "2025-05-13T00:00:00.000Z",
     "tags": [],
     "summary": "Plus, considerations in updating one of GitHub’s oldest and most heavily used features.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2025/05/github-generic-wallpaper-rubber-duck-invertocat.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:40.981Z"
   },
   {
@@ -189,7 +176,6 @@
     "publishedAt": "2025-05-09T00:00:00.000Z",
     "tags": [],
     "summary": "How to build custom annotations for your design system components or use Figma’s Code Connect to help capture important accessibility details before development.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2025/05/Design-System-Annotations-Part-2.jpg?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:40.981Z"
   },
   {
@@ -200,7 +186,6 @@
     "publishedAt": "2025-05-09T00:00:00.000Z",
     "tags": [],
     "summary": "The Accessibility Design team created a set of annotations to bridge the gaps that design systems alone can’t fix and proactively addresses accessibility issues within Primer components.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2025/05/Design-System-Annotations-Part-1.jpg?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:40.981Z"
   },
   {
@@ -211,7 +196,6 @@
     "publishedAt": "2025-05-02T00:00:00.000Z",
     "tags": [],
     "summary": "How do we translate web accessibility standards to command line applications? This is GitHub CLI’s journey toward making terminal experiences for all developers.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2025/03/github_logo_invertocat_dark_5.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:40.981Z"
   },
   {
@@ -222,7 +206,6 @@
     "publishedAt": "2025-04-25T00:00:00.000Z",
     "tags": [],
     "summary": "The GitHub CLI now supports common Git configurations for triangular workflows. Learn more about triangular workflows, how they work, and how to configure them for your Git workflows. Then, see how you can leverage these using the GitHub CLI.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2024/04/1200x630-Collaboration-Unfurl-LIGHT-Logo.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:40.981Z"
   },
   {
@@ -233,7 +216,6 @@
     "publishedAt": "2025-04-11T00:00:00.000Z",
     "tags": [],
     "summary": "Explore the iterative development journey of GitHub’s sub-issues feature. Learn how we leveraged sub-issues to build and refine sub-issues, breaking down larger tasks into smaller, manageable ones.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2025/03/github_logo_invertocat_dark_5.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:40.981Z"
   },
   {
@@ -244,7 +226,6 @@
     "publishedAt": "2025-03-27T00:00:00.000Z",
     "tags": [],
     "summary": "Go beyond status updates and use these meetings to surface challenges, solve problems, and drive impact.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2023/12/Productivity-DarkMode-2-1.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:40.981Z"
   },
   {
@@ -257,7 +238,6 @@
       "general"
     ],
     "summary": "A look into building IssueOps workflows on GitHub to do everything from CI/CD to handling approvals and more.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2024/01/Productivity-DarkMode-3.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:42.610Z"
   },
   {
@@ -270,7 +250,6 @@
       "general"
     ],
     "summary": "Passwords are notoriously difficult to detect with conventional programming approaches. AI can help us find passwords better because it understands context. This blog post will explore the technical challenges we faced with building the feature and the novel and creative ways we solved them.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2023/10/Security-DarkMode-3.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:42.610Z"
   },
   {
@@ -283,7 +262,6 @@
       "ml"
     ],
     "summary": "GitHub Copilot can streamline your debugging process by troubleshooting in your IDE, analyzing pull requests, and more, helping you tackle issues faster and more robustly.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2024/09/copilot-header-1.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:42.610Z"
   },
   {
@@ -296,7 +274,6 @@
       "general"
     ],
     "summary": "How GitHub’s Product Security Engineering team manages our CodeQL implementation at scale and how you can, too.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2024/02/Security-DarkMode-2-2.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:42.610Z"
   },
   {
@@ -309,7 +286,6 @@
       "general"
     ],
     "summary": "A deep dive on the work that went into making the component that powers repository and pull request file trees.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2024/02/AI-DarkMode-3-1.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:42.610Z"
   },
   {
@@ -322,7 +298,6 @@
       "performance"
     ],
     "summary": "The Performance Engineering team at GitHub assessed how CPU performance degrades as utilization increases and how this relates to capacity.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2024/01/Productivity-DarkMode-3.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:42.610Z"
   },
   {
@@ -335,7 +310,6 @@
       "general"
     ],
     "summary": "With this custom addon, you can ensure your workplace remains accessible to users with motion sensitivities while benefiting from Storybook’s Interactions.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2024/02/Productivity-DarkMode-2-2.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:42.610Z"
   },
   {
@@ -348,7 +322,6 @@
       "general"
     ],
     "summary": "How we used GitHub to build GitHub Enterprise Cloud with data residency.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2024/09/image1_df4267.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:42.610Z"
   },
   {
@@ -361,7 +334,6 @@
       "general"
     ],
     "summary": "Five actionable tips and strategies to supercharge developer happiness—and a more innovative workplace.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2024/08/1200x630-Blog-Banner-Light-Mode-2.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:42.610Z"
   },
   {
@@ -374,7 +346,6 @@
       "general"
     ],
     "summary": "Teams with neurodivergent employees can be up to 30 percent more productive. Discover tips on how best to support them in your workplace.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2024/07/neurocats-header.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:42.610Z"
   },
   {
@@ -387,7 +358,6 @@
       "general"
     ],
     "summary": "Solving and staying ahead of problems when scaling up a system of GitHub’s size is a delicate process. Here’s a look at some of the tools in GitHub’s toolbox, and how we’ve used them to solve problems.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2023/12/Productivity-DarkMode-2-1.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:42.610Z"
   },
   {
@@ -400,7 +370,6 @@
       "general"
     ],
     "summary": "Drag-and-drop is a highly interactive and visual interface. We often use drag-and-drop to perform tasks like uploading files, reordering browser bookmarks, or even moving a card in solitaire.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2024/05/Collaboration-LightMode-3-1.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:42.610Z"
   },
   {
@@ -413,7 +382,6 @@
       "performance"
     ],
     "summary": "Pushing code to GitHub is one of the most fundamental interactions that developers have with GitHub every day. Read how we have significantly improved the ability of our monolith to correctly and fully process pushes from our users.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2023/12/Productivity-DarkMode-2-1.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:42.610Z"
   },
   {
@@ -426,7 +394,6 @@
       "general"
     ],
     "summary": "Learn how GitHub used macOS and Apple Silicon runners for GitHub Actions to build, test, and deploy our iOS app faster.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2024/01/Productivity-DarkMode-3.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:42.610Z"
   },
   {
@@ -439,7 +406,6 @@
       "general"
     ],
     "summary": "We’ve made improvements to the way users of assistive technology can interact with and navigate lists of issues and pull requests and tables across GitHub.com.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2024/05/Collaboration-LightMode-2-1.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:42.610Z"
   },
   {
@@ -452,7 +418,6 @@
       "general"
     ],
     "summary": "As part of GitHub’s dedication to accessibility, we expanded our internal accessibility program and scaled up our assessment process to help remove or lower barriers for users with disabilities. Then, we empowered employees from various disciplines to drive accessibility efforts within their teams.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2023/10/Collaboration-LightMode-4.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:44.990Z"
   },
   {
@@ -465,7 +430,6 @@
       "general"
     ],
     "summary": "Here’s how merge queue transformed the way GitHub deploys changes to production at scale, so you can do the same for your organization.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2023/12/Productivity-DarkMode-1.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:44.990Z"
   },
   {
@@ -478,7 +442,6 @@
       "general"
     ],
     "summary": "A peek under the hood of GitHub Advanced Security code scanning autofix.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2023/10/Security-DarkMode-2.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:44.990Z"
   },
   {
@@ -491,7 +454,6 @@
       "general"
     ],
     "summary": "The npm engineering team recently transitioned to using GitHub Codespaces for local development for npm registry services. This shift to Codespaces has substantially reduced the friction of our inner development loop and boosted developer productivity.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2024/02/Productivity-DarkMode-1-1.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:44.990Z"
   },
   {
@@ -504,7 +466,6 @@
       "general"
     ],
     "summary": "The Fundamentals program has helped us address tech debt, improve reliability, and enhance observability of our engineering systems.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2023/12/Productivity-LightMode-2.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:44.990Z"
   },
   {
@@ -517,7 +478,6 @@
       "general"
     ],
     "summary": "Our latest solution to the ubiquitous engineering problem of integration testing in a distributed service ecosystem here at GitHub.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2024/01/40186cb2-1b7d-414e-b687-7e209ee4c9e4-1200x630-1.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:44.990Z"
   },
   {
@@ -530,7 +490,6 @@
       "performance"
     ],
     "summary": "Take CODEOWNERS and GitHub teams to the next level. Learn about how GitHub engineering solves the age old problem of who owns what.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2023/12/Productivity-DarkMode-2-1.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:44.990Z"
   },
   {
@@ -543,7 +502,6 @@
       "general"
     ],
     "summary": "GitHub uses MySQL to store vast amounts of relational data. This is the story of how we seamlessly upgraded our production fleet to MySQL 8.0.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2023/12/Productivity-DarkMode-1.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:44.990Z"
   },
   {
@@ -556,7 +514,6 @@
       "performance"
     ],
     "summary": "Use our new open source Trace2 receiver component and OpenTelemetry to capture and visualize telemetry from your Git commands.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2023/10/trace2receiver-titlecard.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:44.990Z"
   },
   {
@@ -569,7 +526,6 @@
       "general"
     ],
     "summary": "Learn more about how we use GitHub to build GitHub, how we turned our guiding communications principles into prescriptive practices to manage our internal communications signal-to-noise ratio, and how you can contribute to the ongoing conversation.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2023/10/Collaboration-DarkMode-2.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:44.990Z"
   },
   {
@@ -582,7 +538,6 @@
       "general"
     ],
     "summary": "Recently, we’ve been working to make our CI experience better by leveraging the newly released GitHub feature, Actions larger runners, to run our CI.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2023/09/25ad265b-b9e2-43cf-81d4-cafe4f3c2526-1200x630-1.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:44.990Z"
   },
   {
@@ -595,7 +550,6 @@
       "performance"
     ],
     "summary": "See how much more you can get out of GitHub Codespaces by taking advantage of the improved processing power and increased headroom in the next generation of virtual machines.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2023/08/1200x630-Productivity-Unfurl-LIGHT-Logo@2x.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:44.990Z"
   },
   {
@@ -608,7 +562,6 @@
       "performance"
     ],
     "summary": "Learn about how we build containerized services that power microservices on the GitHub.com platform and many internal tools.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2023/08/254174591-2e8600c8-d130-4516-b309-baeb57358498.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:44.990Z"
   },
   {
@@ -621,7 +574,6 @@
       "general"
     ],
     "summary": "GitHub switched to performing merges and rebases using merge-ort. Come behind the scenes to see why and how we made this change.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2023/07/Open-Source-Engineering@2x.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:44.990Z"
   },
   {
@@ -634,7 +586,6 @@
       "general"
     ],
     "summary": "As a design organization, we have the opportunity to make a significant impact on designing the platform for all developers. How does the emergence of creative AI impact our work? How can we achieve an inclusive experience for a spectrum of all abilities? What does designing for developer happiness…",
-    "thumbnail": "https://github.blog/wp-content/uploads/2023/07/253120008-12a80358-c04b-4464-8c15-5f7171111afc.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:44.990Z"
   },
   {
@@ -647,7 +598,6 @@
       "general"
     ],
     "summary": "A look at how we improved the readability of code on GitHub.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2023/05/1200.630-Productivity-wLogo@2x.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:47.269Z"
   },
   {
@@ -660,7 +610,6 @@
       "performance"
     ],
     "summary": "The new GitHub Code View brings users many new features to improve the code reading and exploration experiences, and we overcame a number of unique technical hurdles in order to deliver those features without compromising performance.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2023/05/1200.630-Productivity-wLogo@2x.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:47.269Z"
   },
   {
@@ -673,7 +622,6 @@
       "general"
     ],
     "summary": "Design can have a significant impact on delivering accessible experiences to our users. It takes a cultural shift, dedicated experts, and permission to make progress over perfection in order to build momentum. We’ve got a long way to go, but we’re starting to see a real shift in our journey to make…",
-    "thumbnail": "https://github.blog/wp-content/uploads/2023/05/design-journey-blog-image-2x-1.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:47.269Z"
   },
   {
@@ -686,7 +634,6 @@
       "general"
     ],
     "summary": "How Primer’s updated light and dark theme color contrast strategy resolved hundreds of color-contrast-related accessibility issues over one thousand use cases.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2023/05/image1-4.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:47.269Z"
   },
   {
@@ -699,7 +646,6 @@
       "general"
     ],
     "summary": "Learn about tools and processes the GitHub Accessibility leadership team uses for retrospectives that fully engage every team member.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2023/05/1200.630-Productivity-wLogo@2x.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:47.269Z"
   },
   {
@@ -712,7 +658,6 @@
       "performance"
     ],
     "summary": "Since the beginning, GitHub.com has been a Ruby on Rails monolith. Today, the application is nearly two million lines of code and more than 1,000 engineers collaborate on it daily.…",
-    "thumbnail": "https://github.blog/wp-content/uploads/2023/04/1200x630-Partnerships-Dark@2x.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:47.269Z"
   },
   {
@@ -725,7 +670,6 @@
       "general"
     ],
     "summary": "Hear from Grafana Labs’ Armand Grillet about how his team uses GitHub Projects.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2022/06/Engineering-Product@2x.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:47.269Z"
   },
   {
@@ -738,7 +682,6 @@
       "performance"
     ],
     "summary": "GitHub Docs recently changed its site-search to Elasticsearch. Here’s how it was implemented.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2022/09/Open-Source-Engineering@2x.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:47.269Z"
   },
   {
@@ -751,7 +694,6 @@
       "performance"
     ],
     "summary": "A look at what went into building the world’s largest public code search index.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2023/02/code-search-header.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:47.269Z"
   },
   {
@@ -764,7 +706,6 @@
       "general"
     ],
     "summary": "Explore how the GitHub Docs team uses GitHub Projects for content coordination, reviews, and publishing.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2023/02/docs-projects3.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:47.269Z"
   },
   {
@@ -777,7 +718,6 @@
       "general"
     ],
     "summary": "What if developers want to leverage branch deployments but don’t have a full ChatOps stack integrated with their repositories? We wanted to set out to find a way for all developers to be able to take advantage of branch deployments with ease, right from their GitHub repository, and so the…",
-    "thumbnail": "https://github.blog/wp-content/uploads/2022/09/Open-Source-Engineering@2x.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:47.269Z"
   },
   {
@@ -790,7 +730,6 @@
       "general"
     ],
     "summary": "When teams work cross-functionally, good things happen. See how our teams use GitHub Projects to coordinate and ship new products and features.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2023/01/image-9.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:47.269Z"
   },
   {
@@ -803,7 +742,6 @@
       "general"
     ],
     "summary": "What in the world do rubber ducks have to do with programming? And why were they everywhere at GitHub Universe? A lot of you asked, so I’m here to help explain.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2022/12/ducks.jpeg?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:47.269Z"
   },
   {
@@ -816,7 +754,6 @@
       "general"
     ],
     "summary": "Our engineering and security teams do some incredible work. Let’s take a look at how we use GitHub to be more productive, build collaboratively, and shift security left.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2022/12/integrated-platform.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:47.269Z"
   },
   {
@@ -829,7 +766,6 @@
       "general"
     ],
     "summary": "GitHub’s search inputs have several complex accessibility considerations. Let’s dive into what those are, how we addressed them, and talk about the standalone, reusable component that was ultimately built.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2022/06/Engineering-Product@2x.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:47.269Z"
   },
   {
@@ -842,7 +778,6 @@
       "general"
     ],
     "summary": "How much does it really cost to buy more powerful cloud compute resources for development work? A lot less than you think.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2022/03/Enterprise-Product@2x-1.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:49.512Z"
   },
   {
@@ -855,7 +790,6 @@
       "general"
     ],
     "summary": "This post is the second part in a series about ActiveRecord::Encryption that shows how GitHub upgrades previously encrypted and unencrypted columns to ActiveRecord::Encryption.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2022/11/Group-4-1.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:49.512Z"
   },
   {
@@ -868,7 +802,6 @@
       "general"
     ],
     "summary": "You may know that GitHub encrypts your source code at rest, but you may not have known that we encrypt sensitive database columns as well. Read about our column encryption strategy and our decision to adopt the Rails column encryption standard.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2022/04/Engineering-Security@2x.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:49.512Z"
   },
   {
@@ -881,7 +814,6 @@
       "performance"
     ],
     "summary": "The GitHub Actions team has done lots of work to improve the performance and resource consumption of Actions on GHES in the past year.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2021/11/GitHub-Engineering_blog-social-teal.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:49.512Z"
   },
   {
@@ -894,7 +826,6 @@
       "performance"
     ],
     "summary": "A tour of recent work to re-engineer Git’s garbage collection process to scale to our largest and most active repositories.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2022/09/Untitled.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:49.512Z"
   },
   {
@@ -907,7 +838,6 @@
       "general"
     ],
     "summary": "Can projects and GitHub Actions be used by your non-developer teams? They absolutely can. Check out how our Security Team uses GitHub to run the department effortlessly.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2022/06/Security-Product@2x.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:49.512Z"
   },
   {
@@ -920,7 +850,6 @@
       "general"
     ],
     "summary": "Monorepo performance can suffer due to the sheer number of files in your working directory. Git’s new builtin file system monitor makes it easy to speed up monorepo performance.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2022/06/git-monorepo.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:49.512Z"
   },
   {
@@ -933,7 +862,6 @@
       "general"
     ],
     "summary": "Discover how GitHub thinks about browser support, look at usage patterns, and learn about the tools we use to make sure our customers are getting the best experience.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2022/03/Engineering@2x.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:49.512Z"
   },
   {
@@ -946,7 +874,6 @@
       "general"
     ],
     "summary": "A two-part story about how GitHub’s Product Security Engineering team rolled out Dependabot internally to track vulnerable dependencies, and how GitHub tracks and prioritizes technical debt.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2022/04/Security-Enterprise@2x.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:49.512Z"
   },
   {
@@ -959,7 +886,6 @@
       "general"
     ],
     "summary": "Learn about what GitHub is doing to make their products more inclusive, and what’s next.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2022/05/Product-Community@2x.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:49.512Z"
   },
   {
@@ -972,7 +898,6 @@
       "performance"
     ],
     "summary": "At GitHub we use GitHub to build our own products, and the new projects experience is no different. Check out how our team uses projects to build powerful project planning for developers.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2022/05/blog-header-image.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:49.512Z"
   },
   {
@@ -985,7 +910,6 @@
       "performance"
     ],
     "summary": "The history of pre-receive hooks, how we discovered that the performance was problematic, and how we went about safely replacing them.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2022/04/Engineering-Product@2x.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:49.512Z"
   },
   {
@@ -998,7 +922,6 @@
       "performance"
     ],
     "summary": "How we sped up GitHub.com by moving slow, non-critical code into rack.after_reply.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2022/04/Background-3-Template-1200-x-631@2x.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:49.512Z"
   },
   {
@@ -1011,7 +934,6 @@
       "general"
     ],
     "summary": "From automating builds and releases to taking care of large-scale regression testing, here are a few ways we use GitHub Actions to build GitHub.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2022/04/Engineering-Company@2x.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:49.512Z"
   },
   {
@@ -1024,7 +946,6 @@
       "general"
     ],
     "summary": "Learn how the GitHub Mobile Team automates their release process with GitHub Actions.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2022/01/Engineering_Product.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:49.512Z"
   },
   {
@@ -1037,7 +958,6 @@
       "general"
     ],
     "summary": "Codespaces is a great tool for technical hiring exercises and helps level the playing field for candidates.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2021/11/GitHub-Engineering_blog-social-teal.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:51.865Z"
   },
   {
@@ -1050,7 +970,6 @@
       "performance"
     ],
     "summary": "This blog post tells the story of why we built a new search engine optimized for code.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2021/12/github-engineering-product_orange-green-banner.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:51.865Z"
   },
   {
@@ -1063,7 +982,6 @@
       "performance"
     ],
     "summary": "Today, we are rolling out a technology preview for GitHub code search, the next iteration for search, discovery, and navigation on GitHub.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2021/12/GitHub-code-search_banner.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:51.865Z"
   },
   {
@@ -1076,7 +994,6 @@
       "general"
     ],
     "summary": "You can multiply the impact of your domain experts by building their common workflows into ChatOps.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2021/11/engineering-on-call-chatops_social-card.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:51.865Z"
   },
   {
@@ -1089,7 +1006,6 @@
       "general"
     ],
     "summary": "In 2019, to meet GitHub’s growth and availability challenges, we set a plan in motion to improve our tooling and ability to partition relational databases.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2021/04/Blog_ENGINEERING_for-social.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:51.865Z"
   },
   {
@@ -1102,7 +1018,6 @@
       "general"
     ],
     "summary": "Over the past months, we’ve left our macOS model behind and moved to Codespaces for the majority of GitHub.com development.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2021/08/1200x630-codespaces-social.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:51.865Z"
   },
   {
@@ -1115,7 +1030,6 @@
       "general"
     ],
     "summary": "Over the years, GitHub engineers have developed many ways to observe how our systems behave. We mostly make use of statsd for metrics, the syslog format for plain text logs…",
-    "thumbnail": "https://github.blog/wp-content/uploads/2021/04/Blog_ENGINEERING_for-social.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:51.865Z"
   },
   {
@@ -1128,7 +1042,6 @@
       "general"
     ],
     "summary": "GitHub has been at the forefront of security key adoption for many years. We were an early adopter of Universal 2nd Factor (“U2F”) and were also one of the first…",
-    "thumbnail": "https://github.blog/wp-content/uploads/2019/09/security-1200-630.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:51.865Z"
   },
   {
@@ -1141,7 +1054,6 @@
       "performance"
     ],
     "summary": "At GitHub, we pride ourselves on delivering a first-class developer experience. A considerable part of our work is on our front end, which we strive to keep as lightweight, fast,…",
-    "thumbnail": "https://github.blog/wp-content/uploads/2021/04/Blog_ENGINEERING_for-social.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:51.865Z"
   },
   {
@@ -1154,7 +1066,6 @@
       "general"
     ],
     "summary": "👋 Hello from the GitHub Docs team! We build everything you see at docs.github.com. Over the past year, we’ve written a bunch of GitHub Actions workflows to do some fun…",
-    "thumbnail": "https://github.blog/wp-content/uploads/2020/07/new-docs-site.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:51.865Z"
   },
   {
@@ -1167,7 +1078,6 @@
       "general"
     ],
     "summary": "At GitHub, we’re continually working to improve existing features and shipping new ones all the time. From our launch of GitHub Discussions to the release of manual approvals for GitHub…",
-    "thumbnail": "https://github.blog/wp-content/uploads/2019/03/BlogHeaders_Aligned_ENGINEERING_1008x602_x2.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:51.865Z"
   },
   {
@@ -1180,7 +1090,6 @@
       "general"
     ],
     "summary": "We’re excited to share a deep dive into how our new authentication token formats are built and how these improvements are keeping your tokens more secure. As we continue to…",
-    "thumbnail": "https://github.blog/wp-content/uploads/2019/09/security-1200-630.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:51.865Z"
   },
   {
@@ -1193,7 +1102,6 @@
       "general"
     ],
     "summary": "About a year ago, we migrated an old rate limiter in order to serve more traffic and accommodate a more resilient platform architecture. We adopted a replicated Redis backend with…",
-    "thumbnail": "https://github.blog/wp-content/uploads/2019/03/engineering-social.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:51.865Z"
   },
   {
@@ -1206,7 +1114,6 @@
       "performance"
     ],
     "summary": "Rendering logs in a web UI might seem simple: they are just lines of plain text. However, there are a lot of additional features that make them more useful to…",
-    "thumbnail": "https://github.blog/wp-content/uploads/2019/03/engineering-social.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:51.865Z"
   },
   {
@@ -1219,7 +1126,6 @@
       "general"
     ],
     "summary": "It has been a year since we’ve launched the first public release of GitHub CLI. Since, we have added functionality to manage your repositories, comment on issues, enable auto-merge for…",
-    "thumbnail": "https://github.blog/wp-content/uploads/2021/03/d51e7480-f84b-11ea-84d5-4ef1c4d2a5bc.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:51.865Z"
   },
   {
@@ -1232,7 +1138,6 @@
       "general"
     ],
     "summary": "In the fourth installment of our five-part series on building GitHub’s new homepage, we’ll explore the artistic pipeline at GitHub to explain story, character and color, and to show how…",
-    "thumbnail": "https://github.blog/wp-content/uploads/2021/02/card.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:54.208Z"
   },
   {
@@ -1245,7 +1150,6 @@
       "general"
     ],
     "summary": "This post is the third installment of our five-part series on building GitHub’s new homepage: How our globe is built How we collect and use the data behind the globe…",
-    "thumbnail": "https://github.blog/wp-content/uploads/2021/01/102393310-07478b80-3f8d-11eb-84eb-392d555ebd29.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:54.208Z"
   },
   {
@@ -1258,7 +1162,6 @@
       "general"
     ],
     "summary": "GitHub’s engineering group moved from a monolithic, hero-based on-call rotation to a more balanced on-call culture in order to increase our on-call expertise and improve the experience for our customers.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2021/01/103578742-fb643080-4e8b-11eb-9576-eef83df9ae0c.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:54.208Z"
   },
   {
@@ -1271,7 +1174,6 @@
       "general"
     ],
     "summary": "This is the second post in a series about how we built our new homepage. How our globe is built How we collect and use the data behind the globe…",
-    "thumbnail": "https://github.blog/wp-content/uploads/2020/12/102393310-07478b80-3f8d-11eb-84eb-392d555ebd29.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:54.208Z"
   },
   {
@@ -1284,7 +1186,6 @@
       "general"
     ],
     "summary": "GitHub is where the world builds software. More than 56 million developers around the world build and work together on GitHub. With our new homepage, we wanted to show how…",
-    "thumbnail": "https://github.blog/wp-content/uploads/2020/12/102393310-07478b80-3f8d-11eb-84eb-392d555ebd29.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:54.208Z"
   },
   {
@@ -1297,7 +1198,6 @@
       "general"
     ],
     "summary": "Part of the Building GitHub blog series. It’s four o’clock in the afternoon as you push the last tweak to your branch. Your teammate already reviewed and approved your pull request…",
-    "thumbnail": "https://github.blog/wp-content/uploads/2021/04/Blog_ENGINEERING_for-social.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:54.208Z"
   },
   {
@@ -1310,7 +1210,6 @@
       "general"
     ],
     "summary": "In our ongoing “Building GitHub” series, we talk about some of the projects we’re working on to improve how efficiently we build GitHub, as well as increase GitHub’s availability, stability,…",
-    "thumbnail": "https://github.blog/wp-content/uploads/2021/04/Blog_ENGINEERING_for-social.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:54.208Z"
   },
   {
@@ -1323,7 +1222,6 @@
       "general"
     ],
     "summary": "Using deferred compliance in GitHub’s CI process to improve developer productivity.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2021/04/Blog_ENGINEERING_for-social.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:54.208Z"
   },
   {
@@ -1336,7 +1234,6 @@
       "general"
     ],
     "summary": "An introduction to our blog series on GitHub’s investments in technical excellence.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2021/04/Blog_ENGINEERING_for-social.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:54.208Z"
   },
   {
@@ -1349,7 +1246,6 @@
       "performance"
     ],
     "summary": "GitHub’s mobile applications have used GraphQL to power new features. We’ve now been able to move faster and get more done with less hassle and no over-fetching. We were able…",
-    "thumbnail": "https://github.blog/wp-content/uploads/2020/09/91608590-11d50b00-e933-11ea-8190-8b22db47da74.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:54.208Z"
   },
   {
@@ -1362,7 +1258,6 @@
       "general"
     ],
     "summary": "At GitHub, we spend a lot of time thinking about and building secure products—and one key facet of that is threat modeling. This practice involves bringing security and engineering teams…",
-    "thumbnail": "https://github.blog/wp-content/uploads/2020/09/92131045-5856b980-edba-11ea-9aaf-42610999123d.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:54.208Z"
   },
   {
@@ -1375,7 +1270,6 @@
       "general"
     ],
     "summary": "GitHub recently upgraded to Ruby 2.7. Learn how the team approached the deprecation warnings, why upgrading is important, and the notable performance improvements.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2020/08/upgrading-to-ruby-2.7.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:54.208Z"
   },
   {
@@ -1388,7 +1282,6 @@
       "performance"
     ],
     "summary": "How architecture decision records can help your team.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2020/08/why-write-adrs-feature.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:54.208Z"
   },
   {
@@ -1401,7 +1294,6 @@
       "performance"
     ],
     "summary": "The Semantic Code team shipped a massive improvement to the language support system that powers code navigation. Code navigation features only scratch the surface of possibilities that start to open up when we combine Semantic‘s program analysis potential with GitHub’s scale.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2020/08/88834476-83d1fd00-d199-11ea-8680-73e039a5435f.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:54.208Z"
   },
   {
@@ -1414,7 +1306,6 @@
       "general"
     ],
     "summary": "ICYMI: docs.github.com is the new place to discover all of GitHub’s product documentation! We recently completed a major overhaul of GitHub’s documentation websites. When you visit docs.github.com today, you’ll see…",
-    "thumbnail": "https://github.blog/wp-content/uploads/2019/03/engineering-social.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:54.208Z"
   },
   {
@@ -1427,7 +1318,6 @@
       "general"
     ],
     "summary": "Check out what we learned from shipping our busiest Go service in production—we found 3 bugs in the Go MySQL driver.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2019/03/engineering-social.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:56.561Z"
   },
   {
@@ -1440,7 +1330,6 @@
       "general"
     ],
     "summary": "The GitHub engineering team shares best practices for making remote work part of your company culture.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2019/03/company-twitter.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:56.561Z"
   },
   {
@@ -1453,7 +1342,6 @@
       "general"
     ],
     "summary": "GitHub shares best practices for making remote work part of your company culture.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2019/03/company-twitter.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:56.561Z"
   },
   {
@@ -1466,7 +1354,6 @@
       "performance"
     ],
     "summary": "Learn about the legacy, architecture, and methods used to reduce 48k lines of code to 10 as we take a deep dive into GitHub’s Javascript SDK.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2019/03/engineering-social.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:56.561Z"
   },
   {
@@ -1479,7 +1366,6 @@
       "general"
     ],
     "summary": "Learn more about how we found ways to scale our vulnerability hunting efforts and empower others to do the same. In this post, we’ll take a deep-dive in the remediation of a security vulnerability with CERT.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2019/03/engineering-social.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:56.561Z"
   },
   {
@@ -1492,7 +1378,6 @@
       "general"
     ],
     "summary": "Learn more about what’s behind the scenes with GitHub vulnerability alerts.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2019/12/behind-the-scenes-github-security-alerts.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:56.561Z"
   },
   {
@@ -1505,7 +1390,6 @@
       "general"
     ],
     "summary": "In this deep-dive, we identified and worked through sporadic latency issues with services running on Kubernetes in our environment.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2019/03/engineering-social.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:56.561Z"
   },
   {
@@ -1518,7 +1402,6 @@
       "general"
     ],
     "summary": "We’re announcing the CodeSearchNet Challenge and releasing a large dataset for natural language processing and machine learning.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2019/03/engineering-social.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:56.561Z"
   },
   {
@@ -1531,7 +1414,6 @@
       "general"
     ],
     "summary": "On August 26, 2019, the GitHub application was deployed to production with 100% of traffic on the newest Rails version: 6.0. Read more about our process for upgrading, what we learned, and what’s next.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2019/03/editor-tools-social-1.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:56.561Z"
   },
   {
@@ -1544,7 +1426,6 @@
       "general"
     ],
     "summary": "Token scanning has reached a new milestone: one billion tokens identified. We’ve also added five new partners—Atlassian, Dropbox, Discord, Proctorio, and Pulumi.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2019/08/tokenscanning.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:56.561Z"
   },
   {
@@ -1557,7 +1438,6 @@
       "general"
     ],
     "summary": "Commit signing is now enabled for all bots by default.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2019/08/bot-commit-signing-1200x630.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:56.561Z"
   },
   {
@@ -1570,7 +1450,6 @@
       "general"
     ],
     "summary": "Enterprise and organization admins can now register their SSH certificate authorities with GitHub, helping their team access repositories over Git using SSH certificates.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2019/03/company-twitter.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:56.561Z"
   },
   {
@@ -1583,7 +1462,6 @@
       "general"
     ],
     "summary": "We recently upgraded GitHub to use the latest version of Ruby 2.6. Ruby 2.6 contains an optimization for reducing memory usage.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:23:56.561Z"
   },
   {
@@ -1596,7 +1474,6 @@
       "general"
     ],
     "summary": "Read about some big changes for the coming year: full legal protection for researchers, more GitHub properties eligible for rewards, and increased reward amounts.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2019/02/octocat-detective.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:56.561Z"
   },
   {
@@ -1609,7 +1486,6 @@
       "general"
     ],
     "summary": "Performance and reliability conversations as a GitHub product",
-    "thumbnail": "https://github.blog/wp-content/uploads/2019/03/community-twitter.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:56.561Z"
   },
   {
@@ -1622,7 +1498,6 @@
       "general"
     ],
     "summary": "We’ve extended GitHub Token Scanning to include tokens from cloud service providers and additional credentials.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2018/10/46993841-5bf9ce00-d0c6-11e8-9c55-af832fd16dc8.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:59.018Z"
   },
   {
@@ -1635,7 +1510,6 @@
       "general"
     ],
     "summary": "Learn how we use machine learning to power and build on security alerts and make GitHub more secure.",
-    "thumbnail": "https://github.blog/wp-content/uploads/2018/10/36836403-13a43a46-1cee-11e8-9959-1364f62a974f.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:59.018Z"
   },
   {
@@ -1648,7 +1522,6 @@
       "general"
     ],
     "summary": "On August 15th GitHub celebrated a major milestone: our main application is now running on the latest version of Rails: 5.2.1! 🎉 In total the project took a year and…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:23:59.018Z"
   },
   {
@@ -1661,7 +1534,6 @@
       "general"
     ],
     "summary": "We have recently completed a milestone where we were able to drop jQuery as a dependency of the frontend code for GitHub.com. This marks the end of a gradual, years-long…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:23:59.018Z"
   },
   {
@@ -1674,7 +1546,6 @@
       "general"
     ],
     "summary": "At GitHub, we serve tens of thousands of requests every second out of our network edge, operating on GitHub’s metal cloud. We’ve previously introduced GLB, our scalable load balancing solution…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:23:59.018Z"
   },
   {
@@ -1687,7 +1558,6 @@
       "general"
     ],
     "summary": "GitHub uses MySQL as its main datastore for all things non-git, and its availability is critical to GitHub’s operation. The site itself, GitHub’s API, authentication and more, all require database…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:23:59.018Z"
   },
   {
@@ -1700,7 +1570,6 @@
       "general"
     ],
     "summary": "How we use Figma files to keep the Octicons icon library up to date",
-    "thumbnail": "https://github.blog/wp-content/uploads/2018/04/38706032-8dd10748-3e60-11e8-8088-260bece040bb.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:23:59.018Z"
   },
   {
@@ -1713,7 +1582,6 @@
       "general"
     ],
     "summary": "At GitHub, we use MySQL as the main database technology backing our services. We run classic MySQL master-replica setups, where writes go to the master, and replicas replay master’s changes asynchronously. To be able to serve our traffic we read data from the MySQL replicas.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:23:59.018Z"
   },
   {
@@ -1726,7 +1594,6 @@
       "general"
     ],
     "summary": "GitHub’s Spokes system stores multiple distributed copies of Git repositories. This article discusses how we got Spokes replication to span widely separated datacenters. Background: Spokes GitHub developed a system called…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:23:59.018Z"
   },
   {
@@ -1739,7 +1606,6 @@
       "general"
     ],
     "summary": "GitHub is at a scale that provides exposure to interesting aspects of running a major site and are working to mature and level-up many parts of our infrastructure as we…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:23:59.018Z"
   },
   {
@@ -1752,7 +1618,6 @@
       "general"
     ],
     "summary": "Over the past 18 months we’ve made a significant investment in GitHub’s physical infrastructure. The goal of this work is to improve the redundancy and global availability of our system.…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:23:59.018Z"
   },
   {
@@ -1765,7 +1630,6 @@
       "general"
     ],
     "summary": "Over the last year, GitHub has gradually evolved the infrastructure that runs the Ruby on Rails application responsible for github.com and api.github.com. We reached a big milestone recently: all web…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:23:59.018Z"
   },
   {
@@ -1778,7 +1642,6 @@
       "general"
     ],
     "summary": "We recently launched Topics, a new feature that lets you tag your repositories with descriptive words or phrases, making it easy to discover projects and explore GitHub.com. Topic suggestions on…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:23:59.018Z"
   },
   {
@@ -1791,7 +1654,6 @@
       "general"
     ],
     "summary": "In an effort to increase the adoption of FIDO U2F second factor authentication, we’re releasing Soft U2F: a software-based U2F authenticator for macOS. We’ve long been interested in promoting better…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:23:59.018Z"
   },
   {
@@ -1804,7 +1666,6 @@
       "general"
     ],
     "summary": "Our MySQL infrastructure is a critical component to GitHub. MySQL serves GitHub.com, GitHub’s API, authentication and more. Every git request touches MySQL in some way. We are tasked with keeping…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:23:59.018Z"
   },
   {
@@ -1817,7 +1678,6 @@
       "general"
     ],
     "summary": "At GitHub we recently revamped how we do DNS from the ground up. This included both how we interact with external DNS providers and how we serve records internally to…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:00.640Z"
   },
   {
@@ -1830,7 +1690,6 @@
       "performance"
     ],
     "summary": "Today we released the new GitHub Desktop Beta, rewritten on Electron.Electron is a well-known on-ramp for web developers to build desktop apps using familiar web technologies: HTML, CSS, and JavaScript.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:00.640Z"
   },
   {
@@ -1843,7 +1702,6 @@
       "general"
     ],
     "summary": "Building robust systems involves designing for failure. As Site Reliability Engineers at GitHub, we’re always on the lookout for places where redundancy can help to mitigate problems, and today we’ll…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:00.640Z"
   },
   {
@@ -1856,7 +1714,6 @@
       "general"
     ],
     "summary": "We’re releasing a formal specification of the syntax for GitHub Flavored Markdown, and its corresponding reference implementation.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:00.640Z"
   },
   {
@@ -1869,7 +1726,6 @@
       "general"
     ],
     "summary": "Cryptographic standards are ever evolving. It is the canonical game of security cat and mouse, with attacks rendering older standards ill-suited, and driving the community to develop newer and stronger…",
-    "thumbnail": "https://github.blog/wp-content/uploads/2021/04/Blog_ENGINEERING_for-social.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:24:00.640Z"
   },
   {
@@ -1882,7 +1738,6 @@
       "general"
     ],
     "summary": "Last month, we announced the third anniversary of our Bug Bounty Program. While there’s still time to disclose your findings through the program, we wanted to pull back the curtain…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:00.640Z"
   },
   {
@@ -1895,7 +1750,6 @@
       "general"
     ],
     "summary": "Last year we shared some details on GitHub’s CSP journey. A journey was a good way to describe it, as our usage of Content Security Policy (CSP) significantly changed from…",
-    "thumbnail": "https://github.blog/wp-content/uploads/2021/04/Blog_ENGINEERING_for-social.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:24:00.640Z"
   },
   {
@@ -1908,7 +1762,6 @@
       "general"
     ],
     "summary": "Historically, we have used Redis in two ways at GitHub: We used it as an LRU cache to conveniently store the results of expensive computations over data originally persisted in…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:00.640Z"
   },
   {
@@ -1921,7 +1774,6 @@
       "general"
     ],
     "summary": "GitHub uses MySQL to store its metadata: Issues, Pull Requests, comments, organizations, notifications and so forth. While git repository data does not need MySQL to exist and persist, GitHub’s service…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:00.640Z"
   },
   {
@@ -1934,7 +1786,6 @@
       "performance"
     ],
     "summary": "We serve a lot of diffs here at GitHub. Because it is computationally expensive to generate and display a diff, we’ve traditionally had to apply some very conservative limits on…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:00.640Z"
   },
   {
@@ -1947,7 +1798,6 @@
       "general"
     ],
     "summary": "Over the last year we’ve developed our new load balancer, called GLB (GitHub Load Balancer). Today, and over the next few weeks, we will be sharing the design and releasing its components as open source software.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:00.640Z"
   },
   {
@@ -1960,7 +1810,6 @@
       "general"
     ],
     "summary": "Spokes is the replication system for the file servers where we store over 38 million Git repositories and over 36 million gists.It keeps at least three copies of every repository…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:00.640Z"
   },
   {
@@ -1973,7 +1822,6 @@
       "general"
     ],
     "summary": "At GitHub we use MySQL as our main datastore. While repository data lies in git, metadata is stored in MySQL. This includes Issues, Pull Requests, Comments etc. We also auth…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:00.640Z"
   },
   {
@@ -1986,7 +1834,6 @@
       "general"
     ],
     "summary": "GitHub hosts a wide range of user content, and like all large websites this often causes us to become a target of denial of service attacks. Around a year ago,…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:00.640Z"
   },
   {
@@ -1999,7 +1846,6 @@
       "general"
     ],
     "summary": "We shipped subresource integrity a few months back to reduce the risk of a compromised CDN serving malicious JavaScript. That is a big win, but does not address related content…",
-    "thumbnail": "https://github.blog/wp-content/uploads/2021/04/Blog_ENGINEERING_for-social.png?resize=400%2C212",
     "fetchedAt": "2026-07-11T13:24:00.640Z"
   },
   {
@@ -2012,7 +1858,6 @@
       "performance"
     ],
     "summary": "Edit: DGit is now called Spokes GitHub hosts over 35 million repositories and over 30 million Gists on hundreds of servers. Over the past year, we’ve built DGit, a new…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:02.288Z"
   },
   {
@@ -2025,7 +1870,6 @@
       "performance"
     ],
     "summary": "GitHub.com no longer delivers its icons via icon font. Instead, we’ve replaced all the Octicons throughout our codebase with SVG alternatives. While the changes are mostly under-the-hood, you’ll immediately feel…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:02.288Z"
   },
   {
@@ -2038,7 +1882,6 @@
       "general"
     ],
     "summary": "Anyone who has worked on a large enough codebase knows that technical debt is an inescapable reality: The more rapidly an application grows in size and complexity, the more technical…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:02.288Z"
   },
   {
@@ -2051,7 +1894,6 @@
       "general"
     ],
     "summary": "At GitHub we place an emphasis on stability, availability, and performance. A large component of ensuring we excel in these areas is deploying services on bare-metal hardware. This allows us…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:02.288Z"
   },
   {
@@ -2064,7 +1906,6 @@
       "general"
     ],
     "summary": "Looking through our exception tracker the other day, I ran across a notice from our slow-query logger that caught my eye. I saw a SELECT … WHERE … LIKE query…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:02.288Z"
   },
   {
@@ -2077,7 +1918,6 @@
       "general"
     ],
     "summary": "At GitHub we have a lot of software running our product and company. We also have a lot of potential contributing members. Being able to get from git clone to…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:02.288Z"
   },
   {
@@ -2090,7 +1930,6 @@
       "general"
     ],
     "summary": "At GitHub, we use a variant of the Flow pattern to deploy changes: new code is always deployed from a pull request branch, and merged only once it has been…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:02.288Z"
   },
   {
@@ -2103,7 +1942,6 @@
       "general"
     ],
     "summary": "Earlier this spring, we upgraded our database cluster to MySQL 5.6. Along with many other improvements, 5.6 added some exciting new features to the performance schema. MySQL’s performance schema is…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:02.288Z"
   },
   {
@@ -2116,7 +1954,6 @@
       "general"
     ],
     "summary": "Believe it or not, just over a year ago, GitHub Pages, the documentation hosting service that powers nearly three-quarters of a million sites, was little more than a 100-line shell…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:02.288Z"
   },
   {
@@ -2129,7 +1966,6 @@
       "general"
     ],
     "summary": "Providing well-written documentation helps people understand, make use of, and contribute back to your project, but it’s only half of the documentation equation. The underlying system used to serve documentation…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:02.288Z"
   },
   {
@@ -2142,7 +1978,6 @@
       "general"
     ],
     "summary": "Last Friday we announced and performed a migration of all GitHub Pages to their own github.io domain. This was a long-planned migration, with the specific goal of mitigating phishing attacks…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:02.288Z"
   },
   {
@@ -2155,7 +1990,6 @@
       "general"
     ],
     "summary": "Over the last month or so, we noticed steady week-over-week rises in overall MySQL query time. A poorly-performing database makes for a slow site and a slow site makes for…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:02.288Z"
   }
 ]

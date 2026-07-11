@@ -57,7 +57,7 @@ function buildArchiveUrl(page: number): string {
  * The site's WordPress REST API is not blocked, though, and exposes the same
  * "Engineering" category with working pagination:
  * `/wp-json/wp/v2/posts?categories=8&per_page=20&page=N`, `_embed`ded with
- * `wp:term` (category names) and `wp:featuredmedia` (thumbnail). Each post
+ * `wp:term` (category names). Each post
  * carries a real `date_gmt`. This parser reads that JSON response instead of
  * HTML — `crawlArchive`'s `parsePage` just receives whatever body text the
  * URL returns, JSON or HTML, so this fits the same crawler. Since 332 isn't a
@@ -88,7 +88,6 @@ export function parseDoordashArchivePage(json: string, pageUrl: string): Archive
         publishedAt,
         tags: resolveTags(categories, "doordash"),
         summary: summarize(post.excerpt?.rendered ?? ""),
-        thumbnail: post._embedded?.["wp:featuredmedia"]?.[0]?.source_url ?? null,
         fetchedAt,
       };
     });

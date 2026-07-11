@@ -7,7 +7,6 @@
     "publishedAt": "2026-07-10T18:17:40.000Z",
     "tags": [],
     "summary": "Large language model (LLM) training workloads increasingly run into GPU memory limits before compute is fully used. Model weights, gradients, optimizer states,... Large language model (LLM) training workloads increasingly run into GPU memory limits before compute is fully used. Model weights,…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -18,7 +17,6 @@
     "publishedAt": "2026-07-10T16:41:03.000Z",
     "tags": [],
     "summary": "There are many ways to optimize code for GPUs. In this post, you’ll learn how kernel fusion can improve memory bandwidth and reduce kernel launch overhead,... There are many ways to optimize code for GPUs. In this post, you’ll learn how kernel fusion can improve memory bandwidth and reduce kernel…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -29,7 +27,6 @@
     "publishedAt": "2026-07-10T16:36:02.000Z",
     "tags": [],
     "summary": "AI performance comes down to three dimensions: Accuracy: How well the model reasons and produces outputs Throughput: How many tokens per second a... AI performance comes down to three dimensions: Deployments must balance all three: High accuracy is wasted if responses are slow, and raw throughput…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -40,7 +37,6 @@
     "publishedAt": "2026-07-10T13:00:00.000Z",
     "tags": [],
     "summary": "Biomolecular structure prediction and co-folding with models like OpenFold3 are now mainstream, large-scale workloads powering drug discovery and protein... Biomolecular structure prediction and co-folding with models like OpenFold3 are now mainstream, large-scale workloads powering drug discovery…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -51,7 +47,6 @@
     "publishedAt": "2026-07-09T19:40:37.000Z",
     "tags": [],
     "summary": "Fine-tuning LLMs for financial natural language processing (NLP) is constrained by limited, imbalanced data. Real-world financial news overrepresents earnings... Fine-tuning LLMs for financial natural language processing (NLP) is constrained by limited, imbalanced data. Real-world financial news…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -62,7 +57,6 @@
     "publishedAt": "2026-07-09T17:15:04.000Z",
     "tags": [],
     "summary": "Molecular dynamics (MD) simulations are among the most demanding workloads in computational science. Using them, researchers can observe atomic behavior in... Source",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -73,7 +67,6 @@
     "publishedAt": "2026-07-08T18:17:59.000Z",
     "tags": [],
     "summary": "Agentic systems often face a trade-off between accuracy and cost. The highest-performing proprietary frontier models and harnesses provide top accuracy but are... Agentic systems often face a trade-off between accuracy and cost. The highest-performing proprietary frontier models and harnesses…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -84,7 +77,6 @@
     "publishedAt": "2026-07-08T16:05:25.000Z",
     "tags": [],
     "summary": "Presto is an open source, distributed SQL engine for running fast, interactive queries on very large datasets. On NVIDIA GPUs, Presto delivers peak performance... Presto is an open source, distributed SQL engine for running fast, interactive queries on very large datasets. On NVIDIA GPUs, Presto…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -95,7 +87,6 @@
     "publishedAt": "2026-07-07T18:10:00.000Z",
     "tags": [],
     "summary": "Agentic systems turn model reasoning into action through multi-step workflows that combine inference, tool use, code execution, retrieval, orchestration, and... Agentic systems turn model reasoning into action through multi-step workflows that combine inference, tool use, code execution, retrieval,…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -106,7 +97,6 @@
     "publishedAt": "2026-07-07T17:05:42.000Z",
     "tags": [],
     "summary": "As more teams move from humanoid robot bring-up to task-specific skill development, the need for repeatable development workflows is growing. Building humanoids... As more teams move from humanoid robot bring-up to task-specific skill development, the need for repeatable development workflows is…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -117,7 +107,6 @@
     "publishedAt": "2026-07-07T17:00:00.000Z",
     "tags": [],
     "summary": "Spectrum is one of the most valuable assets in wireless communications. Over the last 30 years, telecom operators in the US have spent more than $240B to... Spectrum is one of the most valuable assets in wireless communications. Over the last 30 years, telecom operators in the US have spent more…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -128,7 +117,6 @@
     "publishedAt": "2026-07-07T17:00:00.000Z",
     "tags": [],
     "summary": "Industrial machinery generates more alarms than technicians can triage. For each important alarm requiring follow-up, the technician pulls historical context,... Industrial machinery generates more alarms than technicians can triage. For each important alarm requiring follow-up, the technician…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -139,7 +127,6 @@
     "publishedAt": "2026-07-06T21:44:23.000Z",
     "tags": [],
     "summary": "Training LLMs at massive scale brings unique infrastructure challenges, especially as jobs span thousands of GPUs and run for extended periods. The longer these... Training LLMs at massive scale brings unique infrastructure challenges, especially as jobs span thousands of GPUs and run for extended…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -150,7 +137,6 @@
     "publishedAt": "2026-07-02T21:25:42.000Z",
     "tags": [],
     "summary": "AI has transformed how organizations operate, driving unprecedented levels of productivity and innovation. However, AI adoption can be impeded by concerns... AI has transformed how organizations operate, driving unprecedented levels of productivity and innovation. However, AI adoption can be…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -161,7 +147,6 @@
     "publishedAt": "2026-07-01T17:04:02.000Z",
     "tags": [],
     "summary": "Reinforcement learning (RL) is central to aligning language models, from reinforcement learning with human feedback (RLHF) within AI assistants to newer... Reinforcement learning (RL) is central to aligning language models, from reinforcement learning with human feedback (RLHF) within AI assistants…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -172,7 +157,6 @@
     "publishedAt": "2026-06-30T17:36:43.000Z",
     "tags": [],
     "summary": "GPU-accelerated query engines are often constrained by memory and I/O bandwidth. NVIDIA hardware advances—including high bandwidth memory (HBM), NVIDIA... GPU-accelerated query engines are often constrained by memory and I/O bandwidth. NVIDIA hardware advances—including high bandwidth memory (HBM),…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -183,7 +167,6 @@
     "publishedAt": "2026-06-30T16:00:00.000Z",
     "tags": [],
     "summary": "NVIDIA Omniverse NuRec is a neural reconstruction pipeline for building high-fidelity 3D representations of real-world environments from multisensor data such... NVIDIA Omniverse NuRec is a neural reconstruction pipeline for building high-fidelity 3D representations of real-world environments from…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -194,7 +177,6 @@
     "publishedAt": "2026-06-29T15:50:13.000Z",
     "tags": [],
     "summary": "AI agents are quickly moving beyond chat. They inspect code, run tests, read documents, search knowledge bases, query internal systems, and operate for hours on... AI agents are quickly moving beyond chat. They inspect code, run tests, read documents, search knowledge bases, query internal systems,…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -205,7 +187,6 @@
     "publishedAt": "2026-06-26T19:00:45.000Z",
     "tags": [],
     "summary": "AI agents have changed a lot in the last two years. The first could only answer one question at a time. Then came multi-turn chat, where the model could keep... AI agents have changed a lot in the last two years. The first could only answer one question at a time. Then came multi-turn chat, where…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -216,7 +197,6 @@
     "publishedAt": "2026-06-26T16:00:35.000Z",
     "tags": [],
     "summary": "As context windows grow longer, moving large model weights efficiently becomes critical to performance. A common way to address this is quantization, an... As context windows grow longer, moving large model weights efficiently becomes critical to performance. A common way to address this is…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -227,7 +207,6 @@
     "publishedAt": "2026-06-25T22:25:51.000Z",
     "tags": [],
     "summary": "Shaders are GPU programs that process visual data—such as rays, pixels, geometry, and textures—to produce specific rendering effects. Shaders find necessary... Shaders are GPU programs that process visual data—such as rays, pixels, geometry, and textures—to produce specific rendering effects.…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -238,7 +217,6 @@
     "publishedAt": "2026-06-25T16:43:48.000Z",
     "tags": [],
     "summary": "Generative AI workloads are rapidly outgrowing the memory and compute budget of single GPUs. For inference developers building media generation pipelines, the... Generative AI workloads are rapidly outgrowing the memory and compute budget of single GPUs. For inference developers building media…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -249,7 +227,6 @@
     "publishedAt": "2026-06-25T16:38:18.000Z",
     "tags": [],
     "summary": "AI companions in games have long been constrained by fixed dialogue. PUBG Ally is a different kind of system. Built by KRAFTON for PUBG: BATTLEGROUNDS, this AI... AI companions in games have long been constrained by fixed dialogue. PUBG Ally is a different kind of system. Built by KRAFTON for PUBG:…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -260,7 +237,6 @@
     "publishedAt": "2026-06-24T16:30:00.000Z",
     "tags": [],
     "summary": "An increasingly common design pattern for autonomous vehicles (AVs), robotics, and spatial AI systems is bird's-eye-view (BEV) perception. BEV models project... An increasingly common design pattern for autonomous vehicles (AVs), robotics, and spatial AI systems is bird’s-eye-view (BEV) perception.…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -271,7 +247,6 @@
     "publishedAt": "2026-06-23T16:30:00.000Z",
     "tags": [],
     "summary": "Power can account for 40% of the operating expenses (OpEx) to run an AI factory. Each watt can be spent on overhead, data ingestion, training, or generating... Power can account for 40% of the operating expenses (OpEx) to run an AI factory. Each watt can be spent on overhead, data ingestion,…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -282,7 +257,6 @@
     "publishedAt": "2026-06-23T15:00:00.000Z",
     "tags": [],
     "summary": "As AI systems move from single-turn interactions to coordinated multiagent workflows, low-latency inference becomes increasingly important. Autoregressive LLMs... As AI systems move from single-turn interactions to coordinated multiagent workflows, low-latency inference becomes increasingly…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -293,7 +267,6 @@
     "publishedAt": "2026-06-23T13:30:00.000Z",
     "tags": [],
     "summary": "AI scientists are emerging as a new interface for scientific computing. These agents can read papers, write code, generate hypotheses, call APIs, inspect files,... AI scientists are emerging as a new interface for scientific computing. These agents can read papers, write code, generate hypotheses,…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -304,7 +277,6 @@
     "publishedAt": "2026-06-23T06:00:00.000Z",
     "tags": [],
     "summary": "Telecom operators are adopting AI across network operations, customer care, and back-office workflows, but most are still early in the journey to autonomy. In... Telecom operators are adopting AI across network operations, customer care, and back-office workflows, but most are still early in the…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -315,7 +287,6 @@
     "publishedAt": "2026-06-22T16:00:00.000Z",
     "tags": [],
     "summary": "The NVIDIA CUDA Core Compute Libraries (CCCL) provides delightful and efficient abstractions for CUDA developers in C++ and Python. It features: Parallel... Source",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -326,7 +297,6 @@
     "publishedAt": "2026-06-22T15:00:00.000Z",
     "tags": [],
     "summary": "When AlphaFold2 revolutionized drug discovery in 2020, its success relied entirely on the roughly 170,000 protein structures collected by scientists since 1971... When AlphaFold2 revolutionized drug discovery in 2020, its success relied entirely on the roughly 170,000 protein structures collected…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -337,7 +307,6 @@
     "publishedAt": "2026-06-22T13:00:00.000Z",
     "tags": [],
     "summary": "Physical AI—robots working autonomously alongside people in factories, warehouses, hospitals, and homes—is arriving faster than most expected. Traditional... Physical AI—robots working autonomously alongside people in factories, warehouses, hospitals, and homes—is arriving faster than most…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -348,7 +317,6 @@
     "publishedAt": "2026-06-16T22:30:00.000Z",
     "tags": [],
     "summary": "Developers building for AR glasses and wearable devices face an infrastructure gap. The hardware is ready, but creating AI experiences requires integrating live... Developers building for AR glasses and wearable devices face an infrastructure gap. The hardware is ready, but creating AI experiences…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -359,7 +327,6 @@
     "publishedAt": "2026-06-16T20:30:08.000Z",
     "tags": [],
     "summary": "Every swipe, transfer, and payment on a modern financial network encodes a pattern of human behavior. Transaction data is one of the richest signals an... Every swipe, transfer, and payment on a modern financial network encodes a pattern of human behavior. Transaction data is one of the richest…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -370,7 +337,6 @@
     "publishedAt": "2026-06-16T18:11:00.000Z",
     "tags": [],
     "summary": "NVIDIA delivered a clean sweep in MLPerf Training v6.0, the latest edition of industry-standard AI training benchmarks developed by the MLCommons consortium.... NVIDIA delivered a clean sweep in MLPerf Training v6.0, the latest edition of industry-standard AI training benchmarks developed by the…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -381,7 +347,6 @@
     "publishedAt": "2026-06-16T17:00:00.000Z",
     "tags": [],
     "summary": "NVIDIA RTX technologies are deeply integrated into Unreal Engine 5 through the NVIDIA RTX Branch of Unreal Engine and the NVIDIA DLSS Unreal Engine plugin. This... NVIDIA RTX technologies are deeply integrated into Unreal Engine 5 through the NVIDIA RTX Branch of Unreal Engine and the NVIDIA DLSS…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -392,7 +357,6 @@
     "publishedAt": "2026-06-16T16:00:00.000Z",
     "tags": [],
     "summary": "Transformer architectures are the backbone of many modern large language and generative AI models. As these models grow in size, training runs consume more GPU... Transformer architectures are the backbone of many modern large language and generative AI models. As these models grow in size,…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -403,7 +367,6 @@
     "publishedAt": "2026-06-15T18:07:31.000Z",
     "tags": [],
     "summary": "Foundation models are reshaping computational biology. Pretrained on massive corpora of protein or genomic sequences, models such as ESM2 (a protein language... Foundation models are reshaping computational biology. Pretrained on massive corpora of protein or genomic sequences, models such as ESM2…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -414,7 +377,6 @@
     "publishedAt": "2026-06-15T16:45:41.000Z",
     "tags": [],
     "summary": "Mixture-of-experts (MoE) models have quickly become a foundational component of modern, large-scale AI systems. They are widely adopted because they enable... Mixture-of-experts (MoE) models have quickly become a foundational component of modern, large-scale AI systems. They are widely adopted…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -425,7 +387,6 @@
     "publishedAt": "2026-06-15T12:00:00.000Z",
     "tags": [],
     "summary": "Quick glossary for readers new to VLA/WAM terminology VLA Vision-Language-Action model: a robot policy that starts from a pretrained VLM backbone and adapts it... Quick glossary for readers new to VLA/WAM terminology VLA Vision-Language-Action model: a robot policy that starts from a pretrained VLM…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -436,7 +397,6 @@
     "publishedAt": "2026-06-12T21:12:40.000Z",
     "tags": [],
     "summary": "AI agents have fundamentally changed the complexity of inference workloads. Until now, the industry has struggled to define a standard for measuring how... AI agents have fundamentally changed the complexity of inference workloads. Until now, the industry has struggled to define a standard for…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -447,7 +407,6 @@
     "publishedAt": "2026-06-12T18:56:34.000Z",
     "tags": [],
     "summary": "Developers building real-time AI—such as chat assistants, copilots, and agentic workflows—are often constrained by token-by-token generation speed. This... Developers building real-time AI—such as chat assistants, copilots, and agentic workflows—are often constrained by token-by-token generation…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -458,7 +417,6 @@
     "publishedAt": "2026-06-12T14:43:17.000Z",
     "tags": [],
     "summary": "As enterprise AI adoption scales, developers are increasingly forced to stitch together fragmented pipelines—separate models for text, vision, and... As enterprise AI adoption scales, developers are increasingly forced to stitch together fragmented pipelines—separate models for text, vision, and…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -469,7 +427,6 @@
     "publishedAt": "2026-06-11T19:52:37.000Z",
     "tags": [],
     "summary": "NVIDIA Quantum InfiniBand now offers intent-based security profiles in Unified Fabric Manager (UFM) that enable multi-tenant fabric security in a single... NVIDIA Quantum InfiniBand now offers intent-based security profiles in Unified Fabric Manager (UFM) that enable multi-tenant fabric security in…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -480,7 +437,6 @@
     "publishedAt": "2026-06-10T15:00:00.000Z",
     "tags": [],
     "summary": "AI factories are changing what data-center infrastructure must do. Unlike traditional data centers, AI factories are built to manufacture intelligence at scale.... AI factories are changing what data-center infrastructure must do. Unlike traditional data centers, AI factories are built to…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -491,7 +447,6 @@
     "publishedAt": "2026-06-09T19:00:00.000Z",
     "tags": [],
     "summary": "As AI infrastructure scales, enterprise expectations for operational maturity are increasing. Organizations expect these systems to be provisionable,... As AI infrastructure scales, enterprise expectations for operational maturity are increasing. Organizations expect these systems to be…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -502,7 +457,6 @@
     "publishedAt": "2026-06-09T18:27:52.000Z",
     "tags": [],
     "summary": "This post is the third of a three-part series. See also Model Quantization: Concepts, Methods, and Why It Matters and Model Quantization: Post-Training... This post is the third of a three-part series. See also Model Quantization: Concepts, Methods, and Why It Matters and Model Quantization:…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -513,7 +467,6 @@
     "publishedAt": "2026-06-09T16:35:08.000Z",
     "tags": [],
     "summary": "Federated learning (FL) research often begins with a deceptively simple question: What should we try next? A new aggregation rule, a FedProx coefficient, a... Federated learning (FL) research often begins with a deceptively simple question: What should we try next? A new aggregation rule, a FedProx…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -524,7 +477,6 @@
     "publishedAt": "2026-06-09T15:00:00.000Z",
     "tags": [],
     "summary": "Training a speech AI model to correctly recognize or synthesize clinical terminology is surprisingly difficult. Drug names like Acetaminophen, Amlodipine,... Training a speech AI model to correctly recognize or synthesize clinical terminology is surprisingly difficult. Drug names like…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -535,7 +487,6 @@
     "publishedAt": "2026-06-08T18:18:06.000Z",
     "tags": [],
     "summary": "Pre-training frontier LLMs comes down to throughput. When training spans trillions of tokens across thousands of accelerators, every percentage point of step... Pre-training frontier LLMs comes down to throughput. When training spans trillions of tokens across thousands of accelerators, every…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -546,7 +497,6 @@
     "publishedAt": "2026-06-04T13:02:49.000Z",
     "tags": [],
     "summary": "Single-turn chatbots are evolving into long-running agents that can reason, maintain context, use tools, and run efficiently across many turns to complete... Single-turn chatbots are evolving into long-running agents that can reason, maintain context, use tools, and run efficiently across many…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -557,7 +507,6 @@
     "publishedAt": "2026-06-02T19:00:00.000Z",
     "tags": [],
     "summary": "AI agents are changing how you interact with your PC. Creators, developers, and AI enthusiasts are already using these agents extensively to assist with... AI agents are changing how you interact with your PC. Creators, developers, and AI enthusiasts are already using these agents extensively to…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -568,7 +517,6 @@
     "publishedAt": "2026-06-02T16:00:00.000Z",
     "tags": [],
     "summary": "AI agents are a powerful tool for synthesizing data to accelerate research, summarize information, and help teams make decisions faster. But combining internal... AI agents are a powerful tool for synthesizing data to accelerate research, summarize information, and help teams make decisions faster.…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -579,7 +527,6 @@
     "publishedAt": "2026-06-02T02:00:00.000Z",
     "tags": [],
     "summary": "As AI agents move from the digital world to the physical environment, they can readily use NVIDIA Jetson to accelerate real-world deployment with optimized... As AI agents move from the digital world to the physical environment, they can readily use NVIDIA Jetson to accelerate real-world deployment…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -590,7 +537,6 @@
     "publishedAt": "2026-06-01T22:00:00.000Z",
     "tags": [],
     "summary": "The rise of autonomous, long-running AI agents has introduced a new class of compute demand, namely tasks that maintain large context windows, spawn concurrent... The rise of autonomous, long-running AI agents has introduced a new class of compute demand, namely tasks that maintain large context…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -601,7 +547,6 @@
     "publishedAt": "2026-06-01T04:49:15.000Z",
     "tags": [],
     "summary": "Developing autonomous vehicle (AV) policies requires bridging an important gap between training and deployment. Vision-language-action (VLA) models that can... Developing autonomous vehicle (AV) policies requires bridging an important gap between training and deployment. Vision-language-action…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -612,7 +557,6 @@
     "publishedAt": "2026-06-01T04:43:58.000Z",
     "tags": [],
     "summary": "Physical AI systems must understand the real world before they can act within it. Robots, autonomous vehicles, and smart spaces need to understand what's... Physical AI systems must understand the real world before they can act within it. Robots, autonomous vehicles, and smart spaces need to…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -623,7 +567,6 @@
     "publishedAt": "2026-06-01T04:21:42.000Z",
     "tags": [],
     "summary": "The AI era is driving a new class of infrastructure: AI factories that transform data into intelligence for autonomous AI agents operating at unprecedented... The AI era is driving a new class of infrastructure: AI factories that transform data into intelligence for autonomous AI agents operating…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -634,7 +577,6 @@
     "publishedAt": "2026-06-01T03:59:15.000Z",
     "tags": [],
     "summary": "Each wave of AI has created a new scaling law. Pretraining scaled intelligence through larger datasets, more parameters, and massively parallel GPU systems.... Each wave of AI has created a new scaling law. Pretraining scaled intelligence through larger datasets, more parameters, and massively…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -645,7 +587,6 @@
     "publishedAt": "2026-06-01T03:36:52.000Z",
     "tags": [],
     "summary": "AI is now essential infrastructure, powered by AI factories that generate intelligence in the form of tokens. As demand grows, these factories must scale... AI is now essential infrastructure, powered by AI factories that generate intelligence in the form of tokens. As demand grows, these factories…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -656,7 +597,6 @@
     "publishedAt": "2026-05-29T22:31:03.000Z",
     "tags": [],
     "summary": "Modern LLM serving is hard to tune because each deployment is a stack of interacting choices: model backend, tensor-parallel shape, prefill/decode split, worker... Modern LLM serving is hard to tune because each deployment is a stack of interacting choices: model backend, tensor-parallel shape,…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -667,7 +607,6 @@
     "publishedAt": "2026-05-29T16:00:00.000Z",
     "tags": [],
     "summary": "As AI models grow in complexity and regulatory scrutiny intensifies under frameworks including California’s AB-2013 and the EU AI Act, software teams... As AI models grow in complexity and regulatory scrutiny intensifies under frameworks including California’s AB-2013 and the EU AI Act, software…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -678,7 +617,6 @@
     "publishedAt": "2026-05-29T00:07:11.000Z",
     "tags": [],
     "summary": "AI applications are moving beyond text generation to multimodal systems that can perceive, search, and reason across images, documents, video, and... AI applications are moving beyond text generation to multimodal systems that can perceive, search, and reason across images, documents, video, and…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -689,7 +627,6 @@
     "publishedAt": "2026-05-27T23:09:52.000Z",
     "tags": [],
     "summary": "The cold-start problem In production inference deployments, demand fluctuates over time, requiring inference replicas to scale elastically. However,... In production inference deployments, demand fluctuates over time, requiring inference replicas to scale elastically. However, cold-starting…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -700,7 +637,6 @@
     "publishedAt": "2026-05-27T20:00:00.000Z",
     "tags": [],
     "summary": "Large language models (LLMs) are revolutionizing the financial trading landscape by enabling sophisticated analysis of vast amounts of unstructured data to... Large language models (LLMs) are revolutionizing the financial trading landscape by enabling sophisticated analysis of vast amounts of…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -711,7 +647,6 @@
     "publishedAt": "2026-05-27T16:59:58.000Z",
     "tags": [],
     "summary": "NVIDIA RTX provides game developers with direct paths to AI-driven characters, frame generation, and ray-traced rendering. This post walks through a meaningful... NVIDIA RTX provides game developers with direct paths to AI-driven characters, frame generation, and ray-traced rendering. This post…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -722,7 +657,6 @@
     "publishedAt": "2026-05-26T22:08:56.000Z",
     "tags": [],
     "summary": "NVIDIA CompileIQ tackles one of the hardest problems in performance engineering: finding the compiler options that unlock the best performance for a specific... NVIDIA CompileIQ tackles one of the hardest problems in performance engineering: finding the compiler options that unlock the best…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -733,7 +667,6 @@
     "publishedAt": "2026-05-26T21:40:16.000Z",
     "tags": [],
     "summary": "Developers can now use NVIDIA CUDA Tile programming within large existing C++ GPU codebases to develop highly optimized GPU kernels using tile-based... Source",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -744,7 +677,6 @@
     "publishedAt": "2026-05-26T21:39:17.000Z",
     "tags": [],
     "summary": "NVIDIA CUDA 13.3 brings new capabilities and performance optimizations to developers across the CUDA ecosystem. The launch of NVIDIA CUDA Tile programming in... NVIDIA CUDA 13.3 brings new capabilities and performance optimizations to developers across the CUDA ecosystem. The launch of NVIDIA CUDA…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -755,7 +687,6 @@
     "publishedAt": "2026-05-26T16:00:00.000Z",
     "tags": [],
     "summary": "Precision medicine depends on two fundamental capabilities: understanding disease at the genomic level and identifying treatments at the molecular level. ... Precision medicine depends on two fundamental capabilities: understanding disease at the genomic level and identifying treatments at the…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -766,7 +697,6 @@
     "publishedAt": "2026-05-22T16:00:00.000Z",
     "tags": [],
     "summary": "High‑quality 3D medical imaging data is the foundation of modern radiology AI, but access to it is often constrained by data scarcity, privacy restrictions,... High‑quality 3D medical imaging data is the foundation of modern radiology AI, but access to it is often constrained by data scarcity,…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -777,7 +707,6 @@
     "publishedAt": "2026-05-21T18:31:56.000Z",
     "tags": [],
     "summary": "In quantitative finance, researchers build algorithms to trade assets, derivatives, and other financial instruments. A key part of that work is finding signals:... In quantitative finance, researchers build algorithms to trade assets, derivatives, and other financial instruments. A key part of that…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -788,7 +717,6 @@
     "publishedAt": "2026-05-21T18:00:00.000Z",
     "tags": [],
     "summary": "Maximizing the value of AI infrastructure demands deep visibility into GPU utilization. Yet many platform teams running AI workloads on Kubernetes operate with... Maximizing the value of AI infrastructure demands deep visibility into GPU utilization. Yet many platform teams running AI workloads on…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -799,7 +727,6 @@
     "publishedAt": "2026-05-21T17:32:56.000Z",
     "tags": [],
     "summary": "As AI models grow in scale and complexity, realizing the full performance of modern accelerated infrastructure depends as much on how workloads are placed as on... As AI models grow in scale and complexity, realizing the full performance of modern accelerated infrastructure depends as much on how…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -810,7 +737,6 @@
     "publishedAt": "2026-05-21T15:30:00.000Z",
     "tags": [],
     "summary": "Telcos around the world are building sovereign AI factories based on the NVIDIA Cloud Partner (NCP) reference architecture, giving governments, enterprises, and... Telcos around the world are building sovereign AI factories based on the NVIDIA Cloud Partner (NCP) reference architecture, giving…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -821,7 +747,6 @@
     "publishedAt": "2026-05-20T20:00:00.000Z",
     "tags": [],
     "summary": "Autonomous AI agents are taking on all types of work for businesses: routing logistics fleets, triaging support tickets, generating code, and orchestrating... Autonomous AI agents are taking on all types of work for businesses: routing logistics fleets, triaging support tickets, generating code,…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -832,7 +757,6 @@
     "publishedAt": "2026-05-20T16:00:00.000Z",
     "tags": [],
     "summary": "Agent harnesses like Claude Code, Codex, and LangChain Deep Agents are excellent orchestrators. They manage sessions, chain tools, execute code, and respond to... Agent harnesses like Claude Code, Codex, and LangChain Deep Agents are excellent orchestrators. They manage sessions, chain tools,…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -843,7 +767,6 @@
     "publishedAt": "2026-05-19T23:40:45.000Z",
     "tags": [],
     "summary": "Autonomous AI agents are becoming more capable. Open models, Model Context Protocol (MCP)-connected tools, and portable skills are also making agents easier to... Autonomous AI agents are becoming more capable. Open models, Model Context Protocol (MCP)-connected tools, and portable skills are also…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -854,7 +777,6 @@
     "publishedAt": "2026-05-19T20:00:00.000Z",
     "tags": [],
     "summary": "Evaluating an AI model and evaluating an AI agent are related—but they answer fundamentally different questions. A model benchmark tests the capability of a... Evaluating an AI model and evaluating an AI agent are related—but they answer fundamentally different questions. A model benchmark tests…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -865,7 +787,6 @@
     "publishedAt": "2026-05-14T19:24:35.000Z",
     "tags": [],
     "summary": "Agentic inference has fundamentally changed the runtime dynamics of inference workloads by introducing non-deterministic trajectories—actions, observations,... Agentic inference has fundamentally changed the runtime dynamics of inference workloads by introducing non-deterministic…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -876,7 +797,6 @@
     "publishedAt": "2026-05-13T18:00:00.000Z",
     "tags": [],
     "summary": "In today’s data-driven world, organizations increasingly rely on video to capture critical information, yet extracting meaningful, real-time insights from... In today’s data-driven world, organizations increasingly rely on video to capture critical information, yet extracting meaningful, real-time…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -887,7 +807,6 @@
     "publishedAt": "2026-05-13T16:39:20.000Z",
     "tags": [],
     "summary": "A massive-scale X-ray free-electron laser (XFEL) enables tracking structural and electron dynamics in novel systems, including fusion materials, semiconductors,... A massive-scale X-ray free-electron laser (XFEL) enables tracking structural and electron dynamics in novel systems, including fusion…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -898,7 +817,6 @@
     "publishedAt": "2026-05-12T18:00:00.000Z",
     "tags": [],
     "summary": "The path from a trained AI model to production should be smooth, but rarely is. Many teams invest weeks fine-tuning models, only to discover that exporting to a... The path from a trained AI model to production should be smooth, but rarely is. Many teams invest weeks fine-tuning models, only to…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -909,7 +827,6 @@
     "publishedAt": "2026-05-11T19:44:27.000Z",
     "tags": [],
     "summary": "The compute capability of large GPU fleets presents unprecedented opportunities to innovate and provide value to customers in record time. Yet these... The compute capability of large GPU fleets presents unprecedented opportunities to innovate and provide value to customers in record time. Yet…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -920,7 +837,6 @@
     "publishedAt": "2026-05-08T17:13:33.000Z",
     "tags": [],
     "summary": "Bash is one of the most flexible and powerful interfaces exposed to AI agents. In the right system, a model that emits grep, curl, tar, or a shell pipeline is... Bash is one of the most flexible and powerful interfaces exposed to AI agents. In the right system, a model that emits , , , or a shell…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -931,7 +847,6 @@
     "publishedAt": "2026-05-08T15:59:16.000Z",
     "tags": [],
     "summary": "An agentic exchange must preserve a structured interaction: assistant turns interleave reasoning with one or more tool calls, and subsequent user turns return... An agentic exchange must preserve a structured interaction: assistant turns interleave reasoning with one or more tool calls, and…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -942,7 +857,6 @@
     "publishedAt": "2026-05-07T21:20:14.000Z",
     "tags": [],
     "summary": "NVIDIA GB200 NVL72 introduces a fundamentally new way to build GPU clusters by extending NVIDIA NVLink coherence across an entire rack. This design enables... NVIDIA GB200 NVL72 introduces a fundamentally new way to build GPU clusters by extending NVIDIA NVLink coherence across an entire rack. This…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -953,7 +867,6 @@
     "publishedAt": "2026-05-07T21:18:06.000Z",
     "tags": [],
     "summary": "This post is the second of a three-part series. See also Model Quantization: Concepts, Methods, and Why It Matters and Model Quantization: Turn FP8 Checkpoints... This post is the second of a three-part series. See also Model Quantization: Concepts, Methods, and Why It Matters and Model…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -964,7 +877,6 @@
     "publishedAt": "2026-05-07T16:02:58.000Z",
     "tags": [],
     "summary": "Distributed deep learning depends on fast, reliable GPU-to-GPU communication using the NVIDIA Collective Communication Library (NCCL). When training slows down,... Distributed deep learning depends on fast, reliable GPU-to-GPU communication using the NVIDIA Collective Communication Library (NCCL).…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -975,7 +887,6 @@
     "publishedAt": "2026-05-05T16:00:00.000Z",
     "tags": [],
     "summary": "The automotive cockpit is undergoing a fundamental shift from rule-based interfaces to agentic, multimodal AI systems capable of reasoning, planning, and... The automotive cockpit is undergoing a fundamental shift from rule-based interfaces to agentic, multimodal AI systems capable of reasoning,…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -986,7 +897,6 @@
     "publishedAt": "2026-05-05T15:52:15.000Z",
     "tags": [],
     "summary": "Generative AI’s explosive first chapter was defined by humans sending requests and models responding. The agentic chapter is different. Agents don't... Generative AI’s explosive first chapter was defined by humans sending requests and models responding. The agentic chapter is different. Agents…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -997,7 +907,6 @@
     "publishedAt": "2026-05-04T20:55:05.000Z",
     "tags": [],
     "summary": "Modern supply chains operate under the constant pressures of fluctuating demand, volatile costs, constrained capacity, and interdependent decision-making.... Modern supply chains operate under the constant pressures of fluctuating demand, volatile costs, constrained capacity, and interdependent…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -1008,7 +917,6 @@
     "publishedAt": "2026-04-30T17:00:00.000Z",
     "tags": [],
     "summary": "Neural network techniques are increasingly used in computer graphics to boost image quality, improve performance, and streamline content creation. Approaches... Neural network techniques are increasingly used in computer graphics to boost image quality, improve performance, and streamline content…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -1019,7 +927,6 @@
     "publishedAt": "2026-04-30T17:00:00.000Z",
     "tags": [],
     "summary": "Today, game developers can begin integrating NVIDIA DLSS 4.5 with Dynamic Multi Frame Generation, Multi Frame Generation 6X, and the second-generation... Today, game developers can begin integrating NVIDIA DLSS 4.5 with Dynamic Multi Frame Generation, Multi Frame Generation 6X, and the…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -1030,7 +937,6 @@
     "publishedAt": "2026-04-30T16:16:04.000Z",
     "tags": [],
     "summary": "Creative and visualization teams today produce more assets, in more formats, with leaner teams. Generative AI can accelerate that work – compressing tasks... Creative and visualization teams today produce more assets, in more formats, with leaner teams. Generative AI can accelerate that work –…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -1041,7 +947,6 @@
     "publishedAt": "2026-04-30T15:54:38.000Z",
     "tags": [],
     "summary": "NVIDIA CUDA Tile (cuTile) is a tile-based programming model that enables developers to write GPU kernels in terms of tile-level operations—loads, stores, and... NVIDIA CUDA Tile (cuTile) is a tile-based programming model that enables developers to write GPU kernels in terms of tile-level…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -1052,7 +957,6 @@
     "publishedAt": "2026-04-29T16:41:57.000Z",
     "tags": [],
     "summary": "The next wave of enterprise productivity is being built on AI factories. As organizations deploy agentic AI systems capable of reasoning, automation, and... The next wave of enterprise productivity is being built on AI factories. As organizations deploy agentic AI systems capable of reasoning,…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -1063,7 +967,6 @@
     "publishedAt": "2026-04-28T19:00:00.000Z",
     "tags": [],
     "summary": "For decades, computational biology has operated under a reductionist compromise. To fit complex biological systems into the limited memory of a single GPU,... For decades, computational biology has operated under a reductionist compromise. To fit complex biological systems into the limited memory…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -1074,7 +977,6 @@
     "publishedAt": "2026-04-28T16:01:12.000Z",
     "tags": [],
     "summary": "Agentic systems often reason across screens, documents, audio, video, and text within a single perception‑to‑action loop. However, they still rely on... Agentic systems often reason across screens, documents, audio, video, and text within a single perception‑to‑action loop. However, they still rely…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -1085,7 +987,6 @@
     "publishedAt": "2026-04-28T15:00:00.000Z",
     "tags": [],
     "summary": "The subsurface industry is at a critical point in its digital evolution. For decades, unlocking reservoir potential has relied on experts performing essential... The subsurface industry is at a critical point in its digital evolution. For decades, unlocking reservoir potential has relied on experts…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
   {
@@ -1096,7 +997,6 @@
     "publishedAt": "2026-04-24T23:29:56.000Z",
     "tags": [],
     "summary": "DeepSeek just launched its fourth generation of flagship models with DeepSeek-V4-Pro and DeepSeek-V4-Flash, both targeted at enabling highly efficient... DeepSeek just launched its fourth generation of flagship models with DeepSeek-V4-Pro and DeepSeek-V4-Flash, both targeted at enabling highly…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   }
 ]

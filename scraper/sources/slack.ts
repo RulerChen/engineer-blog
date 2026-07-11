@@ -30,7 +30,6 @@ import type { Article, Source } from "../src/types.js";
  *   are extracted from the class attribute and de-slugified before being
  *   run through `resolveTags`.
  * - Summary: `p.ts-entry__excerpt`.
- * - Thumbnail: `img` inside `.ts-entry__thumbnail`.
  * - Next page: `.nav-links a.next.page-numbers` — there is no `<link
  *   rel="next">` in `<head>` on this theme (unlike engineering.fb.com), so
  *   the in-body pagination nav is the only source of the next-page URL.
@@ -64,7 +63,6 @@ export function parseSlackArchivePage(html: string, pageUrl: string): ArchivePag
       publishedAt,
       tags: resolveTags(tags, "slack"),
       summary: summarize(post.find(".ts-entry__excerpt").first().html() ?? ""),
-      thumbnail: post.find(".ts-entry__thumbnail img").first().attr("src") ?? null,
       fetchedAt,
     });
   });

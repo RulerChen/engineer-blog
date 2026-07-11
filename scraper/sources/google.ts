@@ -52,7 +52,6 @@ export function parseGoogleArchivePage(html: string, pageUrl: string): ArchivePa
       publishedAt,
       tags: resolveTags(tagPart ? [tagPart] : [], "google"),
       summary: summarize(post.find(".search-result__summary").first().html() ?? ""),
-      thumbnail: post.find("img.search-result__featured-img").first().attr("src") ?? null,
       fetchedAt,
     });
   });

@@ -10,7 +10,6 @@
       "video"
     ],
     "summary": "We’re sharing how we’ve enabled Dolby Vision and ambient viewing environment (amve) on the Instagram iOS app to enhance the video viewing experience. HDR videos created on iPhones contain unique Dolby Vision and amve metadata that we needed to support end-to-end Instagram for iOS is now the first…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:18.952Z"
   },
   {
@@ -23,7 +22,6 @@
       "ml"
     ],
     "summary": "We’re sharing how Meta is applying machine learning (ML) and diversity algorithms to improve notification quality and user experience. We’ve introduced a diversity-aware notification ranking framework to reduce uniformity and deliver a more varied and engaging mix of notifications. This new…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:18.952Z"
   },
   {
@@ -36,7 +34,6 @@
       "infra"
     ],
     "summary": "In this post, we explore how Instagram has successfully scaled its algorithm to include over 1000 ML models without sacrificing recommendation quality or reliability. We delve into the intricacies of managing such a vast array of models, each with its own performance characteristics and product…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:18.952Z"
   },
   {
@@ -52,7 +49,6 @@
       "general"
     ],
     "summary": "Introducing a new Android UI framework like Jetpack Compose into an existing app is more complicated than importing some AARS and coding away. What if your app has specific performance goals to meet? What about existing design components, integrations with navigation, and logging frameworks? On…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:18.952Z"
   },
   {
@@ -63,7 +59,6 @@
     "publishedAt": "2024-06-13T14:45:58.000Z",
     "tags": [],
     "summary": "At Meta, we support real-time communication (RTC) for billions of people through our apps, including WhatsApp, Instagram, and Messenger. We are working to make RTC accessible by providing a high-quality experience for everyone – even those who might not have the fastest connections or the latest…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:18.952Z"
   },
   {
@@ -79,7 +74,6 @@
       "general"
     ],
     "summary": "Meta’s family of apps serves trillions of image download requests every day. And if you’re into high-quality images, you’ve probably noticed that Instagram and Threads have added support for high dynamic range (HDR) photos. Now people on Threads and Instagram can upload and share images that are…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:18.952Z"
   },
   {
@@ -93,7 +87,6 @@
       "open-source"
     ],
     "summary": "Instagram has introduced Immortal Objects – PEP-683 – to Python. Now, objects can bypass reference count checks and live throughout the entire execution of the runtime, unlocking exciting avenues for true parallelism. At Meta, we use Python (Django) for our frontend server within Instagram. To…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:18.952Z"
   },
   {
@@ -106,7 +99,6 @@
       "ml"
     ],
     "summary": "Explore is one of the largest recommendation systems on Instagram. We leverage machine learning to make sure people are always seeing content that is the most interesting and relevant to them. Using more advanced machine learning models, like Two Towers neural networks, we’ve been able to make the…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:18.952Z"
   },
   {
@@ -121,7 +113,6 @@
       "infra"
     ],
     "summary": "Fixit is dead! Long live Fixit 2 – the latest version of our open-source auto-fixing linter. Fixit 2 allows developers to efficiently build custom lint rules and perform auto-fixes for their codebases. Fixit 2 is available today on PyPI. Python is one of the most popular languages in use at Meta.…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:18.952Z"
   },
   {
@@ -134,7 +125,6 @@
       "mobile"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2023/06/CC23_021-Visual-1_Hero.png?w=580&h=326&crop=1",
     "fetchedAt": "2026-07-11T16:01:18.952Z"
   },
   {
@@ -145,7 +135,6 @@
     "publishedAt": "2022-11-04T00:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2022/11/16_9_With-Label.png?w=580&h=326&crop=1",
     "fetchedAt": "2026-07-11T16:01:18.952Z"
   },
   {
@@ -158,7 +147,6 @@
       "devops"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2022/10/Self-Serve-Hero.png?w=580&h=326&crop=1",
     "fetchedAt": "2026-07-11T16:01:18.952Z"
   },
   {
@@ -171,7 +159,6 @@
       "infra"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2022/08/Eng-Blog-Self-Serve-Hero-Images-DATACENTERS-501-Blue.jpg",
     "fetchedAt": "2026-07-11T16:01:20.581Z"
   },
   {
@@ -182,7 +169,6 @@
     "publishedAt": "2022-07-26T00:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2022/07/Instagram-Messaging-hero.jpg?w=580&h=326&crop=1",
     "fetchedAt": "2026-07-11T16:01:18.952Z"
   },
   {
@@ -195,7 +181,6 @@
       "mobile"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2022/07/ligature-example.gif?w=580&h=326&crop=1",
     "fetchedAt": "2026-07-11T16:01:20.581Z"
   },
   {
@@ -208,7 +193,6 @@
       "devops"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2022/04/Eng-Blog-Self-Serve-Hero-Images-DEBUGGING-203-Blue.jpg?w=580&h=326&crop=1",
     "fetchedAt": "2026-07-11T16:01:18.952Z"
   },
   {
@@ -221,7 +205,6 @@
       "mobile"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2021/09/Superpack_Hero_FINAL.jpg?w=580&h=326&crop=1",
     "fetchedAt": "2026-07-11T16:01:20.581Z"
   },
   {
@@ -234,7 +217,6 @@
       "networking"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2022/09/Instagram-Threads-latency-image-2.png?w=580&h=326&crop=1",
     "fetchedAt": "2026-07-11T16:01:20.581Z"
   },
   {
@@ -245,7 +227,6 @@
     "publishedAt": "2021-01-26T00:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2021/01/Under-the-Hood_Hero_1920x1080_Final.jpg?w=580&h=326&crop=1",
     "fetchedAt": "2026-07-11T16:01:18.952Z"
   },
   {
@@ -258,7 +239,6 @@
       "video"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2020/12/Rsys2.jpg?w=580&h=326&crop=1",
     "fetchedAt": "2026-07-11T16:01:20.581Z"
   },
   {
@@ -271,7 +251,6 @@
       "ml"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2022/09/Instagram-diversified-notifications-image-2.png?w=580&h=326&crop=1",
     "fetchedAt": "2026-07-11T16:01:20.581Z"
   },
   {
@@ -284,7 +263,6 @@
       "mobile"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2020/12/WatchTogetherHero.jpg?w=580&h=326&crop=1",
     "fetchedAt": "2026-07-11T16:01:20.581Z"
   },
   {
@@ -297,7 +275,6 @@
       "mobile"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2022/08/IG-constrained-notification-system-image-1.png?w=580&h=326&crop=1",
     "fetchedAt": "2026-07-11T16:01:20.581Z"
   },
   {
@@ -310,7 +287,6 @@
       "mobile"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2020/10/FBQUIC2.png?w=580&h=326&crop=1",
     "fetchedAt": "2026-07-11T16:01:20.581Z"
   },
   {
@@ -321,7 +297,6 @@
     "publishedAt": "2020-09-14T00:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2020/09/Autoscaling_hero_v1.jpg?w=580&h=326&crop=1",
     "fetchedAt": "2026-07-11T16:01:20.581Z"
   },
   {
@@ -332,7 +307,6 @@
     "publishedAt": "2020-03-02T00:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2020/03/Lightspeed_Hero.jpeg?w=580&h=326&crop=1",
     "fetchedAt": "2026-07-11T16:01:20.581Z"
   },
   {
@@ -343,7 +317,6 @@
     "publishedAt": "2019-11-25T00:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2019/11/najam-hero.jpg?w=580&h=326&crop=1",
     "fetchedAt": "2026-07-11T16:01:20.581Z"
   }
 ]

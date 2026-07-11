@@ -9,7 +9,6 @@
       "backend"
     ],
     "summary": "Cloning Uber's Go monorepo took 15 minutes and 40GB of disk, and thousands of clone operations overwhelmed Git servers. GitFarm delivers Git-as-a-Service over gRPC, with warm bare clones and ephemeral sandbox pools acquired in under 500ms. A read-heavy ownership service cut CPU 77%, memory 90%+,…",
-    "thumbnail": "https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=407/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy9jY2Q3YjZiMS01ODI3LTQ3MWYtYjM5OS05OGVjOWQwZmJkZTIucG5n",
     "fetchedAt": "2026-07-11T12:36:07.002Z"
   },
   {
@@ -22,7 +21,6 @@
       "ml"
     ],
     "summary": "Turning handwritten lists, recipe screenshots, and vague meal plans into a grocery cart forces users to hand-translate intent into dozens of searches. Uber Eats' Cart Assistant decomposes the task into an eight-stage state graph — LLM planning, candidate retrieval, semantic relevance judging, and…",
-    "thumbnail": "https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=407/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy8wMzFkYTAzNi01YjczLTQzYzQtYmQ2Ny0yOGZiZGMyNjhkYjQucG5n",
     "fetchedAt": "2026-07-11T12:36:07.002Z"
   },
   {
@@ -35,7 +33,6 @@
       "data"
     ],
     "summary": "Building a new advertiser report took weeks to months because queries were tightly coupled to constantly evolving data schemas fragmented across sources. Uber's Data Abstraction Layer, an RPC service, maps logical tables to physical ones via declarative config, resolving joins and aggregations…",
-    "thumbnail": "https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=407/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy82ZDg1MzliMC04MmQ4LTQ4YWMtOGQ5Ni1lYWE2ZmIxMTkyNzAuanBlZw==",
     "fetchedAt": "2026-07-11T12:36:07.002Z"
   },
   {
@@ -48,7 +45,6 @@
       "ml"
     ],
     "summary": "Keyword-based data-loss prevention drowned analysts in false positives while missing real exfiltration across thousands of employees' files. Uber's File Semantic Analyzer uses fine-tuned LLMs — OCR, chunking, summarization, and entity extraction — to reason over file meaning and intent, with…",
-    "thumbnail": "https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=407/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy9jODA0ZmExOS0yM2Y5LTRmMjgtYmU1NS0zYjJiZDE4YWFhNjkuanBlZw==",
     "fetchedAt": "2026-07-11T12:36:07.002Z"
   },
   {
@@ -61,7 +57,6 @@
       "backend"
     ],
     "summary": "Uber's decade-old on-prem artifact store — serving 5+ petabytes of downloads monthly — risked write outages, silent replication failures, and multi-hour manual rebalancing. The team migrated to multi-region cloud blob storage behind a validation proxy that checks freshness via conditional HTTP…",
-    "thumbnail": "https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=407/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy8yY2I1ZTY2OS00ZWRhLTQ0NzUtODUwZS1kMDJjZmNkZDJmNjIucG5n",
     "fetchedAt": "2026-07-11T12:36:07.002Z"
   },
   {
@@ -74,7 +69,6 @@
       "security"
     ],
     "summary": "When AI agents delegate across systems, the original human's identity vanishes, breaking audit trails and fine-grained access control. Uber extended its Zero Trust architecture with an Agent Registry, a Security Token Service issuing short-lived single-hop JWTs carrying the full actor chain, and an…",
-    "thumbnail": "https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=407/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy9mNTAxNTRjMy1hNjU4LTQ2YTQtODQ1Yi01ZTk4YTA4ZGE4MmYucG5n",
     "fetchedAt": "2026-07-11T12:36:07.002Z"
   },
   {
@@ -87,7 +81,6 @@
       "ml"
     ],
     "summary": "Uber's legacy traffic system couldn't adapt to incidents, weather, and sparse rural roads where segment errors compound on long trips. DeepETT, a multi-view transformer, tokenizes pre-aggregated spatial and temporal observations for constant-time inference, with a Flink pipeline calibrating drift…",
-    "thumbnail": "https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=407/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy80NjdiZmE2Mi1jNDMzLTQ4NzMtYTU0OC04MjQ3YjI3ODdhMzYuanBlZw==",
     "fetchedAt": "2026-07-11T12:36:07.002Z"
   },
   {
@@ -100,7 +93,6 @@
       "data"
     ],
     "summary": "Allocating millions of incentive offers across Mobility and Delivery under strict quarterly budgets relied on a manual First-In-First-Out heuristic with no optimization. Tarot frames the problem as a Multiple Knapsack Problem, pairing uplift models and a budget pacer with a CP-SAT solver. Budget…",
-    "thumbnail": "https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=407/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy80ZWRlMzQ1OS1lNGE2LTRlNWYtYWExOC00YWE5M2UwMWEzNGIucG5n",
     "fetchedAt": "2026-07-11T12:36:07.002Z"
   },
   {
@@ -113,7 +105,6 @@
       "ml"
     ],
     "summary": "Product review processes surfaced critical gaps too late, forcing teams into costly rework on unsupported assumptions and blind dependencies. Uber built an AI-powered PRD Evaluator that assembles contextual knowledge across linked documents, prior experiments, and company-specific frameworks to…",
-    "thumbnail": "https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=552/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy9mY2MwOGExMy0xNmM1LTQwZmEtYTQ2ZC02NzlkYzY5YzQ3YzEucG5n",
     "fetchedAt": "2026-07-11T12:36:07.002Z"
   },
   {
@@ -126,7 +117,6 @@
       "backend"
     ],
     "summary": "Go's default 2KB stack allocation triggered wasteful expansion cycles consuming 10% CPU in Uber's high-throughput services. The team built a profile-guided automation system reading CPU profiles and binary symbols to compute optimal per-service stack sizes. Result: CPU overhead dropped below 1%,…",
-    "thumbnail": "https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=552/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy9hOTc0M2Q4Ni1kNzhmLTQ1OTUtODY5MC04NDkxNzM3MzAxYWQuanBlZw==",
     "fetchedAt": "2026-07-11T12:36:07.002Z"
   },
   {
@@ -139,7 +129,6 @@
       "backend"
     ],
     "summary": "Uber's decade-long cloud commitment — a distributed systems problem spanning 10-figure spend — required mastering five physical layers. The challenge: regional topology constraints, inelastic power limits, and egress economics compound silently into cost variances. The solution: systematic…",
-    "thumbnail": "https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=552/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy9lYTYzOGFiMC0yOGRhLTQwNWYtYWYwMy1hNTAyMTk3MDNlY2YucG5n",
     "fetchedAt": "2026-07-11T12:36:07.002Z"
   },
   {
@@ -152,7 +141,6 @@
       "backend"
     ],
     "summary": "Manual management of 5,000 network devices across six continents created unstable configurations and constant downtime. Uber implemented Ansible-driven \"Daily Nightly Enforcement\" — automating backups, golden config generation via Jinja templates, and standardized pushes across multi-vendor…",
-    "thumbnail": "https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=552/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy9iYzA2ZWY4Yy1kYjg1LTRjN2QtOTk4YS0zYmY5M2JlOGZmYzkuanBlZw==",
     "fetchedAt": "2026-07-11T12:36:07.002Z"
   },
   {
@@ -165,7 +153,6 @@
       "data"
     ],
     "summary": "Human annotators introduce tracking errors — ID swaps, position jumps, freeze errors, scale distortions — when labeling video bounding boxes. Uber deployed an XGBoost classifier analyzing 283 visual, motion, and coordinate features across an 11-frame window to catch these failures automatically.…",
-    "thumbnail": "https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=552/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy80NWI5ZDE0Ni03NDg1LTQ2NzItOTUxNi0wY2VjY2ViZGFhOTUuanBlZw==",
     "fetchedAt": "2026-07-11T12:36:07.002Z"
   },
   {
@@ -178,7 +165,6 @@
       "backend"
     ],
     "summary": "Odin's vertical CPU scaler struggled with bursty workload patterns under pure dedicated core allocation. Uber engineers introduced a hybrid model combining dedicated cores for baseline performance with shared cores for elastic bursts, managed via Linux cpusets and cpu.shares. Result: reduced…",
-    "thumbnail": "https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=552/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy81YTNhNGUwZS05YmMwLTQ0NjUtOTM3ZC0wMjAxMDc4YzcxY2EuanBlZw==",
     "fetchedAt": "2026-07-11T12:36:07.002Z"
   },
   {
@@ -191,7 +177,6 @@
       "ml"
     ],
     "summary": "Cross-functional alignment used to take weeks of meetings and PRDs. AI prototyping tools — Lovable, Figma Make, Claude Code, Cursor — compressed a merchant team's four-week discussion into two hours, and let a PM explore six concepts in 20 minutes. Nearly 40% of Uber's global hackathon submissions…",
-    "thumbnail": "https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=2304/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy9hZWZiYjNkNS1kZDJlLTRhNzgtYmJkMi1hZmNhYTQyNjdhN2EucG5n",
     "fetchedAt": "2026-07-11T12:36:07.002Z"
   },
   {
@@ -204,7 +189,6 @@
       "data"
     ],
     "summary": "Lexical search broke on Uber Eats — failing on synonyms, typos, and multilingual queries like \"pan\" (bread or cookware?). The new semantic stack: a two-tower deep network with a Qwen LLM backbone, trained via DeepSpeed ZeRO-3. Matryoshka embeddings cut storage 50% with under 0.3% quality loss;…",
-    "thumbnail": "https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=2304/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy8yYmQ4MmY1Yy1kMjRhLTU2YzMtYmU3OS0wY2FiMzIxOGRhMmUucG5n",
     "fetchedAt": "2026-07-11T12:36:07.002Z"
   },
   {
@@ -217,7 +201,6 @@
       "ml"
     ],
     "summary": "Training LLMs for Eats, support, and code gen at Uber means squeezing every GPU cycle. The stack: PyTorch, Ray, DeepSpeed ZeRO-3 CPU Offload (34% memory reduction, 2-7x batch sizes), and Flash Attention (50% memory savings). On H100, Mixtral 8x7b achieves 3x A100 throughput, scaling linearly to…",
-    "thumbnail": "https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=2304/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy81MzIyM2ZkNy1kNjMyLTVkYjgtOTAxYi01MTJmODQ0ZWE0MmEucG5n",
     "fetchedAt": "2026-07-11T12:36:07.002Z"
   },
   {
@@ -230,7 +213,6 @@
       "mobile"
     ],
     "summary": "Manual design specs across UIKit, SwiftUI, Android XML, Compose, Web React, Go, and SDUI were a bottleneck causing constant documentation drift. uSpec combines AI agents with a Figma Console MCP bridge that reads real tokens and variants directly from Figma — running locally via Cursor over…",
-    "thumbnail": "https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=2304/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy8xZDU1ODE5YS1mOWNlLTVkZjgtOGZiNy04YTgwZDk1YmZkZTMucG5n",
     "fetchedAt": "2026-07-11T12:36:07.002Z"
   },
   {
@@ -243,7 +225,6 @@
       "data"
     ],
     "summary": "Uber's ads system flattened rich behavioral sequences into summary stats and used MLP-only experts that missed cross-feature interactions. A target-aware transformer with Multi-Head Latent Attention captures sequences at O(N×L), and a Hetero-MMoE blends MLP, DCN, and CIN experts. Production gains:…",
-    "thumbnail": "https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=2304/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy83YTc2YmY3My1iMmYxLTU0NTgtOTlhNC1mODViNDBiY2ZlNTIuanBn",
     "fetchedAt": "2026-07-11T12:36:07.002Z"
   },
   {
@@ -256,7 +237,6 @@
       "security"
     ],
     "summary": "A misplaced flag in a privileged `rm -r` could silently delete a production dataset with no audit trail. Superuser Gateway removes superuser credentials from engineers' machines entirely, routing privileged commands through a Git-backed PR workflow with CLI submission, CI validation, peer approval,…",
-    "thumbnail": "https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=2304/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy83N2I0YTMwNi0wYTMxLTU2NzYtYTg1Ni01OGM1YWFkYTE3NmMuanBn",
     "fetchedAt": "2026-07-11T12:36:07.002Z"
   },
   {
@@ -269,7 +249,6 @@
       "data"
     ],
     "summary": "16,000 datasets in one monolithic Hive metastore meant shared-fate blast radius — one bad operation could affect every team. Uber decomposed it into domain-specific databases via pointer-level metadata manipulation, achieving zero-downtime migration. Result: over 1 PB saved and the organizational…",
-    "thumbnail": "https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=2304/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy9iMzFhOTNiMS1mY2UyLTViMWYtYmM3NC1hMTAzNzgyMjc3NmYucG5n",
     "fetchedAt": "2026-07-11T12:36:07.002Z"
   },
   {
@@ -282,7 +261,6 @@
       "mobile"
     ],
     "summary": "Over 40% of Uber's mobile events were ad-hoc custom logs, breaking cross-platform analysis and impression accuracy. The team standardized to three universal event types — tap, impression, scroll — using AnalyticsBuilder classes that capture metadata at the platform layer. Result: 30% less…",
-    "thumbnail": "https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=2304/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy84OWYzOGQ5Ny1iMmEyLTU0NWYtYjgxMi0zZmZkMTgwOTQ1ZjIuanBn",
     "fetchedAt": "2026-07-11T12:36:07.002Z"
   },
   {
@@ -295,7 +273,6 @@
       "security"
     ],
     "summary": "An accidental IAM change on a critical gateway once stopped Uber Eats customers from modifying orders — and ~10% of monthly policy changes involve risky privilege removal. The Policy Simulator pulls 30–90 days of access logs from Apache Pinot and replays them through current vs. proposed policies.…",
-    "thumbnail": "https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=2304/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy9jYmJiOTZjZC0zYTkzLTViNjQtODkwMy0yMmVmZDRiMjJjYTIuanBn",
     "fetchedAt": "2026-07-11T12:36:07.002Z"
   },
   {
@@ -308,7 +285,6 @@
       "security"
     ],
     "summary": "Rotating 100,000+ Kerberos keytabs is risky: rotation invalidates the previous key immediately, leaving applications without valid credentials. Uber's solution generates keytabs with both old and new versions during transitions, drops fetch intervals to 30s, and integrates with the Secret…",
-    "thumbnail": "https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=2304/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy85NGQwNDE4ZS1hNTdiLTUzODItYmIxNi03ZTJiNGY5OTVhMGYucG5n",
     "fetchedAt": "2026-07-11T12:36:07.002Z"
   },
   {
@@ -321,7 +297,6 @@
       "security"
     ],
     "summary": "150,000 secrets across 25 fragmented vaults — no centralized detection, rotation, or attribution. Uber consolidated into 6 managed vaults, deployed real-time scanning across git/Slack/CI, and built a Cadence-orchestrated Secret Lifecycle Manager. A team of 10 now drives 20,000 automated monthly…",
-    "thumbnail": "https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=2304/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy8yYmQ1YWVlNy0zZTkwLTU5ZGItYjI2Ni1lMWNkYjkyMTNkYzYuanBn",
     "fetchedAt": "2026-07-11T12:36:07.002Z"
   },
   {
@@ -334,7 +309,6 @@
       "mobile"
     ],
     "summary": "Every Uber line of business had built payments independently — duplicated logic, inconsistent UX, Apple Pay missing from half the flows. EU Strong Customer Authentication forced a reckoning. Uber built a centralized checkout orchestrator with modular components each LOB plugs into. Holdout results:…",
-    "thumbnail": "https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=2304/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy80YTEyMDQ2YS05ZjNhLTUxZjMtOWI0ZC1lNDU3MjU1YjUxZDAuanBlZw==",
     "fetchedAt": "2026-07-11T12:36:07.002Z"
   },
   {
@@ -347,7 +321,6 @@
       "mobile"
     ],
     "summary": "Uber's Rider app launches features across hundreds of screens and thousands of feature flags — making manual design system audits impossible. Design System Observability adds a deterministic component scanner that flags non-Base elements, plus a daily screenshot pipeline that auto-files Jira…",
-    "thumbnail": "https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=2304/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy8xYTVkN2M0OC1lNjM1LTU0MzAtYjEwOS05ZGE4YmY1OTQwNWYuanBlZw==",
     "fetchedAt": "2026-07-11T12:36:07.002Z"
   },
   {
@@ -360,7 +333,6 @@
       "mobile"
     ],
     "summary": "Letting executive assistants book rides for executives meant rethinking trip ownership, identity, billing, and notifications across 30+ backend services and 5 client platforms. Uber introduced a \"participant model\" extending every booking, tracking, and billing touchpoint to support multiple user…",
-    "thumbnail": "https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=2304/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy84YzM2M2FjOC0yNDQ4LTUzMDktYWFmZi01MjM5NGEwZTI4ZTAuanBlZw==",
     "fetchedAt": "2026-07-11T12:36:07.002Z"
   },
   {
@@ -373,7 +345,6 @@
       "security"
     ],
     "summary": "Migrating 160+ PB from HDFS to GCS meant bridging Kerberos delegation tokens and GCP OAuth 2.0 — without changing any of thousands of analytical jobs. The Storage Access Service intercepts FileSystem calls, exchanges Hadoop tokens for time-bound GCP credentials, and caches across three layers.…",
-    "thumbnail": "https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=2304/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy9iNDExMDJhOS0yZDU1LTUyM2YtYTYxZS01NGFmYTc5ZDEyMGIuanBn",
     "fetchedAt": "2026-07-11T12:36:07.002Z"
   },
   {
@@ -386,7 +357,6 @@
       "mobile"
     ],
     "summary": "Live Activities run sandboxed with no network access — yet Uber needed real-time driver location on the lock screen. App Groups share on-disk state between the main app and Live Activity, a lightweight DSL syncs content logic across iOS Live Activities and Android push, and an OOA backend debounces…",
-    "thumbnail": "https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=2304/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy80YTRhZWQxNi04ZWI0LTVjOWUtYWQ3YS03Mzk2ZTQ5ZDBkZDAucG5n",
     "fetchedAt": "2026-07-11T12:36:07.002Z"
   }
 ]

@@ -88,7 +88,7 @@ function extractBalancedObject(text: string, startIdx: number): string | null {
  * `self.__next_f.push([1, "<json-string>"])`, and decoding + concatenating
  * those JSON-string arguments recovers literal Sanity CMS JSON, including one
  * `{"_type":"post", ...}` object per article (`slug`, `title`, `summary`,
- * `publishedOn`, `subjects` (tags), `cardPhoto` for the thumbnail). Verified:
+ * `publishedOn`, `subjects` (tags)). Verified:
  * this single response already embeds the *entire* news archive — 253 unique
  * posts (deduped by slug/URL below; the same post can appear more than once,
  * e.g. once in a "featured" section and again in a "related posts" list)
@@ -134,7 +134,6 @@ export function parseAnthropicArchivePage(html: string, pageUrl: string): Archiv
           "anthropic",
         ),
         summary: summarize(post.summary ?? ""),
-        thumbnail: post.cardPhoto?.url ?? null,
         fetchedAt,
       });
     } catch {

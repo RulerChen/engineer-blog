@@ -64,7 +64,6 @@ export function parseMetaArchivePage(html: string, _pageUrl: string): ArchivePag
         "meta",
       ),
       summary: summarize(post.find(".entry-content, .entry-summary, p").first().html() ?? ""),
-      thumbnail: post.find("img").first().attr("src") ?? null,
       fetchedAt,
     });
   });

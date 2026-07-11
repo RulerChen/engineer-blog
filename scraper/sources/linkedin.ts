@@ -62,7 +62,6 @@ export function parseLinkedinArchivePage(html: string, pageUrl: string): Archive
       publishedAt,
       tags: resolveTags(category ? [category] : [], "linkedin"),
       summary: summarize(""),
-      thumbnail: post.find("img.post__image").first().attr("data-delayed-url") ?? null,
       fetchedAt,
     });
   });

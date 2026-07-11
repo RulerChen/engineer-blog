@@ -9,7 +9,6 @@
       "devops"
     ],
     "summary": "Abstract Agent-driven end-to-end (E2E) tests add a new exploratory layer to testing, but should they replace traditional deterministic tests? We ran more than 200 agentic E2E workflows using the Playwright MCP, Playwright CLI, and agent-generated Playwright tests in test workspaces using…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T12:16:33.348Z"
   },
   {
@@ -26,7 +25,6 @@
       "ml"
     ],
     "summary": "In early 2023, Slack faced a foundational challenge: serving Large Language Models (LLMs) at enterprise scale with the security, reliability, and performance our customers expect. Over three years, we evolved from basic infrastructure to orchestrating a sophisticated multi-cloud architecture. We…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T12:16:33.348Z"
   },
   {
@@ -41,7 +39,6 @@
       "security"
     ],
     "summary": "Excerpt By 2024, Slack’s data platform had accumulated 700+ SSH-based operators orchestrating critical data pipelines. We’re talking daily search indexing that processed terabytes of data, analytics jobs powering business intelligence, the whole shebang. Every single one of these jobs required…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T12:16:33.348Z"
   },
   {
@@ -55,7 +52,6 @@
       "general"
     ],
     "summary": "Excerpt In complex, long-running agentic systems, maintaining alignment and coherent reasoning between agents requires careful design. In this second article of our series, we explore these challenges and the mechanisms we built to keep teams of agents working productively over long time spans. We…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T12:16:33.348Z"
   },
   {
@@ -71,7 +67,6 @@
       "open-source"
     ],
     "summary": "The Problem: Legacy Tooling and Its Limitations Currently, Slack utilizes a hybrid approach to network measurement, incorporating both internal (such as traffic between AWS Availability Zones) and external (monitoring traffic from the public internet into Slack’s infrastructure) solutions. These…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T12:16:33.348Z"
   },
   {
@@ -87,7 +82,6 @@
       "product"
     ],
     "summary": "Introduction 🔔 At Slack, notifications are how teams stay in the loop, but they can also become overwhelming when not designed with intention. Our goal was to make staying informed feel effortless. We set out to rebuild one of Slack’s most complicated systems from the ground up by bringing calm,…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T12:16:33.348Z"
   },
   {
@@ -101,7 +95,6 @@
       "general"
     ],
     "summary": "Slack’s Security Engineering team is responsible for protecting Slack’s core infrastructure and services. Our security event ingestion pipeline handles billions of events per day from a diverse array of data sources. Reviewing alerts produced by our security detection system is our primary…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T12:16:33.348Z"
   },
   {
@@ -115,7 +108,6 @@
       "frontend"
     ],
     "summary": "Background A Voluntary Product Accessibility Template (VPAT) is a document that outlines how well a product aligns with accessibility (a11y) standards. Its primary purpose is to inform customers about a product’s a11y features, enabling them to make informed decisions before purchasing software. At…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T12:16:33.348Z"
   },
   {
@@ -129,7 +121,6 @@
       "devops"
     ],
     "summary": "We manage the build pipeline that delivers Quip and Slack Canvas’s backend. A year ago, we were chasing exciting…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2025/10/DevXP-Council-Presentation6-e1759869480617.png?w=1020",
     "fetchedAt": "2026-07-11T12:16:34.971Z"
   },
   {
@@ -142,7 +133,6 @@
       "cloud"
     ],
     "summary": "Last year, I wrote a blog post titled Advancing Our Chef Infrastructure, where we explored the evolution of our…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2025/10/8_tlng54n8y.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:34.971Z"
   },
   {
@@ -158,7 +148,6 @@
       "observability"
     ],
     "summary": "It’s mid 2023 and we’ve identified some opportunities to improve our reliability. Fast forward to January 2025.…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2025/05/deploy-safety-smaller.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:16:34.971Z"
   },
   {
@@ -171,7 +160,6 @@
       "security"
     ],
     "summary": "As cyberattacks evolve to unprecedented levels of sophistication and speed, the time gap between breach…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2025/06/pexels-scottwebb-430208.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:34.971Z"
   },
   {
@@ -186,7 +174,6 @@
       "testing"
     ],
     "summary": "In the world of DevOps and Developer Experience (DevXP), speed and efficiency can make a big difference on an…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2025/04/image2.png?w=1020",
     "fetchedAt": "2026-07-11T12:16:34.971Z"
   },
   {
@@ -197,7 +184,6 @@
     "publishedAt": "2025-03-06T16:00:00.000Z",
     "tags": [],
     "summary": "Many don’t know that “Slack” is in fact a backronym—it stands for “Searchable Log of all Communication and…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2025/03/magnifying-glass-5232511_1280.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:34.971Z"
   },
   {
@@ -211,7 +197,6 @@
       "testing"
     ],
     "summary": "At Slack, customer love is our first priority and accessibility is a core tenet of customer trust. We have our…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2024/12/noah-naf-image.avif?w=800",
     "fetchedAt": "2026-07-11T12:16:34.971Z"
   },
   {
@@ -225,7 +210,6 @@
       "ml"
     ],
     "summary": "Overview The past few months have been exciting times for Slack’s CI infrastructure. After years of developer…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2024/12/Jenkins-GHA.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:34.971Z"
   },
   {
@@ -236,7 +220,6 @@
     "publishedAt": "2024-12-09T16:00:00.000Z",
     "tags": [],
     "summary": "“A complex system can fail in an infinite number of ways.” -“Systemantics” by John Gall Incidents are…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2024/12/pot-breaking.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:36.922Z"
   },
   {
@@ -247,7 +230,6 @@
     "publishedAt": "2024-12-08T16:00:00.000Z",
     "tags": [],
     "summary": "What are Slack Audit Logs? Like many Software as a Service (SaaS) offerings, Slack provides audit logs to…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2024/12/iStock-1382502446.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:36.922Z"
   },
   {
@@ -258,7 +240,6 @@
     "publishedAt": "2024-11-17T16:00:00.000Z",
     "tags": [],
     "summary": "Introduction Slack handles a lot of log data. In fact, we consume over 6 million log messages per second. That…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2024/11/clay-leconey-93MIqDdKQZ0-unsplash.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:36.922Z"
   },
   {
@@ -269,7 +250,6 @@
     "publishedAt": "2024-11-13T16:00:00.000Z",
     "tags": [],
     "summary": "Incident Management takes time Incidents need responders that are trained and experienced. At Slack, training…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2024/11/team-lunch.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:36.922Z"
   },
   {
@@ -282,7 +262,6 @@
       "ml"
     ],
     "summary": "Background and motivation In the fast-paced world of software development, having the right tools can make all…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2024/11/Screenshot-2024-11-07-at-4.09.53 PM.png?w=998",
     "fetchedAt": "2026-07-11T12:16:36.922Z"
   },
   {
@@ -297,7 +276,6 @@
       "networking"
     ],
     "summary": "We’ve been working to bring components of Quip’s technology into Slack with the canvas feature,…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2024/10/54040277712_ab333a09d9_b.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:36.922Z"
   },
   {
@@ -308,7 +286,6 @@
     "publishedAt": "2024-09-22T16:00:00.000Z",
     "tags": [],
     "summary": "After a lot of hard work, you’ve landed that coveted internship. Now comes the next big challenge:…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2024/09/caleb-whiting-bau67pJBPcA-unsplash.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:36.922Z"
   },
   {
@@ -322,7 +299,6 @@
       "infra"
     ],
     "summary": "At Slack, we manage tens of thousands of EC2 instances that host a variety of services, including our Vitess…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2024/09/myles-tan-IWCljYv1TJw-unsplash.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:36.922Z"
   },
   {
@@ -335,7 +311,6 @@
       "frontend"
     ],
     "summary": "“What are your goals for this quarter?” It’s the question every manager asks, and one that…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2024/08/featured_image.png?w=1020",
     "fetchedAt": "2026-07-11T12:16:38.849Z"
   },
   {
@@ -349,7 +324,6 @@
       "architecture"
     ],
     "summary": "All software is built atop a core set of assumptions. As new code is added and new use-cases emerge, software…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2024/07/featuredimage.png?w=1020",
     "fetchedAt": "2026-07-11T12:16:38.849Z"
   },
   {
@@ -364,7 +338,6 @@
       "databases"
     ],
     "summary": "Slack Data Engineering recently underwent data workload migration from AWS EMR 5 (Spark 2/Hive 2 processing…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2024/06/10.png?w=1020",
     "fetchedAt": "2026-07-11T12:16:38.849Z"
   },
   {
@@ -377,7 +350,6 @@
       "security"
     ],
     "summary": "At Slack, we’re committed to security that goes beyond the ordinary. We continuously strive to earn and…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2024/06/pexels-padrinan-2882630.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:38.849Z"
   },
   {
@@ -390,7 +362,6 @@
       "security"
     ],
     "summary": "Slack uses cookies to track session states for users on slack.com and the Slack Desktop app. The ever-present…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2024/06/david-sanchez-_MsN3by690Q-unsplash-1.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:38.849Z"
   },
   {
@@ -403,7 +374,6 @@
       "infra"
     ],
     "summary": "In a previous blog post—A Simple Kubernetes Admission Webhook—I discussed the process of creating a Kubernetes…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2024/05/openart-one-giant-octopus-with-miniature-shipping-containers-at-the-end-of-its-ten.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:38.849Z"
   },
   {
@@ -417,7 +387,6 @@
       "frontend"
     ],
     "summary": "Update (October 2024): In response to numerous requests from external developers, we have open-sourced a version…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2024/05/featured_image.png?w=1020",
     "fetchedAt": "2026-07-11T12:16:38.849Z"
   },
   {
@@ -430,7 +399,6 @@
       "data"
     ],
     "summary": "The Data Engineering team is responsible for Slack’s data lake, analytics dashboards, and other data services.…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2024/05/Screenshot-2024-05-07-at-3.12.41 PM-1.png?w=1020",
     "fetchedAt": "2026-07-11T12:16:38.849Z"
   },
   {
@@ -448,7 +416,6 @@
       "architecture"
     ],
     "summary": "At Slack, we’ve long been conservative technologists. In other words, when we invest in leveraging a new…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2024/04/AI_Marketing_Search_650x450_x2.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:40.755Z"
   },
   {
@@ -465,7 +432,6 @@
       "observability"
     ],
     "summary": "Most of Slack runs on a monolithic service simply called “The Webapp”. It’s big – hundreds of developers…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2024/01/Screenshot-2024-01-18-at-9.36.03 AM.png?w=812",
     "fetchedAt": "2026-07-11T12:16:40.755Z"
   },
   {
@@ -480,7 +446,6 @@
       "security"
     ],
     "summary": "We are heavy users of Amazon Compute Compute Cloud (EC2) at Slack — we run approximately 60,000 EC2 instances…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2023/12/maxim-zhgulev-5tmItJfHkIc-unsplash.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:40.755Z"
   },
   {
@@ -494,7 +459,6 @@
       "frontend"
     ],
     "summary": "Slack users have more power than ever to automate routine tasks and processes, saving themselves time each day.…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2023/11/WorkflowBuilderRL-Robot@2x.png?w=1000",
     "fetchedAt": "2026-07-11T12:16:40.755Z"
   },
   {
@@ -510,7 +474,6 @@
       "architecture"
     ],
     "summary": "Slack Connect, AKA shared channels, allows communication between different Slack workspaces, via channels shared…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2023/11/GettyImages-1409390032.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:40.755Z"
   },
   {
@@ -521,7 +484,6 @@
     "publishedAt": "2023-11-14T16:00:00.000Z",
     "tags": [],
     "summary": "On Thursday, 12 Oct. 2022, the EMEA part of the Datastores team — the team responsible for Slack’s database…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2023/11/image4.png?w=1020",
     "fetchedAt": "2026-07-11T12:16:40.755Z"
   },
   {
@@ -534,7 +496,6 @@
       "data"
     ],
     "summary": "Introduction Ever wondered what it’s like to intern as a software engineer at Slack? Picture yourself on…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2023/10/IMG_1255.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:40.755Z"
   },
   {
@@ -549,7 +510,6 @@
       "performance"
     ],
     "summary": "Cron scripts are responsible for critical Slack functionality. They ensure reminders execute on time, email…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2023/09/jon-tyson-FlHdnPO6dlw-unsplash.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:40.755Z"
   },
   {
@@ -563,7 +523,6 @@
       "open-source"
     ],
     "summary": "Embarking on a journey Stepping out of SFO with the familiarity of the fogginess of the city, my story at Slack…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2023/09/carl-newton-51i8H6H10dI-unsplash.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:42.739Z"
   },
   {
@@ -577,7 +536,6 @@
       "networking"
     ],
     "summary": "Slack handles billions of inbound network requests per day, all of which traverse through our edge…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2023/08/cover-image.png?w=1020",
     "fetchedAt": "2026-07-11T12:16:42.739Z"
   },
   {
@@ -591,7 +549,6 @@
       "networking"
     ],
     "summary": "Summary In recent years, cellular architectures have become increasingly popular for large online services as a…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2023/08/plant-cells.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:42.739Z"
   },
   {
@@ -604,7 +561,6 @@
       "observability"
     ],
     "summary": "Customer-first: Moving from Hero Engineering to Reliability Engineering From the beginning, Slack has always had…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2023/07/jeremy-thomas-FO7bKvgETgQ-unsplash.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:42.739Z"
   },
   {
@@ -619,7 +575,6 @@
       "architecture"
     ],
     "summary": "Did you know that ground stations transmit signals to satellites 22,236 miles above the equator in geostationary…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2023/03/ezgif-3-b10c99350f-1.jpg?w=800",
     "fetchedAt": "2026-07-11T12:16:42.739Z"
   },
   {
@@ -630,7 +585,6 @@
     "publishedAt": "2023-04-03T16:00:00.000Z",
     "tags": [],
     "summary": "Notifications are a key aspect of the Slack user experience. Users rely on timely notifications of mentions and…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2023/03/daria-nepriakhina-_XR5rkprHQU-unsplash-1.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:42.739Z"
   },
   {
@@ -645,7 +599,6 @@
       "infra"
     ],
     "summary": "This blog post discusses the strategies that Slack uses to manage the lifecycle (development, support, and…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2023/03/leaves-square.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:42.739Z"
   },
   {
@@ -656,7 +609,6 @@
     "publishedAt": "2023-02-07T16:00:00.000Z",
     "tags": [],
     "summary": "TL; DR: We’re announcing a new open source type checker for Hack, called Hakana. Slack launched in 2014, built…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2023/01/Slice2.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:42.739Z"
   },
   {
@@ -669,7 +621,6 @@
       "mobile"
     ],
     "summary": "After Duplo modularization, we noticed that the task producing a transitive R class was taking a significant…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2023/01/ben-white-gEKMstKfZ6w-unsplash.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:44.720Z"
   },
   {
@@ -684,7 +635,6 @@
       "infra"
     ],
     "summary": "Slack launched GovSlack in July 2022. With GovSlack, government agencies, and those they work with, can enable…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2023/01/us_gov.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:44.720Z"
   },
   {
@@ -699,7 +649,6 @@
       "infra"
     ],
     "summary": "At Slack, we use Terraform for managing our Infrastructure, which runs on AWS, DigitalOcean, NS1, and GCP. Even…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2022/10/tf_blog_cover-2.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:44.720Z"
   },
   {
@@ -710,7 +659,6 @@
     "publishedAt": "2022-10-11T16:00:00.000Z",
     "tags": [],
     "summary": "At Slack, the goal of the Mobile Developer Experience Team (DevXp) is to empower developers to ship code with…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2022/10/pexels-miguel-á-padriñán-3785927-1.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:44.720Z"
   },
   {
@@ -723,7 +671,6 @@
       "general"
     ],
     "summary": "Internships are a great opportunity for companies to invest in great talent and train future engineers. It is…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2022/09/Mentor.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:44.720Z"
   },
   {
@@ -734,7 +681,6 @@
     "publishedAt": "2022-09-28T16:00:00.000Z",
     "tags": [],
     "summary": "06:15 AM My two young kids come in waking me up, presenting me with iPads in the hopes of a quick game of…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2022/09/balmain_2-1.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:16:44.720Z"
   },
   {
@@ -747,7 +693,6 @@
       "mobile"
     ],
     "summary": "You grinded LeetCode, nailed the interview process, and got an internship at an amazing company. Congrats! But…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2022/09/lachlan-donald-eaTHXNIUsYM-unsplash.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:44.720Z"
   },
   {
@@ -760,7 +705,6 @@
       "data"
     ],
     "summary": "An internship at Slack is an exciting opportunity to learn new skills, meet other engineers, and build cool…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2022/08/IMG_0046.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:44.720Z"
   },
   {
@@ -774,7 +718,6 @@
       "ml"
     ],
     "summary": "Slack, as a product, presents many opportunities for recommendation, where we can make suggestions to simplify…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2022/08/vecteezy_high-recommended-zone-in-supermarket-shoping-in-supermarket_7476118_842.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:16:46.691Z"
   },
   {
@@ -788,7 +731,6 @@
       "general"
     ],
     "summary": "Our build platform is an essential piece of delivering code to production efficiently and safely at Slack. Over…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2022/07/business-concept-with-wood-blocks.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:46.691Z"
   },
   {
@@ -802,7 +744,6 @@
       "infra"
     ],
     "summary": "What happens when your distributed service has challenges with stampeding herds of internal requests? How do you…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2022/08/florian-wehde-vZSOzoC59RU-unsplash.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:46.691Z"
   },
   {
@@ -816,7 +757,6 @@
       "open-source"
     ],
     "summary": "Every codebase starts off small and modern. While it’s still small, the team can easily keep it up-to-date with…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2022/07/alex-knight-2EJCSULRwC8-unsplash.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:46.691Z"
   },
   {
@@ -829,7 +769,6 @@
       "general"
     ],
     "summary": "In this article, “remote development environments” refer to AWS EC2 instances where engineers make code changes…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2022/06/Screen-Shot-2022-05-23-at-2.13.44-PM.png?w=975",
     "fetchedAt": "2026-07-11T12:16:46.691Z"
   },
   {
@@ -842,7 +781,6 @@
       "performance"
     ],
     "summary": "Last September, Slack released Clips, allowing users to capture video, audio, and screen recordings in messages…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2022/06/Artboard-1.png?w=1020",
     "fetchedAt": "2026-07-11T12:16:46.691Z"
   },
   {
@@ -855,7 +793,6 @@
       "mobile"
     ],
     "summary": "In the first two posts about the Duplo initiative, we described why we decided to revamp our mobile codebases,…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2022/04/marco-de-luca-eNse9PG9dSE-unsplash.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:46.691Z"
   },
   {
@@ -869,7 +806,6 @@
       "performance"
     ],
     "summary": "Building load test infrastructure is tricky and poses many questions. How can we identify performance…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2022/04/Screen-Shot-2022-04-26-at-4.03.29-PM.png?w=1020",
     "fetchedAt": "2026-07-11T12:16:46.691Z"
   },
   {
@@ -882,7 +818,6 @@
       "data"
     ],
     "summary": "By Laura Nolan, with contributions from Glen D. Sanford, Jamie Scheinblum, and Chris Sullivan. Assessing…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2022/04/black-swan-gd3523927a_1920.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:48.647Z"
   },
   {
@@ -896,7 +831,6 @@
       "testing"
     ],
     "summary": "At Slack, the goal of the Mobile Developer Experience Team (DevXp) is to empower developers to ship code with…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2022/04/Cornflake_copy-removebg.png?w=1020",
     "fetchedAt": "2026-07-11T12:16:48.647Z"
   },
   {
@@ -909,7 +843,6 @@
       "mobile"
     ],
     "summary": "In the first post about the Duplo initiative, we discussed the reasons for launching a project to revamp Slack’s…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2022/03/yulissa-tagle-vpM1Yd3JUF0-unsplash.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:48.647Z"
   },
   {
@@ -924,7 +857,6 @@
       "product"
     ],
     "summary": "According to a recent Thoughtworks radar, “the industry is increasingly gaining experience with platform…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2022/03/slack-mug.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:48.647Z"
   },
   {
@@ -939,7 +871,6 @@
       "testing"
     ],
     "summary": "In 2021, we changed developer testing workflows for Webapp, Slack’s main monorepo, from predominantly testing…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2022/02/photo-1525130413817-d45c1d127c42.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:16:48.647Z"
   },
   {
@@ -950,7 +881,6 @@
     "publishedAt": "2022-02-10T16:00:00.000Z",
     "tags": [],
     "summary": "In this article, I will talk about how Slack uses Kafka, and how a small-but-mighty team built and…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2022/02/sebastien-gabriel-TG-Ea4dvDm0-unsplash.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:48.647Z"
   },
   {
@@ -963,7 +893,6 @@
       "mobile"
     ],
     "summary": "When do you need to overhaul a large code base to address tech debt? What is the best way to address widespread…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2022/01/sen-rgP93cPsVEc-unsplash-2.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:48.647Z"
   },
   {
@@ -976,7 +905,6 @@
       "infra"
     ],
     "summary": "While adding a recent feature to our Kubernetes compute platform, we had the need to mutate newly-created pods…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2021/12/st-kilda-containers-1920-1290.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:16:48.647Z"
   },
   {
@@ -987,7 +915,6 @@
     "publishedAt": "2021-12-01T16:00:00.000Z",
     "tags": [],
     "summary": "Over 70% of the files uploaded on Slack are images, and over 75% of those images are screenshots. What this…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2021/12/marvin-meyer-SYTO3xs06fU-unsplash.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:50.578Z"
   },
   {
@@ -998,7 +925,6 @@
     "publishedAt": "2021-11-28T16:00:00.000Z",
     "tags": [],
     "summary": "On September 30th 2021, Slack had an outage that impacted less than 1% of our online user base, and lasted for…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2021/11/torsten-dederichs-KrQJzrZiCak-unsplash.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:50.578Z"
   },
   {
@@ -1012,7 +938,6 @@
       "open-source"
     ],
     "summary": "We use plenty of open source tools at Slack and we’ve benefited immensely from the wider Android, Kotlin,…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2021/11/elaine-casap-qgHGDbbSNm8-unsplash.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:50.578Z"
   },
   {
@@ -1023,7 +948,6 @@
     "publishedAt": "2021-11-03T16:00:00.000Z",
     "tags": [],
     "summary": "At Slack, proactively securing our systems is a top priority. One way we achieve this is by automating the…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2021/11/bernard-hermant-m2xsYNcu2jw-unsplash.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:50.578Z"
   },
   {
@@ -1039,7 +963,6 @@
       "networking"
     ],
     "summary": "About a year ago, I wrote a blog post called Building the Next Evolution of Cloud Networks at Slack. In it, we…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2021/10/Retrospective.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:16:50.578Z"
   },
   {
@@ -1053,7 +976,6 @@
       "observability"
     ],
     "summary": "Slack is an integral part of where work happens for teams across the world, and our work in the Core Development…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2021/10/image7.png?w=1020",
     "fetchedAt": "2026-07-11T12:16:50.578Z"
   },
   {
@@ -1064,7 +986,6 @@
     "publishedAt": "2021-09-06T16:00:00.000Z",
     "tags": [],
     "summary": "On July 21st, 2021, Slack officially became a part of Salesforce at the price tag of $27.7 billion. This was…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2021/08/unnamed-1.png?w=1020",
     "fetchedAt": "2026-07-11T12:16:50.578Z"
   },
   {
@@ -1078,7 +999,6 @@
       "product"
     ],
     "summary": "Agile development methods can bolster company culture and empower teams to move quickly, with a focus on…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2021/08/qinghill-x8MZ2MoEKLE-unsplash-1.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:50.578Z"
   },
   {
@@ -1089,7 +1009,6 @@
     "publishedAt": "2021-08-24T16:00:00.000Z",
     "tags": [],
     "summary": "We recently rolled out support for Conversation Bubbles for DMs and Group DMs on Android 11. In case you’re not…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2021/08/hero.png?w=1020",
     "fetchedAt": "2026-07-11T12:16:52.592Z"
   },
   {
@@ -1102,7 +1021,6 @@
       "data"
     ],
     "summary": "Reinventing how the world does work inevitably creates a lot of data. Each year, Slack’s scale has increased and…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2021/08/background.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:16:52.592Z"
   },
   {
@@ -1113,7 +1031,6 @@
     "publishedAt": "2021-08-10T16:00:00.000Z",
     "tags": [],
     "summary": "More than five years ago, we launched the Slack Platform, giving developers an easy way to build apps in Slack…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2021/08/bogdan-karlenko-36b7JBzhfF4-unsplash.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:52.592Z"
   },
   {
@@ -1127,7 +1044,6 @@
       "infra"
     ],
     "summary": "With the release of Slack Connect, people can now collaborate both with internal employees and external…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2021/07/reza-rostampisheh-mE4Q1WHerkc-unsplash-cropped.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:52.592Z"
   },
   {
@@ -1140,7 +1056,6 @@
       "mobile"
     ],
     "summary": "Note: This article assumes some familiarity with Dagger, Anvil, and Kotlin. We use Dagger heavily in the Slack…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2021/07/hannah-gibbs-BINLgyrG_fI-unsplash.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:52.592Z"
   },
   {
@@ -1153,7 +1068,6 @@
       "frontend"
     ],
     "summary": "At Slack, we believe that designing an optimal keyboard experience is key to delivering a best-in-class product…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2021/07/accessibility-keyboard-cover@2x.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:52.592Z"
   },
   {
@@ -1164,7 +1078,6 @@
     "publishedAt": "2021-06-02T16:00:00.000Z",
     "tags": [],
     "summary": "Artwork courtesy of the Jenkins project. At Slack we manage a sophisticated Jenkins infrastructure to…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2021/05/jenkins-fire.png?w=1020",
     "fetchedAt": "2026-07-11T12:16:52.592Z"
   },
   {
@@ -1175,7 +1088,6 @@
     "publishedAt": "2021-05-23T16:00:00.000Z",
     "tags": [],
     "summary": "Controlling which users are able to take which actions is no simple task. Building this into Slack has always…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2021/05/d.png?w=1020",
     "fetchedAt": "2026-07-11T12:16:52.592Z"
   },
   {
@@ -1186,7 +1098,6 @@
     "publishedAt": "2021-04-22T16:00:00.000Z",
     "tags": [],
     "summary": "Complex systems are difficult to reason about at scale; we often can’t accurately extrapolate system behavior…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2021/04/Screen-Shot-2021-04-23-at-9.41.30-AM.png?w=1020",
     "fetchedAt": "2026-07-11T12:16:54.518Z"
   },
   {
@@ -1197,7 +1108,6 @@
     "publishedAt": "2021-03-23T16:00:00.000Z",
     "tags": [],
     "summary": "A customer writes in and says the dreaded words: “My app is slow”. Here we go… Performance problems can be a…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2021/03/cover_photo_3_giraffes.png?w=1020",
     "fetchedAt": "2026-07-11T12:16:54.518Z"
   },
   {
@@ -1210,7 +1120,6 @@
       "infra"
     ],
     "summary": "Slack has a global customer base, with millions of simultaneously connected users at peak times. Most of the…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2021/03/sockets-by-region1-2.png?w=855",
     "fetchedAt": "2026-07-11T12:16:54.518Z"
   },
   {
@@ -1224,7 +1133,6 @@
       "open-source"
     ],
     "summary": "We take developer productivity pretty seriously at Slack. It’s multi-faceted, spreading across build speed,…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2021/02/tom-barrett-hvvRg72aXCw-unsplash.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:54.518Z"
   },
   {
@@ -1237,7 +1145,6 @@
       "infra"
     ],
     "summary": "And now we welcome the new year. Full of things that have never been. — Rainer Maria Rilke January 4th…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2021/01/loading-bar-5514303_1920-1.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:54.518Z"
   },
   {
@@ -1248,7 +1155,6 @@
     "publishedAt": "2021-01-19T16:00:00.000Z",
     "tags": [],
     "summary": "Since its inception, Slack has fostered a culture of inclusion and diversity. The Security organization at Slack…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2021/01/Screen-Shot-2020-12-11-at-9.43.10-AM.png?w=1020",
     "fetchedAt": "2026-07-11T12:16:54.518Z"
   },
   {
@@ -1259,7 +1165,6 @@
     "publishedAt": "2021-01-12T16:00:00.000Z",
     "tags": [],
     "summary": "5:25 am First alarm rings. *Snooze.* 6:30 am The final alarm rings and I know this is the last one, so I get up…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2021/01/Pratapgad_morning.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:54.518Z"
   },
   {
@@ -1274,7 +1179,6 @@
       "architecture"
     ],
     "summary": "In the first installment of the article, we examined why we built a React analytics library. We also looked at…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/12/1_1pDqkj6W_98A7NKxpCaGsg.png?w=1020",
     "fetchedAt": "2026-07-11T12:16:54.518Z"
   },
   {
@@ -1288,7 +1192,6 @@
       "infra"
     ],
     "summary": "From the very beginning of Slack, MySQL was used as the storage engine for all our data. Slack operated MySQL…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/12/chuttersnap-q3o7xqYQtes-unsplash.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:56.575Z"
   },
   {
@@ -1299,7 +1202,6 @@
     "publishedAt": "2020-11-18T16:00:00.000Z",
     "tags": [],
     "summary": "Last year, we migrated Airflow from 1.8 to 1.10 at Slack (see here) and we did a “Big bang” upgrade because of…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/11/lukasz-szmigiel-jgFBXnK4F_g-unsplash-2.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:56.575Z"
   },
   {
@@ -1314,7 +1216,6 @@
       "architecture"
     ],
     "summary": "Like many applications, the Slack desktop app logs how users interact with it. For example, it may log when a…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_1pDqkj6W_98A7NKxpCaGsg.png?w=1020",
     "fetchedAt": "2026-07-11T12:16:56.575Z"
   },
   {
@@ -1327,7 +1228,6 @@
       "general"
     ],
     "summary": "Slack brings the right people, information, and tools together to get work done. Normally, team members can…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/10/modestas-urbonas-vj_9l20fzj0-unsplash.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:56.575Z"
   },
   {
@@ -1343,7 +1243,6 @@
       "networking"
     ],
     "summary": "At Slack, we’ve gone through an evolution of our AWS infrastructure from the early days of running a few…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/09/building_the_next_evolution_of_cloud-_networks_at_slack_cover_1.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:56.575Z"
   },
   {
@@ -1358,7 +1257,6 @@
       "security"
     ],
     "summary": "A form on a website may seem like a pretty trifling thing. A couple of text fields, a submit button, and you’re…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/09/contact-sales-header@2x.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:56.575Z"
   },
   {
@@ -1373,7 +1271,6 @@
       "frontend"
     ],
     "summary": "Early in my career at Slack I was looking for ways to have an impact. I asked my manager what I could work on…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/08/DSCF1247-1.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:56.575Z"
   },
   {
@@ -1384,7 +1281,6 @@
     "publishedAt": "2020-08-27T16:00:00.000Z",
     "tags": [],
     "summary": "“Why is it slow?” is the hardest problem to debug in a complex distributed system like Slack. To diagnose…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/08/alex-iby-Nb-KiMNgJTc-unsplash.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:56.575Z"
   },
   {
@@ -1395,7 +1291,6 @@
     "publishedAt": "2020-08-17T16:00:00.000Z",
     "tags": [],
     "summary": "The start of any internship brings a wide range of emotions, from excitement to nervousness. After months of…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/08/SecurityTeamInternship2020.png?w=1020",
     "fetchedAt": "2026-07-11T12:16:58.590Z"
   },
   {
@@ -1408,7 +1303,6 @@
       "ml"
     ],
     "summary": "A fact of life for building an internet service is that, sooner or later, bad actors are going to come along and…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/07/franck-v-oIMXkEuiXpc-unsplash.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:16:58.590Z"
   },
   {
@@ -1419,7 +1313,6 @@
     "publishedAt": "2020-06-28T16:00:00.000Z",
     "tags": [],
     "summary": "This story speaks to the process behind incident response at Slack and uses the May 12th, 2020 outage as an…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/07/1_dQGibYIh0KoedyBtlDnYwQ.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:16:58.590Z"
   },
   {
@@ -1430,7 +1323,6 @@
     "publishedAt": "2020-06-28T16:00:00.000Z",
     "tags": [],
     "summary": "This story describes the technical details of the problems that caused the Slack downtime on May 12th, 2020. To…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/07/1_IpaWqnHCZNFfaOrTJOUSbQ.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:16:58.590Z"
   },
   {
@@ -1443,7 +1335,6 @@
       "security"
     ],
     "summary": "Batten down the hatches! The app sandbox is now enabled for all web content. This is a fancy way of saying we’ve…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/07/0_g_Prp6ZEuAhTa9P9.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:16:58.590Z"
   },
   {
@@ -1454,7 +1345,6 @@
     "publishedAt": "2020-06-10T16:00:00.000Z",
     "tags": [],
     "summary": "At Slack, Quality is a shared responsibility. The Quality Engineering team is focused on creating a culture of…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/07/0_opq5zZ-pUmSMYLlo.jpeg?w=1000",
     "fetchedAt": "2026-07-11T12:16:58.590Z"
   },
   {
@@ -1465,7 +1355,6 @@
     "publishedAt": "2020-05-18T16:00:00.000Z",
     "tags": [],
     "summary": "Over the years at Slack — usually during periods of high growth — teams have defaulted to working in a waterfall…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_67Tj-K4CRsyAsCrnUMS7kw.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:16:58.590Z"
   },
   {
@@ -1478,7 +1367,6 @@
       "frontend"
     ],
     "summary": "6:28 am First alarm rings. Snooze. 6:30 am Second alarm rings. Snooze. 6:34 am Final alarm rings and I know this…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_hHyJEizqexlj_kYFtVeHIQ.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:16:58.590Z"
   },
   {
@@ -1491,7 +1379,6 @@
       "mobile"
     ],
     "summary": "Starting From the Top Imagine joining a new team at a new company and you finally get access to a codebase.…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_bipan_epV7HjhXzICdoISw.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:00.474Z"
   },
   {
@@ -1504,7 +1391,6 @@
       "infra"
     ],
     "summary": "In this article, development environments refer to sandboxes where you can test your code changes before…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/04/0_3uDpfP-oNoLbBOqw.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:00.474Z"
   },
   {
@@ -1515,7 +1401,6 @@
     "publishedAt": "2020-04-20T16:00:00.000Z",
     "tags": [],
     "summary": "6:45 am My alarm is set for 6:45 but I often wake up before it goes off. I tend to wake up earlier during…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/04/1_c1HU1M3OxkZhPSmNufKvMg.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:00.474Z"
   },
   {
@@ -1526,7 +1411,6 @@
     "publishedAt": "2020-04-13T16:00:00.000Z",
     "tags": [],
     "summary": "Slack launched in 2014 with a PHP 5 backend. Along with several other companies, we switched to HHVM in 2016…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/04/1_j80dms3VT7UVXQ-T9amdpw.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:00.474Z"
   },
   {
@@ -1540,7 +1424,6 @@
       "product"
     ],
     "summary": "7am I’m definitely not a morning person, so when my alarm goes off, I can’t help but stay in bed a little while…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/04/0_Fw1rbDmCCL1HwES9.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:00.474Z"
   },
   {
@@ -1554,7 +1437,6 @@
       "infra"
     ],
     "summary": "Deploys require a careful balance of speed and reliability. At Slack, we value quick iteration, fast feedback…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/04/1_7L9veNnguQxeWZNDWmk2Hw.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:00.474Z"
   },
   {
@@ -1565,7 +1447,6 @@
     "publishedAt": "2020-02-12T16:00:00.000Z",
     "tags": [],
     "summary": "Most new things in technology turn out to be fads: patterns of talking and doing that come and go without…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/04/1_XEnEE7B_IYvKobT0vmaG7A.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:00.474Z"
   },
   {
@@ -1578,7 +1459,6 @@
       "frontend"
     ],
     "summary": "6:45am The sound of coffee grinding wakes me up 15 minutes before my alarm. I’m not a morning person, but I…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/04/1_xaEn7NPR32qSMa__TasoFA.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:00.474Z"
   },
   {
@@ -1591,7 +1471,6 @@
       "data"
     ],
     "summary": "Apache Airflow is a tool for describing, executing, and monitoring workflows. At Slack, we use Airflow to…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/04/0_xvDEF8FCPk8uQ0vv.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:02.723Z"
   },
   {
@@ -1606,7 +1485,6 @@
       "networking"
     ],
     "summary": "“What is the easiest way to securely connect tens of thousands of computers, hosted at multiple cloud service…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/04/1_SjZE-XX5wQSjG0JtmjuthA.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:02.723Z"
   },
   {
@@ -1617,7 +1495,6 @@
     "publishedAt": "2019-11-13T16:00:00.000Z",
     "tags": [],
     "summary": "6:00 am While it’s not always easy to get up before seven, particularly when the sun hasn’t risen yet, being…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_ruw10_A1FOxBrEOlKWF5kA.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:02.723Z"
   },
   {
@@ -1631,7 +1508,6 @@
       "performance"
     ],
     "summary": "At any given time, Slack has many product teams working on different features. This allows us to build in…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_jfFiJr4OxVaU882JZBp1Hg.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:02.723Z"
   },
   {
@@ -1644,7 +1520,6 @@
       "mobile"
     ],
     "summary": "Two years ago, I wrote a post about Libslack, Slack’s shared C++ client library. That post described how Slack…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_Ou2jo5RM6BoXRT3_Y7ftTg.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:02.723Z"
   },
   {
@@ -1657,7 +1532,6 @@
       "frontend"
     ],
     "summary": "If you’re a dark mode user you might have seen the news: two weeks ago we flipped the switch and gave users dark…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_LjRHaoTgo9NrwURO66PIVw.png?w=1020",
     "fetchedAt": "2026-07-11T12:17:02.723Z"
   },
   {
@@ -1672,7 +1546,6 @@
       "architecture"
     ],
     "summary": "Written with contributions from the Shared Channels Team. Slack was originally built to be the collaboration hub…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_rzCFdUvEX6D4z6cibPopDQ.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:02.723Z"
   },
   {
@@ -1685,7 +1558,6 @@
       "frontend"
     ],
     "summary": "This post was co-written with Zack Sultan, Lead Product Designer at Slack In 2016, Slack was two years old and…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_2pwlDPbiCI6rzRGB6iJQHg.png?w=1020",
     "fetchedAt": "2026-07-11T12:17:02.723Z"
   },
   {
@@ -1698,7 +1570,6 @@
       "security"
     ],
     "summary": "The Slack Internship — Matt’s First Time at Slack I’m Matt and I’m a senior Computer Science student at North…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/0_8EMpLB4ut2Op9dSC.png?w=1020",
     "fetchedAt": "2026-07-11T12:17:04.606Z"
   },
   {
@@ -1711,7 +1582,6 @@
       "performance"
     ],
     "summary": "We recently rolled out a new version of Slack on the desktop, and one of its headlining features is a faster…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_kOguV71qyHa7Xr1FH5-xA.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:04.606Z"
   },
   {
@@ -1724,7 +1594,6 @@
       "mobile"
     ],
     "summary": "When the App Store first arrived, designing an iOS app was a straightforward process; you only had to worry…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_ZsIycIWQi00CJpVoTkJ3UQ.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:04.606Z"
   },
   {
@@ -1737,7 +1606,6 @@
       "devops"
     ],
     "summary": "Slack is a large and complex piece of software that’s been added to and changed many times over the last five…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/04/1_4H9Q9HasZ1IoJz5rxhbUfA-scaled-1.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:04.606Z"
   },
   {
@@ -1750,7 +1618,6 @@
       "frontend"
     ],
     "summary": "Conventional wisdom holds that you should never rewrite your code from scratch, and that’s good advice. Time…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/04/0_cgkWRCMtQXti3jbA-scaled-1.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:04.606Z"
   },
   {
@@ -1764,7 +1631,6 @@
       "performance"
     ],
     "summary": "Over 10 million users across the globe rely on Slack everyday to collaborate with their colleagues. As our user…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_GafRQLY4KsSdzq2H0EIYuQ.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:04.606Z"
   },
   {
@@ -1777,7 +1643,6 @@
       "performance"
     ],
     "summary": "You might have used Chrome’s Developer Tools to profile your JavaScript to improve performance or find…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T12:17:04.606Z"
   },
   {
@@ -1790,7 +1655,6 @@
       "open-source"
     ],
     "summary": "Have you ever been given a relatively inactive project and asked to fix a bug? What about having to update code…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/04/1_49Jnazl5kM_YpVyOcNmfsA-scaled-1.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:04.606Z"
   },
   {
@@ -1804,7 +1668,6 @@
       "security"
     ],
     "summary": "What is a pentest or a red team? Before we go any further, we should define our terms, though you may find…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_oMO7bK5yI2nkvUICS9xrRg.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:06.565Z"
   },
   {
@@ -1817,7 +1680,6 @@
       "career"
     ],
     "summary": "For anyone who’s ever been involved in the hiring process, it’s no easy feat — particularly in a growing…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_NaUmBti42n0FMMffyjTtBg.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:06.565Z"
   },
   {
@@ -1830,7 +1692,6 @@
       "experimentation"
     ],
     "summary": "The mission of the Slack Growth team is to ensure that every company can successfully adopt and scale Slack. We…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_SnsMRZGuTSIZO6OASwp8kA.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:06.565Z"
   },
   {
@@ -1843,7 +1704,6 @@
       "security"
     ],
     "summary": "Over the years, customers have asked us for stricter control over and visibility into their data in Slack, all…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/img-hero-ekm@2x.jpg?w=1000",
     "fetchedAt": "2026-07-11T12:17:06.565Z"
   },
   {
@@ -1854,7 +1714,6 @@
     "publishedAt": "2019-03-13T16:00:00.000Z",
     "tags": [],
     "summary": "Developer Relations (DevRel) is an interdisciplinary role that sits in a border space between product,…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_EbE4qvknu4gRTLjaUqJhxQ.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:06.565Z"
   },
   {
@@ -1867,7 +1726,6 @@
       "frontend"
     ],
     "summary": "Hi everyone! My name is Trish, a.k.a. @feesh on the internet, and my pronouns are she/her. Presently, I’m a…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_Gc-eliSqRQytbucC_0aX-w.png?w=1020",
     "fetchedAt": "2026-07-11T12:17:06.565Z"
   },
   {
@@ -1880,7 +1738,6 @@
       "mobile"
     ],
     "summary": "Slack believes in making our users’ working lives simpler, more pleasant, and more productive. This is true…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_fTnZl5ZicW4g-zXdGzPOMw.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:06.565Z"
   },
   {
@@ -1891,7 +1748,6 @@
     "publishedAt": "2018-08-08T16:00:00.000Z",
     "tags": [],
     "summary": "Scaling is hard. Design decisions that initially seemed reasonable break down with little warning, and suddenly…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_QREnO9tDvA4SqelyV1R_Qg.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:06.565Z"
   },
   {
@@ -1905,7 +1761,6 @@
       "performance"
     ],
     "summary": "With the fast pace of life today, people expect information to be available to them at the speed of light,…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_zxqXoiRyIEeXhWSU5zFnnQ.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:08.456Z"
   },
   {
@@ -1916,7 +1771,6 @@
     "publishedAt": "2018-07-24T16:00:00.000Z",
     "tags": [],
     "summary": "Digging through a large codebase to locate a bug can feel incredibly overwhelming, especially for a junior…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/04/0_FeVNoYxcy1cGntp1.jpeg?w=1000",
     "fetchedAt": "2026-07-11T12:17:08.456Z"
   },
   {
@@ -1929,7 +1783,6 @@
       "mobile"
     ],
     "summary": "Ever needed to squint to see some text? How about feeling unsure where a button is because it’s…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/04/1_9q9p_pdkvGXR-PO2n4_RYA.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:08.456Z"
   },
   {
@@ -1943,7 +1796,6 @@
       "security"
     ],
     "summary": "For development teams, process can often be antithetical to speed. Ease of deployment and security tend to have…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_I7foPGuLhqRN3U9v_WHf_A.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:08.456Z"
   },
   {
@@ -1956,7 +1808,6 @@
       "architecture"
     ],
     "summary": "While it’s no secret that the cross-platform Slack Desktop app is built on Electron, it might be slightly less…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/04/1_9vePJLifakl8FuEr1_rXpg-scaled-1.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:08.456Z"
   },
   {
@@ -1969,7 +1820,6 @@
       "backend"
     ],
     "summary": "You know how to design a good API, but how do you evolve that API when it’s time to make changes? We’ve faced…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/0_kHI_n5HvxLP-sEo5.png?w=1020",
     "fetchedAt": "2026-07-11T12:17:08.456Z"
   },
   {
@@ -1983,7 +1833,6 @@
       "frontend"
     ],
     "summary": "webpack is a brilliant tool for bundling frontend assets. When things start to slow down, though, its…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_n7SFvwKvpLsW0ZcEDbgBtg.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:08.456Z"
   },
   {
@@ -1998,7 +1847,6 @@
       "testing"
     ],
     "summary": "In Part 1 we introduced the targeted and hermetic UI test approach that helped Slack Android engineers write…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_KzLoOI9IQRCwnI6sA-NGCw.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:08.456Z"
   },
   {
@@ -2013,7 +1861,6 @@
       "testing"
     ],
     "summary": "Developer-driven automated testing is vital to the ongoing health and quality of a codebase. It does, however,…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/04/1_-31yNWgt4_GmxDruKg5Nhw.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:10.471Z"
   },
   {
@@ -2026,7 +1873,6 @@
       "cloud"
     ],
     "summary": "Slack uses a job queue system for business logic that is too time-consuming to run in the context of a web…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_o2fT1qDAtgRiaQKH2_VQlw.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:10.471Z"
   },
   {
@@ -2039,7 +1885,6 @@
       "frontend"
     ],
     "summary": "Recently Slack on the desktop has been going through an awkward adolescence. Instead of flailing limbs and pitch…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_XUVMBPik989EGn3Lkj3W2Q.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:10.471Z"
   },
   {
@@ -2053,7 +1898,6 @@
       "performance"
     ],
     "summary": "In August, we released a major redesign of slack.com, and we want to give you a peek behind-the-scenes.…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_N48fpqutpCqswRistXpymw.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:10.471Z"
   },
   {
@@ -2066,7 +1910,6 @@
       "mobile"
     ],
     "summary": "Slack ships its client application on many different platforms — we currently support Mac, Windows, Linux, iOS,…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_Gp8TZGxZNh3eJtruOpTPiQ.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:10.471Z"
   },
   {
@@ -2077,7 +1920,6 @@
     "publishedAt": "2017-09-11T16:00:00.000Z",
     "tags": [],
     "summary": "Localization is so easy! …said no one ever. This week, we launched French, German, and Spanish localization in…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_yIX75HocfepUS8GzG-Gbpg.png?w=1020",
     "fetchedAt": "2026-07-11T12:17:10.471Z"
   },
   {
@@ -2091,7 +1933,6 @@
       "databases"
     ],
     "summary": "At Slack, the size and scope of the data we expose via our APIs has changed dramatically since the product first…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_kfiQI6i9X-iXuqSe6qfjkw.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:10.471Z"
   },
   {
@@ -2102,7 +1943,6 @@
     "publishedAt": "2017-07-30T16:00:00.000Z",
     "tags": [],
     "summary": "Slack Enterprise Grid lifted off in January 2017, allowing Slack to power the work behind even the largest and…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_HlcWIl6uWvUUwtfi7cXi0Q.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:10.471Z"
   },
   {
@@ -2113,7 +1953,6 @@
     "publishedAt": "2017-07-19T16:00:00.000Z",
     "tags": [],
     "summary": "The Individual Contributor path begins with Leading Self Before I became a software engineer, I thought that the…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2017/07/brooke-lark-nMffL1zjbw4-unsplash.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:17:12.680Z"
   },
   {
@@ -2127,7 +1966,6 @@
       "ml"
     ],
     "summary": "Since launching in 2013, Slack has helped millions of users across hundreds of thousands of teams communicate…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T12:17:12.680Z"
   },
   {
@@ -2140,7 +1978,6 @@
       "mobile"
     ],
     "summary": "At Slack we use push notifications to let you know when someone sends you a direct message, or posts in a…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/04/0_Zb3slxZjY91rMBHq.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:12.680Z"
   },
   {
@@ -2154,7 +1991,6 @@
       "architecture"
     ],
     "summary": "Professor Robin Dunbar, when studying Neolithic farming villages and primate troupes in the 90s, theorized that…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/04/1_9GNzO0TCru9lJ6wWXvI2Rg.jpeg?w=1011",
     "fetchedAt": "2026-07-11T12:17:12.680Z"
   },
   {
@@ -2167,7 +2003,6 @@
       "frontend"
     ],
     "summary": "Slack is transitioning its web client to React. When Slack was first built, our frontend consisted of…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_1pDqkj6W_98A7NKxpCaGsg.png?w=1020",
     "fetchedAt": "2026-07-11T12:17:12.680Z"
   },
   {
@@ -2180,7 +2015,6 @@
       "open-source"
     ],
     "summary": "When Brendan Eich created the very first version of JavaScript for Netscape Navigator 2.0 in merely ten days,…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/04/1_-h1bH8gB3I7gPh5AG1HmsQ.png?w=1020",
     "fetchedAt": "2026-07-11T12:17:12.680Z"
   },
   {
@@ -2193,7 +2027,6 @@
       "security"
     ],
     "summary": "We’ve reached a few big milestones for the Slack Bug Bounty program: it’s our three-year anniversary, and we’ve…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_Z1QiAukH6kOHOFGtfocmPw.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:12.680Z"
   },
   {
@@ -2204,7 +2037,6 @@
     "publishedAt": "2017-03-08T16:00:00.000Z",
     "tags": [],
     "summary": "The Perks of being a Junior Engineer at Slack I joined Slack in late October 2015 as an Associate Application…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_vZ8farhAztJj6bHcwsx59A.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:12.680Z"
   },
   {
@@ -2217,7 +2049,6 @@
       "performance"
     ],
     "summary": "Our desktop app is the most widely used and most capable Slack client that we offer. For many of our customers,…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_vM0VJfoIwi7_gSILWFinuw.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:14.743Z"
   },
   {
@@ -2228,7 +2059,6 @@
     "publishedAt": "2017-02-06T16:00:00.000Z",
     "tags": [],
     "summary": "On average, 20% of a knowledge worker’s day is spent looking for the information they need to get their work…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_ky2qVfXI8GR-AyUnySWrkA.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:14.743Z"
   },
   {
@@ -2241,7 +2071,6 @@
       "performance"
     ],
     "summary": "This is a continuation of Part 1, covering some highlights and lessons learned from a refactor of the way the…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_bN4eAdr5v77wGk-HuAbZmA.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:14.743Z"
   },
   {
@@ -2252,7 +2081,6 @@
     "publishedAt": "2017-01-17T16:00:00.000Z",
     "tags": [],
     "summary": "This is a guest post from the Product team working on the newly released Threads feature. If you use Slack to…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_g5I-BUyxRbtgsDOlm1NrOA.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:14.743Z"
   },
   {
@@ -2263,7 +2091,6 @@
     "publishedAt": "2017-01-16T16:00:00.000Z",
     "tags": [],
     "summary": "The Slack Desktop Client is powered by Electron, the same framework that enables Atom, Visual Studio Code, and…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_ubMDlxwdFpNxfmMb75eaXQ.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:14.743Z"
   },
   {
@@ -2276,7 +2103,6 @@
       "performance"
     ],
     "summary": "Software performance is like a series of card tricks: Do less up front. Be really lazy. Prepare in the…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_SCxUrFANB1Yo4f7GpCjNAQ.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:14.743Z"
   },
   {
@@ -2289,7 +2115,6 @@
       "data"
     ],
     "summary": "For a company like Slack that strives to be as data-driven as possible, understanding how our users use our…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/04/0_TH9RSHb2vtmB3r3T.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:14.743Z"
   },
   {
@@ -2303,7 +2128,6 @@
       "infra"
     ],
     "summary": "If you are are an engineer whose organization uses Linux in production, I have two quick questions for you: 1)…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_jOVQy8XQAM5RjBupnPmqBQ.png?w=1020",
     "fetchedAt": "2026-07-11T12:17:14.743Z"
   },
   {
@@ -2316,7 +2140,6 @@
       "product"
     ],
     "summary": "At Slack, we’re focused on delivering big, impactful features, but we’re also dedicated to improving our users’…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_tUsX-D9ZValamvHz05cu2Q.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:16.637Z"
   },
   {
@@ -2327,7 +2150,6 @@
     "publishedAt": "2016-10-24T16:00:00.000Z",
     "tags": [],
     "summary": "Today we’ve just shipped a new version of the Slack Desktop application for macOS. We built it with Electron,…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_xb38loTAsqvMJTFd9Xu9zg.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:16.637Z"
   },
   {
@@ -2338,7 +2160,6 @@
     "publishedAt": "2016-10-18T16:00:00.000Z",
     "tags": [],
     "summary": "It’s a scene familiar to many tech companies: summer rolls around, and the office is filled with interns who…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_vRX8ewuigD4z7BWZwSQvXQ.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:16.637Z"
   },
   {
@@ -2349,7 +2170,6 @@
     "publishedAt": "2016-10-12T16:00:00.000Z",
     "tags": [],
     "summary": "Slack uses PHP for most of its server-side application logic, which is an unusual choice these days. Why did we…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_x5N8tfTVEmQro2ySxoZtvw.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:16.637Z"
   },
   {
@@ -2363,7 +2183,6 @@
       "ml"
     ],
     "summary": "Public channels provide much of Slack’s advantages over email: they are searchable, long-lasting, themed…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_bgSX76hZy8gWQHwPN61SBw@2x.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:16.637Z"
   },
   {
@@ -2374,7 +2193,6 @@
     "publishedAt": "2016-08-08T16:00:00.000Z",
     "tags": [],
     "summary": "Internships — the training grounds for the professional “real world”. But what exactly does the “real world”…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_tg1Rn-IjfM0GEadqADidQw.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:16.637Z"
   },
   {
@@ -2388,7 +2206,6 @@
       "databases"
     ],
     "summary": "Databases. They are the single source of truth for our most critical business data, yet as engineers we tend to…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_G7VJ7c7duf_ahDPApXshdw.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:16.637Z"
   },
   {
@@ -2402,7 +2219,6 @@
       "performance"
     ],
     "summary": "At Slack, we’re on a mission to make people’s working lives simpler, more pleasant, and more…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T12:17:16.637Z"
   },
   {
@@ -2416,7 +2232,6 @@
       "architecture"
     ],
     "summary": "Systems problems are rooted in impossible dreams. Your file system wants to give you infinite, fast, durable…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_dk6TjmZ_HExpMBc91RYH2g.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:18.621Z"
   },
   {
@@ -2429,7 +2244,6 @@
       "frontend"
     ],
     "summary": "Slack Calls are now in beta, on Mac, Windows, iOS, Android and Chrome. If you haven’t given it a try yet, please…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2016/05/alexander-andrews-JYGnB9gTCls-unsplash.jpg?w=1020",
     "fetchedAt": "2026-07-11T12:17:18.621Z"
   },
   {
@@ -2443,7 +2257,6 @@
       "career"
     ],
     "summary": "Interviews, eh? Horrid, stressful ordeals that fly by in a sweaty mess and then linger long in the memory. Or,…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_e_p0IATjIvOWVvErChbwNQ.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:18.621Z"
   },
   {
@@ -2454,7 +2267,6 @@
     "publishedAt": "2016-04-24T16:00:00.000Z",
     "tags": [],
     "summary": "As part of writing the Slack Desktop application, we created a new library / set of tools that will save other…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_p3RGZ_ceE_jfqj2dyqBl7w.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:18.621Z"
   },
   {
@@ -2465,7 +2277,6 @@
     "publishedAt": "2016-03-29T16:00:00.000Z",
     "tags": [],
     "summary": "Developers working on the same project often have wildly different workflows, based on how they like to work and…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/04/1_2f5o-ndgk89Cbm677WXp3g-scaled-1.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:18.621Z"
   },
   {
@@ -2479,7 +2290,6 @@
       "security"
     ],
     "summary": "How does a company know when it has been hacked? Let’s list some ways, in order of best case to worst case: The…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_FcTSGdtXiv5M3BH4w1nDtA.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:18.621Z"
   },
   {
@@ -2490,7 +2300,6 @@
     "publishedAt": "2016-02-21T16:00:00.000Z",
     "tags": [],
     "summary": "Last time, we talked about empathy and what goes into good pull requests. This time, let’s talk about the other…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_dFeArwWerBtwmUaz3QFq-g.png?w=1020",
     "fetchedAt": "2026-07-11T12:17:18.621Z"
   },
   {
@@ -2501,7 +2310,6 @@
     "publishedAt": "2016-02-15T16:00:00.000Z",
     "tags": [],
     "summary": "At Slack, we believe that empathy is humanity’s most important superpower. For our engineering team, that…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_q5GRdOj64x5idlWR12nbdw.png?w=1020",
     "fetchedAt": "2026-07-11T12:17:18.621Z"
   },
   {
@@ -2512,7 +2320,6 @@
     "publishedAt": "2016-01-24T16:00:00.000Z",
     "tags": [],
     "summary": "Getting to the right conversation in Slack should be easy. And it should be fast. Like, really fast. When we…",
-    "thumbnail": "https://slack.engineering/wp-content/uploads/sites/7/2020/05/1_VfY_n9_DS42MrbCrKpZEXw.jpeg?w=1020",
     "fetchedAt": "2026-07-11T12:17:20.485Z"
   }
 ]

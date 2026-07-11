@@ -10,7 +10,6 @@
       "ai"
     ],
     "summary": "From the Other Side of the Screen: What We're Looking For in Your AI-Assisted Interview",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -23,7 +22,6 @@
       "frontend"
     ],
     "summary": "Overview of the technical hurdles I overcame to evolve my intern project into a new feature for users.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -36,7 +34,6 @@
       "data"
     ],
     "summary": "How We Built Canva's IMPACT App with Streamlit in Snowflake",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -50,7 +47,6 @@
       "ai"
     ],
     "summary": "How We Redesigned Technical Interviews for the AI Era",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -64,7 +60,6 @@
       "ai"
     ],
     "summary": "How we used generative AI to build our year-in-review campaign",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -79,7 +74,6 @@
       "frontend"
     ],
     "summary": "Qualitative comparison of image embedding models to power a scalable similar-image replacement system for Canva designs.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -92,7 +86,6 @@
       "data"
     ],
     "summary": "Leveraging Snowpipe Streaming to build a continuous data platform.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -105,7 +98,6 @@
       "infra"
     ],
     "summary": "An incident report for the Canva outage on November 12, 2024.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -118,7 +110,6 @@
       "backend"
     ],
     "summary": "How Canva uses graph traversal to handle the complexity of getting print orders to our customers.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -132,7 +123,6 @@
       "ai"
     ],
     "summary": "How we improved Canva’s private design search while respecting the privacy of our community.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -145,7 +135,6 @@
       "data"
     ],
     "summary": "How I learned to stop worrying and love metadata.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -158,7 +147,6 @@
       "frontend"
     ],
     "summary": "How we use the CSS cascade to enable building responsive layouts",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -172,7 +160,6 @@
       "backend"
     ],
     "summary": "Our journey to implement and support real-time mouse pointers.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -185,7 +172,6 @@
       "infra"
     ],
     "summary": "How we improved our continuous integration build times from hours to less than 30 minutes.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -199,7 +185,6 @@
       "data"
     ],
     "summary": "The architecture of our product analytics event delivery pipeline.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -213,7 +198,6 @@
       "data"
     ],
     "summary": "Experimentation and experiment analysis are vital procedures at Canva to safeguard the customer experience.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -226,7 +210,6 @@
       "ml"
     ],
     "summary": "How we understand and detect groups in user designs",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -239,7 +222,6 @@
       "security"
     ],
     "summary": "How we do endpoint vulnerability management at Canva.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -253,7 +235,6 @@
       "data"
     ],
     "summary": "How we built a scalable and reliable content usage counting service.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -266,7 +247,6 @@
       "performance"
     ],
     "summary": "Some of the engineering challenges we encountered while developing our vector drawing tool",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -280,7 +260,6 @@
       "testing"
     ],
     "summary": "How we validate vendor security at Canva by going beyond compliance.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -293,7 +272,6 @@
       "security"
     ],
     "summary": "CVEs in three strange places and the unique problem of safely processing and handling fonts.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -306,7 +284,6 @@
       "general"
     ],
     "summary": "How we use GPT-4 to summarize incident reports.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -319,7 +296,6 @@
       "ml"
     ],
     "summary": "How Canva does hand-drawn shape recognition in the browser",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -334,7 +310,6 @@
       "performance"
     ],
     "summary": "How we killed SQL and built a machine learning model in its place",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -347,7 +322,6 @@
       "security"
     ],
     "summary": "Discovery and walkthrough of CVE-2023-38633 in librsvg, when two URL parser implementations (Rust and Glib) disagree on file scheme parsing leading to path traversal.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -360,7 +334,6 @@
       "backend"
     ],
     "summary": "Our journey to empower developers to build flexible apps with a simple powerful app platform.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -374,7 +347,6 @@
       "infra"
     ],
     "summary": "How we reliably migrated hundreds of GBs of relational DB data for our service split project",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -387,7 +359,6 @@
       "observability"
     ],
     "summary": "How Canva implemented end-to-end tracing and are using it to drive operational insights",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -401,7 +372,6 @@
       "performance"
     ],
     "summary": "Understanding our data and usage patterns was the real key.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -412,7 +382,6 @@
     "publishedAt": "2023-04-17T00:00:01.000Z",
     "tags": [],
     "summary": "For those who want to understand what color spaces are, find out how to transform videos from one color space into another one, or read about how I almost went crazy trying to find out why videos generated with Canva look slightly off in terms of color.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -425,7 +394,6 @@
       "security"
     ],
     "summary": "Discovery of Headless Chromium security vulnerability, how it works, and mitigations that should be applied to similar configurations",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -440,7 +408,6 @@
       "product"
     ],
     "summary": "How we developed a bespoke frequency-recency segmentation to understand our users' diverse usage patterns.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -453,7 +420,6 @@
       "ml"
     ],
     "summary": "How we used a CLIP-inspired model to suggest keywords for template labeling in multiple languages.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -468,7 +434,6 @@
       "video"
     ],
     "summary": "The evolution of media persistence during hypergrowth at Canva",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -481,7 +446,6 @@
       "backend"
     ],
     "summary": "More on how we are rebuilding Canva's search stack and pipeline.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -495,7 +459,6 @@
       "ml"
     ],
     "summary": "How we are rebuilding Canva's search stack and pipeline.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -509,7 +472,6 @@
       "video"
     ],
     "summary": "How we built our first iteration of content matching at Canva.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -524,7 +486,6 @@
       "data"
     ],
     "summary": "From firefighting chaos to problem solving zen.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -538,7 +499,6 @@
       "infra"
     ],
     "summary": "It ain't what you don't know that gets you into trouble — well, sometimes it is.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -553,7 +513,6 @@
       "infra"
     ],
     "summary": "Scaling pre-development, rollout, and post-production SEO testing at Canva.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -566,7 +525,6 @@
       "infra"
     ],
     "summary": "Using a monorepo causes a lot of performance challenges for git. Here's how we solve them at Canva.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -580,7 +538,6 @@
       "infra"
     ],
     "summary": "How the data analytics platform team scaled data ingestion from various services at Canva.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -593,7 +550,6 @@
       "frontend"
     ],
     "summary": "Using CSS grid to render complex webpages responsively.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -606,7 +562,6 @@
       "infra"
     ],
     "summary": "How we position Infrastructure Engineering as a value-add.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -620,7 +575,6 @@
       "frontend"
     ],
     "summary": "Lessons learned from migrating 1000+ browser-functional tests from Chimp, WebdriverIO, and Saucelabs to CodeceptJS and Playwright.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -634,7 +588,6 @@
       "infra"
     ],
     "summary": "Our migration journey and key lessons from this journey.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -647,7 +600,6 @@
       "frontend"
     ],
     "summary": "The journey of the eyedropper in Canva.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -661,7 +613,6 @@
       "data"
     ],
     "summary": "How we use machine learning to estimate depth and salience maps for photos in Canva.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -674,7 +625,6 @@
       "ml"
     ],
     "summary": "Applying classic principles from physics and optics to build the best possible camera effects at Canva.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -690,7 +640,6 @@
       "backend"
     ],
     "summary": "How we deal with potential problems when running Canva's recommendation system.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -704,7 +653,6 @@
       "infra"
     ],
     "summary": "The technology that powers Continuous Localization at Canva.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -718,7 +666,6 @@
       "data"
     ],
     "summary": "How the hyperparameters of our machine learning models are tuned at Canva.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -733,7 +680,6 @@
       "infra"
     ],
     "summary": "Evolving Canva's subscription data architecture to enable data-driven decision making.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -748,7 +694,6 @@
       "backend"
     ],
     "summary": "This post describes how we empowered our users at Canva to collaborate by introducing services that support streaming using RSocket.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -763,7 +708,6 @@
       "backend"
     ],
     "summary": "Behind the scenes on our mission to drive the next era of presentation software.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -779,7 +723,6 @@
       "backend"
     ],
     "summary": "This post explains how we built a data-driven system that can perform autocorrection at scale across languages.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -794,7 +737,6 @@
       "frontend"
     ],
     "summary": "How we use visual regression testing to instill confidence in every product update.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -807,7 +749,6 @@
       "general"
     ],
     "summary": "Our choice of programming language has the ability to change the way we view a problem and how we interact with it.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -820,7 +761,6 @@
       "general"
     ],
     "summary": "Canva's first Head of Engineering shares lessons learned from Google and Lyft to scale our engineering culture at Canva.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -833,7 +773,6 @@
       "frontend"
     ],
     "summary": "This article introduces alpha blending and some tips relating to the alpha channel in WebGL development.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -847,7 +786,6 @@
       "general"
     ],
     "summary": "In the end, embeds are about making content on the web even more connected and shareable, which is what the web is all about.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -861,7 +799,6 @@
       "general"
     ],
     "summary": "This article details five visual effects found in the Canva web application that exist to help achieve these goals of simplicity and fun.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -874,7 +811,6 @@
       "performance"
     ],
     "summary": "Developing the Compute Service, aimed at the increasing processing burden of password hashing and the signing of private CDN URLs.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -885,7 +821,6 @@
     "publishedAt": "2015-08-25T00:00:00.000Z",
     "tags": [],
     "summary": "This post is our attempt to describe the practices we've found help us work more efficiently as a team.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -899,7 +834,6 @@
       "devops"
     ],
     "summary": "During periods of heavy use, we needed a mechanism to ask the browser and mobile apps to back off and reduce the frequency of auto-saves.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -913,7 +847,6 @@
       "infra"
     ],
     "summary": "How we've built a Standard Development Environment (SDE).",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },
   {
@@ -926,7 +859,6 @@
       "devops"
     ],
     "summary": "Maintaining a functionally complete yet airtight local development environment is something we consider to be of critical importance.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   }
 ]

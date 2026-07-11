@@ -10,7 +10,6 @@
       "data"
     ],
     "summary": "Azure Synapse has served as a reliable foundation for SQL analytics at scale, and...",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:17.562Z"
   },
   {
@@ -25,7 +24,6 @@
       "ai"
     ],
     "summary": "Distributed GPU training has become routine across the industry. Teams now train...",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:17.562Z"
   },
   {
@@ -38,7 +36,6 @@
       "general"
     ],
     "summary": "When I started my PhD at UC Berkeley 16 years ago, my advisor told me: \"OLTP databases...",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:17.562Z"
   },
   {
@@ -54,7 +51,6 @@
       "data"
     ],
     "summary": "A utility company deploys drones to inspect hundreds of miles of power lines. A police...",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:17.562Z"
   },
   {
@@ -68,7 +64,6 @@
       "data"
     ],
     "summary": "Your team has hundreds of stored procedures, a couple of schedulers, permissions...",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:17.562Z"
   },
   {
@@ -83,7 +78,6 @@
       "data"
     ],
     "summary": "1. Introduction - Impulse: time-series analytics for measurement dataA single automotive...",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:17.562Z"
   },
   {
@@ -97,7 +91,6 @@
       "data"
     ],
     "summary": "Agentic data engineering is changing how pipelines are builtDaikin Applied Americas...",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:17.562Z"
   },
   {
@@ -112,7 +105,6 @@
       "video"
     ],
     "summary": "The identity matching problem brands face todayBrands invest heavily in building first-party data assets...",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:17.562Z"
   },
   {
@@ -128,7 +120,6 @@
       "data"
     ],
     "summary": "Sciene develops AI products that standardize and scale high-volume, relationship-centered...",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:17.562Z"
   },
   {
@@ -143,7 +134,6 @@
       "video"
     ],
     "summary": "Telemetry data is everywhere. IoT sensors on factory floors. Satellite arrays scanning...",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:17.562Z"
   },
   {
@@ -156,7 +146,6 @@
       "general"
     ],
     "summary": "Challenges of Running Custom Model InferencesWhen you deploy a machine learning model to production...",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:17.562Z"
   },
   {
@@ -170,7 +159,6 @@
       "video"
     ],
     "summary": "In the gaming industry, every millisecond counts. To drive in-game personalization,...",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:17.562Z"
   },
   {
@@ -183,7 +171,6 @@
       "general"
     ],
     "summary": "Why this mattersAI-assisted development falls apart the moment the assistant has to guess at column names, table layouts...",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:17.562Z"
   },
   {
@@ -197,7 +184,6 @@
       "data"
     ],
     "summary": "As we explored in our first blog, Databricks Genie is redefining industry-specific...",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:17.562Z"
   },
   {
@@ -212,7 +198,6 @@
       "ai"
     ],
     "summary": "At Databricks, we’ve built a unique inference platform that serves every frontier...",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:17.562Z"
   },
   {
@@ -225,7 +210,6 @@
       "data"
     ],
     "summary": "Your BI dashboards are slow, and tuning them is costing too much time and money.It's...",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:17.562Z"
   },
   {
@@ -238,7 +222,6 @@
       "general"
     ],
     "summary": "In the last year, agents have strained the limits of cloud infrastructure with new...",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:17.562Z"
   },
   {
@@ -252,7 +235,6 @@
       "data"
     ],
     "summary": "The energy transition has a data problemThe UK grid is in the middle of its most...",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:17.562Z"
   },
   {
@@ -268,7 +250,6 @@
       "ai"
     ],
     "summary": "Why AI Tracing Breaks Traditional ObservabilityAs AI applications move into production...",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:17.562Z"
   },
   {
@@ -282,7 +263,6 @@
       "data"
     ],
     "summary": "In the era of data intelligence, the value of information is only as good as its...",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:17.562Z"
   }
 ]

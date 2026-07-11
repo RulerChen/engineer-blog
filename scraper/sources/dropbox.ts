@@ -35,8 +35,8 @@ import type { Article, Source } from "../src/types.js";
  *   "MMM DD, YYYY" (e.g. "Jun 25, 2026"), which `Date.parse` handles directly.
  * - Category/tag: `<a data-element-id="article-category-link">`, the single
  *   tag shown alongside the date in the same `<p>`.
- * - No summary or thumbnail is present on this listing (unlike the homepage's
- *   teaser cards), so both are left empty/null for backfilled articles.
+ * - No summary is present on this listing (unlike the homepage's teaser
+ *   cards), so it is left empty for backfilled articles.
  */
 export function parseDropboxArchivePage(html: string, pageUrl: string): ArchivePage {
   const $ = cheerio.load(html);
@@ -63,7 +63,6 @@ export function parseDropboxArchivePage(html: string, pageUrl: string): ArchiveP
       publishedAt,
       tags: resolveTags(category ? [category] : [], "dropbox"),
       summary: summarize(""),
-      thumbnail: null,
       fetchedAt,
     });
   });

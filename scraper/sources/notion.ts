@@ -23,7 +23,7 @@ import type { Article, Source } from "../src/types.js";
  * So, unlike the other sources, this can't be reduced to one `parsePage`
  * call per archive page: `fetchNotionArticles` below first crawls the topic
  * listing (via `crawlArchive` + `parseNotionListingPage`) to collect
- * title/url/summary/thumbnail, then makes one additional, sequential,
+ * title/url/summary, then makes one additional, sequential,
  * delayed request per post to read its real publish date from the JSON-LD
  * block. Posts whose date can't be resolved are dropped (mirrors
  * `filterValid`'s date requirement downstream).
@@ -35,9 +35,6 @@ import type { Article, Source } from "../src/types.js";
  *   identical but requires a hashed CSS-module class to select).
  * - Summary: `a[class^="postPreview_subtitle"]` — the hash suffix on this
  *   class changes per build, so only the stable prefix is matched.
- * - Thumbnail: the card's `<img>` `src` is a same-origin Next.js image proxy
- *   URL (`/_next/image?url=<encoded-original>&...`); the real absolute image
- *   URL is recovered from its `url` query parameter.
  * - Next page: `<nav aria-label="Pagination">`, whose "Next page" link's
  *   parent `<li>` carries a `hidden` attribute on the last page.
  */
@@ -55,16 +52,6 @@ export function parseNotionListingPage(html: string, pageUrl: string): ArchivePa
     const absolute = new URL(href, pageUrl).toString();
     const summary = post.find('a[class^="postPreview_subtitle"]').first().text().trim();
 
-    let thumbnail: string | null = null;
-    const imgSrc = post.find("img").first().attr("src");
-    if (imgSrc) {
-      try {
-        thumbnail = new URL(imgSrc, pageUrl).searchParams.get("url");
-      } catch {
-        thumbnail = null;
-      }
-    }
-
     articles.push({
       id: articleId(absolute),
       title,
@@ -73,7 +60,6 @@ export function parseNotionListingPage(html: string, pageUrl: string): ArchivePa
       publishedAt: "", // not available on the listing page; filled in by fetchNotionArticles
       tags: [],
       summary: summarize(summary),
-      thumbnail,
       fetchedAt,
     });
   });

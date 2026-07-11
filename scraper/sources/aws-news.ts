@@ -63,7 +63,6 @@ export function parseAwsNewsArchivePage(html: string, pageUrl: string): ArchiveP
       publishedAt,
       tags: resolveTags(categories, "aws-news"),
       summary: summarize(post.find("section.blog-post-excerpt p").first().html() ?? ""),
-      thumbnail: post.find("img.wp-post-image").first().attr("src") ?? null,
       fetchedAt,
     });
   });

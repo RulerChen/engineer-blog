@@ -26,7 +26,7 @@ import type { Source } from "../src/types.js";
  * (`techblog.lycorp.co.jp/sitemap.xml` 404s). `backfill` reuses the same feed
  * fetch rather than a separate archive scraper, since there is no fuller
  * history available anywhere else on the site. Items carry no `<category>`
- * tag or enclosure/thumbnail data.
+ * tag or enclosure data.
  */
 export const line: Source = {
   id: "line",

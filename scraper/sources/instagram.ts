@@ -75,7 +75,6 @@ export function parseInstagramArchivePage(html: string, _pageUrl: string): Archi
         "instagram",
       ),
       summary: summarize(post.find(".entry-content, .entry-summary, p").first().html() ?? ""),
-      thumbnail: post.find("img").first().attr("src") ?? null,
       fetchedAt,
     });
   });
