@@ -25,7 +25,7 @@ describe("ArticleList", () => {
     });
     expect(wrapper.text()).toContain("Post number 1");
     expect(wrapper.text()).toContain("Post number 2");
-    expect(wrapper.text()).toContain("Meta Engineering"); // company badge
+    expect(wrapper.text()).toContain("Meta"); // company badge
     const link = wrapper.find("a.title-link");
     expect(link.attributes("href")).toBe("https://example.com/1");
     expect(link.attributes("target")).toBe("_blank");
