@@ -88,12 +88,7 @@ export function parseDuolingoArchivePage(html: string, pageUrl: string): Archive
     const card = $(el);
     const link = card.find(".feature-card--content > a").first();
     const title = link.find("h3").first().text().trim();
-    addArticle(
-      link.attr("href"),
-      title,
-      card.find("time[datetime]").first().attr("datetime"),
-      "",
-    );
+    addArticle(link.attr("href"), title, card.find("time[datetime]").first().attr("datetime"), "");
   });
 
   return { articles, nextUrl: null };
