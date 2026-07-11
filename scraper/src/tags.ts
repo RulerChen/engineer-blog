@@ -145,6 +145,7 @@ const KEYWORD_RULES: { pattern: RegExp; tag: CanonicalTag }[] = [
 function resolveTag(rawTag: string): CanonicalTag | null {
   const key = rawTag.trim().toLowerCase();
   if (!key) return null;
+  if ((CANONICAL_TAGS as readonly string[]).includes(key)) return key as CanonicalTag;
   const exact = EXACT_MATCH[key];
   if (exact) return exact;
   for (const rule of KEYWORD_RULES) {

@@ -6,11 +6,9 @@
     "source": "netflix",
     "publishedAt": "2026-06-29T13:01:02.000Z",
     "tags": [
-      "recommendation-system",
+      "ml",
       "ai",
-      "netflix",
-      "machine-learning",
-      "large-language-models"
+      "general"
     ],
     "summary": "",
     "thumbnail": null,
@@ -34,10 +32,9 @@
     "source": "netflix",
     "publishedAt": "2026-06-22T21:35:01.000Z",
     "tags": [
-      "kueue",
-      "netflix",
-      "aws",
-      "kubernetes"
+      "infra",
+      "general",
+      "cloud"
     ],
     "summary": "",
     "thumbnail": null,
@@ -50,10 +47,8 @@
     "source": "netflix",
     "publishedAt": "2026-06-19T23:54:17.000Z",
     "tags": [
-      "automation",
-      "site-reliability",
-      "data-validation",
-      "data-reliability",
+      "devops",
+      "data",
       "experimentation"
     ],
     "summary": "",
@@ -67,9 +62,7 @@
     "source": "netflix",
     "publishedAt": "2026-06-19T23:54:00.000Z",
     "tags": [
-      "big-data",
-      "data-governance",
-      "data-orchestration"
+      "data"
     ],
     "summary": "",
     "thumbnail": null,
@@ -82,10 +75,9 @@
     "source": "netflix",
     "publishedAt": "2026-06-19T23:53:47.000Z",
     "tags": [
-      "regression",
-      "predictive-analytics",
-      "operations",
-      "machine-learning"
+      "testing",
+      "ml",
+      "devops"
     ],
     "summary": "",
     "thumbnail": null,
@@ -98,10 +90,8 @@
     "source": "netflix",
     "publishedAt": "2026-06-19T23:53:30.000Z",
     "tags": [
-      "cassandra",
-      "icebergs",
-      "big-data",
-      "data-movement"
+      "databases",
+      "data"
     ],
     "summary": "",
     "thumbnail": null,
@@ -115,9 +105,8 @@
     "publishedAt": "2026-06-19T23:53:16.000Z",
     "tags": [
       "ai",
-      "notifications",
-      "recommendations",
-      "machine-learning"
+      "backend",
+      "ml"
     ],
     "summary": "",
     "thumbnail": null,
@@ -130,9 +119,8 @@
     "source": "netflix",
     "publishedAt": "2026-06-19T23:53:06.000Z",
     "tags": [
-      "ai-agent",
-      "agentic-workflow",
-      "causal-inference"
+      "ai",
+      "data"
     ],
     "summary": "",
     "thumbnail": null,
@@ -145,10 +133,9 @@
     "source": "netflix",
     "publishedAt": "2026-06-19T23:52:02.000Z",
     "tags": [
-      "distributed-systems",
-      "software-engineering",
-      "platform-engineering",
-      "microservices",
+      "architecture",
+      "general",
+      "infra",
       "observability"
     ],
     "summary": "",

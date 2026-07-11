@@ -1,0 +1,242 @@
+[
+  {
+    "raw": "Platform",
+    "source": "spotify",
+    "count": 4
+  },
+  {
+    "raw": "Developer Experience",
+    "source": "spotify",
+    "count": 2
+  },
+  {
+    "raw": "Developer Tools",
+    "source": "spotify",
+    "count": 3
+  },
+  {
+    "raw": "Backstage",
+    "source": "spotify",
+    "count": 1
+  },
+  {
+    "raw": "Uncategorized",
+    "source": "slack",
+    "count": 8
+  },
+  {
+    "raw": "developer-productivity",
+    "source": "slack",
+    "count": 1
+  },
+  {
+    "raw": "innovation",
+    "source": "slack",
+    "count": 2
+  },
+  {
+    "raw": "collaboration",
+    "source": "slack",
+    "count": 1
+  },
+  {
+    "raw": "airflow",
+    "source": "slack",
+    "count": 1
+  },
+  {
+    "raw": "development",
+    "source": "slack",
+    "count": 2
+  },
+  {
+    "raw": "golang",
+    "source": "slack",
+    "count": 1
+  },
+  {
+    "raw": "cross-platform",
+    "source": "slack",
+    "count": 1
+  },
+  {
+    "raw": "design",
+    "source": "slack",
+    "count": 1
+  },
+  {
+    "raw": "push-notification",
+    "source": "slack",
+    "count": 1
+  },
+  {
+    "raw": "a11y",
+    "source": "slack",
+    "count": 1
+  },
+  {
+    "raw": "accessibility",
+    "source": "slack",
+    "count": 1
+  },
+  {
+    "raw": "empathy",
+    "source": "slack",
+    "count": 1
+  },
+  {
+    "raw": "agents",
+    "source": "dropbox",
+    "count": 3
+  },
+  {
+    "raw": "Dash",
+    "source": "dropbox",
+    "count": 4
+  },
+  {
+    "raw": "DSPy",
+    "source": "dropbox",
+    "count": 2
+  },
+  {
+    "raw": "Code quality",
+    "source": "dropbox",
+    "count": 2
+  },
+  {
+    "raw": "Developer",
+    "source": "dropbox",
+    "count": 2
+  },
+  {
+    "raw": "Developer Tools",
+    "source": "dropbox",
+    "count": 3
+  },
+  {
+    "raw": "developer velocity",
+    "source": "dropbox",
+    "count": 3
+  },
+  {
+    "raw": "Productivity",
+    "source": "dropbox",
+    "count": 1
+  },
+  {
+    "raw": "developer productivity",
+    "source": "dropbox",
+    "count": 3
+  },
+  {
+    "raw": "Platform",
+    "source": "dropbox",
+    "count": 1
+  },
+  {
+    "raw": "Nova",
+    "source": "dropbox",
+    "count": 1
+  },
+  {
+    "raw": "Magic Pocket",
+    "source": "dropbox",
+    "count": 1
+  },
+  {
+    "raw": "storage",
+    "source": "dropbox",
+    "count": 2
+  },
+  {
+    "raw": "Developers",
+    "source": "dropbox",
+    "count": 1
+  },
+  {
+    "raw": "models",
+    "source": "dropbox",
+    "count": 3
+  },
+  {
+    "raw": "Search",
+    "source": "dropbox",
+    "count": 1
+  },
+  {
+    "raw": "RAG",
+    "source": "dropbox",
+    "count": 1
+  },
+  {
+    "raw": "quantization",
+    "source": "dropbox",
+    "count": 1
+  },
+  {
+    "raw": "inference",
+    "source": "dropbox",
+    "count": 1
+  },
+  {
+    "raw": "Events",
+    "source": "dropbox",
+    "count": 1
+  },
+  {
+    "raw": "pinterest",
+    "source": "pinterest",
+    "count": 10
+  },
+  {
+    "raw": "distributed-training",
+    "source": "pinterest",
+    "count": 1
+  },
+  {
+    "raw": "foundation-models",
+    "source": "pinterest",
+    "count": 1
+  },
+  {
+    "raw": "schema-evolution",
+    "source": "pinterest",
+    "count": 1
+  },
+  {
+    "raw": "spark",
+    "source": "pinterest",
+    "count": 1
+  },
+  {
+    "raw": "agentic-coding",
+    "source": "pinterest",
+    "count": 1
+  },
+  {
+    "raw": "ads-retrieval",
+    "source": "pinterest",
+    "count": 1
+  },
+  {
+    "raw": "transformers",
+    "source": "pinterest",
+    "count": 1
+  },
+  {
+    "raw": "monetization",
+    "source": "pinterest",
+    "count": 2
+  },
+  {
+    "raw": "efficiency",
+    "source": "pinterest",
+    "count": 1
+  },
+  {
+    "raw": "pinner-experience",
+    "source": "pinterest",
+    "count": 1
+  }
+]

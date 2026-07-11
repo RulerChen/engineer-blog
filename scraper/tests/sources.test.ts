@@ -2,10 +2,20 @@ import { describe, expect, it } from "vitest";
 import { getSource, sources } from "../sources/index.js";
 
 describe("source registry", () => {
-  it("registers the five v1 sources with unique ids", () => {
+  it("registers all sources with unique ids", () => {
     const ids = sources.map((s) => s.id).sort();
-    expect(ids).toEqual(["airbnb", "google", "meta", "netflix", "uber"]);
-    expect(new Set(ids).size).toBe(5);
+    expect(ids).toEqual([
+      "airbnb",
+      "dropbox",
+      "google",
+      "meta",
+      "netflix",
+      "pinterest",
+      "slack",
+      "spotify",
+      "uber",
+    ]);
+    expect(new Set(ids).size).toBe(9);
   });
 
   it("every source has a display name and a fetch strategy", () => {

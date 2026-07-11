@@ -5,6 +5,10 @@ export const sourceNames: Record<string, string> = {
   netflix: "Netflix",
   uber: "Uber",
   airbnb: "Airbnb",
+  spotify: "Spotify",
+  slack: "Slack",
+  dropbox: "Dropbox",
+  pinterest: "Pinterest",
 };
 
 export function sourceName(id: string): string {

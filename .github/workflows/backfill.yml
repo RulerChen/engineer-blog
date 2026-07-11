@@ -11,6 +11,9 @@ on:
           - google
           - meta
           - uber
+          - spotify
+          - slack
+          - dropbox
 
 concurrency:
   group: data-commits
