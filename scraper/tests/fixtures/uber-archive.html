@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uber Engineering — Where the Digital World Meets the Physical One</title>
+  <link rel="alternate" type="application/rss+xml" title="Uber Engineering Blog" href="https://www.uber.com/blog/san-francisco/engineering/rss/">
+  <link rel="preconnect" href="https://d1a3f4spazzrp4.cloudfront.net" crossorigin>
+  <link rel="preconnect" href="https://uber-common-public.s3-us-west-2.amazonaws.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles2.css?v=2">
+  <script>
+    // Apply theme before paint to prevent flash. Stored choice wins over OS preference.
+    (function () {
+      try {
+        var stored = localStorage.getItem('theme');
+        var theme = stored || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+      } catch (e) { /* localStorage may be unavailable */ }
+    })();
+  </script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#how-we-build">Skip to main content</a>
+  <!-- NAV (Engine Room) -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="nav-logo-text">Uber <span class="nav-logo-eng">Engineering</span></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#blog" class="nav-link">Blog</a>
+        <a href="#news" class="nav-link">News</a>
+        <a href="#research" class="nav-link">Research</a>
+        <a href="#open-source" class="nav-link">Open Source</a>
+        <a href="#careers" class="nav-link">Careers</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle light/dark theme">
+        <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+        <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- HERO (Engine Room) -->
+
+  <main id="main" tabindex="-1">
+  <section class="hero" id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-content">
+      <h1 class="hero-headline">Driving innovation at scale</h1>
+      <p class="hero-sub">Powering 41 million daily connections between the digital and physical worlds through a real-time marketplace built for global reliability.</p>
+    </div>
+  </section>
+
+  <!-- Right Now Ticker -->
+  <section class="ticker-section">
+    <div class="ticker-track">
+      <div class="ticker-content">
+        <a class="ticker-item" href="https://www.linkedin.com/feed/update/urn:li:activity:7480381351699951616" target="_blank" rel="noopener"><span class="ticker-badge news">NEWS</span> Agentic Pods: embedding engineers to cut capital allocation from 15 hours to 30 minutes</a>
+        <span class="ticker-sep">//</span>
+        <a class="ticker-item" href="https://github.com/uber-go/zap" target="_blank" rel="noopener"><span class="ticker-badge oss">OSS</span> zap — 24.3k stars: Blazing fast structured logging for Go</a>
+        <span class="ticker-sep">//</span>
+        <a class="ticker-item" href="https://jobs.uber.com/en/jobs/157162/" target="_blank" rel="noopener"><span class="ticker-badge hiring">HIRING</span> Senior ML Engineer, AV Foundation — frontier ML for autonomous vehicles</a>
+        <span class="ticker-sep">//</span>
+        <a class="ticker-item" href="https://www.linkedin.com/feed/update/urn:li:activity:7480653601560797184" target="_blank" rel="noopener"><span class="ticker-badge news">NEWS</span> Uber engineers named Agentic AI Foundation ambassadors, shaping open agent standards</a>
+        <span class="ticker-sep">//</span>
+        <a class="ticker-item" href="https://www.uber.com/blog/gitfarm-as-a-service/" target="_blank" rel="noopener"><span class="ticker-badge blog">BLOG</span> GitFarm: Git-as-a-Service — sub-500ms checkouts, 80%+ resource savings</a>
+        <span class="ticker-sep">//</span>
+        <a class="ticker-item" href="https://jobs.uber.com/en/jobs/145860/" target="_blank" rel="noopener"><span class="ticker-badge hiring">HIRING</span> Staff ML Engineer, Applied AI — foundation models across Mobility and Delivery</a>
+        <span class="ticker-sep">//</span>
+        <a class="ticker-item" href="https://www.linkedin.com/feed/update/urn:li:activity:7468693224421785601" target="_blank" rel="noopener"><span class="ticker-badge news">NEWS</span> Uber AV Labs at CVPR 2026: turning billions of real trips into training for Level 4 autonomy</a>
+        <span class="ticker-sep">//</span>
+        <a class="ticker-item" href="https://www.uber.com/blog/moirai/" target="_blank" rel="noopener"><span class="ticker-badge research">RESEARCH</span> Moirai: Lossless Straggler Mitigation — accepted at SOSP 2025</a>
+        <span class="ticker-sep">//</span>
+        <a class="ticker-item" href="https://www.uber.com/blog/ureview/" target="_blank" rel="noopener"><span class="ticker-badge blog">BLOG</span> uReview: GenAI code review analyzing 90% of Uber's ~65K weekly changes</a>
+        <span class="ticker-sep">//</span>
+        <a class="ticker-item" href="https://www.linkedin.com/feed/update/urn:li:activity:7480289597206315011" target="_blank" rel="noopener"><span class="ticker-badge news">NEWS</span> Uber at the AI Engineer World's Fair: agentic SDLC, GenAI code review, and multimodal evals</a>
+        <span class="ticker-sep">//</span>
+        <a class="ticker-item" href="https://jobs.uber.com/en/jobs/154537/" target="_blank" rel="noopener"><span class="ticker-badge hiring">HIRING</span> Senior Security Incident Commander — lead Uber's critical security response</a>
+        <span class="ticker-sep">//</span>
+        <a class="ticker-item" href="https://github.com/uber/RIBs" target="_blank" rel="noopener"><span class="ticker-badge oss">OSS</span> RIBs — 7.9k stars: Cross-platform mobile architecture framework</a>
+        <span class="ticker-sep">//</span>
+        <a class="ticker-item" href="https://www.linkedin.com/feed/update/urn:li:activity:7480825650119999488" target="_blank" rel="noopener"><span class="ticker-badge news">NEWS</span> Uber GenAI Meetup, Hyderabad: 80+ builders on trust, cost, and talent in the age of agents</a>
+        <span class="ticker-sep">//</span>
+        <a class="ticker-item" href="https://www.uber.com/blog/building-ubers-multi-cloud-secrets-management-platform/" target="_blank" rel="noopener"><span class="ticker-badge blog">BLOG</span> Building Uber's Multi-Cloud Secrets Management Platform</a>
+        <span class="ticker-sep">//</span>
+        <a class="ticker-item" href="https://www.linkedin.com/feed/update/urn:li:activity:7470678708958203906" target="_blank" rel="noopener"><span class="ticker-badge news">NEWS</span> UberMobiConf: 280+ engineers on reimagining mobile with AI and platform excellence</a>
+        <span class="ticker-sep">//</span>
+        <!-- Duplicate for seamless loop -->
+        <a class="ticker-item" href="https://www.linkedin.com/feed/update/urn:li:activity:7480381351699951616" target="_blank" rel="noopener"><span class="ticker-badge news">NEWS</span> Agentic Pods: embedding engineers to cut capital allocation from 15 hours to 30 minutes</a>
+        <span class="ticker-sep">//</span>
+        <a class="ticker-item" href="https://github.com/uber-go/zap" target="_blank" rel="noopener"><span class="ticker-badge oss">OSS</span> zap — 24.3k stars: Blazing fast structured logging for Go</a>
+        <span class="ticker-sep">//</span>
+        <a class="ticker-item" href="https://jobs.uber.com/en/jobs/157162/" target="_blank" rel="noopener"><span class="ticker-badge hiring">HIRING</span> Senior ML Engineer, AV Foundation — frontier ML for autonomous vehicles</a>
+        <span class="ticker-sep">//</span>
+        <a class="ticker-item" href="https://www.linkedin.com/feed/update/urn:li:activity:7480653601560797184" target="_blank" rel="noopener"><span class="ticker-badge news">NEWS</span> Uber engineers named Agentic AI Foundation ambassadors, shaping open agent standards</a>
+        <span class="ticker-sep">//</span>
+        <a class="ticker-item" href="https://www.uber.com/blog/gitfarm-as-a-service/" target="_blank" rel="noopener"><span class="ticker-badge blog">BLOG</span> GitFarm: Git-as-a-Service — sub-500ms checkouts, 80%+ resource savings</a>
+        <span class="ticker-sep">//</span>
+        <a class="ticker-item" href="https://jobs.uber.com/en/jobs/145860/" target="_blank" rel="noopener"><span class="ticker-badge hiring">HIRING</span> Staff ML Engineer, Applied AI — foundation models across Mobility and Delivery</a>
+        <span class="ticker-sep">//</span>
+        <a class="ticker-item" href="https://www.linkedin.com/feed/update/urn:li:activity:7468693224421785601" target="_blank" rel="noopener"><span class="ticker-badge news">NEWS</span> Uber AV Labs at CVPR 2026: turning billions of real trips into training for Level 4 autonomy</a>
+        <span class="ticker-sep">//</span>
+        <a class="ticker-item" href="https://www.uber.com/blog/moirai/" target="_blank" rel="noopener"><span class="ticker-badge research">RESEARCH</span> Moirai: Lossless Straggler Mitigation — accepted at SOSP 2025</a>
+        <span class="ticker-sep">//</span>
+        <a class="ticker-item" href="https://www.uber.com/blog/ureview/" target="_blank" rel="noopener"><span class="ticker-badge blog">BLOG</span> uReview: GenAI code review analyzing 90% of Uber's ~65K weekly changes</a>
+        <span class="ticker-sep">//</span>
+        <a class="ticker-item" href="https://www.linkedin.com/feed/update/urn:li:activity:7480289597206315011" target="_blank" rel="noopener"><span class="ticker-badge news">NEWS</span> Uber at the AI Engineer World's Fair: agentic SDLC, GenAI code review, and multimodal evals</a>
+        <span class="ticker-sep">//</span>
+        <a class="ticker-item" href="https://jobs.uber.com/en/jobs/154537/" target="_blank" rel="noopener"><span class="ticker-badge hiring">HIRING</span> Senior Security Incident Commander — lead Uber's critical security response</a>
+        <span class="ticker-sep">//</span>
+        <a class="ticker-item" href="https://github.com/uber/RIBs" target="_blank" rel="noopener"><span class="ticker-badge oss">OSS</span> RIBs — 7.9k stars: Cross-platform mobile architecture framework</a>
+        <span class="ticker-sep">//</span>
+        <a class="ticker-item" href="https://www.linkedin.com/feed/update/urn:li:activity:7480825650119999488" target="_blank" rel="noopener"><span class="ticker-badge news">NEWS</span> Uber GenAI Meetup, Hyderabad: 80+ builders on trust, cost, and talent in the age of agents</a>
+        <span class="ticker-sep">//</span>
+        <a class="ticker-item" href="https://www.uber.com/blog/building-ubers-multi-cloud-secrets-management-platform/" target="_blank" rel="noopener"><span class="ticker-badge blog">BLOG</span> Building Uber's Multi-Cloud Secrets Management Platform</a>
+        <span class="ticker-sep">//</span>
+        <a class="ticker-item" href="https://www.linkedin.com/feed/update/urn:li:activity:7470678708958203906" target="_blank" rel="noopener"><span class="ticker-badge news">NEWS</span> UberMobiConf: 280+ engineers on reimagining mobile with AI and platform excellence</a>
+        <span class="ticker-sep">//</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-pulse">
+    <div class="container">
+      <div class="pulse-grid">
+        <div class="pulse-stat">
+          <span class="pulse-number" data-target="1.1" data-suffix="M+" data-decimals="1">0</span>
+          <span class="pulse-label">concurrent trips &amp; orders</span>
+        </div>
+        <div class="pulse-stat">
+          <span class="pulse-number" data-target="26" data-suffix="M">0</span>
+          <span class="pulse-label">requests/sec across microservices</span>
+        </div>
+        <div class="pulse-stat">
+          <span class="pulse-number" data-target="500" data-suffix="B">0</span>
+          <span class="pulse-label">ETA predictions served per day</span>
+        </div>
+        <div class="pulse-stat">
+          <span class="pulse-number" data-target="8" data-suffix="K+">0</span>
+          <span class="pulse-label">ML models in production</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Engineering Values (Living Map) -->
+  <section class="section section-values" id="how-we-build" tabindex="-1">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">How We Build</h2>
+        <p class="section-subtitle">Principles forged by the demands of real-time, physical-world systems.</p>
+      </div>
+
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#276EF1" stroke-width="1.5">
+              <circle cx="7" cy="7" r="3"/><circle cx="17" cy="7" r="3"/><circle cx="12" cy="17" r="3"/>
+              <path d="M9.5 8.5L11 15M14.5 8.5L13 15M7 10v0M17 10v0"/>
+            </svg>
+          </div>
+          <h3 class="value-title">Multi-sided Marketplace</h3>
+          <p class="value-desc">Real-time forecasting, dynamic pricing & matching across earners, consumers and merchants — all in milliseconds.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#276EF1" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/><path d="M2 12h20"/>
+            </svg>
+          </div>
+          <h3 class="value-title">Hyper-local Geospatial</h3>
+          <p class="value-desc">H3 hex grids, sub-second ETAs, real-time routing and location intelligence powering every trip on the planet.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#276EF1" stroke-width="1.5">
+              <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+            </svg>
+          </div>
+          <h3 class="value-title">Platform First</h3>
+          <p class="value-desc">Modular building blocks that let us launch new verticals — rides, eats, freight, autonomous — on shared infrastructure.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#276EF1" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2c2.5 2.5 4 5.5 4 10s-1.5 7.5-4 10c-2.5-2.5-4-5.5-4-10s1.5-7.5 4-10z"/>
+            </svg>
+          </div>
+          <h3 class="value-title">Global Adaptability</h3>
+          <p class="value-desc">70+ countries, thousands of regulatory frameworks, dozens of languages — one platform that adapts everywhere.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#276EF1" stroke-width="1.5">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3 class="value-title">Resiliency & Scalability</h3>
+          <p class="value-desc">Fault-tolerant systems serving millions of concurrent users. Five 9s is not aspirational, it is mandatory.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog with Tabbed Filter -->
+  <section id="blog" class="section section-blog">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Engineered for the Real World</h2>
+        <p class="section-subtitle">Stories of building the systems that move the world in real time.</p>
+      </div>
+
+      <div class="blogcat-grid" role="tablist" aria-label="Blog categories">
+        <button type="button" class="blogcat-card active" data-filter="ai-ml" data-label="AI / ML" role="tab" aria-selected="true">
+          <span class="blogcat-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#276EF1" stroke-width="1.5">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+            </svg>
+          </span>
+          <span class="blogcat-title">AI / ML</span>
+          <span class="blogcat-desc">ETA prediction, marketplace optimization, fraud detection, autonomous vehicles. ML models that are tested against the real world every second.</span>
+        </button>
+
+        <button type="button" class="blogcat-card" data-filter="backend" data-label="Backend" role="tab" aria-selected="false">
+          <span class="blogcat-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#276EF1" stroke-width="1.5">
+              <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/>
+            </svg>
+          </span>
+          <span class="blogcat-title">Backend</span>
+          <span class="blogcat-desc">4,000+ microservices, millions of RPS, five 9s reliability. The backbone that keeps 41M daily trips running without a hitch.</span>
+        </button>
+
+        <button type="button" class="blogcat-card" data-filter="data" data-label="Data" role="tab" aria-selected="false">
+          <span class="blogcat-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#276EF1" stroke-width="1.5">
+              <path d="M21 12a9 9 0 11-6.22-8.56"/><path d="M21 3v5h-5"/><circle cx="12" cy="12" r="3"/>
+            </svg>
+          </span>
+          <span class="blogcat-title">Data</span>
+          <span class="blogcat-desc">Trillions of events daily. Real-time streaming, data lakes, analytics infrastructure that turns raw signals into decisions at global scale.</span>
+        </button>
+
+        <button type="button" class="blogcat-card" data-filter="mobile" data-label="Mobile" role="tab" aria-selected="false">
+          <span class="blogcat-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#276EF1" stroke-width="1.5">
+              <rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/>
+            </svg>
+          </span>
+          <span class="blogcat-title">Mobile</span>
+          <span class="blogcat-desc">The digital window to the physical world. The tap that becomes a ride. Cross-platform apps used by 200M+ people worldwide.</span>
+        </button>
+
+        <button type="button" class="blogcat-card" data-filter="security" data-label="Security" role="tab" aria-selected="false">
+          <span class="blogcat-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#276EF1" stroke-width="1.5">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/>
+            </svg>
+          </span>
+          <span class="blogcat-title">Security</span>
+          <span class="blogcat-desc">Identity, encryption, secrets, and data classification at exabyte scale. Protecting 200M+ users across multiple clouds.</span>
+        </button>
+      </div>
+
+      <div class="blog-grid">
+        <!-- BACKEND -->
+        <a class="blog-card" data-category="backend" data-date="2026-07-09" data-featured href="https://www.uber.com/blog/gitfarm-as-a-service/" target="_blank" rel="noopener">
+          <img class="blog-card-img" loading="lazy" src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=407/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy9jY2Q3YjZiMS01ODI3LTQ3MWYtYjM5OS05OGVjOWQwZmJkZTIucG5n" alt="GitFarm Git as a Service">
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <span class="blog-card-category" style="--cat-color: #276EF1">BACKEND</span>
+            </div>
+            <h3 class="blog-card-title">GitFarm: Git as a Service for Large-Scale Monorepos</h3>
+            <p class="blog-card-excerpt">Cloning Uber's Go monorepo took 15 minutes and 40GB of disk, and thousands of clone operations overwhelmed Git servers. GitFarm delivers Git-as-a-Service over gRPC, with warm bare clones and ephemeral sandbox pools acquired in under 500ms. A read-heavy ownership service cut CPU 77%, memory 90%+, and startup from 20 minutes to under one.</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </div>
+        </a>
+
+        <a class="blog-card" data-category="backend" data-date="2026-05-28" data-featured href="https://www.uber.com/blog/modernizing-artifact-storage/" target="_blank" rel="noopener">
+          <img class="blog-card-img" loading="lazy" src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=407/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy8yY2I1ZTY2OS00ZWRhLTQ0NzUtODUwZS1kMDJjZmNkZDJmNjIucG5n" alt="Modernizing Artifact Storage">
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <span class="blog-card-category" style="--cat-color: #276EF1">BACKEND</span>
+            </div>
+            <h3 class="blog-card-title">Modernizing Artifact Storage at Uber</h3>
+            <p class="blog-card-excerpt">Uber's decade-old on-prem artifact store — serving 5+ petabytes of downloads monthly — risked write outages, silent replication failures, and multi-hour manual rebalancing. The team migrated to multi-region cloud blob storage behind a validation proxy that checks freshness via conditional HTTP requests against a MySQL metadata store. Egress fell over 99%, cutting artifact egress costs nearly 90% at 99.99% availability.</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </div>
+        </a>
+
+        <a class="blog-card" data-category="backend" data-date="2026-05-07" href="https://www.uber.com/blog/zero-growth-stack/" target="_blank" rel="noopener">
+          <img class="blog-card-img" loading="lazy" src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=552/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy9hOTc0M2Q4Ni1kNzhmLTQ1OTUtODY5MC04NDkxNzM3MzAxYWQuanBlZw==" alt="Zero-Growth Stack in Go">
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <span class="blog-card-category" style="--cat-color: #276EF1">BACKEND</span>
+            </div>
+            <h3 class="blog-card-title">Zero-Growth Stack, Real Gains: How Stack Allocation Can Save 10% CPU in Go</h3>
+            <p class="blog-card-excerpt">Go's default 2KB stack allocation triggered wasteful expansion cycles consuming 10% CPU in Uber's high-throughput services. The team built a profile-guided automation system reading CPU profiles and binary symbols to compute optimal per-service stack sizes. Result: CPU overhead dropped below 1%, enabling 16% efficiency gains while keeping memory overhead under 2% across 2M cores.</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </div>
+        </a>
+
+        <a class="blog-card" data-category="backend" data-date="2026-05-04" href="https://www.uber.com/blog/five-layers-cloud/" target="_blank" rel="noopener">
+          <img class="blog-card-img" loading="lazy" src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=552/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy9lYTYzOGFiMC0yOGRhLTQwNWYtYWYwMy1hNTAyMTk3MDNlY2YucG5n" alt="Cloud Commitment Layers">
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <span class="blog-card-category" style="--cat-color: #276EF1">BACKEND</span>
+            </div>
+            <h3 class="blog-card-title">The 5 Layers Every Cloud Commitment Depends On</h3>
+            <p class="blog-card-excerpt">Uber's decade-long cloud commitment — a distributed systems problem spanning 10-figure spend — required mastering five physical layers. The challenge: regional topology constraints, inelastic power limits, and egress economics compound silently into cost variances. The solution: systematic qualification of compute, SKU selection, and network topology upfront. Impact: eliminating technical debt before it scales; enabling portability across zones and regions in minutes.</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </div>
+        </a>
+
+        <a class="blog-card" data-category="backend" data-date="2026-04-30" href="https://www.uber.com/blog/ansible-automation-powers/" target="_blank" rel="noopener">
+          <img class="blog-card-img" loading="lazy" src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=552/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy9iYzA2ZWY4Yy1kYjg1LTRjN2QtOTk4YS0zYmY5M2JlOGZmYzkuanBlZw==" alt="Ansible Network Automation">
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <span class="blog-card-category" style="--cat-color: #276EF1">BACKEND</span>
+            </div>
+            <h3 class="blog-card-title">How Ansible Automation Powers the Uber Corporate Network at a Global Scale</h3>
+            <p class="blog-card-excerpt">Manual management of 5,000 network devices across six continents created unstable configurations and constant downtime. Uber implemented Ansible-driven "Daily Nightly Enforcement" — automating backups, golden config generation via Jinja templates, and standardized pushes across multi-vendor hardware. Unified network state across regions, eliminated untracked manual changes overnight, and transformed a chaotic distributed system into reliably predictable infrastructure.</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </div>
+        </a>
+
+        <a class="blog-card" data-category="backend" data-date="2026-04-21" href="https://www.uber.com/blog/hybrid-core-allocation/" target="_blank" rel="noopener">
+          <img class="blog-card-img" loading="lazy" src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=552/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy81YTNhNGUwZS05YmMwLTQ0NjUtOTM3ZC0wMjAxMDc4YzcxY2EuanBlZw==" alt="Hybrid Core Allocation">
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <span class="blog-card-category" style="--cat-color: #276EF1">BACKEND</span>
+            </div>
+            <h3 class="blog-card-title">Hybrid Core Allocation: From Overallocation to Reliable Sharing</h3>
+            <p class="blog-card-excerpt">Odin's vertical CPU scaler struggled with bursty workload patterns under pure dedicated core allocation. Uber engineers introduced a hybrid model combining dedicated cores for baseline performance with shared cores for elastic bursts, managed via Linux cpusets and cpu.shares. Result: reduced overprovisioning for variable workloads, increased fleet-wide CPU utilization, and maintained service-level guarantees without cross-host workload migration.</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </div>
+        </a>
+
+<!-- DATA -->
+        <a class="blog-card" data-category="data" data-date="2026-06-11" data-featured href="https://www.uber.com/blog/data-abstraction-layer/" target="_blank" rel="noopener">
+          <img class="blog-card-img" loading="lazy" src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=407/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy82ZDg1MzliMC04MmQ4LTQ4YWMtOGQ5Ni1lYWE2ZmIxMTkyNzAuanBlZw==" alt="Data Abstraction Layer">
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <span class="blog-card-category" style="--cat-color: #276EF1">DATA</span>
+            </div>
+            <h3 class="blog-card-title">Simplifying Data and Product Integrations with a Data Abstraction Layer</h3>
+            <p class="blog-card-excerpt">Building a new advertiser report took weeks to months because queries were tightly coupled to constantly evolving data schemas fragmented across sources. Uber's Data Abstraction Layer, an RPC service, maps logical tables to physical ones via declarative config, resolving joins and aggregations across OLAP, Hive, and Docstore. Report time-to-market dropped from multi-week to under two days — roughly 90%.</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </div>
+        </a>
+
+        <a class="blog-card" data-category="data" data-date="2026-05-14" href="https://www.uber.com/blog/solving-multiple-knapsack/" target="_blank" rel="noopener">
+          <img class="blog-card-img" loading="lazy" src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=407/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy80ZWRlMzQ1OS1lNGE2LTRlNWYtYWExOC00YWE5M2UwMWEzNGIucG5n" alt="Multiple Knapsack Optimization">
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <span class="blog-card-category" style="--cat-color: #276EF1">DATA</span>
+            </div>
+            <h3 class="blog-card-title">Beyond Prediction: Solving the Multiple Knapsack Problem at Scale</h3>
+            <p class="blog-card-excerpt">Allocating millions of incentive offers across Mobility and Delivery under strict quarterly budgets relied on a manual First-In-First-Out heuristic with no optimization. Tarot frames the problem as a Multiple Knapsack Problem, pairing uplift models and a budget pacer with a CP-SAT solver. Budget utilization climbed from 68% to 99.99%, and 100,000-user problems now solve in minutes instead of 24+ hours.</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </div>
+        </a>
+
+        <a class="blog-card" data-category="data" data-date="2026-04-23" href="https://www.uber.com/blog/validating-bounding-box/" target="_blank" rel="noopener">
+          <img class="blog-card-img" loading="lazy" src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=552/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy80NWI5ZDE0Ni03NDg1LTQ2NzItOTUxNi0wY2VjY2ViZGFhOTUuanBlZw==" alt="Bounding Box Annotation Validation">
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <span class="blog-card-category" style="--cat-color: #276EF1">DATA</span>
+            </div>
+            <h3 class="blog-card-title">Validating Bounding Box Annotations</h3>
+            <p class="blog-card-excerpt">Human annotators introduce tracking errors — ID swaps, position jumps, freeze errors, scale distortions — when labeling video bounding boxes. Uber deployed an XGBoost classifier analyzing 283 visual, motion, and coordinate features across an 11-frame window to catch these failures automatically. The system flags errors in real-time before submission, eliminating costly sequential review workflows while preserving data integrity.</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </div>
+        </a>
+
+        <a class="blog-card" data-category="data" data-date="2026-04-14" href="https://www.uber.com/blog/evolution-and-scale-of-ubers-delivery-search-platform/" target="_blank" rel="noopener">
+          <img class="blog-card-img" loading="lazy" src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=2304/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy8yYmQ4MmY1Yy1kMjRhLTU2YzMtYmU3OS0wY2FiMzIxOGRhMmUucG5n" alt="Delivery Search Platform">
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <span class="blog-card-category" style="--cat-color: #276EF1">DATA</span>
+            </div>
+            <h3 class="blog-card-title">Evolution and Scale of Uber's Delivery Search Platform</h3>
+            <p class="blog-card-excerpt">Lexical search broke on Uber Eats — failing on synonyms, typos, and multilingual queries like "pan" (bread or cookware?). The new semantic stack: a two-tower deep network with a Qwen LLM backbone, trained via DeepSpeed ZeRO-3. Matryoshka embeddings cut storage 50% with under 0.3% quality loss; scalar quantization halves latency.</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </div>
+        </a>
+
+        <a class="blog-card" data-category="data" data-date="2026-03-10" href="https://www.uber.com/blog/transforming-ads-personalization/" target="_blank" rel="noopener">
+          <img class="blog-card-img" loading="lazy" src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=2304/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy83YTc2YmY3My1iMmYxLTU0NTgtOTlhNC1mODViNDBiY2ZlNTIuanBn" alt="Ads Personalization">
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <span class="blog-card-category" style="--cat-color: #276EF1">DATA</span>
+            </div>
+            <h3 class="blog-card-title">Transforming Ads Personalization with Sequential Modeling and Hetero-MMoE</h3>
+            <p class="blog-card-excerpt">Uber's ads system flattened rich behavioral sequences into summary stats and used MLP-only experts that missed cross-feature interactions. A target-aware transformer with Multi-Head Latent Attention captures sequences at O(N×L), and a Hetero-MMoE blends MLP, DCN, and CIN experts. Production gains: +0.93% pCTR AUC and +0.66% pCTO AUC.</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </div>
+        </a>
+
+        <a class="blog-card" data-category="data" data-date="2026-02-19" href="https://www.uber.com/blog/database-federation/" target="_blank" rel="noopener">
+          <img class="blog-card-img" loading="lazy" src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=2304/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy9iMzFhOTNiMS1mY2UyLTViMWYtYmM3NC1hMTAzNzgyMjc3NmYucG5n" alt="Database Federation">
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <span class="blog-card-category" style="--cat-color: #276EF1">DATA</span>
+            </div>
+            <h3 class="blog-card-title">Database Federation: Decentralized Hive Databases</h3>
+            <p class="blog-card-excerpt">16,000 datasets in one monolithic Hive metastore meant shared-fate blast radius — one bad operation could affect every team. Uber decomposed it into domain-specific databases via pointer-level metadata manipulation, achieving zero-downtime migration. Result: over 1 PB saved and the organizational independence teams needed to own their data contracts.</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </div>
+        </a>
+
+<!-- MOBILE -->
+        <a class="blog-card" data-category="mobile" data-date="2026-03-11" data-featured href="https://www.uber.com/blog/automate-design-specs/" target="_blank" rel="noopener">
+          <img class="blog-card-img" loading="lazy" src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=2304/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy8xZDU1ODE5YS1mOWNlLTVkZjgtOGZiNy04YTgwZDk1YmZkZTMucG5n" alt="Design Specs Automation">
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <span class="blog-card-category" style="--cat-color: #276EF1">MOBILE</span>
+            </div>
+            <h3 class="blog-card-title">How Uber Built an Agentic System to Automate Design Specs in Minutes</h3>
+            <p class="blog-card-excerpt">Manual design specs across UIKit, SwiftUI, Android XML, Compose, Web React, Go, and SDUI were a bottleneck causing constant documentation drift. uSpec combines AI agents with a Figma Console MCP bridge that reads real tokens and variants directly from Figma — running locally via Cursor over WebSocket. Screen reader specs across all 3 platforms now generate in under 2 minutes.</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </div>
+        </a>
+
+        <a class="blog-card" data-category="mobile" data-date="2025-10-02" href="https://www.uber.com/blog/how-uber-standardized-mobile-analytics/" target="_blank" rel="noopener">
+          <img class="blog-card-img" loading="lazy" src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=2304/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy84OWYzOGQ5Ny1iMmEyLTU0NWYtYjgxMi0zZmZkMTgwOTQ1ZjIuanBn" alt="Mobile Analytics">
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <span class="blog-card-category" style="--cat-color: #276EF1">MOBILE</span>
+            </div>
+            <h3 class="blog-card-title">Standardized Mobile Analytics for Cross-Platform Insights</h3>
+            <p class="blog-card-excerpt">Over 40% of Uber's mobile events were ad-hoc custom logs, breaking cross-platform analysis and impression accuracy. The team standardized to three universal event types — tap, impression, scroll — using AnalyticsBuilder classes that capture metadata at the platform layer. Result: 30% less transient-impression noise and reliable iOS/Android parity.</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </div>
+        </a>
+
+        <a class="blog-card" data-category="mobile" data-date="2024-11-14" href="https://www.uber.com/blog/unified-checkout/" target="_blank" rel="noopener">
+          <img class="blog-card-img" loading="lazy" src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=2304/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy80YTEyMDQ2YS05ZjNhLTUxZjMtOWI0ZC1lNDU3MjU1YjUxZDAuanBlZw==" alt="Unified Checkout">
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <span class="blog-card-category" style="--cat-color: #276EF1">MOBILE</span>
+            </div>
+            <h3 class="blog-card-title">Unified Checkout: Streamlining Uber's Payment Ecosystem</h3>
+            <p class="blog-card-excerpt">Every Uber line of business had built payments independently — duplicated logic, inconsistent UX, Apple Pay missing from half the flows. EU Strong Customer Authentication forced a reckoning. Uber built a centralized checkout orchestrator with modular components each LOB plugs into. Holdout results: 3% higher conversion, 4.5% better session recovery, hundreds of millions in incremental gross bookings.</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </div>
+        </a>
+
+        <a class="blog-card" data-category="mobile" data-date="2024-09-24" href="https://www.uber.com/blog/design-system-at-scale/" target="_blank" rel="noopener">
+          <img class="blog-card-img" loading="lazy" src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=2304/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy8xYTVkN2M0OC1lNjM1LTU0MzAtYjEwOS05ZGE4YmY1OTQwNWYuanBlZw==" alt="Design System at Scale">
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <span class="blog-card-category" style="--cat-color: #276EF1">MOBILE</span>
+            </div>
+            <h3 class="blog-card-title">Measuring Design System Adoption at Scale</h3>
+            <p class="blog-card-excerpt">Uber's Rider app launches features across hundreds of screens and thousands of feature flags — making manual design system audits impossible. Design System Observability adds a deterministic component scanner that flags non-Base elements, plus a daily screenshot pipeline that auto-files Jira tickets for violations. Teams using Base report 3x faster development and 50% less code.</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </div>
+        </a>
+
+        <a class="blog-card" data-category="mobile" data-date="2024-09-12" href="https://www.uber.com/blog/executive-travel/" target="_blank" rel="noopener">
+          <img class="blog-card-img" loading="lazy" src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=2304/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy84YzM2M2FjOC0yNDQ4LTUzMDktYWFmZi01MjM5NGEwZTI4ZTAuanBlZw==" alt="Delegate Booking">
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <span class="blog-card-category" style="--cat-color: #276EF1">MOBILE</span>
+            </div>
+            <h3 class="blog-card-title">Transforming Executive Travel: Delegate Booking</h3>
+            <p class="blog-card-excerpt">Letting executive assistants book rides for executives meant rethinking trip ownership, identity, billing, and notifications across 30+ backend services and 5 client platforms. Uber introduced a "participant model" extending every booking, tracking, and billing touchpoint to support multiple user profiles per trip — with full audit trails for both EA and executive.</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </div>
+        </a>
+
+        <a class="blog-card" data-category="mobile" data-date="2024-07-25" href="https://www.uber.com/blog/live-activity-on-ios/" target="_blank" rel="noopener">
+          <img class="blog-card-img" loading="lazy" src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=2304/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy80YTRhZWQxNi04ZWI0LTVjOWUtYWQ3YS03Mzk2ZTQ5ZDBkZDAucG5n" alt="Uber Live Activity on iOS">
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <span class="blog-card-category" style="--cat-color: #276EF1">MOBILE</span>
+            </div>
+            <h3 class="blog-card-title">Uber's Live Activity on iOS</h3>
+            <p class="blog-card-excerpt">Live Activities run sandboxed with no network access — yet Uber needed real-time driver location on the lock screen. App Groups share on-disk state between the main app and Live Activity, a lightweight DSL syncs content logic across iOS Live Activities and Android push, and an OOA backend debounces updates. Result: 2.26% fewer driver and 2.13% fewer rider cancellations at pickup.</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </div>
+        </a>
+<!-- AI / ML -->
+        <a class="blog-card" data-category="ai-ml" data-date="2026-06-16" data-featured href="https://www.uber.com/blog/uber-cart-assistant/" target="_blank" rel="noopener">
+          <img class="blog-card-img" loading="lazy" src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=407/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy8wMzFkYTAzNi01YjczLTQzYzQtYmQ2Ny0yOGZiZGMyNjhkYjQucG5n" alt="Cart Assistant on Uber Eats">
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <span class="blog-card-category" style="--cat-color: #276EF1">AI / ML</span>
+            </div>
+            <h3 class="blog-card-title">Cart Assistant: Agentic Grocery Shopping on Uber Eats</h3>
+            <p class="blog-card-excerpt">Turning handwritten lists, recipe screenshots, and vague meal plans into a grocery cart forces users to hand-translate intent into dozens of searches. Uber Eats' Cart Assistant decomposes the task into an eight-stage state graph — LLM planning, candidate retrieval, semantic relevance judging, and deterministic price and quantity guardrails — processing items concurrently to keep the agentic shopping flow fast.</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </div>
+        </a>
+
+        <a class="blog-card" data-category="ai-ml" data-date="2026-06-04" href="https://www.uber.com/blog/ubers-file-analyzer/" target="_blank" rel="noopener">
+          <img class="blog-card-img" loading="lazy" src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=407/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy9jODA0ZmExOS0yM2Y5LTRmMjgtYmU1NS0zYjJiZDE4YWFhNjkuanBlZw==" alt="File Semantic Analyzer">
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <span class="blog-card-category" style="--cat-color: #276EF1">AI / ML</span>
+            </div>
+            <h3 class="blog-card-title">Building a File Semantic Analyzer: Guarding Outbound Data at Scale with AI</h3>
+            <p class="blog-card-excerpt">Keyword-based data-loss prevention drowned analysts in false positives while missing real exfiltration across thousands of employees' files. Uber's File Semantic Analyzer uses fine-tuned LLMs — OCR, chunking, summarization, and entity extraction — to reason over file meaning and intent, with transparent justifications. False positives fell 97%, incident response dropped from hours to minutes, saving four person-years annually across 150,000 files.</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </div>
+        </a>
+
+        <a class="blog-card" data-category="ai-ml" data-date="2026-05-19" href="https://www.uber.com/blog/scaling-real-time-traffic/" target="_blank" rel="noopener">
+          <img class="blog-card-img" loading="lazy" src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=407/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy80NjdiZmE2Mi1jNDMzLTQ4NzMtYTU0OC04MjQ3YjI3ODdhMzYuanBlZw==" alt="Real-Time Traffic Forecasting">
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <span class="blog-card-category" style="--cat-color: #276EF1">AI / ML</span>
+            </div>
+            <h3 class="blog-card-title">Scaling Real-Time Traffic Forecasting with a Graph-Aware Transformer</h3>
+            <p class="blog-card-excerpt">Uber's legacy traffic system couldn't adapt to incidents, weather, and sparse rural roads where segment errors compound on long trips. DeepETT, a multi-view transformer, tokenizes pre-aggregated spatial and temporal observations for constant-time inference, with a Flink pipeline calibrating drift in real time. It serves 2M+ forecasts per second, improving long-trip accuracy 6% and variance explained 19% — $100M annualized value.</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </div>
+        </a>
+
+        <a class="blog-card" data-category="ai-ml" data-date="2026-05-12" href="https://www.uber.com/blog/first-pass-prd/" target="_blank" rel="noopener">
+          <img class="blog-card-img" loading="lazy" src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=552/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy9mY2MwOGExMy0xNmM1LTQwZmEtYTQ2ZC02NzlkYzY5YzQ3YzEucG5n" alt="AI PRD Reviewer">
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <span class="blog-card-category" style="--cat-color: #276EF1">AI / ML</span>
+            </div>
+            <h3 class="blog-card-title">Lessons from Building a First-Pass AI PRD Reviewer at Uber</h3>
+            <p class="blog-card-excerpt">Product review processes surfaced critical gaps too late, forcing teams into costly rework on unsupported assumptions and blind dependencies. Uber built an AI-powered PRD Evaluator that assembles contextual knowledge across linked documents, prior experiments, and company-specific frameworks to audit proposals before high-level review. Early adoption by dozens of PMs revealed stronger artifact quality entering checkpoints and sharper, faster review discussions.</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </div>
+        </a>
+
+        <a class="blog-card" data-category="ai-ml" data-date="2026-04-15" href="https://www.uber.com/blog/ai-prototyping/" target="_blank" rel="noopener">
+          <img class="blog-card-img" loading="lazy" src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=2304/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy9hZWZiYjNkNS1kZDJlLTRhNzgtYmJkMi1hZmNhYTQyNjdhN2EucG5n" alt="AI Prototyping">
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <span class="blog-card-category" style="--cat-color: #276EF1">AI / ML</span>
+            </div>
+            <h3 class="blog-card-title">AI Prototyping Is Changing How We Build Products at Uber</h3>
+            <p class="blog-card-excerpt">Cross-functional alignment used to take weeks of meetings and PRDs. AI prototyping tools — Lovable, Figma Make, Claude Code, Cursor — compressed a merchant team's four-week discussion into two hours, and let a PM explore six concepts in 20 minutes. Nearly 40% of Uber's global hackathon submissions now incorporate these tools.</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </div>
+        </a>
+
+        <a class="blog-card" data-category="ai-ml" data-date="2026-04-14" href="https://www.uber.com/blog/open-source-and-in-house-how-uber-optimizes-llm-training/" target="_blank" rel="noopener">
+          <img class="blog-card-img" loading="lazy" src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=2304/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy81MzIyM2ZkNy1kNjMyLTVkYjgtOTAxYi01MTJmODQ0ZWE0MmEucG5n" alt="LLM Training">
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <span class="blog-card-category" style="--cat-color: #276EF1">AI / ML</span>
+            </div>
+            <h3 class="blog-card-title">Open Source and In-House: How Uber Optimizes LLM Training</h3>
+            <p class="blog-card-excerpt">Training LLMs for Eats, support, and code gen at Uber means squeezing every GPU cycle. The stack: PyTorch, Ray, DeepSpeed ZeRO-3 CPU Offload (34% memory reduction, 2-7x batch sizes), and Flash Attention (50% memory savings). On H100, Mixtral 8x7b achieves 3x A100 throughput, scaling linearly to batch 64.</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </div>
+        </a>
+
+<!-- SECURITY -->
+        <a class="blog-card" data-category="security" data-date="2026-05-21" data-featured href="https://www.uber.com/blog/solving-the-agent-identity-crisis/" target="_blank" rel="noopener">
+          <img class="blog-card-img" loading="lazy" src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=407/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy9mNTAxNTRjMy1hNjU4LTQ2YTQtODQ1Yi01ZTk4YTA4ZGE4MmYucG5n" alt="AI Agent Identity">
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <span class="blog-card-category" style="--cat-color: #276EF1">SECURITY</span>
+            </div>
+            <h3 class="blog-card-title">Solving the Identity Crisis for AI Agents</h3>
+            <p class="blog-card-excerpt">When AI agents delegate across systems, the original human's identity vanishes, breaking audit trails and fine-grained access control. Uber extended its Zero Trust architecture with an Agent Registry, a Security Token Service issuing short-lived single-hop JWTs carrying the full actor chain, and an MCP Gateway enforcing policy. Deployed across thousands of agents, token exchange stays under 40ms at P99.</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </div>
+        </a>
+
+        <a class="blog-card" data-category="security" data-date="2026-02-26" href="https://www.uber.com/blog/superuser-gateway-guardrails/" target="_blank" rel="noopener">
+          <img class="blog-card-img" loading="lazy" src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=2304/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy83N2I0YTMwNi0wYTMxLTU2NzYtYTg1Ni01OGM1YWFkYTE3NmMuanBn" alt="Superuser Gateway">
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <span class="blog-card-category" style="--cat-color: #276EF1">SECURITY</span>
+            </div>
+            <h3 class="blog-card-title">Superuser Gateway: Guardrails for Privileged Command Execution</h3>
+            <p class="blog-card-excerpt">A misplaced flag in a privileged `rm -r` could silently delete a production dataset with no audit trail. Superuser Gateway removes superuser credentials from engineers' machines entirely, routing privileged commands through a Git-backed PR workflow with CLI submission, CI validation, peer approval, and controlled remote execution. Now standard for all data platform admins.</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </div>
+        </a>
+
+        <a class="blog-card" data-category="security" data-date="2025-09-18" href="https://www.uber.com/blog/adding-determinism-and-safety-to-uber-iam-policy-changes/" target="_blank" rel="noopener">
+          <img class="blog-card-img" loading="lazy" src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=2304/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy9jYmJiOTZjZC0zYTkzLTViNjQtODkwMy0yMmVmZDRiMjJjYTIuanBn" alt="IAM Policy Safety">
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <span class="blog-card-category" style="--cat-color: #276EF1">SECURITY</span>
+            </div>
+            <h3 class="blog-card-title">Determinism and Safety in IAM Policy Changes</h3>
+            <p class="blog-card-excerpt">An accidental IAM change on a critical gateway once stopped Uber Eats customers from modifying orders — and ~10% of monthly policy changes involve risky privilege removal. The Policy Simulator pulls 30–90 days of access logs from Apache Pinot and replays them through current vs. proposed policies. Cadence-orchestrated, sub-minute impact analysis before anything ships.</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </div>
+        </a>
+
+        <a class="blog-card" data-category="security" data-date="2025-06-18" href="https://www.uber.com/blog/automating-kerberos-keytab-rotation-at-uber/" target="_blank" rel="noopener">
+          <img class="blog-card-img" loading="lazy" src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=2304/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy85NGQwNDE4ZS1hNTdiLTUzODItYmIxNi03ZTJiNGY5OTVhMGYucG5n" alt="Kerberos Keytab Rotation">
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <span class="blog-card-category" style="--cat-color: #276EF1">SECURITY</span>
+            </div>
+            <h3 class="blog-card-title">Automating Kerberos Keytab Rotation at Uber</h3>
+            <p class="blog-card-excerpt">Rotating 100,000+ Kerberos keytabs is risky: rotation invalidates the previous key immediately, leaving applications without valid credentials. Uber's solution generates keytabs with both old and new versions during transitions, drops fetch intervals to 30s, and integrates with the Secret Management Platform. Now rotates 30,000+ keytabs monthly with zero disruptions.</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </div>
+        </a>
+
+        <a class="blog-card" data-category="security" data-date="2025-05-15" href="https://www.uber.com/blog/building-ubers-multi-cloud-secrets-management-platform/" target="_blank" rel="noopener">
+          <img class="blog-card-img" loading="lazy" src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=2304/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy8yYmQ1YWVlNy0zZTkwLTU5ZGItYjI2Ni1lMWNkYjkyMTNkYzYuanBn" alt="Secrets Management">
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <span class="blog-card-category" style="--cat-color: #276EF1">SECURITY</span>
+            </div>
+            <h3 class="blog-card-title">Multi-Cloud Secrets Management Platform</h3>
+            <p class="blog-card-excerpt">150,000 secrets across 25 fragmented vaults — no centralized detection, rotation, or attribution. Uber consolidated into 6 managed vaults, deployed real-time scanning across git/Slack/CI, and built a Cadence-orchestrated Secret Lifecycle Manager. A team of 10 now drives 20,000 automated monthly rotations with 90% fewer secrets exposed in pipelines.</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </div>
+        </a>
+
+        <a class="blog-card" data-category="security" data-date="2024-07-30" href="https://www.uber.com/blog/securing-hadoop-on-gcp/" target="_blank" rel="noopener">
+          <img class="blog-card-img" loading="lazy" src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=2304/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy9iNDExMDJhOS0yZDU1LTUyM2YtYTYxZS01NGFmYTc5ZDEyMGIuanBn" alt="Hadoop GCS Security">
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              <span class="blog-card-category" style="--cat-color: #276EF1">SECURITY</span>
+            </div>
+            <h3 class="blog-card-title">Security for Hadoop Data Lake on Google Cloud Storage</h3>
+            <p class="blog-card-excerpt">Migrating 160+ PB from HDFS to GCS meant bridging Kerberos delegation tokens and GCP OAuth 2.0 — without changing any of thousands of analytical jobs. The Storage Access Service intercepts FileSystem calls, exchanges Hadoop tokens for time-bound GCP credentials, and caches across three layers. Handles 500,000+ RPS at 0.026ms average latency.</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </div>
+        </a>
+</div>
+
+      <div class="section-cta">
+        <a href="https://www.uber.com/blog/engineering/" class="btn btn-outline" target="_blank" rel="noopener">View all posts</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research -->
+  <section id="news" class="section section-news">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">News</h2>
+        <p class="section-subtitle">The latest from Uber Engineering and beyond.</p>
+      </div>
+
+      <div class="news-grid">
+        <a class="news-card" href="https://www.linkedin.com/feed/update/urn:li:activity:7480381351699951616" target="_blank" rel="noopener">
+          <img class="news-img" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNDAwIiBmaWxsPSJub25lIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSI4MDAiIHkyPSI0MDAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBzdG9wLWNvbG9yPSIjMEIwRTE0Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMTQxQTI0Ii8+PC9saW5lYXJHcmFkaWVudD48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNNDAgMEgwVjQwIiBzdHJva2U9IiMxRTNBNUYiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLW9wYWNpdHk9IjAuMzUiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MDAiIGhlaWdodD0iNDAwIiBmaWxsPSJ1cmwoI2JnKSIvPjxyZWN0IHdpZHRoPSI4MDAiIGhlaWdodD0iNDAwIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PGcgc3Ryb2tlPSIjNUI5M0Y1IiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLW9wYWNpdHk9IjAuNyI+PGxpbmUgeDE9IjQwMCIgeTE9IjE4OCIgeDI9IjI1MCIgeTI9IjExMiIvPjxsaW5lIHgxPSI0MDAiIHkxPSIxODgiIHgyPSI1NTYiIHkyPSIxMTIiLz48bGluZSB4MT0iNDAwIiB5MT0iMTg4IiB4Mj0iMjE0IiB5Mj0iMjg2Ii8+PGxpbmUgeDE9IjQwMCIgeTE9IjE4OCIgeDI9IjU5MiIgeTI9IjI4NiIvPjwvZz48cG9seWdvbiBwb2ludHM9IjI4MC4wLDExMi4wIDI2NS4wLDEzOC4wIDIzNS4wLDEzOC4wIDIyMC4wLDExMi4wIDIzNS4wLDg2LjAgMjY1LjAsODYuMCIgZmlsbD0iIzEwMTgyNiIgc3Ryb2tlPSIjMjc2RUYxIiBzdHJva2Utd2lkdGg9IjMuNSIvPjxjaXJjbGUgY3g9IjI1MCIgY3k9IjExMiIgcj0iNSIgZmlsbD0iIzI3NkVGMSIvPjxwb2x5Z29uIHBvaW50cz0iNTg2LjAsMTEyLjAgNTcxLjAsMTM4LjAgNTQxLjAsMTM4LjAgNTI2LjAsMTEyLjAgNTQxLjAsODYuMCA1NzEuMCw4Ni4wIiBmaWxsPSIjMTAxODI2IiBzdHJva2U9IiMwNkMxNjciIHN0cm9rZS13aWR0aD0iMy41Ii8+PGNpcmNsZSBjeD0iNTU2IiBjeT0iMTEyIiByPSI1IiBmaWxsPSIjMDZDMTY3Ii8+PHBvbHlnb24gcG9pbnRzPSIyNDQuMCwyODYuMCAyMjkuMCwzMTIuMCAxOTkuMCwzMTIuMCAxODQuMCwyODYuMCAxOTkuMCwyNjAuMCAyMjkuMCwyNjAuMCIgZmlsbD0iIzEwMTgyNiIgc3Ryb2tlPSIjMjc2RUYxIiBzdHJva2Utd2lkdGg9IjMuNSIvPjxjaXJjbGUgY3g9IjIxNCIgY3k9IjI4NiIgcj0iNSIgZmlsbD0iIzI3NkVGMSIvPjxwb2x5Z29uIHBvaW50cz0iNjIyLjAsMjg2LjAgNjA3LjAsMzEyLjAgNTc3LjAsMzEyLjAgNTYyLjAsMjg2LjAgNTc3LjAsMjYwLjAgNjA3LjAsMjYwLjAiIGZpbGw9IiMxMDE4MjYiIHN0cm9rZT0iIzVCOTNGNSIgc3Ryb2tlLXdpZHRoPSIzLjUiLz48Y2lyY2xlIGN4PSI1OTIiIGN5PSIyODYiIHI9IjUiIGZpbGw9IiM1QjkzRjUiLz48Y2lyY2xlIGN4PSI0MDAiIGN5PSIxODgiIHI9IjQwIiBmaWxsPSIjMTAxODI2IiBzdHJva2U9IiMyNzZFRjEiIHN0cm9rZS13aWR0aD0iNCIvPjxjaXJjbGUgY3g9IjQwMCIgY3k9IjE4OCIgcj0iMTQiIGZpbGw9IiMyNzZFRjEiLz48Y2lyY2xlIGN4PSI0MDAiIGN5PSIxODgiIHI9IjI2IiBmaWxsPSJub25lIiBzdHJva2U9IiMyNzZFRjEiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLW9wYWNpdHk9IjAuNSIvPjx0ZXh0IHg9IjQwIiB5PSIzNjIiIGZpbGw9IiM1QjY2NzMiIGZvbnQtZmFtaWx5PSJ1aS1tb25vc3BhY2UsTWVubG8sbW9ub3NwYWNlIiBmb250LXNpemU9IjIwIiBsZXR0ZXItc3BhY2luZz0iMyI+Ly8gQUdFTlRJQyBBSTwvdGV4dD48L3N2Zz4=" alt="Agentic AI at Uber">
+          <div class="news-body">
+            <h3 class="news-title">Inside Uber's Agentic Pods</h3>
+            <p class="news-excerpt">Uber embeds engineers alongside operators to hunt for AI wins hiding in plain sight. The results: capital allocation from 15 hours to 30 minutes, financial reports from two days to ten.</p>
+            <span class="news-link">Read more &rarr;</span>
+          </div>
+        </a>
+        <a class="news-card" href="https://www.linkedin.com/feed/update/urn:li:activity:7480653601560797184" target="_blank" rel="noopener">
+          <img class="news-img" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNDAwIiBmaWxsPSJub25lIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSI4MDAiIHkyPSI0MDAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBzdG9wLWNvbG9yPSIjMEIwRTE0Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMTQxQTI0Ii8+PC9saW5lYXJHcmFkaWVudD48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNNDAgMEgwVjQwIiBzdHJva2U9IiMxRTNBNUYiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLW9wYWNpdHk9IjAuMzUiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MDAiIGhlaWdodD0iNDAwIiBmaWxsPSJ1cmwoI2JnKSIvPjxyZWN0IHdpZHRoPSI4MDAiIGhlaWdodD0iNDAwIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PGcgc3Ryb2tlPSIjNUI5M0Y1IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1vcGFjaXR5PSIwLjQiPjxsaW5lIHgxPSI0MDAiIHkxPSIxODAiIHgyPSIxODAiIHkyPSIxMjAiLz48bGluZSB4MT0iNDAwIiB5MT0iMTgwIiB4Mj0iMzAwIiB5Mj0iOTAiLz48bGluZSB4MT0iNDAwIiB5MT0iMTgwIiB4Mj0iNTIwIiB5Mj0iOTUiLz48bGluZSB4MT0iNDAwIiB5MT0iMTgwIiB4Mj0iNjQwIiB5Mj0iMTQwIi8+PGxpbmUgeDE9IjQwMCIgeTE9IjE4MCIgeDI9IjIxMCIgeTI9IjI5MCIvPjxsaW5lIHgxPSI0MDAiIHkxPSIxODAiIHgyPSI2MTAiIHkyPSIyODUiLz48L2c+PGNpcmNsZSBjeD0iMTgwIiBjeT0iMTIwIiByPSI3IiBmaWxsPSIjMTAxODI2IiBzdHJva2U9IiM1QjkzRjUiIHN0cm9rZS13aWR0aD0iMi41Ii8+PGNpcmNsZSBjeD0iMzAwIiBjeT0iOTAiIHI9IjciIGZpbGw9IiMxMDE4MjYiIHN0cm9rZT0iIzVCOTNGNSIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48Y2lyY2xlIGN4PSI1MjAiIGN5PSI5NSIgcj0iNyIgZmlsbD0iIzEwMTgyNiIgc3Ryb2tlPSIjNUI5M0Y1IiBzdHJva2Utd2lkdGg9IjIuNSIvPjxjaXJjbGUgY3g9IjY0MCIgY3k9IjE0MCIgcj0iNyIgZmlsbD0iIzEwMTgyNiIgc3Ryb2tlPSIjNUI5M0Y1IiBzdHJva2Utd2lkdGg9IjIuNSIvPjxjaXJjbGUgY3g9IjIxMCIgY3k9IjI5MCIgcj0iNyIgZmlsbD0iIzEwMTgyNiIgc3Ryb2tlPSIjNUI5M0Y1IiBzdHJva2Utd2lkdGg9IjIuNSIvPjxjaXJjbGUgY3g9IjYxMCIgY3k9IjI4NSIgcj0iNyIgZmlsbD0iIzEwMTgyNiIgc3Ryb2tlPSIjNUI5M0Y1IiBzdHJva2Utd2lkdGg9IjIuNSIvPjxjaXJjbGUgY3g9IjMwMCIgY3k9IjkwIiByPSI5IiBmaWxsPSIjMDZDMTY3Ii8+PGNpcmNsZSBjeD0iNTIwIiBjeT0iOTUiIHI9IjkiIGZpbGw9IiMwNkMxNjciLz48cGF0aCBkPSJNMzg0IDIxNCBMMzcyIDI3MCBMNDAwIDI1MCBMNDI4IDI3MCBMNDE2IDIxNCBaIiBmaWxsPSIjMTAxODI2IiBzdHJva2U9IiMwNkMxNjciIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxjaXJjbGUgY3g9IjQwMCIgY3k9IjE3OCIgcj0iNTQiIGZpbGw9IiMxMDE4MjYiIHN0cm9rZT0iIzI3NkVGMSIgc3Ryb2tlLXdpZHRoPSI0Ii8+PGNpcmNsZSBjeD0iNDAwIiBjeT0iMTc4IiByPSI0MiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjc2RUYxIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLW9wYWNpdHk9IjAuNSIvPjxwb2x5Z29uIHBvaW50cz0iNDAwLDE0NiA0MDcsMTY4IDQzMCwxNjggNDExLDE4MSA0MTgsMjAzIDQwMCwxOTAgMzgyLDIwMyAzODksMTgxIDM3MCwxNjggMzkzLDE2OCIgZmlsbD0iIzI3NkVGMSIvPjx0ZXh0IHg9IjQwIiB5PSIzNjIiIGZpbGw9IiM1QjY2NzMiIGZvbnQtZmFtaWx5PSJ1aS1tb25vc3BhY2UsTWVubG8sbW9ub3NwYWNlIiBmb250LXNpemU9IjIwIiBsZXR0ZXItc3BhY2luZz0iMyI+Ly8gT1BFTiBTT1VSQ0U8L3RleHQ+PC9zdmc+" alt="Agentic AI Foundation">
+          <div class="news-body">
+            <h3 class="news-title">Uber Engineers Named Agentic AI Foundation Ambassadors</h3>
+            <p class="news-excerpt">Uber engineers Gaurav Goel and Sanjeev Suresh are named Agentic AI Foundation ambassadors — recognizing the technical leadership shaping open standards for how autonomous agents are built, secured, and governed.</p>
+            <span class="news-link">Read more &rarr;</span>
+          </div>
+        </a>
+        <a class="news-card" href="https://www.linkedin.com/feed/update/urn:li:activity:7468693224421785601" target="_blank" rel="noopener">
+          <img class="news-img" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNDAwIiBmaWxsPSJub25lIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSI4MDAiIHkyPSI0MDAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBzdG9wLWNvbG9yPSIjMEIwRTE0Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMTQxQTI0Ii8+PC9saW5lYXJHcmFkaWVudD48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNNDAgMEgwVjQwIiBzdHJva2U9IiMxRTNBNUYiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLW9wYWNpdHk9IjAuMzUiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MDAiIGhlaWdodD0iNDAwIiBmaWxsPSJ1cmwoI2JnKSIvPjxyZWN0IHdpZHRoPSI4MDAiIGhlaWdodD0iNDAwIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PHJlY3QgeD0iMTUwIiB5PSI3MCIgd2lkdGg9IjUwMCIgaGVpZ2h0PSIyNTAiIHJ4PSI2IiBmaWxsPSJub25lIiBzdHJva2U9IiMwNkMxNjciIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWRhc2hhcnJheT0iNiA4IiBzdHJva2Utb3BhY2l0eT0iMC42Ii8+PHBhdGggZD0iTTE1MCA5MiBMMTUwIDcwIEwxNzIgNzAiIHN0cm9rZT0iIzA2QzE2NyIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTY1MCA5MiBMNjUwIDcwIEw2MjggNzAiIHN0cm9rZT0iIzA2QzE2NyIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTE1MCAyOTggTDE1MCAzMjAgTDE3MiAzMjAiIHN0cm9rZT0iIzA2QzE2NyIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTY1MCAyOTggTDY1MCAzMjAgTDYyOCAzMjAiIHN0cm9rZT0iIzA2QzE2NyIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTM0MiAyMDAgQTU4IDU4IDAgMCAxIDQ1OCAyMDAiIHN0cm9rZT0iIzI3NkVGMSIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1vcGFjaXR5PSIwLjYxIiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTMxOCAyMDAgQTgyIDgyIDAgMCAxIDQ4MiAyMDAiIHN0cm9rZT0iIzI3NkVGMSIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1vcGFjaXR5PSIwLjQ5IiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTI5NCAyMDAgQTEwNiAxMDYgMCAwIDEgNTA2IDIwMCIgc3Ryb2tlPSIjMjc2RUYxIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLW9wYWNpdHk9IjAuMzciIGZpbGw9Im5vbmUiLz48cGF0aCBkPSJNMzMwIDI1MCBxMCAtMTQgMTQgLTE0IGgyNCBsMTggLTI2IHE0IC02IDEyIC02IGg2NCBxOCAwIDEyIDYgbDE4IDI2IGgyNCBxMTQgMCAxNCAxNCB2MjAgcTAgOCAtOCA4IGgtOCBhMjAgMjAgMCAwIDAgLTQwIDAgaC03NiBhMjAgMjAgMCAwIDAgLTQwIDAgaC04IHEtOCAwIC04IC04IHoiIGZpbGw9IiMxMDE4MjYiIHN0cm9rZT0iIzI3NkVGMSIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHBhdGggZD0iTTM4MiAyMzYgbDEyIC0xOCBoMTIgdjE4IHogTTQxOCAyMzYgdi0xOCBoMTIgbDEyIDE4IHoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzVCOTNGNSIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48Y2lyY2xlIGN4PSIzNzIiIGN5PSIyNzgiIHI9IjE4IiBmaWxsPSIjMTAxODI2IiBzdHJva2U9IiMyNzZFRjEiIHN0cm9rZS13aWR0aD0iNCIvPjxjaXJjbGUgY3g9IjM3MiIgY3k9IjI3OCIgcj0iNiIgZmlsbD0iIzI3NkVGMSIvPjxjaXJjbGUgY3g9IjQ1MiIgY3k9IjI3OCIgcj0iMTgiIGZpbGw9IiMxMDE4MjYiIHN0cm9rZT0iIzI3NkVGMSIgc3Ryb2tlLXdpZHRoPSI0Ii8+PGNpcmNsZSBjeD0iNDUyIiBjeT0iMjc4IiByPSI2IiBmaWxsPSIjMjc2RUYxIi8+PHJlY3QgeD0iMTk2IiB5PSIxNTAiIHdpZHRoPSI2NiIgaGVpZ2h0PSI1MiIgcng9IjMiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzA2QzE2NyIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48dGV4dCB4PSI0MCIgeT0iMzYyIiBmaWxsPSIjNUI2NjczIiBmb250LWZhbWlseT0idWktbW9ub3NwYWNlLE1lbmxvLG1vbm9zcGFjZSIgZm9udC1zaXplPSIyMCIgbGV0dGVyLXNwYWNpbmc9IjMiPi8vIEFVVE9OT01ZPC90ZXh0Pjwvc3ZnPg==" alt="Uber AV Labs">
+          <div class="news-body">
+            <h3 class="news-title">Uber AV Labs at CVPR 2026</h3>
+            <p class="news-excerpt">Uber AV Labs took its work to CVPR 2026, showing how billions of real trips become training signal for Level 4 autonomy — mining long-tail driving scenarios at a scale few can match.</p>
+            <span class="news-link">Read more &rarr;</span>
+          </div>
+        </a>
+        <a class="news-card" href="https://www.linkedin.com/feed/update/urn:li:activity:7480289597206315011" target="_blank" rel="noopener">
+          <img class="news-img" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNDAwIiBmaWxsPSJub25lIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSI4MDAiIHkyPSI0MDAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBzdG9wLWNvbG9yPSIjMEIwRTE0Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMTQxQTI0Ii8+PC9saW5lYXJHcmFkaWVudD48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNNDAgMEgwVjQwIiBzdHJva2U9IiMxRTNBNUYiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLW9wYWNpdHk9IjAuMzUiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MDAiIGhlaWdodD0iNDAwIiBmaWxsPSJ1cmwoI2JnKSIvPjxyZWN0IHdpZHRoPSI4MDAiIGhlaWdodD0iNDAwIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PHJlY3QgeD0iMjUwIiB5PSI4NiIgd2lkdGg9IjMwMCIgaGVpZ2h0PSIxNTIiIHJ4PSIxMCIgZmlsbD0iIzEwMTgyNiIgc3Ryb2tlPSIjMjc2RUYxIiBzdHJva2Utd2lkdGg9IjQiLz48ZyBzdHJva2U9IiM1QjkzRjUiIHN0cm9rZS13aWR0aD0iMi41Ij48bGluZSB4MT0iMzA1IiB5MT0iMTkwIiB4Mj0iMzYwIiB5Mj0iMTMwIi8+PGxpbmUgeDE9IjM2MCIgeTE9IjEzMCIgeDI9IjQzMCIgeTI9IjE3NSIvPjxsaW5lIHgxPSI0MzAiIHkxPSIxNzUiIHgyPSI0OTUiIHkyPSIxMjAiLz48L2c+PGNpcmNsZSBjeD0iMzA1IiBjeT0iMTkwIiByPSI4IiBmaWxsPSIjMjc2RUYxIi8+PGNpcmNsZSBjeD0iMzYwIiBjeT0iMTMwIiByPSI4IiBmaWxsPSIjMjc2RUYxIi8+PGNpcmNsZSBjeD0iNDMwIiBjeT0iMTc1IiByPSI4IiBmaWxsPSIjMjc2RUYxIi8+PGNpcmNsZSBjeD0iNDk1IiBjeT0iMTIwIiByPSI4IiBmaWxsPSIjRkY3QTFBIi8+PGxpbmUgeDE9IjI1MCIgeTE9IjIzOCIgeDI9IjU1MCIgeTI9IjIzOCIgc3Ryb2tlPSIjMjc2RUYxIiBzdHJva2Utd2lkdGg9IjQiLz48cGF0aCBkPSJNMzkyIDIzOCBoMTYgdjIwIGgtMTYgeiIgZmlsbD0iIzEwMTgyNiIgc3Ryb2tlPSIjMjc2RUYxIiBzdHJva2Utd2lkdGg9IjMiLz48ZyBzdHJva2U9IiNGRjdBMUEiIHN0cm9rZS13aWR0aD0iMyIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48Y2lyY2xlIGN4PSIyOTIiIGN5PSIzMDkiIHI9IjYiIGZpbGw9IiNGRjdBMUEiLz48cGF0aCBkPSJNMjgxIDMyNyBhMTEgMTEgMCAwIDEgMjIgMCIvPjwvZz48ZyBzdHJva2U9IiM1QjkzRjUiIHN0cm9rZS13aWR0aD0iMyIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48Y2lyY2xlIGN4PSIzMzAiIGN5PSIzMDkiIHI9IjYiIGZpbGw9IiM1QjkzRjUiLz48cGF0aCBkPSJNMzE5IDMyNyBhMTEgMTEgMCAwIDEgMjIgMCIvPjwvZz48ZyBzdHJva2U9IiM1QjkzRjUiIHN0cm9rZS13aWR0aD0iMyIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48Y2lyY2xlIGN4PSIzNjgiIGN5PSIzMDkiIHI9IjYiIGZpbGw9IiM1QjkzRjUiLz48cGF0aCBkPSJNMzU3IDMyNyBhMTEgMTEgMCAwIDEgMjIgMCIvPjwvZz48ZyBzdHJva2U9IiNGRjdBMUEiIHN0cm9rZS13aWR0aD0iMyIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48Y2lyY2xlIGN4PSI0MDYiIGN5PSIzMDkiIHI9IjYiIGZpbGw9IiNGRjdBMUEiLz48cGF0aCBkPSJNMzk1IDMyNyBhMTEgMTEgMCAwIDEgMjIgMCIvPjwvZz48ZyBzdHJva2U9IiM1QjkzRjUiIHN0cm9rZS13aWR0aD0iMyIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48Y2lyY2xlIGN4PSI0NDQiIGN5PSIzMDkiIHI9IjYiIGZpbGw9IiM1QjkzRjUiLz48cGF0aCBkPSJNNDMzIDMyNyBhMTEgMTEgMCAwIDEgMjIgMCIvPjwvZz48ZyBzdHJva2U9IiM1QjkzRjUiIHN0cm9rZS13aWR0aD0iMyIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48Y2lyY2xlIGN4PSI0ODIiIGN5PSIzMDkiIHI9IjYiIGZpbGw9IiM1QjkzRjUiLz48cGF0aCBkPSJNNDcxIDMyNyBhMTEgMTEgMCAwIDEgMjIgMCIvPjwvZz48dGV4dCB4PSI0MCIgeT0iMzYyIiBmaWxsPSIjNUI2NjczIiBmb250LWZhbWlseT0idWktbW9ub3NwYWNlLE1lbmxvLG1vbm9zcGFjZSIgZm9udC1zaXplPSIyMCIgbGV0dGVyLXNwYWNpbmc9IjMiPi8vIEVWRU5UUzwvdGV4dD48L3N2Zz4=" alt="AI Engineer World's Fair">
+          <div class="news-body">
+            <h3 class="news-title">Uber at the AI Engineer World's Fair</h3>
+            <p class="news-excerpt">Fresh from the AI Engineer World's Fair, Uber engineers recap their sessions on the agentic SDLC, GenAI code review, and multimodal agent evaluation — how AI now runs through Uber's engineering.</p>
+            <span class="news-link">Read more &rarr;</span>
+          </div>
+        </a>
+        <a class="news-card" href="https://www.linkedin.com/feed/update/urn:li:activity:7480825650119999488" target="_blank" rel="noopener">
+          <img class="news-img" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNDAwIiBmaWxsPSJub25lIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSI4MDAiIHkyPSI0MDAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBzdG9wLWNvbG9yPSIjMEIwRTE0Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMTQxQTI0Ii8+PC9saW5lYXJHcmFkaWVudD48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNNDAgMEgwVjQwIiBzdHJva2U9IiMxRTNBNUYiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLW9wYWNpdHk9IjAuMzUiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MDAiIGhlaWdodD0iNDAwIiBmaWxsPSJ1cmwoI2JnKSIvPjxyZWN0IHdpZHRoPSI4MDAiIGhlaWdodD0iNDAwIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PGcgc3Ryb2tlPSIjOUE0REZGIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ij48bGluZSB4MT0iNDAwIiB5MT0iMTg4IiB4Mj0iNDAwIiB5Mj0iNzAiLz48bGluZSB4MT0iNDAwIiB5MT0iMTg4IiB4Mj0iNTA2IiB5Mj0iMTA1Ii8+PGxpbmUgeDE9IjQwMCIgeTE9IjE4OCIgeDI9IjU1MCIgeTI9IjE4OCIvPjxsaW5lIHgxPSI0MDAiIHkxPSIxODgiIHgyPSI1MDYiIHkyPSIyNzEiLz48bGluZSB4MT0iNDAwIiB5MT0iMTg4IiB4Mj0iNDAwIiB5Mj0iMzA2Ii8+PGxpbmUgeDE9IjQwMCIgeTE9IjE4OCIgeDI9IjI5NCIgeTI9IjI3MSIvPjxsaW5lIHgxPSI0MDAiIHkxPSIxODgiIHgyPSIyNTAiIHkyPSIxODgiLz48bGluZSB4MT0iNDAwIiB5MT0iMTg4IiB4Mj0iMjk0IiB5Mj0iMTA1Ii8+PC9nPjxnIHN0cm9rZT0iIzVCOTNGNSIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiPjxjaXJjbGUgY3g9IjQwMCIgY3k9IjYzIiByPSI2IiBmaWxsPSIjNUI5M0Y1Ii8+PHBhdGggZD0iTTM4OSA4MSBhMTEgMTEgMCAwIDEgMjIgMCIvPjwvZz48ZyBzdHJva2U9IiM5QTRERkYiIHN0cm9rZS13aWR0aD0iMyIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48Y2lyY2xlIGN4PSI1MDYiIGN5PSI5NyIgcj0iNiIgZmlsbD0iIzlBNERGRiIvPjxwYXRoIGQ9Ik00OTUgMTE1IGExMSAxMSAwIDAgMSAyMiAwIi8+PC9nPjxnIHN0cm9rZT0iIzVCOTNGNSIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiPjxjaXJjbGUgY3g9IjU1MCIgY3k9IjE4MSIgcj0iNiIgZmlsbD0iIzVCOTNGNSIvPjxwYXRoIGQ9Ik01MzkgMTk5IGExMSAxMSAwIDAgMSAyMiAwIi8+PC9nPjxnIHN0cm9rZT0iIzlBNERGRiIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiPjxjaXJjbGUgY3g9IjUwNiIgY3k9IjI2NCIgcj0iNiIgZmlsbD0iIzlBNERGRiIvPjxwYXRoIGQ9Ik00OTUgMjgyIGExMSAxMSAwIDAgMSAyMiAwIi8+PC9nPjxnIHN0cm9rZT0iIzVCOTNGNSIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiPjxjaXJjbGUgY3g9IjQwMCIgY3k9IjI5OSIgcj0iNiIgZmlsbD0iIzVCOTNGNSIvPjxwYXRoIGQ9Ik0zODkgMzE3IGExMSAxMSAwIDAgMSAyMiAwIi8+PC9nPjxnIHN0cm9rZT0iIzlBNERGRiIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiPjxjaXJjbGUgY3g9IjI5MyIgY3k9IjI2NCIgcj0iNiIgZmlsbD0iIzlBNERGRiIvPjxwYXRoIGQ9Ik0yODIgMjgyIGExMSAxMSAwIDAgMSAyMiAwIi8+PC9nPjxnIHN0cm9rZT0iIzVCOTNGNSIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiPjxjaXJjbGUgY3g9IjI1MCIgY3k9IjE4MSIgcj0iNiIgZmlsbD0iIzVCOTNGNSIvPjxwYXRoIGQ9Ik0yMzkgMTk5IGExMSAxMSAwIDAgMSAyMiAwIi8+PC9nPjxnIHN0cm9rZT0iIzlBNERGRiIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiPjxjaXJjbGUgY3g9IjI5MyIgY3k9Ijk3IiByPSI2IiBmaWxsPSIjOUE0REZGIi8+PHBhdGggZD0iTTI4MiAxMTUgYTExIDExIDAgMCAxIDIyIDAiLz48L2c+PHBhdGggZD0iTTQwMCAxMzggQzQwOCAxNzYgNDEyIDE4MCA0NTAgMTg4IEM0MTIgMTk2IDQwOCAyMDAgNDAwIDIzOCBDMzkyIDIwMCAzODggMTk2IDM1MCAxODggQzM4OCAxODAgMzkyIDE3NiA0MDAgMTM4IFoiIGZpbGw9IiMyNzZFRjEiLz48cGF0aCBkPSJNNDcwIDE1MCBDNDc0IDE2NCA0NzYgMTY2IDQ5MCAxNzAgQzQ3NiAxNzQgNDc0IDE3NiA0NzAgMTkwIEM0NjYgMTc2IDQ2NCAxNzQgNDUwIDE3MCBDNDY0IDE2NiA0NjYgMTY0IDQ3MCAxNTAgWiIgZmlsbD0iIzlBNERGRiIvPjx0ZXh0IHg9IjQwIiB5PSIzNjIiIGZpbGw9IiM1QjY2NzMiIGZvbnQtZmFtaWx5PSJ1aS1tb25vc3BhY2UsTWVubG8sbW9ub3NwYWNlIiBmb250LXNpemU9IjIwIiBsZXR0ZXItc3BhY2luZz0iMyI+Ly8gQ09NTVVOSVRZPC90ZXh0Pjwvc3ZnPg==" alt="Uber GenAI Meetup">
+          <div class="news-body">
+            <h3 class="news-title">Uber GenAI Meetup: Hyderabad</h3>
+            <p class="news-excerpt">Over 80 AI practitioners, engineers, and builders filled Uber's Hyderabad office for technical talks and a panel on "Beyond the Prototype: Trust, Cost, and Talent in the Age of Agents."</p>
+            <span class="news-link">Read more &rarr;</span>
+          </div>
+        </a>
+        <a class="news-card" href="https://www.linkedin.com/feed/update/urn:li:activity:7470678708958203906" target="_blank" rel="noopener">
+          <img class="news-img" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNDAwIiBmaWxsPSJub25lIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSI4MDAiIHkyPSI0MDAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBzdG9wLWNvbG9yPSIjMEIwRTE0Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMTQxQTI0Ii8+PC9saW5lYXJHcmFkaWVudD48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNNDAgMEgwVjQwIiBzdHJva2U9IiMxRTNBNUYiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLW9wYWNpdHk9IjAuMzUiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MDAiIGhlaWdodD0iNDAwIiBmaWxsPSJ1cmwoI2JnKSIvPjxyZWN0IHdpZHRoPSI4MDAiIGhlaWdodD0iNDAwIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PGcgc3Ryb2tlPSIjMDZDMTY3IiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLW9wYWNpdHk9IjAuNiIgZmlsbD0ibm9uZSI+PHBhdGggZD0iTTMwMCAzMDAgcTEwMCAtNzAgMjAwIDAiLz48cGF0aCBkPSJNMzMwIDMwMCBxNzAgLTQ2IDE0MCAwIi8+PC9nPjxnIG9wYWNpdHk9IjAuNyI+PHJlY3QgeD0iMjUwIiB5PSIxNTAiIHdpZHRoPSI3MCIgaGVpZ2h0PSIxNTAiIHJ4PSIxNCIgZmlsbD0iIzEwMTgyNiIgc3Ryb2tlPSIjNUI5M0Y1IiBzdHJva2Utd2lkdGg9IjQiLz48cmVjdCB4PSIyNzMuMCIgeT0iMTYwIiB3aWR0aD0iMjQiIGhlaWdodD0iNSIgcng9IjIuNSIgZmlsbD0iIzVCOTNGNSIvPjxyZWN0IHg9IjI2NCIgeT0iMTgwIiB3aWR0aD0iNDIiIGhlaWdodD0iNTEiIHJ4PSI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM1QjkzRjUiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2Utb3BhY2l0eT0iMC43Ii8+PGxpbmUgeDE9IjI2NCIgeTE9IjI1NCIgeDI9IjMwNiIgeTI9IjI1NCIgc3Ryb2tlPSIjNUI5M0Y1IiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLW9wYWNpdHk9IjAuNyIvPjxsaW5lIHgxPSIyNjQiIHkxPSIyNzAiIHgyPSIyOTAiIHkyPSIyNzAiIHN0cm9rZT0iIzVCOTNGNSIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1vcGFjaXR5PSIwLjciLz48L2c+PGcgb3BhY2l0eT0iMC43Ij48cmVjdCB4PSI0OTAiIHk9IjE1MCIgd2lkdGg9IjcwIiBoZWlnaHQ9IjE1MCIgcng9IjE0IiBmaWxsPSIjMTAxODI2IiBzdHJva2U9IiM1QjkzRjUiIHN0cm9rZS13aWR0aD0iNCIvPjxyZWN0IHg9IjUxMy4wIiB5PSIxNjAiIHdpZHRoPSIyNCIgaGVpZ2h0PSI1IiByeD0iMi41IiBmaWxsPSIjNUI5M0Y1Ii8+PHJlY3QgeD0iNTA0IiB5PSIxODAiIHdpZHRoPSI0MiIgaGVpZ2h0PSI1MSIgcng9IjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzVCOTNGNSIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1vcGFjaXR5PSIwLjciLz48bGluZSB4MT0iNTA0IiB5MT0iMjU0IiB4Mj0iNTQ2IiB5Mj0iMjU0IiBzdHJva2U9IiM1QjkzRjUiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2Utb3BhY2l0eT0iMC43Ii8+PGxpbmUgeDE9IjUwNCIgeTE9IjI3MCIgeDI9IjUzMCIgeTI9IjI3MCIgc3Ryb2tlPSIjNUI5M0Y1IiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLW9wYWNpdHk9IjAuNyIvPjwvZz48ZyBvcGFjaXR5PSIxLjAiPjxyZWN0IHg9IjM1MiIgeT0iMTA0IiB3aWR0aD0iOTYiIGhlaWdodD0iMTkyIiByeD0iMTQiIGZpbGw9IiMxMDE4MjYiIHN0cm9rZT0iIzI3NkVGMSIgc3Ryb2tlLXdpZHRoPSI0Ii8+PHJlY3QgeD0iMzg4LjAiIHk9IjExNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjUiIHJ4PSIyLjUiIGZpbGw9IiMyNzZFRjEiLz48cmVjdCB4PSIzNjYiIHk9IjEzNCIgd2lkdGg9IjY4IiBoZWlnaHQ9IjY1IiByeD0iNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjc2RUYxIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLW9wYWNpdHk9IjAuNyIvPjxsaW5lIHgxPSIzNjYiIHkxPSIyNTAiIHgyPSI0MzQiIHkyPSIyNTAiIHN0cm9rZT0iIzI3NkVGMSIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1vcGFjaXR5PSIwLjciLz48bGluZSB4MT0iMzY2IiB5MT0iMjY2IiB4Mj0iNDE4IiB5Mj0iMjY2IiBzdHJva2U9IiMyNzZFRjEiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2Utb3BhY2l0eT0iMC43Ii8+PC9nPjxjaXJjbGUgY3g9IjQwMCIgY3k9IjI4NiIgcj0iNiIgZmlsbD0iIzA2QzE2NyIvPjx0ZXh0IHg9IjQwIiB5PSIzNjIiIGZpbGw9IiM1QjY2NzMiIGZvbnQtZmFtaWx5PSJ1aS1tb25vc3BhY2UsTWVubG8sbW9ub3NwYWNlIiBmb250LXNpemU9IjIwIiBsZXR0ZXItc3BhY2luZz0iMyI+Ly8gTU9CSUxFPC90ZXh0Pjwvc3ZnPg==" alt="UberMobiConf mobile engineering event">
+          <div class="news-body">
+            <h3 class="news-title">UberMobiConf: Mobile, Reimagined</h3>
+            <p class="news-excerpt">Uber India Tech's largest external event yet brought 280+ engineers together in person, plus a global webinar audience, to tackle AI agents, developer productivity, and app performance — "Mobile Reimagined."</p>
+            <span class="news-link">Read more &rarr;</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="research" class="section section-research">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Research</h2>
+        <p class="section-subtitle">Browse research and articles authored by our team members.</p>
+      </div>
+
+      <div class="research-grid">
+        <a href="https://arxiv.org/abs/2602.06223" target="_blank" class="research-card">
+          <span class="research-venue">ICSE-SEIP 2026</span>
+          <h3 class="research-title">Scaling Mobile Chaos Testing with AI-Driven Test Execution</h3>
+          <p class="research-excerpt">Mobile applications in large-scale distributed systems are susceptible to backend service failures, yet traditional chaos engineering approaches cannot scale mobile testing due to the complexity of end-to-end test environments.</p>
+          <span class="research-link">Continue reading &rarr;</span>
+        </a>
+
+        <a href="https://dl.acm.org/doi/epdf/10.1145/3731569.3764802" target="_blank" class="research-card">
+          <span class="research-venue">SOSP 2025</span>
+          <h3 class="research-title">Moirai: Optimizing Placement of Data and Compute in Hybrid Clouds</h3>
+          <p class="research-excerpt">The deployment of large-scale data analytics between on-premise and cloud sites requires careful partitioning of both data and computation to avoid massive networking costs and performance degradation.</p>
+          <span class="research-link">Continue reading &rarr;</span>
+        </a>
+
+        <a href="https://arxiv.org/pdf/2501.03440" target="_blank" class="research-card">
+          <span class="research-venue">ICSE 2025</span>
+          <h3 class="research-title">CI at Scale: Lean, Green, and Fast</h3>
+          <p class="research-excerpt">Maintaining a "green" mainline branch — where all builds pass successfully — is crucial but challenging in fast-paced, large-scale software development environments, particularly with concurrent code changes in large monorepos.</p>
+          <span class="research-link">Continue reading &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="open-source" class="section section-oss">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Open Source</h2>
+        <p class="section-subtitle">Infrastructure for connecting the digital and physical worlds -- open to everyone.</p>
+      </div>
+
+      <div class="oss-scroll" data-lenis-prevent tabindex="0" role="region" aria-label="Open source projects, horizontally scrollable. Use arrow keys to scroll.">
+        <div class="oss-track">
+          <a class="oss-card" href="https://github.com/uber-go/zap" target="_blank" rel="noopener">
+            <div class="oss-card-header"><h3 class="oss-name">zap</h3><span class="oss-lang">Go</span></div>
+            <p class="oss-desc">Blazing fast, structured, leveled logging in Go.</p>
+            <div class="oss-stats"><span class="oss-stars">24.3k stars</span><span class="oss-forks">1.5k forks</span></div>
+          </a>
+          <a class="oss-card" href="https://github.com/uber-go/guide" target="_blank" rel="noopener">
+            <div class="oss-card-header"><h3 class="oss-name">Go Style Guide</h3><span class="oss-lang">Go</span></div>
+            <p class="oss-desc">The Uber Go Style Guide — patterns and conventions for writing clean, idiomatic Go.</p>
+            <div class="oss-stats"><span class="oss-stars">17.3k stars</span></div>
+          </a>
+          <a class="oss-card" href="https://github.com/uber/baseweb" target="_blank" rel="noopener">
+            <div class="oss-card-header"><h3 class="oss-name">Base Web</h3><span class="oss-lang">TypeScript</span></div>
+            <p class="oss-desc">React Component library implementing the Base design language.</p>
+            <div class="oss-stats"><span class="oss-stars">8.9k stars</span><span class="oss-forks">865 forks</span></div>
+          </a>
+          <a class="oss-card" href="https://github.com/uber/react-vis" target="_blank" rel="noopener">
+            <div class="oss-card-header"><h3 class="oss-name">react-vis</h3><span class="oss-lang">JavaScript</span></div>
+            <p class="oss-desc">Data Visualization Components for React.</p>
+            <div class="oss-stats"><span class="oss-stars">8.8k stars</span><span class="oss-forks">834 forks</span></div>
+          </a>
+          <a class="oss-card" href="https://github.com/uber/RIBs" target="_blank" rel="noopener">
+            <div class="oss-card-header"><h3 class="oss-name">RIBs</h3><span class="oss-lang">Kotlin</span></div>
+            <p class="oss-desc">Cross-platform mobile architecture framework powering the Uber rider and driver apps.</p>
+            <div class="oss-stats"><span class="oss-stars">7.9k stars</span><span class="oss-forks">910 forks</span></div>
+          </a>
+          <a class="oss-card" href="https://github.com/uber-go/fx" target="_blank" rel="noopener">
+            <div class="oss-card-header"><h3 class="oss-name">fx</h3><span class="oss-lang">Go</span></div>
+            <p class="oss-desc">Dependency injection based application framework for Go.</p>
+            <div class="oss-stats"><span class="oss-stars">7.4k stars</span></div>
+          </a>
+          <a class="oss-card" href="https://github.com/uber/kraken" target="_blank" rel="noopener">
+            <div class="oss-card-header"><h3 class="oss-name">Kraken</h3><span class="oss-lang">Go</span></div>
+            <p class="oss-desc">P2P Docker registry capable of distributing TBs of data in seconds.</p>
+            <div class="oss-stats"><span class="oss-stars">6.6k stars</span></div>
+          </a>
+          <a class="oss-card" href="https://github.com/uber/h3" target="_blank" rel="noopener">
+            <div class="oss-card-header"><h3 class="oss-name">H3</h3><span class="oss-lang">C</span></div>
+            <p class="oss-desc">Hexagonal hierarchical geospatial indexing system.</p>
+            <div class="oss-stats"><span class="oss-stars">6.0k stars</span><span class="oss-forks">556 forks</span></div>
+          </a>
+          <a class="oss-card" href="https://github.com/uber/causalml" target="_blank" rel="noopener">
+            <div class="oss-card-header"><h3 class="oss-name">CausalML</h3><span class="oss-lang">Python</span></div>
+            <p class="oss-desc">Uplift modeling and causal inference with machine learning algorithms.</p>
+            <div class="oss-stats"><span class="oss-stars">5.7k stars</span><span class="oss-forks">852 forks</span></div>
+          </a>
+          <a class="oss-card" href="https://github.com/uber-go/goleak" target="_blank" rel="noopener">
+            <div class="oss-card-header"><h3 class="oss-name">goleak</h3><span class="oss-lang">Go</span></div>
+            <p class="oss-desc">Goroutine leak detector for Go.</p>
+            <div class="oss-stats"><span class="oss-stars">5.1k stars</span></div>
+          </a>
+          <a class="oss-card" href="https://github.com/uber-go/automaxprocs" target="_blank" rel="noopener">
+            <div class="oss-card-header"><h3 class="oss-name">automaxprocs</h3><span class="oss-lang">Go</span></div>
+            <p class="oss-desc">Automatically set GOMAXPROCS to match Linux container CPU quota.</p>
+            <div class="oss-stats"><span class="oss-stars">4.8k stars</span></div>
+          </a>
+          <a class="oss-card" href="https://github.com/uber-go/ratelimit" target="_blank" rel="noopener">
+            <div class="oss-card-header"><h3 class="oss-name">ratelimit</h3><span class="oss-lang">Go</span></div>
+            <p class="oss-desc">Blocking leaky-bucket rate limit implementation.</p>
+            <div class="oss-stats"><span class="oss-stars">4.7k stars</span></div>
+          </a>
+          <a class="oss-card" href="https://github.com/uber-go/dig" target="_blank" rel="noopener">
+            <div class="oss-card-header"><h3 class="oss-name">dig</h3><span class="oss-lang">Go</span></div>
+            <p class="oss-desc">Reflection based dependency injection toolkit for Go.</p>
+            <div class="oss-stats"><span class="oss-stars">4.4k stars</span></div>
+          </a>
+          <a class="oss-card" href="https://github.com/uber/NullAway" target="_blank" rel="noopener">
+            <div class="oss-card-header"><h3 class="oss-name">NullAway</h3><span class="oss-lang">Java</span></div>
+            <p class="oss-desc">Eliminate NullPointerExceptions with low build-time overhead.</p>
+            <div class="oss-stats"><span class="oss-stars">4.0k stars</span><span class="oss-forks">330 forks</span></div>
+          </a>
+        </div>
+      </div>
+      <div class="oss-scroll-indicator">
+        <div class="oss-scroll-track"><div class="oss-scroll-thumb"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Careers (Living Map) -->
+  <section id="careers" class="section section-careers">
+    <div class="container">
+      <div class="careers-inner">
+        <div class="careers-text">
+          <h2 class="section-title">Ready to build?</h2>
+          <p class="section-subtitle">Join engineers across 4 continents and help bridge code and the physical world.</p>
+          <p class="section-subtitle" style="margin-top: 1.5rem; color: var(--gray-500); font-size: 0.9rem;">Where would your code empower real humans?</p>
+          <div class="careers-locations">
+            <a class="careers-loc" href="https://jobs.uber.com/en/jobs/?location=San+Francisco&radius=100&lat=37.7749295&lng=-122.41941550000001&team=Engineer" target="_blank" rel="noopener">San Francisco</a>
+            <a class="careers-loc" href="https://jobs.uber.com/en/jobs/?location=Seattle&radius=100&lat=47.6062095&lng=-122.3320708&team=Engineer" target="_blank" rel="noopener">Seattle</a>
+            <a class="careers-loc" href="https://jobs.uber.com/en/jobs/?location=New+York&radius=100&lat=40.7127753&lng=-74.0059728&team=Engineer" target="_blank" rel="noopener">New York</a>
+            <a class="careers-loc" href="https://jobs.uber.com/en/jobs/?location=Amsterdam&radius=100&lat=52.3675734&lng=4.9041389&team=Engineer" target="_blank" rel="noopener">Amsterdam</a>
+            <a class="careers-loc" href="https://jobs.uber.com/en/jobs/?location=Bangalore&radius=100&lat=12.9715987&lng=77.5945627&team=Engineer" target="_blank" rel="noopener">Bangalore</a>
+            <a class="careers-loc" href="https://jobs.uber.com/en/jobs/?location=Sao+Paulo&radius=100&lat=-23.5557714&lng=-46.6395571&team=Engineer" target="_blank" rel="noopener">Sao Paulo</a>
+            <a class="careers-loc" href="https://jobs.uber.com/en/jobs/?location=Toronto&radius=100&lat=43.653226&lng=-79.3831843&team=Engineer" target="_blank" rel="noopener">Toronto</a>
+            <a class="careers-loc" href="https://jobs.uber.com/en/jobs/?location=Hyderabad&radius=100&lat=17.385044&lng=78.486671&team=Engineer" target="_blank" rel="noopener">Hyderabad</a>
+          </div>
+          <a href="https://www.uber.com/us/en/careers/list/?department=Engineering&department=Data%20Science" class="btn btn-primary" style="margin-top: 2rem;" target="_blank" rel="noopener">View Open Roles</a>
+        </div>
+        <div class="careers-roles">
+          <a class="role-card" href="https://jobs.uber.com/en/jobs/157162/" target="_blank" rel="noopener">
+            <span class="role-team">AV Labs</span>
+            <h3 class="role-title">Senior ML Engineer – AV Foundation</h3>
+            <p class="role-desc">Drive frontier ML research for autonomous vehicles — design novel modeling approaches and own the full lifecycle from data preparation through deployment. Based in Sunnyvale.</p>
+            <span class="role-cta">Apply now &rarr;</span>
+          </a>
+          <a class="role-card" href="https://jobs.uber.com/en/jobs/145860/" target="_blank" rel="noopener">
+            <span class="role-team">Applied AI</span>
+            <h3 class="role-title">Staff ML Engineer – Applied AI</h3>
+            <p class="role-desc">Define and lead foundation model strategy for AI-powered discovery across Mobility and Delivery — shape technical direction and mentor senior engineers at global scale.</p>
+            <span class="role-cta">Apply now &rarr;</span>
+          </a>
+          <a class="role-card" href="https://jobs.uber.com/en/jobs/154537/" target="_blank" rel="noopener">
+            <span class="role-team">Security</span>
+            <h3 class="role-title">Senior Security Incident Commander</h3>
+            <p class="role-desc">Lead Uber's critical security incidents end-to-end — balance real-time command decisions with deep technical investigation, then drive systemic fixes through post-incident analysis.</p>
+            <span class="role-cta">Apply now &rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  </main>
+
+  <!-- Footer (Living Map) -->
+  <footer class="footer">
+    <canvas id="footerCanvas"></canvas>
+    <div class="container footer-inner">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3 class="footer-heading">Company</h3>
+          <a href="https://www.uber.com/about/" target="_blank" rel="noopener">About us</a>
+          <a href="https://www.uber.com/about/uber-offerings/" target="_blank" rel="noopener">Our offerings</a>
+          <a href="https://www.uber.com/newsroom/" target="_blank" rel="noopener">Newsroom</a>
+          <a href="https://investor.uber.com/" target="_blank" rel="noopener">Investors</a>
+          <a href="https://www.uber.com/blog" target="_blank" rel="noopener">Blog</a>
+          <a href="https://www.uber.com/careers" target="_blank" rel="noopener">Careers</a>
+          <a href="https://www.uber.com/us/en/ai-solutions/" target="_blank" rel="noopener">Uber AI Solutions</a>
+          <a href="https://www.uber.com/global/en/av-labs/" target="_blank" rel="noopener">Uber AV Labs</a>
+          <a href="https://www.uber.com/gift-cards/" target="_blank" rel="noopener">Gift cards</a>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-heading">Products</h3>
+          <a href="https://www.uber.com/ride/" target="_blank" rel="noopener">Ride</a>
+          <a href="https://www.uber.com/drive/" target="_blank" rel="noopener">Drive</a>
+          <a href="https://www.uber.com/deliver/" target="_blank" rel="noopener">Deliver</a>
+          <a href="https://www.ubereats.com/" target="_blank" rel="noopener">Eat</a>
+          <a href="https://www.uber.com/business" target="_blank" rel="noopener">Uber for Business</a>
+          <a href="https://www.uberfreight.com/" target="_blank" rel="noopener">Uber Freight</a>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-heading">Global citizenship</h3>
+          <a href="https://www.uber.com/safety/" target="_blank" rel="noopener">Safety</a>
+          <a href="https://www.uber.com/about/sustainability/?utm_source=ubercom&utm_medium=footer" target="_blank" rel="noopener">Sustainability</a>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-heading">Travel</h3>
+          <a href="https://rides.sng.link/Aw5zn/o42y?_dl=uber%3A%2F%2Freserve&_fallback_redirect=http%3A%2F%2Fm.uber.com%2Freserve&_forward_params=1&_smtype=3" target="_blank" rel="noopener">Reserve</a>
+          <a href="https://www.uber.com/airports/" target="_blank" rel="noopener">Airports</a>
+          <a href="https://www.uber.com/r/cities/" target="_blank" rel="noopener">Cities</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/showcase/uberengineering" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/channel/UCgnxoUwDmmyzeigmmcf0hZA" aria-label="YouTube" target="_blank" rel="noopener">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+          <a href="https://instagram.com/uber/" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="https://x.com/UberEng" aria-label="X (Twitter)" target="_blank" rel="noopener">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <p class="footer-copy">&copy; 2026 Uber Technologies, Inc.</p>
+        <div class="footer-legal-links">
+          <a href="https://www.uber.com/global/en/privacy-notice-riders-order-recipients/" target="_blank" rel="noopener">Privacy</a>
+          <a href="https://www.uber.com/about/accessibility/" target="_blank" rel="noopener">Accessibility</a>
+          <a href="https://www.uber.com/legal/document/?name=general-terms-of-use" target="_blank" rel="noopener">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Blueprint grid overlay (Engine Room) -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <div class="blueprint-grid" id="blueprintGrid"></div>
+
+  <script src="engine2.js"></script>
+  <script src="main2.js"></script>
+  <script>
+    // Lenis smooth scroll
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+    });
+    window.lenis = lenis;
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    // Sparkle star field
+    (function() {
+      const sections = [
+        '.section-blog',
+        '.section-pulse',
+        '.section-values',
+        '.section-careers',
+        '.section-oss',
+      ];
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReduced) return;
+
+      sections.forEach(sel => {
+        const section = document.querySelector(sel);
+        if (!section) return;
+        section.style.position = 'relative';
+        const field = document.createElement('div');
+        field.className = 'sparkle-field';
+        const count = 15 + Math.floor(Math.random() * 10);
+        for (let i = 0; i < count; i++) {
+          const el = document.createElement('div');
+          const isDot = Math.random() > 0.4;
+          el.className = isDot ? 'sparkle sparkle--dot' : 'sparkle';
+          const size = isDot ? (1.5 + Math.random() * 2.5) : (6 + Math.random() * 12);
+          el.style.width = size + 'px';
+          el.style.height = size + 'px';
+          el.style.left = (Math.random() * 100) + '%';
+          el.style.top = (Math.random() * 100) + '%';
+          el.style.setProperty('--sparkle-duration', (2 + Math.random() * 4) + 's');
+          el.style.setProperty('--sparkle-delay', (Math.random() * 5) + 's');
+          el.style.setProperty('--sparkle-opacity', (0.3 + Math.random() * 0.5).toString());
+          field.appendChild(el);
+        }
+        section.prepend(field);
+      });
+    })();
+  </script>
+</body>
+</html>
