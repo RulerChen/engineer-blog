@@ -14,6 +14,20 @@ on:
           - spotify
           - slack
           - dropbox
+          - notion
+          - figma
+          - stripe
+          - shopify
+          - discord
+          - github
+          - doordash
+          - canva
+          - datadog
+          - duolingo
+          - yelp
+          - grab
+          - atlassian
+          - coinbase
 
 concurrency:
   group: data-commits

@@ -6,16 +6,37 @@ describe("source registry", () => {
     const ids = sources.map((s) => s.id).sort();
     expect(ids).toEqual([
       "airbnb",
+      "atlassian",
+      "booking",
+      "canva",
+      "cloudflare",
+      "coinbase",
+      "datadog",
+      "discord",
+      "doordash",
       "dropbox",
+      "duolingo",
+      "etsy",
+      "figma",
+      "github",
       "google",
+      "grab",
+      "instacart",
+      "linkedin",
+      "lyft",
       "meta",
       "netflix",
+      "notion",
+      "paypal",
       "pinterest",
+      "shopify",
       "slack",
       "spotify",
+      "stripe",
       "uber",
+      "yelp",
     ]);
-    expect(new Set(ids).size).toBe(9);
+    expect(new Set(ids).size).toBe(30);
   });
 
   it("every source has a display name and a fetch strategy", () => {

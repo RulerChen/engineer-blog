@@ -1,0 +1,132 @@
+[
+  {
+    "id": "f8ea6a3d6a7bb73b82f1d079db756ef27d0b5e77",
+    "title": "Variance Reduction Below the Randomization Grain",
+    "url": "https://tech.instacart.com/variance-reduction-below-the-randomization-grain-31719f87a7d2?source=rss----587883b5d2ee---4",
+    "source": "instacart",
+    "publishedAt": "2026-07-01T16:28:36.000Z",
+    "tags": [
+      "ml",
+      "data",
+      "experimentation"
+    ],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:37:30.535Z"
+  },
+  {
+    "id": "a1ecdc06690b9eb0f5d8e8a09a3780fbac3430fa",
+    "title": "Leveraging PyFixest for High-Cardinality Marketplace Modeling at Instacart",
+    "url": "https://tech.instacart.com/leveraging-pyfixest-for-high-cardinality-marketplace-modeling-at-instacart-3913df91a04b?source=rss----587883b5d2ee---4",
+    "source": "instacart",
+    "publishedAt": "2026-06-29T16:06:24.000Z",
+    "tags": [
+      "data"
+    ],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:37:30.535Z"
+  },
+  {
+    "id": "d794a9cc96f899c6cfbb4aff7dacc73cfe46fee9",
+    "title": "From Scoring to Spelling: Rebuilding Ads Retrieval at Instacart",
+    "url": "https://tech.instacart.com/from-scoring-to-spelling-rebuilding-ads-retrieval-at-instacart-cf36b4e8d1bb?source=rss----587883b5d2ee---4",
+    "source": "instacart",
+    "publishedAt": "2026-06-02T18:50:19.000Z",
+    "tags": [
+      "ml"
+    ],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:37:30.535Z"
+  },
+  {
+    "id": "766b8d89fcf71619b7e20de063cadfa736a135c6",
+    "title": "Semantic IDs: Product Understanding at Scale",
+    "url": "https://tech.instacart.com/semantic-ids-product-understanding-at-scale-5283e0288f5a?source=rss----587883b5d2ee---4",
+    "source": "instacart",
+    "publishedAt": "2026-06-02T16:58:00.000Z",
+    "tags": [
+      "ml"
+    ],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:37:30.535Z"
+  },
+  {
+    "id": "17e4315d8882aca6936f529e34fa828dcea76950",
+    "title": "How AI Changes the Role of Applied Scientists",
+    "url": "https://tech.instacart.com/how-ai-changes-the-role-of-applied-scientists-895192d5e114?source=rss----587883b5d2ee---4",
+    "source": "instacart",
+    "publishedAt": "2026-05-22T17:40:32.000Z",
+    "tags": [
+      "ml"
+    ],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:37:30.535Z"
+  },
+  {
+    "id": "471f3d184aca7a4cb1f9a363e0f2d8d269ca8ddb",
+    "title": "Scaling Personalized Marketing for Multi-Tenant Commerce Platforms",
+    "url": "https://tech.instacart.com/scaling-personalized-marketing-for-multi-tenant-commerce-platforms-816f0c6a046b?source=rss----587883b5d2ee---4",
+    "source": "instacart",
+    "publishedAt": "2026-05-14T23:53:27.000Z",
+    "tags": [],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:37:30.535Z"
+  },
+  {
+    "id": "14a87c801b55986265a883bd0d1af7fd5f819206",
+    "title": "Empowering Carrot Ads with Domain Adaptive Learning",
+    "url": "https://tech.instacart.com/empowering-carrot-ads-with-domain-adaptive-learning-870730e6add5?source=rss----587883b5d2ee---4",
+    "source": "instacart",
+    "publishedAt": "2026-05-04T19:11:17.000Z",
+    "tags": [
+      "ml"
+    ],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:37:30.535Z"
+  },
+  {
+    "id": "bc534dd085000e3eb9a2b5c859390f87afbd53fe",
+    "title": "Our Early Journey to Transform Instacart’s Discovery Recommendations with LLMs",
+    "url": "https://tech.instacart.com/our-early-journey-to-transform-instacarts-discovery-recommendations-with-llms-cf4591a8602b?source=rss----587883b5d2ee---4",
+    "source": "instacart",
+    "publishedAt": "2026-02-26T18:55:35.000Z",
+    "tags": [
+      "ai",
+      "ml"
+    ],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:37:30.535Z"
+  },
+  {
+    "id": "36a0e06ba7c1180e4db6a7db72fdfd01f9e35a0f",
+    "title": "Turning Data into Velocity: Caper’s Edge and Cloud Data Flywheel with Capsight",
+    "url": "https://tech.instacart.com/turning-data-into-velocity-capers-edge-and-cloud-data-flywheel-with-capsight-544a49ca3db7?source=rss----587883b5d2ee---4",
+    "source": "instacart",
+    "publishedAt": "2026-02-17T16:24:56.000Z",
+    "tags": [],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:37:30.535Z"
+  },
+  {
+    "id": "b4183b350ce8f42eaa22454c09c01d118f956dfd",
+    "title": "From print to digital: Making weekly flyers shoppable at Instacart through computer vision and LLMs",
+    "url": "https://tech.instacart.com/from-print-to-digital-making-weekly-flyers-shoppable-at-instacart-through-computer-vision-and-llms-739cae1f5629?source=rss----587883b5d2ee---4",
+    "source": "instacart",
+    "publishedAt": "2026-02-09T20:45:50.000Z",
+    "tags": [
+      "ai",
+      "ml"
+    ],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:37:30.535Z"
+  }
+]

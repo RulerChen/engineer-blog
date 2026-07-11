@@ -1,0 +1,1382 @@
+[
+  {
+    "link": "https://careersatdoordash.com/blog/how-we-learned-to-trust-our-ai-code-reviewer-at-doordash/",
+    "date_gmt": "2026-07-06T20:44:47",
+    "title": {
+      "rendered": "How we learned to trust our AI code reviewer at DoorDash"
+    },
+    "excerpt": {
+      "rendered": "<p>How we built a measurement layer that tells us where, why, and how much to trust an agentic code reviewer, and why a single metric never could.</p>\n"
+    },
+    "_embedded": {
+      "wp:term": [
+        [
+          {
+            "id": 8,
+            "name": "Engineering",
+            "taxonomy": "category"
+          },
+          {
+            "id": 781,
+            "name": "Gen AI",
+            "taxonomy": "category"
+          },
+          {
+            "id": 774,
+            "name": "LLM",
+            "taxonomy": "category"
+          },
+          {
+            "id": 776,
+            "name": "NLP",
+            "taxonomy": "category"
+          }
+        ],
+        [
+          {
+            "id": 784,
+            "name": "Agentive Assistants and Workflows",
+            "taxonomy": "post_tag"
+          },
+          {
+            "id": 786,
+            "name": "AI Infrastructure",
+            "taxonomy": "post_tag"
+          }
+        ],
+        [
+          {
+            "id": 890,
+            "name": "Saketh Dhulipalla",
+            "taxonomy": "author"
+          },
+          {
+            "id": 891,
+            "name": "Vasily Vlasov",
+            "taxonomy": "author"
+          },
+          {
+            "id": 892,
+            "name": "Marcus Yearwood",
+            "taxonomy": "author"
+          },
+          {
+            "id": 865,
+            "name": "Adam Yarger",
+            "taxonomy": "author"
+          }
+        ]
+      ],
+      "wp:featuredmedia": [
+        {
+          "id": 16518,
+          "source_url": "https://careersatdoordash.com/wp-content/uploads/2026/07/ChatGPT-Image-Jul-1-2026-06_30_34-PM.png",
+          "alt_text": ""
+        }
+      ]
+    }
+  },
+  {
+    "link": "https://careersatdoordash.com/blog/building-food-metadata-with-llm-juries-context-optimization-multimodal-ai/",
+    "date_gmt": "2026-07-02T18:53:40",
+    "title": {
+      "rendered": "Building Food Metadata with LLM Juries, Context Optimization &amp; Multimodal AI"
+    },
+    "excerpt": {
+      "rendered": "<p>DoorDash serves a vast and diverse set of merchants, with every restaurant, menu, and dish expressed in its own unique way.</p>\n"
+    },
+    "_embedded": {
+      "wp:term": [
+        [
+          {
+            "id": 25,
+            "name": "AI &amp; ML",
+            "taxonomy": "category"
+          },
+          {
+            "id": 8,
+            "name": "Engineering",
+            "taxonomy": "category"
+          },
+          {
+            "id": 781,
+            "name": "Gen AI",
+            "taxonomy": "category"
+          },
+          {
+            "id": 774,
+            "name": "LLM",
+            "taxonomy": "category"
+          },
+          {
+            "id": 773,
+            "name": "ML Infrastructure",
+            "taxonomy": "category"
+          }
+        ],
+        [
+          {
+            "id": 784,
+            "name": "Agentive Assistants and Workflows",
+            "taxonomy": "post_tag"
+          },
+          {
+            "id": 782,
+            "name": "Search and Recommendations",
+            "taxonomy": "post_tag"
+          }
+        ],
+        [
+          {
+            "id": 888,
+            "name": "David Lindsay",
+            "taxonomy": "author"
+          },
+          {
+            "id": 889,
+            "name": "Shuang Liu",
+            "taxonomy": "author"
+          },
+          {
+            "id": 670,
+            "name": "Ying Yang",
+            "taxonomy": "author"
+          }
+        ]
+      ],
+      "wp:featuredmedia": [
+        {
+          "id": 16477,
+          "source_url": "https://careersatdoordash.com/wp-content/uploads/2026/06/Building-Food-Metadata-with-LLM-Juries-Context-Optimization-Multimodal-AI-Main-image.png",
+          "alt_text": ""
+        }
+      ]
+    }
+  },
+  {
+    "link": "https://careersatdoordash.com/blog/building-ask-doordash-part-three-evaluation/",
+    "date_gmt": "2026-06-30T16:42:19",
+    "title": {
+      "rendered": "Building Ask DoorDash (Part 3): Evaluation"
+    },
+    "excerpt": {
+      "rendered": "<p>Following our earlier engineering overview of Ask DoorDash, this third post in the blog series takes a close look at the evaluation harness behind the system.</p>\n"
+    },
+    "_embedded": {
+      "wp:term": [
+        [
+          {
+            "id": 25,
+            "name": "AI &amp; ML",
+            "taxonomy": "category"
+          },
+          {
+            "id": 8,
+            "name": "Engineering",
+            "taxonomy": "category"
+          },
+          {
+            "id": 781,
+            "name": "Gen AI",
+            "taxonomy": "category"
+          },
+          {
+            "id": 774,
+            "name": "LLM",
+            "taxonomy": "category"
+          }
+        ],
+        [
+          {
+            "id": 784,
+            "name": "Agentive Assistants and Workflows",
+            "taxonomy": "post_tag"
+          },
+          {
+            "id": 786,
+            "name": "AI Infrastructure",
+            "taxonomy": "post_tag"
+          }
+        ],
+        [
+          {
+            "id": 699,
+            "name": "Steven Xu",
+            "taxonomy": "author"
+          },
+          {
+            "id": 878,
+            "name": "Fabio Flores",
+            "taxonomy": "author"
+          },
+          {
+            "id": 887,
+            "name": "Twisha Jain",
+            "taxonomy": "author"
+          }
+        ]
+      ],
+      "wp:featuredmedia": [
+        {
+          "id": 16464,
+          "source_url": "https://careersatdoordash.com/wp-content/uploads/2026/06/Building-Ask-DoorDash-Part-3-Evaluation-Main-image.png",
+          "alt_text": ""
+        }
+      ]
+    }
+  },
+  {
+    "link": "https://careersatdoordash.com/blog/engineers-journey-long-running-ai-agents/",
+    "date_gmt": "2026-06-23T09:00:26",
+    "title": {
+      "rendered": "Inside One Engineer’s Journey to Master Long-Running Agents"
+    },
+    "excerpt": {
+      "rendered": "<p>Here comes the mandatory “AI Moves Fast” disclaimer: when I first drafted this article in early March, I began by saying something about how “AI is coming.” and how we should get ready for it.</p>\n"
+    },
+    "_embedded": {
+      "wp:term": [
+        [
+          {
+            "id": 25,
+            "name": "AI &amp; ML",
+            "taxonomy": "category"
+          },
+          {
+            "id": 8,
+            "name": "Engineering",
+            "taxonomy": "category"
+          },
+          {
+            "id": 781,
+            "name": "Gen AI",
+            "taxonomy": "category"
+          }
+        ],
+        [
+          {
+            "id": 886,
+            "name": "Agentive Coding",
+            "taxonomy": "post_tag"
+          },
+          {
+            "id": 786,
+            "name": "AI Infrastructure",
+            "taxonomy": "post_tag"
+          }
+        ],
+        [
+          {
+            "id": 525,
+            "name": "Ivar Lazzaro",
+            "taxonomy": "author"
+          }
+        ]
+      ],
+      "wp:featuredmedia": [
+        {
+          "id": 16393,
+          "source_url": "https://careersatdoordash.com/wp-content/uploads/2026/06/DD-Eng-blog-Inside-One-Engineers-Journey-to-Master-Long-Running-Agents.png",
+          "alt_text": ""
+        }
+      ]
+    }
+  },
+  {
+    "link": "https://careersatdoordash.com/blog/high-performance-proxy-cache-for-doordash-services/",
+    "date_gmt": "2026-06-22T11:02:50",
+    "title": {
+      "rendered": "Building a transparent high-performance proxy cache for DoorDash services"
+    },
+    "excerpt": {
+      "rendered": "<p>DoorDash runs on many microservices.</p>\n"
+    },
+    "_embedded": {
+      "wp:term": [
+        [
+          {
+            "id": 19,
+            "name": "Backend",
+            "taxonomy": "category"
+          },
+          {
+            "id": 8,
+            "name": "Engineering",
+            "taxonomy": "category"
+          }
+        ],
+        [],
+        [
+          {
+            "id": 876,
+            "name": "Bill Shen",
+            "taxonomy": "author"
+          }
+        ]
+      ],
+      "wp:featuredmedia": [
+        {
+          "id": 16282,
+          "source_url": "https://careersatdoordash.com/wp-content/uploads/2026/06/EntityCacheBlogCover.jpg",
+          "alt_text": ""
+        }
+      ]
+    }
+  },
+  {
+    "link": "https://careersatdoordash.com/blog/building-ask-doordash-part-two-intelligence/",
+    "date_gmt": "2026-06-18T21:30:21",
+    "title": {
+      "rendered": "Building Ask DoorDash (Part 2): Intelligence"
+    },
+    "excerpt": {
+      "rendered": "<p>Following our earlier engineering overview of Ask DoorDash, this second post in the blog series takes a close look at the intelligence behind the system.</p>\n"
+    },
+    "_embedded": {
+      "wp:term": [
+        [
+          {
+            "id": 25,
+            "name": "AI &amp; ML",
+            "taxonomy": "category"
+          },
+          {
+            "id": 8,
+            "name": "Engineering",
+            "taxonomy": "category"
+          },
+          {
+            "id": 28,
+            "name": "Engineering Culture",
+            "taxonomy": "category"
+          },
+          {
+            "id": 781,
+            "name": "Gen AI",
+            "taxonomy": "category"
+          },
+          {
+            "id": 774,
+            "name": "LLM",
+            "taxonomy": "category"
+          }
+        ],
+        [
+          {
+            "id": 784,
+            "name": "Agentive Assistants and Workflows",
+            "taxonomy": "post_tag"
+          },
+          {
+            "id": 786,
+            "name": "AI Infrastructure",
+            "taxonomy": "post_tag"
+          }
+        ],
+        [
+          {
+            "id": 874,
+            "name": "Zhucheng Zhan",
+            "taxonomy": "author"
+          },
+          {
+            "id": 816,
+            "name": "Raghav Saboo",
+            "taxonomy": "author"
+          },
+          {
+            "id": 758,
+            "name": "Heather Song",
+            "taxonomy": "author"
+          },
+          {
+            "id": 884,
+            "name": "Fan Xia",
+            "taxonomy": "author"
+          },
+          {
+            "id": 734,
+            "name": "Xiaochang Miao",
+            "taxonomy": "author"
+          }
+        ]
+      ],
+      "wp:featuredmedia": [
+        {
+          "id": 16353,
+          "source_url": "https://careersatdoordash.com/wp-content/uploads/2026/06/image-41.png",
+          "alt_text": ""
+        }
+      ]
+    }
+  },
+  {
+    "link": "https://careersatdoordash.com/blog/small-language-models-to-serve-more-relevant-doordash-search-ads/",
+    "date_gmt": "2026-06-15T21:55:39",
+    "title": {
+      "rendered": "Using small language models to serve more relevant DoorDash search ads"
+    },
+    "excerpt": {
+      "rendered": "<p>When consumers search on DoorDash, they are usually trying to accomplish something quickly.</p>\n"
+    },
+    "_embedded": {
+      "wp:term": [
+        [
+          {
+            "id": 25,
+            "name": "AI &amp; ML",
+            "taxonomy": "category"
+          },
+          {
+            "id": 772,
+            "name": "Deep Learning",
+            "taxonomy": "category"
+          },
+          {
+            "id": 8,
+            "name": "Engineering",
+            "taxonomy": "category"
+          },
+          {
+            "id": 781,
+            "name": "Gen AI",
+            "taxonomy": "category"
+          },
+          {
+            "id": 774,
+            "name": "LLM",
+            "taxonomy": "category"
+          },
+          {
+            "id": 776,
+            "name": "NLP",
+            "taxonomy": "category"
+          }
+        ],
+        [
+          {
+            "id": 782,
+            "name": "Search and Recommendations",
+            "taxonomy": "post_tag"
+          }
+        ],
+        [
+          {
+            "id": 882,
+            "name": "Sharat Bhat",
+            "taxonomy": "author"
+          },
+          {
+            "id": 883,
+            "name": "Ajaykrishna Karthikeyan",
+            "taxonomy": "author"
+          },
+          {
+            "id": 855,
+            "name": "Praveen Kolli",
+            "taxonomy": "author"
+          },
+          {
+            "id": 759,
+            "name": "Utsaw Kumar",
+            "taxonomy": "author"
+          }
+        ]
+      ],
+      "wp:featuredmedia": [
+        {
+          "id": 16322,
+          "source_url": "https://careersatdoordash.com/wp-content/uploads/2026/06/output.png",
+          "alt_text": ""
+        }
+      ]
+    }
+  },
+  {
+    "link": "https://careersatdoordash.com/blog/building-doordash-assistant-an-engineering-overview/",
+    "date_gmt": "2026-06-11T12:56:24",
+    "title": {
+      "rendered": "Building DoorDash Assistant: An engineering overview"
+    },
+    "excerpt": {
+      "rendered": "<p>First of a blog series on the engineering behind DoorDash Assistant.</p>\n"
+    },
+    "_embedded": {
+      "wp:term": [
+        [
+          {
+            "id": 25,
+            "name": "AI &amp; ML",
+            "taxonomy": "category"
+          },
+          {
+            "id": 8,
+            "name": "Engineering",
+            "taxonomy": "category"
+          },
+          {
+            "id": 28,
+            "name": "Engineering Culture",
+            "taxonomy": "category"
+          },
+          {
+            "id": 781,
+            "name": "Gen AI",
+            "taxonomy": "category"
+          },
+          {
+            "id": 774,
+            "name": "LLM",
+            "taxonomy": "category"
+          }
+        ],
+        [
+          {
+            "id": 784,
+            "name": "Agentive Assistants and Workflows",
+            "taxonomy": "post_tag"
+          },
+          {
+            "id": 786,
+            "name": "AI Infrastructure",
+            "taxonomy": "post_tag"
+          }
+        ],
+        [
+          {
+            "id": 877,
+            "name": "Hong Tai Wei",
+            "taxonomy": "author"
+          },
+          {
+            "id": 874,
+            "name": "Zhucheng Zhan",
+            "taxonomy": "author"
+          },
+          {
+            "id": 878,
+            "name": "Fabio Flores",
+            "taxonomy": "author"
+          },
+          {
+            "id": 699,
+            "name": "Steven Xu",
+            "taxonomy": "author"
+          },
+          {
+            "id": 879,
+            "name": "Lucas Arango",
+            "taxonomy": "author"
+          },
+          {
+            "id": 880,
+            "name": "Noah Shillington",
+            "taxonomy": "author"
+          },
+          {
+            "id": 881,
+            "name": "Hui Luan",
+            "taxonomy": "author"
+          }
+        ]
+      ],
+      "wp:featuredmedia": [
+        {
+          "id": 16309,
+          "source_url": "https://careersatdoordash.com/wp-content/uploads/2026/06/image-39.png",
+          "alt_text": ""
+        }
+      ]
+    }
+  },
+  {
+    "link": "https://careersatdoordash.com/blog/doordash-unified-consumer-memory-for-personalization-at-scale/",
+    "date_gmt": "2026-06-08T21:25:40",
+    "title": {
+      "rendered": "Building a unified consumer memory for personalization at scale"
+    },
+    "excerpt": {
+      "rendered": "<p>DoorDash&#8217;s marketplace spans restaurants, groceries, convenience stores, retail outlets, and more.</p>\n"
+    },
+    "_embedded": {
+      "wp:term": [
+        [
+          {
+            "id": 25,
+            "name": "AI &amp; ML",
+            "taxonomy": "category"
+          },
+          {
+            "id": 8,
+            "name": "Engineering",
+            "taxonomy": "category"
+          },
+          {
+            "id": 781,
+            "name": "Gen AI",
+            "taxonomy": "category"
+          },
+          {
+            "id": 774,
+            "name": "LLM",
+            "taxonomy": "category"
+          }
+        ],
+        [
+          {
+            "id": 784,
+            "name": "Agentive Assistants and Workflows",
+            "taxonomy": "post_tag"
+          },
+          {
+            "id": 782,
+            "name": "Search and Recommendations",
+            "taxonomy": "post_tag"
+          }
+        ],
+        [
+          {
+            "id": 816,
+            "name": "Raghav Saboo",
+            "taxonomy": "author"
+          },
+          {
+            "id": 873,
+            "name": "Pradeep Muthukrishnan",
+            "taxonomy": "author"
+          },
+          {
+            "id": 874,
+            "name": "Zhucheng Zhan",
+            "taxonomy": "author"
+          },
+          {
+            "id": 802,
+            "name": "Sicong Fang",
+            "taxonomy": "author"
+          },
+          {
+            "id": 721,
+            "name": "Martin Wang",
+            "taxonomy": "author"
+          },
+          {
+            "id": 875,
+            "name": "Chunlei Li",
+            "taxonomy": "author"
+          },
+          {
+            "id": 731,
+            "name": "Sudeep Das",
+            "taxonomy": "author"
+          },
+          {
+            "id": 817,
+            "name": "Vivek Paharia",
+            "taxonomy": "author"
+          }
+        ]
+      ],
+      "wp:featuredmedia": [
+        {
+          "id": 16272,
+          "source_url": "https://careersatdoordash.com/wp-content/uploads/2026/06/image.jpg",
+          "alt_text": ""
+        }
+      ]
+    }
+  },
+  {
+    "link": "https://careersatdoordash.com/blog/doordashs-brand-affinity-powers-smarter-targeting/",
+    "date_gmt": "2026-06-08T19:34:09",
+    "title": {
+      "rendered": "How DoorDash’s brand affinity powers smarter targeting"
+    },
+    "excerpt": {
+      "rendered": "<p>We launched our new Consumer Packaged Goods (CPG) Interest Targeting initiative to let advertisers target consumers on new verticals (convenience stores, groceries, DashMart, etc.) based on their restaurant order history.</p>\n"
+    },
+    "_embedded": {
+      "wp:term": [
+        [
+          {
+            "id": 25,
+            "name": "AI &amp; ML",
+            "taxonomy": "category"
+          },
+          {
+            "id": 111,
+            "name": "Data",
+            "taxonomy": "category"
+          },
+          {
+            "id": 8,
+            "name": "Engineering",
+            "taxonomy": "category"
+          }
+        ],
+        [
+          {
+            "id": 787,
+            "name": "Computational Advertising",
+            "taxonomy": "post_tag"
+          }
+        ],
+        [
+          {
+            "id": 871,
+            "name": "Max Medina",
+            "taxonomy": "author"
+          }
+        ]
+      ],
+      "wp:featuredmedia": [
+        {
+          "id": 16255,
+          "source_url": "https://careersatdoordash.com/wp-content/uploads/2026/06/Gemini_Generated_Image_ns8qqpns8qqpns8q.png",
+          "alt_text": ""
+        }
+      ]
+    }
+  },
+  {
+    "link": "https://careersatdoordash.com/blog/doordashs-one-click-simulation-and-evaluation-platform-for-support-chatbots/",
+    "date_gmt": "2026-06-01T15:52:16",
+    "title": {
+      "rendered": "Inside DoorDash’s one-click simulation and evaluation platform for support chatbots"
+    },
+    "excerpt": {
+      "rendered": "<p>Shipping high-quality support chatbots is an end-to-end problem.</p>\n"
+    },
+    "_embedded": {
+      "wp:term": [
+        [
+          {
+            "id": 25,
+            "name": "AI &amp; ML",
+            "taxonomy": "category"
+          },
+          {
+            "id": 8,
+            "name": "Engineering",
+            "taxonomy": "category"
+          },
+          {
+            "id": 781,
+            "name": "Gen AI",
+            "taxonomy": "category"
+          },
+          {
+            "id": 774,
+            "name": "LLM",
+            "taxonomy": "category"
+          },
+          {
+            "id": 773,
+            "name": "ML Infrastructure",
+            "taxonomy": "category"
+          }
+        ],
+        [
+          {
+            "id": 784,
+            "name": "Agentive Assistants and Workflows",
+            "taxonomy": "post_tag"
+          },
+          {
+            "id": 786,
+            "name": "AI Infrastructure",
+            "taxonomy": "post_tag"
+          }
+        ],
+        [
+          {
+            "id": 852,
+            "name": "Chenran Gong",
+            "taxonomy": "author"
+          },
+          {
+            "id": 720,
+            "name": "Aditi Bamba",
+            "taxonomy": "author"
+          }
+        ]
+      ],
+      "wp:featuredmedia": [
+        {
+          "id": 16243,
+          "source_url": "https://careersatdoordash.com/wp-content/uploads/2026/05/Gemini_Generated_Image_vwj7sdvwj7sdvwj7.png",
+          "alt_text": ""
+        }
+      ]
+    }
+  },
+  {
+    "link": "https://careersatdoordash.com/blog/doordash-offline-llms-online-personalization-generating-carousels/",
+    "date_gmt": "2026-05-27T15:24:36",
+    "title": {
+      "rendered": "Offline LLMs, Online Personalization: Generating carousels at DoorDash"
+    },
+    "excerpt": {
+      "rendered": "<p>Recommendation systems provide highly personalized results, but building hyperpersonalized experiences remains challenging because of the bottlenecks created by content generation and presentation.</p>\n"
+    },
+    "_embedded": {
+      "wp:term": [
+        [
+          {
+            "id": 25,
+            "name": "AI &amp; ML",
+            "taxonomy": "category"
+          },
+          {
+            "id": 8,
+            "name": "Engineering",
+            "taxonomy": "category"
+          },
+          {
+            "id": 777,
+            "name": "Experimentation and Testing",
+            "taxonomy": "category"
+          },
+          {
+            "id": 781,
+            "name": "Gen AI",
+            "taxonomy": "category"
+          },
+          {
+            "id": 774,
+            "name": "LLM",
+            "taxonomy": "category"
+          },
+          {
+            "id": 778,
+            "name": "Optimization",
+            "taxonomy": "category"
+          }
+        ],
+        [
+          {
+            "id": 784,
+            "name": "Agentive Assistants and Workflows",
+            "taxonomy": "post_tag"
+          },
+          {
+            "id": 786,
+            "name": "AI Infrastructure",
+            "taxonomy": "post_tag"
+          },
+          {
+            "id": 782,
+            "name": "Search and Recommendations",
+            "taxonomy": "post_tag"
+          }
+        ],
+        [
+          {
+            "id": 815,
+            "name": "Yucong Ji",
+            "taxonomy": "author"
+          },
+          {
+            "id": 816,
+            "name": "Raghav Saboo",
+            "taxonomy": "author"
+          },
+          {
+            "id": 870,
+            "name": "Kyle Hsiao",
+            "taxonomy": "author"
+          },
+          {
+            "id": 817,
+            "name": "Vivek Paharia",
+            "taxonomy": "author"
+          },
+          {
+            "id": 873,
+            "name": "Pradeep Muthukrishnan",
+            "taxonomy": "author"
+          },
+          {
+            "id": 872,
+            "name": "Veronica Sih",
+            "taxonomy": "author"
+          }
+        ]
+      ],
+      "wp:featuredmedia": [
+        {
+          "id": 16218,
+          "source_url": "https://careersatdoordash.com/wp-content/uploads/2026/05/ChatGPT-Image-May-26-2026-02_02_16-PM.png",
+          "alt_text": ""
+        }
+      ]
+    }
+  },
+  {
+    "link": "https://careersatdoordash.com/blog/supercharging-doordash-logistics-through-causal-ml-and-joint-optimization/",
+    "date_gmt": "2026-05-21T18:41:59",
+    "title": {
+      "rendered": "Supercharging DoorDash logistics through causal ML and joint optimization "
+    },
+    "excerpt": {
+      "rendered": "<p>DoorDash’s delivery drivers — called Dashers — may be offered incentives such as peak pay (extra money) to improve supply during particularly busy times, in specific areas.</p>\n"
+    },
+    "_embedded": {
+      "wp:term": [
+        [
+          {
+            "id": 25,
+            "name": "AI &amp; ML",
+            "taxonomy": "category"
+          },
+          {
+            "id": 8,
+            "name": "Engineering",
+            "taxonomy": "category"
+          },
+          {
+            "id": 777,
+            "name": "Experimentation and Testing",
+            "taxonomy": "category"
+          },
+          {
+            "id": 778,
+            "name": "Optimization",
+            "taxonomy": "category"
+          }
+        ],
+        [
+          {
+            "id": 783,
+            "name": "Dasher and Logistics",
+            "taxonomy": "post_tag"
+          }
+        ],
+        [
+          {
+            "id": 550,
+            "name": "Wei Feng",
+            "taxonomy": "author"
+          },
+          {
+            "id": 868,
+            "name": "Henry Liao",
+            "taxonomy": "author"
+          },
+          {
+            "id": 869,
+            "name": "Ryan Xie",
+            "taxonomy": "author"
+          }
+        ]
+      ],
+      "wp:featuredmedia": [
+        {
+          "id": 16177,
+          "source_url": "https://careersatdoordash.com/wp-content/uploads/2026/05/7fe158d7-e84f-4177-a8ee-22833cc5f12e.jpeg",
+          "alt_text": ""
+        }
+      ]
+    }
+  },
+  {
+    "link": "https://careersatdoordash.com/blog/doordash-clusterless-ml-feature-store/",
+    "date_gmt": "2026-05-18T16:15:17",
+    "title": {
+      "rendered": "Lessons learned building DoorDash’s clusterless ML feature store "
+    },
+    "excerpt": {
+      "rendered": "<p>There has never been a technology revolution bigger than the one we are experiencing right now.</p>\n"
+    },
+    "_embedded": {
+      "wp:term": [
+        [
+          {
+            "id": 25,
+            "name": "AI &amp; ML",
+            "taxonomy": "category"
+          },
+          {
+            "id": 19,
+            "name": "Backend",
+            "taxonomy": "category"
+          },
+          {
+            "id": 8,
+            "name": "Engineering",
+            "taxonomy": "category"
+          },
+          {
+            "id": 773,
+            "name": "ML Infrastructure",
+            "taxonomy": "category"
+          }
+        ],
+        [
+          {
+            "id": 786,
+            "name": "AI Infrastructure",
+            "taxonomy": "post_tag"
+          }
+        ],
+        [
+          {
+            "id": 867,
+            "name": "Luigi Tagliamonte",
+            "taxonomy": "author"
+          }
+        ]
+      ],
+      "wp:featuredmedia": [
+        {
+          "id": 15920,
+          "source_url": "https://careersatdoordash.com/wp-content/uploads/2026/05/Gemini_Generated_Image_vjb01tvjb01tvjb0-1.png",
+          "alt_text": ""
+        }
+      ]
+    }
+  },
+  {
+    "link": "https://careersatdoordash.com/blog/doordash-llm-as-a-judge-evaluating-natural-language-search/",
+    "date_gmt": "2026-05-14T16:32:11",
+    "title": {
+      "rendered": "LLM-as-a-Judge: Evaluating natural language search"
+    },
+    "excerpt": {
+      "rendered": "<p>Traditional food delivery search matches keywords such as &#8220;pizza,&#8221; &#8220;sushi,&#8221; or restaurant name.</p>\n"
+    },
+    "_embedded": {
+      "wp:term": [
+        [
+          {
+            "id": 25,
+            "name": "AI &amp; ML",
+            "taxonomy": "category"
+          },
+          {
+            "id": 8,
+            "name": "Engineering",
+            "taxonomy": "category"
+          },
+          {
+            "id": 777,
+            "name": "Experimentation and Testing",
+            "taxonomy": "category"
+          },
+          {
+            "id": 781,
+            "name": "Gen AI",
+            "taxonomy": "category"
+          },
+          {
+            "id": 774,
+            "name": "LLM",
+            "taxonomy": "category"
+          },
+          {
+            "id": 776,
+            "name": "NLP",
+            "taxonomy": "category"
+          }
+        ],
+        [
+          {
+            "id": 786,
+            "name": "AI Infrastructure",
+            "taxonomy": "post_tag"
+          }
+        ],
+        [
+          {
+            "id": 734,
+            "name": "Xiaochang Miao",
+            "taxonomy": "author"
+          },
+          {
+            "id": 758,
+            "name": "Heather Song",
+            "taxonomy": "author"
+          }
+        ]
+      ],
+      "wp:featuredmedia": [
+        {
+          "id": 15862,
+          "source_url": "https://careersatdoordash.com/wp-content/uploads/2026/04/Gemini_Generated_Image_tr3zv0tr3zv0tr3z.png",
+          "alt_text": ""
+        }
+      ]
+    }
+  },
+  {
+    "link": "https://careersatdoordash.com/blog/doordash-built-an-ai-code-reviewer-engineers-actually-listen-to/",
+    "date_gmt": "2026-05-11T16:12:49",
+    "title": {
+      "rendered": "How DoorDash built an AI code reviewer engineers actually listen to"
+    },
+    "excerpt": {
+      "rendered": "<p>Many engineering orgs have tried bolting AI reviewers onto their pull requests (PRs).</p>\n"
+    },
+    "_embedded": {
+      "wp:term": [
+        [
+          {
+            "id": 25,
+            "name": "AI &amp; ML",
+            "taxonomy": "category"
+          },
+          {
+            "id": 8,
+            "name": "Engineering",
+            "taxonomy": "category"
+          },
+          {
+            "id": 773,
+            "name": "ML Infrastructure",
+            "taxonomy": "category"
+          }
+        ],
+        [],
+        [
+          {
+            "id": 865,
+            "name": "Adam Yarger",
+            "taxonomy": "author"
+          },
+          {
+            "id": 866,
+            "name": "Adam Rogal",
+            "taxonomy": "author"
+          }
+        ]
+      ],
+      "wp:featuredmedia": [
+        {
+          "id": 15894,
+          "source_url": "https://careersatdoordash.com/wp-content/uploads/2026/05/ChatGPT-Image-May-7-2026-12_44_55-PM.png",
+          "alt_text": ""
+        }
+      ]
+    }
+  },
+  {
+    "link": "https://careersatdoordash.com/blog/doordash-using-cursor-to-accelerate-migration-to-swift-testing/",
+    "date_gmt": "2026-04-28T18:40:00",
+    "title": {
+      "rendered": "Using Cursor to accelerate migration to Swift Testing"
+    },
+    "excerpt": {
+      "rendered": "<p>Apple introduced Swift Testing at WWDC 2024 as a modern replacement for the company’s XCTest offering.</p>\n"
+    },
+    "_embedded": {
+      "wp:term": [
+        [
+          {
+            "id": 8,
+            "name": "Engineering",
+            "taxonomy": "category"
+          },
+          {
+            "id": 22,
+            "name": "Mobile",
+            "taxonomy": "category"
+          }
+        ],
+        [],
+        [
+          {
+            "id": 864,
+            "name": "Matheus Gois",
+            "taxonomy": "author"
+          }
+        ]
+      ],
+      "wp:featuredmedia": [
+        {
+          "id": 15875,
+          "source_url": "https://careersatdoordash.com/wp-content/uploads/2026/04/pavel-s-pOeliGKn7yc-unsplash.jpg",
+          "alt_text": ""
+        }
+      ]
+    }
+  },
+  {
+    "link": "https://careersatdoordash.com/blog/doordash-supporting-passkeys-to-create-a-secure-and-seamless-login-experience/",
+    "date_gmt": "2026-04-15T17:25:50",
+    "title": {
+      "rendered": "Supporting passkeys to create a secure and seamless login experience"
+    },
+    "excerpt": {
+      "rendered": "<p>Adding a new authentication mechanism often requires a tradeoff between security and usability.</p>\n"
+    },
+    "_embedded": {
+      "wp:term": [
+        [
+          {
+            "id": 8,
+            "name": "Engineering",
+            "taxonomy": "category"
+          },
+          {
+            "id": 28,
+            "name": "Engineering Culture",
+            "taxonomy": "category"
+          },
+          {
+            "id": 22,
+            "name": "Mobile",
+            "taxonomy": "category"
+          }
+        ],
+        [],
+        [
+          {
+            "id": 862,
+            "name": "Ron Waisberg",
+            "taxonomy": "author"
+          },
+          {
+            "id": 863,
+            "name": "Sivathmican Sivakumaran",
+            "taxonomy": "author"
+          }
+        ]
+      ],
+      "wp:featuredmedia": [
+        {
+          "id": 15850,
+          "source_url": "https://careersatdoordash.com/wp-content/uploads/2026/04/arthur-mazi-qD5Err_lJ5Y-unsplash.jpg",
+          "alt_text": ""
+        }
+      ]
+    }
+  },
+  {
+    "link": "https://careersatdoordash.com/blog/doordash-llms-to-build-content-embeddings-for-search-and-recommendations/",
+    "date_gmt": "2026-04-14T20:10:15",
+    "title": {
+      "rendered": "Using LLMs to build content embeddings for search and recommendations"
+    },
+    "excerpt": {
+      "rendered": "<p>Header Image Description: Example of semantic meaning beyond engagements</p>\n<p>A persistent bottleneck has constrained search and recommendation functions at DoorDash for years — the caliber of content embedding depends on data quality, while personalization depends on embedding quality.</p>\n"
+    },
+    "_embedded": {
+      "wp:term": [
+        [
+          {
+            "id": 25,
+            "name": "AI &amp; ML",
+            "taxonomy": "category"
+          },
+          {
+            "id": 8,
+            "name": "Engineering",
+            "taxonomy": "category"
+          },
+          {
+            "id": 777,
+            "name": "Experimentation and Testing",
+            "taxonomy": "category"
+          },
+          {
+            "id": 781,
+            "name": "Gen AI",
+            "taxonomy": "category"
+          },
+          {
+            "id": 774,
+            "name": "LLM",
+            "taxonomy": "category"
+          },
+          {
+            "id": 778,
+            "name": "Optimization",
+            "taxonomy": "category"
+          }
+        ],
+        [
+          {
+            "id": 784,
+            "name": "Agentive Assistants and Workflows",
+            "taxonomy": "post_tag"
+          },
+          {
+            "id": 782,
+            "name": "Search and Recommendations",
+            "taxonomy": "post_tag"
+          }
+        ],
+        [
+          {
+            "id": 734,
+            "name": "Xiaochang Miao",
+            "taxonomy": "author"
+          },
+          {
+            "id": 758,
+            "name": "Heather Song",
+            "taxonomy": "author"
+          }
+        ]
+      ],
+      "wp:featuredmedia": [
+        {
+          "id": 15789,
+          "source_url": "https://careersatdoordash.com/wp-content/uploads/2026/04/header_image.png",
+          "alt_text": ""
+        }
+      ]
+    }
+  },
+  {
+    "link": "https://careersatdoordash.com/blog/doordash-is-rebuilding-its-engineering-interviews-around-ai/",
+    "date_gmt": "2026-03-19T00:04:30",
+    "title": {
+      "rendered": "Why DoorDash is rebuilding its engineering interviews around AI"
+    },
+    "excerpt": {
+      "rendered": "<p>For years, software engineering interviews have had a strange relationship with actual software engineering.&nbsp;</p>\n<p>The daily job is highly collaborative and involves reading existing code, debugging, writing tests, working across interfaces, and communicating clearly.&nbsp;</p>\n<p>Traditional interviews, on the other hand, put candidates in a timed, isolated setting and reward algorithm drills that rarely show up in actual production work.&nbsp;</p>\n<p>That mismatch was tolerated because success in those algorithmic interviews was hard to fake&nbsp; and was loosely correlated with computer science fundamentals.</p>\n"
+    },
+    "_embedded": {
+      "wp:term": [
+        [
+          {
+            "id": 25,
+            "name": "AI &amp; ML",
+            "taxonomy": "category"
+          },
+          {
+            "id": 8,
+            "name": "Engineering",
+            "taxonomy": "category"
+          },
+          {
+            "id": 28,
+            "name": "Engineering Culture",
+            "taxonomy": "category"
+          }
+        ],
+        [],
+        [
+          {
+            "id": 859,
+            "name": "Ivan Rudovol",
+            "taxonomy": "author"
+          },
+          {
+            "id": 860,
+            "name": "Alex Danilychev",
+            "taxonomy": "author"
+          }
+        ]
+      ],
+      "wp:featuredmedia": [
+        {
+          "id": 15765,
+          "source_url": "https://careersatdoordash.com/wp-content/uploads/2026/03/boliviainteligente-kECRXz0m42A-unsplash.jpg",
+          "alt_text": ""
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,200 @@
+[
+  {
+    "id": "a65eced40c764744d76abe940f5e4012002da0f6",
+    "title": "Culture",
+    "url": "https://shopify.engineering/topics/culture",
+    "source": "shopify",
+    "publishedAt": "2026-06-09T16:00:00.000Z",
+    "tags": [],
+    "summary": "",
+    "thumbnail": "https://cdn.shopify.com/b/shopify-brochure2-assets/5cd39662ea3befee9661b70b4a25906d.jpg?width=1396&originalWidth=1700&originalHeight=1015",
+    "fetchedAt": "2026-07-11T13:20:56.379Z"
+  },
+  {
+    "id": "ef4afe2207326b2f6ac7fcb407f604586ac66803",
+    "title": "Development",
+    "url": "https://shopify.engineering/topics/development",
+    "source": "shopify",
+    "publishedAt": "2026-03-11T16:00:00.000Z",
+    "tags": [],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:20:56.379Z"
+  },
+  {
+    "id": "12ca5ba89e859d3ecec0fbdd1222ef24e290e6f2",
+    "title": "Behind the Scenes",
+    "url": "https://shopify.engineering/topics/behind-the-scenes",
+    "source": "shopify",
+    "publishedAt": "2025-11-24T16:00:00.000Z",
+    "tags": [],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:20:56.379Z"
+  },
+  {
+    "id": "e10bd493d96d4585b4708db958e27b36f3c06828",
+    "title": "Infrastructure",
+    "url": "https://shopify.engineering/topics/infrastructure",
+    "source": "shopify",
+    "publishedAt": "2025-11-19T16:00:00.000Z",
+    "tags": [],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:20:56.379Z"
+  },
+  {
+    "id": "80736e115eb2f56fd4f345f63d80a58f0cb36163",
+    "title": "AI & Machine Learning",
+    "url": "https://shopify.engineering/topics/ai-machine-learning",
+    "source": "shopify",
+    "publishedAt": "2025-10-08T16:00:00.000Z",
+    "tags": [],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:20:56.379Z"
+  },
+  {
+    "id": "919da8476912fb908317829cc64484494ed780e9",
+    "title": "MCP UI: Breaking the text wall with interactive components",
+    "url": "https://shopify.engineering/mcp-ui-breaking-the-text-wall",
+    "source": "shopify",
+    "publishedAt": "2025-08-04T16:00:00.000Z",
+    "tags": [],
+    "summary": "",
+    "thumbnail": "https://cdn.shopify.com/s/files/1/0779/4361/articles/ShopifyBlogImage_04dab3e7-5dbf-4887-bd50-062afb3bd8ae.png?v=1754417293&width=1396&originalWidth=4497&originalHeight=1905",
+    "fetchedAt": "2026-07-11T13:20:58.159Z"
+  },
+  {
+    "id": "698f9e4d8369a482eafbae116441f8ce7515ba8f",
+    "title": "Remixing Shopify's Admin: How We Made It 30% Faster and AI-Ready",
+    "url": "https://shopify.engineering/remixing-admin",
+    "source": "shopify",
+    "publishedAt": "2025-06-29T16:00:00.000Z",
+    "tags": [],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:20:58.159Z"
+  },
+  {
+    "id": "305a682245cf369d976a2b818e080974a30ccfea",
+    "title": "The Future of React Native Graphics: WebGPU, Skia, and Beyond",
+    "url": "https://shopify.engineering/webgpu-skia-web-graphics",
+    "source": "shopify",
+    "publishedAt": "2025-06-19T16:00:00.000Z",
+    "tags": [],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:20:58.159Z"
+  },
+  {
+    "id": "eb13159b45acefb5733bcad476039fb2e5bd5250",
+    "title": "Introducing the commerce payments protocol",
+    "url": "https://shopify.engineering/commerce-payments-protocol",
+    "source": "shopify",
+    "publishedAt": "2025-06-11T16:00:00.000Z",
+    "tags": [],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:20:58.159Z"
+  },
+  {
+    "id": "a6d004f3dc65d38907bf9c09028c15961c81e1ba",
+    "title": "Data",
+    "url": "https://shopify.engineering/topics/data",
+    "source": "shopify",
+    "publishedAt": "2025-05-07T16:00:00.000Z",
+    "tags": [],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:20:58.159Z"
+  },
+  {
+    "id": "156d6e02140dc6831f872fa4a733bb0549d76985",
+    "title": "How Shopify improved consumer search intent with real-time ML",
+    "url": "https://shopify.engineering/how-shopify-improved-consumer-search-intent-with-real-time-ml",
+    "source": "shopify",
+    "publishedAt": "2024-10-17T16:00:00.000Z",
+    "tags": [],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:20:58.159Z"
+  },
+  {
+    "id": "48a4dc625dafdbd735c6615799484ba048520f57",
+    "title": "MySQL",
+    "url": "https://shopify.engineering/topics/mysql",
+    "source": "shopify",
+    "publishedAt": "2024-08-13T16:00:00.000Z",
+    "tags": [],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:20:58.159Z"
+  },
+  {
+    "id": "3cc6be5467faea4fec60c3c8111049643a056b04",
+    "title": "Apps",
+    "url": "https://shopify.engineering/topics/apps",
+    "source": "shopify",
+    "publishedAt": "2023-07-25T16:00:00.000Z",
+    "tags": [],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:21:00.414Z"
+  },
+  {
+    "id": "8d95da2791520a61386765a3c4c320cf95cd926f",
+    "title": "Wasm",
+    "url": "https://shopify.engineering/topics/wasm",
+    "source": "shopify",
+    "publishedAt": "2023-07-17T16:00:00.000Z",
+    "tags": [],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:21:00.414Z"
+  },
+  {
+    "id": "a32c709952fe7cf5e69aa5b0e72ed70572202a8d",
+    "title": "Developer Tooling",
+    "url": "https://shopify.engineering/topics/developer-tooling",
+    "source": "shopify",
+    "publishedAt": "2022-06-08T16:00:00.000Z",
+    "tags": [],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:21:00.414Z"
+  },
+  {
+    "id": "35f77c98d12664f1c9e9f6cc83596f1901f33a69",
+    "title": "Mobile",
+    "url": "https://shopify.engineering/topics/mobile",
+    "source": "shopify",
+    "publishedAt": "2022-03-24T16:00:00.000Z",
+    "tags": [],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:20:58.159Z"
+  },
+  {
+    "id": "6b5be07cc8a12b1037b54c69f732eb0b11504be8",
+    "title": "Security",
+    "url": "https://shopify.engineering/topics/security",
+    "source": "shopify",
+    "publishedAt": "2022-03-21T16:00:00.000Z",
+    "tags": [],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:21:00.414Z"
+  },
+  {
+    "id": "bf9ca6a2038fbde0efaabb8b9aeee173e1c6f53f",
+    "title": "Data Science & Engineering",
+    "url": "https://shopify.engineering/topics/data-science-engineering",
+    "source": "shopify",
+    "publishedAt": "2021-12-09T16:00:00.000Z",
+    "tags": [],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:21:00.414Z"
+  }
+]
