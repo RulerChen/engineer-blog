@@ -2,6 +2,7 @@ import Parser from "rss-parser";
 import { USER_AGENT } from "./http.js";
 import { articleId, normalizeUrl } from "./normalize.js";
 import { summarize } from "./sanitize.js";
+import { resolveTags } from "./tags.js";
 import type { Article } from "./types.js";
 
 const parser = new Parser();
@@ -23,7 +24,7 @@ export async function parseFeed(
       url: normalizeUrl(item.link),
       source: sourceId,
       publishedAt: item.isoDate ?? (item.pubDate ? new Date(item.pubDate).toISOString() : ""),
-      tags: (item.categories ?? []).map((c) => c.trim()).filter(Boolean),
+      tags: resolveTags(item.categories ?? [], sourceId),
       summary: summarize(item.content ?? item.contentSnippet ?? ""),
       thumbnail: item.enclosure?.url ?? null,
       fetchedAt,

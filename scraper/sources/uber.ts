@@ -4,6 +4,7 @@ import { crawlArchive } from "../src/backfill.js";
 import { articleId, normalizeUrl } from "../src/normalize.js";
 import { fetchRss } from "../src/rss.js";
 import { summarize } from "../src/sanitize.js";
+import { resolveTags } from "../src/tags.js";
 import type { Article, Source } from "../src/types.js";
 
 /**
@@ -50,7 +51,7 @@ export function parseUberArchivePage(html: string, pageUrl: string): ArchivePage
       url: normalizeUrl(absolute),
       source: "uber",
       publishedAt,
-      tags: category ? [category] : [],
+      tags: resolveTags(category ? [category] : [], "uber"),
       summary: summarize(card.find(".blog-card-excerpt").first().html() ?? ""),
       thumbnail: card.find(".blog-card-img").first().attr("src") ?? null,
       fetchedAt,

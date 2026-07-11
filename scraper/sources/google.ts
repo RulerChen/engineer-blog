@@ -4,6 +4,7 @@ import { crawlArchive } from "../src/backfill.js";
 import { articleId, normalizeUrl } from "../src/normalize.js";
 import { fetchRss } from "../src/rss.js";
 import { summarize } from "../src/sanitize.js";
+import { resolveTags } from "../src/tags.js";
 import type { Article, Source } from "../src/types.js";
 
 /**
@@ -50,7 +51,7 @@ export function parseGoogleArchivePage(html: string, pageUrl: string): ArchivePa
       url: normalizeUrl(absolute),
       source: "google",
       publishedAt,
-      tags: tagPart ? [tagPart] : [],
+      tags: resolveTags(tagPart ? [tagPart] : [], "google"),
       summary: summarize(post.find(".search-result__summary").first().html() ?? ""),
       thumbnail: post.find("img.search-result__featured-img").first().attr("src") ?? null,
       fetchedAt,
