@@ -7,7 +7,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest run",
-    "typecheck": "vue-tsc --noEmit"
+    "typecheck": "vue-tsc --noEmit",
+    "merge-data": "tsx scripts/mergeArticles.ts",
+    "prebuild": "tsx scripts/mergeArticles.ts"
   },
   "dependencies": {
     "vue": "^3.5.39"
