@@ -31,6 +31,7 @@ engineer-blog/
 │       ├── meta.json
 │       └── ...
 └── .github/workflows/
+    ├── ci.yml                # push/PR: lint, format check, typecheck, tests
     ├── fetch.yml             # daily cron: run scraper → commit new data
     ├── backfill.yml          # manual dispatch: run a source's backfill scraper
     └── deploy.yml            # on push to main: build frontend + data → GitHub Pages
@@ -153,6 +154,18 @@ built from pure functions, unit-testable without mounting components.
 ### `deploy.yml`
 - Trigger: push to `main` (including data commits from the fetch workflow).
 - Steps: merge per-source JSON → build Vue app → deploy via `actions/deploy-pages`.
+
+### `ci.yml` — quality checks
+- Trigger: push to `main` and pull requests. Skipped for data-only commits from the
+  fetch bot (paths filter excludes `data/**`).
+- Checks, each a separate step so failures are easy to read:
+  - **Lint:** `oxlint` over both packages (with Vue plugin support for `frontend/`).
+  - **Format:** `prettier --check` (oxc's formatter is not yet stable; revisit when
+    it is).
+  - **Typecheck:** `tsc --noEmit` for `scraper/`, `vue-tsc --noEmit` for `frontend/`.
+  - **Tests:** Vitest suites for both packages.
+- The same commands are exposed as root package scripts (`lint`, `format`,
+  `typecheck`, `test`) so local runs match CI exactly.
 
 ## Error Handling
 
