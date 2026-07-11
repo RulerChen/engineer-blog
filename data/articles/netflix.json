@@ -1,0 +1,158 @@
+[
+  {
+    "id": "1f9000cfdbcfe7434ca9a53a669e0a6afc40c95f",
+    "title": "GenPage: Towards End-to-End Generative Homepage Construction at Netflix",
+    "url": "https://netflixtechblog.com/genpage-towards-end-to-end-generative-homepage-construction-at-netflix-77146fba8a08?source=rss----2615bd06b42e---4",
+    "source": "netflix",
+    "publishedAt": "2026-06-29T13:01:02.000Z",
+    "tags": [
+      "recommendation-system",
+      "ai",
+      "netflix",
+      "machine-learning",
+      "large-language-models"
+    ],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T03:03:47.968Z"
+  },
+  {
+    "id": "0191ed7aee79ccf544b6fcf9da6fcadcd16f7380",
+    "title": "Toward More Controllable AI Video Editing: An Early Research Exploration at Netflix",
+    "url": "https://netflixtechblog.com/toward-more-controllable-ai-video-editing-an-early-research-exploration-at-netflix-eb8160ed60a2?source=rss----2615bd06b42e---4",
+    "source": "netflix",
+    "publishedAt": "2026-06-23T00:31:01.000Z",
+    "tags": [],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T03:03:47.968Z"
+  },
+  {
+    "id": "c45923a30b1a8d109181efdab762af4979bf692d",
+    "title": "How Netflix Simplified Batch Compute with Kueue",
+    "url": "https://netflixtechblog.com/how-netflix-simplified-batch-compute-with-kueue-87860682629c?source=rss----2615bd06b42e---4",
+    "source": "netflix",
+    "publishedAt": "2026-06-22T21:35:01.000Z",
+    "tags": [
+      "kueue",
+      "netflix",
+      "aws",
+      "kubernetes"
+    ],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T03:03:47.968Z"
+  },
+  {
+    "id": "0dbf4f5c0c5d06149558e8675ad77a8fa5265de8",
+    "title": "The Data Canary: How Netflix Validates Catalog Metadata",
+    "url": "https://netflixtechblog.com/the-data-canary-how-netflix-validates-catalog-metadata-18b699d58e36?source=rss----2615bd06b42e---4",
+    "source": "netflix",
+    "publishedAt": "2026-06-19T23:54:17.000Z",
+    "tags": [
+      "automation",
+      "site-reliability",
+      "data-validation",
+      "data-reliability",
+      "experimentation"
+    ],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T03:03:47.968Z"
+  },
+  {
+    "id": "4da3ecaea247be84646955fc3689a31bb3100f45",
+    "title": "Data Projects: Managing Data Assets at Netflix Scale",
+    "url": "https://netflixtechblog.com/data-projects-managing-data-assets-at-netflix-scale-7ca25888591e?source=rss----2615bd06b42e---4",
+    "source": "netflix",
+    "publishedAt": "2026-06-19T23:54:00.000Z",
+    "tags": [
+      "big-data",
+      "data-governance",
+      "data-orchestration"
+    ],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T03:03:47.968Z"
+  },
+  {
+    "id": "bcb0e1d3cb73d02faa5b45e0badb2f1c2d83fd9e",
+    "title": "Predicting Risk in Content Launches: How Data-Driven Insights can Transform Launch Planning",
+    "url": "https://netflixtechblog.com/predicting-risk-in-content-launches-how-data-driven-insights-can-transform-launch-planning-587b1f2de928?source=rss----2615bd06b42e---4",
+    "source": "netflix",
+    "publishedAt": "2026-06-19T23:53:47.000Z",
+    "tags": [
+      "regression",
+      "predictive-analytics",
+      "operations",
+      "machine-learning"
+    ],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T03:03:47.968Z"
+  },
+  {
+    "id": "e980d2f1022bda3cc45cef109f87ec9fb6006896",
+    "title": "The Evolution of Cassandra Data Movement at Netflix",
+    "url": "https://netflixtechblog.com/the-evolution-of-cassandra-data-movement-at-netflix-6e13329c80a1?source=rss----2615bd06b42e---4",
+    "source": "netflix",
+    "publishedAt": "2026-06-19T23:53:30.000Z",
+    "tags": [
+      "cassandra",
+      "icebergs",
+      "big-data",
+      "data-movement"
+    ],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T03:03:47.968Z"
+  },
+  {
+    "id": "27108de07074c0a35d30d125e4a7678e9fedb85c",
+    "title": "Thinking Fast & Slow for a Personalized Notification System",
+    "url": "https://netflixtechblog.com/thinking-fast-slow-for-a-personalized-notification-system-4d89b26525cd?source=rss----2615bd06b42e---4",
+    "source": "netflix",
+    "publishedAt": "2026-06-19T23:53:16.000Z",
+    "tags": [
+      "ai",
+      "notifications",
+      "recommendations",
+      "machine-learning"
+    ],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T03:03:47.968Z"
+  },
+  {
+    "id": "3cae1ff0e86b9f60e520b31fab2746ba5c19f307",
+    "title": "A Human-Augmenting Agentic Workflow for Causal Inference",
+    "url": "https://netflixtechblog.com/a-human-augmenting-agentic-workflow-for-causal-inference-4623f0a9c5af?source=rss----2615bd06b42e---4",
+    "source": "netflix",
+    "publishedAt": "2026-06-19T23:53:06.000Z",
+    "tags": [
+      "ai-agent",
+      "agentic-workflow",
+      "causal-inference"
+    ],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T03:03:47.968Z"
+  },
+  {
+    "id": "772c57dfa56e9e7417b259d1c2c3224a5feb9393",
+    "title": "From Silos to Service Topology: Why Netflix Built a Real-Time Service Map",
+    "url": "https://netflixtechblog.com/from-silos-to-service-topology-why-netflix-built-a-real-time-service-map-0165ba13a7bc?source=rss----2615bd06b42e---4",
+    "source": "netflix",
+    "publishedAt": "2026-06-19T23:52:02.000Z",
+    "tags": [
+      "distributed-systems",
+      "software-engineering",
+      "platform-engineering",
+      "microservices",
+      "observability"
+    ],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T03:03:47.968Z"
+  }
+]

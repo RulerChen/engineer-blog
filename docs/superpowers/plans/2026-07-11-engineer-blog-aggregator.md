@@ -102,11 +102,13 @@ engineer-blog/
 ### Task 1: Root workspace + toolchain
 
 **Files:**
+
 - Create: `package.json`
 - Create: `.gitignore`
 - Create: `.oxlintrc.json`
 
 **Interfaces:**
+
 - Consumes: nothing (first task).
 - Produces: root scripts `lint`, `format`, `format:fix`, `typecheck`, `test` that all later tasks and CI rely on; npm workspaces `scraper` and `frontend`.
 
@@ -120,10 +122,7 @@ engineer-blog/
   "engines": {
     "node": ">=22"
   },
-  "workspaces": [
-    "scraper",
-    "frontend"
-  ],
+  "workspaces": ["scraper", "frontend"],
   "scripts": {
     "lint": "oxlint .",
     "format": "oxfmt --check .",
@@ -179,12 +178,14 @@ git commit -m "chore: root workspace with oxlint/oxfmt toolchain"
 ### Task 2: Scraper package scaffold + data model
 
 **Files:**
+
 - Create: `scraper/package.json`
 - Create: `scraper/tsconfig.json`
 - Create: `scraper/src/types.ts`
 - Test: `scraper/tests/types.test.ts`
 
 **Interfaces:**
+
 - Consumes: root workspace from Task 1.
 - Produces: `interface Article { id, title, url, source, publishedAt, tags, summary, thumbnail, fetchedAt }` and `interface Source { id, name, fetch, backfill? }` — every scraper task imports these from `../src/types.js`. Scripts `test`, `typecheck`, `fetch`, `backfill` inside the scraper package.
 
@@ -291,12 +292,14 @@ git commit -m "feat(scraper): package scaffold with Article/Source model"
 ### Task 3: URL normalization, id hashing, summary sanitization
 
 **Files:**
+
 - Create: `scraper/src/normalize.ts`
 - Create: `scraper/src/sanitize.ts`
 - Test: `scraper/tests/normalize.test.ts`
 - Test: `scraper/tests/sanitize.test.ts`
 
 **Interfaces:**
+
 - Consumes: nothing beyond Node builtins.
 - Produces: `normalizeUrl(raw: string): string`, `articleId(rawUrl: string): string` (sha1 hex of normalized URL), `stripHtml(html: string): string`, `truncate(text: string, max?: number): string`, `summarize(html: string): string` (strip + truncate to 300). Used by Tasks 5–12.
 
@@ -308,9 +311,7 @@ import { articleId, normalizeUrl } from "../src/normalize.js";
 
 describe("normalizeUrl", () => {
   it("lowercases the host", () => {
-    expect(normalizeUrl("https://Engineering.FB.com/post")).toBe(
-      "https://engineering.fb.com/post",
-    );
+    expect(normalizeUrl("https://Engineering.FB.com/post")).toBe("https://engineering.fb.com/post");
   });
   it("strips the fragment", () => {
     expect(normalizeUrl("https://a.com/x#section")).toBe("https://a.com/x");
@@ -451,10 +452,12 @@ git commit -m "feat(scraper): url normalization, id hashing, summary sanitizatio
 ### Task 4: Article validation
 
 **Files:**
+
 - Create: `scraper/src/validate.ts`
 - Test: `scraper/tests/validate.test.ts`
 
 **Interfaces:**
+
 - Consumes: `Article` from Task 2.
 - Produces: `articleErrors(article: Article): string[]` (empty = valid) and `filterValid(articles: Article[], onDrop?: (article: Article, errors: string[]) => void): Article[]`. Task 9's runner calls `filterValid` on every fetch result before merging.
 
@@ -573,10 +576,12 @@ git commit -m "feat(scraper): article schema validation with drop-and-log"
 ### Task 5: Merge & dedup
 
 **Files:**
+
 - Create: `scraper/src/merge.ts`
 - Test: `scraper/tests/merge.test.ts`
 
 **Interfaces:**
+
 - Consumes: `Article` from Task 2.
 - Produces: `merge(existing: Article[], fetched: Article[]): Article[]` — pure function; dedup by `id`; fresh data wins field-by-field except `fetchedAt` (keeps first-seen); result sorted newest-first by `publishedAt`. Used by Task 9's runner and nothing else.
 
@@ -632,9 +637,7 @@ describe("merge", () => {
   });
 
   it("sorts newest-first by publishedAt", () => {
-    const existing = [
-      makeArticle({ id: "old", publishedAt: "2025-01-01T00:00:00.000Z" }),
-    ];
+    const existing = [makeArticle({ id: "old", publishedAt: "2025-01-01T00:00:00.000Z" })];
     const fetched = [
       makeArticle({ id: "new", publishedAt: "2026-07-10T00:00:00.000Z" }),
       makeArticle({ id: "mid", publishedAt: "2026-01-01T00:00:00.000Z" }),
@@ -667,14 +670,9 @@ export function merge(existing: Article[], fetched: Article[]): Article[] {
   const byId = new Map(existing.map((article) => [article.id, article]));
   for (const incoming of fetched) {
     const prior = byId.get(incoming.id);
-    byId.set(
-      incoming.id,
-      prior ? { ...incoming, fetchedAt: prior.fetchedAt } : incoming,
-    );
+    byId.set(incoming.id, prior ? { ...incoming, fetchedAt: prior.fetchedAt } : incoming);
   }
-  return [...byId.values()].sort(
-    (a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt),
-  );
+  return [...byId.values()].sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt));
 }
 ```
 
@@ -695,12 +693,14 @@ git commit -m "feat(scraper): merge/dedup with fresh-wins and fetchedAt preserva
 ### Task 6: Generic RSS fetcher
 
 **Files:**
+
 - Create: `scraper/src/http.ts`
 - Create: `scraper/src/rss.ts`
 - Create: `scraper/tests/fixtures/sample-feed.xml`
 - Test: `scraper/tests/rss.test.ts`
 
 **Interfaces:**
+
 - Consumes: `articleId`, `normalizeUrl` (Task 3), `summarize` (Task 3), `Article` (Task 2).
 - Produces: `USER_AGENT: string` constant; `parseFeed(xml: string, sourceId: string, now?: Date): Promise<Article[]>`; `fetchRss(feedUrl: string, sourceId: string, fetchImpl?: typeof fetch): Promise<Article[]>`. Every source module in Task 8 calls `fetchRss`. The backfill harness in Task 10 reuses `USER_AGENT`.
 
@@ -850,10 +850,12 @@ git commit -m "feat(scraper): generic rss fetcher with fixture-based parser test
 ### Task 7: JSON storage
 
 **Files:**
+
 - Create: `scraper/src/storage.ts`
 - Test: `scraper/tests/storage.test.ts`
 
 **Interfaces:**
+
 - Consumes: `Article` (Task 2).
 - Produces: `readSourceArticles(dataDir: string, sourceId: string): Promise<Article[]>` (missing file → `[]`) and `writeSourceArticles(dataDir: string, sourceId: string, articles: Article[]): Promise<void>` (2-space pretty print + trailing newline, creates `dataDir` if needed). Task 9's CLI binds these to `data/articles/`.
 
@@ -920,10 +922,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import type { Article } from "./types.js";
 
-export async function readSourceArticles(
-  dataDir: string,
-  sourceId: string,
-): Promise<Article[]> {
+export async function readSourceArticles(dataDir: string, sourceId: string): Promise<Article[]> {
   try {
     return JSON.parse(await readFile(join(dataDir, `${sourceId}.json`), "utf8")) as Article[];
   } catch (err) {
@@ -963,6 +962,7 @@ git commit -m "feat(scraper): per-source json storage"
 ### Task 8: Source registry with five RSS sources
 
 **Files:**
+
 - Create: `scraper/sources/google.ts`
 - Create: `scraper/sources/meta.ts`
 - Create: `scraper/sources/netflix.ts`
@@ -972,6 +972,7 @@ git commit -m "feat(scraper): per-source json storage"
 - Test: `scraper/tests/sources.test.ts`
 
 **Interfaces:**
+
 - Consumes: `Source` (Task 2), `fetchRss` (Task 6).
 - Produces: `sources: Source[]` and `getSource(id: string): Source | undefined` from `scraper/sources/index.ts`. Task 9's CLI iterates `sources`; Tasks 10–12 add `backfill` properties to `meta`, `google`, `uber` in place.
 
@@ -1129,12 +1130,14 @@ git commit -m "feat(scraper): source registry with five rss sources"
 ### Task 9: Runner, CLI, and initial data seed
 
 **Files:**
+
 - Create: `scraper/src/run.ts`
 - Create: `scraper/src/cli.ts`
 - Test: `scraper/tests/run.test.ts`
 - Create (by running the CLI): `data/articles/*.json`
 
 **Interfaces:**
+
 - Consumes: `sources`/`getSource` (Task 8), `merge` (Task 5), `filterValid` (Task 4), `readSourceArticles`/`writeSourceArticles` (Task 7).
 - Produces:
   - `interface SourceResult { id: string; status: "ok" | "failed" | "guarded"; fetched: number; added: number; error?: string }`
@@ -1296,7 +1299,9 @@ export async function runSources(
       );
       const existing = await deps.read(source.id);
       if (fetched.length === 0 && existing.length > 0) {
-        log(`WARN ${source.id}: previously healthy source returned 0 articles; keeping existing data`);
+        log(
+          `WARN ${source.id}: previously healthy source returned 0 articles; keeping existing data`,
+        );
         results.push({ id: source.id, status: "guarded", fetched: 0, added: 0 });
         continue;
       }
@@ -1415,6 +1420,7 @@ git commit -m "data: fetch $(date -u +%F) (initial seed)"
 ### Task 10: Backfill crawl harness + Meta archive scraper
 
 **Files:**
+
 - Create: `scraper/src/backfill.ts`
 - Modify: `scraper/sources/meta.ts`
 - Create (captured): `scraper/tests/fixtures/meta-archive.html`
@@ -1422,6 +1428,7 @@ git commit -m "data: fetch $(date -u +%F) (initial seed)"
 - Test: `scraper/tests/meta-archive.test.ts`
 
 **Interfaces:**
+
 - Consumes: `USER_AGENT` (Task 6), `articleId`/`normalizeUrl` (Task 3), `summarize` (Task 3), `articleErrors` (Task 4), `Article` (Task 2).
 - Produces:
   - `interface ArchivePage { articles: Article[]; nextUrl: string | null }`
@@ -1452,7 +1459,9 @@ function makeArticle(id: string): Article {
 
 function fakeFetch(pages: Record<string, string>): typeof fetch {
   return (async (url: RequestInfo | URL) =>
-    new Response(pages[String(url)] ?? "", { status: pages[String(url)] ? 200 : 404 })) as typeof fetch;
+    new Response(pages[String(url)] ?? "", {
+      status: pages[String(url)] ? 200 : 404,
+    })) as typeof fetch;
 }
 
 describe("crawlArchive", () => {
@@ -1631,8 +1640,7 @@ export function parseMetaArchivePage(html: string, _pageUrl: string): ArchivePag
       fetchedAt,
     });
   });
-  const nextUrl =
-    $('a.next, a[rel="next"], .nav-previous a').first().attr("href") ?? null;
+  const nextUrl = $('a.next, a[rel="next"], .nav-previous a').first().attr("href") ?? null;
   return { articles, nextUrl };
 }
 
@@ -1663,11 +1671,13 @@ git commit -m "feat(scraper): backfill crawl harness and meta archive scraper"
 ### Task 11: Google archive backfill scraper
 
 **Files:**
+
 - Modify: `scraper/sources/google.ts`
 - Create (captured): `scraper/tests/fixtures/google-archive.html`
 - Test: `scraper/tests/google-archive.test.ts`
 
 **Interfaces:**
+
 - Consumes: `crawlArchive`/`ArchivePage` (Task 10), `articleId`/`normalizeUrl`/`summarize` (Task 3), `fetchRss` (Task 6), `articleErrors` (Task 4).
 - Produces: `parseGoogleArchivePage(html: string, pageUrl: string): ArchivePage` exported from `scraper/sources/google.ts`, wired as `google.backfill`.
 
@@ -1747,7 +1757,11 @@ export function parseGoogleArchivePage(html: string, pageUrl: string): ArchivePa
       url: normalizeUrl(absolute),
       source: "google",
       publishedAt: datetime ? new Date(datetime).toISOString() : "",
-      tags: post.find("a[href*='label'], .tag, .label").map((_j, t) => $(t).text().trim()).get().filter(Boolean),
+      tags: post
+        .find("a[href*='label'], .tag, .label")
+        .map((_j, t) => $(t).text().trim())
+        .get()
+        .filter(Boolean),
       summary: summarize(post.find("p").first().html() ?? ""),
       thumbnail: post.find("img").first().attr("src") ?? null,
       fetchedAt,
@@ -1784,11 +1798,13 @@ git commit -m "feat(scraper): google archive backfill scraper"
 ### Task 12: Uber archive backfill scraper
 
 **Files:**
+
 - Modify: `scraper/sources/uber.ts`
 - Create (captured): `scraper/tests/fixtures/uber-archive.html`
 - Test: `scraper/tests/uber-archive.test.ts`
 
 **Interfaces:**
+
 - Consumes: `crawlArchive`/`ArchivePage` (Task 10), `articleId`/`normalizeUrl`/`summarize` (Task 3), `fetchRss` (Task 6), `articleErrors` (Task 4).
 - Produces: `parseUberArchivePage(html: string, pageUrl: string): ArchivePage` exported from `scraper/sources/uber.ts`, wired as `uber.backfill`.
 
@@ -1908,6 +1924,7 @@ git commit -m "feat(scraper): uber archive backfill scraper"
 ### Task 13: Frontend scaffold (Vite 8 + Vue 3 + Vitest)
 
 **Files:**
+
 - Create: `frontend/package.json`
 - Create: `frontend/tsconfig.json`
 - Create: `frontend/vite.config.ts`
@@ -1920,6 +1937,7 @@ git commit -m "feat(scraper): uber archive backfill scraper"
 - Test: `frontend/tests/app.test.ts`
 
 **Interfaces:**
+
 - Consumes: root workspace (Task 1).
 - Produces: `Article` interface in `frontend/src/types.ts` (identical to `scraper/src/types.ts`); `sourceNames: Record<string, string>` in `frontend/src/lib/sources.ts`; scripts `dev`, `build`, `test`, `typecheck`, `merge-data` (added in Task 14); Vite `base: "/engineer-blog/"`. All frontend tasks build on this.
 
@@ -2052,42 +2070,151 @@ createApp(App).mount("#app");
   --muted: #6b7280;
   --accent: #2563eb;
   --badge-bg: #eef2ff;
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
   color: #111827;
 }
-* { box-sizing: border-box; }
-body { margin: 0; background: #f9fafb; }
-a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; }
-.container { max-width: 960px; margin: 0 auto; padding: 1rem; }
-.site-header h1 { margin: 0.5rem 0 0.25rem; }
-.stats { color: var(--muted); font-size: 0.9rem; margin-bottom: 1rem; }
-.layout { display: grid; grid-template-columns: 240px 1fr; gap: 1.5rem; }
-@media (max-width: 720px) { .layout { grid-template-columns: 1fr; } }
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #f9fafb;
+}
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.site-header h1 {
+  margin: 0.5rem 0 0.25rem;
+}
+.stats {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 1.5rem;
+}
+@media (max-width: 720px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
 .search-bar input {
-  width: 100%; padding: 0.6rem 0.8rem; font-size: 1rem;
-  border: 1px solid var(--border); border-radius: 8px; margin-bottom: 1rem;
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
-.filter-panel { font-size: 0.9rem; }
-.filter-panel h3 { margin: 1rem 0 0.4rem; font-size: 0.85rem; text-transform: uppercase; color: var(--muted); }
-.filter-panel label { display: flex; gap: 0.4rem; align-items: center; padding: 0.15rem 0; cursor: pointer; }
-.filter-panel .count { color: var(--muted); margin-left: auto; }
-.filter-panel input[type="date"] { width: 100%; margin-top: 0.25rem; }
+.filter-panel {
+  font-size: 0.9rem;
+}
+.filter-panel h3 {
+  margin: 1rem 0 0.4rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.filter-panel label {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  padding: 0.15rem 0;
+  cursor: pointer;
+}
+.filter-panel .count {
+  color: var(--muted);
+  margin-left: auto;
+}
+.filter-panel input[type="date"] {
+  width: 100%;
+  margin-top: 0.25rem;
+}
 .article-card {
-  display: flex; gap: 1rem; background: #fff; border: 1px solid var(--border);
-  border-radius: 10px; padding: 1rem; margin-bottom: 0.75rem;
+  display: flex;
+  gap: 1rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
 }
-.article-card img.thumb { width: 120px; height: 80px; object-fit: cover; border-radius: 6px; flex-shrink: 0; }
-.article-card h2 { margin: 0 0 0.3rem; font-size: 1.05rem; }
-.article-card .meta { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; font-size: 0.8rem; color: var(--muted); }
-.badge { background: var(--badge-bg); color: var(--accent); border-radius: 999px; padding: 0.1rem 0.6rem; font-weight: 600; }
-.badge.new { background: #dcfce7; color: #15803d; }
-.tag { background: #f3f4f6; border-radius: 4px; padding: 0.05rem 0.4rem; }
-.summary { margin: 0.4rem 0 0; font-size: 0.9rem; color: #374151; }
-.load-more { display: block; margin: 1rem auto 2rem; padding: 0.6rem 1.5rem; font-size: 1rem;
-  border: 1px solid var(--border); border-radius: 8px; background: #fff; cursor: pointer; }
-.load-more:hover { background: #f3f4f6; }
-.empty, .loading, .error { text-align: center; color: var(--muted); padding: 3rem 0; }
+.article-card img.thumb {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+.article-card h2 {
+  margin: 0 0 0.3rem;
+  font-size: 1.05rem;
+}
+.article-card .meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.badge {
+  background: var(--badge-bg);
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+  font-weight: 600;
+}
+.badge.new {
+  background: #dcfce7;
+  color: #15803d;
+}
+.tag {
+  background: #f3f4f6;
+  border-radius: 4px;
+  padding: 0.05rem 0.4rem;
+}
+.summary {
+  margin: 0.4rem 0 0;
+  font-size: 0.9rem;
+  color: #374151;
+}
+.load-more {
+  display: block;
+  margin: 1rem auto 2rem;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+}
+.load-more:hover {
+  background: #f3f4f6;
+}
+.empty,
+.loading,
+.error {
+  text-align: center;
+  color: var(--muted);
+  padding: 3rem 0;
+}
 ```
 
 `frontend/src/App.vue` (shell; replaced in Task 20):
@@ -2140,11 +2267,13 @@ git commit -m "feat(frontend): vite 8 + vue 3 scaffold with pages base path"
 ### Task 14: Data merge build script
 
 **Files:**
+
 - Create: `frontend/scripts/mergeArticles.ts`
 - Modify: `frontend/package.json` (add `merge-data` + `prebuild` scripts)
 - Test: `frontend/tests/mergeArticles.test.ts`
 
 **Interfaces:**
+
 - Consumes: `Article` (`frontend/src/types.ts`, Task 13); reads `data/articles/*.json` produced by Task 9.
 - Produces: `mergeArticleFiles(perSource: Article[][]): Article[]` (flatten + sort newest-first); running `npm run merge-data -w frontend` writes `frontend/public/articles.json` (gitignored since Task 1). `npm run build -w frontend` runs it automatically via `prebuild`. The deploy workflow (Task 23) and local dev rely on this.
 
@@ -2200,9 +2329,7 @@ import { fileURLToPath } from "node:url";
 import type { Article } from "../src/types.js";
 
 export function mergeArticleFiles(perSource: Article[][]): Article[] {
-  return perSource
-    .flat()
-    .sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt));
+  return perSource.flat().sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt));
 }
 
 async function main(): Promise<void> {
@@ -2218,7 +2345,10 @@ async function main(): Promise<void> {
   console.log(`wrote ${merged.length} articles from ${files.length} source files`);
 }
 
-if (process.argv[1] && import.meta.url === new URL(`file://${process.argv[1].replace(/\\/g, "/")}`).href) {
+if (
+  process.argv[1] &&
+  import.meta.url === new URL(`file://${process.argv[1].replace(/\\/g, "/")}`).href
+) {
   await main();
 }
 ```
@@ -2251,10 +2381,12 @@ git commit -m "feat(frontend): merge data/articles into single articles.json at 
 ### Task 15: Pure filter/search functions
 
 **Files:**
+
 - Create: `frontend/src/lib/filter.ts`
 - Test: `frontend/tests/filter.test.ts`
 
 **Interfaces:**
+
 - Consumes: `Article` (Task 13).
 - Produces (all pure; Tasks 16–20 consume these exact names):
   - `type DatePreset = "all" | "week" | "month" | "year" | "custom"`
@@ -2269,13 +2401,7 @@ git commit -m "feat(frontend): merge data/articles into single articles.json at 
 
 ```ts
 import { describe, expect, it } from "vitest";
-import {
-  applyFilters,
-  companyCounts,
-  emptyFilter,
-  isNew,
-  topTags,
-} from "../src/lib/filter.js";
+import { applyFilters, companyCounts, emptyFilter, isNew, topTags } from "../src/lib/filter.js";
 import type { Article } from "../src/types.js";
 
 const NOW = new Date("2026-07-11T12:00:00.000Z");
@@ -2357,7 +2483,12 @@ describe("applyFilters — date presets", () => {
     expect(applyFilters(articles, state, NOW)).toHaveLength(2);
   });
   it("custom range with only a from-date", () => {
-    const state = { ...emptyFilter(), datePreset: "custom" as const, dateFrom: "2026-01-01", dateTo: null };
+    const state = {
+      ...emptyFilter(),
+      datePreset: "custom" as const,
+      dateFrom: "2026-01-01",
+      dateTo: null,
+    };
     expect(applyFilters(articles, state, NOW)).toHaveLength(2);
   });
 });
@@ -2498,10 +2629,12 @@ git commit -m "feat(frontend): pure search/filter functions with date presets"
 ### Task 16: URL state round-tripping
 
 **Files:**
+
 - Create: `frontend/src/lib/urlState.ts`
 - Test: `frontend/tests/urlState.test.ts`
 
 **Interfaces:**
+
 - Consumes: `FilterState`, `DatePreset`, `emptyFilter` (Task 15).
 - Produces: `stateToQuery(state: FilterState): string` (no leading `?`; empty string when nothing is set) and `queryToState(search: string): FilterState` (accepts with or without leading `?`; unknown values fall back to defaults). Task 17's composable uses both.
 
@@ -2626,10 +2759,12 @@ git commit -m "feat(frontend): filter state url query round-tripping"
 ### Task 17: useArticleFilter composable
 
 **Files:**
+
 - Create: `frontend/src/composables/useArticleFilter.ts`
 - Test: `frontend/tests/useArticleFilter.test.ts`
 
 **Interfaces:**
+
 - Consumes: `applyFilters`, `companyCounts`, `topTags`, `emptyFilter`, `FilterState` (Task 15); `queryToState`, `stateToQuery` (Task 16); Vue reactivity.
 - Produces: `useArticleFilter(articles: Ref<Article[]>): { state: FilterState (reactive); filtered: ComputedRef<Article[]>; companies: ComputedRef<{id: string; count: number}[]>; tags: ComputedRef<{tag: string; count: number}[]> }`. Initializes `state` from `window.location.search`; syncs every state change back to the URL via `history.replaceState`. Task 20's App consumes this.
 
@@ -2717,12 +2852,7 @@ Expected: FAIL — cannot resolve the composable module.
 
 ```ts
 import { computed, reactive, watch, type ComputedRef, type Ref } from "vue";
-import {
-  applyFilters,
-  companyCounts,
-  topTags,
-  type FilterState,
-} from "../lib/filter.js";
+import { applyFilters, companyCounts, topTags, type FilterState } from "../lib/filter.js";
 import { queryToState, stateToQuery } from "../lib/urlState.js";
 import type { Article } from "../types.js";
 
@@ -2768,11 +2898,13 @@ git commit -m "feat(frontend): useArticleFilter composable with url sync"
 ### Task 18: ArticleCard + ArticleList components
 
 **Files:**
+
 - Create: `frontend/src/components/ArticleCard.vue`
 - Create: `frontend/src/components/ArticleList.vue`
 - Test: `frontend/tests/articleList.test.ts`
 
 **Interfaces:**
+
 - Consumes: `Article` (Task 13), `sourceName` (Task 13), `isNew` (Task 15), CSS classes from `style.css` (Task 13).
 - Produces: `ArticleCard` (prop: `article: Article`) and `ArticleList` (prop: `articles: Article[]`; renders cards newest-first as given, with "Load more" pagination of 30). Task 20 mounts `ArticleList`.
 
@@ -2866,13 +2998,7 @@ const displayDate = computed(() =>
 
 <template>
   <article class="article-card">
-    <img
-      v-if="article.thumbnail"
-      class="thumb"
-      :src="article.thumbnail"
-      alt=""
-      loading="lazy"
-    />
+    <img v-if="article.thumbnail" class="thumb" :src="article.thumbnail" alt="" loading="lazy" />
     <div>
       <h2>
         <a class="title-link" :href="article.url" target="_blank" rel="noopener noreferrer">
@@ -2945,11 +3071,13 @@ git commit -m "feat(frontend): article card and paginated article list"
 ### Task 19: SearchBar + FilterPanel components
 
 **Files:**
+
 - Create: `frontend/src/components/SearchBar.vue`
 - Create: `frontend/src/components/FilterPanel.vue`
 - Test: `frontend/tests/searchBar.test.ts`
 
 **Interfaces:**
+
 - Consumes: `FilterState`, `DatePreset` (Task 15), `sourceName` (Task 13).
 - Produces:
   - `SearchBar` — prop `modelValue: string`, emits `update:modelValue` debounced by 200 ms (`v-model` compatible).
@@ -3109,10 +3237,12 @@ git commit -m "feat(frontend): debounced search bar and filter panel"
 ### Task 20: App integration — data load, stats header, wiring
 
 **Files:**
+
 - Modify: `frontend/src/App.vue` (replace the Task 13 shell)
 - Modify: `frontend/tests/app.test.ts` (extend)
 
 **Interfaces:**
+
 - Consumes: `useArticleFilter` (Task 17), `SearchBar`/`FilterPanel` (Task 19), `ArticleList` (Task 18), `Article` (Task 13).
 - Produces: the complete v1 page. Data is fetched once from `${import.meta.env.BASE_URL}articles.json`. Stats line = article count, source count, last-updated (max `fetchedAt`).
 
@@ -3169,7 +3299,10 @@ describe("App", () => {
   });
 
   it("shows an error state when the fetch fails", async () => {
-    vi.stubGlobal("fetch", vi.fn(async () => new Response("nope", { status: 500 })));
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async () => new Response("nope", { status: 500 })),
+    );
     const wrapper = mount(App);
     await flushPromises();
     expect(wrapper.find(".error").exists()).toBe(true);
@@ -3268,9 +3401,11 @@ git commit -m "feat(frontend): app integration with data load, stats, and filter
 ### Task 21: CI workflow
 
 **Files:**
+
 - Create: `.github/workflows/ci.yml`
 
 **Interfaces:**
+
 - Consumes: root scripts `lint`, `format`, `typecheck`, `test` (Task 1; workspace scripts from Tasks 2 and 13).
 - Produces: quality gate on pushes to `main` and PRs, skipped for data-only commits.
 
@@ -3328,10 +3463,12 @@ Then run `gh run watch` (or check the Actions tab): the CI run must complete gre
 ### Task 22: Fetch + backfill workflows
 
 **Files:**
+
 - Create: `.github/workflows/fetch.yml`
 - Create: `.github/workflows/backfill.yml`
 
 **Interfaces:**
+
 - Consumes: CLI contract from Task 9 (`npm run fetch -w scraper`, `npm run backfill -w scraper -- <source>`, `added=N` on `$GITHUB_OUTPUT`, summary on `$GITHUB_STEP_SUMMARY`, exit 1 only when all sources fail); a repo secret `FETCH_PUSH_TOKEN` (created in Step 1).
 - Produces: daily data commits that trigger the deploy workflow (Task 23).
 
@@ -3452,9 +3589,11 @@ Expected: green run; the job summary shows the per-source result table; if new a
 ### Task 23: Deploy workflow + Pages setup
 
 **Files:**
+
 - Create: `.github/workflows/deploy.yml`
 
 **Interfaces:**
+
 - Consumes: `npm run build -w frontend` (Task 13), whose `prebuild` runs the data merge (Task 14); output directory `frontend/dist`.
 - Produces: the live site at `https://rulerchen.github.io/engineer-blog/`, redeployed on every push to `main` including fetch-bot data commits.
 
@@ -3536,4 +3675,3 @@ Expected: the site loads with the seeded articles; search, filters, date presets
 - [ ] The live site's search, company/tag/date filters, URL state sharing, "New" badges, and Load more all behave as specified.
 - [ ] Backfill runs only via manual dispatch and is polite (sequential + delay + honest UA).
 - [ ] No out-of-scope features crept in (no router, no search library, no full-text storage).
-

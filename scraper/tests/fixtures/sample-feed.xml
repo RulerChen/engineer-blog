@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Example Engineering</title>
+    <link>https://Engineering.Example.com/</link>
+    <item>
+      <title>Scaling our data platform</title>
+      <link>https://Engineering.Example.com/2026/07/scaling-data-platform/#more</link>
+      <pubDate>Wed, 08 Jul 2026 12:00:00 +0000</pubDate>
+      <category>data</category>
+      <category>infra</category>
+      <description><![CDATA[<p>How we <b>scaled</b> our data platform to petabytes.</p>]]></description>
+      <enclosure url="https://engineering.example.com/img/cover.png" type="image/png" length="1000"/>
+    </item>
+    <item>
+      <title>A post with no extras</title>
+      <link>https://engineering.example.com/2026/07/no-extras</link>
+      <pubDate>Tue, 07 Jul 2026 09:30:00 +0000</pubDate>
+      <description>Plain text description.</description>
+    </item>
+    <item>
+      <title>Broken item without a link</title>
+      <pubDate>Mon, 06 Jul 2026 09:30:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

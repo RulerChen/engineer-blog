@@ -1,0 +1,28 @@
+{
+  "name": "engineer-blog",
+  "private": true,
+  "workspaces": [
+    "scraper",
+    "frontend"
+  ],
+  "type": "module",
+  "scripts": {
+    "lint": "oxlint .",
+    "format": "oxfmt --check .",
+    "format:fix": "oxfmt .",
+    "typecheck": "npm run typecheck --workspaces",
+    "test": "npm run test --workspaces"
+  },
+  "devDependencies": {
+    "oxfmt": "^0.58.0",
+    "oxlint": "^1.73.0"
+  },
+  "overrides": {
+    "vue-tsc": {
+      "typescript": "^6.0.3"
+    }
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
