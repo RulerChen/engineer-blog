@@ -1,0 +1,140 @@
+[
+  {
+    "id": "134f4859bdd47935cb7a3295fbd6e1f496e40abc",
+    "title": "From Traditional ML to AI Agents: How Booking.com Scales AI Observability With Arize AI",
+    "url": "https://medium.com/booking-com-data-science/from-traditional-ml-to-ai-agents-how-booking-com-scales-ai-observability-with-arize-ai-625ac3996c7e?source=rss----4d265f07defc---4",
+    "source": "booking",
+    "publishedAt": "2026-07-10T07:52:18.000Z",
+    "tags": [
+      "ai"
+    ],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:37:32.945Z"
+  },
+  {
+    "id": "631fa5be7894e6008c6ba656a0b56ed7ab041cde",
+    "title": "Outlier Handling at Scale in Experimentation",
+    "url": "https://medium.com/booking-com-data-science/outlier-handling-at-scale-in-experimentation-a8bb140e1ab8?source=rss----4d265f07defc---4",
+    "source": "booking",
+    "publishedAt": "2026-07-01T13:44:26.000Z",
+    "tags": [
+      "experimentation"
+    ],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:37:32.945Z"
+  },
+  {
+    "id": "d4132a491e7369b2417888529a20adf2a27f7331",
+    "title": "The Causality Gap: Measuring the True Impact of Voluntary Adoption in Digital Marketplaces",
+    "url": "https://medium.com/booking-com-data-science/the-causality-gap-measuring-the-true-impact-of-voluntary-adoption-in-digital-marketplaces-ea68b5a35120?source=rss----4d265f07defc---4",
+    "source": "booking",
+    "publishedAt": "2026-05-22T08:05:43.000Z",
+    "tags": [
+      "ml",
+      "data",
+      "experimentation"
+    ],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:37:32.945Z"
+  },
+  {
+    "id": "863a4e84ab534d0ad8c2d726d1c7cd2e865c493b",
+    "title": "Scaling Experimentation Quality at Booking.com",
+    "url": "https://medium.com/booking-com-data-science/scaling-experimentation-quality-at-booking-com-726152ee4ef0?source=rss----4d265f07defc---4",
+    "source": "booking",
+    "publishedAt": "2026-03-24T11:44:21.000Z",
+    "tags": [
+      "data",
+      "experimentation"
+    ],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:37:32.945Z"
+  },
+  {
+    "id": "e35dc95d38a60f375746a2773aafe39186b549af",
+    "title": "Shape the Future of Travel: Join our 2026 GenAI & ML PhD Research Internship!",
+    "url": "https://medium.com/booking-com-data-science/shape-the-future-of-travel-join-our-2026-genai-ml-phd-research-internship-a36793c34fbc?source=rss----4d265f07defc---4",
+    "source": "booking",
+    "publishedAt": "2026-02-05T10:39:26.000Z",
+    "tags": [
+      "ai",
+      "ml"
+    ],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:37:32.945Z"
+  },
+  {
+    "id": "c7f5da7e458a306cd665633aa872e0eaa806a791",
+    "title": "Beyond Prompt Engineering: How We Used Supervised Fine-Tuning for Travel Recommendations",
+    "url": "https://medium.com/booking-com-data-science/beyond-prompt-engineering-how-we-used-supervised-fine-tuning-for-travel-recommendations-91e8f4711e4b?source=rss----4d265f07defc---4",
+    "source": "booking",
+    "publishedAt": "2026-01-29T10:53:21.000Z",
+    "tags": [
+      "ml",
+      "ai"
+    ],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:37:32.945Z"
+  },
+  {
+    "id": "94654bb2a3f5ef4a4cf37765e968212752933cfb",
+    "title": "AI Agent Evaluation",
+    "url": "https://medium.com/booking-com-data-science/ai-agent-evaluation-82e781439d97?source=rss----4d265f07defc---4",
+    "source": "booking",
+    "publishedAt": "2026-01-21T13:11:23.000Z",
+    "tags": [
+      "ai",
+      "ml"
+    ],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:37:32.945Z"
+  },
+  {
+    "id": "76995098c0f5763a9158cdc3b93a93656c2d0dfb",
+    "title": "Highlights of Booking.com’s publication in 2025",
+    "url": "https://medium.com/booking-com-data-science/highlights-of-booking-coms-publication-in-2025-1c1a6deba066?source=rss----4d265f07defc---4",
+    "source": "booking",
+    "publishedAt": "2026-01-20T09:20:13.000Z",
+    "tags": [
+      "data"
+    ],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:37:32.945Z"
+  },
+  {
+    "id": "ff84537efa721a72208fdfdcbf3a96ec836393c5",
+    "title": "Constrained Best Arm Identification",
+    "url": "https://medium.com/booking-com-data-science/constrained-best-arm-identification-069857d034fa?source=rss----4d265f07defc---4",
+    "source": "booking",
+    "publishedAt": "2025-12-03T12:10:49.000Z",
+    "tags": [
+      "ml",
+      "experimentation"
+    ],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:37:32.945Z"
+  },
+  {
+    "id": "ba6ff089af029bd871e81df6e67ef8122de1c3ec",
+    "title": "Building a GenAI Agent for Partner-Guest Messaging",
+    "url": "https://medium.com/booking-com-data-science/building-a-genai-agent-for-partner-guest-messaging-f54afb72e6cf?source=rss----4d265f07defc---4",
+    "source": "booking",
+    "publishedAt": "2025-10-31T12:19:13.000Z",
+    "tags": [
+      "ai",
+      "general"
+    ],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:37:32.945Z"
+  }
+]

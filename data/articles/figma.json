@@ -1,0 +1,550 @@
+[
+  {
+    "id": "bca3c4397b1d7a4e10b0cb8c767954ccb247947f",
+    "title": "Building accessibility into a canvas-based product",
+    "url": "https://www.figma.com/blog/building-accessibility-into-a-canvas-based-product",
+    "source": "figma",
+    "publishedAt": "2026-06-30T16:00:00.000Z",
+    "tags": [
+      "general"
+    ],
+    "summary": "Building on a canvas unlocks performance that a traditional HTML web app can't touch. It also strips away any accessibility the browser gives you for free. Here's how we built it back in.",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "163d26e7a38f26b70e7572acabc889a00e534229",
+    "title": "Improving performance in the layers panel",
+    "url": "https://www.figma.com/blog/improving-performance-in-the-layers-panel",
+    "source": "figma",
+    "publishedAt": "2026-06-10T16:00:00.000Z",
+    "tags": [
+      "general"
+    ],
+    "summary": "The layers panel is the central blueprint of a Figma file. We rearchitected it with new computation and caching strategies, resulting in 30–50% faster interactions in some of the largest, most complex files.",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "60d898af03a5713524126f213ac00b9d9b6c3eb9",
+    "title": "PGKeeper: Building the bouncer we needed for Postgres",
+    "url": "https://www.figma.com/blog/pgkeeper-building-the-bouncer-we-needed-for-postgres",
+    "source": "figma",
+    "publishedAt": "2026-05-03T16:00:00.000Z",
+    "tags": [
+      "general",
+      "infra"
+    ],
+    "summary": "This is the story of why and how we built PGKeeper, a scalable and reliable service to support Figma’s rapidly growing products and database workload.",
+    "thumbnail": "https://cdn.sanity.io/images/599r6htc/regionalized/a6656bd7b0e1b3c1709cbf65beab5e28b0f1c293-3264x1836.png?w=3264&h=1836&q=75&fit=max&auto=format",
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "107f0d94b672f1bc0cea4d10f2b48d536bfcf585",
+    "title": "Figma's next-generation data caching platform",
+    "url": "https://www.figma.com/blog/figmas-next-generation-data-caching-platform",
+    "source": "figma",
+    "publishedAt": "2026-03-24T16:00:00.000Z",
+    "tags": [
+      "general",
+      "infra"
+    ],
+    "summary": "Scalability and reliability gaps in our Redis platform were a growing threat to Figma's site availability. This is the story of how we built FigCache, a foundational technology that underpins a reimagined internal platform for ephemeral data.",
+    "thumbnail": "https://cdn.sanity.io/images/599r6htc/regionalized/8900a6ed7f67829cf55d1c22365069c1c60504e4-3264x1836.png?w=3264&h=1836&q=75&fit=max&auto=format",
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "b4ff609f179981c7a2dea9f1671dbb0bb8bea312",
+    "title": "How we rebuilt the foundations of component instances",
+    "url": "https://www.figma.com/blog/how-we-rebuilt-the-foundations-of-component-instances",
+    "source": "figma",
+    "publishedAt": "2026-03-16T16:00:00.000Z",
+    "tags": [
+      "general"
+    ],
+    "summary": "By replacing a decade-old architecture with a reactive foundation, we made common operations in large design systems up to 50% faster and unlocked a new way to build dynamic features.",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "144ea20dcbe3d8fb5ec3ed7005b61fcb1b5425ac",
+    "title": "Redefining impact as a data scientist",
+    "url": "https://www.figma.com/blog/redefining-impact-as-a-data-scientist",
+    "source": "figma",
+    "publishedAt": "2026-02-17T16:00:00.000Z",
+    "tags": [
+      "general"
+    ],
+    "summary": "Not all impactful data science work involves experiments or optimization. Sometimes it’s about making complex systems legible, correct, and safe to operate.",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "61d0c1213e6d99cab2a019a1866a906494fb5ddf",
+    "title": "Visibility at scale: How Figma detects sensitive data exposure",
+    "url": "https://www.figma.com/blog/visibility-at-scale-how-figma-detects-sensitive-data-exposure",
+    "source": "figma",
+    "publishedAt": "2025-10-22T16:00:00.000Z",
+    "tags": [
+      "general",
+      "security"
+    ],
+    "summary": "Solving security challenges at scale requires creativity as much as rigor. To reduce the risk of sensitive data exposure, we built Response Sampling: a lightweight, real-time control that watches outbound responses, validates access, and provides an early warning system across our products.",
+    "thumbnail": "https://cdn.sanity.io/images/599r6htc/regionalized/c507a29543a56037bdb490508fd101ab31e0953c-3264x1836.png?w=3264&h=1836&q=75&fit=max&auto=format",
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "fece425a7d00f3d505e99a50a35735c06693cc20",
+    "title": "Figma rendering: Powered by WebGPU",
+    "url": "https://www.figma.com/blog/figma-rendering-powered-by-webgpu",
+    "source": "figma",
+    "publishedAt": "2025-09-17T16:00:00.000Z",
+    "tags": [
+      "general",
+      "performance"
+    ],
+    "summary": "We’ve updated our renderer to use WebGPU, unlocking new performance optimization opportunities. Here’s how we did it.",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "ee01ad3c1ea29a21704b61d35f48036ed0031fc0",
+    "title": "The Duolingo method: Collaboration as a core practice",
+    "url": "https://www.figma.com/blog/the-method-duolingo",
+    "source": "figma",
+    "publishedAt": "2025-07-31T16:00:00.000Z",
+    "tags": [
+      "product",
+      "general"
+    ],
+    "summary": "Duolingo’s Math team ditches traditional handoff in favor of co-creation, scrappy prototypes, and constant experimentation.",
+    "thumbnail": "https://cdn.sanity.io/images/599r6htc/regionalized/727ef14080bf9cf80e48d397e4e108d0558b605b-1632x918.jpg?w=1632&h=918&q=75&fit=max&auto=format",
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "0eccdae37d5b8dd618fe190f35a2f64b2b360408",
+    "title": "A tale of two parameter architectures—and how we unified them",
+    "url": "https://www.figma.com/blog/a-tale-of-two-parameter-architectures",
+    "source": "figma",
+    "publishedAt": "2025-07-28T16:00:00.000Z",
+    "tags": [
+      "general",
+      "frontend"
+    ],
+    "summary": "After launching variables and component properties in quick succession, we were left with two different underlying architectures for parametrization. Here’s how we unified them for consistency and scalability.",
+    "thumbnail": "https://cdn.sanity.io/images/599r6htc/regionalized/0f2351d5fdeb4e0abdd87f41cd0f2dbc1b666c5b-3265x1837.png?w=3265&h=1837&q=75&fit=max&auto=format",
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "9c89331fc6bf8f4cc7a03b66e3772067530d9e48",
+    "title": "Rolling out Santa without freezing productivity: Tips from securing Figma’s fleet",
+    "url": "https://www.figma.com/blog/rolling-out-santa-without-freezing-productivity",
+    "source": "figma",
+    "publishedAt": "2025-07-01T16:00:00.000Z",
+    "tags": [
+      "general",
+      "security"
+    ],
+    "summary": "We scaled Santa, an open-source binary authorization tool, across all Figmates’ laptops to boost endpoint security while keeping workflows seamless. Here’s how we tackled the challenges and ensured a smooth rollout.",
+    "thumbnail": "https://cdn.sanity.io/images/599r6htc/regionalized/74e0eeec5aaa9f2e8c221dd7655fac3ed6a93112-3264x1836.png?w=3264&h=1836&q=75&fit=max&auto=format",
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "deca84d0454c064d4e8d924890d6b5a98a190208",
+    "title": "6 skills every engineer needs for the AI era",
+    "url": "https://www.figma.com/blog/6-skills-every-engineer-needs-for-the-ai-era",
+    "source": "figma",
+    "publishedAt": "2025-06-25T16:00:00.000Z",
+    "tags": [
+      "general",
+      "ai"
+    ],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "878296a60b24b4e293fd0310e203ee235a28514e",
+    "title": "Canvas, meet code: Building Figma’s code layers",
+    "url": "https://www.figma.com/blog/building-figmas-code-layers",
+    "source": "figma",
+    "publishedAt": "2025-06-24T16:00:00.000Z",
+    "tags": [
+      "general",
+      "ai"
+    ],
+    "summary": "What if you could design and build on the same canvas? Here's how we created code layers to bring design and code together.",
+    "thumbnail": "https://cdn.sanity.io/images/599r6htc/regionalized/fb706fa9b67e53f822d449ff2333078094ecca49-3264x1836.png?w=480&h=270&q=75&fit=max&auto=format",
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "5e8ac7cfab67b90bfd6797d076c6d473cad0a8ad",
+    "title": "Supporting faster file load times with memory optimizations in Rust",
+    "url": "https://www.figma.com/blog/supporting-faster-file-load-times-with-memory-optimizations-in-rust",
+    "source": "figma",
+    "publishedAt": "2025-06-17T16:00:00.000Z",
+    "tags": [
+      "general",
+      "performance"
+    ],
+    "summary": "Memory efficiency is essential for a great user experience. To keep files fast and performant, the Figma team is always hunting for optimizations—here are a few.",
+    "thumbnail": "https://cdn.sanity.io/images/599r6htc/regionalized/420ccbbff985939dabd692e031c0a51049f97862-3264x1836.png?w=480&h=270&q=75&fit=max&auto=format",
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "a8b2cb7c2cada1f78e95447ee792cb16dbd9480f",
+    "title": "Double click: What does MCP mean for agentic AI?",
+    "url": "https://www.figma.com/blog/double-click-what-does-mcp-mean-for-agentic-ai",
+    "source": "figma",
+    "publishedAt": "2025-06-04T16:00:00.000Z",
+    "tags": [
+      "ai",
+      "general"
+    ],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "0977286bff08898441dd478a872ec736a6582e2b",
+    "title": "Introducing our MCP server: Bringing Figma into your workflow",
+    "url": "https://www.figma.com/blog/introducing-figma-mcp-server",
+    "source": "figma",
+    "publishedAt": "2025-06-03T16:00:00.000Z",
+    "tags": [
+      "product",
+      "ai",
+      "general"
+    ],
+    "summary": "Today we’re announcing the beta release of the Figma MCP server, which brings Figma directly into the developer workflow to help LLMs achieve design-informed code generation.",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "ed00d5b494025031a1b978674659bf1e83849704",
+    "title": "From multi-day latency to near real-time insights: Figma’s data pipeline upgrade",
+    "url": "https://www.figma.com/blog/figmas-data-pipeline-upgrade",
+    "source": "figma",
+    "publishedAt": "2025-05-28T16:00:00.000Z",
+    "tags": [
+      "general",
+      "infra"
+    ],
+    "summary": "After an exponential growth in users and data, daily synchronization tasks started taking hours or even days to complete. Here’s how rebuilding a data pipeline reduced latency to near real-time.",
+    "thumbnail": "https://cdn.sanity.io/images/599r6htc/regionalized/60c90a0b76517d5f13e9fb55c989ef9bfe10ee92-3264x1836.png?w=480&h=270&q=75&fit=max&auto=format",
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "92196a8692d736dda46f6db0891c793d92507449",
+    "title": "Designing for security and usability: Figma's modern endpoint strategy",
+    "url": "https://www.figma.com/blog/figmas-modern-endpoint-strategy",
+    "source": "figma",
+    "publishedAt": "2025-04-03T16:00:00.000Z",
+    "tags": [
+      "general",
+      "security"
+    ],
+    "summary": "At Figma, security doesn’t have to slow you down. We’ve designed our corporate endpoint security with UX in mind, making it seamless and self-serve.",
+    "thumbnail": "https://cdn.sanity.io/images/599r6htc/regionalized/49e381545423c4606a2cb8dffe274858c44f0578-3264x1836.png?w=480&h=270&q=75&fit=max&auto=format",
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "cc0974f45308fa589e9e81b62dedf49dfaf0673f",
+    "title": "Double click: When coding becomes conversation",
+    "url": "https://www.figma.com/blog/double-click-vibe-coding",
+    "source": "figma",
+    "publishedAt": "2025-02-19T16:00:00.000Z",
+    "tags": [
+      "general",
+      "ai",
+      "frontend"
+    ],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "e8d65b67a8a2ba165538c71c9fea9db7442788d9",
+    "title": "Why developers should embrace creative coding again",
+    "url": "https://www.figma.com/blog/why-developers-should-embrace-creative-coding-again",
+    "source": "figma",
+    "publishedAt": "2025-01-08T16:00:00.000Z",
+    "tags": [
+      "general"
+    ],
+    "summary": "Modern browsers have evolved beyond what most design tools can do. It’s up to us to break free from templates and tap into the web’s true creative potential.",
+    "thumbnail": "https://cdn.sanity.io/images/599r6htc/regionalized/55a610e9625ca7eccfdcb0eae196ef14c22dcb00-3264x1836.png?w=480&h=270&q=75&fit=max&auto=format",
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "d0481f2bb040ca31999b0295f4e38e2ce51209bc",
+    "title": "Why devs should play an active role in design",
+    "url": "https://www.figma.com/blog/why-devs-should-play-an-active-role-in-design",
+    "source": "figma",
+    "publishedAt": "2024-11-18T16:00:00.000Z",
+    "tags": [
+      "general"
+    ],
+    "summary": "Advocating for Dev Mode changed my team’s workflow. Here’s how you can do the same.",
+    "thumbnail": "https://cdn.sanity.io/images/599r6htc/regionalized/02d7436eb3c95fac7cb17fdf9ac1ef5df10d1b43-3262x1836.jpg?rect=0,1,3262,1835&w=480&h=270&q=75&fit=max&auto=format",
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "15a84c9be9e3977d85ca03445ab5572f68415afd",
+    "title": "How we built AI search in Figma",
+    "url": "https://www.figma.com/blog/how-we-built-ai-search-in-figma",
+    "source": "figma",
+    "publishedAt": "2024-10-24T16:00:00.000Z",
+    "tags": [
+      "general",
+      "ai",
+      "product"
+    ],
+    "summary": "How we went from autocomplete to AI search and landed on a tool that’s changing the way designers find and use existing work.",
+    "thumbnail": "https://cdn.sanity.io/images/599r6htc/regionalized/30e954df3f78b1e2c12cdf0cd38201ed848769cd-3262x1836.png?rect=0,1,3262,1835&w=480&h=270&q=75&fit=max&auto=format",
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "6d98827c890a7078848cfa70296365495b811efc",
+    "title": "The infrastructure behind AI search in Figma",
+    "url": "https://www.figma.com/blog/the-infrastructure-behind-ai-search-in-figma",
+    "source": "figma",
+    "publishedAt": "2024-10-14T16:00:00.000Z",
+    "tags": [
+      "general",
+      "ai",
+      "infra"
+    ],
+    "summary": "To build AI search in Figma, we had to tackle a number of technical hurdles, including the challenge of generating and indexing billions of embeddings to power these features—while also keeping costs down.",
+    "thumbnail": "https://cdn.sanity.io/images/599r6htc/regionalized/703a135a9506282e8dca2cf2152f82897259eadb-3262x1836.png?rect=0,1,3262,1835&w=480&h=270&q=75&fit=max&auto=format",
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "310795ea018e74856b693ae1cab207bbcce1c928",
+    "title": "The search for speed in Figma",
+    "url": "https://www.figma.com/blog/the-search-for-speed-in-figma-opensearch",
+    "source": "figma",
+    "publishedAt": "2024-10-09T16:00:00.000Z",
+    "tags": [
+      "general",
+      "performance",
+      "infra"
+    ],
+    "summary": "Our months-long investigation into slow search speeds led to a solution that not only improved performance but also set the foundation for future scale.",
+    "thumbnail": "https://cdn.sanity.io/images/599r6htc/regionalized/2445bac0a0762e8d2a3e9d5453d67d4110a8f892-3264x1836.jpg?w=480&h=270&q=75&fit=max&auto=format",
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "ff812cf925a372d66b3108e86e79f98f5a68a25a",
+    "title": "A year with Dev Mode: 10 lessons from an engineering manager",
+    "url": "https://www.figma.com/blog/10-lessons-from-an-engineering-manager",
+    "source": "figma",
+    "publishedAt": "2024-08-20T16:00:00.000Z",
+    "tags": [
+      "frontend",
+      "general"
+    ],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "c3e227d2090ab1275bdef31f2f76a11bb947be48",
+    "title": "How we migrated onto K8s in less than 12 months",
+    "url": "https://www.figma.com/blog/migrating-onto-kubernetes",
+    "source": "figma",
+    "publishedAt": "2024-08-07T16:00:00.000Z",
+    "tags": [
+      "general",
+      "infra"
+    ],
+    "summary": "",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "a0554404294e1b511d68896f3ab176f0414af98a",
+    "title": "Why are we so afraid of code as a commodity?",
+    "url": "https://www.figma.com/blog/why-are-we-so-afraid-of-code-as-a-commodity",
+    "source": "figma",
+    "publishedAt": "2024-06-25T16:00:00.000Z",
+    "tags": [
+      "ai",
+      "general"
+    ],
+    "summary": "Instead of asking how AI will automate our jobs, we should be focusing on what we, as engineers, uniquely do well. What problems can AI currently solve, and where is the whitespace to go beyond that?",
+    "thumbnail": "https://cdn.sanity.io/images/599r6htc/regionalized/344557d3b984eb02d9adec019fe4300168495e8a-1608x1204.png?rect=0,1,1608,1203&w=480&h=359&q=75&fit=max&auto=format",
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "f3c68d4edcab08f92fa83cc8ffc66ed4d6d81e6c",
+    "title": "Speeding up file load times, one page at a time",
+    "url": "https://www.figma.com/blog/speeding-up-file-load-times-one-page-at-a-time",
+    "source": "figma",
+    "publishedAt": "2024-05-21T16:00:00.000Z",
+    "tags": [
+      "general",
+      "performance"
+    ],
+    "summary": "Figma files are often large and complex with endless pages, library and local components, and prototype screens. Here’s how dynamic page loading improved the slowest load times by 33%.",
+    "thumbnail": "https://cdn.sanity.io/images/599r6htc/regionalized/d206f80b8a4fe5e715db009d9a87227087179588-6528x2796.jpg?rect=7,0,6515,2796&w=480&h=206&q=75&fit=max&auto=format",
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "1490d2b1ff29a2a59674c1d20ea63a8db655daf5",
+    "title": "Keeping it 100(x) with real-time data at scale",
+    "url": "https://www.figma.com/blog/livegraph-real-time-data-at-scale",
+    "source": "figma",
+    "publishedAt": "2024-05-16T16:00:00.000Z",
+    "tags": [
+      "general",
+      "infra"
+    ],
+    "summary": "After years of playing catch-up with Figma’s growth, it was time to fundamentally rethink LiveGraph’s architecture.",
+    "thumbnail": "https://cdn.sanity.io/images/599r6htc/regionalized/dab0aeb9516eba9f8a68af25582c89baff3b28ab-3264x1836.png?w=480&h=270&q=75&fit=max&auto=format",
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "274f6c54635c16a66619b707e5b4256f4b5fec69",
+    "title": "Speeding up C++ build times",
+    "url": "https://www.figma.com/blog/speeding-up-build-times",
+    "source": "figma",
+    "publishedAt": "2024-04-24T16:00:00.000Z",
+    "tags": [
+      "general",
+      "infra",
+      "performance"
+    ],
+    "summary": "When we learned that engineers were losing hours building our C++ codebase, we jumped into investigating the root cause. Here’s how we cut build times in half and shipped a solution for scale.",
+    "thumbnail": "https://cdn.sanity.io/images/599r6htc/regionalized/c1e2d8f0c9cc41387c12e0d7a1536286bb01cce7-3264x1836.png?w=480&h=270&q=75&fit=max&auto=format",
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "97a850df1f9122f6b95337186437e418d9402ccb",
+    "title": "How Figma’s databases team lived to tell the scale",
+    "url": "https://www.figma.com/blog/how-figmas-databases-team-lived-to-tell-the-scale",
+    "source": "figma",
+    "publishedAt": "2024-03-13T16:00:00.000Z",
+    "tags": [
+      "general",
+      "infra",
+      "performance"
+    ],
+    "summary": "Our nine month journey to horizontally shard Figma’s Postgres stack, and the key to unlocking (nearly) infinite scalability.",
+    "thumbnail": "https://cdn.sanity.io/images/599r6htc/regionalized/eb69f56265b7cda32a4b043d80147928a3a400ab-1608x1204.png?rect=0,1,1608,1203&w=480&h=359&q=75&fit=max&auto=format",
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "ec18a8ad81d11ccdd9f9a9359f28a00ca047bc08",
+    "title": "How we built a custom permissions DSL at Figma",
+    "url": "https://www.figma.com/blog/how-we-rolled-out-our-own-permissions-dsl-at-figma",
+    "source": "figma",
+    "publishedAt": "2024-03-12T16:00:00.000Z",
+    "tags": [
+      "general",
+      "infra",
+      "performance"
+    ],
+    "summary": "When our permissions system came apart at the seams, everything came to a halt. This is the story of how we fixed it while improving performance, accuracy, and developer ergonomics.",
+    "thumbnail": "https://cdn.sanity.io/images/599r6htc/regionalized/e57ef8aed8d41063f99a9d9e9d9de0334091db24-3264x1836.jpg?w=480&h=270&q=75&fit=max&auto=format",
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "61977b887db4528e077872b768c8a74c1d6c2d08",
+    "title": "How we engineer feedback at Figma with eng crits",
+    "url": "https://www.figma.com/blog/how-we-run-eng-crits-at-figma",
+    "source": "figma",
+    "publishedAt": "2024-02-28T16:00:00.000Z",
+    "tags": [
+      "general",
+      "ai"
+    ],
+    "summary": "Engineering crits encourage a diversity of perspectives and unblock teams to pursue new ideas. Here’s how we structure and run them at Figma.",
+    "thumbnail": "https://cdn.sanity.io/images/599r6htc/regionalized/714a87e020504f0aa5eace89b34be47d22516f1f-4800x2700.jpg?w=480&h=270&q=75&fit=max&auto=format",
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "c4884f400fc1cedad908f0215af18576edcd34b7",
+    "title": "Improving performance with incremental frame loading",
+    "url": "https://www.figma.com/blog/incremental-frame-loading",
+    "source": "figma",
+    "publishedAt": "2024-01-22T16:00:00.000Z",
+    "tags": [
+      "general",
+      "performance"
+    ],
+    "summary": "Large prototypes took minutes to load, and users took notice. Here’s how we overhauled our prototype player to improve load time and stability.",
+    "thumbnail": "https://cdn.sanity.io/images/599r6htc/regionalized/c3f594ee658e9e060a9eb7263e49df05bf5d233e-3264x1836.png?w=480&h=270&q=75&fit=max&auto=format",
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "d16c6f9791b75b2c9e3807b51e768bbbc79dfde7",
+    "title": "Enforcing device trust on code changes",
+    "url": "https://www.figma.com/blog/how-we-enforce-device-trust-on-code-changes",
+    "source": "figma",
+    "publishedAt": "2023-12-07T16:00:00.000Z",
+    "tags": [
+      "general",
+      "security"
+    ],
+    "summary": "Here's how the Figma security engineering team leveraged commit signatures and Okta Device Trust certificates to protect GitHub release branches.",
+    "thumbnail": "https://cdn.sanity.io/images/599r6htc/regionalized/4879b370bf4e7f089e25a79254da01479d6e01bd-3264x1398.png?rect=4,0,3257,1398&w=480&h=206&q=75&fit=max&auto=format",
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "395720544afed50f56bf855d8f9a12baecaaa282",
+    "title": "Server-side sandboxing: An introduction",
+    "url": "https://www.figma.com/blog/server-side-sandboxing-an-introduction",
+    "source": "figma",
+    "publishedAt": "2023-10-23T16:00:00.000Z",
+    "tags": [
+      "security",
+      "general"
+    ],
+    "summary": "In this three-part series, our security engineering team shares practical tips for deploying and operating application sandboxing techniques. First up: evaluating the many sandboxing options, and how to think about the trade-offs between them.",
+    "thumbnail": "https://cdn.sanity.io/images/599r6htc/regionalized/b9e161134e0079b267f8f692f199291b709b54d9-3264x1836.png?w=480&h=270&q=75&fit=max&auto=format",
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "9c8d1a244e801c50ec6f2a9919177e645b692352",
+    "title": "Server-side sandboxing: Containers and seccomp",
+    "url": "https://www.figma.com/blog/server-side-sandboxing-containers-and-seccomp",
+    "source": "figma",
+    "publishedAt": "2023-10-23T16:00:00.000Z",
+    "tags": [
+      "security",
+      "general"
+    ],
+    "summary": "Containers and secure computing mode (seccomp) are sandboxing primitives that offer a lighter weight alternative to virtual machines (VMs). Here we cover the differences between them, and how we use both at Figma to achieve security isolation.",
+    "thumbnail": "https://cdn.sanity.io/images/599r6htc/regionalized/33740a40342c74e22034a5ba24de386948311d5e-3264x1836.png?w=480&h=270&q=75&fit=max&auto=format",
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "6a7b4155ea1aea9306b8b87239d780b61d30a3db",
+    "title": "Server-side sandboxing: Virtual machines",
+    "url": "https://www.figma.com/blog/server-side-sandboxing-virtual-machines",
+    "source": "figma",
+    "publishedAt": "2023-10-23T16:00:00.000Z",
+    "tags": [
+      "security",
+      "general"
+    ],
+    "summary": "With so many sandboxing options, it’s daunting to choose the right one. Here, we dive into the virtual machine (VM) security model for sandboxing, including the engineering trade-offs to consider and how we use them at Figma to achieve security isolation.",
+    "thumbnail": "https://cdn.sanity.io/images/599r6htc/regionalized/e88d98cfc3ac526120576da99b498d190286a00a-3264x1836.png?w=480&h=270&q=75&fit=max&auto=format",
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  },
+  {
+    "id": "808ed0fca56e4f751aa05a67850811ceafa1d827",
+    "title": "How Figma draws inspiration from the gaming world",
+    "url": "https://www.figma.com/blog/how-figma-draws-inspiration-from-the-gaming-world",
+    "source": "figma",
+    "publishedAt": "2023-05-02T16:00:00.000Z",
+    "tags": [
+      "infra",
+      "general"
+    ],
+    "summary": "Engineering Manager Alice Ching discusses the parallels between developing gaming interfaces and building Figma and FigJam, and why our tech stack is more similar to a game engine’s tech stack than a web stack.",
+    "thumbnail": "https://cdn.sanity.io/images/599r6htc/regionalized/4f5f4622404623975baf500a70df1d67afd1bf5d-2784x1566.png?w=1632&h=918&q=75&fit=max&auto=format",
+    "fetchedAt": "2026-07-11T13:20:49.999Z"
+  }
+]

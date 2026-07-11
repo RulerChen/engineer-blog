@@ -1,0 +1,349 @@
+[
+  {
+    "id": "39ce35e4aad6ad031da5b93b6e532c8e928c5d20",
+    "title": "Enhancing HDR on Instagram for iOS With Dolby Vision",
+    "url": "https://engineering.fb.com/2025/11/17/ios/enhancing-hdr-on-instagram-for-ios-with-dolby-vision",
+    "source": "instagram",
+    "publishedAt": "2025-11-17T17:30:25.000Z",
+    "tags": [
+      "mobile",
+      "video"
+    ],
+    "summary": "We’re sharing how we’ve enabled Dolby Vision and ambient viewing environment (amve) on the Instagram iOS app to enhance the video viewing experience. HDR videos created on iPhones contain unique Dolby Vision and amve metadata that we needed to support end-to-end Instagram for iOS is now the first…",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T16:01:18.952Z"
+  },
+  {
+    "id": "f058955e1bf5578b9cd64f399ca151b31e2382f4",
+    "title": "A New Ranking Framework for Better Notification Quality on Instagram",
+    "url": "https://engineering.fb.com/2025/09/02/ml-applications/a-new-ranking-framework-for-better-notification-quality-on-instagram",
+    "source": "instagram",
+    "publishedAt": "2025-09-02T16:00:08.000Z",
+    "tags": [
+      "ml"
+    ],
+    "summary": "We’re sharing how Meta is applying machine learning (ML) and diversity algorithms to improve notification quality and user experience. We’ve introduced a diversity-aware notification ranking framework to reduce uniformity and deliver a more varied and engaging mix of notifications. This new…",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T16:01:18.952Z"
+  },
+  {
+    "id": "dabe6112568d129a0640ffb5e880a565286bcf23",
+    "title": "Journey to 1000 models: Scaling Instagram’s recommendation system",
+    "url": "https://engineering.fb.com/2025/05/21/production-engineering/journey-to-1000-models-scaling-instagrams-recommendation-system",
+    "source": "instagram",
+    "publishedAt": "2025-05-21T16:00:38.000Z",
+    "tags": [
+      "infra"
+    ],
+    "summary": "In this post, we explore how Instagram has successfully scaled its algorithm to include over 1000 ML models without sacrificing recommendation quality or reliability. We delve into the intricacies of managing such a vast array of models, each with its own performance characteristics and product…",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T16:01:18.952Z"
+  },
+  {
+    "id": "5d9c383616decfb18e102d4ec451298c9507d260",
+    "title": "Bringing Jetpack Compose to Instagram for Android",
+    "url": "https://engineering.fb.com/2025/01/24/android/bringing-jetpack-compose-to-instagram-for-android",
+    "source": "instagram",
+    "publishedAt": "2025-01-24T17:30:53.000Z",
+    "tags": [
+      "mobile",
+      "culture",
+      "devops",
+      "general"
+    ],
+    "summary": "Introducing a new Android UI framework like Jetpack Compose into an existing app is more complicated than importing some AARS and coding away. What if your app has specific performance goals to meet? What about existing design components, integrations with navigation, and logging frameworks? On…",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T16:01:18.952Z"
+  },
+  {
+    "id": "db225a369c9a47d3d384a2424cd5e5f7e9860e7e",
+    "title": "MLow: Meta’s low bitrate audio codec",
+    "url": "https://engineering.fb.com/2024/06/13/web/mlow-metas-low-bitrate-audio-codec",
+    "source": "instagram",
+    "publishedAt": "2024-06-13T14:45:58.000Z",
+    "tags": [],
+    "summary": "At Meta, we support real-time communication (RTC) for billions of people through our apps, including WhatsApp, Instagram, and Messenger. We are working to make RTC accessible by providing a high-quality experience for everyone – even those who might not have the fastest connections or the latest…",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T16:01:18.952Z"
+  },
+  {
+    "id": "94ca532d7a5288b35123dde7322e8607e26ed905",
+    "title": "Bringing HDR photo support to Instagram and Threads",
+    "url": "https://engineering.fb.com/2024/03/26/android/instagram-threads-hdr-photos",
+    "source": "instagram",
+    "publishedAt": "2024-03-26T16:00:14.000Z",
+    "tags": [
+      "mobile",
+      "infra",
+      "video",
+      "general"
+    ],
+    "summary": "Meta’s family of apps serves trillions of image download requests every day. And if you’re into high-quality images, you’ve probably noticed that Instagram and Threads have added support for high dynamic range (HDR) photos. Now people on Threads and Instagram can upload and share images that are…",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T16:01:18.952Z"
+  },
+  {
+    "id": "5eeebeef4f9435aa53bcbf3e899f01288cfcfdbe",
+    "title": "Introducing Immortal Objects for Python",
+    "url": "https://engineering.fb.com/2023/08/15/developer-tools/immortal-objects-for-python-instagram-meta",
+    "source": "instagram",
+    "publishedAt": "2023-08-15T16:00:31.000Z",
+    "tags": [
+      "devops",
+      "open-source"
+    ],
+    "summary": "Instagram has introduced Immortal Objects – PEP-683 – to Python. Now, objects can bypass reference count checks and live throughout the entire execution of the runtime, unlocking exciting avenues for true parallelism. At Meta, we use Python (Django) for our frontend server within Instagram. To…",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T16:01:18.952Z"
+  },
+  {
+    "id": "6f5dc491a5965ba32cb401693fe870c38e5e2626",
+    "title": "Scaling the Instagram Explore recommendations system",
+    "url": "https://engineering.fb.com/2023/08/09/ml-applications/scaling-instagram-explore-recommendations-system",
+    "source": "instagram",
+    "publishedAt": "2023-08-09T16:00:52.000Z",
+    "tags": [
+      "ml"
+    ],
+    "summary": "Explore is one of the largest recommendation systems on Instagram. We leverage machine learning to make sure people are always seeing content that is the most interesting and relevant to them. Using more advanced machine learning models, like Two Towers neural networks, we’ve been able to make the…",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T16:01:18.952Z"
+  },
+  {
+    "id": "25ca3450490ef86a7e5ece2a84bd13765854ab3d",
+    "title": "Fixit 2: Meta’s next-generation auto-fixing linter",
+    "url": "https://engineering.fb.com/2023/08/07/developer-tools/fixit-2-linter-meta",
+    "source": "instagram",
+    "publishedAt": "2023-08-07T16:00:09.000Z",
+    "tags": [
+      "devops",
+      "open-source",
+      "infra"
+    ],
+    "summary": "Fixit is dead! Long live Fixit 2 – the latest version of our open-source auto-fixing linter. Fixit 2 allows developers to efficiently build custom lint rules and perform auto-fixes for their codebases. Fixit 2 is available today on PyPI. Python is one of the most popular languages in use at Meta.…",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T16:01:18.952Z"
+  },
+  {
+    "id": "d288a06c01e8a8ecd21cf801be10a1d5452cad1e",
+    "title": "Bringing HDR video to Reels",
+    "url": "https://engineering.fb.com/2023/07/17/video-engineering/hdr-video-reels-meta",
+    "source": "instagram",
+    "publishedAt": "2023-07-17T00:00:00.000Z",
+    "tags": [
+      "mobile"
+    ],
+    "summary": "",
+    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2023/06/CC23_021-Visual-1_Hero.png?w=580&h=326&crop=1",
+    "fetchedAt": "2026-07-11T16:01:18.952Z"
+  },
+  {
+    "id": "b7e2c0dc141812d5a2a31dde26801adee5c81d2f",
+    "title": "Reducing Instagram’s basic video compute time by 94 percent",
+    "url": "https://engineering.fb.com/2022/11/04/video-engineering/instagram-video-processing-encoding-reduction",
+    "source": "instagram",
+    "publishedAt": "2022-11-04T00:00:00.000Z",
+    "tags": [],
+    "summary": "",
+    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2022/11/16_9_With-Label.png?w=580&h=326&crop=1",
+    "fetchedAt": "2026-07-11T16:01:18.952Z"
+  },
+  {
+    "id": "afa407bfd9fec1e084761f66401201ec7fa68729",
+    "title": "Improving Instagram notification management with machine learning and causal inference",
+    "url": "https://engineering.fb.com/2022/10/31/ml-applications/instagram-notification-management-machine-learning",
+    "source": "instagram",
+    "publishedAt": "2022-10-31T00:00:00.000Z",
+    "tags": [
+      "devops"
+    ],
+    "summary": "",
+    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2022/10/Self-Serve-Hero.png?w=580&h=326&crop=1",
+    "fetchedAt": "2026-07-11T16:01:18.952Z"
+  },
+  {
+    "id": "88ec95bcc82ef07b8c8f5a69fe27541acd927a40",
+    "title": "Improving Meta’s SLO workflows with data annotations",
+    "url": "https://engineering.fb.com/2022/08/29/developer-tools/improving-metas-slo-workflows-with-data-annotations",
+    "source": "instagram",
+    "publishedAt": "2022-08-29T00:00:00.000Z",
+    "tags": [
+      "infra"
+    ],
+    "summary": "",
+    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2022/08/Eng-Blog-Self-Serve-Hero-Images-DATACENTERS-501-Blue.jpg",
+    "fetchedAt": "2026-07-11T16:01:20.581Z"
+  },
+  {
+    "id": "eed4ed201c6abc0b13def6712e8d3dad2c1e587c",
+    "title": "Launching Instagram Messaging on desktop",
+    "url": "https://engineering.fb.com/2022/07/26/web/launching-instagram-messaging-on-desktop",
+    "source": "instagram",
+    "publishedAt": "2022-07-26T00:00:00.000Z",
+    "tags": [],
+    "summary": "",
+    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2022/07/Instagram-Messaging-hero.jpg?w=580&h=326&crop=1",
+    "fetchedAt": "2026-07-11T16:01:18.952Z"
+  },
+  {
+    "id": "41e804f7f06e834902ec57f30ca9ffc4b93de511",
+    "title": "Building text animations for Instagram Stories",
+    "url": "https://engineering.fb.com/2022/07/18/developer-tools/building-text-animations-for-instagram-stories",
+    "source": "instagram",
+    "publishedAt": "2022-07-18T00:00:00.000Z",
+    "tags": [
+      "mobile"
+    ],
+    "summary": "",
+    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2022/07/ligature-example.gif?w=580&h=326&crop=1",
+    "fetchedAt": "2026-07-11T16:01:20.581Z"
+  },
+  {
+    "id": "ef50a24d588e7760517aa18e9959e8ff5787de51",
+    "title": "How the Cinder JIT’s function inliner helps us optimize Instagram",
+    "url": "https://engineering.fb.com/2022/05/02/open-source/cinder-jits-instagram",
+    "source": "instagram",
+    "publishedAt": "2022-05-02T00:00:00.000Z",
+    "tags": [
+      "devops"
+    ],
+    "summary": "",
+    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2022/04/Eng-Blog-Self-Serve-Hero-Images-DEBUGGING-203-Blue.jpg?w=580&h=326&crop=1",
+    "fetchedAt": "2026-07-11T16:01:18.952Z"
+  },
+  {
+    "id": "6a00c43f41f26ac9e9fa97e248032f4a3dbeb92d",
+    "title": "Superpack: Pushing the limits of compression in Facebook’s mobile apps",
+    "url": "https://engineering.fb.com/2021/09/13/core-infra/superpack",
+    "source": "instagram",
+    "publishedAt": "2021-09-13T00:00:00.000Z",
+    "tags": [
+      "mobile"
+    ],
+    "summary": "",
+    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2021/09/Superpack_Hero_FINAL.jpg?w=580&h=326&crop=1",
+    "fetchedAt": "2026-07-11T16:01:20.581Z"
+  },
+  {
+    "id": "faca3b636489db8b47ae1b945b569e36aad68c77",
+    "title": "Cutting Threads’ send latency in half",
+    "url": "https://engineering.fb.com/2021/03/22/networking-traffic/cutting-threads-send-latency-in-half",
+    "source": "instagram",
+    "publishedAt": "2021-03-22T00:00:00.000Z",
+    "tags": [
+      "networking"
+    ],
+    "summary": "",
+    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2022/09/Instagram-Threads-latency-image-2.png?w=580&h=326&crop=1",
+    "fetchedAt": "2026-07-11T16:01:20.581Z"
+  },
+  {
+    "id": "4721abc39a46a94f5efea3dcd76fd9e2d0b36ce4",
+    "title": "Jan 26, 2021\n\t\t\t\t\t\t\t\t\t\tHow machine learning powers Facebook’s News Feed ranking algorithm",
+    "url": "https://engineering.fb.com/2021/01/26/ml-applications/news-feed-ranking",
+    "source": "instagram",
+    "publishedAt": "2021-01-26T00:00:00.000Z",
+    "tags": [],
+    "summary": "",
+    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2021/01/Under-the-Hood_Hero_1920x1080_Final.jpg?w=580&h=326&crop=1",
+    "fetchedAt": "2026-07-11T16:01:18.952Z"
+  },
+  {
+    "id": "5560b492823d2b569c82b9fdfcfd4d11b9a85a72",
+    "title": "A smaller, faster video calling library for our apps",
+    "url": "https://engineering.fb.com/2020/12/21/video-engineering/rsys",
+    "source": "instagram",
+    "publishedAt": "2020-12-21T00:00:00.000Z",
+    "tags": [
+      "video"
+    ],
+    "summary": "",
+    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2020/12/Rsys2.jpg?w=580&h=326&crop=1",
+    "fetchedAt": "2026-07-11T16:01:20.581Z"
+  },
+  {
+    "id": "a5ff47ce478ba1f07d8bfc1188ffe1d3ec715849",
+    "title": "On the value of diversified recommendations",
+    "url": "https://engineering.fb.com/2020/12/17/ml-applications/diversified-recommendations",
+    "source": "instagram",
+    "publishedAt": "2020-12-17T00:00:00.000Z",
+    "tags": [
+      "ml"
+    ],
+    "summary": "",
+    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2022/09/Instagram-diversified-notifications-image-2.png?w=580&h=326&crop=1",
+    "fetchedAt": "2026-07-11T16:01:20.581Z"
+  },
+  {
+    "id": "b8a9403ebda41b96019a489e8c0369ecfd58433a",
+    "title": "Co-experiences: Hanging out in the digital living room",
+    "url": "https://engineering.fb.com/2020/12/16/android/co-experiences",
+    "source": "instagram",
+    "publishedAt": "2020-12-16T00:00:00.000Z",
+    "tags": [
+      "mobile"
+    ],
+    "summary": "",
+    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2020/12/WatchTogetherHero.jpg?w=580&h=326&crop=1",
+    "fetchedAt": "2026-07-11T16:01:20.581Z"
+  },
+  {
+    "id": "ca667a354b7d4725a2bee4f847589b0e7137579e",
+    "title": "How Instagram suggests new content",
+    "url": "https://engineering.fb.com/2020/12/10/web/how-instagram-suggests-new-content",
+    "source": "instagram",
+    "publishedAt": "2020-12-10T00:00:00.000Z",
+    "tags": [
+      "mobile"
+    ],
+    "summary": "",
+    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2022/08/IG-constrained-notification-system-image-1.png?w=580&h=326&crop=1",
+    "fetchedAt": "2026-07-11T16:01:20.581Z"
+  },
+  {
+    "id": "47e98c7bd60757a98f3182bad6669d4b88faf379",
+    "title": "How Facebook is bringing QUIC to billions",
+    "url": "https://engineering.fb.com/2020/10/21/networking-traffic/how-facebook-is-bringing-quic-to-billions",
+    "source": "instagram",
+    "publishedAt": "2020-10-21T00:00:00.000Z",
+    "tags": [
+      "mobile"
+    ],
+    "summary": "",
+    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2020/10/FBQUIC2.png?w=580&h=326&crop=1",
+    "fetchedAt": "2026-07-11T16:01:20.581Z"
+  },
+  {
+    "id": "73f52202b9e0bf461c350751cc3dfc526fffce24",
+    "title": "Sep 14, 2020\n\t\t\t\t\t\t\t\t\t\tThroughput autoscaling: Dynamic sizing for Facebook.com",
+    "url": "https://engineering.fb.com/2020/09/14/networking-traffic/throughput-autoscaling",
+    "source": "instagram",
+    "publishedAt": "2020-09-14T00:00:00.000Z",
+    "tags": [],
+    "summary": "",
+    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2020/09/Autoscaling_hero_v1.jpg?w=580&h=326&crop=1",
+    "fetchedAt": "2026-07-11T16:01:20.581Z"
+  },
+  {
+    "id": "c6dfc59366027b54f5efd4a12ee782075a1a8d76",
+    "title": "Mar 02, 2020\n\t\t\t\t\t\t\t\t\t\tProject LightSpeed: Rewriting the Messenger codebase for a faster, smaller, and simpler messaging app",
+    "url": "https://engineering.fb.com/2020/03/02/data-infrastructure/messenger",
+    "source": "instagram",
+    "publishedAt": "2020-03-02T00:00:00.000Z",
+    "tags": [],
+    "summary": "",
+    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2020/03/Lightspeed_Hero.jpeg?w=580&h=326&crop=1",
+    "fetchedAt": "2026-07-11T16:01:20.581Z"
+  },
+  {
+    "id": "c13f5be8a313642ef3ba3af1d1c9a15ddf406a10",
+    "title": "Nov 25, 2019\n\t\t\t\t\t\t\t\t\t\tNetworking @Scale Boston 2019 recap",
+    "url": "https://engineering.fb.com/2019/11/25/networking-traffic/networking-scale-boston-2019",
+    "source": "instagram",
+    "publishedAt": "2019-11-25T00:00:00.000Z",
+    "tags": [],
+    "summary": "",
+    "thumbnail": "https://engineering.fb.com/wp-content/uploads/2019/11/najam-hero.jpg?w=580&h=326&crop=1",
+    "fetchedAt": "2026-07-11T16:01:20.581Z"
+  }
+]

@@ -1,0 +1,288 @@
+[
+  {
+    "id": "e647932bbd5c1d80ecc3aa2dc5ee53f324a0efe9",
+    "title": "Navigating a Synapse Migration to Databricks",
+    "url": "https://www.databricks.com/blog/navigating-synapse-migration-databricks",
+    "source": "databricks",
+    "publishedAt": "2026-07-08T19:00:00.000Z",
+    "tags": [
+      "general",
+      "data"
+    ],
+    "summary": "Azure Synapse has served as a reliable foundation for SQL analytics at scale, and...",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T16:01:17.562Z"
+  },
+  {
+    "id": "b76c700d0157b500970ef1b75650154fd19d5c25",
+    "title": "How we keep GPUs reliable across Databricks AI",
+    "url": "https://www.databricks.com/blog/how-we-keep-gpus-reliable-across-databricks-ai",
+    "source": "databricks",
+    "publishedAt": "2026-07-01T23:00:00.000Z",
+    "tags": [
+      "general",
+      "ml",
+      "ai"
+    ],
+    "summary": "Distributed GPU training has become routine across the industry. Teams now train...",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T16:01:17.562Z"
+  },
+  {
+    "id": "229b688f48238c44d6404a94ef555ec837c81b35",
+    "title": "From monolith to Lakebase to LTAP: rethinking the database from storage up",
+    "url": "https://www.databricks.com/blog/lakebase-ltap-rethinking-database-storage",
+    "source": "databricks",
+    "publishedAt": "2026-06-30T18:05:48.000Z",
+    "tags": [
+      "general"
+    ],
+    "summary": "When I started my PhD at UC Berkeley 16 years ago, my advisor told me: \"OLTP databases...",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T16:01:17.562Z"
+  },
+  {
+    "id": "f044690d42045c3cb21cc47be788d5d62f885d5e",
+    "title": "How Databricks is turning video into searchable, actionable intelligence",
+    "url": "https://www.databricks.com/blog/how-databricks-turning-video-searchable-actionable-intelligence",
+    "source": "databricks",
+    "publishedAt": "2026-06-26T20:30:00.000Z",
+    "tags": [
+      "general",
+      "ml",
+      "ai",
+      "data"
+    ],
+    "summary": "A utility company deploys drones to inspect hundreds of miles of power lines. A police...",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T16:01:17.562Z"
+  },
+  {
+    "id": "9db6e9d63a46b825af70da4607b0a990e87d74eb",
+    "title": "A Decision Framework for ETL Migration to Databricks",
+    "url": "https://www.databricks.com/blog/decision-framework-etl-migration-databricks",
+    "source": "databricks",
+    "publishedAt": "2026-06-26T20:20:00.000Z",
+    "tags": [
+      "general",
+      "data"
+    ],
+    "summary": "Your team has hundreds of stored procedures, a couple of schedulers, permissions...",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T16:01:17.562Z"
+  },
+  {
+    "id": "7ce88761749b66ba5460d79664937dd604c2a797",
+    "title": "From test bench to lakehouse: how AVL modernizes measurement data analytics with Impulse",
+    "url": "https://www.databricks.com/blog/test-bench-lakehouse-how-avl-modernizes-measurement-data-analytics-impulse",
+    "source": "databricks",
+    "publishedAt": "2026-06-25T19:30:00.000Z",
+    "tags": [
+      "general",
+      "open-source",
+      "data"
+    ],
+    "summary": "1. Introduction - Impulse: time-series analytics for measurement dataA single automotive...",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T16:01:17.562Z"
+  },
+  {
+    "id": "1bb3ddbec6cddc0ab78519210ba2f2b07578c8ba",
+    "title": "How Daikin Applied Americas builds consistent data pipelines at scale with Genie Code",
+    "url": "https://www.databricks.com/blog/how-daikin-applied-americas-builds-consistent-data-pipelines-scale-genie-code",
+    "source": "databricks",
+    "publishedAt": "2026-06-24T18:00:00.000Z",
+    "tags": [
+      "general",
+      "data"
+    ],
+    "summary": "Agentic data engineering is changing how pipelines are builtDaikin Applied Americas...",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T16:01:17.562Z"
+  },
+  {
+    "id": "b74f147e2446e1b8a36ac54822e232fa672ceeb1",
+    "title": "How Stagwell built privacy-safe ID matching on Databricks",
+    "url": "https://www.databricks.com/blog/how-stagwell-built-privacy-safe-id-matching-databricks",
+    "source": "databricks",
+    "publishedAt": "2026-06-18T15:00:00.000Z",
+    "tags": [
+      "general",
+      "data",
+      "video"
+    ],
+    "summary": "The identity matching problem brands face todayBrands invest heavily in building first-party data assets...",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T16:01:17.562Z"
+  },
+  {
+    "id": "a6444d8835c3ced55fff1cff8930d39b22f032c7",
+    "title": "Sciene AI Companion: building an autonomous Customer Success platform on Databricks",
+    "url": "https://www.databricks.com/blog/sciene-ai-companion-building-autonomous-customer-success-platform-databricks",
+    "source": "databricks",
+    "publishedAt": "2026-06-16T14:29:06.000Z",
+    "tags": [
+      "general",
+      "ml",
+      "ai",
+      "data"
+    ],
+    "summary": "Sciene develops AI products that standardize and scale high-volume, relationship-centered...",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T16:01:17.562Z"
+  },
+  {
+    "id": "b738650cb0b6b351b9089b3f9460ef23fe57c56d",
+    "title": "Ingesting the Milky Way: Petabyte-Scale with Zerobus Ingest",
+    "url": "https://www.databricks.com/blog/ingesting-milky-way-petabyte-scale-zerobus-ingest",
+    "source": "databricks",
+    "publishedAt": "2026-06-11T19:45:26.000Z",
+    "tags": [
+      "general",
+      "data",
+      "video"
+    ],
+    "summary": "Telemetry data is everywhere. IoT sensors on factory floors. Satellite arrays scanning...",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T16:01:17.562Z"
+  },
+  {
+    "id": "06f89fd0672b0e36bd270968029d96a229066dd0",
+    "title": "AI Serving Platform That Adapts to Your Model",
+    "url": "https://www.databricks.com/blog/ai-serving-platform-adapts-your-model",
+    "source": "databricks",
+    "publishedAt": "2026-06-10T15:52:14.000Z",
+    "tags": [
+      "general"
+    ],
+    "summary": "Challenges of Running Custom Model InferencesWhen you deploy a machine learning model to production...",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T16:01:17.562Z"
+  },
+  {
+    "id": "4afce654fe5320bd9f867897231eec0c36961577",
+    "title": "Apache Spark Real-Time Mode for Gaming: A Better Way to Do Real-Time Sessionization",
+    "url": "https://www.databricks.com/blog/apache-spark-real-time-mode-gaming-better-way-do-real-time-sessionization",
+    "source": "databricks",
+    "publishedAt": "2026-06-03T20:25:00.000Z",
+    "tags": [
+      "data",
+      "video"
+    ],
+    "summary": "In the gaming industry, every millisecond counts. To drive in-game personalization,...",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T16:01:17.562Z"
+  },
+  {
+    "id": "b264471c43d4b5c02050615d696166b2aa4bf5c5",
+    "title": "Bring Databricks into Kiro IDE with the AI Dev Kit Power",
+    "url": "https://www.databricks.com/blog/bring-databricks-kiro-ide-ai-dev-kit-power",
+    "source": "databricks",
+    "publishedAt": "2026-06-03T17:43:20.000Z",
+    "tags": [
+      "general"
+    ],
+    "summary": "Why this mattersAI-assisted development falls apart the moment the assistant has to guess at column names, table layouts...",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T16:01:17.562Z"
+  },
+  {
+    "id": "cd50798a84a8c58e9c8a9029775db4bf1fa8b071",
+    "title": "Scaling Enterprise Conversational Intelligence: Cross-industry Technology and Functional Solutions Powered by Databricks Genie",
+    "url": "https://www.databricks.com/blog/cross-industry-technology-and-functional-genie-partner-solutions",
+    "source": "databricks",
+    "publishedAt": "2026-06-03T11:45:00.000Z",
+    "tags": [
+      "general",
+      "data"
+    ],
+    "summary": "As we explored in our first blog, Databricks Genie is redefining industry-specific...",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T16:01:17.562Z"
+  },
+  {
+    "id": "f30964ae3befa7fc3ed2e99704115df1704e7d34",
+    "title": "Reliable LLM Inference at Scale",
+    "url": "https://www.databricks.com/blog/reliable-llm-inference-scale",
+    "source": "databricks",
+    "publishedAt": "2026-05-27T20:20:00.000Z",
+    "tags": [
+      "general",
+      "ml",
+      "ai"
+    ],
+    "summary": "At Databricks, we’ve built a unique inference platform that serves every frontier...",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T16:01:17.562Z"
+  },
+  {
+    "id": "d835a8b5279058ce6301f4e3973953158f96c199",
+    "title": "BI Serving Pointers; Maximizing for Performance and TCO",
+    "url": "https://www.databricks.com/blog/bi-serving-pointers-maximizing-performance-and-tco",
+    "source": "databricks",
+    "publishedAt": "2026-05-27T20:15:00.000Z",
+    "tags": [
+      "data"
+    ],
+    "summary": "Your BI dashboards are slow, and tuning them is costing too much time and money.It's...",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T16:01:17.562Z"
+  },
+  {
+    "id": "e6056161acf002dd17dca3d60b70a098668b554e",
+    "title": "How the lakebase architecture stays resilient to cloud failures",
+    "url": "https://www.databricks.com/blog/how-lakebase-architecture-stays-resilient-cloud-failures",
+    "source": "databricks",
+    "publishedAt": "2026-05-27T15:15:00.000Z",
+    "tags": [
+      "general"
+    ],
+    "summary": "In the last year, agents have strained the limits of cloud infrastructure with new...",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T16:01:17.562Z"
+  },
+  {
+    "id": "945c9b49896cc17fe34ec31e6631c2b4449ced04",
+    "title": "Scaling for MHHS: 50x cost-efficient margin data engineering at Octopus Energy",
+    "url": "https://www.databricks.com/blog/scaling-mhhs-how-octopus-energy-achieved-50x-cost-reduction-margin-data-engineering",
+    "source": "databricks",
+    "publishedAt": "2026-05-23T00:40:09.000Z",
+    "tags": [
+      "general",
+      "data"
+    ],
+    "summary": "The energy transition has a data problemThe UK grid is in the middle of its most...",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T16:01:17.562Z"
+  },
+  {
+    "id": "23e97b04240925b373cbbac280fc132a2386cdac",
+    "title": "Observability for any agent, anywhere: Production-ready tracing with OpenTelemetry & Unity Catalog on Databricks",
+    "url": "https://www.databricks.com/blog/observability-any-agent-anywhere-production-ready-tracing-opentelemetry-unity-catalog",
+    "source": "databricks",
+    "publishedAt": "2026-05-22T19:20:00.000Z",
+    "tags": [
+      "product",
+      "general",
+      "ml",
+      "ai"
+    ],
+    "summary": "Why AI Tracing Breaks Traditional ObservabilityAs AI applications move into production...",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T16:01:17.562Z"
+  },
+  {
+    "id": "4d997e2e8284b73ed8448aba135babb176c35e6e",
+    "title": "Transforming industries with conversational AI: Partner solutions built on Databricks Genie",
+    "url": "https://www.databricks.com/blog/transforming-industries-conversational-ai-partner-solutions-built-databricks-genie",
+    "source": "databricks",
+    "publishedAt": "2026-05-21T14:25:00.000Z",
+    "tags": [
+      "general",
+      "data"
+    ],
+    "summary": "In the era of data intelligence, the value of information is only as good as its...",
+    "thumbnail": null,
+    "fetchedAt": "2026-07-11T16:01:17.562Z"
+  }
+]

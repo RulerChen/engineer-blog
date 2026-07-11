@@ -1,0 +1,582 @@
+[
+  {
+    "raw": "Amazon Bedrock",
+    "source": "aws-news",
+    "count": 99
+  },
+  {
+    "raw": "Amazon Bedrock AgentCore",
+    "source": "aws-news",
+    "count": 16
+  },
+  {
+    "raw": "Amazon Simple Storage Service (S3)",
+    "source": "aws-news",
+    "count": 37
+  },
+  {
+    "raw": "Announcements",
+    "source": "aws-news",
+    "count": 247
+  },
+  {
+    "raw": "Kiro",
+    "source": "aws-news",
+    "count": 7
+  },
+  {
+    "raw": "Strands Agents",
+    "source": "aws-news",
+    "count": 8
+  },
+  {
+    "raw": "Amazon EC2",
+    "source": "aws-news",
+    "count": 54
+  },
+  {
+    "raw": "Amazon OpenSearch Service",
+    "source": "aws-news",
+    "count": 16
+  },
+  {
+    "raw": "Amazon WorkSpaces",
+    "source": "aws-news",
+    "count": 6
+  },
+  {
+    "raw": "News",
+    "source": "aws-news",
+    "count": 339
+  },
+  {
+    "raw": "Compute",
+    "source": "aws-news",
+    "count": 36
+  },
+  {
+    "raw": "Launch",
+    "source": "aws-news",
+    "count": 306
+  },
+  {
+    "raw": "Management Tools",
+    "source": "aws-news",
+    "count": 9
+  },
+  {
+    "raw": "Graviton",
+    "source": "aws-news",
+    "count": 8
+  },
+  {
+    "raw": "Amazon Connect",
+    "source": "aws-news",
+    "count": 12
+  },
+  {
+    "raw": "Amazon GuardDuty",
+    "source": "aws-news",
+    "count": 4
+  },
+  {
+    "raw": "Firecracker",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Serverless",
+    "source": "aws-news",
+    "count": 12
+  },
+  {
+    "raw": "Amazon GameLift",
+    "source": "aws-news",
+    "count": 4
+  },
+  {
+    "raw": "Price Reduction",
+    "source": "aws-news",
+    "count": 4
+  },
+  {
+    "raw": "Auto Scaling",
+    "source": "aws-news",
+    "count": 2
+  },
+  {
+    "raw": "Amazon Bedrock Knowledge Bases",
+    "source": "aws-news",
+    "count": 8
+  },
+  {
+    "raw": "Artificial Intelligence",
+    "source": "aws-news",
+    "count": 65
+  },
+  {
+    "raw": "Events",
+    "source": "aws-news",
+    "count": 15
+  },
+  {
+    "raw": "Storage",
+    "source": "aws-news",
+    "count": 16
+  },
+  {
+    "raw": "Amazon Cognito",
+    "source": "aws-news",
+    "count": 4
+  },
+  {
+    "raw": "Amazon EKS Distro",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Amazon Aurora",
+    "source": "aws-news",
+    "count": 17
+  },
+  {
+    "raw": "Management & Governance",
+    "source": "aws-news",
+    "count": 2
+  },
+  {
+    "raw": "Amazon DynamoDB",
+    "source": "aws-news",
+    "count": 7
+  },
+  {
+    "raw": "Amazon SageMaker Lakehouse",
+    "source": "aws-news",
+    "count": 6
+  },
+  {
+    "raw": "Amazon EC2 Mac Instances",
+    "source": "aws-news",
+    "count": 6
+  },
+  {
+    "raw": "Amazon Redshift",
+    "source": "aws-news",
+    "count": 9
+  },
+  {
+    "raw": "Amazon Bedrock Prompt Management",
+    "source": "aws-news",
+    "count": 2
+  },
+  {
+    "raw": "Amazon Bedrock Guardrails",
+    "source": "aws-news",
+    "count": 10
+  },
+  {
+    "raw": "Amazon Quick Suite",
+    "source": "aws-news",
+    "count": 2
+  },
+  {
+    "raw": "Amazon EMR on EKS",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Amazon VPC",
+    "source": "aws-news",
+    "count": 10
+  },
+  {
+    "raw": "Sustainability",
+    "source": "aws-news",
+    "count": 3
+  },
+  {
+    "raw": "Amazon Polly",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Amazon SageMaker Studio",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "DSQL",
+    "source": "aws-news",
+    "count": 4
+  },
+  {
+    "raw": "Amazon Corretto",
+    "source": "aws-news",
+    "count": 3
+  },
+  {
+    "raw": "Amazon Nova",
+    "source": "aws-news",
+    "count": 21
+  },
+  {
+    "raw": "Amazon Route 53",
+    "source": "aws-news",
+    "count": 5
+  },
+  {
+    "raw": "Amazon Lightsail",
+    "source": "aws-news",
+    "count": 2
+  },
+  {
+    "raw": "Amazon Location",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Partner solutions",
+    "source": "aws-news",
+    "count": 3
+  },
+  {
+    "raw": "Amazon SageMaker",
+    "source": "aws-news",
+    "count": 21
+  },
+  {
+    "raw": "Featured",
+    "source": "aws-news",
+    "count": 136
+  },
+  {
+    "raw": "Amazon RDS",
+    "source": "aws-news",
+    "count": 5
+  },
+  {
+    "raw": "Amazon EventBridge",
+    "source": "aws-news",
+    "count": 5
+  },
+  {
+    "raw": "Amazon Keyspaces (for Apache Cassandra)",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Amazon SageMaker Unified Studio",
+    "source": "aws-news",
+    "count": 10
+  },
+  {
+    "raw": "Regions",
+    "source": "aws-news",
+    "count": 13
+  },
+  {
+    "raw": "Amazon SageMaker HyperPod",
+    "source": "aws-news",
+    "count": 7
+  },
+  {
+    "raw": "Amazon S3 Tables",
+    "source": "aws-news",
+    "count": 7
+  },
+  {
+    "raw": "Amazon Athena",
+    "source": "aws-news",
+    "count": 4
+  },
+  {
+    "raw": "Amazon EMR",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Amazon Quick Sight",
+    "source": "aws-news",
+    "count": 4
+  },
+  {
+    "raw": "Amazon FSx for NetApp ONTAP",
+    "source": "aws-news",
+    "count": 2
+  },
+  {
+    "raw": "Amazon Kinesis",
+    "source": "aws-news",
+    "count": 3
+  },
+  {
+    "raw": "Foundation models",
+    "source": "aws-news",
+    "count": 3
+  },
+  {
+    "raw": ".NET",
+    "source": "aws-news",
+    "count": 4
+  },
+  {
+    "raw": "Python",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Billing & Account Management",
+    "source": "aws-news",
+    "count": 3
+  },
+  {
+    "raw": "Identity",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Application Integration",
+    "source": "aws-news",
+    "count": 4
+  },
+  {
+    "raw": "Application Services",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Developer Tools",
+    "source": "aws-news",
+    "count": 11
+  },
+  {
+    "raw": "Amazon Simple Queue Service (SQS)",
+    "source": "aws-news",
+    "count": 3
+  },
+  {
+    "raw": "Internet of Things",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Amazon DocumentDB",
+    "source": "aws-news",
+    "count": 3
+  },
+  {
+    "raw": "Marketing & Advertising",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Amazon Elastic Block Store (Amazon EBS)",
+    "source": "aws-news",
+    "count": 4
+  },
+  {
+    "raw": "Migration & Transfer Services",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Amazon Q Developer",
+    "source": "aws-news",
+    "count": 24
+  },
+  {
+    "raw": "Business Intelligence",
+    "source": "aws-news",
+    "count": 2
+  },
+  {
+    "raw": "Generative BI",
+    "source": "aws-news",
+    "count": 2
+  },
+  {
+    "raw": "Amazon EC2 Bare Metal",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Compliance",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Thought Leadership",
+    "source": "aws-news",
+    "count": 3
+  },
+  {
+    "raw": "Startup",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Amazon Neptune",
+    "source": "aws-news",
+    "count": 2
+  },
+  {
+    "raw": "Amazon Elastic VMware Service (Amazon EVS)",
+    "source": "aws-news",
+    "count": 2
+  },
+  {
+    "raw": "Amazon SageMaker JumpStart",
+    "source": "aws-news",
+    "count": 3
+  },
+  {
+    "raw": "Amazon Simple Notification Service (SNS)",
+    "source": "aws-news",
+    "count": 2
+  },
+  {
+    "raw": "Amazon Application Recovery Controller (ARC)",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Resilience",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Amazon VPC Lattice",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Developer",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Amazon Q",
+    "source": "aws-news",
+    "count": 13
+  },
+  {
+    "raw": "Retail",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Amazon FSx",
+    "source": "aws-news",
+    "count": 2
+  },
+  {
+    "raw": "Amazon ElastiCache",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Amazon FSx for Lustre",
+    "source": "aws-news",
+    "count": 3
+  },
+  {
+    "raw": "Amazon Bedrock Agents",
+    "source": "aws-news",
+    "count": 3
+  },
+  {
+    "raw": "Webinars",
+    "source": "aws-news",
+    "count": 2
+  },
+  {
+    "raw": "Amazon Inspector",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "SaaS",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Lambda@Edge",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Amazon Personalize",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Amazon Simple Email Service (SES)",
+    "source": "aws-news",
+    "count": 2
+  },
+  {
+    "raw": "Resource Access Manager (RAM)",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Amazon Q Business",
+    "source": "aws-news",
+    "count": 4
+  },
+  {
+    "raw": "Game Development",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Games",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Industries",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Elastic Load Balancing",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Amazon Bedrock Prompt Flows",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Education",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Amazon SageMaker Canvas",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Amazon FSx for OpenZFS",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Contact Lens for Amazon Connect",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Amazon MemoryDB",
+    "source": "aws-news",
+    "count": 1
+  },
+  {
+    "raw": "Migration",
+    "source": "aws-news",
+    "count": 1
+  }
+]
