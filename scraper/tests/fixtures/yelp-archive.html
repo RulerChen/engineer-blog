@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html >
+  
+    <head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+
+  <title>Yelp Engineering and Product Blog</title>
+  <meta name="description" content="Exploring CHAOS: Building a Backend for Server-Driven UI Jonathan Baird, Software Engineer; Xin Shen, Software Engineer Jul 8, 2025 A little while ago, we published a blog post on CHAOS:...">
+  
+
+  
+    <link rel="amphtml" href="https://engineeringblog.yelp.com/amp/page/2/" />
+    <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="canonical" href="https://engineeringblog.yelp.com/page/2/">
+  <link rel="alternate" type="application/rss+xml" title="Yelp Engineering and Product Blog" href="https://engineeringblog.yelp.com/feed.xml" />
+
+  
+    <script>(function (d, w) {
+    var supportsSVG = (
+        !!d.createElementNS &&
+        !!d.createElementNS(
+            'http://www.w3.org/2000/svg',
+            'svg'
+        ).createSVGRect
+    );
+    var cdnPath = 'https://s3-media0.fl.yelpcdn.com/assets/srv0/svg_icons/33493ecba1ca/assets/svg_sprite.js';
+    var head = d.getElementsByTagName('head')[0];
+    function fallback() {
+        var link = d.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'https://s3-media0.fl.yelpcdn.com/assets/srv0/svg_icons/dc807dbd3109/assets/sprite.css';
+        head.appendChild(link);
+    }
+    if (!supportsSVG) {
+        fallback();
+        return;
+    }
+    if (!w.yelp) {
+        w.yelp = {};
+    }
+    w.yelp.__injectSvgSpritesheet = function (svg) {
+        document.body.insertAdjacentHTML('afterbegin', svg);
+        delete window.yelp.__injectSvgSpritesheet;
+    }
+    function onError() {
+        d.documentElement.className = [
+            d.documentElement.className,
+            'icon-svg-unavailable'
+        ].join(' ');
+        fallback();
+        return true;
+    }
+    var script = d.createElement('script');
+    script.async = true;
+    script.onerror = onError;
+    script.src = cdnPath + '?callback=window.yelp.__injectSvgSpritesheet';
+    head.appendChild(script);
+}(document, window));</script>
+<noscript>
+    <link rel="stylesheet" href="https://s3-media0.fl.yelpcdn.com/assets/srv0/svg_icons/dc807dbd3109/assets/sprite.css">
+</noscript>
+
+  
+
+  <!-- Load KaTeX Math Rendering. From blog post markdown can use \\( \alpha \\) to render TeX. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+</head>
+
+  
+
+  <body class="ytype responsive front-page">
+    
+    <div class="main-header main-content-wrap main-header--slim">
+  <div class="content-container clearfix">
+    <div class="arrange arrange--18 arrange--middle">
+      <div class="arrange_unit">
+        <h1 class="main-header_logo" id="logo">
+          <a href="http://yelp.com/engineering">Yelp</a>
+        </h1>
+      </div>
+      <div class="arrange_unit nowrap">
+        <h2 class="main-header_title"><span>Engineering</span></h2>
+      </div>
+      <div class="arrange_unit arrange_unit--fill">
+        <div class="main-header_nav nowrap responsive-hidden-small responsive-hidden-medium">
+          <ul class="header-nav" id="header-nav">
+            <li class="header-nav_item">
+              <a class="header-nav_link" href="http://yelp.com/engineering">Home</a>
+            </li>
+            <li class="header-nav_item">
+              <a class="header-nav_link tabon" href="/">Blog</a>
+            </li>
+            <li class="header-nav_item">
+              <a class="header-nav_link" href="https://yelp.github.io">Open Source</a>
+            </li>
+            <li class="header-nav_item">
+              <a class="header-nav_link" href="https://yelp.com/engineering/awe">AWE</a>
+            </li>
+            <li class="header-nav_item">
+              <a class="header-nav_link" href="https://yelp.com/engineering/whats-it-like">What's it like?</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="main-content-wrap--full">
+      <div class="content-container main-heading">
+        <h1>Engineering Blog</h1>
+    </div>
+      
+        <div class="content-container">
+  <div class="posts">
+    
+      <article class="article-excert">
+  <div class="clearfix layout-block layout-a row--responsive">
+    <div class="column column-alpha column--responsive">
+      <h3 class="alternate"><a href="/2025/07/chaos-inside-yelps-sdui-framework.html">Exploring CHAOS: Building a Backend for Server-Driven UI</a></h3>
+      <div class="post-info">
+        <div class="ypassport ypassport-slim media-block">
+  <div class="media-avatar">
+    <div class="photo-box pb-30s">
+      
+  <img src="/images/authors/darwin.png" alt="Jonathan Baird, Software Engineer; Xin Shen, Software Engineer" class="photo-box-img darwin-image">
+
+
+    </div>
+  </div>
+  <div class="media-story">
+    <ul class="user-passport-info">
+      <li class="user-name user-display-name">
+        
+  Jonathan Baird, Software Engineer; Xin Shen, Software Engineer
+
+<br>
+      </li>
+      <li class="post-date">
+        Jul 8, 2025
+      </li>
+    </ul>
+  </div>
+</div>
+
+      </div>
+      <div class="post-preview">
+        <p>A little while ago, we published a blog post on CHAOS: Yelp’s Unified Framework for Server-Driven UI. We strongly recommend reading that post first to gain a solid understanding of SDUI and the goals of CHAOS. This post builds on those concepts to delve into the inner workings of the CHAOS backend and how it generates server-driven content. To briefly recap, CHAOS is a server-driven UI framework used at Yelp. When a client wants to display CHAOS-powered content, it sends a GraphQL query to the CHAOS API. The API processes the query, requests the CHAOS backend to construct the configuration,...</p>
+        <p><a href="/2025/07/chaos-inside-yelps-sdui-framework.html">Continue reading</a></p>
+      </div>
+    </div>
+    <div class="column column-beta column--responsive">
+      
+        <img src="/images/previews/chaos-yelps-unified-framework-for-server-driven-ui-preview.jpg">
+      
+    </div>
+  </div>
+</article>
+
+    
+      <article class="article-excert">
+  <div class="clearfix layout-block layout-a row--responsive">
+    <div class="column column-alpha column--responsive">
+      <h3 class="alternate"><a href="/2025/05/revenue-automation-series-testing-an-integration-with-third-party-system.html">Revenue Automation Series: Testing an Integration with Third-Party System</a></h3>
+      <div class="post-info">
+        <div class="ypassport ypassport-slim media-block">
+  <div class="media-avatar">
+    <div class="photo-box pb-30s">
+      
+  <img src="/images/authors/darwin.png" alt="Anukriti Mishra, Software Engineer; Chukwuemeka Okobi, Software Engineer" class="photo-box-img darwin-image">
+
+
+    </div>
+  </div>
+  <div class="media-story">
+    <ul class="user-passport-info">
+      <li class="user-name user-display-name">
+        
+  Anukriti Mishra, Software Engineer; Chukwuemeka Okobi, Software Engineer
+
+<br>
+      </li>
+      <li class="post-date">
+        May 27, 2025
+      </li>
+    </ul>
+  </div>
+</div>
+
+      </div>
+      <div class="post-preview">
+        <p>Background As described in the second blog post of Revenue Automation series, Revenue Data Pipeline processes a large amount of data via complex logic transformations to recognize revenue. Thus, developing a robust production testing and integration strategy was essential to the success of this project phase. The status quo testing process utilized the Redshift Connector for data synchronization once the report was generated and published to the data warehouse (Redshift). This introduced a latency of approximately 10 hours before the data was available in the data warehouse for verification. This delay impacted our ability to verify whether the changes were...</p>
+        <p><a href="/2025/05/revenue-automation-series-testing-an-integration-with-third-party-system.html">Continue reading</a></p>
+      </div>
+    </div>
+    <div class="column column-beta column--responsive">
+      
+        <img src="/images/previews/revenue-automation-series-testing-an-integration-with-third-party-system.webp">
+      
+    </div>
+  </div>
+</article>
+
+    
+      <article class="article-excert">
+  <div class="clearfix layout-block layout-a row--responsive">
+    <div class="column column-alpha column--responsive">
+      <h3 class="alternate"><a href="/2025/05/nrtsearch-v1-release.html">Nrtsearch 1.0.0: Incremental Backups, Lucene 10, and More</a></h3>
+      <div class="post-info">
+        <div class="ypassport ypassport-slim media-block">
+  <div class="media-avatar">
+    <div class="photo-box pb-30s">
+      
+  <img src="/images/authors/darwin.png" alt="Sarthak Nandi and Andrew Prudhomme" class="photo-box-img darwin-image">
+
+
+    </div>
+  </div>
+  <div class="media-story">
+    <ul class="user-passport-info">
+      <li class="user-name user-display-name">
+        
+  Sarthak Nandi and Andrew Prudhomme
+
+<br>
+      </li>
+      <li class="post-date">
+        May 8, 2025
+      </li>
+    </ul>
+  </div>
+</div>
+
+      </div>
+      <div class="post-preview">
+        <p>It has been over 3 years since we published our Nrtsearch blog post and over 4 years since we started using Nrtsearch, our Lucene-based search engine, in production. We have since migrated over 90% of Elasticsearch traffic to Nrtsearch. We are excited to announce the release of Nrtsearch 1.0.0 with several new features and improvements from the initial release. Glossary EBS (Elastic Block Store): Network-attached block storage volumes in AWS. HNSW (Hierarchical Navigable Small World): A graph-based approximate nearest neighbor search technique. Lucene: An open-source search library used by Nrtsearch. S3: Cloud object storage offered in AWS. Scatter-gather: A pattern...</p>
+        <p><a href="/2025/05/nrtsearch-v1-release.html">Continue reading</a></p>
+      </div>
+    </div>
+    <div class="column column-beta column--responsive">
+      
+        <img src="/images/previews/2025-05-08-nrtsearch-v1-release-preview.png">
+      
+    </div>
+  </div>
+</article>
+
+    
+      <article class="article-excert">
+  <div class="clearfix layout-block layout-a row--responsive">
+    <div class="column column-alpha column--responsive">
+      <h3 class="alternate"><a href="/2025/04/journey-to-zero-trust-access.html">Journey to Zero Trust Access</a></h3>
+      <div class="post-info">
+        <div class="ypassport ypassport-slim media-block">
+  <div class="media-avatar">
+    <div class="photo-box pb-30s">
+      
+  <img src="/images/authors/darwin.png" alt="Carlos B. Hernandez, Software Engineer; Adam  Skalicky, Software Engineer" class="photo-box-img darwin-image">
+
+
+    </div>
+  </div>
+  <div class="media-story">
+    <ul class="user-passport-info">
+      <li class="user-name user-display-name">
+        
+  Carlos B. Hernandez, Software Engineer; Adam  Skalicky, Software Engineer
+
+<br>
+      </li>
+      <li class="post-date">
+        Apr 15, 2025
+      </li>
+    </ul>
+  </div>
+</div>
+
+      </div>
+      <div class="post-preview">
+        <p>Glossary ZTA: zero trust architecture SAML: security assertion markup language (an SSO facilitation protocol) Devbox: a remote server used to develop software Zero Trust Access Remote Future Yelp is now a fully remote company, which means our employee base has become increasingly distributed across the world, making secure access to resources from anywhere a critical business function. Yelp historically used Ivanti Pulse Secure as the employee VPN, but due to the need for a more reliable solution, it became clear that a change was necessary to ensure secure and consistent access to internal resources. The Corporate Systems and Client Platform...</p>
+        <p><a href="/2025/04/journey-to-zero-trust-access.html">Continue reading</a></p>
+      </div>
+    </div>
+    <div class="column column-beta column--responsive">
+      
+    </div>
+  </div>
+</article>
+
+    
+      <article class="article-excert">
+  <div class="clearfix layout-block layout-a row--responsive">
+    <div class="column column-alpha column--responsive">
+      <h3 class="alternate"><a href="/2025/02/revenue-automation-series-building-revenue-data-pipeline.html">Revenue Automation Series: Building Revenue Data Pipeline</a></h3>
+      <div class="post-info">
+        <div class="ypassport ypassport-slim media-block">
+  <div class="media-avatar">
+    <div class="photo-box pb-30s">
+      
+  <img src="/images/authors/darwin.png" alt="Yizheng Zhang, Software Engineer; Yirun Zhou, Software Engineer" class="photo-box-img darwin-image">
+
+
+    </div>
+  </div>
+  <div class="media-story">
+    <ul class="user-passport-info">
+      <li class="user-name user-display-name">
+        
+  Yizheng Zhang, Software Engineer; Yirun Zhou, Software Engineer
+
+<br>
+      </li>
+      <li class="post-date">
+        Feb 19, 2025
+      </li>
+    </ul>
+  </div>
+</div>
+
+      </div>
+      <div class="post-preview">
+        <p>Background As Yelp’s business continues to grow, the revenue streams have become more complex due to the increased number of transactions, new products and services. These changes over time have challenged the manual processes involved in Revenue Recognition. As described in the first post of the Revenue Automation Series, Yelp invested significant resources in modernizing its Billing System to fulfill the pre-requisite of automating the revenue recognition process. In this blog, we would like to share how we built the Revenue Data Pipeline that facilitates the third party integration with a Revenue Recognition SaaS solution, referred to hereafter as the...</p>
+        <p><a href="/2025/02/revenue-automation-series-building-revenue-data-pipeline.html">Continue reading</a></p>
+      </div>
+    </div>
+    <div class="column column-beta column--responsive">
+      
+        <img src="/images/previews/revenue-enhancement.webp">
+      
+    </div>
+  </div>
+</article>
+
+    
+      <article class="article-excert">
+  <div class="clearfix layout-block layout-a row--responsive">
+    <div class="column column-alpha column--responsive">
+      <h3 class="alternate"><a href="/2025/02/search-query-understanding-with-LLMs.html">Search Query Understanding with LLMs: From Ideation to Production</a></h3>
+      <div class="post-info">
+        <div class="ypassport ypassport-slim media-block">
+  <div class="media-avatar">
+    <div class="photo-box pb-30s">
+      
+  <img src="/images/authors/darwin.png" alt="Loc Trinh, Software Engineer; Ali Rokni, Tech Lead; John Hawksley, Group Tech Lead" class="photo-box-img darwin-image">
+
+
+    </div>
+  </div>
+  <div class="media-story">
+    <ul class="user-passport-info">
+      <li class="user-name user-display-name">
+        
+  Loc Trinh, Software Engineer; Ali Rokni, Tech Lead; John Hawksley, Group Tech Lead
+
+<br>
+      </li>
+      <li class="post-date">
+        Feb 4, 2025
+      </li>
+    </ul>
+  </div>
+</div>
+
+      </div>
+      <div class="post-preview">
+        <p>How we bring LLM intelligence to millions of daily searches at Yelp. From the moment a user enters a search query to when we present a list of results, understanding the user’s intent is crucial for meeting their needs. Were they looking for a general category of business for that evening, a particular dish or service, or one specific business nearby? Does the query contain nuanced location or attribute information? Is the query misspelled? Is their phrasing unusual, so that it might not align well with our business data? All of the above questions represent Natural Language Understanding tasks where...</p>
+        <p><a href="/2025/02/search-query-understanding-with-LLMs.html">Continue reading</a></p>
+      </div>
+    </div>
+    <div class="column column-beta column--responsive">
+      
+        <img src="/images/previews/2025-01-31-search-query-understanding-with-llms.jpg">
+      
+    </div>
+  </div>
+</article>
+
+    
+      <article class="article-excert">
+  <div class="clearfix layout-block layout-a row--responsive">
+    <div class="column column-alpha column--responsive">
+      <h3 class="alternate"><a href="/2025/01/enhancing-neural-network-training-at-yelp.html">Enhancing Neural Network Training at Yelp: Achieving 1,400x Speedup with WideAndDeep</a></h3>
+      <div class="post-info">
+        <div class="ypassport ypassport-slim media-block">
+  <div class="media-avatar">
+    <div class="photo-box pb-30s">
+      
+  <img src="/images/authors/austinzh.jpg" alt="Yunhui Zhang, Software Engineer" class="photo-box-img">
+
+
+    </div>
+  </div>
+  <div class="media-story">
+    <ul class="user-passport-info">
+      <li class="user-name user-display-name">
+        
+  Yunhui Zhang, Software Engineer
+
+<br>
+      </li>
+      <li class="post-date">
+        Jan 22, 2025
+      </li>
+    </ul>
+  </div>
+</div>
+
+      </div>
+      <div class="post-preview">
+        <p>At Yelp, we encountered challenges that prompted us to enhance the training time of our ad-revenue generating models, which use a Wide and Deep Neural Network architecture for predicting ad click-through rates (pCTR). These models handle large tabular datasets with small parameter spaces, requiring innovative data solutions. This blog post delves into our journey of optimizing training time using TensorFlow and Horovod, along with the development of ArrowStreamServer, our in-house library for low-latency data streaming and serving. Together, these components have allowed us to achieve a 1400x speedup in training for business critical models compared to using a single GPU...</p>
+        <p><a href="/2025/01/enhancing-neural-network-training-at-yelp.html">Continue reading</a></p>
+      </div>
+    </div>
+    <div class="column column-beta column--responsive">
+      
+        <img src="/images/previews/2025-01-22-enhancing-neural-network-training-at-yelp.jpg">
+      
+    </div>
+  </div>
+</article>
+
+    
+      <article class="article-excert">
+  <div class="clearfix layout-block layout-a row--responsive">
+    <div class="column column-alpha column--responsive">
+      <h3 class="alternate"><a href="/2024/12/revisiting-compute-scaling.html">Revisiting Compute Scaling</a></h3>
+      <div class="post-info">
+        <div class="ypassport ypassport-slim media-block">
+  <div class="media-avatar">
+    <div class="photo-box pb-30s">
+      
+  <img src="/images/authors/darwin.png" alt="Ilkin Mammadzada and Ankit Tripathi, Site Reliability Engineers" class="photo-box-img darwin-image">
+
+
+    </div>
+  </div>
+  <div class="media-story">
+    <ul class="user-passport-info">
+      <li class="user-name user-display-name">
+        
+  Ilkin Mammadzada and Ankit Tripathi, Site Reliability Engineers
+
+<br>
+      </li>
+      <li class="post-date">
+        Dec 13, 2024
+      </li>
+    </ul>
+  </div>
+</div>
+
+      </div>
+      <div class="post-preview">
+        <p>As mentioned in our earlier blog post Fine-tuning AWS ASGs with Attribute Based Instance Selection, we recently embarked on an exciting journey to enhance our Kubernetes cluster’s node autoscaler infrastructure. In this blog post, we’ll delve into the rationale behind transitioning from our internally developed Clusterman autoscaler to AWS Karpenter. Join us as we explore the reasons for our switch, address the challenges with Clusterman, and embrace the opportunities with Karpenter. Clusterman and its challenges At Yelp, we used Clusterman to handle autoscaling of nodes in Kubernetes clusters. It is an open-source tool we initially designed for Mesos clusters and...</p>
+        <p><a href="/2024/12/revisiting-compute-scaling.html">Continue reading</a></p>
+      </div>
+    </div>
+    <div class="column column-beta column--responsive">
+      
+        <img src="/images/previews/2024-12-06-revisiting-compute-scaling.jpg">
+      
+    </div>
+  </div>
+</article>
+
+    
+  </div>
+
+  <div class="pagination-block">
+    <div class="arrange arrange--stack arrange--baseline arrange--6">
+        <div class="page-of-pages arrange_unit arrange_unit--fill">
+            Page 2 of 42
+        </div>
+
+        <div class="pagination-links arrange_unit">
+            <div class="arrange arrange--baseline">
+                
+                    <div class="arrange_unit">
+                        <a class="u-decoration-none block prev pagination-links_anchor" href="/">
+                            
+                              <span aria-hidden="true" style="width: 24px; height: 24px;" class="icon icon--24-chevron-left icon--size-24 icon--currentColor">
+    <svg role="img" class="icon_svg">
+        <use xlink:href="#24x24_chevron_left" />
+    </svg>
+</span>
+
+                            
+                            <span class="pagination-label responsive-hidden-small">Previous</span>
+                        </a>
+                    </div>
+                
+
+                
+                
+                
+                
+
+                
+                    
+                        
+
+                        <div class="arrange_unit page-option">
+                            <a class="available-number pagination-links_anchor" href="/index.html">
+                                1
+                            </a>
+                        </div>
+                    
+                
+                    
+                        <div class="arrange_unit page-option current">
+                            <span class="pagination-links_anchor">
+                                2
+                            </span>
+                        </div>
+                    
+                
+                    
+                        
+
+                        <div class="arrange_unit page-option">
+                            <a class="available-number pagination-links_anchor" href="/page/3">
+                                3
+                            </a>
+                        </div>
+                    
+                
+                    
+                        
+
+                        <div class="arrange_unit page-option">
+                            <a class="available-number pagination-links_anchor" href="/page/4">
+                                4
+                            </a>
+                        </div>
+                    
+                
+                    
+                        
+
+                        <div class="arrange_unit page-option">
+                            <a class="available-number pagination-links_anchor" href="/page/5">
+                                5
+                            </a>
+                        </div>
+                    
+                
+                    
+                        
+
+                        <div class="arrange_unit page-option">
+                            <a class="available-number pagination-links_anchor" href="/page/6">
+                                6
+                            </a>
+                        </div>
+                    
+                
+
+                
+                    <div class="arrange_unit">
+                        <a class="u-decoration-none next pagination-links_anchor" href="/page/3">
+                            <span class="pagination-label responsive-hidden-small">Next</span>
+                            
+                              <span aria-hidden="true" style="width: 24px; height: 24px;" class="icon icon--24-chevron-right icon--size-24 icon--currentColor">
+    <svg role="img" class="icon_svg">
+        <use xlink:href="#24x24_chevron_right" />
+    </svg>
+</span>
+
+                            
+                        </a>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+      
+    </div>
+
+    <div class="main-content-wrap main-content-wrap--separated">
+  <div class="content-container">
+    <div class="main-footer">
+      <div class="main-footer_section main-footer_menu clearfix">
+        <div class="main-footer_item">
+          <div class="footer-menu">
+            <h3 class="footer-menu_header">About</h3>
+            <ul class="footer-menu_list">
+              <li class="footer-menu_item">
+                <a href="http://yelp.com/about">About Yelp</a>
+              </li>
+              <li class="footer-menu_item">
+                <a href="http://yelp.com/careers?country=US">Careers</a>
+              </li>
+              <li class="footer-menu_item">
+                <a href="http://www.yelp-press.com/">Press</a>
+              </li>
+              <li class="footer-menu_item">
+                <a href="http://www.yelp-ir.com/">Investor Relations</a>
+              </li>
+              <li class="footer-menu_item">
+                <a href="http://yelp.com/guidelines">Content Guidelines</a>
+              </li>
+              <li class="footer-menu_item">
+                <a href="http://yelp.com/static?p=tos">Terms of Service</a>
+              </li>
+              <li class="footer-menu_item">
+                <a href="http://yelp.com/tos/privacy_policy">Privacy Policy</a>
+              </li>
+              <li class="footer-menu_item">
+                <a href="http://yelp.com/static?p=thirdpartyterms#adchoices">Ad Privacy Info</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="main-footer_item">
+          <div class="footer-menu">
+            <h3 class="footer-menu_header">Discover</h3>
+            <ul class="footer-menu_list">
+              <li class="footer-menu_item">
+                <a href="http://yelp.com/local_yelp">The Local Yelp</a>
+              </li>
+              <li class="footer-menu_item">
+                <a href="http://officialblog.yelp.com/">Yelp Blog</a>
+              </li>
+              <li class="footer-menu_item">
+                <a href="http://yelp.com/contact">Contact Yelp</a>
+              </li>
+              <li class="footer-menu_item">
+                <a href="http://yelp.com/faq">FAQ</a>
+              </li>
+              <li class="footer-menu_item">
+                <a href="http://yelp.com/yelpmobile">Yelp Mobile</a>
+              </li>
+              <li class="footer-menu_item">
+                <a href="http://yelp.com/developers">Developers</a>
+              </li>
+              <li class="footer-menu_item">
+                <a href="http://yelp.com/rss">RSS</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="main-footer_item">
+          <div class="footer-menu">
+            <h3 class="footer-menu_header">Yelp for Business Owners</h3>
+            <ul class="footer-menu_list">
+              <li class="footer-menu_item">
+                <a href="https://biz.yelp.com/">Claim your Business Page</a>
+              </li>
+              <li class="footer-menu_item">
+                <a href="http://yelp.com/advertise">Advertise on Yelp</a>
+              </li>
+              <li class="footer-menu_item">
+                <a href="https://www.seatme.yelp.com/">Yelp SeatMe</a>
+              </li>
+              <li class="footer-menu_item">
+                <a href="https://biz.yelp.com/support/case_studies">Business Success Stories</a>
+              </li>
+              <li class="footer-menu_item">
+                <a href="http://biz.yelp.com/support">Business Support</a>
+              </li>
+              <li class="footer-menu_item">
+                <a href="https://biz.yelp.com/blog">Yelp Blog for Business Owners</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="main-footer_city-landscape-img responsive-hidden-small" role="presentation"></div>
+
+      <div class="main-footer_copyright">
+        Copyright &copy; 2004–2026 Yelp
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    
+      <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-30501-54', 'auto');
+  ga('send', 'pageview');
+</script>
+
+    
+  </body>
+</html>

@@ -11,6 +11,36 @@ on:
           - google
           - meta
           - uber
+          - spotify
+          - slack
+          - dropbox
+          - notion
+          - figma
+          - stripe
+          - shopify
+          - discord
+          - github
+          - doordash
+          - canva
+          - datadog
+          - duolingo
+          - yelp
+          - grab
+          - atlassian
+          - coinbase
+          - openai
+          - anthropic
+          - deepmind
+          - huggingface
+          - aws-architecture
+          - aws-news
+          - cockroachlabs
+          - databricks
+          - instagram
+          - janestreet
+          - line
+          - nvidia
+          - twitch
 
 concurrency:
   group: data-commits

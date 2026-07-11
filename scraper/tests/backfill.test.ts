@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { crawlArchive } from "../src/backfill.js";
+import { USER_AGENT } from "../src/http.js";
 import type { Article } from "../src/types.js";
 
 function makeArticle(id: string): Article {
@@ -28,7 +29,7 @@ describe("crawlArchive", () => {
     const requested: string[] = [];
     const fetchImpl: typeof fetch = (async (url: RequestInfo | URL, init?: RequestInit) => {
       requested.push(String(url));
-      expect(new Headers(init?.headers).get("user-agent")).toContain("engineer-blog-aggregator");
+      expect(new Headers(init?.headers).get("user-agent")).toBe(USER_AGENT);
       return new Response(String(url), { status: 200 });
     }) as typeof fetch;
     const articles = await crawlArchive(
