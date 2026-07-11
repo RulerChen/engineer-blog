@@ -109,7 +109,12 @@ function nextYear(): void {
   pickerYear.value = Math.min(CURRENT_YEAR, pickerYear.value + 1);
 }
 
+function isFutureMonth(ym: string): boolean {
+  return ym > MAX_YM;
+}
+
 function pickMonth(ym: string): void {
+  if (isFutureMonth(ym)) return;
   if (!fromMonth.value || (fromMonth.value && toMonth.value)) {
     props.state.datePreset = "custom";
     props.state.dateFrom = firstDayOf(ym);
@@ -129,7 +134,7 @@ function monthCellClass(ym: string): Record<string, boolean> {
     ym > fromMonth.value &&
     ym < toMonth.value
   );
-  return { end: isEnd, "in-range": inRange };
+  return { end: isEnd, "in-range": inRange, disabled: isFutureMonth(ym) };
 }
 
 function applyLastMonths(monthsBack: number): void {
@@ -277,6 +282,7 @@ function clearAll(): void {
             :key="name"
             class="month-cell"
             :class="monthCellClass(ymOf(pickerYear, mi))"
+            :disabled="isFutureMonth(ymOf(pickerYear, mi))"
             @click="pickMonth(ymOf(pickerYear, mi))"
           >
             {{ name }}

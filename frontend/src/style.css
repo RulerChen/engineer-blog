@@ -363,6 +363,16 @@ input::placeholder {
   background: var(--accent);
   color: #fff8f0;
 }
+.month-cell.disabled,
+.month-cell:disabled {
+  cursor: not-allowed;
+  color: var(--muted);
+  opacity: 0.4;
+}
+.month-cell.disabled:hover,
+.month-cell:disabled:hover {
+  outline: none;
+}
 .date-presets {
   display: flex;
   gap: 6px;
