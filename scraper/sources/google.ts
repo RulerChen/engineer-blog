@@ -2,7 +2,6 @@ import * as cheerio from "cheerio";
 import type { ArchivePage } from "../src/backfill.js";
 import { crawlArchive } from "../src/backfill.js";
 import { articleId, normalizeUrl } from "../src/normalize.js";
-import { fetchRss } from "../src/rss.js";
 import { summarize } from "../src/sanitize.js";
 import { resolveTags } from "../src/tags.js";
 import type { Article, Source } from "../src/types.js";
@@ -62,9 +61,21 @@ export function parseGoogleArchivePage(html: string, pageUrl: string): ArchivePa
   return { articles, nextUrl };
 }
 
+/**
+ * The RSS feed (`/feeds/posts/default?alt=rss`) never includes a `pubDate`
+ * on any item — not a parsing gap, the feed itself has no date field, on
+ * either `alt=rss` or `alt=atom` (both return byte-identical dateless XML).
+ * `filterValid` requires a parseable `publishedAt`, so every RSS item was
+ * silently dropped and `fetch` always produced zero articles. The `/search/`
+ * archive page used for `backfill` does carry a real date on every card, so
+ * `fetch` reuses that same parser for a single page instead of the feed.
+ */
 export const google: Source = {
   id: "google",
   name: "Google Developers",
-  fetch: () => fetchRss("https://developers.googleblog.com/feeds/posts/default?alt=rss", "google"),
+  fetch: () =>
+    crawlArchive("https://developers.googleblog.com/search/", parseGoogleArchivePage, {
+      maxPages: 1,
+    }),
   backfill: () => crawlArchive("https://developers.googleblog.com/search/", parseGoogleArchivePage),
 };

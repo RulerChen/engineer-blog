@@ -2,7 +2,6 @@ import * as cheerio from "cheerio";
 import type { ArchivePage } from "../src/backfill.js";
 import { crawlArchive } from "../src/backfill.js";
 import { articleId, normalizeUrl } from "../src/normalize.js";
-import { fetchRss } from "../src/rss.js";
 import { summarize } from "../src/sanitize.js";
 import { resolveTags } from "../src/tags.js";
 import type { Article, Source } from "../src/types.js";
@@ -62,9 +61,17 @@ export function parseUberArchivePage(html: string, pageUrl: string): ArchivePage
   return { articles, nextUrl };
 }
 
+/**
+ * `www.uber.com/blog/engineering/rss/` returns HTTP 406 unconditionally —
+ * same bot/geo protection on `www.uber.com` documented above for the
+ * archive pages, and it doesn't vary by User-Agent. `eng.uber.com/` isn't
+ * blocked and is already used for `backfill`; `fetch` reuses that same
+ * parser instead of the feed. Since `eng.uber.com/` is a single curated
+ * listing with no pagination, this naturally returns just its one page.
+ */
 export const uber: Source = {
   id: "uber",
   name: "Uber Engineering",
-  fetch: () => fetchRss("https://www.uber.com/blog/engineering/rss/", "uber"),
+  fetch: () => crawlArchive("https://eng.uber.com/", parseUberArchivePage, { maxPages: 1 }),
   backfill: () => crawlArchive("https://eng.uber.com/", parseUberArchivePage),
 };
