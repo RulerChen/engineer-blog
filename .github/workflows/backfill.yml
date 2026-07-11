@@ -32,6 +32,15 @@ on:
           - anthropic
           - deepmind
           - huggingface
+          - aws-architecture
+          - aws-news
+          - cockroachlabs
+          - databricks
+          - instagram
+          - janestreet
+          - line
+          - nvidia
+          - twitch
 
 concurrency:
   group: data-commits

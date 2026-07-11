@@ -8,10 +8,14 @@ describe("source registry", () => {
       "airbnb",
       "anthropic",
       "atlassian",
+      "aws-architecture",
+      "aws-news",
       "booking",
       "canva",
       "cloudflare",
+      "cockroachlabs",
       "coinbase",
+      "databricks",
       "datadog",
       "deepmind",
       "discord",
@@ -25,11 +29,15 @@ describe("source registry", () => {
       "grab",
       "huggingface",
       "instacart",
+      "instagram",
+      "janestreet",
+      "line",
       "linkedin",
       "lyft",
       "meta",
       "netflix",
       "notion",
+      "nvidia",
       "openai",
       "paypal",
       "pinterest",
@@ -37,10 +45,11 @@ describe("source registry", () => {
       "slack",
       "spotify",
       "stripe",
+      "twitch",
       "uber",
       "yelp",
     ]);
-    expect(new Set(ids).size).toBe(34);
+    expect(new Set(ids).size).toBe(43);
   });
 
   it("every source has a display name and a fetch strategy", () => {

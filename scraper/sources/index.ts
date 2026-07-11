@@ -2,10 +2,14 @@ import type { Source } from "../src/types.js";
 import { airbnb } from "./airbnb.js";
 import { anthropic } from "./anthropic.js";
 import { atlassian } from "./atlassian.js";
+import { awsArchitecture } from "./aws-architecture.js";
+import { awsNews } from "./aws-news.js";
 import { booking } from "./booking.js";
 import { canva } from "./canva.js";
 import { cloudflare } from "./cloudflare.js";
+import { cockroachlabs } from "./cockroachlabs.js";
 import { coinbase } from "./coinbase.js";
+import { databricks } from "./databricks.js";
 import { datadog } from "./datadog.js";
 import { deepmind } from "./deepmind.js";
 import { discord } from "./discord.js";
@@ -19,11 +23,15 @@ import { google } from "./google.js";
 import { grab } from "./grab.js";
 import { huggingface } from "./huggingface.js";
 import { instacart } from "./instacart.js";
+import { instagram } from "./instagram.js";
+import { janestreet } from "./janestreet.js";
+import { line } from "./line.js";
 import { linkedin } from "./linkedin.js";
 import { lyft } from "./lyft.js";
 import { meta } from "./meta.js";
 import { netflix } from "./netflix.js";
 import { notion } from "./notion.js";
+import { nvidia } from "./nvidia.js";
 import { openai } from "./openai.js";
 import { paypal } from "./paypal.js";
 import { pinterest } from "./pinterest.js";
@@ -31,6 +39,7 @@ import { shopify } from "./shopify.js";
 import { slack } from "./slack.js";
 import { spotify } from "./spotify.js";
 import { stripe } from "./stripe.js";
+import { twitch } from "./twitch.js";
 import { uber } from "./uber.js";
 import { yelp } from "./yelp.js";
 
@@ -70,6 +79,15 @@ export const sources: Source[] = [
   anthropic,
   deepmind,
   huggingface,
+  awsArchitecture,
+  awsNews,
+  cockroachlabs,
+  databricks,
+  instagram,
+  janestreet,
+  line,
+  nvidia,
+  twitch,
 ];
 
 export function getSource(id: string): Source | undefined {

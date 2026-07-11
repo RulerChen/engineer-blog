@@ -34,6 +34,15 @@ export const sourceNames: Record<string, string> = {
   anthropic: "Anthropic",
   deepmind: "Google DeepMind",
   huggingface: "Hugging Face",
+  "aws-architecture": "AWS Architecture Blog",
+  "aws-news": "AWS News Blog",
+  cockroachlabs: "Cockroach Labs",
+  databricks: "Databricks",
+  instagram: "Instagram Engineering",
+  janestreet: "Jane Street",
+  line: "LINE Engineering",
+  nvidia: "NVIDIA Developer Blog",
+  twitch: "Twitch",
 };
 
 export function sourceName(id: string): string {
