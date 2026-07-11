@@ -5,13 +5,7 @@
     "url": "https://netflixtechblog.com/genpage-towards-end-to-end-generative-homepage-construction-at-netflix-77146fba8a08?source=rss----2615bd06b42e---4",
     "source": "netflix",
     "publishedAt": "2026-06-29T13:01:02.000Z",
-    "tags": [
-      "recommendation-system",
-      "ai",
-      "netflix",
-      "machine-learning",
-      "large-language-models"
-    ],
+    "tags": ["recommendation-system", "ai", "netflix", "machine-learning", "large-language-models"],
     "summary": "",
     "thumbnail": null,
     "fetchedAt": "2026-07-11T03:03:47.968Z"
@@ -33,12 +27,7 @@
     "url": "https://netflixtechblog.com/how-netflix-simplified-batch-compute-with-kueue-87860682629c?source=rss----2615bd06b42e---4",
     "source": "netflix",
     "publishedAt": "2026-06-22T21:35:01.000Z",
-    "tags": [
-      "kueue",
-      "netflix",
-      "aws",
-      "kubernetes"
-    ],
+    "tags": ["kueue", "netflix", "aws", "kubernetes"],
     "summary": "",
     "thumbnail": null,
     "fetchedAt": "2026-07-11T03:03:47.968Z"
@@ -66,11 +55,7 @@
     "url": "https://netflixtechblog.com/data-projects-managing-data-assets-at-netflix-scale-7ca25888591e?source=rss----2615bd06b42e---4",
     "source": "netflix",
     "publishedAt": "2026-06-19T23:54:00.000Z",
-    "tags": [
-      "big-data",
-      "data-governance",
-      "data-orchestration"
-    ],
+    "tags": ["big-data", "data-governance", "data-orchestration"],
     "summary": "",
     "thumbnail": null,
     "fetchedAt": "2026-07-11T03:03:47.968Z"
@@ -81,12 +66,7 @@
     "url": "https://netflixtechblog.com/predicting-risk-in-content-launches-how-data-driven-insights-can-transform-launch-planning-587b1f2de928?source=rss----2615bd06b42e---4",
     "source": "netflix",
     "publishedAt": "2026-06-19T23:53:47.000Z",
-    "tags": [
-      "regression",
-      "predictive-analytics",
-      "operations",
-      "machine-learning"
-    ],
+    "tags": ["regression", "predictive-analytics", "operations", "machine-learning"],
     "summary": "",
     "thumbnail": null,
     "fetchedAt": "2026-07-11T03:03:47.968Z"
@@ -97,12 +77,7 @@
     "url": "https://netflixtechblog.com/the-evolution-of-cassandra-data-movement-at-netflix-6e13329c80a1?source=rss----2615bd06b42e---4",
     "source": "netflix",
     "publishedAt": "2026-06-19T23:53:30.000Z",
-    "tags": [
-      "cassandra",
-      "icebergs",
-      "big-data",
-      "data-movement"
-    ],
+    "tags": ["cassandra", "icebergs", "big-data", "data-movement"],
     "summary": "",
     "thumbnail": null,
     "fetchedAt": "2026-07-11T03:03:47.968Z"
@@ -113,12 +88,7 @@
     "url": "https://netflixtechblog.com/thinking-fast-slow-for-a-personalized-notification-system-4d89b26525cd?source=rss----2615bd06b42e---4",
     "source": "netflix",
     "publishedAt": "2026-06-19T23:53:16.000Z",
-    "tags": [
-      "ai",
-      "notifications",
-      "recommendations",
-      "machine-learning"
-    ],
+    "tags": ["ai", "notifications", "recommendations", "machine-learning"],
     "summary": "",
     "thumbnail": null,
     "fetchedAt": "2026-07-11T03:03:47.968Z"
@@ -129,11 +99,7 @@
     "url": "https://netflixtechblog.com/a-human-augmenting-agentic-workflow-for-causal-inference-4623f0a9c5af?source=rss----2615bd06b42e---4",
     "source": "netflix",
     "publishedAt": "2026-06-19T23:53:06.000Z",
-    "tags": [
-      "ai-agent",
-      "agentic-workflow",
-      "causal-inference"
-    ],
+    "tags": ["ai-agent", "agentic-workflow", "causal-inference"],
     "summary": "",
     "thumbnail": null,
     "fetchedAt": "2026-07-11T03:03:47.968Z"
