@@ -158,12 +158,16 @@ built from pure functions, unit-testable without mounting components.
 ### `ci.yml` — quality checks
 - Trigger: push to `main` and pull requests. Skipped for data-only commits from the
   fetch bot (paths filter excludes `data/**`).
-- Checks, each a separate step so failures are easy to read:
-  - **Lint:** `oxlint` over both packages (with Vue plugin support for `frontend/`).
-  - **Format:** `prettier --check` (oxc's formatter is not yet stable; revisit when
-    it is).
+- Checks, each a separate step so failures are easy to read (oxc toolchain
+  throughout, except type checking, which oxc does not provide):
+  - **Lint:** `oxlint` over both packages (with Vue support for `frontend/`).
+  - **Format:** `oxfmt --check` (beta as of mid-2026; formats TS, Vue SFCs, JSON,
+    YAML, Markdown — a formatter upgrade may occasionally require a re-format
+    commit).
   - **Typecheck:** `tsc --noEmit` for `scraper/`, `vue-tsc --noEmit` for `frontend/`.
   - **Tests:** Vitest suites for both packages.
+- The frontend builds on Vite 8, whose default Rolldown bundler and oxc transforms
+  keep the build pipeline oxc-based with no extra configuration.
 - The same commands are exposed as root package scripts (`lint`, `format`,
   `typecheck`, `test`) so local runs match CI exactly.
 
