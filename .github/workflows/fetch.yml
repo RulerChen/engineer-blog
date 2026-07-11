@@ -1,0 +1,37 @@
+name: Fetch articles
+
+on:
+  schedule:
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: data-commits
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.FETCH_PUSH_TOKEN }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Run scraper
+        id: scrape
+        run: npm run fetch -w scraper
+      - name: Commit and push new data
+        run: |
+          if git diff --quiet -- data/; then
+            echo "No new articles today."
+            exit 0
+          fi
+          git config user.name "fetch-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git commit -m "data: fetch $(date -u +%F) (+${{ steps.scrape.outputs.added }} articles)"
+          git push

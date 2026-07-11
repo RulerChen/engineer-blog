@@ -1,0 +1,44 @@
+name: Backfill source archive
+
+on:
+  workflow_dispatch:
+    inputs:
+      source:
+        description: "Source to backfill"
+        required: true
+        type: choice
+        options:
+          - google
+          - meta
+          - uber
+
+concurrency:
+  group: data-commits
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.FETCH_PUSH_TOKEN }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Run backfill scraper
+        id: scrape
+        run: npm run backfill -w scraper -- ${{ inputs.source }}
+      - name: Commit and push new data
+        run: |
+          if git diff --quiet -- data/; then
+            echo "Backfill produced no new articles."
+            exit 0
+          fi
+          git config user.name "fetch-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git commit -m "data: backfill ${{ inputs.source }} (+${{ steps.scrape.outputs.added }} articles)"
+          git push
