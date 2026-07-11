@@ -51,7 +51,20 @@ const tagLabel = computed(() =>
 );
 
 // ---- month-range date picker ----
-const MONTH_NAMES = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const MONTH_NAMES = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
 const today = new Date();
 const CURRENT_YEAR = today.getFullYear();
 const MAX_YM = `${CURRENT_YEAR}-${String(today.getMonth() + 1).padStart(2, "0")}`;
@@ -110,7 +123,12 @@ function pickMonth(ym: string): void {
 
 function monthCellClass(ym: string): Record<string, boolean> {
   const isEnd = ym === fromMonth.value || ym === toMonth.value;
-  const inRange = !!(fromMonth.value && toMonth.value && ym > fromMonth.value && ym < toMonth.value);
+  const inRange = !!(
+    fromMonth.value &&
+    toMonth.value &&
+    ym > fromMonth.value &&
+    ym < toMonth.value
+  );
   return { end: isEnd, "in-range": inRange };
 }
 
@@ -249,7 +267,9 @@ function clearAll(): void {
         <div class="date-menu-year">
           <button class="year-nav" :disabled="pickerYear <= MIN_YEAR" @click="prevYear">‹</button>
           <span class="year-label heading-font">{{ pickerYear }}</span>
-          <button class="year-nav" :disabled="pickerYear >= CURRENT_YEAR" @click="nextYear">›</button>
+          <button class="year-nav" :disabled="pickerYear >= CURRENT_YEAR" @click="nextYear">
+            ›
+          </button>
         </div>
         <div class="month-grid">
           <button

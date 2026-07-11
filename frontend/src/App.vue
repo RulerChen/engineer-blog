@@ -124,7 +124,8 @@ onMounted(async () => {
       />
 
       <footer class="site-footer">
-        Aggregated from each company's public engineering blog <span v-if="stats">· {{ stats }}</span>
+        Aggregated from each company's public engineering blog
+        <span v-if="stats">· {{ stats }}</span>
       </footer>
     </div>
   </div>
