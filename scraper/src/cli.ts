@@ -1,12 +1,14 @@
 import { appendFile, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { getSource, sources } from "../sources/index.js";
+import { excludedIds, readExclusions } from "./exclude.js";
 import { allFailed, renderSummary, runSources, totalAdded } from "./run.js";
 import { readSourceArticles, writeSourceArticles } from "./storage.js";
 import { unmappedTags } from "./tags.js";
 
 const dataDir = fileURLToPath(new URL("../../data/articles/", import.meta.url));
 const unmappedTagsPath = fileURLToPath(new URL("../../data/unmapped-tags.json", import.meta.url));
+const excludedPath = fileURLToPath(new URL("../../data/excluded.json", import.meta.url));
 const [, , mode, sourceId] = process.argv;
 
 if (mode !== "fetch" && mode !== "backfill") {
@@ -24,10 +26,17 @@ if (mode === "backfill") {
   selected = [source];
 }
 
-const results = await runSources(selected, mode, {
-  read: (id) => readSourceArticles(dataDir, id),
-  write: (id, articles) => writeSourceArticles(dataDir, id, articles),
-});
+const excluded = excludedIds(await readExclusions(excludedPath));
+
+const results = await runSources(
+  selected,
+  mode,
+  {
+    read: (id) => readSourceArticles(dataDir, id),
+    write: (id, articles) => writeSourceArticles(dataDir, id, articles),
+  },
+  excluded,
+);
 
 const summary = renderSummary(results);
 console.log(summary);

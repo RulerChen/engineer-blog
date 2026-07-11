@@ -1,3 +1,4 @@
+import { filterExcluded } from "./exclude.js";
 import { merge } from "./merge.js";
 import type { Article, Source } from "./types.js";
 import { filterValid } from "./validate.js";
@@ -21,6 +22,7 @@ export async function runSources(
   sourceList: Source[],
   mode: "fetch" | "backfill",
   deps: RunDeps,
+  excluded: Set<string> = new Set(),
 ): Promise<SourceResult[]> {
   const log = deps.log ?? ((msg: string) => console.error(msg));
   const results: SourceResult[] = [];
@@ -28,17 +30,21 @@ export async function runSources(
     try {
       const strategy = mode === "backfill" ? source.backfill : source.fetch;
       if (!strategy) throw new Error(`source ${source.id} has no ${mode} strategy`);
-      const fetched = filterValid(await strategy(), (article, errors) =>
+      const fetchedRaw = filterValid(await strategy(), (article, errors) =>
         log(`WARN ${source.id}: dropping ${article.url || "<no url>"}: ${errors.join(", ")}`),
       );
-      const existing = await deps.read(source.id);
-      if (fetched.length === 0 && existing.length > 0) {
+      const existingRaw = await deps.read(source.id);
+      if (fetchedRaw.length === 0 && existingRaw.length > 0) {
         log(
           `WARN ${source.id}: previously healthy source returned 0 articles; keeping existing data`,
         );
         results.push({ id: source.id, status: "guarded", fetched: 0, added: 0 });
         continue;
       }
+      // Excluded articles are dropped from both sides so they neither get re-added
+      // nor linger in the stored archive once excluded.
+      const fetched = filterExcluded(fetchedRaw, excluded);
+      const existing = filterExcluded(existingRaw, excluded);
       const merged = merge(existing, fetched);
       await deps.write(source.id, merged);
       results.push({

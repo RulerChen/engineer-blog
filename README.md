@@ -73,3 +73,35 @@ See `scraper/` and `frontend/` for the two workspaces. `npm run fetch -w
 scraper` runs the daily RSS fetch across all sources; `npm run backfill -w
 scraper -- <id>` backfills a single source's historical archive where
 supported.
+
+## Curating articles
+
+Two hand-edited files at the repo root let you clean up the feed without
+touching the scraper's per-source archives directly:
+
+- **`data/excluded.json`** — a list of articles to hide and stop re-scraping.
+  Add an entry with either the article's `url` or its `id` (both resolve to
+  the same stable hash used everywhere else):
+
+  ```json
+  [
+    {
+      "url": "https://example.com/some-product-post",
+      "note": "product announcement, not technical"
+    }
+  ]
+  ```
+
+  Excluded articles are dropped both at the next scrape (so they stop
+  reappearing in `data/articles/<source>.json`) and immediately at the next
+  frontend build (`npm run build -w frontend` runs `mergeArticles.ts`, which
+  reads this file too) — no need to wait for the next scrape to hide one.
+
+- **`data/manual.json`** — articles to add by hand that the scraper missed.
+  Only `title`, `url`, and `publishedAt` are required; `id` is derived from
+  `url` automatically, so if the scraper later picks up the same URL for
+  real, the two entries merge into one (the scraped version wins):
+
+  ```json
+  [{ "title": "...", "url": "...", "publishedAt": "2026-07-10" }]
+  ```
