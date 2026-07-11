@@ -11,7 +11,7 @@
     "format": "oxfmt --check .",
     "format:fix": "oxfmt .",
     "typecheck": "npm run typecheck --workspaces",
-    "test": "npm run test --workspaces",
+    "test": "npm run test --workspaces --if-present",
     "prepare": "husky"
   },
   "devDependencies": {
