@@ -7,8 +7,6 @@
   --line: #ebdfcc;
   --chip: #f4ebdc;
   --chip-ink: #6b5843;
-  --badge-new-bg: #dcfce7;
-  --badge-new-ink: #15803d;
   --shadow: 0 1px 2px rgba(80, 55, 30, 0.06), 0 6px 20px -8px rgba(80, 55, 30, 0.12);
   --shadow-hover: 0 2px 4px rgba(80, 55, 30, 0.08), 0 14px 34px -10px rgba(80, 55, 30, 0.2);
   font-family:
@@ -28,8 +26,6 @@
   --line: #3b3227;
   --chip: #342b21;
   --chip-ink: #cbb69e;
-  --badge-new-bg: #163224;
-  --badge-new-ink: #4ade80;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 6px 20px -8px rgba(0, 0, 0, 0.4);
   --shadow-hover: 0 2px 4px rgba(0, 0, 0, 0.3), 0 14px 34px -10px rgba(0, 0, 0, 0.55);
   color-scheme: dark;
@@ -127,15 +123,6 @@ input::placeholder {
 .theme-toggle:hover {
   border-color: var(--accent);
   color: var(--accent);
-}
-
-.stats {
-  max-width: 820px;
-  margin: 0 auto;
-  padding: 8px 24px 0;
-  color: var(--muted);
-  font-size: 12.5px;
-  font-weight: 600;
 }
 
 /* Layout */
@@ -313,35 +300,110 @@ input::placeholder {
 
 /* Date range menu */
 .date-menu {
-  width: 260px;
+  width: 312px;
   padding: 14px;
-  gap: 10px;
+  gap: 12px;
+  box-sizing: border-box;
 }
-.date-menu label {
+.date-menu-year {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 6px 2px;
-  font-size: 13.5px;
-  cursor: pointer;
+  justify-content: space-between;
 }
-.date-menu input[type="date"] {
-  flex: 1;
-  padding: 6px 8px;
-  border-radius: 8px;
-  border: 1.5px solid var(--line);
+.year-nav {
+  width: 28px;
+  height: 28px;
+  border-radius: 9px;
+  border: 1px solid var(--line);
   background: var(--bg);
   color: var(--ink);
-  font-family: inherit;
-  font-size: 13px;
+  cursor: pointer;
+  font-size: 14px;
+  display: grid;
+  place-items: center;
 }
-.date-menu .date-custom {
+.year-nav:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.year-nav:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.year-label {
+  font-weight: 700;
+  font-size: 16px;
+}
+.month-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+.month-cell {
+  padding: 9px 0;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  background: transparent;
+  color: var(--ink);
+}
+.month-cell:hover:not(.end) {
+  outline: 1.5px solid var(--accent);
+  outline-offset: -1.5px;
+}
+.month-cell.in-range {
+  background: color-mix(in srgb, var(--accent) 14%, var(--card));
+  color: var(--accent);
+}
+.month-cell.end {
+  background: var(--accent);
+  color: #fff8f0;
+}
+.date-presets {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
+  gap: 6px;
+  flex-wrap: wrap;
   border-top: 1px solid var(--line);
-  padding-top: 10px;
-  margin-top: 4px;
+  padding-top: 12px;
+}
+.date-preset {
+  padding: 5px 11px;
+  border-radius: 999px;
+  border: 1.5px solid var(--line);
+  background: var(--bg);
+  color: var(--chip-ink);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+}
+.date-preset:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.date-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: var(--muted);
+}
+.date-clear {
+  border: none;
+  background: transparent;
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 2px 4px;
+}
+.date-clear:hover {
+  text-decoration: underline;
 }
 
 /* Tabs + result count */
@@ -474,23 +536,6 @@ input::placeholder {
   background: var(--chip);
   color: var(--chip-ink);
 }
-.article-card .badge {
-  font-size: 11.5px;
-  font-weight: 700;
-  padding: 3px 10px;
-  border-radius: 999px;
-  background: var(--chip);
-  color: var(--chip-ink);
-}
-.article-card .badge.new {
-  background: var(--badge-new-bg);
-  color: var(--badge-new-ink);
-}
-.article-card .summary {
-  margin: 0;
-  font-size: 14px;
-  color: var(--muted);
-}
 .bookmark-button {
   width: 34px;
   height: 34px;
@@ -585,6 +630,9 @@ input::placeholder {
     padding: 16px;
   }
   .filter-menu {
+    width: 260px;
+  }
+  .date-menu {
     width: 260px;
   }
 }

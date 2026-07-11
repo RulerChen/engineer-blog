@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { avatarHue } from "../lib/avatar.js";
-import { isNew } from "../lib/filter.js";
 import { sourceName } from "../lib/sources.js";
 import type { Article } from "../types.js";
 
@@ -37,17 +36,12 @@ const avatarStyle = computed(() => {
         <span class="company">{{ sourceName(article.source) }}</span>
         <span class="dot">·</span>
         <time :datetime="article.publishedAt">{{ displayDate }}</time>
-        <template v-if="isNew(article)">
-          <span class="dot">·</span>
-          <span class="badge new">New</span>
-        </template>
       </div>
       <h2>
         <a class="title-link" :href="article.url" target="_blank" rel="noopener noreferrer">
           {{ article.title }}
         </a>
       </h2>
-      <p v-if="article.summary" class="summary">{{ article.summary }}</p>
       <div v-if="article.tags.length" class="tags">
         <span v-for="tag in article.tags" :key="tag" class="tag">{{ tag }}</span>
       </div>

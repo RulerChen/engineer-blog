@@ -13,7 +13,7 @@ function makeArticle(n: number, overrides: Partial<Article> = {}): Article {
     tags: ["infra"],
     summary: `Summary ${n}`,
     thumbnail: null,
-    fetchedAt: new Date().toISOString(), // within 24h → New badge
+    fetchedAt: new Date().toISOString(),
     ...overrides,
   };
 }
@@ -26,18 +26,19 @@ describe("ArticleList", () => {
     expect(wrapper.text()).toContain("Post number 1");
     expect(wrapper.text()).toContain("Post number 2");
     expect(wrapper.text()).toContain("Meta Engineering"); // company badge
-    expect(wrapper.text()).toContain("New"); // fetchedAt within 24h
     const link = wrapper.find("a.title-link");
     expect(link.attributes("href")).toBe("https://example.com/1");
     expect(link.attributes("target")).toBe("_blank");
   });
 
-  it("paginates with Load more (30 per page)", async () => {
-    const articles = Array.from({ length: 45 }, (_v, i) => makeArticle(i));
+  it("paginates with Load more (20 initial, +40 per load)", async () => {
+    const articles = Array.from({ length: 70 }, (_v, i) => makeArticle(i));
     const wrapper = mount(ArticleList, { props: { articles } });
-    expect(wrapper.findAll(".article-card")).toHaveLength(30);
+    expect(wrapper.findAll(".article-card")).toHaveLength(20);
     await wrapper.find("button.load-more").trigger("click");
-    expect(wrapper.findAll(".article-card")).toHaveLength(45);
+    expect(wrapper.findAll(".article-card")).toHaveLength(60);
+    await wrapper.find("button.load-more").trigger("click");
+    expect(wrapper.findAll(".article-card")).toHaveLength(70);
     expect(wrapper.find("button.load-more").exists()).toBe(false);
   });
 
@@ -47,10 +48,10 @@ describe("ArticleList", () => {
   });
 
   it("resets pagination when the article set changes", async () => {
-    const articles = Array.from({ length: 45 }, (_v, i) => makeArticle(i));
+    const articles = Array.from({ length: 70 }, (_v, i) => makeArticle(i));
     const wrapper = mount(ArticleList, { props: { articles } });
     await wrapper.find("button.load-more").trigger("click");
-    await wrapper.setProps({ articles: articles.slice(0, 40) });
-    expect(wrapper.findAll(".article-card")).toHaveLength(30);
+    await wrapper.setProps({ articles: articles.slice(0, 50) });
+    expect(wrapper.findAll(".article-card")).toHaveLength(20);
   });
 });

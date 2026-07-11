@@ -21,13 +21,14 @@ const props = withDefaults(
 
 const emit = defineEmits<{ toggleBookmark: [id: string]; clearFilters: [] }>();
 
-const PAGE_SIZE = 30;
-const visibleCount = ref(PAGE_SIZE);
+const INITIAL_VISIBLE = 20;
+const LOAD_INCREMENT = 40;
+const visibleCount = ref(INITIAL_VISIBLE);
 
 watch(
   () => props.articles,
   () => {
-    visibleCount.value = PAGE_SIZE;
+    visibleCount.value = INITIAL_VISIBLE;
   },
 );
 
@@ -56,8 +57,8 @@ const hasMore = computed(() => visibleCount.value < props.articles.length);
         />
       </div>
       <div v-if="hasMore" class="load-more-wrap">
-        <button class="load-more" @click="visibleCount += PAGE_SIZE">
-          Load {{ PAGE_SIZE }} more
+        <button class="load-more" @click="visibleCount += LOAD_INCREMENT">
+          Load {{ LOAD_INCREMENT }} more
         </button>
         <span class="showing-label">
           Showing {{ visible.length.toLocaleString("en-US") }} of

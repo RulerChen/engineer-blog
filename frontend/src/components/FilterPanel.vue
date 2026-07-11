@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
-import type { DatePreset, FilterState } from "../lib/filter.js";
+import type { FilterState } from "../lib/filter.js";
 import { sourceName } from "../lib/sources.js";
 
 const props = defineProps<{
@@ -8,14 +8,6 @@ const props = defineProps<{
   companies: { id: string; count: number }[];
   tags: { tag: string; count: number }[];
 }>();
-
-const presets: { value: DatePreset; label: string }[] = [
-  { value: "all", label: "All time" },
-  { value: "week", label: "Last week" },
-  { value: "month", label: "Last month" },
-  { value: "year", label: "Last year" },
-  { value: "custom", label: "Custom range" },
-];
 
 const openMenu = ref<"company" | "tag" | "date" | null>(null);
 const companySearch = ref("");
@@ -57,9 +49,123 @@ const companyLabel = computed(() =>
 const tagLabel = computed(() =>
   props.state.tags.length ? `${props.state.tags.length} selected` : "All topics",
 );
-const dateLabel = computed(
-  () => presets.find((p) => p.value === props.state.datePreset)?.label ?? "Any time",
-);
+
+// ---- month-range date picker ----
+const MONTH_NAMES = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const today = new Date();
+const CURRENT_YEAR = today.getFullYear();
+const MAX_YM = `${CURRENT_YEAR}-${String(today.getMonth() + 1).padStart(2, "0")}`;
+const MIN_YEAR = CURRENT_YEAR - 6;
+
+const pickerYear = ref(CURRENT_YEAR);
+
+function ymOf(year: number, monthIndex: number): string {
+  return `${year}-${String(monthIndex + 1).padStart(2, "0")}`;
+}
+function firstDayOf(ym: string): string {
+  return `${ym}-01`;
+}
+function lastDayOf(ym: string): string {
+  const [y, m] = ym.split("-").map(Number);
+  const day = new Date(y, m, 0).getDate();
+  return `${ym}-${String(day).padStart(2, "0")}`;
+}
+function shiftYm(ym: string, delta: number): string {
+  const [y, m] = ym.split("-").map(Number);
+  const t = y * 12 + (m - 1) + delta;
+  const yy = Math.floor(t / 12);
+  const mm = ((t % 12) + 12) % 12;
+  return ymOf(yy, mm);
+}
+function monthLabel(ym: string): string {
+  const [y, m] = ym.split("-");
+  return `${MONTH_NAMES[Number(m) - 1]} ${y}`;
+}
+
+const fromMonth = computed(() => (props.state.dateFrom ? props.state.dateFrom.slice(0, 7) : ""));
+const toMonth = computed(() => (props.state.dateTo ? props.state.dateTo.slice(0, 7) : ""));
+
+function openDateMenu(): void {
+  toggleMenu("date");
+  pickerYear.value = fromMonth.value ? Number(fromMonth.value.slice(0, 4)) : CURRENT_YEAR;
+}
+function prevYear(): void {
+  pickerYear.value = Math.max(MIN_YEAR, pickerYear.value - 1);
+}
+function nextYear(): void {
+  pickerYear.value = Math.min(CURRENT_YEAR, pickerYear.value + 1);
+}
+
+function pickMonth(ym: string): void {
+  if (!fromMonth.value || (fromMonth.value && toMonth.value)) {
+    props.state.datePreset = "custom";
+    props.state.dateFrom = firstDayOf(ym);
+    props.state.dateTo = null;
+  } else if (ym < fromMonth.value) {
+    props.state.dateFrom = firstDayOf(ym);
+  } else {
+    props.state.dateTo = lastDayOf(ym);
+  }
+}
+
+function monthCellClass(ym: string): Record<string, boolean> {
+  const isEnd = ym === fromMonth.value || ym === toMonth.value;
+  const inRange = !!(fromMonth.value && toMonth.value && ym > fromMonth.value && ym < toMonth.value);
+  return { end: isEnd, "in-range": inRange };
+}
+
+function applyLastMonths(monthsBack: number): void {
+  props.state.datePreset = "custom";
+  props.state.dateFrom = firstDayOf(shiftYm(MAX_YM, -monthsBack));
+  props.state.dateTo = lastDayOf(MAX_YM);
+  pickerYear.value = CURRENT_YEAR;
+  closeMenus();
+}
+function applyThisYear(): void {
+  props.state.datePreset = "custom";
+  props.state.dateFrom = `${CURRENT_YEAR}-01-01`;
+  props.state.dateTo = lastDayOf(MAX_YM);
+  pickerYear.value = CURRENT_YEAR;
+  closeMenus();
+}
+function applyAllTime(): void {
+  props.state.datePreset = "all";
+  props.state.dateFrom = null;
+  props.state.dateTo = null;
+  closeMenus();
+}
+function clearRange(): void {
+  props.state.datePreset = "all";
+  props.state.dateFrom = null;
+  props.state.dateTo = null;
+}
+
+const rangeLabel = computed(() => {
+  if (fromMonth.value && toMonth.value)
+    return `${monthLabel(fromMonth.value)} – ${monthLabel(toMonth.value)}`;
+  if (fromMonth.value) return `From ${monthLabel(fromMonth.value)}`;
+  if (toMonth.value) return `Until ${monthLabel(toMonth.value)}`;
+  return "Any time";
+});
+const dateHint = computed(() => {
+  if (!fromMonth.value) return "Pick a start month";
+  if (!toMonth.value) return "Now pick an end month";
+  return rangeLabel.value;
+});
+const dateLabel = computed(() => {
+  switch (props.state.datePreset) {
+    case "custom":
+      return rangeLabel.value;
+    case "week":
+      return "Last week";
+    case "month":
+      return "Last month";
+    case "year":
+      return "Last year";
+    default:
+      return "Any time";
+  }
+});
 
 const hasFilters = computed(
   () =>
@@ -135,28 +241,36 @@ function clearAll(): void {
     </div>
 
     <div class="filter-dropdown">
-      <button class="filter-trigger" @click="toggleMenu('date')">
+      <button class="filter-trigger" @click="openMenu === 'date' ? closeMenus() : openDateMenu()">
         <span>{{ dateLabel }}</span>
         <span class="chevron">▾</span>
       </button>
       <div v-if="openMenu === 'date'" class="filter-menu date-menu" style="z-index: 60">
-        <label v-for="preset in presets" :key="preset.value">
-          <input v-model="state.datePreset" type="radio" :value="preset.value" />
-          {{ preset.label }}
-        </label>
-        <div v-if="state.datePreset === 'custom'" class="date-custom">
-          <input
-            type="date"
-            aria-label="From date"
-            :value="state.dateFrom ?? ''"
-            @change="state.dateFrom = ($event.target as HTMLInputElement).value || null"
-          />
-          <input
-            type="date"
-            aria-label="To date"
-            :value="state.dateTo ?? ''"
-            @change="state.dateTo = ($event.target as HTMLInputElement).value || null"
-          />
+        <div class="date-menu-year">
+          <button class="year-nav" :disabled="pickerYear <= MIN_YEAR" @click="prevYear">‹</button>
+          <span class="year-label heading-font">{{ pickerYear }}</span>
+          <button class="year-nav" :disabled="pickerYear >= CURRENT_YEAR" @click="nextYear">›</button>
+        </div>
+        <div class="month-grid">
+          <button
+            v-for="(name, mi) in MONTH_NAMES"
+            :key="name"
+            class="month-cell"
+            :class="monthCellClass(ymOf(pickerYear, mi))"
+            @click="pickMonth(ymOf(pickerYear, mi))"
+          >
+            {{ name }}
+          </button>
+        </div>
+        <div class="date-presets">
+          <button class="date-preset" @click="applyLastMonths(2)">Last 3 months</button>
+          <button class="date-preset" @click="applyLastMonths(11)">Last 12 months</button>
+          <button class="date-preset" @click="applyThisYear">This year</button>
+          <button class="date-preset" @click="applyAllTime">All time</button>
+        </div>
+        <div class="date-footer">
+          <span class="date-hint">{{ dateHint }}</span>
+          <button class="date-clear" @click="clearRange">Clear</button>
         </div>
       </div>
     </div>

@@ -91,7 +91,6 @@ onMounted(async () => {
         </button>
       </div>
     </header>
-    <p v-if="stats" class="stats">{{ stats }}</p>
 
     <p v-if="loading" class="loading">Loading articles…</p>
     <p v-else-if="loadError" class="error">Could not load articles. Try refreshing.</p>
@@ -124,7 +123,9 @@ onMounted(async () => {
         @clear-filters="clearFilters"
       />
 
-      <footer class="site-footer">Aggregated from each company's public engineering blog</footer>
+      <footer class="site-footer">
+        Aggregated from each company's public engineering blog <span v-if="stats">· {{ stats }}</span>
+      </footer>
     </div>
   </div>
 </template>
