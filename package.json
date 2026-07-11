@@ -7,7 +7,7 @@
   ],
   "type": "module",
   "scripts": {
-    "lint": "oxlint . --no-error-on-unmatched-pattern",
+    "lint": "oxlint .",
     "format": "oxfmt --check .",
     "format:fix": "oxfmt .",
     "typecheck": "npm run typecheck --workspaces",
