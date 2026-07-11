@@ -4,6 +4,7 @@ import { crawlArchive } from "../src/backfill.js";
 import { articleId, normalizeUrl } from "../src/normalize.js";
 import { fetchRss } from "../src/rss.js";
 import { summarize } from "../src/sanitize.js";
+import { resolveTags } from "../src/tags.js";
 import type { Article, Source } from "../src/types.js";
 
 /**
@@ -54,11 +55,14 @@ export function parseMetaArchivePage(html: string, _pageUrl: string): ArchivePag
       url: normalizeUrl(href),
       source: "meta",
       publishedAt,
-      tags: post
-        .find('a[rel~="category"]')
-        .map((_j, tag) => $(tag).text().trim())
-        .get()
-        .filter(Boolean),
+      tags: resolveTags(
+        post
+          .find('a[rel~="category"]')
+          .map((_j, tag) => $(tag).text().trim())
+          .get()
+          .filter(Boolean),
+        "meta",
+      ),
       summary: summarize(post.find(".entry-content, .entry-summary, p").first().html() ?? ""),
       thumbnail: post.find("img").first().attr("src") ?? null,
       fetchedAt,
