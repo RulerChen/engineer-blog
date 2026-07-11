@@ -28,6 +28,10 @@ on:
           - grab
           - atlassian
           - coinbase
+          - openai
+          - anthropic
+          - deepmind
+          - huggingface
 
 concurrency:
   group: data-commits

@@ -30,6 +30,10 @@ export const sourceNames: Record<string, string> = {
   yelp: "Yelp",
   grab: "Grab",
   atlassian: "Atlassian",
+  openai: "OpenAI",
+  anthropic: "Anthropic",
+  deepmind: "Google DeepMind",
+  huggingface: "Hugging Face",
 };
 
 export function sourceName(id: string): string {

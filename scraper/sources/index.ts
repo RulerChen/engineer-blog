@@ -1,11 +1,13 @@
 import type { Source } from "../src/types.js";
 import { airbnb } from "./airbnb.js";
+import { anthropic } from "./anthropic.js";
 import { atlassian } from "./atlassian.js";
 import { booking } from "./booking.js";
 import { canva } from "./canva.js";
 import { cloudflare } from "./cloudflare.js";
 import { coinbase } from "./coinbase.js";
 import { datadog } from "./datadog.js";
+import { deepmind } from "./deepmind.js";
 import { discord } from "./discord.js";
 import { doordash } from "./doordash.js";
 import { dropbox } from "./dropbox.js";
@@ -15,12 +17,14 @@ import { figma } from "./figma.js";
 import { github } from "./github.js";
 import { google } from "./google.js";
 import { grab } from "./grab.js";
+import { huggingface } from "./huggingface.js";
 import { instacart } from "./instacart.js";
 import { linkedin } from "./linkedin.js";
 import { lyft } from "./lyft.js";
 import { meta } from "./meta.js";
 import { netflix } from "./netflix.js";
 import { notion } from "./notion.js";
+import { openai } from "./openai.js";
 import { paypal } from "./paypal.js";
 import { pinterest } from "./pinterest.js";
 import { shopify } from "./shopify.js";
@@ -62,6 +66,10 @@ export const sources: Source[] = [
   yelp,
   grab,
   atlassian,
+  openai,
+  anthropic,
+  deepmind,
+  huggingface,
 ];
 
 export function getSource(id: string): Source | undefined {
