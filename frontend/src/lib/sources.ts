@@ -27,7 +27,6 @@ export const sourceNames: Record<string, string> = {
   grab: "Grab",
   atlassian: "Atlassian",
   openai: "OpenAI",
-  "aws-architecture": "AWS Architecture Blog",
   instagram: "Instagram Engineering",
   janestreet: "Jane Street",
   line: "LINE Engineering",
