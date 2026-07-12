@@ -43,6 +43,7 @@ export const sourceNames: Record<string, string> = {
   line: "LINE Engineering",
   nvidia: "NVIDIA Developer Blog",
   twitch: "Twitch",
+  manual: "Manual",
 };
 
 export function sourceName(id: string): string {
