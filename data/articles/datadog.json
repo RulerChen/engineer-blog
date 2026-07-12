@@ -5,7 +5,9 @@
     "url": "https://www.datadoghq.com/blog/engineering/data-pipeline-completeness",
     "source": "datadog",
     "publishedAt": "2026-07-01T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Learn how Datadog helps ensure data completeness at scale, enabling accurate alerts and safer automated decisions across distributed pipelines.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -15,7 +17,10 @@
     "url": "https://www.datadoghq.com/blog/engineering/ai-assisted-storage-migration",
     "source": "datadog",
     "publishedAt": "2026-06-23T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "networking"
+    ],
     "summary": "Using AI-assisted refactoring, we migrated our live routing brain to a relational model, safely validating changes against live production traffic.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -25,7 +30,12 @@
     "url": "https://www.datadoghq.com/blog/engineering/postgresql-ha-kubernetes",
     "source": "datadog",
     "publishedAt": "2026-06-04T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "infra",
+      "databases",
+      "devops",
+      "data"
+    ],
     "summary": "During a reliability gameday, Datadog engineers discovered that their PostgreSQL clusters couldn’t safely fail over. Here’s how the team redesigned them for high availability using Patroni and synchronous replication.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -35,7 +45,9 @@
     "url": "https://www.datadoghq.com/blog/engineering/scaling-malicious-code-detection",
     "source": "datadog",
     "publishedAt": "2026-06-02T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "By combining stacked LLM evaluations with tool-driven investigation, we scaled malicious code detection from pull requests to dependency packages without sacrificing accuracy or cost control.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -45,7 +57,9 @@
     "url": "https://www.datadoghq.com/blog/engineering/steganography-at-scale",
     "source": "datadog",
     "publishedAt": "2026-04-21T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Learn how we embed widget metadata into screenshots using invisible, resilient watermarks, enabling self-describing visualizations at scale.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -55,7 +69,13 @@
     "url": "https://www.datadoghq.com/blog/engineering/bits-ai-eval-platform",
     "source": "datadog",
     "publishedAt": "2026-04-07T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "ai",
+      "devops",
+      "performance",
+      "data"
+    ],
     "summary": "Find out how we built a scalable evaluation platform for Datadog’s Bits AI SRE agent that replays real incidents, detects regressions, and measures agent performance across production scenarios.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -65,7 +85,11 @@
     "url": "https://www.datadoghq.com/blog/engineering/debugging-postgres-performance",
     "source": "datadog",
     "publishedAt": "2026-03-23T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "performance",
+      "data"
+    ],
     "summary": "When a high-volume upsert doubled disk writes, Datadog engineers traced the issue to Postgres WAL behavior and rewrote the query to eliminate hidden costs.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -75,7 +99,11 @@
     "url": "https://www.datadoghq.com/blog/engineering/stopping-hackerbot-claw-with-bewaire",
     "source": "datadog",
     "publishedAt": "2026-03-09T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "open-source",
+      "data"
+    ],
     "summary": "Learn how Datadog detected and resolved issues from hackerbot-claw, an AI-powered automated attack campaign.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -85,7 +113,9 @@
     "url": "https://www.datadoghq.com/blog/engineering/mcp-server-agent-tools",
     "source": "datadog",
     "publishedAt": "2026-03-04T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "We share lessons learned building Datadog’s MCP server, from designing agent-friendly tools and managing context windows to using queries instead of raw data retrieval.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -95,7 +125,9 @@
     "url": "https://www.datadoghq.com/blog/engineering/agent-go-binaries",
     "source": "datadog",
     "publishedAt": "2026-02-18T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Get an inside look at shrinking large Go binaries in the Datadog Agent through dependency and linker analysis.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -105,7 +137,11 @@
     "url": "https://www.datadoghq.com/blog/engineering/ebpf-workload-protection-lessons",
     "source": "datadog",
     "publishedAt": "2026-01-07T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "security",
+      "testing",
+      "data"
+    ],
     "summary": "Learn field-tested lessons for eBPF-powered workload protection.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -115,7 +151,10 @@
     "url": "https://www.datadoghq.com/blog/engineering/workload-protection-ebpf-fim",
     "source": "datadog",
     "publishedAt": "2025-11-18T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "observability",
+      "data"
+    ],
     "summary": "Learn how Datadog scaled eBPF-powered file monitoring to handle more than 10 billion kernel events per minute while preserving full detection coverage.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -125,7 +164,10 @@
     "url": "https://www.datadoghq.com/blog/engineering/cdc-replication-search",
     "source": "datadog",
     "publishedAt": "2025-11-04T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "performance",
+      "data"
+    ],
     "summary": "Discover how Datadog engineered a scalable Change Data Capture (CDC) platform to replicate data across systems in near real time—reducing search latency by 87%, increasing availability, and powering diverse, multi-tenant use cases across the company.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -135,7 +177,11 @@
     "url": "https://www.datadoghq.com/blog/engineering/malicious-pull-requests",
     "source": "datadog",
     "publishedAt": "2025-10-21T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "security",
+      "data"
+    ],
     "summary": "Learn how Datadog’s SDLC Security team built an LLM-powered system to detect malicious pull requests at scale—without sacrificing developer velocity.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -145,7 +191,10 @@
     "url": "https://www.datadoghq.com/blog/engineering/rethinking-reliability",
     "source": "datadog",
     "publishedAt": "2025-10-15T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "devops",
+      "data"
+    ],
     "summary": "After a major outage, we re-architected Datadog systems to degrade gracefully under failure. Here’s what we learned—and how we’re building forward.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -165,7 +214,10 @@
     "url": "https://www.datadoghq.com/blog/engineering/self-optimizing-system",
     "source": "datadog",
     "publishedAt": "2025-09-18T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "performance"
+    ],
     "summary": "Learn how we turned hot-path optimizations into a system for continuous, AI-assisted performance improvements and saved thousands of cores in the process.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -175,7 +227,12 @@
     "url": "https://www.datadoghq.com/blog/engineering/scaling-process-pipeline-efficiency",
     "source": "datadog",
     "publishedAt": "2025-08-12T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "infra",
+      "observability",
+      "networking",
+      "data"
+    ],
     "summary": "We re-architected the real-time data pipeline for Datadog’s Processes and Containers views—cutting traffic by 100x and infrastructure use by 98%. This post explores the system challenges, architectural changes, and their impact.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -185,7 +242,10 @@
     "url": "https://www.datadoghq.com/blog/engineering/rust-timeseries-engine",
     "source": "datadog",
     "publishedAt": "2025-08-04T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "observability",
+      "performance"
+    ],
     "summary": "Discover how we reengineered our metrics storage engine for massive scale with Rust, a shard-per-core model, and real-time performance.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -195,7 +255,10 @@
     "url": "https://www.datadoghq.com/blog/engineering/go-swiss-tables",
     "source": "datadog",
     "publishedAt": "2025-07-17T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "networking",
+      "performance"
+    ],
     "summary": "Go 1.24’s Swiss Tables cut our map memory usage by up to 70% in high-traffic workloads. Here’s how we profiled the savings and improved performance.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -205,7 +268,9 @@
     "url": "https://www.datadoghq.com/blog/engineering/go-memory-regression",
     "source": "datadog",
     "publishedAt": "2025-07-17T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "observability"
+    ],
     "summary": "We rolled out Go 1.24 and saw a memory regression. Here’s how we dug into system metrics, uncovered a bug in the runtime allocator, and worked with the Go team to help fix it.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -215,7 +280,10 @@
     "url": "https://www.datadoghq.com/blog/engineering/noise-suppression-library",
     "source": "datadog",
     "publishedAt": "2025-06-24T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "open-source",
+      "performance"
+    ],
     "summary": "Learn how we implemented and open-sourced a noise filter for real-time audio chat without compromising performance. Better yet, try the demo and add it to your own project today.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -225,7 +293,10 @@
     "url": "https://www.datadoghq.com/blog/engineering/reliable-log-delivery",
     "source": "datadog",
     "publishedAt": "2025-06-23T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "performance",
+      "data"
+    ],
     "summary": "Learn how we built Datadog’s Log Forwarding system for low-latency, high-throughput delivery to thousands of unreliable third-party endpoints.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -235,7 +306,11 @@
     "url": "https://www.datadoghq.com/blog/engineering/scaling-config-delivery-containers",
     "source": "datadog",
     "publishedAt": "2025-06-17T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "infra",
+      "performance",
+      "data"
+    ],
     "summary": "Learn how Datadog engineered a highly reliable, low-latency system to distribute per-tenant configuration data across thousands of containers, enabling real-time log processing at scale.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -245,7 +320,10 @@
     "url": "https://www.datadoghq.com/blog/engineering/unwinding-shared-database",
     "source": "datadog",
     "publishedAt": "2025-06-17T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "data"
+    ],
     "summary": "Learn how Datadog is breaking up a shared production database at scale—defining clear ownership boundaries, minimizing migration risk, and building the tooling to make decoupling safe, automated, and sustainable.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -255,7 +333,10 @@
     "url": "https://www.datadoghq.com/blog/engineering/detecting-faulty-deployments",
     "source": "datadog",
     "publishedAt": "2025-06-03T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "devops",
+      "data"
+    ],
     "summary": "Learn how we developed Datadog Automatic Faulty Deployment Detection and improved precision, recall, and time to detection along the way.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -265,7 +346,10 @@
     "url": "https://www.datadoghq.com/blog/engineering/datadog-lambda-extension-rust",
     "source": "datadog",
     "publishedAt": "2025-04-09T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "observability",
+      "data"
+    ],
     "summary": "Learn how we rewrote the Datadog Lambda Extension in Rust, cutting cold starts by 82 percent, shrinking the binary 87 percent, and slashing memory use without sacrificing observability.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -275,7 +359,12 @@
     "url": "https://www.datadoghq.com/blog/engineering/streaming-platform-kafka-custom-abstractions",
     "source": "datadog",
     "publishedAt": "2025-02-19T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "devops",
+      "video",
+      "data",
+      "infra"
+    ],
     "summary": "Learn how we built the Streaming Platform at Datadog to provide more resilience and flexibility to our Kafka infrastructure.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -285,7 +374,9 @@
     "url": "https://www.datadoghq.com/blog/engineering/husky-storage-compaction",
     "source": "datadog",
     "publishedAt": "2025-01-29T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "A deep dive into Husky’s underlying data storage and compaction system.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -295,7 +386,9 @@
     "url": "https://www.datadoghq.com/blog/engineering/unraveling-a-postgres-segfault",
     "source": "datadog",
     "publishedAt": "2025-01-15T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases"
+    ],
     "summary": "Learn how an unassuming Postgres error led us to discover a bug in Postgres for Arm.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -315,7 +408,10 @@
     "url": "https://www.datadoghq.com/blog/engineering/formal-modeling-and-simulation",
     "source": "datadog",
     "publishedAt": "2024-11-20T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "testing",
+      "architecture"
+    ],
     "summary": "Learn how we used formal modeling and simulation to analyze a distributed, multi-tenant queueing system.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -325,7 +421,10 @@
     "url": "https://www.datadoghq.com/blog/engineering/ruby-test-impact-analysis",
     "source": "datadog",
     "publishedAt": "2024-11-01T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "observability",
+      "testing"
+    ],
     "summary": "Learn how we built a test impact analysis library in Ruby, the challenges we faced, the solutions we found, and what we discovered about tracing the Ruby VM.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -335,7 +434,10 @@
     "url": "https://www.datadoghq.com/blog/engineering/llms-for-postmortems",
     "source": "datadog",
     "publishedAt": "2024-09-23T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "performance"
+    ],
     "summary": "Learn about the challenges and solutions we discovered while using LLMs to automate writing postmortems.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -345,7 +447,9 @@
     "url": "https://www.datadoghq.com/blog/engineering/timeseries-indexing-at-scale",
     "source": "datadog",
     "publishedAt": "2024-06-28T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Learn how we implemented a new timeseries indexing strategy when the amount of data we ingested increased significantly.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -355,7 +459,9 @@
     "url": "https://www.datadoghq.com/blog/engineering/how-we-migrated-our-static-analyzer-from-java-to-rust",
     "source": "datadog",
     "publishedAt": "2024-05-23T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "performance"
+    ],
     "summary": "Learn how we enhanced our static analyzer by migrating from Java to Rust, tripling performance improvements and a 10x reduction in memory usage.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -365,7 +471,11 @@
     "url": "https://www.datadoghq.com/blog/engineering/engineering-vp-spotlight-ivo-dimitrov",
     "source": "datadog",
     "publishedAt": "2024-05-21T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "career",
+      "data",
+      "backend"
+    ],
     "summary": "In this interview, Ivo Dimitrov, Distributed Data Systems VP of Engineering, describes the engineering career that led him to Datadog and his committment to helping build out our core backend platforms.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -385,7 +495,9 @@
     "url": "https://www.datadoghq.com/blog/engineering/how-we-built-the-datadog-heatmap-to-visualize-distributions-over-time-at-arbitrary-scale",
     "source": "datadog",
     "publishedAt": "2024-05-01T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Learn how we used DDSketch to enhance our heatmap visualizations, allowing us to represent and analyze high cardinality data distributions at scale.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -395,7 +507,11 @@
     "url": "https://www.datadoghq.com/blog/engineering/how-we-brought-datadog-data-visualization-to-ios-performance",
     "source": "datadog",
     "publishedAt": "2024-04-18T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "performance",
+      "data"
+    ],
     "summary": "Learn how we built an internal graphing library to support data visualization in iOS using Swift and SwiftUI.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -415,7 +531,12 @@
     "url": "https://www.datadoghq.com/blog/engineering/engineering-spotlight-marie-laure-bardonnet-part-2",
     "source": "datadog",
     "publishedAt": "2024-03-26T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "career",
+      "data",
+      "frontend",
+      "backend"
+    ],
     "summary": "In this interview, Marie-Laure Bardonnet, Log Management Senior Engineering Manager, describes the journey of learning, growing, and scaling a team of 4 backend engineers to over 30 frontend and backend engineers at Datadog.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -425,7 +546,9 @@
     "url": "https://www.datadoghq.com/blog/engineering/how-we-use-vale-to-improve-our-documentation-editing-process",
     "source": "datadog",
     "publishedAt": "2024-02-14T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Learn how Datadog’s Documentation team uses a linter to shift quality left.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -455,7 +578,10 @@
     "url": "https://www.datadoghq.com/blog/engineering/crunchconf-talk-self-serve-analytics",
     "source": "datadog",
     "publishedAt": "2023-12-21T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "video",
+      "data"
+    ],
     "summary": "In this video, Jean-Mathieu Saponaro, Data & Analytics Senior Engineering Manager, describes the journey of leading, growing, and scaling self-serve analytics within Datadog.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -475,7 +601,12 @@
     "url": "https://www.datadoghq.com/blog/engineering/migrating-acceptance-tests-to-synthetic-monitoring",
     "source": "datadog",
     "publishedAt": "2023-06-30T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "observability",
+      "testing",
+      "data",
+      "frontend"
+    ],
     "summary": "How Datadog’s Frontend DevX team migrated a codebase from flaky, hard-to-maintain acceptance testing with Puppeteer to more robust Synthetic tests.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -505,7 +636,10 @@
     "url": "https://www.datadoghq.com/blog/engineering/not-just-another-network-latency-issue",
     "source": "datadog",
     "publishedAt": "2023-05-26T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "networking",
+      "performance"
+    ],
     "summary": "Learn how we tackled a case of high network-latency in our usage estimation platform that required a multi-layered solution.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -525,7 +659,9 @@
     "url": "https://www.datadoghq.com/blog/engineering/making-fetch-happen-building-a-general-purpose-query-and-render-scheduler",
     "source": "datadog",
     "publishedAt": "2023-04-17T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Learn how we developed a new scheduling algorithm for data fetching and rendering and how we built it for use across our suite of Datadog products.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -535,7 +671,9 @@
     "url": "https://www.datadoghq.com/blog/engineering/husky-deep-dive",
     "source": "datadog",
     "publishedAt": "2023-02-22T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "A closer look at storage routing in Husky, Datadog’s third-generation event storage system.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -545,7 +683,11 @@
     "url": "https://www.datadoghq.com/blog/engineering/performance-improvements-in-the-datadog-agent-metrics-pipeline",
     "source": "datadog",
     "publishedAt": "2023-01-31T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "observability",
+      "performance",
+      "data"
+    ],
     "summary": "We’ve recently improved the raw performance of the Datadog Agent, leading to 20% less CPU use on Agents flooded with custom metrics.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -555,7 +697,10 @@
     "url": "https://www.datadoghq.com/blog/engineering/druids-the-design-system-that-powers-datadog",
     "source": "datadog",
     "publishedAt": "2022-09-29T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data",
+      "frontend"
+    ],
     "summary": "Learn about Datadog’s repeatable design elements that we’ve documented in our design style guide called DRUIDS.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -575,7 +720,9 @@
     "url": "https://www.datadoghq.com/blog/engineering/introducing-husky",
     "source": "datadog",
     "publishedAt": "2022-05-17T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Husky is an unbundled, distributed, schemaless, vectorized column store. Here’s how we built it—and why.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -585,7 +732,11 @@
     "url": "https://www.datadoghq.com/blog/engineering/how-datadogs-it-team-automated-account-inactivity-and-saas-spend-management",
     "source": "datadog",
     "publishedAt": "2022-05-12T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "observability",
+      "performance",
+      "data"
+    ],
     "summary": "Employees at all modern software companies use a ton of outside pieces of software to do their jobs. Learn how Datadog’s IT team expanded Clarity to automate monitoring these accounts for inactivity and optimizing how much we spend on them.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -595,7 +746,11 @@
     "url": "https://www.datadoghq.com/blog/engineering/grpc-dns-and-load-balancing-incident",
     "source": "datadog",
     "publishedAt": "2022-04-13T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "infra",
+      "cloud",
+      "networking"
+    ],
     "summary": "The story of a seemingly simple issue that led us into the hidden complexities of gRPC, DNS, and Kubernetes.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -605,7 +760,11 @@
     "url": "https://www.datadoghq.com/blog/engineering/dirty-pipe-container-escape-poc",
     "source": "datadog",
     "publishedAt": "2022-03-25T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "infra",
+      "security",
+      "data"
+    ],
     "summary": "See Datadog’s proof of concept exploit for breaking out from unprivileged containers using the Dirty Pipe vulnerability.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -625,7 +784,9 @@
     "url": "https://www.datadoghq.com/blog/engineering/how-datadog-uses-datadog-to-gain-visibility-into-the-datadog-user-experience",
     "source": "datadog",
     "publishedAt": "2022-02-22T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "How the Datadog DesignOps team uses Datadog to understand our users and make well-informed design decisions",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -635,7 +796,11 @@
     "url": "https://www.datadoghq.com/blog/engineering/our-journey-taking-kubernetes-state-metrics-to-the-next-level",
     "source": "datadog",
     "publishedAt": "2021-10-15T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "infra",
+      "observability",
+      "open-source"
+    ],
     "summary": "Our story of contributing to kube-state-metrics, a popular open source Kubernetes service.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -645,7 +810,10 @@
     "url": "https://www.datadoghq.com/blog/engineering/how-we-optimized-our-akka-application-using-datadogs-continuous-profiler",
     "source": "datadog",
     "publishedAt": "2021-09-30T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "performance",
+      "data"
+    ],
     "summary": "We identified a performance issue caused by the `ForkJoinPool` in our Java application based on the Akka framework. This is how we solved our issue.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -655,7 +823,11 @@
     "url": "https://www.datadoghq.com/blog/engineering/how-datadogs-it-team-automated-monitoring-third-party-accounts",
     "source": "datadog",
     "publishedAt": "2021-04-30T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "security",
+      "observability",
+      "data"
+    ],
     "summary": "Employees at all modern software companies use a ton of outside pieces of software to do their jobs. Learn how Datadog’s IT team built a tool to automate monitoring these accounts for security and compliance.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -665,7 +837,10 @@
     "url": "https://www.datadoghq.com/blog/engineering/moving-a-jobsystem-to-kubernetes",
     "source": "datadog",
     "publishedAt": "2021-02-22T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "infra",
+      "performance"
+    ],
     "summary": "Solving performance problems when moving an application to Kubernetes",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -685,7 +860,10 @@
     "url": "https://www.datadoghq.com/blog/engineering/php-8-observability-baked-right-in",
     "source": "datadog",
     "publishedAt": "2021-02-02T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "observability",
+      "backend"
+    ],
     "summary": "What the observer API means for PHP 8 and the future of observability",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -715,7 +893,9 @@
     "url": "https://www.datadoghq.com/blog/engineering/using-datadog-to-monitor-my-sailboat",
     "source": "datadog",
     "publishedAt": "2020-09-23T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "How I used Datadog to become a better sailor.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -735,7 +915,11 @@
     "url": "https://www.datadoghq.com/blog/engineering/secure-publication-of-datadog-agent-integrations-with-tuf-and-in-toto",
     "source": "datadog",
     "publishedAt": "2019-06-03T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "security",
+      "devops",
+      "data"
+    ],
     "summary": "How to guarantee end-to-end security when using automation to package and publish Datadog Agent integrations",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -745,7 +929,9 @@
     "url": "https://www.datadoghq.com/blog/engineering/highly-reliable-data-pipelines",
     "source": "datadog",
     "publishedAt": "2019-04-02T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "A look at how Datadog builds and operates data pipelines reliably at scale.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -755,7 +941,10 @@
     "url": "https://www.datadoghq.com/blog/engineering/rethinking-ux-for-ai-driven-alerting",
     "source": "datadog",
     "publishedAt": "2019-01-22T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "frontend"
+    ],
     "summary": "The introduction of advanced statistical methods is reshaping the UX of alerts",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -765,7 +954,10 @@
     "url": "https://www.datadoghq.com/blog/engineering/improving-trust-with-datadog-log-management",
     "source": "datadog",
     "publishedAt": "2018-11-01T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "observability",
+      "data"
+    ],
     "summary": "Integrating Amazon Simple Email Service with Datadog to improve observability.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -785,7 +977,10 @@
     "url": "https://www.datadoghq.com/blog/engineering/using-datadog-apm-to-find-bottlenecks-and-performance-benchmarking",
     "source": "datadog",
     "publishedAt": "2018-04-24T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "performance",
+      "data"
+    ],
     "summary": "Using Datadog to find performance bottlenecks, and contrasting tentative solutions using performance benchmarks.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -795,7 +990,9 @@
     "url": "https://www.datadoghq.com/blog/engineering/cgo-and-python",
     "source": "datadog",
     "publishedAt": "2018-04-16T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "How the new Datadog Agent written in Go runs Python checks.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -805,7 +1002,9 @@
     "url": "https://www.datadoghq.com/blog/engineering/what-product-designers-can-learn-from-explanatory-journalism",
     "source": "datadog",
     "publishedAt": "2018-03-23T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "product"
+    ],
     "summary": "How to be a better designer by being a better explainer.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -815,7 +1014,10 @@
     "url": "https://www.datadoghq.com/blog/engineering/secure-aws-account-iam-setup",
     "source": "datadog",
     "publishedAt": "2017-09-20T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "cloud",
+      "infra"
+    ],
     "summary": "If you are part of the team managing the AWS infrastructure at your organization, you’ve likely had to wrestle with the complexity of managing multiple accounts for some time now.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -825,7 +1027,9 @@
     "url": "https://www.datadoghq.com/blog/engineering/robust-statistical-distances-for-machine-learning",
     "source": "datadog",
     "publishedAt": "2017-09-06T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ml"
+    ],
     "summary": "Designing powerful outlier and anomaly detection algorithms requires using the right tools. Discover how robust statistical distances can help.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -835,7 +1039,9 @@
     "url": "https://www.datadoghq.com/blog/engineering/scaling-support-with-vagrant-terraform",
     "source": "datadog",
     "publishedAt": "2017-08-23T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "The Datadog Solutions Team reproduces problems that customers run into while they try using our many integrations in their own, always-unique environments.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -845,7 +1051,12 @@
     "url": "https://www.datadoghq.com/blog/engineering/improving-cloud-security-with-chatops",
     "source": "datadog",
     "publishedAt": "2017-08-15T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "security",
+      "observability",
+      "cloud",
+      "data"
+    ],
     "summary": "Highlights of our recent work to improve our cloud-based monitoring and alerting pipeline.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -855,7 +1066,9 @@
     "url": "https://www.datadoghq.com/blog/engineering/piecewise-regression",
     "source": "datadog",
     "publishedAt": "2017-07-11T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "A piecewise regression can model multiple trends in a single data set. Learn how Datadog automates piecewise regression on our timeseries data.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -865,7 +1078,11 @@
     "url": "https://www.datadoghq.com/blog/engineering/hackathon-project-viewing-datadog-metrics-in-minecraft",
     "source": "datadog",
     "publishedAt": "2017-06-15T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "observability",
+      "data",
+      "infra"
+    ],
     "summary": "At Datadog we see and gather metrics everywhere by using Datadog to monitor our applications and infrastructure. So our team thought it’d be fun to come up with creative solutions to “where can we display metrics?”",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -875,7 +1092,11 @@
     "url": "https://www.datadoghq.com/blog/engineering/protobuf-parsing-in-python",
     "source": "datadog",
     "publishedAt": "2017-06-08T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "infra",
+      "observability",
+      "data"
+    ],
     "summary": "Recently we extended the Datadog Agent to support extracting additional metrics from Kubernetes using the kube-state-metrics via protobufs.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -885,7 +1106,9 @@
     "url": "https://www.datadoghq.com/blog/engineering/being-a-solutions-engineer-at-datadog",
     "source": "datadog",
     "publishedAt": "2017-05-17T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Solutions Engineers at Datadog have to stay on top of what’s going on within the company and outside.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -905,7 +1128,9 @@
     "url": "https://www.datadoghq.com/blog/engineering/engineering-spotlight-marie-laure-bardonnet",
     "source": "datadog",
     "publishedAt": "2017-01-17T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "It might surprise you to learn who built most of the prototype of the newest Datadog feature. Read more about Marie-Laure and her internship at Datadog.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -915,7 +1140,9 @@
     "url": "https://www.datadoghq.com/blog/engineering/redux-doghouse-reusable-react-redux-components-through-scoping",
     "source": "datadog",
     "publishedAt": "2016-11-14T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "frontend"
+    ],
     "summary": "Today, we’re open-sourcing Redux-Doghouse, a library for Redux that helps you scope components so that they can be reused multiple times in multiple contexts without conflicting with one another.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -925,7 +1152,10 @@
     "url": "https://www.datadoghq.com/blog/engineering/cheering-on-coworkers-building-culture-with-datadog-dashboards",
     "source": "datadog",
     "publishedAt": "2016-10-27T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "culture",
+      "data"
+    ],
     "summary": "One of our colleagues, Christian, is participating in a tremendous 6-day-run challenge. Yes, you read that right, he will run around 850km (528 miles) over 6 days. As we like to graph everything, we thought it would be fun to cheer him on remotely and follow his progress in this crazy race via a…",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -945,7 +1175,9 @@
     "url": "https://www.datadoghq.com/blog/engineering/consul-at-datadog",
     "source": "datadog",
     "publishedAt": "2016-08-11T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "We’ve been using Consul for about 18 months at Datadog and it’s an important part of our production stack. In this post we will discuss some of the lessons we have learned.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   },
@@ -955,7 +1187,9 @@
     "url": "https://www.datadoghq.com/blog/engineering/releasing-czlib-and-zstd-go-bindings",
     "source": "datadog",
     "publishedAt": "2016-07-11T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "To commemorate the third annual GopherCon US in Denver this week, we’re releasing cgo bindings to two compression libraries that we’ve been using in production at Datadog for a while now: czlib and zstd.",
     "fetchedAt": "2026-07-11T13:24:16.736Z"
   }

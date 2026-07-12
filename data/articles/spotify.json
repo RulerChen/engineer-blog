@@ -139,7 +139,9 @@
     "url": "https://engineering.atspotify.com/2025/12/feedback-loops-background-coding-agents-part-3",
     "source": "spotify",
     "publishedAt": "2025-12-08T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "The system we built to ensure our AI agents produce predictable, trustworthy code.",
     "fetchedAt": "2026-07-11T12:18:30.363Z"
   },

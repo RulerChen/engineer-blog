@@ -70,6 +70,7 @@ export function parseSpotifyArchivePage(html: string, pageUrl: string): ArchiveP
     const publishedAt =
       dateText && !Number.isNaN(Date.parse(dateText)) ? new Date(dateText).toISOString() : "";
 
+    const summary = summarize(post.find(`.${prefix}__description`).first().text().trim());
     articles.push({
       id: articleId(absolute),
       title,
@@ -83,8 +84,9 @@ export function parseSpotifyArchivePage(html: string, pageUrl: string): ArchiveP
           .get()
           .filter(Boolean),
         "spotify",
+        `${title} ${summary}`,
       ),
-      summary: summarize(post.find(`.${prefix}__description`).first().text().trim()),
+      summary,
       fetchedAt,
     });
   });

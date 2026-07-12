@@ -19,7 +19,10 @@
     "url": "https://netflixtechblog.com/toward-more-controllable-ai-video-editing-an-early-research-exploration-at-netflix-eb8160ed60a2?source=rss----2615bd06b42e---4",
     "source": "netflix",
     "publishedAt": "2026-06-23T00:31:01.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "video"
+    ],
     "summary": "",
     "fetchedAt": "2026-07-11T03:03:47.968Z"
   },

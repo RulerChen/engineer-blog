@@ -81,17 +81,20 @@ export function parseCoinbaseArchivePage(html: string, pageUrl: string): Archive
           ? new Date(item.publicationDate).toISOString()
           : "";
 
+      const title = item.title.trim();
+      const summary = summarize(extractText(item.content.excerpt));
       return {
         id: articleId(absolute),
-        title: item.title.trim(),
+        title,
         url: normalizeUrl(absolute),
         source: "coinbase",
         publishedAt,
         tags: resolveTags(
           (item.content.tags ?? []).map((tag) => tag.name),
           "coinbase",
+          `${title} ${summary}`,
         ),
-        summary: summarize(extractText(item.content.excerpt)),
+        summary,
         fetchedAt,
       };
     });

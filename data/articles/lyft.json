@@ -68,7 +68,10 @@
     "url": "https://eng.lyft.com/beyond-a-b-testing-using-surrogacy-and-region-splits-to-measure-long-term-effects-in-marketplaces-9cb06d628f2d?source=rss----25cd379abb8---4",
     "source": "lyft",
     "publishedAt": "2026-03-25T13:56:39.000Z",
-    "tags": [],
+    "tags": [
+      "experimentation",
+      "testing"
+    ],
     "summary": "",
     "fetchedAt": "2026-07-11T13:37:31.416Z"
   },

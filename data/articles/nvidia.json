@@ -5,7 +5,10 @@
     "url": "https://developer.nvidia.com/blog/reducing-high-bandwidth-memory-bottlenecks-in-jax-based-llm-training-with-host-offloading",
     "source": "nvidia",
     "publishedAt": "2026-07-10T18:17:40.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "performance"
+    ],
     "summary": "Large language model (LLM) training workloads increasingly run into GPU memory limits before compute is fully used. Model weights, gradients, optimizer states,... Large language model (LLM) training workloads increasingly run into GPU memory limits before compute is fully used. Model weights,…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -15,7 +18,10 @@
     "url": "https://developer.nvidia.com/blog/kernel-fusion-in-nvidia-cuda-optimizing-memory-traffic-and-launch-overhead",
     "source": "nvidia",
     "publishedAt": "2026-07-10T16:41:03.000Z",
-    "tags": [],
+    "tags": [
+      "networking",
+      "performance"
+    ],
     "summary": "There are many ways to optimize code for GPUs. In this post, you’ll learn how kernel fusion can improve memory bandwidth and reduce kernel launch overhead,... There are many ways to optimize code for GPUs. In this post, you’ll learn how kernel fusion can improve memory bandwidth and reduce kernel…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -25,7 +31,11 @@
     "url": "https://developer.nvidia.com/blog/ai-model-co-design-hardware-friendly-llm-design",
     "source": "nvidia",
     "publishedAt": "2026-07-10T16:36:02.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "devops",
+      "performance"
+    ],
     "summary": "AI performance comes down to three dimensions: Accuracy: How well the model reasons and produces outputs Throughput: How many tokens per second a... AI performance comes down to three dimensions: Deployments must balance all three: High accuracy is wasted if responses are slow, and raw throughput…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -35,7 +45,9 @@
     "url": "https://developer.nvidia.com/blog/accelerating-end-to-end-co-folding-performance-with-nvidia-bionemo-agent-toolkit",
     "source": "nvidia",
     "publishedAt": "2026-07-10T13:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "performance"
+    ],
     "summary": "Biomolecular structure prediction and co-folding with models like OpenFold3 are now mainstream, large-scale workloads powering drug discovery and protein... Biomolecular structure prediction and co-folding with models like OpenFold3 are now mainstream, large-scale workloads powering drug discovery…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -45,7 +57,10 @@
     "url": "https://developer.nvidia.com/blog/synthetic-data-generation-for-financial-ai-research-with-nvidia-nemo",
     "source": "nvidia",
     "publishedAt": "2026-07-09T19:40:37.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "data"
+    ],
     "summary": "Fine-tuning LLMs for financial natural language processing (NLP) is constrained by limited, imbalanced data. Real-world financial news overrepresents earnings... Fine-tuning LLMs for financial natural language processing (NLP) is constrained by limited, imbalanced data. Real-world financial news…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -55,7 +70,9 @@
     "url": "https://developer.nvidia.com/blog/a-practical-guide-to-gpu-initiated-communication-for-molecular-dynamics-at-scale",
     "source": "nvidia",
     "publishedAt": "2026-07-09T17:15:04.000Z",
-    "tags": [],
+    "tags": [
+      "observability"
+    ],
     "summary": "Molecular dynamics (MD) simulations are among the most demanding workloads in computational science. Using them, researchers can observe atomic behavior in... Source",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -65,7 +82,9 @@
     "url": "https://developer.nvidia.com/blog/create-a-langchain-deep-agents-harness-profile-for-nvidia-nemotron-3-ultra-to-improve-performance",
     "source": "nvidia",
     "publishedAt": "2026-07-08T18:17:59.000Z",
-    "tags": [],
+    "tags": [
+      "performance"
+    ],
     "summary": "Agentic systems often face a trade-off between accuracy and cost. The highest-performing proprietary frontier models and harnesses provide top accuracy but are... Agentic systems often face a trade-off between accuracy and cost. The highest-performing proprietary frontier models and harnesses…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -75,7 +94,12 @@
     "url": "https://developer.nvidia.com/blog/running-low-latency-analytical-workloads-with-gpu-accelerated-presto-on-nvidia-gb200-nvl72",
     "source": "nvidia",
     "publishedAt": "2026-07-08T16:05:25.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "open-source",
+      "performance",
+      "data"
+    ],
     "summary": "Presto is an open source, distributed SQL engine for running fast, interactive queries on very large datasets. On NVIDIA GPUs, Presto delivers peak performance... Presto is an open source, distributed SQL engine for running fast, interactive queries on very large datasets. On NVIDIA GPUs, Presto…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -85,7 +109,9 @@
     "url": "https://developer.nvidia.com/blog/nvidia-vera-cpu-boosts-ai-factory-throughput-to-accelerate-agentic-workloads",
     "source": "nvidia",
     "publishedAt": "2026-07-07T18:10:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "Agentic systems turn model reasoning into action through multi-step workflows that combine inference, tool use, code execution, retrieval, orchestration, and... Agentic systems turn model reasoning into action through multi-step workflows that combine inference, tool use, code execution, retrieval,…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -105,7 +131,9 @@
     "url": "https://developer.nvidia.com/blog/maximize-spectral-efficiency-with-ai-native-ran-and-nvidia-ai-aerial",
     "source": "nvidia",
     "publishedAt": "2026-07-07T17:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "Spectrum is one of the most valuable assets in wireless communications. Over the last 30 years, telecom operators in the US have spent more than $240B to... Spectrum is one of the most valuable assets in wireless communications. Over the last 30 years, telecom operators in the US have spent more…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -115,7 +143,9 @@
     "url": "https://developer.nvidia.com/blog/building-an-analysis-ai-agent-for-industrial-alarm-management-with-nvidia-nemotron",
     "source": "nvidia",
     "publishedAt": "2026-07-07T17:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "Industrial machinery generates more alarms than technicians can triage. For each important alarm requiring follow-up, the technician pulls historical context,... Industrial machinery generates more alarms than technicians can triage. For each important alarm requiring follow-up, the technician…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -125,7 +155,10 @@
     "url": "https://developer.nvidia.com/blog/enhancing-goodput-in-large-scale-llm-training-with-nonuniform-tensor-parallelism",
     "source": "nvidia",
     "publishedAt": "2026-07-06T21:44:23.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "infra"
+    ],
     "summary": "Training LLMs at massive scale brings unique infrastructure challenges, especially as jobs span thousands of GPUs and run for extended periods. The longer these... Training LLMs at massive scale brings unique infrastructure challenges, especially as jobs span thousands of GPUs and run for extended…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -135,7 +168,10 @@
     "url": "https://developer.nvidia.com/blog/hardware-rooted-ai-security-that-wont-slow-you-down",
     "source": "nvidia",
     "publishedAt": "2026-07-02T21:25:42.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "security"
+    ],
     "summary": "AI has transformed how organizations operate, driving unprecedented levels of productivity and innovation. However, AI adoption can be impeded by concerns... AI has transformed how organizations operate, driving unprecedented levels of productivity and innovation. However, AI adoption can be…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -145,7 +181,9 @@
     "url": "https://developer.nvidia.com/blog/mastering-agentic-techniques-ai-agent-reinforcement-learning",
     "source": "nvidia",
     "publishedAt": "2026-07-01T17:04:02.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "Reinforcement learning (RL) is central to aligning language models, from reinforcement learning with human feedback (RLHF) within AI assistants to newer... Reinforcement learning (RL) is central to aligning language models, from reinforcement learning with human feedback (RLHF) within AI assistants…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -165,7 +203,11 @@
     "url": "https://developer.nvidia.com/blog/optimizing-a-neural-reconstruction-pipeline-using-nvidia-nsight-developer-tools",
     "source": "nvidia",
     "publishedAt": "2026-06-30T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ml",
+      "performance",
+      "data"
+    ],
     "summary": "NVIDIA Omniverse NuRec is a neural reconstruction pipeline for building high-fidelity 3D representations of real-world environments from multisensor data such... NVIDIA Omniverse NuRec is a neural reconstruction pipeline for building high-fidelity 3D representations of real-world environments from…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -175,7 +217,10 @@
     "url": "https://developer.nvidia.com/blog/how-to-govern-autonomous-agents-in-enterprise-ai-factories",
     "source": "nvidia",
     "publishedAt": "2026-06-29T15:50:13.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "testing"
+    ],
     "summary": "AI agents are quickly moving beyond chat. They inspect code, run tests, read documents, search knowledge bases, query internal systems, and operate for hours on... AI agents are quickly moving beyond chat. They inspect code, run tests, read documents, search knowledge bases, query internal systems,…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -185,7 +230,12 @@
     "url": "https://developer.nvidia.com/blog/deploy-a-production-ready-nvidia-ai-q-blueprint-on-oracle-cloud-infrastructure",
     "source": "nvidia",
     "publishedAt": "2026-06-26T19:00:45.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "devops",
+      "cloud",
+      "infra"
+    ],
     "summary": "AI agents have changed a lot in the last two years. The first could only answer one question at a time. Then came multi-turn chat, where the model could keep... AI agents have changed a lot in the last two years. The first could only answer one question at a time. Then came multi-turn chat, where…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -195,7 +245,9 @@
     "url": "https://developer.nvidia.com/blog/creating-the-nvidia-nemotron-3-ultra-nvfp4-checkpoint-with-nvidia-model-optimizer",
     "source": "nvidia",
     "publishedAt": "2026-06-26T16:00:35.000Z",
-    "tags": [],
+    "tags": [
+      "performance"
+    ],
     "summary": "As context windows grow longer, moving large model weights efficiently becomes critical to performance. A common way to address this is quantization, an... As context windows grow longer, moving large model weights efficiently becomes critical to performance. A common way to address this is…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -205,7 +257,9 @@
     "url": "https://developer.nvidia.com/blog/streamlining-resource-binding-with-end-to-end-support-for-vulkan-descriptor-heaps",
     "source": "nvidia",
     "publishedAt": "2026-06-25T22:25:51.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Shaders are GPU programs that process visual data—such as rays, pixels, geometry, and textures—to produce specific rendering effects. Shaders find necessary... Shaders are GPU programs that process visual data—such as rays, pixels, geometry, and textures—to produce specific rendering effects.…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -215,7 +269,11 @@
     "url": "https://developer.nvidia.com/blog/scaling-ai-inference-across-multiple-gpus-using-nvidia-tensorrt-with-multi-device-inference-support",
     "source": "nvidia",
     "publishedAt": "2026-06-25T16:43:48.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "video",
+      "data"
+    ],
     "summary": "Generative AI workloads are rapidly outgrowing the memory and compute budget of single GPUs. For inference developers building media generation pipelines, the... Generative AI workloads are rapidly outgrowing the memory and compute budget of single GPUs. For inference developers building media…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -225,7 +283,9 @@
     "url": "https://developer.nvidia.com/blog/how-krafton-built-pubg-ally-a-co-playable-character-powered-by-nvidia-ace",
     "source": "nvidia",
     "publishedAt": "2026-06-25T16:38:18.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "AI companions in games have long been constrained by fixed dialogue. PUBG Ally is a different kind of system. Built by KRAFTON for PUBG: BATTLEGROUNDS, this AI... AI companions in games have long been constrained by fixed dialogue. PUBG Ally is a different kind of system. Built by KRAFTON for PUBG:…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -235,7 +295,9 @@
     "url": "https://developer.nvidia.com/blog/accelerating-bev-pooling-on-nvidia-gpus-for-physical-ai-applications",
     "source": "nvidia",
     "publishedAt": "2026-06-24T16:30:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "An increasingly common design pattern for autonomous vehicles (AVs), robotics, and spatial AI systems is bird's-eye-view (BEV) perception. BEV models project... An increasingly common design pattern for autonomous vehicles (AVs), robotics, and spatial AI systems is bird’s-eye-view (BEV) perception.…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -245,7 +307,11 @@
     "url": "https://developer.nvidia.com/blog/maximize-ai-factory-energy-efficiency-through-full-stack-inference-and-training-optimizations",
     "source": "nvidia",
     "publishedAt": "2026-06-23T16:30:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "performance",
+      "data"
+    ],
     "summary": "Power can account for 40% of the operating expenses (OpEx) to run an AI factory. Each watt can be spent on overhead, data ingestion, training, or generating... Power can account for 40% of the operating expenses (OpEx) to run an AI factory. Each watt can be spent on overhead, data ingestion,…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -255,7 +321,10 @@
     "url": "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding",
     "source": "nvidia",
     "publishedAt": "2026-06-23T15:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "performance"
+    ],
     "summary": "As AI systems move from single-turn interactions to coordinated multiagent workflows, low-latency inference becomes increasingly important. Autoregressive LLMs... As AI systems move from single-turn interactions to coordinated multiagent workflows, low-latency inference becomes increasingly…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -265,7 +334,9 @@
     "url": "https://developer.nvidia.com/blog/build-an-ai-scientist-for-life-science-discovery-with-nvidia-bionemo-agent-toolkit",
     "source": "nvidia",
     "publishedAt": "2026-06-23T13:30:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "AI scientists are emerging as a new interface for scientific computing. These agents can read papers, write code, generate hypotheses, call APIs, inspect files,... AI scientists are emerging as a new interface for scientific computing. These agents can read papers, write code, generate hypotheses,…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -275,7 +346,10 @@
     "url": "https://developer.nvidia.com/blog/how-telcos-build-autonomous-networks-with-agentic-ai",
     "source": "nvidia",
     "publishedAt": "2026-06-23T06:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "networking"
+    ],
     "summary": "Telecom operators are adopting AI across network operations, customer care, and back-office workflows, but most are still early in the journey to autonomy. In... Telecom operators are adopting AI across network operations, customer care, and back-office workflows, but most are still early in the…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -295,7 +369,10 @@
     "url": "https://developer.nvidia.com/blog/enable-real-time-ai-for-high-speed-data-acquisition-with-daqiri",
     "source": "nvidia",
     "publishedAt": "2026-06-22T15:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "data"
+    ],
     "summary": "When AlphaFold2 revolutionized drug discovery in 2020, its success relied entirely on the roughly 170,000 protein structures collected by scientists since 1971... When AlphaFold2 revolutionized drug discovery in 2020, its success relied entirely on the roughly 170,000 protein structures collected…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -305,7 +382,9 @@
     "url": "https://developer.nvidia.com/blog/inside-nvidia-halos-for-robotics-a-full-stack-functional-safety-system-for-physical-ai",
     "source": "nvidia",
     "publishedAt": "2026-06-22T13:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "Physical AI—robots working autonomously alongside people in factories, warehouses, hospitals, and homes—is arriving faster than most expected. Traditional... Physical AI—robots working autonomously alongside people in factories, warehouses, hospitals, and homes—is arriving faster than most…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -315,7 +394,11 @@
     "url": "https://developer.nvidia.com/blog/building-ai-agents-for-ar-glasses-and-xr-devices-with-nvidia-xr-ai",
     "source": "nvidia",
     "publishedAt": "2026-06-16T22:30:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "ar-vr",
+      "infra"
+    ],
     "summary": "Developers building for AR glasses and wearable devices face an infrastructure gap. The hardware is ready, but creating AI experiences requires integrating live... Developers building for AR glasses and wearable devices face an infrastructure gap. The hardware is ready, but creating AI experiences…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -325,7 +408,11 @@
     "url": "https://developer.nvidia.com/blog/build-your-own-transaction-foundation-model-for-financial-intelligence",
     "source": "nvidia",
     "publishedAt": "2026-06-16T20:30:08.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "networking",
+      "data"
+    ],
     "summary": "Every swipe, transfer, and payment on a modern financial network encodes a pattern of human behavior. Transaction data is one of the richest signals an... Every swipe, transfer, and payment on a modern financial network encodes a pattern of human behavior. Transaction data is one of the richest…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -335,7 +422,11 @@
     "url": "https://developer.nvidia.com/blog/nvidia-blackwell-tops-mlperf-training-6-0-with-industry-leading-scale-and-performance",
     "source": "nvidia",
     "publishedAt": "2026-06-16T18:11:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "performance",
+      "testing"
+    ],
     "summary": "NVIDIA delivered a clean sweep in MLPerf Training v6.0, the latest edition of industry-standard AI training benchmarks developed by the MLCommons consortium.... NVIDIA delivered a clean sweep in MLPerf Training v6.0, the latest edition of industry-standard AI training benchmarks developed by the…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -345,7 +436,9 @@
     "url": "https://developer.nvidia.com/blog/build-on-device-ai-companions-with-the-nvidia-ace-game-agent-sdk-and-unreal-engine-5-plugins",
     "source": "nvidia",
     "publishedAt": "2026-06-16T17:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "NVIDIA RTX technologies are deeply integrated into Unreal Engine 5 through the NVIDIA RTX Branch of Unreal Engine and the NVIDIA DLSS Unreal Engine plugin. This... NVIDIA RTX technologies are deeply integrated into Unreal Engine 5 through the NVIDIA RTX Branch of Unreal Engine and the NVIDIA DLSS…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -355,7 +448,11 @@
     "url": "https://developer.nvidia.com/blog/how-to-optimize-transformer-based-models-for-low-precision-training",
     "source": "nvidia",
     "publishedAt": "2026-06-16T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "performance",
+      "architecture"
+    ],
     "summary": "Transformer architectures are the backbone of many modern large language and generative AI models. As these models grow in size, training runs consume more GPU... Transformer architectures are the backbone of many modern large language and generative AI models. As these models grow in size,…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -365,7 +462,9 @@
     "url": "https://developer.nvidia.com/blog/fine-tuning-biological-foundation-models-with-lora-using-nvidia-bionemo-recipes",
     "source": "nvidia",
     "publishedAt": "2026-06-15T18:07:31.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "Foundation models are reshaping computational biology. Pretrained on massive corpora of protein or genomic sequences, models such as ESM2 (a protein language... Foundation models are reshaping computational biology. Pretrained on massive corpora of protein or genomic sequences, models such as ESM2…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -375,7 +474,9 @@
     "url": "https://developer.nvidia.com/blog/boosting-moe-training-throughput-with-advanced-fusion-kernels",
     "source": "nvidia",
     "publishedAt": "2026-06-15T16:45:41.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "Mixture-of-experts (MoE) models have quickly become a foundational component of modern, large-scale AI systems. They are widely adopted because they enable... Mixture-of-experts (MoE) models have quickly become a foundational component of modern, large-scale AI systems. They are widely adopted…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -395,7 +496,10 @@
     "url": "https://developer.nvidia.com/blog/nvidia-achieves-leading-agentic-coding-performance-on-first-agentic-ai-benchmark",
     "source": "nvidia",
     "publishedAt": "2026-06-12T21:12:40.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "performance"
+    ],
     "summary": "AI agents have fundamentally changed the complexity of inference workloads. Until now, the industry has struggled to define a standard for measuring how... AI agents have fundamentally changed the complexity of inference workloads. Until now, the industry has struggled to define a standard for…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -405,7 +509,9 @@
     "url": "https://developer.nvidia.com/blog/run-diffusiongemma-on-nvidia-for-developer-ready-high-throughput-text-generation",
     "source": "nvidia",
     "publishedAt": "2026-06-12T18:56:34.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "Developers building real-time AI—such as chat assistants, copilots, and agentic workflows—are often constrained by token-by-token generation speed. This... Developers building real-time AI—such as chat assistants, copilots, and agentic workflows—are often constrained by token-by-token generation…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -415,7 +521,12 @@
     "url": "https://developer.nvidia.com/blog/deploy-long-context-reasoning-and-agentic-workflows-with-minimax-m3-on-nvidia-accelerated-infrastructure",
     "source": "nvidia",
     "publishedAt": "2026-06-12T14:43:17.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "devops",
+      "data",
+      "infra"
+    ],
     "summary": "As enterprise AI adoption scales, developers are increasingly forced to stitch together fragmented pipelines—separate models for text, vision, and... As enterprise AI adoption scales, developers are increasingly forced to stitch together fragmented pipelines—separate models for text, vision, and…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -425,7 +536,9 @@
     "url": "https://developer.nvidia.com/blog/one-click-multi-tenant-security-with-nvidia-quantum-infiniband",
     "source": "nvidia",
     "publishedAt": "2026-06-11T19:52:37.000Z",
-    "tags": [],
+    "tags": [
+      "security"
+    ],
     "summary": "NVIDIA Quantum InfiniBand now offers intent-based security profiles in Unified Fabric Manager (UFM) that enable multi-tenant fabric security in a single... NVIDIA Quantum InfiniBand now offers intent-based security profiles in Unified Fabric Manager (UFM) that enable multi-tenant fabric security in…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -435,7 +548,11 @@
     "url": "https://developer.nvidia.com/blog/designing-production-ready-battery-energy-storage-systems-for-ai-factories",
     "source": "nvidia",
     "publishedAt": "2026-06-10T15:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "data",
+      "infra"
+    ],
     "summary": "AI factories are changing what data-center infrastructure must do. Unlike traditional data centers, AI factories are built to manufacture intelligence at scale.... AI factories are changing what data-center infrastructure must do. Unlike traditional data centers, AI factories are built to…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -445,7 +562,10 @@
     "url": "https://developer.nvidia.com/blog/delivering-lifecycle-control-for-ai-infrastructure-at-scale-with-nvidia-dgx-spark-enterprise-manageability",
     "source": "nvidia",
     "publishedAt": "2026-06-09T19:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "infra"
+    ],
     "summary": "As AI infrastructure scales, enterprise expectations for operational maturity are increasing. Organizations expect these systems to be provisionable,... As AI infrastructure scales, enterprise expectations for operational maturity are increasing. Organizations expect these systems to be…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -455,7 +575,9 @@
     "url": "https://developer.nvidia.com/blog/model-quantization-turn-fp8-checkpoints-into-high-performance-inference-engines-with-nvidia-tensorrt",
     "source": "nvidia",
     "publishedAt": "2026-06-09T18:27:52.000Z",
-    "tags": [],
+    "tags": [
+      "performance"
+    ],
     "summary": "This post is the third of a three-part series. See also Model Quantization: Concepts, Methods, and Why It Matters and Model Quantization: Post-Training... This post is the third of a three-part series. See also Model Quantization: Concepts, Methods, and Why It Matters and Model Quantization:…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -465,7 +587,9 @@
     "url": "https://developer.nvidia.com/blog/accelerating-federated-learning-research-with-ai-agents-and-nvidia-flare-auto-fl",
     "source": "nvidia",
     "publishedAt": "2026-06-09T16:35:08.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "Federated learning (FL) research often begins with a deceptively simple question: What should we try next? A new aggregation rule, a FedProx coefficient, a... Federated learning (FL) research often begins with a deceptively simple question: What should we try next? A new aggregation rule, a FedProx…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -475,7 +599,9 @@
     "url": "https://developer.nvidia.com/blog/evaluate-clinical-asr-models-faster-with-agent-skills-and-nvidia-nemotron-speech",
     "source": "nvidia",
     "publishedAt": "2026-06-09T15:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "Training a speech AI model to correctly recognize or synthesize clinical terminology is surprisingly difficult. Drug names like Acetaminophen, Amlodipine,... Training a speech AI model to correctly recognize or synthesize clinical terminology is surprisingly difficult. Drug names like…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -505,7 +631,9 @@
     "url": "https://developer.nvidia.com/blog/build-personal-ai-agents-on-windows-pcs-with-new-tools-from-microsoft-and-nvidia",
     "source": "nvidia",
     "publishedAt": "2026-06-02T19:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "AI agents are changing how you interact with your PC. Creators, developers, and AI enthusiasts are already using these agents extensively to assist with... AI agents are changing how you interact with your PC. Creators, developers, and AI enthusiasts are already using these agents extensively to…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -515,7 +643,11 @@
     "url": "https://developer.nvidia.com/blog/deploy-self-evolving-agents-for-faster-more-secure-research-with-a-hermes-agent-and-nvidia-nemoclaw",
     "source": "nvidia",
     "publishedAt": "2026-06-02T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "devops",
+      "data"
+    ],
     "summary": "AI agents are a powerful tool for synthesizing data to accelerate research, summarize information, and help teams make decisions faster. But combining internal... AI agents are a powerful tool for synthesizing data to accelerate research, summarize information, and help teams make decisions faster.…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -525,7 +657,11 @@
     "url": "https://developer.nvidia.com/blog/deploy-agentic-ready-ai-at-the-edge-with-memory-efficiency-in-nvidia-jetpack-7-2",
     "source": "nvidia",
     "publishedAt": "2026-06-02T02:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "devops",
+      "performance"
+    ],
     "summary": "As AI agents move from the digital world to the physical environment, they can readily use NVIDIA Jetson to accelerate real-world deployment with optimized... As AI agents move from the digital world to the physical environment, they can readily use NVIDIA Jetson to accelerate real-world deployment…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -535,7 +671,9 @@
     "url": "https://developer.nvidia.com/blog/run-local-ai-agents-with-faster-models-and-multi-node-clustering-on-nvidia-dgx-spark",
     "source": "nvidia",
     "publishedAt": "2026-06-01T22:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "The rise of autonomous, long-running AI agents has introduced a new class of compute demand, namely tasks that maintain large context windows, spawn concurrent... The rise of autonomous, long-running AI agents has introduced a new class of compute demand, namely tasks that maintain large context…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -545,7 +683,9 @@
     "url": "https://developer.nvidia.com/blog/how-to-post-train-autonomous-vehicle-models-in-closed-loop-with-nvidia-alpamayo",
     "source": "nvidia",
     "publishedAt": "2026-06-01T04:49:15.000Z",
-    "tags": [],
+    "tags": [
+      "devops"
+    ],
     "summary": "Developing autonomous vehicle (AV) policies requires bridging an important gap between training and deployment. Vision-language-action (VLA) models that can... Developing autonomous vehicle (AV) policies requires bridging an important gap between training and deployment. Vision-language-action…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -555,7 +695,9 @@
     "url": "https://developer.nvidia.com/blog/develop-physical-ai-reasoning-world-and-action-models-with-nvidia-cosmos-3",
     "source": "nvidia",
     "publishedAt": "2026-06-01T04:43:58.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "Physical AI systems must understand the real world before they can act within it. Robots, autonomous vehicles, and smart spaces need to understand what's... Physical AI systems must understand the real world before they can act within it. Robots, autonomous vehicles, and smart spaces need to…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -565,7 +707,12 @@
     "url": "https://developer.nvidia.com/blog/advancing-ai-infrastructure-for-agentic-ai-with-nvidia-doca-in-silicon-security",
     "source": "nvidia",
     "publishedAt": "2026-06-01T04:21:42.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "security",
+      "data",
+      "infra"
+    ],
     "summary": "The AI era is driving a new class of infrastructure: AI factories that transform data into intelligence for autonomous AI agents operating at unprecedented... The AI era is driving a new class of infrastructure: AI factories that transform data into intelligence for autonomous AI agents operating…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -575,7 +722,10 @@
     "url": "https://developer.nvidia.com/blog/nvidia-vera-cpu-sets-a-new-standard-for-agentic-workloads-in-ai-factories",
     "source": "nvidia",
     "publishedAt": "2026-06-01T03:59:15.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "data"
+    ],
     "summary": "Each wave of AI has created a new scaling law. Pretraining scaled intelligence through larger datasets, more parameters, and massively parallel GPU systems.... Each wave of AI has created a new scaling law. Pretraining scaled intelligence through larger datasets, more parameters, and massively…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -585,7 +735,10 @@
     "url": "https://developer.nvidia.com/blog/nvidia-dsx-os-delivers-open-modular-software-for-operating-ai-factories-at-scale",
     "source": "nvidia",
     "publishedAt": "2026-06-01T03:36:52.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "infra"
+    ],
     "summary": "AI is now essential infrastructure, powered by AI factories that generate intelligence in the form of tokens. As demand grows, these factories must scale... AI is now essential infrastructure, powered by AI factories that generate intelligence in the form of tokens. As demand grows, these factories…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -595,7 +748,11 @@
     "url": "https://developer.nvidia.com/blog/dynosim-simulating-the-pareto-frontier",
     "source": "nvidia",
     "publishedAt": "2026-05-29T22:31:03.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "devops",
+      "backend"
+    ],
     "summary": "Modern LLM serving is hard to tune because each deployment is a stack of interacting choices: model backend, tensor-parallel shape, prefill/decode split, worker... Modern LLM serving is hard to tune because each deployment is a stack of interacting choices: model backend, tensor-parallel shape,…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -605,7 +762,9 @@
     "url": "https://developer.nvidia.com/blog/how-to-automate-ai-model-documentation-with-the-nvidia-mcg-toolkit",
     "source": "nvidia",
     "publishedAt": "2026-05-29T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "As AI models grow in complexity and regulatory scrutiny intensifies under frameworks including California’s AB-2013 and the EU AI Act, software teams... As AI models grow in complexity and regulatory scrutiny intensifies under frameworks including California’s AB-2013 and the EU AI Act, software…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -615,7 +774,10 @@
     "url": "https://developer.nvidia.com/blog/run-step-3-7-flash-on-nvidia-gpus-with-enterprise-ready-multimodal-ai",
     "source": "nvidia",
     "publishedAt": "2026-05-29T00:07:11.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "video"
+    ],
     "summary": "AI applications are moving beyond text generation to multimodal systems that can perceive, search, and reason across images, documents, video, and... AI applications are moving beyond text generation to multimodal systems that can perceive, search, and reason across images, documents, video, and…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -625,7 +787,10 @@
     "url": "https://developer.nvidia.com/blog/nvidia-dynamo-snapshot-fast-startup-for-inference-workloads-on-kubernetes",
     "source": "nvidia",
     "publishedAt": "2026-05-27T23:09:52.000Z",
-    "tags": [],
+    "tags": [
+      "infra",
+      "devops"
+    ],
     "summary": "The cold-start problem In production inference deployments, demand fluctuates over time, requiring inference replicas to scale elastically. However,... In production inference deployments, demand fluctuates over time, requiring inference replicas to scale elastically. However, cold-starting…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -635,7 +800,10 @@
     "url": "https://developer.nvidia.com/blog/nvidia-blackwell-sets-stac-ai-record-for-llm-inference-in-finance",
     "source": "nvidia",
     "publishedAt": "2026-05-27T20:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "data"
+    ],
     "summary": "Large language models (LLMs) are revolutionizing the financial trading landscape by enabling sophisticated analysis of vast amounts of unstructured data to... Large language models (LLMs) are revolutionizing the financial trading landscape by enabling sophisticated analysis of vast amounts of…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -645,7 +813,9 @@
     "url": "https://developer.nvidia.com/blog/whats-new-for-game-developers-in-nvidia-rtx-dlss-4-5-for-ue5-and-multilingual-ai-characters",
     "source": "nvidia",
     "publishedAt": "2026-05-27T16:59:58.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "NVIDIA RTX provides game developers with direct paths to AI-driven characters, frame generation, and ray-traced rendering. This post walks through a meaningful... NVIDIA RTX provides game developers with direct paths to AI-driven characters, frame generation, and ray-traced rendering. This post…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -655,7 +825,9 @@
     "url": "https://developer.nvidia.com/blog/extract-more-kernel-performance-with-nvidia-compileiq-auto-tuning",
     "source": "nvidia",
     "publishedAt": "2026-05-26T22:08:56.000Z",
-    "tags": [],
+    "tags": [
+      "performance"
+    ],
     "summary": "NVIDIA CompileIQ tackles one of the hardest problems in performance engineering: finding the compiler options that unlock the best performance for a specific... NVIDIA CompileIQ tackles one of the hardest problems in performance engineering: finding the compiler options that unlock the best…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -665,7 +837,9 @@
     "url": "https://developer.nvidia.com/blog/develop-high-performance-gpu-kernels-in-cpp-with-nvidia-cuda-tile",
     "source": "nvidia",
     "publishedAt": "2026-05-26T21:40:16.000Z",
-    "tags": [],
+    "tags": [
+      "performance"
+    ],
     "summary": "Developers can now use NVIDIA CUDA Tile programming within large existing C++ GPU codebases to develop highly optimized GPU kernels using tile-based... Source",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -675,7 +849,9 @@
     "url": "https://developer.nvidia.com/blog/nvidia-cuda-13-3-enhances-gpu-development-with-tile-programming-in-c-compiler-autotuning-and-python-updates",
     "source": "nvidia",
     "publishedAt": "2026-05-26T21:39:17.000Z",
-    "tags": [],
+    "tags": [
+      "performance"
+    ],
     "summary": "NVIDIA CUDA 13.3 brings new capabilities and performance optimizations to developers across the CUDA ecosystem. The launch of NVIDIA CUDA Tile programming in... NVIDIA CUDA 13.3 brings new capabilities and performance optimizations to developers across the CUDA ecosystem. The launch of NVIDIA CUDA…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -695,7 +871,11 @@
     "url": "https://developer.nvidia.com/blog/synthesize-realistic-3d-medical-images-at-scale-to-ship-pre-trained-models",
     "source": "nvidia",
     "publishedAt": "2026-05-22T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "security",
+      "data"
+    ],
     "summary": "High‑quality 3D medical imaging data is the foundation of modern radiology AI, but access to it is often constrained by data scarcity, privacy restrictions,... High‑quality 3D medical imaging data is the foundation of modern radiology AI, but access to it is often constrained by data scarcity,…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -705,7 +885,9 @@
     "url": "https://developer.nvidia.com/blog/automating-and-optimizing-financial-signal-discovery-with-multi-agent-systems",
     "source": "nvidia",
     "publishedAt": "2026-05-21T18:31:56.000Z",
-    "tags": [],
+    "tags": [
+      "performance"
+    ],
     "summary": "In quantitative finance, researchers build algorithms to trade assets, derivatives, and other financial instruments. A key part of that work is finding signals:... In quantitative finance, researchers build algorithms to trade assets, derivatives, and other financial instruments. A key part of that…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -715,7 +897,10 @@
     "url": "https://developer.nvidia.com/blog/get-real-time-visibility-into-gpu-usage-across-kubernetes-clusters",
     "source": "nvidia",
     "publishedAt": "2026-05-21T18:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "infra",
+      "ai"
+    ],
     "summary": "Maximizing the value of AI infrastructure demands deep visibility into GPU utilization. Yet many platform teams running AI workloads on Kubernetes operate with... Maximizing the value of AI infrastructure demands deep visibility into GPU utilization. Yet many platform teams running AI workloads on…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -725,7 +910,11 @@
     "url": "https://developer.nvidia.com/blog/unlock-exascale-performance-on-nvidia-gb200-nvl72-with-slurm-topology-aware-job-scheduling",
     "source": "nvidia",
     "publishedAt": "2026-05-21T17:32:56.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "performance",
+      "infra"
+    ],
     "summary": "As AI models grow in scale and complexity, realizing the full performance of modern accelerated infrastructure depends as much on how workloads are placed as on... As AI models grow in scale and complexity, realizing the full performance of modern accelerated infrastructure depends as much on how…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -735,7 +924,11 @@
     "url": "https://developer.nvidia.com/blog/building-token-metered-ai-services-on-telco-ai-factories",
     "source": "nvidia",
     "publishedAt": "2026-05-21T15:30:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "cloud",
+      "architecture"
+    ],
     "summary": "Telcos around the world are building sovereign AI factories based on the NVIDIA Cloud Partner (NCP) reference architecture, giving governments, enterprises, and... Telcos around the world are building sovereign AI factories based on the NVIDIA Cloud Partner (NCP) reference architecture, giving…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -745,7 +938,9 @@
     "url": "https://developer.nvidia.com/blog/mastering-agentic-techniques-ai-agent-customization",
     "source": "nvidia",
     "publishedAt": "2026-05-20T20:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "Autonomous AI agents are taking on all types of work for businesses: routing logistics fleets, triaging support tickets, generating code, and orchestrating... Autonomous AI agents are taking on all types of work for businesses: routing logistics fleets, triaging support tickets, generating code,…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -765,7 +960,9 @@
     "url": "https://developer.nvidia.com/blog/nvidia-verified-agent-skills-provide-capability-governance-for-ai-agents",
     "source": "nvidia",
     "publishedAt": "2026-05-19T23:40:45.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "Autonomous AI agents are becoming more capable. Open models, Model Context Protocol (MCP)-connected tools, and portable skills are also making agents easier to... Autonomous AI agents are becoming more capable. Open models, Model Context Protocol (MCP)-connected tools, and portable skills are also…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -775,7 +972,10 @@
     "url": "https://developer.nvidia.com/blog/mastering-agentic-techniques-ai-agent-evaluation",
     "source": "nvidia",
     "publishedAt": "2026-05-19T20:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "testing"
+    ],
     "summary": "Evaluating an AI model and evaluating an AI agent are related—but they answer fundamentally different questions. A model benchmark tests the capability of a... Evaluating an AI model and evaluating an AI agent are related—but they answer fundamentally different questions. A model benchmark tests…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -785,7 +985,10 @@
     "url": "https://developer.nvidia.com/blog/how-the-nvidia-vera-rubin-platform-is-solving-agentic-ais-scale-up-problem",
     "source": "nvidia",
     "publishedAt": "2026-05-14T19:24:35.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "observability"
+    ],
     "summary": "Agentic inference has fundamentally changed the runtime dynamics of inference workloads by introducing non-deterministic trajectories—actions, observations,... Agentic inference has fundamentally changed the runtime dynamics of inference workloads by introducing non-deterministic…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -795,7 +998,11 @@
     "url": "https://developer.nvidia.com/blog/transform-video-into-instantly-searchable-actionable-intelligence-with-ai-agents-and-skills",
     "source": "nvidia",
     "publishedAt": "2026-05-13T18:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "video",
+      "data"
+    ],
     "summary": "In today’s data-driven world, organizations increasingly rely on video to capture critical information, yet extracting meaningful, real-time insights from... In today’s data-driven world, organizations increasingly rely on video to capture critical information, yet extracting meaningful, real-time…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -815,7 +1022,10 @@
     "url": "https://developer.nvidia.com/blog/how-to-eliminate-pipeline-friction-in-ai-model-serving",
     "source": "nvidia",
     "publishedAt": "2026-05-12T18:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "data"
+    ],
     "summary": "The path from a trained AI model to production should be smooth, but rarely is. Many teams invest weeks fine-tuning models, only to discover that exporting to a... The path from a trained AI model to production should be smooth, but rarely is. Many teams invest weeks fine-tuning models, only to…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -825,7 +1035,9 @@
     "url": "https://developer.nvidia.com/blog/introducing-nvidia-fleet-intelligence-for-real-time-gpu-fleet-visibility-and-optimization",
     "source": "nvidia",
     "publishedAt": "2026-05-11T19:44:27.000Z",
-    "tags": [],
+    "tags": [
+      "performance"
+    ],
     "summary": "The compute capability of large GPU fleets presents unprecedented opportunities to innovate and provide value to customers in record time. Yet these... The compute capability of large GPU fleets presents unprecedented opportunities to innovate and provide value to customers in record time. Yet…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -835,7 +1047,10 @@
     "url": "https://developer.nvidia.com/blog/improving-bash-generation-in-small-language-models-with-grammar-constrained-decoding",
     "source": "nvidia",
     "publishedAt": "2026-05-08T17:13:33.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "data"
+    ],
     "summary": "Bash is one of the most flexible and powerful interfaces exposed to AI agents. In the right system, a model that emits grep, curl, tar, or a shell pipeline is... Bash is one of the most flexible and powerful interfaces exposed to AI agents. In the right system, a model that emits , , , or a shell…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -845,7 +1060,9 @@
     "url": "https://developer.nvidia.com/blog/streaming-tokens-and-tools-multi-turn-agentic-harness-support-in-nvidia-dynamo",
     "source": "nvidia",
     "publishedAt": "2026-05-08T15:59:16.000Z",
-    "tags": [],
+    "tags": [
+      "video"
+    ],
     "summary": "An agentic exchange must preserve a structured interaction: assistant turns interleave reasoning with one or more tool calls, and subsequent user turns return... An agentic exchange must preserve a structured interaction: assistant turns interleave reasoning with one or more tool calls, and…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -865,7 +1082,9 @@
     "url": "https://developer.nvidia.com/blog/model-quantization-post-training-quantization-using-nvidia-model-optimizer",
     "source": "nvidia",
     "publishedAt": "2026-05-07T21:18:06.000Z",
-    "tags": [],
+    "tags": [
+      "performance"
+    ],
     "summary": "This post is the second of a three-part series. See also Model Quantization: Concepts, Methods, and Why It Matters and Model Quantization: Turn FP8 Checkpoints... This post is the second of a three-part series. See also Model Quantization: Concepts, Methods, and Why It Matters and Model…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -875,7 +1094,12 @@
     "url": "https://developer.nvidia.com/blog/real-time-performance-monitoring-and-faster-debugging-with-nccl-inspector-and-prometheus",
     "source": "nvidia",
     "publishedAt": "2026-05-07T16:02:58.000Z",
-    "tags": [],
+    "tags": [
+      "ml",
+      "security",
+      "observability",
+      "performance"
+    ],
     "summary": "Distributed deep learning depends on fast, reliable GPU-to-GPU communication using the NVIDIA Collective Communication Library (NCCL). When training slows down,... Distributed deep learning depends on fast, reliable GPU-to-GPU communication using the NVIDIA Collective Communication Library (NCCL).…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -885,7 +1109,10 @@
     "url": "https://developer.nvidia.com/blog/how-to-build-in-vehicle-ai-agents-with-nvidia-from-cloud-to-car",
     "source": "nvidia",
     "publishedAt": "2026-05-05T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "cloud"
+    ],
     "summary": "The automotive cockpit is undergoing a fundamental shift from rule-based interfaces to agentic, multimodal AI systems capable of reasoning, planning, and... The automotive cockpit is undergoing a fundamental shift from rule-based interfaces to agentic, multimodal AI systems capable of reasoning,…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -895,7 +1122,9 @@
     "url": "https://developer.nvidia.com/blog/building-for-the-rising-complexity-of-agentic-systems-with-extreme-co-design",
     "source": "nvidia",
     "publishedAt": "2026-05-05T15:52:15.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "Generative AI’s explosive first chapter was defined by humans sending requests and models responding. The agentic chapter is different. Agents don't... Generative AI’s explosive first chapter was defined by humans sending requests and models responding. The agentic chapter is different. Agents…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -905,7 +1134,9 @@
     "url": "https://developer.nvidia.com/blog/optimize-supply-chain-decision-systems-using-nvidia-cuopt-agent-skills",
     "source": "nvidia",
     "publishedAt": "2026-05-04T20:55:05.000Z",
-    "tags": [],
+    "tags": [
+      "performance"
+    ],
     "summary": "Modern supply chains operate under the constant pressures of fluctuating demand, volatile costs, constrained capacity, and interdependent decision-making.... Modern supply chains operate under the constant pressures of fluctuating demand, volatile costs, constrained capacity, and interdependent…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -915,7 +1146,11 @@
     "url": "https://developer.nvidia.com/blog/speed-up-unreal-engine-nne-inference-with-nvidia-tensorrt-for-rtx-runtime",
     "source": "nvidia",
     "publishedAt": "2026-04-30T17:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ml",
+      "networking",
+      "performance"
+    ],
     "summary": "Neural network techniques are increasingly used in computer graphics to boost image quality, improve performance, and streamline content creation. Approaches... Neural network techniques are increasingly used in computer graphics to boost image quality, improve performance, and streamline content…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -925,7 +1160,9 @@
     "url": "https://developer.nvidia.com/blog/build-ai-powered-games-with-nvidia-dlss-4-5-rtx-and-unreal-engine-5",
     "source": "nvidia",
     "publishedAt": "2026-04-30T17:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "Today, game developers can begin integrating NVIDIA DLSS 4.5 with Dynamic Multi Frame Generation, Multi Frame Generation 6X, and the second-generation... Today, game developers can begin integrating NVIDIA DLSS 4.5 with Dynamic Multi Frame Generation, Multi Frame Generation 6X, and the…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -935,7 +1172,9 @@
     "url": "https://developer.nvidia.com/blog/how-to-build-run-and-scale-high-quality-creator-workflows-in-comfyui",
     "source": "nvidia",
     "publishedAt": "2026-04-30T16:16:04.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "Creative and visualization teams today produce more assets, in more formats, with leaner teams. Generative AI can accelerate that work – compressing tasks... Creative and visualization teams today produce more assets, in more formats, with leaner teams. Generative AI can accelerate that work –…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -945,7 +1184,9 @@
     "url": "https://developer.nvidia.com/blog/automating-gpu-kernel-translation-with-ai-agents-cutile-python-to-cutile-jl",
     "source": "nvidia",
     "publishedAt": "2026-04-30T15:54:38.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "NVIDIA CUDA Tile (cuTile) is a tile-based programming model that enables developers to write GPU kernels in terms of tile-level operations—loads, stores, and... NVIDIA CUDA Tile (cuTile) is a tile-based programming model that enables developers to write GPU kernels in terms of tile-level…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -955,7 +1196,11 @@
     "url": "https://developer.nvidia.com/blog/powering-ai-factories-with-nvidia-enterprise-reference-architectures",
     "source": "nvidia",
     "publishedAt": "2026-04-29T16:41:57.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "devops",
+      "architecture"
+    ],
     "summary": "The next wave of enterprise productivity is being built on AI factories. As organizations deploy agentic AI systems capable of reasoning, automation, and... The next wave of enterprise productivity is being built on AI factories. As organizations deploy agentic AI systems capable of reasoning,…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -975,7 +1220,9 @@
     "url": "https://developer.nvidia.com/blog/nvidia-nemotron-3-nano-omni-powers-multimodal-agent-reasoning-in-a-single-efficient-open-model",
     "source": "nvidia",
     "publishedAt": "2026-04-28T16:01:12.000Z",
-    "tags": [],
+    "tags": [
+      "video"
+    ],
     "summary": "Agentic systems often reason across screens, documents, audio, video, and text within a single perception‑to‑action loop. However, they still rely on... Agentic systems often reason across screens, documents, audio, video, and text within a single perception‑to‑action loop. However, they still rely…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },
@@ -985,7 +1232,9 @@
     "url": "https://developer.nvidia.com/blog/24-7-simulation-loops-how-agentic-ai-keeps-subsurface-engineering-moving",
     "source": "nvidia",
     "publishedAt": "2026-04-28T15:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "The subsurface industry is at a critical point in its digital evolution. For decades, unlocking reservoir potential has relied on experts performing essential... The subsurface industry is at a critical point in its digital evolution. For decades, unlocking reservoir potential has relied on experts…",
     "fetchedAt": "2026-07-11T16:01:24.578Z"
   },

@@ -65,7 +65,7 @@ export function parseDiscordCategoryPage(html: string, pageUrl: string): Archive
       url: normalizeUrl(absolute),
       source: "discord",
       publishedAt: "", // not available on the listing page; filled in by fetchDiscordArchive
-      tags: resolveTags(category ? [category] : [], "discord"),
+      tags: resolveTags(category ? [category] : [], "discord", `${title} ${summary}`),
       summary: summarize(summary),
       fetchedAt,
     });

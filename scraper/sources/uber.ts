@@ -44,14 +44,15 @@ export function parseUberArchivePage(html: string, pageUrl: string): ArchivePage
     const publishedAt = date && !Number.isNaN(Date.parse(date)) ? new Date(date).toISOString() : "";
     const category = card.attr("data-category")?.trim();
 
+    const summary = summarize(card.find(".blog-card-excerpt").first().html() ?? "");
     articles.push({
       id: articleId(absolute),
       title,
       url: normalizeUrl(absolute),
       source: "uber",
       publishedAt,
-      tags: resolveTags(category ? [category] : [], "uber"),
-      summary: summarize(card.find(".blog-card-excerpt").first().html() ?? ""),
+      tags: resolveTags(category ? [category] : [], "uber", `${title} ${summary}`),
+      summary,
       fetchedAt,
     });
   });

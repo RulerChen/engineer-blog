@@ -55,14 +55,15 @@ export function parseDropboxArchivePage(html: string, pageUrl: string): ArchiveP
       dateText && !Number.isNaN(Date.parse(dateText)) ? new Date(dateText).toISOString() : "";
     const category = post.find("a[data-element-id='article-category-link']").first().text().trim();
 
+    const summary = summarize("");
     articles.push({
       id: articleId(absolute),
       title,
       url: normalizeUrl(absolute),
       source: "dropbox",
       publishedAt,
-      tags: resolveTags(category ? [category] : [], "dropbox"),
-      summary: summarize(""),
+      tags: resolveTags(category ? [category] : [], "dropbox", `${title} ${summary}`),
+      summary,
       fetchedAt,
     });
   });

@@ -56,14 +56,15 @@ export function parseFigmaArchivePage(html: string, pageUrl: string): ArchivePag
       .get()
       .filter(Boolean);
 
+    const summary = summarize(post.find("footer p").first().html() ?? "");
     articles.push({
       id: articleId(absolute),
       title,
       url: normalizeUrl(absolute),
       source: "figma",
       publishedAt,
-      tags: resolveTags(tags, "figma"),
-      summary: summarize(post.find("footer p").first().html() ?? ""),
+      tags: resolveTags(tags, "figma", `${title} ${summary}`),
+      summary,
       fetchedAt,
     });
   });

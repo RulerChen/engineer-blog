@@ -77,7 +77,7 @@ export function parseAtlassianListingPage(html: string, pageUrl: string): Archiv
       url: normalizeUrl(absolute),
       source: "atlassian",
       publishedAt: "", // not available on the listing page; filled in by fetchAtlassianArchive
-      tags: resolveTags(tags, "atlassian"),
+      tags: resolveTags(tags, "atlassian", `${title} ${summary}`),
       summary: summarize(summary),
       fetchedAt,
     });

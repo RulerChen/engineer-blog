@@ -54,14 +54,15 @@ export function parseLinkedinArchivePage(html: string, pageUrl: string): Archive
       dateText && !Number.isNaN(Date.parse(dateText)) ? new Date(dateText).toISOString() : "";
     const category = post.find("p.grid-post__topic a").first().text().trim();
 
+    const summary = summarize("");
     articles.push({
       id: articleId(absolute),
       title,
       url: normalizeUrl(absolute),
       source: "linkedin",
       publishedAt,
-      tags: resolveTags(category ? [category] : [], "linkedin"),
-      summary: summarize(""),
+      tags: resolveTags(category ? [category] : [], "linkedin", `${title} ${summary}`),
+      summary,
       fetchedAt,
     });
   });

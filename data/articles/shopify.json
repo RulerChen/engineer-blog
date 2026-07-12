@@ -5,7 +5,9 @@
     "url": "https://shopify.engineering/topics/culture",
     "source": "shopify",
     "publishedAt": "2026-06-09T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "culture"
+    ],
     "summary": "",
     "fetchedAt": "2026-07-11T13:20:56.379Z"
   },
@@ -35,7 +37,9 @@
     "url": "https://shopify.engineering/topics/infrastructure",
     "source": "shopify",
     "publishedAt": "2025-11-19T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "infra"
+    ],
     "summary": "",
     "fetchedAt": "2026-07-11T13:20:56.379Z"
   },
@@ -45,7 +49,10 @@
     "url": "https://shopify.engineering/topics/ai-machine-learning",
     "source": "shopify",
     "publishedAt": "2025-10-08T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ml",
+      "ai"
+    ],
     "summary": "",
     "fetchedAt": "2026-07-11T13:20:56.379Z"
   },
@@ -55,7 +62,9 @@
     "url": "https://shopify.engineering/mcp-ui-breaking-the-text-wall",
     "source": "shopify",
     "publishedAt": "2025-08-04T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "frontend"
+    ],
     "summary": "",
     "fetchedAt": "2026-07-11T13:20:58.159Z"
   },
@@ -65,7 +74,9 @@
     "url": "https://shopify.engineering/remixing-admin",
     "source": "shopify",
     "publishedAt": "2025-06-29T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "",
     "fetchedAt": "2026-07-11T13:20:58.159Z"
   },
@@ -75,7 +86,9 @@
     "url": "https://shopify.engineering/webgpu-skia-web-graphics",
     "source": "shopify",
     "publishedAt": "2025-06-19T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "frontend"
+    ],
     "summary": "",
     "fetchedAt": "2026-07-11T13:20:58.159Z"
   },
@@ -95,7 +108,9 @@
     "url": "https://shopify.engineering/topics/data",
     "source": "shopify",
     "publishedAt": "2025-05-07T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "",
     "fetchedAt": "2026-07-11T13:20:58.159Z"
   },
@@ -105,7 +120,9 @@
     "url": "https://shopify.engineering/how-shopify-improved-consumer-search-intent-with-real-time-ml",
     "source": "shopify",
     "publishedAt": "2024-10-17T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ml"
+    ],
     "summary": "",
     "fetchedAt": "2026-07-11T13:20:58.159Z"
   },
@@ -115,7 +132,9 @@
     "url": "https://shopify.engineering/topics/mysql",
     "source": "shopify",
     "publishedAt": "2024-08-13T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases"
+    ],
     "summary": "",
     "fetchedAt": "2026-07-11T13:20:58.159Z"
   },
@@ -155,7 +174,9 @@
     "url": "https://shopify.engineering/topics/mobile",
     "source": "shopify",
     "publishedAt": "2022-03-24T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile"
+    ],
     "summary": "",
     "fetchedAt": "2026-07-11T13:20:58.159Z"
   },
@@ -165,7 +186,9 @@
     "url": "https://shopify.engineering/topics/security",
     "source": "shopify",
     "publishedAt": "2022-03-21T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "security"
+    ],
     "summary": "",
     "fetchedAt": "2026-07-11T13:21:00.414Z"
   },
@@ -175,7 +198,9 @@
     "url": "https://shopify.engineering/topics/data-science-engineering",
     "source": "shopify",
     "publishedAt": "2021-12-09T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "",
     "fetchedAt": "2026-07-11T13:21:00.414Z"
   }

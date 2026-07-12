@@ -49,6 +49,7 @@ export function parseMetaArchivePage(html: string, _pageUrl: string): ArchivePag
         ? new Date(timeText).toISOString()
         : "";
 
+    const summary = summarize(post.find(".entry-content, .entry-summary, p").first().html() ?? "");
     articles.push({
       id: articleId(href),
       title,
@@ -62,8 +63,9 @@ export function parseMetaArchivePage(html: string, _pageUrl: string): ArchivePag
           .get()
           .filter(Boolean),
         "meta",
+        `${title} ${summary}`,
       ),
-      summary: summarize(post.find(".entry-content, .entry-summary, p").first().html() ?? ""),
+      summary,
       fetchedAt,
     });
   });

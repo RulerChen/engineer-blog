@@ -5,7 +5,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/ai-teammate-context-engineering",
     "source": "atlassian",
     "publishedAt": "2026-07-08T17:46:44.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "In Q4 FY26, Atlassian’s People Insights (PI) team stopped treating AI as a productivity add-on and committed to something harder: fully agentifying its operations.",
     "fetchedAt": "2026-07-11T13:25:55.766Z"
   },
@@ -15,7 +17,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/atlassian-dropbox-ai-transformation",
     "source": "atlassian",
     "publishedAt": "2026-06-30T05:40:55.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "Adopting AI technology without an effective strategy is costing the Fortune 500 an estimated $161 billion a year.* Enterprises are making big investments in this space but are struggling to realise the returns. We know the technology is designed to make businesses more efficient, but we’re still…",
     "fetchedAt": "2026-07-11T13:25:55.766Z"
   },
@@ -25,7 +29,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/hr-in-the-age-of-abundant-intelligence",
     "source": "atlassian",
     "publishedAt": "2026-06-24T22:28:33.000Z",
-    "tags": [],
+    "tags": [
+      "experimentation"
+    ],
     "summary": "Atlassian’s People Team believes the future will only be discovered through experimentation. These are their bets for the HR craft.",
     "fetchedAt": "2026-07-11T13:25:55.766Z"
   },
@@ -35,7 +41,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/rovo-long-horizon-reasoning-engine",
     "source": "atlassian",
     "publishedAt": "2026-06-18T00:11:03.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "Last December, when the Rovo hybrid orchestrator was introduced, a hierarchical multi-agent system was introduced, where specialized subagents last introduced, one for Jira, one for Confluence, one for Slack, and so on — each handled their own domain. The hybrid orchestrator would decompose a…",
     "fetchedAt": "2026-07-11T13:25:55.766Z"
   },
@@ -45,7 +53,11 @@
     "url": "https://www.atlassian.com/blog/how-we-build/atlassians-design-md-is-here-what-we-learned-testing-portable-design-context-in-practice",
     "source": "atlassian",
     "publishedAt": "2026-06-15T15:59:47.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "testing",
+      "frontend"
+    ],
     "summary": "We tested Google’s DESIGN.md format against our MCP server and AI skills to see where a single portable markdown file fits in your design system tooling. Here’s what we learned.",
     "fetchedAt": "2026-07-11T13:25:55.766Z"
   },
@@ -55,7 +67,13 @@
     "url": "https://www.atlassian.com/blog/how-we-build/architecting-scalable-ml-platforms",
     "source": "atlassian",
     "publishedAt": "2026-06-10T22:23:23.000Z",
-    "tags": [],
+    "tags": [
+      "ml",
+      "ai",
+      "experimentation",
+      "architecture",
+      "infra"
+    ],
     "summary": "A novel, enterprise-scale architecture for modular ML development, high-velocity experimentation, and embedded governance – powering thousands of production workflows that underpin AI systems serving millions of Rovo users globally. Introduction: Engineering for Speed, Scale, and Governance in…",
     "fetchedAt": "2026-07-11T13:25:55.766Z"
   },
@@ -65,7 +83,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/how-content-assistant-raised-the-design-quality-bar-without-slowing-us-down",
     "source": "atlassian",
     "publishedAt": "2026-06-01T16:17:35.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "frontend"
+    ],
     "summary": "AI is moving fast, and Atlassian app teams are rolling out new features at a cracking pace! In a quest to make sure that UX content stayed top quality, our content design team created the Content Assistant: a helpful teammate powered by Atlassian’s Rovo. It quickly became one of the business’s…",
     "fetchedAt": "2026-07-11T13:25:55.766Z"
   },
@@ -75,7 +96,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/the-future-of-product-craft",
     "source": "atlassian",
     "publishedAt": "2026-05-29T04:19:46.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "product"
+    ],
     "summary": "AI use is accelerating across the modern enterprise. Teams are moving faster. The barrier to building will continue to drop. But the cost of building the wrong thing is about to skyrocket, because teams can now ship more of it, faster. Atlassian’s State of Teams 2026 report found that 89% of…",
     "fetchedAt": "2026-07-11T13:25:55.766Z"
   },
@@ -85,7 +109,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/optimisation-tools-for-jira",
     "source": "atlassian",
     "publishedAt": "2026-05-14T01:31:25.000Z",
-    "tags": [],
+    "tags": [
+      "cloud",
+      "performance"
+    ],
     "summary": "As Jira Cloud grows to support larger and more complex customers, so does the configuration that powers their work: custom fields, work types (formerly issue types), screens, schemes, and workflows. Over time, many of these entities become unused or redundant. The result is configuration…",
     "fetchedAt": "2026-07-11T13:25:55.766Z"
   },
@@ -95,7 +122,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/the-bottleneck-keeps-shifting-what-ai-is-changing-about-how-we-build",
     "source": "atlassian",
     "publishedAt": "2026-05-06T18:26:51.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "Over the past few decades in the technology industry, some of the biggest constraints to building products have been about having enough engineers, time, or compute. For the first time, that era is ending. Tech teams are experiencing a revolution unlike anything they’ve seen before. The barriers to…",
     "fetchedAt": "2026-07-11T13:25:55.766Z"
   },
@@ -115,7 +144,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/designing-dependable-ai-products",
     "source": "atlassian",
     "publishedAt": "2026-04-29T23:33:38.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "product"
+    ],
     "summary": "Everyone is shipping AI products now, and most look impressive in demos but fail in the messy reality of daily work. The problem often isn’t the model; it’s the product built around it. In this article, I’ll share what I’ve learned building AI products in environments where trust isn’t optional,…",
     "fetchedAt": "2026-07-11T13:25:55.766Z"
   },
@@ -145,7 +177,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/streaming-server-side-rendering-in-confluence",
     "source": "atlassian",
     "publishedAt": "2026-04-16T01:52:39.000Z",
-    "tags": [],
+    "tags": [
+      "video",
+      "performance"
+    ],
     "summary": "Over the past two years the Confluence team has spent a significant amount of time investing into improving performance – halving the 90th percentile latency for completing page loads…",
     "fetchedAt": "2026-07-11T13:25:55.766Z"
   },
@@ -155,7 +190,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/behind-the-scenes-atlassian-ai-builders-week",
     "source": "atlassian",
     "publishedAt": "2026-04-13T19:30:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "product"
+    ],
     "summary": "At Atlassian, we are often asked how we are adapting internally to AI and transforming our R&D organization to be AI native. One lever we have used successfully is an event we call AI Builders Week. Each quarter, we bring together hundreds of product managers and designers to learn new AI skills…",
     "fetchedAt": "2026-07-11T13:25:58.266Z"
   },
@@ -165,7 +203,11 @@
     "url": "https://www.atlassian.com/blog/how-we-build/engineering-the-forge-billing-platform-for-reliability-and-scale",
     "source": "atlassian",
     "publishedAt": "2026-04-13T00:56:18.000Z",
-    "tags": [],
+    "tags": [
+      "devops",
+      "cloud",
+      "infra"
+    ],
     "summary": "Introduction Forge is Atlassian’s cloud app development platform. It’s a serverless, Atlassian-hosted environment that allows developers to extend products like Jira and Confluence, and it powers thousands of apps running inside customer organizations. As Forge grew, we introduced usage-based…",
     "fetchedAt": "2026-07-11T13:25:58.266Z"
   },
@@ -175,7 +217,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/rovo-creation-canvas",
     "source": "atlassian",
     "publishedAt": "2026-04-06T17:06:32.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "video"
+    ],
     "summary": "Learn how Rovo’s collaborative AI canvas was engineered—unifying streaming, structure, and agent-powered workflows to build smarter content creation features.",
     "fetchedAt": "2026-07-11T13:25:58.266Z"
   },
@@ -195,7 +240,10 @@
     "url": "https://www.atlassian.com/blog/rovo/jira-ai-productivity-how-rovo-helps-teams-start-work-30-percent-faster",
     "source": "atlassian",
     "publishedAt": "2026-03-09T23:34:19.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "data"
+    ],
     "summary": "After a year of our users leveraging Rovo’s AI capabilities within Jira, we analysed usage data to identify if and how users’ productivity had been impacted. We found that users who adopted Rovo’s AI capabilities within Jira started work 30% faster and ultimately get an extra day of productivity…",
     "fetchedAt": "2026-07-11T13:25:58.266Z"
   },
@@ -205,7 +253,11 @@
     "url": "https://www.atlassian.com/blog/how-we-build/building-a-more-resilient-multi-region-bitbucket-cloud",
     "source": "atlassian",
     "publishedAt": "2026-03-05T22:10:43.000Z",
-    "tags": [],
+    "tags": [
+      "cloud",
+      "performance",
+      "data"
+    ],
     "summary": "2025 was an impactful year for Bitbucket Cloud. As we enter 2026, Bitbucket will be continuing this momentum by making architectural improvements aimed at two goals: improving scalability and resiliency, and laying the foundation for Bitbucket Cloud data residency, starting with the European Union…",
     "fetchedAt": "2026-07-11T13:25:58.266Z"
   },
@@ -215,7 +267,14 @@
     "url": "https://www.atlassian.com/blog/how-we-build/catching-and-mitigating-performance-regressions-at-scale-in-jira-cloud",
     "source": "atlassian",
     "publishedAt": "2026-02-20T02:10:07.000Z",
-    "tags": [],
+    "tags": [
+      "observability",
+      "cloud",
+      "networking",
+      "product",
+      "performance",
+      "data"
+    ],
     "summary": "In a huge, multi-tenant product like Jira Cloud, a “small” change anywhere in the system can quietly make life harder for some of our biggest customers, long before our global metrics show a problem. Feature flags, gradual rollouts, and tenant-specific data and traffic shapes mean these regressions…",
     "fetchedAt": "2026-07-11T13:25:58.266Z"
   },
@@ -225,7 +284,12 @@
     "url": "https://www.atlassian.com/blog/how-we-build/how-we-unlocked-performance-at-scale-with-jira-platform",
     "source": "atlassian",
     "publishedAt": "2025-12-15T23:55:10.000Z",
-    "tags": [],
+    "tags": [
+      "devops",
+      "cloud",
+      "performance",
+      "architecture"
+    ],
     "summary": "Introduction: Jira Cloud is undergoing a substantial rearchitecture, moving its foundation to a cloud‑native, multi‑tenant platform built for massive scale, speed, and reliability. In this post, we’ll take you behind the scenes on why we’re making these changes, the architectural principles guiding…",
     "fetchedAt": "2026-07-11T13:25:58.266Z"
   },
@@ -235,7 +299,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/behind-the-screens-accessible-design-is-good-design",
     "source": "atlassian",
     "publishedAt": "2025-12-15T23:50:48.000Z",
-    "tags": [],
+    "tags": [
+      "security",
+      "frontend"
+    ],
     "summary": "Accessibility isn’t a separate track of design; it defines its quality. That’s why accessibility is integrated into the Atlassian Design System at every level: to ensure our apps work for everyone by default. With accessibility treated as part of our design craft rather than a compliance checkbox,…",
     "fetchedAt": "2026-07-11T13:25:58.266Z"
   },
@@ -245,7 +312,11 @@
     "url": "https://www.atlassian.com/blog/how-we-build/pull-request-intervention-for-infrastructure-as-code-risks-with-bitbucket-custom-merge-checks",
     "source": "atlassian",
     "publishedAt": "2025-12-15T17:42:36.000Z",
-    "tags": [],
+    "tags": [
+      "devops",
+      "architecture",
+      "infra"
+    ],
     "summary": "Establishing progressive deployments to control blast radius for the most active types of changes in an architecture is often well worth the investment. But what about those less frequent, or sometimes obscure changes? Learn how Atlassian used the rich integration ecosystem available in Bitbucket…",
     "fetchedAt": "2026-07-11T13:25:58.266Z"
   },
@@ -255,7 +326,11 @@
     "url": "https://www.atlassian.com/blog/how-we-build/building-a-multi-region-compliant-customer-data-lake-at-scale",
     "source": "atlassian",
     "publishedAt": "2025-12-15T17:41:30.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "cloud",
+      "data"
+    ],
     "summary": "Atlassian built a unified customer data lake to overcome limitations in analytics, data export, and operational database strain as their cloud customer base grew. By adopting a logical replication and data mesh approach, they enabled real-time analytics, secure data exports, and scalable dashboards…",
     "fetchedAt": "2026-07-11T13:25:58.266Z"
   },
@@ -265,7 +340,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/mobbing-with-ai",
     "source": "atlassian",
     "publishedAt": "2025-12-09T23:26:03.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "testing"
+    ],
     "summary": "Mobbing with AI is a tight loop where the mob designs the work, sets standards, and reviews everything, while AI accelerates execution with fast drafts, tests, and options. Together they iterate in small cycles, capture learnings, and update specs so the AI keeps improving at “how this team works,”…",
     "fetchedAt": "2026-07-11T13:25:58.266Z"
   },
@@ -275,7 +353,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/from-pixels-to-beats-designing-the-race-mode-soundscape",
     "source": "atlassian",
     "publishedAt": "2025-12-09T20:47:05.000Z",
-    "tags": [],
+    "tags": [
+      "experimentation"
+    ],
     "summary": "At Atlassian, play is often where the real ideas begin. Earlier this year, during our ShipIt hackathon (where Atlassians drop everything to build bold new ideas), a simple sketch I received sparked something unexpected: Whiteboard’s very first easter egg. What began as a tiny racing experiment…",
     "fetchedAt": "2026-07-11T13:25:58.266Z"
   },
@@ -285,7 +365,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/taming-test-flakiness-how-we-built-a-scalable-tool-to-detect-and-manage-flaky-tests",
     "source": "atlassian",
     "publishedAt": "2025-12-08T23:10:45.000Z",
-    "tags": [],
+    "tags": [
+      "testing"
+    ],
     "summary": "Flaky tests erode trust in CI and waste thousands of engineering hours. This article explains how Atlassian built Flakinator, a scalable, stack‑agnostic platform that automatically detects, quarantines, and manages flaky tests across millions of daily executions.",
     "fetchedAt": "2026-07-11T13:25:58.266Z"
   },
@@ -295,7 +377,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/rovo-dev-cli-and-mutation-testing-to-write-better-tests",
     "source": "atlassian",
     "publishedAt": "2025-12-04T00:34:44.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "testing"
+    ],
     "summary": "Rovo Dev CLI combines powerful AI with mutation testing tools like Pitest to automatically write high‑quality tests, improve mutation coverage, and raise PRs for you.",
     "fetchedAt": "2026-07-11T13:25:58.266Z"
   },
@@ -305,7 +390,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/under-the-hood-of-confluence-race-mode",
     "source": "atlassian",
     "publishedAt": "2025-12-01T17:50:07.000Z",
-    "tags": [],
+    "tags": [
+      "performance"
+    ],
     "summary": "Discover how we built Race Mode, a mini-game in Confluence whiteboards, combining play, performance, and fun for teams.",
     "fetchedAt": "2026-07-11T13:26:00.832Z"
   },
@@ -315,7 +402,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/turning-handoffs-into-handshakes-integrating-design-systems-for-ai-prototyping-at-scale",
     "source": "atlassian",
     "publishedAt": "2025-11-26T19:17:23.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "frontend"
+    ],
     "summary": "Design is changing, and so are our tools. At Atlassian, we’re bringing AI into design and engineering with purpose. Early on, we doubted it could meet our design‑system standards; we’ve since learned it can when grounded in collaboration, efficiency, and craft. AI reduces inefficiencies and…",
     "fetchedAt": "2026-07-11T13:26:00.832Z"
   },
@@ -325,7 +415,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/automating-customer-support-with-jsm-virtual-agent",
     "source": "atlassian",
     "publishedAt": "2025-11-24T23:20:46.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "Explore how Atlassian’s JSM Virtual Agent uses AI to automate customer support, streamline chat workflows, and deliver faster, more accurate resolutions for teams worldwide.",
     "fetchedAt": "2026-07-11T13:26:00.832Z"
   },
@@ -335,7 +427,12 @@
     "url": "https://www.atlassian.com/blog/how-we-build/removing-dependency-tangles-in-the-atlassian-platform-for-increased-reliability-and-recoverability",
     "source": "atlassian",
     "publishedAt": "2025-11-20T20:20:07.000Z",
-    "tags": [],
+    "tags": [
+      "devops",
+      "cloud",
+      "culture",
+      "architecture"
+    ],
     "summary": "Atlassian’s CPR program untangled complex service dependencies, boosting platform reliability and recoverability. By simplifying architecture and fostering a culture of dependency awareness, CPR strengthened Atlassian’s cloud resilience.",
     "fetchedAt": "2026-07-11T13:26:00.832Z"
   },
@@ -355,7 +452,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/partner-with-atlassian-and-unlock-your-next-wave-of-growth",
     "source": "atlassian",
     "publishedAt": "2025-11-06T18:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "Harness Atlassian’s platform to build, deliver, and monetize AI-native solutions—with tools to create powerful solutions only possible in the Atlassian Ecosystem.",
     "fetchedAt": "2026-07-11T13:26:00.832Z"
   },
@@ -365,7 +464,11 @@
     "url": "https://www.atlassian.com/blog/how-we-build/migrating-the-jira-and-confluence-applications-to-aws-graviton",
     "source": "atlassian",
     "publishedAt": "2025-11-04T17:24:44.000Z",
-    "tags": [],
+    "tags": [
+      "cloud",
+      "performance",
+      "infra"
+    ],
     "summary": "Discover how Atlassian migrated over 3,000 Jira and Confluence instances to AWS Graviton, boosting performance and efficiency at scale.",
     "fetchedAt": "2026-07-11T13:26:00.832Z"
   },
@@ -375,7 +478,12 @@
     "url": "https://www.atlassian.com/blog/how-we-build/how-ford-continuously-evolves-as-an-enterprise",
     "source": "atlassian",
     "publishedAt": "2025-10-28T21:35:03.000Z",
-    "tags": [],
+    "tags": [
+      "devops",
+      "cloud",
+      "culture",
+      "data"
+    ],
     "summary": "Discover how Ford Motor Company empowers its people and drives continuous improvement by applying data-driven insights and automation with Atlassian Cloud Enterprise. Learn how a 120-year legacy brand is transforming its culture and operations through connected teams and actionable analytics.",
     "fetchedAt": "2026-07-11T13:26:00.832Z"
   },
@@ -385,7 +493,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/devmate-accelerating-react-native-development-at-atlassian",
     "source": "atlassian",
     "publishedAt": "2025-10-01T16:18:56.000Z",
-    "tags": [],
+    "tags": [
+      "frontend"
+    ],
     "summary": "DevMate is Atlassian’s in-house CLI tool that slashes React Native build times and automates environment setup—making development faster, smoother, and more consistent for our teams.",
     "fetchedAt": "2026-07-11T13:26:00.832Z"
   },
@@ -405,7 +515,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/improving-coding-agent-experience",
     "source": "atlassian",
     "publishedAt": "2025-08-25T23:22:58.000Z",
-    "tags": [],
+    "tags": [
+      "ml",
+      "ai"
+    ],
     "summary": "Atlassian is enhancing coding agents by using machine learning to identify well-scoped Jira work items and provide relevant code context, making AI-powered development faster, smarter, and more reliable for software teams.",
     "fetchedAt": "2026-07-11T13:26:00.832Z"
   },
@@ -415,7 +528,11 @@
     "url": "https://www.atlassian.com/blog/how-we-build/ml-classifier-improving-quality",
     "source": "atlassian",
     "publishedAt": "2025-08-25T23:22:23.000Z",
-    "tags": [],
+    "tags": [
+      "ml",
+      "ai",
+      "data"
+    ],
     "summary": "Atlassian’s ML-based comment ranker filters LLM code review comments, boosting quality and efficiency with proprietary data.",
     "fetchedAt": "2026-07-11T13:26:00.832Z"
   },
@@ -425,7 +542,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/ai-gateway-model-garden",
     "source": "atlassian",
     "publishedAt": "2025-08-22T18:05:39.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "LLMs represent a rapidly advancing area of technology, with various foundation model providers competing to build the leading solution. Like any technology, the differing models often have a spectrum of their own strengths and weaknesses. Atlassian currently partners with an array of leading…",
     "fetchedAt": "2026-07-11T13:26:00.832Z"
   },
@@ -445,7 +564,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/ai-behind-speech-editing-at-loom",
     "source": "atlassian",
     "publishedAt": "2025-07-30T20:58:01.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "video"
+    ],
     "summary": "Speech editing at Loom lets users update parts of their video instantly, without re-recording. Powered by advanced AI, this technology enables seamless, high-quality edits—like swapping names or company details in your own voice—making video creation faster, more flexible, and highly personalized.",
     "fetchedAt": "2026-07-11T13:26:00.832Z"
   },
@@ -455,7 +577,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/barmeniagothaer_migration",
     "source": "atlassian",
     "publishedAt": "2025-07-22T17:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "cloud"
+    ],
     "summary": "Future-thinking German insurer BarmeniaGothaer brings together thousands of employees on Atlassian’s tools to deliver even more value for policyholders",
     "fetchedAt": "2026-07-11T13:26:04.283Z"
   },
@@ -465,7 +589,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/inference-engine",
     "source": "atlassian",
     "publishedAt": "2025-07-22T17:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "performance"
+    ],
     "summary": "Powering Enterprise-scale AI As Atlassian’s AI capabilities continue to scale rapidly across multiple products, a pressing challenge emerged: how do we deliver world-class AI-powered solutions to millions of users without compromising on latency, flexibility, and operational control? The answer:…",
     "fetchedAt": "2026-07-11T13:26:04.283Z"
   },
@@ -475,7 +602,13 @@
     "url": "https://www.atlassian.com/blog/how-we-build/migrating-jira-database-platform-to-aws-aurora",
     "source": "atlassian",
     "publishedAt": "2025-07-02T00:07:43.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "devops",
+      "cloud",
+      "performance",
+      "data"
+    ],
     "summary": "Discover how Atlassian migrated four million Jira databases to AWS Aurora—at scale and with minimal user impact. Learn about the technical challenges, strategies, and outcomes that enabled this ambitious transformation in reliability, performance, and cost efficiency",
     "fetchedAt": "2026-07-11T13:26:04.283Z"
   },
@@ -485,7 +618,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/faster-builds-when-removing-barrel-files",
     "source": "atlassian",
     "publishedAt": "2025-06-26T16:33:07.000Z",
-    "tags": [],
+    "tags": [
+      "testing",
+      "frontend"
+    ],
     "summary": "Removing JavaScript barrel files from our Jira frontend codebase led to a 75% reduction in build times, with significantly faster TypeScript highlighting and unit testing. This large-scale automated change also improved CI efficiency and made code navigation much clearer for developers.",
     "fetchedAt": "2026-07-11T13:26:04.283Z"
   },
@@ -495,7 +631,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/opensearch-admission-control-resiliency",
     "source": "atlassian",
     "publishedAt": "2025-06-11T16:37:14.000Z",
-    "tags": [],
+    "tags": [
+      "devops",
+      "networking"
+    ],
     "summary": "Admission control in OpenSearch helps keep clusters stable by limiting incoming requests when nodes are under heavy load. Atlassian saw improved search reliability after enabling this feature, especially during traffic spikes.",
     "fetchedAt": "2026-07-11T13:26:04.283Z"
   },
@@ -515,7 +654,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/sbom-for-atlassian",
     "source": "atlassian",
     "publishedAt": "2025-05-01T17:32:13.000Z",
-    "tags": [],
+    "tags": [
+      "security"
+    ],
     "summary": "Atlassian’s SBOM platform generates detailed software inventories for compliance and security, using tools like Syft and cdxgen.",
     "fetchedAt": "2026-07-11T13:26:04.283Z"
   },
@@ -525,7 +666,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/hula-blog-autodev-paper-human-in-the-loop-software-development-agents",
     "source": "atlassian",
     "publishedAt": "2025-04-23T23:33:08.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "Atlassian’s HULA framework automates repetitive coding tasks, boosting developer efficiency while keeping engineers in control. Recognized by ICSE 2025, HULA is shaping the future of AI-assisted development.",
     "fetchedAt": "2026-07-11T13:26:04.283Z"
   },
@@ -535,7 +678,11 @@
     "url": "https://www.atlassian.com/blog/how-we-build/boosting-performance-how-we-scaled-and-enhanced-throughput-in-the-jira-export-service",
     "source": "atlassian",
     "publishedAt": "2025-04-17T22:24:39.000Z",
-    "tags": [],
+    "tags": [
+      "cloud",
+      "performance",
+      "data"
+    ],
     "summary": "Migrating Jira cloud instances involves three steps: exporting data, transforming it, and importing it into a new instance. This process, aided by Atlassian tools, ensures data integrity and minimizes disruption, especially useful for consolidating accounts or moving specific projects.",
     "fetchedAt": "2026-07-11T13:26:04.283Z"
   },
@@ -555,7 +702,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/when-words-meet-machines-the-future-of-content-design",
     "source": "atlassian",
     "publishedAt": "2025-02-28T17:47:31.000Z",
-    "tags": [],
+    "tags": [
+      "product"
+    ],
     "summary": "Content designers aren’t just considering the user experience anymore. They’re shaping the product itself.",
     "fetchedAt": "2026-07-11T13:26:04.283Z"
   },
@@ -575,7 +724,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/scaling-jira-cloud-migrations-with-external-importers",
     "source": "atlassian",
     "publishedAt": "2025-02-28T17:21:56.000Z",
-    "tags": [],
+    "tags": [
+      "cloud"
+    ],
     "summary": "Introduction Organizations use multiple project management tools to track work, leading to fragmentation, collaboration barriers, increased complexity, and higher costs. As organizations face macroeconomic challenges, there’s a push to consolidate work into fewer project management tools to…",
     "fetchedAt": "2026-07-11T13:26:04.283Z"
   },
@@ -585,7 +736,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/how-we-migrated-bitbucket-cloud-to-envoy-proxy",
     "source": "atlassian",
     "publishedAt": "2025-02-14T00:43:26.000Z",
-    "tags": [],
+    "tags": [
+      "cloud",
+      "networking"
+    ],
     "summary": "Introduction Bitbucket Cloud is a Git-based code hosting and collaboration solution. It serves both HTTPS and SSH traffic over the internet. Our engineering team recently completed a major architectural update of Bitbucket’s public facing Edge load balancing and proxy solution. Licensing and…",
     "fetchedAt": "2026-07-11T13:26:04.283Z"
   },
@@ -595,7 +749,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/how-we-built-a-navigation-that-works-for-everyone",
     "source": "atlassian",
     "publishedAt": "2025-01-31T22:46:14.000Z",
-    "tags": [],
+    "tags": [
+      "product"
+    ],
     "summary": "Discover how we tackled the challenge of creating a unified navigation system that simplifies cross-product experiences and works for all teams.",
     "fetchedAt": "2026-07-11T13:26:04.283Z"
   },
@@ -605,7 +761,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/hybrid-llm",
     "source": "atlassian",
     "publishedAt": "2025-01-30T23:58:39.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "Introduction Rovo Chat is an AI-powered assistant designed to boost productivity and unlock creativity through a simple chat interface. By leveraging a mix of advanced Large Language Models (LLMs) such as GPT, Claude, Gemini, Mistral, and LLaMA, Rovo Chat transforms the way enterprises interact…",
     "fetchedAt": "2026-07-11T13:26:06.332Z"
   },
@@ -615,7 +773,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/riverty-future-proofs-on-cloud",
     "source": "atlassian",
     "publishedAt": "2025-01-15T00:54:07.000Z",
-    "tags": [],
+    "tags": [
+      "cloud"
+    ],
     "summary": "By migrating to Atlassian Cloud, Riverty boosts productivity and innovation across technical and non-technical teams with cutting-edge Cloud-only products.",
     "fetchedAt": "2026-07-11T13:26:06.332Z"
   },
@@ -625,7 +785,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/empowering-orgs-india",
     "source": "atlassian",
     "publishedAt": "2025-01-15T00:48:58.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Atlassian Announces Local Data Residency Program",
     "fetchedAt": "2026-07-11T13:26:06.332Z"
   },
@@ -635,7 +797,11 @@
     "url": "https://www.atlassian.com/blog/how-we-build/navigating-the-next-decade-as-a-product-designer-in-tech",
     "source": "atlassian",
     "publishedAt": "2024-12-18T00:12:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "product",
+      "data"
+    ],
     "summary": "Adapting to Change: How Key Trends in Data, AI, and Design-Led Innovation Will Shape the Future of Products",
     "fetchedAt": "2026-07-11T13:26:06.332Z"
   },
@@ -655,7 +821,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/the-power-of-a-dollar-quantifying-ux-challenges",
     "source": "atlassian",
     "publishedAt": "2024-12-17T21:06:39.000Z",
-    "tags": [],
+    "tags": [
+      "data",
+      "frontend"
+    ],
     "summary": "Learn how user insights and data helped transform Smart Values into a game-changing feature at Atlassian.",
     "fetchedAt": "2026-07-11T13:26:06.332Z"
   },
@@ -665,7 +834,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/designed-for-delight-built-for-performance",
     "source": "atlassian",
     "publishedAt": "2024-12-17T18:54:15.000Z",
-    "tags": [],
+    "tags": [
+      "performance"
+    ],
     "summary": "How Atlassian streamlined drag-and-drop interactions with a modular, high-performance solution, delivering visual consistency, accessibility, and delight across products.",
     "fetchedAt": "2026-07-11T13:26:06.332Z"
   },
@@ -675,7 +846,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/lithium",
     "source": "atlassian",
     "publishedAt": "2024-11-22T20:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "At Atlassian, there are many situations we need to move large amounts of data between different systems – validating and transforming them in-flight. What is unique about Atlassian’s use cases is that several require data pipelines to be entirely provisioned at run time. Normally, we’d consider…",
     "fetchedAt": "2026-07-11T13:26:06.332Z"
   },
@@ -685,7 +858,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/deployment-metadata-platform",
     "source": "atlassian",
     "publishedAt": "2024-11-01T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "security",
+      "devops"
+    ],
     "summary": "Over the last few years, Software Supply Chain Security has rapidly emerged as a critical aspect in the software development lifecycle, ensuring compliance, enhancing security measures, and building trust with customers. As Atlassian relies on a myriad of first and third-party sources/artifacts,…",
     "fetchedAt": "2026-07-11T13:26:06.332Z"
   },
@@ -695,7 +871,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/multi-account-strategy",
     "source": "atlassian",
     "publishedAt": "2024-10-28T18:12:53.000Z",
-    "tags": [],
+    "tags": [
+      "product"
+    ],
     "summary": "Scaling is a nice problem to have. It usually means your product is successful and there is more demand than you can offer. Scaling is a challenging problem to have. It usually means that a beautiful design you implemented just recently no longer works and significant parts of your system may need…",
     "fetchedAt": "2026-07-11T13:26:06.332Z"
   },
@@ -705,7 +883,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/evolve-your-data-platform-with-a-deployment-capability",
     "source": "atlassian",
     "publishedAt": "2024-05-08T14:42:49.000Z",
-    "tags": [],
+    "tags": [
+      "devops",
+      "data"
+    ],
     "summary": "At Atlassian, our internal data lake is regularly used by more than half of the company; grows in excess of 85 terabytes a day; and it powers both internal and customer facing experiences. Not bad for something that started as a ShipIt (a regular company wide innovation day) project . Part of the…",
     "fetchedAt": "2026-07-11T13:26:06.332Z"
   },
@@ -715,7 +896,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/the-future-of-automation-at-atlassian-generating-confluence-automation-rules-with-large-language-models",
     "source": "atlassian",
     "publishedAt": "2024-01-16T19:28:05.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "devops"
+    ],
     "summary": "What is Confluence automation? Confluence automation is an admin feature available in Confluence Premium and Enterprise that can help teams manage their content at scale. When admins create and enable automation rules, Confluence automation works behind the scenes to complete routine functions that…",
     "fetchedAt": "2026-07-11T13:26:06.332Z"
   },
@@ -725,7 +909,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/gpu-rendering-shapes-and-connectors-in-confluence-whiteboards",
     "source": "atlassian",
     "publishedAt": "2023-11-13T13:39:41.000Z",
-    "tags": [],
+    "tags": [
+      "testing"
+    ],
     "summary": "Atlassian is built on the power of teamwork and collaboration. One of our latest offerings in this vein is Confluence whiteboards. Unlike traditional blogs and pages in Confluence, whiteboards provide an infinite canvas for real-time collaboration, brainstorming, and diagramming. Providing a fluid…",
     "fetchedAt": "2026-07-11T13:26:06.332Z"
   },
@@ -745,7 +931,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/rendering-like-butter-a-confluence-whiteboards-story",
     "source": "atlassian",
     "publishedAt": "2023-08-08T11:31:01.000Z",
-    "tags": [],
+    "tags": [
+      "video"
+    ],
     "summary": "At Atlassian we build software which unleashes the potential of all teams. As cross-disciplinary teams ourselves, we empathise with one key fact: work and collaboration is messy. Indeed: how often have you found yourself brainstorming ideas and immediately turning them into a perfect arrangement of…",
     "fetchedAt": "2026-07-11T13:26:06.332Z"
   },
@@ -755,7 +943,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/multi-region-kms-encryption-at-scale",
     "source": "atlassian",
     "publishedAt": "2023-06-23T10:39:00.000Z",
-    "tags": [],
+    "tags": [
+      "security",
+      "data"
+    ],
     "summary": "How Atlassian uses encryption at scale to protect your data, the challenges we faced on the way, and the technology we built to get us there.",
     "fetchedAt": "2026-07-11T13:26:08.535Z"
   },
@@ -765,7 +956,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/atlassian-own-multi-factor-authentication-library",
     "source": "atlassian",
     "publishedAt": "2022-11-18T07:48:18.000Z",
-    "tags": [],
+    "tags": [
+      "security"
+    ],
     "summary": "In July 2022, Atlassian implemented 1time, the company’s own multi-factor authentication (MFA) library with time-based one-time passwords (TOTP), moving away from a previous MFA provider. MFA allows Atlassian accounts to enhance their account security by providing a second factor besides their…",
     "fetchedAt": "2026-07-11T13:26:08.535Z"
   },
@@ -775,7 +968,13 @@
     "url": "https://www.atlassian.com/blog/how-we-build/how-we-migrated-complex-ci-cd-workflows-to-bitbucket-pipelines",
     "source": "atlassian",
     "publishedAt": "2022-09-02T21:41:40.000Z",
-    "tags": [],
+    "tags": [
+      "security",
+      "devops",
+      "cloud",
+      "performance",
+      "data"
+    ],
     "summary": "In late 2021, we fully migrated Bitbucket Cloud from a data center to AWS to improve reliability, security, and performance. One of our focus areas in this massive project was migrating complex CI/CD (Continuous Integration / Continuous Delivery) workflows to Bitbucket Pipelines. We wanted to…",
     "fetchedAt": "2026-07-11T13:26:08.535Z"
   },
@@ -785,7 +984,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/atlassian-critical-services-above-six-nines-of-availability",
     "source": "atlassian",
     "publishedAt": "2022-08-18T03:47:59.000Z",
-    "tags": [],
+    "tags": [
+      "cloud",
+      "infra"
+    ],
     "summary": "In 2019, we wrote about Tenant Context Service (TCS), a critical infrastructure service at Atlassian which is called multiple times in the path of every web request for the majority of our cloud products. Since then, the TCS team has worked on many improvements to our client sidecar (a sidecar is a…",
     "fetchedAt": "2026-07-11T13:26:08.535Z"
   },
@@ -795,7 +997,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/fixing-trello-react-bug",
     "source": "atlassian",
     "publishedAt": "2022-07-29T06:14:03.000Z",
-    "tags": [],
+    "tags": [
+      "frontend"
+    ],
     "summary": "Recently, the Trello engineering team fixed a React bug where Trello’s date picker wouldn’t render correctly. When some customers tried to edit the date on a Trello card, they’d only see a blank popover. At first, no one on the team was able to reproduce the bug or anything similar to it. The…",
     "fetchedAt": "2026-07-11T13:26:08.535Z"
   },
@@ -805,7 +1009,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/colorful-and-accessible-theming-in-trello",
     "source": "atlassian",
     "publishedAt": "2022-07-12T02:06:56.000Z",
-    "tags": [],
+    "tags": [
+      "product",
+      "frontend"
+    ],
     "summary": "The Trello engineering, design, and product teams recently created new colorful and accessible board themes using CSS custom properties (also known as CSS variables). We began with the following questions: While applying a dark or light theme to an application is common, how can we build a fun,…",
     "fetchedAt": "2026-07-11T13:26:08.535Z"
   },
@@ -815,7 +1022,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/faster-git-push-over-https-for-bitbucket-cloud",
     "source": "atlassian",
     "publishedAt": "2022-06-21T23:03:15.000Z",
-    "tags": [],
+    "tags": [
+      "cloud",
+      "infra"
+    ],
     "summary": "Bitbucket Cloud is a Git based code hosting and collaboration tool that allows you to interact with your repositories over either HTTPS or SSH. The services that host each protocol share many common components and underlying infrastructure, but in the past, SSH has outperformed HTTPS when uploading…",
     "fetchedAt": "2026-07-11T13:26:08.535Z"
   },
@@ -835,7 +1045,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/april-2022-outage-update",
     "source": "atlassian",
     "publishedAt": "2022-04-13T08:30:29.000Z",
-    "tags": [],
+    "tags": [
+      "cloud"
+    ],
     "summary": "As of Apr 18, 2022, 23:57 UTC, all customers impacted by the outage have been restored. On Monday, April 4th, 2022 PT approximately 400 Atlassian Cloud customers experienced a full outage across their Atlassian products. As of April 18th, 2022, we have now restored our customers impacted by the…",
     "fetchedAt": "2026-07-11T13:26:08.535Z"
   },
@@ -845,7 +1057,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/life-of-a-growth-experiment",
     "source": "atlassian",
     "publishedAt": "2021-11-03T22:10:23.000Z",
-    "tags": [],
+    "tags": [
+      "experimentation",
+      "product"
+    ],
     "summary": "A while back, we spoke about What does a Product Growth engineer work on? This was a great introduction to the world of Growth engineering and what we, engineers, do. This blog is going to look more into the details of how we do an experiment, using a real production example. We introduce the flow…",
     "fetchedAt": "2026-07-11T13:26:08.535Z"
   },
@@ -855,7 +1070,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/five-alarm-fire",
     "source": "atlassian",
     "publishedAt": "2021-10-21T22:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "devops",
+      "cloud"
+    ],
     "summary": "Over the last five years, Atlassian has gone through an incredible transformation. We began as a company that built on-premise software and grew to a cloud-first business with 15 million monthly active users hosted on our cloud products. Our cloud customers include enterprises with increasingly…",
     "fetchedAt": "2026-07-11T13:26:08.535Z"
   },
@@ -865,7 +1083,11 @@
     "url": "https://www.atlassian.com/blog/how-we-build/how-we-build-data-residency-for-atlassian-cloud",
     "source": "atlassian",
     "publishedAt": "2021-08-26T23:53:10.000Z",
-    "tags": [],
+    "tags": [
+      "cloud",
+      "architecture",
+      "data"
+    ],
     "summary": "The beginning of multi-region in cloud We have written before about our journey from our own data centres to utilising AWS. This migration of Jira and Confluence into AWS was only the start of our journey of evolving our architecture to a more cloud-native approach. In this blog, we want to talk…",
     "fetchedAt": "2026-07-11T13:26:08.535Z"
   },
@@ -875,7 +1097,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/revamping-confluence-cloud-search",
     "source": "atlassian",
     "publishedAt": "2021-07-21T22:42:13.000Z",
-    "tags": [],
+    "tags": [
+      "cloud"
+    ],
     "summary": "We are happy to announce that Confluence Cloud Search is now powered by a new, scalable, and improved platform since August 2020. This has played an integral role in achieving our 10K goal (10k users per tenant), which went live on August 17, 2020. This blog describes more reasons for moving to the…",
     "fetchedAt": "2026-07-11T13:26:08.535Z"
   },
@@ -885,7 +1109,11 @@
     "url": "https://www.atlassian.com/blog/how-we-build/unlocking-reliability-with-splunk-smartstore",
     "source": "atlassian",
     "publishedAt": "2021-07-08T00:43:30.000Z",
-    "tags": [],
+    "tags": [
+      "observability",
+      "devops",
+      "data"
+    ],
     "summary": "Atlassian developers use Splunk as the primary tool to search for and analyze logs from applications, appliances, and platforms. As Atlassian grows and introduces new features and services to our customers, the volume of telemetry data, including logs shipped to our Observability data sinks like…",
     "fetchedAt": "2026-07-11T13:26:08.535Z"
   },
@@ -915,7 +1143,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/cloud-overview",
     "source": "atlassian",
     "publishedAt": "2021-04-12T23:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "cloud"
+    ],
     "summary": "People. That is my leadership strategy – pure and simple. Find amazing people. Give them tools, frameworks, teammates, autonomy, and a mission. Do everything in my power to help them do their best work. Over the last five years, we’ve done just that – created an amazing engineering team to help…",
     "fetchedAt": "2026-07-11T13:26:11.074Z"
   },
@@ -925,7 +1155,11 @@
     "url": "https://www.atlassian.com/blog/how-we-build/reducing-jql-database-load-with-caches",
     "source": "atlassian",
     "publishedAt": "2021-02-02T11:40:14.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "cloud",
+      "data"
+    ],
     "summary": "Jira Cloud poses some unique database scaling challenges, due to high query complexity causing high database load and slow queries. Queries run against the database are often highly repetitive and on the surface very cachable, but are not currently being cached. Horizontal scaling is the main…",
     "fetchedAt": "2026-07-11T13:26:11.074Z"
   },
@@ -935,7 +1169,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/performance-in-jira-front-end-solving-bundle-duplicates-with-webpack-and-yarn",
     "source": "atlassian",
     "publishedAt": "2020-12-23T00:34:19.000Z",
-    "tags": [],
+    "tags": [
+      "cloud",
+      "performance"
+    ],
     "summary": "This is the third and final blog in our series on our recent work reducing the amount of JavaScript downloaded from the Jira cloud front-end (Read part 1 and part 2). This blog describes the work that was done to create a Webpack plugin to de-duplicate transitive dependencies. We found that this…",
     "fetchedAt": "2026-07-11T13:26:11.074Z"
   },
@@ -945,7 +1182,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/performance-in-jira-front-end-modern-bundles",
     "source": "atlassian",
     "publishedAt": "2020-12-06T06:23:35.000Z",
-    "tags": [],
+    "tags": [
+      "cloud",
+      "performance"
+    ],
     "summary": "This is the second blog in our three-part series covering some recent work in Jira cloud front-end to reduce the amount of JavaScript that’s downloaded when loading pages. Part 1 focused on the process of discovering and implementing a relatively small performance fix with a significant impact. In…",
     "fetchedAt": "2026-07-11T13:26:11.074Z"
   },
@@ -955,7 +1195,13 @@
     "url": "https://www.atlassian.com/blog/how-we-build/performance-in-jira-front-end",
     "source": "atlassian",
     "publishedAt": "2020-11-17T06:11:09.000Z",
-    "tags": [],
+    "tags": [
+      "cloud",
+      "performance",
+      "architecture",
+      "frontend",
+      "backend"
+    ],
     "summary": "At Atlassian, we are continuously working to improve the performance of Jira Cloud. This is something we’ve mentioned a number of times in the past: backend improvements found through profiling, changing serialization formats, introducing server-side rendering, and improving our React architecture.…",
     "fetchedAt": "2026-07-11T13:26:11.074Z"
   },
@@ -965,7 +1211,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/scaling-rearchitecting-and-decomposing-confluence-cloud",
     "source": "atlassian",
     "publishedAt": "2020-10-22T02:51:15.000Z",
-    "tags": [],
+    "tags": [
+      "cloud",
+      "performance"
+    ],
     "summary": "This blog covers the journey of Confluence Cloud – the team workspace for collaboration and knowledge sharing used by thousands of companies – and how we aim to take it to the next level, with scale, performance, and resilience as the key motivators. Moving Confluence to a stateless multi-tenant…",
     "fetchedAt": "2026-07-11T13:26:11.074Z"
   },
@@ -975,7 +1224,11 @@
     "url": "https://www.atlassian.com/blog/how-we-build/scaling-bitbuckets-database",
     "source": "atlassian",
     "publishedAt": "2020-10-08T09:32:48.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "data",
+      "backend"
+    ],
     "summary": "Bitbucket’s usage is growing Two services at the core of Bitbucket are gu-bb and gu-api, responsible for serving the Bitbucket website and our public REST API. These services are built on the Django web framework, serving millions of requests every hour. On average, each of these requests…",
     "fetchedAt": "2026-07-11T13:26:11.074Z"
   },
@@ -985,7 +1238,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/migrating-the-atlassian-identity-platform-to-aws",
     "source": "atlassian",
     "publishedAt": "2020-07-25T02:42:58.000Z",
-    "tags": [],
+    "tags": [
+      "cloud"
+    ],
     "summary": "Getting features out the door and cleaning up significant architectural tech debt are not mutually exclusive",
     "fetchedAt": "2026-07-11T13:26:11.074Z"
   },
@@ -995,7 +1250,12 @@
     "url": "https://www.atlassian.com/blog/how-we-build/react-resource-router-deep-dive",
     "source": "atlassian",
     "publishedAt": "2020-06-23T07:33:48.000Z",
-    "tags": [],
+    "tags": [
+      "cloud",
+      "performance",
+      "architecture",
+      "frontend"
+    ],
     "summary": "A deep dive into React Resource Router and its impact on the Jira Cloud experience.",
     "fetchedAt": "2026-07-11T13:26:11.074Z"
   },
@@ -1015,7 +1275,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/what-does-a-product-growth-engineer-work-on",
     "source": "atlassian",
     "publishedAt": "2020-05-21T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "product",
+      "infra"
+    ],
     "summary": "Atlassian has many different software development teams within our Engineering organization. Some teams focus on products such as Jira, Confluence, or Bitbucket. Many others work on platform-focused capabilities or infrastructure shared between products. In this blog post, we’re going to focus on…",
     "fetchedAt": "2026-07-11T13:26:11.074Z"
   },
@@ -1025,7 +1288,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/best-practices-for-change-management-in-the-age-of-devops",
     "source": "atlassian",
     "publishedAt": "2020-05-13T02:33:16.000Z",
-    "tags": [],
+    "tags": [
+      "devops"
+    ],
     "summary": "Insights and advice from Atlassian software engineering leaders.",
     "fetchedAt": "2026-07-11T13:26:11.074Z"
   },
@@ -1035,7 +1300,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/using-protobuf-to-make-jira-cloud-faster",
     "source": "atlassian",
     "publishedAt": "2020-04-24T07:21:28.000Z",
-    "tags": [],
+    "tags": [
+      "cloud"
+    ],
     "summary": "Atlassian’s mission is to help unleash the potential of every team, and a critical part of that is to create a world-class cloud platform that can support the needs of our largest customers. For Jira, this means supporting massive numbers of Issues in a single Jira site. A significant part of Jira…",
     "fetchedAt": "2026-07-11T13:26:11.074Z"
   },
@@ -1045,7 +1312,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/how-to-export-kubernetes-events-for-observability-and-alerting",
     "source": "atlassian",
     "publishedAt": "2020-04-08T23:00:48.000Z",
-    "tags": [],
+    "tags": [
+      "infra",
+      "observability"
+    ],
     "summary": "A hidden gem in Kubernetes might be holding a lot of information.",
     "fetchedAt": "2026-07-11T13:26:11.074Z"
   },
@@ -1055,7 +1325,11 @@
     "url": "https://www.atlassian.com/blog/how-we-build/scaling-react-server-side-rendering-in-jira-cloud",
     "source": "atlassian",
     "publishedAt": "2020-02-04T16:26:00.000Z",
-    "tags": [],
+    "tags": [
+      "cloud",
+      "performance",
+      "frontend"
+    ],
     "summary": "For the past 18 months, we’ve been iterating on and improving a React server-side rendering service to support the frontend in our cloud-hosted Jira offering. During this time, the service has grown fairly organically from a side-project spiking a proof-of-concept, to a performance-critical service…",
     "fetchedAt": "2026-07-11T13:26:13.114Z"
   },
@@ -1065,7 +1339,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/automated-testing-5-lessons-from-atlassians-kubernetes-team-on-testing-infrastructure-as-code",
     "source": "atlassian",
     "publishedAt": "2020-01-22T17:24:26.000Z",
-    "tags": [],
+    "tags": [
+      "infra",
+      "testing"
+    ],
     "summary": "Today, the infrastructure world is moving much faster than ever before. It’s easy to provision hundreds of servers in seconds and have them online and usable within minutes. With all of that power comes the ability to iterate faster – and the potential for more bugs, more incidents, and more…",
     "fetchedAt": "2026-07-11T13:26:13.114Z"
   },
@@ -1075,7 +1352,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/using-an-event-driven-architecture-to-improve-jira-software-responsiveness",
     "source": "atlassian",
     "publishedAt": "2019-11-05T17:14:27.000Z",
-    "tags": [],
+    "tags": [
+      "product",
+      "architecture"
+    ],
     "summary": "Imagine a team working remotely or collocated. The team is made up of engineers, architects, designers, and product managers, and they all use Jira Software to collaborate on their day-to-day work. However, every time one of them updates an issue, project, or board, their fellow team members do not…",
     "fetchedAt": "2026-07-11T13:26:13.114Z"
   },
@@ -1085,7 +1365,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/java-debugging-at-scale-when-rare-events-become-commonplace",
     "source": "atlassian",
     "publishedAt": "2019-09-05T03:45:36.000Z",
-    "tags": [],
+    "tags": [
+      "cloud"
+    ],
     "summary": "As an individual contributor at Atlassian, one aspect of my job is resolving bugs in production. This can be a challenging and enjoyable form of problem solving. I recently helped understand and fix an intermittent problem with Jira Cloud. It was an interesting tale, not just because of the root…",
     "fetchedAt": "2026-07-11T13:26:13.114Z"
   },
@@ -1095,7 +1377,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/a-look-at-trello-adopting-graphql-and-apollo-in-a-legacy-application",
     "source": "atlassian",
     "publishedAt": "2019-08-28T16:06:34.000Z",
-    "tags": [],
+    "tags": [
+      "frontend",
+      "backend"
+    ],
     "summary": "Trello is currently undergoing a big technological shift on the frontend, and an important part of this shift has been our approach to incrementally adopting GraphQL. We’ve used a client-side GraphQL schema (in a creative way) to quickly unlock the benefits of GraphQL. If you’re considering moving…",
     "fetchedAt": "2026-07-11T13:26:13.114Z"
   },
@@ -1105,7 +1390,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/cloud-migration-strategy-confluence",
     "source": "atlassian",
     "publishedAt": "2019-08-22T18:08:33.000Z",
-    "tags": [],
+    "tags": [
+      "cloud"
+    ],
     "summary": "Our journey toward a better migration path for customers.",
     "fetchedAt": "2026-07-11T13:26:13.114Z"
   },
@@ -1115,7 +1402,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/aws-scaling-multi-region-low-latency-service",
     "source": "atlassian",
     "publishedAt": "2019-05-21T20:09:03.000Z",
-    "tags": [],
+    "tags": [
+      "cloud",
+      "performance"
+    ],
     "summary": "Engineering stateless, high-availability cloud services comes with juuuuuuust a few challenges. Here’s how we (eventually) slayed the dragon.",
     "fetchedAt": "2026-07-11T13:26:13.114Z"
   },
@@ -1125,7 +1415,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/spec-first-api-development",
     "source": "atlassian",
     "publishedAt": "2019-04-02T16:37:45.000Z",
-    "tags": [],
+    "tags": [
+      "backend"
+    ],
     "summary": "An implementation-first approach to API development is all well and good… but might spec-first be even better?",
     "fetchedAt": "2026-07-11T13:26:13.114Z"
   },
@@ -1135,7 +1427,11 @@
     "url": "https://www.atlassian.com/blog/how-we-build/jira-performance-engineering",
     "source": "atlassian",
     "publishedAt": "2019-03-08T02:00:39.000Z",
-    "tags": [],
+    "tags": [
+      "cloud",
+      "performance",
+      "architecture"
+    ],
     "summary": "Go behind the scenes with the Jira team and see how we performance-engineered our way to a zero-affinity cloud architecture that runs at enterprise scale.",
     "fetchedAt": "2026-07-11T13:26:13.114Z"
   },
@@ -1155,7 +1451,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/our-security-incident-management-process",
     "source": "atlassian",
     "publishedAt": "2019-02-13T21:06:16.000Z",
-    "tags": [],
+    "tags": [
+      "security",
+      "product"
+    ],
     "summary": "On the security team, we don’t manage any Atlassian products like other Atlassian teams do. Our main product is trust, and that’s a job that’s never finished. To me, security is more of a mindset; one of constant diligence, continuous improvement, and seeking out ways to innovate. Sometimes…",
     "fetchedAt": "2026-07-11T13:26:13.114Z"
   },
@@ -1185,7 +1484,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/getting-serious-about-cloud-migration",
     "source": "atlassian",
     "publishedAt": "2018-10-23T17:00:32.000Z",
-    "tags": [],
+    "tags": [
+      "cloud",
+      "testing"
+    ],
     "summary": "Cloud is a big part of Atlassian’s future, and we’re more focused than ever on delivering a great Server to Cloud migration experience. When developing software, there is no better way to test than doing it yourself. So that’s what we did. In an effort to learn more, understand pain points, and…",
     "fetchedAt": "2026-07-11T13:26:13.114Z"
   },
@@ -1205,7 +1507,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/project-roomba",
     "source": "atlassian",
     "publishedAt": "2018-10-10T03:18:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "The underlying storage engine that powers Trello’s data environment was unhealthy and sluggish, so we invested time into fixing it with the hope that our future selves could then focus on the data and the people who need it. So far it’s working (for example, we reduced the overall data size by…",
     "fetchedAt": "2026-07-11T13:26:16.315Z"
   },
@@ -1215,7 +1519,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/why-we-chose-kafka",
     "source": "atlassian",
     "publishedAt": "2018-03-30T03:51:47.000Z",
-    "tags": [],
+    "tags": [
+      "networking",
+      "architecture"
+    ],
     "summary": "Trello has been using RabbitMQ for the last three years. Prior to RabbitMQ, we were relying on a Redis Pub-Sub implementation. Recently, due to RabbitMQ’s questionable behavior when network partitions occur, we’ve made the switch over to Kafka. This blog post goes into depth on our RabbitMQ…",
     "fetchedAt": "2026-07-11T13:26:16.315Z"
   },
@@ -1225,7 +1532,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/how-to-release-a-buggy-app-and-live-to-tell-the-story",
     "source": "atlassian",
     "publishedAt": "2018-03-14T03:18:25.000Z",
-    "tags": [],
+    "tags": [
+      "devops"
+    ],
     "summary": "Bugs! No matter how many times I decree that my coworkers and I must stop writing bugs, we keep on doing it anyways. Even worse, sometimes those bugs make it into production, where users run into them! The fact of the matter is, you are going to someday release a buggy app. Even with layers of […]",
     "fetchedAt": "2026-07-11T13:26:16.315Z"
   },
@@ -1245,7 +1554,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/think-outside-the-red-box",
     "source": "atlassian",
     "publishedAt": "2018-02-21T02:29:22.000Z",
-    "tags": [],
+    "tags": [
+      "devops"
+    ],
     "summary": "Have you ever returned to work in the morning and found a couple of Trello boards with this lovely cryptic red box? “You have been disconnected from the Trello Server for too long.” – wait, what? Over the Christmas / New Years break we deployed some changes to reduce how frequently this frustrating…",
     "fetchedAt": "2026-07-11T13:26:16.315Z"
   },
@@ -1255,7 +1566,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/kotlin-at-trello",
     "source": "atlassian",
     "publishedAt": "2018-01-31T02:36:28.000Z",
-    "tags": [],
+    "tags": [
+      "mobile"
+    ],
     "summary": "This post is intended to be a sequel to the Talking Kotlin podcast episode that featured Huyen Tue Dao and me. We recorded it in May 2017. If you haven’t given it a listen, go check it out! A quick recap from the conversation: We started using Kotlin in October of 2016, right around when Kotlin…",
     "fetchedAt": "2026-07-11T13:26:16.315Z"
   },
@@ -1285,7 +1598,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/dont-use-nodejs-yet",
     "source": "atlassian",
     "publishedAt": "2017-04-19T01:35:36.000Z",
-    "tags": [],
+    "tags": [
+      "devops"
+    ],
     "summary": "tl;dr: Don’t use Node 7 until this PR is released. Background We’ve been working for quite some time to try and transition the Trello Server codebase to Node v7. Initially this was prevented by our quite old version of Mongoose, which got slower (by about 20%) when upgrading. After working through…",
     "fetchedAt": "2026-07-11T13:26:16.315Z"
   },
@@ -1295,7 +1610,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/sync-indicators",
     "source": "atlassian",
     "publishedAt": "2017-03-31T03:18:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Early on, we realized that we needed some way to communicate to the user when data isn’t synced with the server yet. Otherwise, you could end up in a frustrating situation where you see a card you created on your device, but no one else can see it and you don’t know why. Design The […]",
     "fetchedAt": "2026-07-11T13:26:16.315Z"
   },
@@ -1305,7 +1622,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/sync-downloads",
     "source": "atlassian",
     "publishedAt": "2017-03-22T03:17:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Most of what I’ve written so far has been about uploading changes from the client to the server. But we found it is equally important to download changes from the server periodically, too. What use is offline mode when you aren’t viewing fresh data? How can you share perspective with someone if you…",
     "fetchedAt": "2026-07-11T13:26:16.315Z"
   },
@@ -1315,7 +1634,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/ios-i18n-plurals",
     "source": "atlassian",
     "publishedAt": "2017-03-17T01:31:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "culture"
+    ],
     "summary": "On page 52 of my copy of K&R, in a discussion of the ?: operator, is this line of code: printf(“You have %d item%s.n”, n, n==1 ? “” : “s”); And thus began my decades-long proliferation of plural-unfriendly strings. I would later learn that not all languages base pluralization on whether the…",
     "fetchedAt": "2026-07-11T13:26:16.315Z"
   },
@@ -1325,7 +1647,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/sync-offline-attachments",
     "source": "atlassian",
     "publishedAt": "2017-03-14T21:01:55.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "data"
+    ],
     "summary": "When writing offline mode, attachments proved to be a uniquely difficult aspect of syncing. The nature of attachments differ from other data in Trello. Most data in Trello are simple numbers and strings. Files are an entirely different beast; they’re large and unwieldy. File permissions On Android,…",
     "fetchedAt": "2026-07-11T13:26:16.315Z"
   },
@@ -1355,7 +1680,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/sync-failure-handling",
     "source": "atlassian",
     "publishedAt": "2017-03-01T04:13:03.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "networking"
+    ],
     "summary": "In the last article we discussed how we sync our changes with the server. Ideally, those HTTP requests would always work – if only we could walk the rosy path of best-case scenarios! Unfortunately, when it comes to network requests, all sorts of madness can occur. It’s best to bake madness-handling…",
     "fetchedAt": "2026-07-11T13:26:18.722Z"
   },
@@ -1365,7 +1693,11 @@
     "url": "https://www.atlassian.com/blog/how-we-build/syncing-changes",
     "source": "atlassian",
     "publishedAt": "2017-02-23T04:12:19.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "video",
+      "data"
+    ],
     "summary": "Going offline meant using our database for all immediate changes to the client. But obviously we later want to sync those changes with the server. The basic idea behind our sync is to store changes made offline as a series of deltas that are later uploaded to the server. In this post I’m going to…",
     "fetchedAt": "2026-07-11T13:26:18.722Z"
   },
@@ -1375,7 +1707,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/sync-architecture",
     "source": "atlassian",
     "publishedAt": "2017-02-15T04:10:52.000Z",
-    "tags": [],
+    "tags": [
+      "mobile"
+    ],
     "summary": "Good news, everyone! The Trello mobile apps now work offline! Offline mode has been the most requested mobile feature for years. It’s frustrating to lose the ability to use Trello when you enter the subway or you’re flying on a plane. Even more importantly, using Trello in an area with poor cell…",
     "fetchedAt": "2026-07-11T13:26:18.722Z"
   },
@@ -1385,7 +1719,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/deploy-java-apps-with-docker-awesome",
     "source": "atlassian",
     "publishedAt": "2017-01-13T13:22:27.000Z",
-    "tags": [],
+    "tags": [
+      "infra",
+      "devops"
+    ],
     "summary": "For those new to Docker, let me say “Welcome to the party!” It’s an easy way to deploy, run, and manage applications using vm-like containers that are independent of elements like hardware and language, which makes these containers highly portable. And it’s all the rage. So how do you deploy Java…",
     "fetchedAt": "2026-07-11T13:26:18.722Z"
   },
@@ -1395,7 +1732,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/ios-i18n-designing-for-translators",
     "source": "atlassian",
     "publishedAt": "2016-09-15T01:39:15.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "frontend"
+    ],
     "summary": "When coding i18n support in an iOS app, you need to know technical things like how to use Localizable.strings files and NSLocalizedString(). And when designing the UI, you need to understand right-to-left interfaces and remember that any element with text can vary in width considerably. But one…",
     "fetchedAt": "2026-07-11T13:26:18.722Z"
   },
@@ -1405,7 +1745,11 @@
     "url": "https://www.atlassian.com/blog/how-we-build/android-schemas",
     "source": "atlassian",
     "publishedAt": "2016-08-17T03:09:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "databases",
+      "data"
+    ],
     "summary": "For many years, Trello Android has used a simple system for upgrading the database schema: drop the entire database, recreate it, and repopulate the data from the server! While far from ideal, this solution worked because the Trello server was the only source of truth. Any change you made in the…",
     "fetchedAt": "2026-07-11T13:26:18.722Z"
   },
@@ -1435,7 +1779,11 @@
     "url": "https://www.atlassian.com/blog/how-we-build/tracking-blogs-with-jira-custom-fields",
     "source": "atlassian",
     "publishedAt": "2016-03-10T14:00:42.000Z",
-    "tags": [],
+    "tags": [
+      "observability",
+      "performance",
+      "data"
+    ],
     "summary": "I can hold my own with math and numbers, but I don’t love them. I have to admit though, I’m starting to love data. Like many marketers, I spend a lot of time thinking about blogs. And blogging itself is becoming increasingly data-informed (if not fully data-driven, but that’s another story). How…",
     "fetchedAt": "2026-07-11T13:26:18.722Z"
   },
@@ -1445,7 +1793,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/trellisheets-how-we-spin-up-css-for-trello-sites-with-ease",
     "source": "atlassian",
     "publishedAt": "2016-03-02T02:56:39.000Z",
-    "tags": [],
+    "tags": [
+      "frontend"
+    ],
     "summary": "We’ve talked about our CSS a lot in the past. We did a State of the Trello CSS and published a guide for writing CSS. We’ve wrapped up everything we’ve learned into Trellisheets, a public repo for all things CSS at Trello. What’s in the project? Our core CSS files. We use these on multiple sites to…",
     "fetchedAt": "2026-07-11T13:26:18.722Z"
   },
@@ -1465,7 +1815,9 @@
     "url": "https://www.atlassian.com/blog/how-we-build/service-desk-every-team-atlasisans-hr-team-uses-jira-service-desk",
     "source": "atlassian",
     "publishedAt": "2015-06-11T14:00:05.000Z",
-    "tags": [],
+    "tags": [
+      "testing"
+    ],
     "summary": "The way we help each other inside of organizations is changing. With internal team collaboration so critical to success, how teams service and provide support to others in the organization is becoming a new way of approaching work. In our latest blog on this topic, we found that 50% of…",
     "fetchedAt": "2026-07-11T13:26:18.722Z"
   },
@@ -1475,7 +1827,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/apple-watch",
     "source": "atlassian",
     "publishedAt": "2015-04-25T02:02:21.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "testing"
+    ],
     "summary": "We, like all of you, watched with great anticipation in September as Apple announced their latest technological marvel. At the time we had no idea what this meant for our current iOS app. What kind of capabilities would WatchKit have and how could we integrate that into our existing codebase? Now…",
     "fetchedAt": "2026-07-11T13:26:18.722Z"
   },
@@ -1485,7 +1840,10 @@
     "url": "https://www.atlassian.com/blog/how-we-build/victor",
     "source": "atlassian",
     "publishedAt": "2015-04-01T03:08:50.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "open-source"
+    ],
     "summary": "The Android team at Trello is happy to announce our first open source Android library, Victor! It’s a Gradle plugin that lets you use SVGs as resources in your Android apps. Victor started as a request from our designers. They were regularly creating vector icons that they would later convert to…",
     "fetchedAt": "2026-07-11T13:26:18.722Z"
   },

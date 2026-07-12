@@ -1874,7 +1874,9 @@
     "url": "https://engineering.grab.com/uncovering-the-truth-behind-lua-and-redis-data-consistency",
     "source": "grab",
     "publishedAt": "2020-09-07T08:43:40.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
@@ -2014,7 +2016,9 @@
     "url": "https://engineering.grab.com/preventing-app-performance-degradation-due-to-sudden-ride-demand-spikes",
     "source": "grab",
     "publishedAt": "2020-01-08T15:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "performance"
+    ],
     "summary": "",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },

@@ -59,14 +59,15 @@ export function parseGrabArchivePage(html: string, pageUrl: string): ArchivePage
       .map((_i, tag) => $(tag).text().trim())
       .get()
       .filter(Boolean);
+    const featuredSummary = summarize(featured.find(".post-content").first().html() ?? "");
     articles.push({
       id: articleId(absolute),
       title: featuredTitle,
       url: normalizeUrl(absolute),
       source: "grab",
       publishedAt,
-      tags: resolveTags(tags, "grab"),
-      summary: summarize(featured.find(".post-content").first().html() ?? ""),
+      tags: resolveTags(tags, "grab", `${featuredTitle} ${featuredSummary}`),
+      summary: featuredSummary,
       fetchedAt,
     });
   }
@@ -88,14 +89,15 @@ export function parseGrabArchivePage(html: string, pageUrl: string): ArchivePage
       .get()
       .filter(Boolean);
 
+    const summary = summarize("");
     articles.push({
       id: articleId(absolute),
       title,
       url: normalizeUrl(absolute),
       source: "grab",
       publishedAt,
-      tags: resolveTags(tags, "grab"),
-      summary: summarize(""),
+      tags: resolveTags(tags, "grab", `${title} ${summary}`),
+      summary,
       fetchedAt,
     });
   });
