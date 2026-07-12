@@ -227,6 +227,17 @@ function resolveTag(rawTag: string): CanonicalTag | null {
   return null;
 }
 
+/** Runs the same keyword rules against free text (title + summary) instead of
+ * a raw category string. Used as a fallback for sources whose feeds carry no
+ * `<category>` data at all, or whose categories don't resolve to anything. */
+function inferTagsFromText(text: string): CanonicalTag[] {
+  const result = new Set<CanonicalTag>();
+  for (const rule of KEYWORD_RULES) {
+    if (rule.pattern.test(text)) result.add(rule.tag);
+  }
+  return [...result];
+}
+
 /** Collects raw tags that didn't resolve, for the end-of-run review artifact. */
 export class UnmappedTagCollector {
   private readonly entries = new Map<string, UnmappedTag>();
@@ -250,10 +261,17 @@ export class UnmappedTagCollector {
 export const unmappedTags = new UnmappedTagCollector();
 
 /** Resolves raw RSS/scraped category strings into deduplicated canonical
- * tags, recording any that don't resolve on `unmapped` for later review. */
+ * tags, recording any that don't resolve on `unmapped` for later review.
+ *
+ * When no category string resolves (or none were provided), falls back to
+ * matching `fallbackText` (typically `title + summary`) against the same
+ * keyword rules — this is what lets sources with no `<category>` data (or
+ * categories too vague to map, like Atlassian's "How We Build") still pick up
+ * a tag most of the time, instead of defaulting to an empty array. */
 export function resolveTags(
   rawTags: string[],
   source: string,
+  fallbackText = "",
   unmapped: UnmappedTagCollector = unmappedTags,
 ): CanonicalTag[] {
   const result = new Set<CanonicalTag>();
@@ -266,6 +284,9 @@ export function resolveTags(
     } else {
       unmapped.record(trimmed, source);
     }
+  }
+  if (result.size === 0 && fallbackText.trim()) {
+    for (const tag of inferTagsFromText(fallbackText)) result.add(tag);
   }
   return [...result];
 }

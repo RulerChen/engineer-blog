@@ -45,14 +45,15 @@ export function parseGithubArchivePage(html: string, pageUrl: string): ArchivePa
       dateAttr && !Number.isNaN(Date.parse(dateAttr)) ? new Date(dateAttr).toISOString() : "";
     const category = post.find("a.first-post-category").first().text().trim();
 
+    const summary = summarize(post.find(".f4-mktg.color-fg-muted p").first().html() ?? "");
     articles.push({
       id: articleId(absolute),
       title,
       url: normalizeUrl(absolute),
       source: "github",
       publishedAt,
-      tags: resolveTags(category ? [category] : [], "github"),
-      summary: summarize(post.find(".f4-mktg.color-fg-muted p").first().html() ?? ""),
+      tags: resolveTags(category ? [category] : [], "github", `${title} ${summary}`),
+      summary,
       fetchedAt,
     });
   });

@@ -52,14 +52,15 @@ export function parseStripeArchivePage(html: string, pageUrl: string): ArchivePa
       dateAttr && !Number.isNaN(Date.parse(dateAttr)) ? new Date(dateAttr).toISOString() : "";
     const category = post.find("a.BlogCategoryLink").first().text().trim();
 
+    const summary = summarize(post.find(".BlogIndexPost__body p").first().html() ?? "");
     articles.push({
       id: articleId(absolute),
       title,
       url: normalizeUrl(absolute),
       source: "stripe",
       publishedAt,
-      tags: resolveTags(category ? [category] : [], "stripe"),
-      summary: summarize(post.find(".BlogIndexPost__body p").first().html() ?? ""),
+      tags: resolveTags(category ? [category] : [], "stripe", `${title} ${summary}`),
+      summary,
       fetchedAt,
     });
   });

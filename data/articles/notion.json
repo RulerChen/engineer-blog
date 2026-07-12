@@ -5,7 +5,10 @@
     "url": "https://www.notion.so/blog/building-observability-into-notions-dead-letter-queue",
     "source": "notion",
     "publishedAt": "2026-06-04T19:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "observability",
+      "infra"
+    ],
     "summary": "Learn how we built a self-serve DLQ Explorer that makes failed jobs easy to query, debug, and safely replay—without direct S3 access.",
     "fetchedAt": "2026-07-11T13:19:47.532Z"
   },
@@ -15,7 +18,12 @@
     "url": "https://www.notion.so/blog/enabling-multi-region-data-systems-at-notion",
     "source": "notion",
     "publishedAt": "2026-04-09T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "observability",
+      "data",
+      "infra"
+    ],
     "summary": "Learn how we built multi-region data infrastructure—spanning search, analytics, AI, and event logging—to ensure customer data is processed and stored entirely within its home region.",
     "fetchedAt": "2026-07-11T13:19:47.532Z"
   },
@@ -45,7 +53,10 @@
     "url": "https://www.notion.so/blog/how-we-built-security-into-custom-agents",
     "source": "notion",
     "publishedAt": "2026-02-27T20:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "security",
+      "testing"
+    ],
     "summary": "A look inside the security model behind Custom Agents, and what we learned testing it at scale.",
     "fetchedAt": "2026-07-11T13:19:47.532Z"
   },
@@ -55,7 +66,9 @@
     "url": "https://www.notion.so/blog/two-years-of-vector-search-at-notion",
     "source": "notion",
     "publishedAt": "2026-02-19T17:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "infra"
+    ],
     "summary": "This is the story of how we scaled our vector search infrastructure by 10x while simultaneously reducing costs by 90 percent over the past two years.",
     "fetchedAt": "2026-07-11T13:19:47.532Z"
   },
@@ -65,7 +78,12 @@
     "url": "https://www.notion.so/blog/balancing-cost-and-reliability-for-spark-on-kubernetes",
     "source": "notion",
     "publishedAt": "2026-02-12T17:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "infra",
+      "devops",
+      "cloud",
+      "open-source"
+    ],
     "summary": "Today, we’re excited to open-source Spot Balancer in collaboration with AWS, a tool that helped us reduce Spark compute costs by up to 90% while maintaining reliability.",
     "fetchedAt": "2026-07-11T13:19:47.532Z"
   },
@@ -75,7 +93,10 @@
     "url": "https://www.notion.so/blog/meet-scruff-securitys-new-ai-teammate",
     "source": "notion",
     "publishedAt": "2026-01-12T08:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "security"
+    ],
     "summary": "See how Notion’s security team built Scruff, an AI teammate that automates alert triage, speeds investigations, and scales with on-call demand.",
     "fetchedAt": "2026-07-11T13:19:47.532Z"
   },
@@ -85,7 +106,10 @@
     "url": "https://www.notion.so/blog/how-we-made-notion-available-offline",
     "source": "notion",
     "publishedAt": "2025-12-11T17:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "architecture",
+      "data"
+    ],
     "summary": "Offline Mode was Notion's most requested feature for years, but building it meant solving tough technical challenges around our unique block architecture. Here's the architecture and data model that made it possible.",
     "fetchedAt": "2026-07-11T13:19:47.532Z"
   },
@@ -95,7 +119,11 @@
     "url": "https://www.notion.so/blog/notions-hosted-mcp-server-an-inside-look",
     "source": "notion",
     "publishedAt": "2025-07-15T07:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "open-source",
+      "experimentation"
+    ],
     "summary": "Earlier this year, we got requests for a Notion MCP server that would let AI agents work directly with Notion workspaces. Here’s how we built it, from our initial open-source experiment to today’s hosted solution with custom tools designed specifically for AI workflows.",
     "fetchedAt": "2026-07-11T13:19:47.532Z"
   },
@@ -105,7 +133,11 @@
     "url": "https://www.notion.so/blog/speed-structure-and-smarts-the-notion-ai-way",
     "source": "notion",
     "publishedAt": "2025-05-29T23:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "product",
+      "data"
+    ],
     "summary": "How we combine AI with structured data to deliver a best-in-class work product.",
     "fetchedAt": "2026-07-11T13:19:49.383Z"
   },
@@ -125,7 +157,9 @@
     "url": "https://www.notion.so/blog/how-we-built-custom-emoji",
     "source": "notion",
     "publishedAt": "2025-02-01T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "Our challenge: load millions of personalized, sometimes animated emojis into a workspace without breaking everything. As we strive to make Notion the happiest workspace on earth, it was a technical puzzle worth solving.",
     "fetchedAt": "2026-07-11T13:19:49.383Z"
   },
@@ -135,7 +169,9 @@
     "url": "https://www.notion.so/blog/a-brief-history-of-notions-data-catalog",
     "source": "notion",
     "publishedAt": "2024-10-09T13:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "From chaos to clarity: How Notion transformed its data catalog for better efficiency and insights with TypeScript, JSON Schema, and LLMs.",
     "fetchedAt": "2026-07-11T13:19:49.383Z"
   },
@@ -145,7 +181,11 @@
     "url": "https://www.notion.so/blog/observability-for-notions-redis-queue",
     "source": "notion",
     "publishedAt": "2024-09-23T13:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "observability",
+      "performance",
+      "infra"
+    ],
     "summary": "Enhancing infrastructure visibility and performance with a queue proxy service",
     "fetchedAt": "2026-07-11T13:19:49.383Z"
   },
@@ -165,7 +205,9 @@
     "url": "https://www.notion.so/blog/building-and-scaling-notions-data-lake",
     "source": "notion",
     "publishedAt": "2024-07-01T07:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "In the past 3 years Notion's data has expanded 10x. Here's how we built our data lake to manage this growth.",
     "fetchedAt": "2026-07-11T13:19:49.383Z"
   },
@@ -175,7 +217,10 @@
     "url": "https://www.notion.so/blog/notion-on-android-is-now-more-than-twice-as-fast-to-launch",
     "source": "notion",
     "publishedAt": "2024-05-01T07:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "performance"
+    ],
     "summary": "Here's our approach to optimizing app startup and our ongoing efforts to enhance the mobile experience for all our Android users.",
     "fetchedAt": "2026-07-11T13:19:49.383Z"
   },
@@ -185,7 +230,9 @@
     "url": "https://www.notion.so/blog/gen-z-is-changing-the-way-we-work-are-companies-prepared",
     "source": "notion",
     "publishedAt": "2024-03-05T17:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "testing"
+    ],
     "summary": "Companies need to listen to the next generation of workers and adopt tools that work for all employees. The knowledge workers of today aren’t afraid to demand change, and the companies that aren’t open to it risk losing their best and brightest new talent.",
     "fetchedAt": "2026-07-11T13:19:49.383Z"
   },
@@ -195,7 +242,10 @@
     "url": "https://www.notion.so/blog/the-great-re-shard",
     "source": "notion",
     "publishedAt": "2023-07-17T07:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "data"
+    ],
     "summary": "How we horizontally re-sharded our databases (and nobody noticed).",
     "fetchedAt": "2026-07-11T13:19:49.383Z"
   },
@@ -205,7 +255,10 @@
     "url": "https://www.notion.so/blog/creating-the-notion-api",
     "source": "notion",
     "publishedAt": "2022-01-20T08:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data",
+      "backend"
+    ],
     "summary": "The ability to access Notion content through an API is one of the top requested features from our users. Learn about how we designed our REST API to meet the challenge of preserving the flexibility and expressivity of Notion’s data model.",
     "fetchedAt": "2026-07-11T13:19:51.952Z"
   },
@@ -215,7 +268,10 @@
     "url": "https://www.notion.so/blog/sharding-postgres-at-notion",
     "source": "notion",
     "publishedAt": "2021-10-06T07:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "data"
+    ],
     "summary": "This months-long project migrated Notion’s PostgreSQL monolith into a horizontally-partitioned database fleet — an effort to make Notion faster and more reliable for years to come.",
     "fetchedAt": "2026-07-11T13:19:51.952Z"
   },
@@ -225,7 +281,9 @@
     "url": "https://www.notion.so/blog/migrating-notion-marketing-to-next-js",
     "source": "notion",
     "publishedAt": "2021-08-11T23:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "performance"
+    ],
     "summary": "Improving performance and user experience by moving from a client-rendered marketing site to a static site generated by Next.js.",
     "fetchedAt": "2026-07-11T13:19:51.952Z"
   },
@@ -235,7 +293,10 @@
     "url": "https://www.notion.so/blog/data-model-behind-notion",
     "source": "notion",
     "publishedAt": "2021-05-18T07:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "product",
+      "data"
+    ],
     "summary": "Notion’s data model enables the product’s most foundational component: blocks. Through blocks, we allow users more flexibility and better control over their information.",
     "fetchedAt": "2026-07-11T13:19:51.952Z"
   }

@@ -18,14 +18,16 @@ export async function parseFeed(
   const articles: Article[] = [];
   for (const item of feed.items) {
     if (!item.link) continue;
+    const title = (item.title ?? "").trim();
+    const summary = summarize(item.content ?? item.contentSnippet ?? "");
     articles.push({
       id: articleId(item.link),
-      title: (item.title ?? "").trim(),
+      title,
       url: normalizeUrl(item.link),
       source: sourceId,
       publishedAt: item.isoDate ?? (item.pubDate ? new Date(item.pubDate).toISOString() : ""),
-      tags: resolveTags(item.categories ?? [], sourceId),
-      summary: summarize(item.content ?? item.contentSnippet ?? ""),
+      tags: resolveTags(item.categories ?? [], sourceId, `${title} ${summary}`),
+      summary,
       fetchedAt,
     });
   }

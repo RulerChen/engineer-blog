@@ -5,7 +5,9 @@
     "url": "https://engineeringblog.yelp.com/2026/05/beyond-menu-tree.html",
     "source": "yelp",
     "publishedAt": "2026-05-27T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "The Evolution of Support: From Fixed Phrases to Conversation At Yelp, delivering responsive and accurate customer support is a core priority. For years, our legacy Customer Success (CS) Chatbot provided support by guiding users through a static support experience. Users either navigated a 2-step…",
     "fetchedAt": "2026-07-11T13:24:25.002Z"
   },
@@ -15,7 +17,10 @@
     "url": "https://engineeringblog.yelp.com/2026/05/partition-access-visualizations.html",
     "source": "yelp",
     "publishedAt": "2026-05-21T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data",
+      "infra"
+    ],
     "summary": "Introduction In large analytics environments, data teams often struggle to answer deceptively simple questions, like who their stakeholders are and how their data is being used. At Yelp, we address this by visualizing access patterns, plotting time-based partition key values against access event…",
     "fetchedAt": "2026-07-11T13:24:25.002Z"
   },
@@ -25,7 +30,9 @@
     "url": "https://engineeringblog.yelp.com/2026/05/optimizing-our-build-times-by-migrating-from-webpack-to-rspack.html",
     "source": "yelp",
     "publishedAt": "2026-05-20T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "performance"
+    ],
     "summary": "Over the years, Webpack has remained the bundler of choice for many JS projects, including here at Yelp. While it has served us well, its speed has increasingly become a bottleneck as our monorepo continues to grow. Fortunately, a bunch of new build tools (Vite, Parcel, Rspack, etc.) have emerged…",
     "fetchedAt": "2026-07-11T13:24:25.002Z"
   },
@@ -35,7 +42,11 @@
     "url": "https://engineeringblog.yelp.com/2026/04/keeping-server-driven-ui-consistent-across-platforms.html",
     "source": "yelp",
     "publishedAt": "2026-04-22T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "architecture",
+      "frontend",
+      "backend"
+    ],
     "summary": "If you’ve read our earlier post, you already know about CHAOS—the server-driven UI (SDUI) framework we built at Yelp that powers our dynamic views. Until now, we’ve explored its architecture, backend implementation, and component model. In this post, we’ll dive into how we integrated CHAOS with…",
     "fetchedAt": "2026-07-11T13:24:25.002Z"
   },
@@ -45,7 +56,11 @@
     "url": "https://engineeringblog.yelp.com/2026/04/zero-downtime-upgrade-yelp-cassandra-upgrade-story.html",
     "source": "yelp",
     "publishedAt": "2026-04-07T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "devops",
+      "data"
+    ],
     "summary": "The Database Reliability Engineering team at Yelp seamlessly upgraded more than a thousand Cassandra nodes with zero downtime. This post takes you behind the scenes of our upgrade strategy, from planning sessions to flawless rollouts. Background Motivation Apache Cassandra is a distributed…",
     "fetchedAt": "2026-07-11T13:24:25.002Z"
   },
@@ -55,7 +70,9 @@
     "url": "https://engineeringblog.yelp.com/2026/03/building-baa-from-prototype-to-product.html",
     "source": "yelp",
     "publishedAt": "2026-03-27T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "product"
+    ],
     "summary": "Introduction Users have access to a wealth of information on Yelp business pages – from reviews and photos to structured information, menus, and Ask the Community feature on the business page, a single business page can be an ocean of content. At the same time, user expectations have evolved:…",
     "fetchedAt": "2026-07-11T13:24:25.002Z"
   },
@@ -65,7 +82,9 @@
     "url": "https://engineeringblog.yelp.com/2026/02/how-yelp-built-a-back-testing-engine-for-safer-smarter-ad-budget-allocation.html",
     "source": "yelp",
     "publishedAt": "2026-02-02T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "testing"
+    ],
     "summary": "Introduction Modern advertising platforms are fast-paced and interconnected: even small adjustments can have ripple effects on how ads are shown, how budgets are spent, and the value advertisers get from their ad spend. At Yelp, Ad Budget Allocation means splitting each campaign’s spend between…",
     "fetchedAt": "2026-07-11T13:24:25.002Z"
   },
@@ -75,7 +94,12 @@
     "url": "https://engineeringblog.yelp.com/2025/09/s3-server-access-logs-at-scale.html",
     "source": "yelp",
     "publishedAt": "2025-09-26T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "cloud",
+      "data",
+      "infra"
+    ],
     "summary": "Introduction Yelp heavily relies on Amazon S3 (Simple Storage Service) to store a wide variety of data, from images, logs, database backups, and more. Since data is stored on the cloud, we need to carefully manage how this data is accessed, secured, and eventually deleted—both to control costs and…",
     "fetchedAt": "2026-07-11T13:24:25.002Z"
   },
@@ -85,7 +109,10 @@
     "url": "https://engineeringblog.yelp.com/2025/07/chaos-inside-yelps-sdui-framework.html",
     "source": "yelp",
     "publishedAt": "2025-07-08T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "frontend",
+      "backend"
+    ],
     "summary": "A little while ago, we published a blog post on CHAOS: Yelp’s Unified Framework for Server-Driven UI. We strongly recommend reading that post first to gain a solid understanding of SDUI and the goals of CHAOS. This post builds on those concepts to delve into the inner workings of the CHAOS backend…",
     "fetchedAt": "2026-07-11T13:24:27.033Z"
   },
@@ -95,7 +122,11 @@
     "url": "https://engineeringblog.yelp.com/2025/05/revenue-automation-series-testing-an-integration-with-third-party-system.html",
     "source": "yelp",
     "publishedAt": "2025-05-27T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "devops",
+      "testing",
+      "data"
+    ],
     "summary": "Background As described in the second blog post of Revenue Automation series, Revenue Data Pipeline processes a large amount of data via complex logic transformations to recognize revenue. Thus, developing a robust production testing and integration strategy was essential to the success of this…",
     "fetchedAt": "2026-07-11T13:24:27.033Z"
   },
@@ -105,7 +136,10 @@
     "url": "https://engineeringblog.yelp.com/2025/05/nrtsearch-v1-release.html",
     "source": "yelp",
     "publishedAt": "2025-05-07T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "devops",
+      "networking"
+    ],
     "summary": "It has been over 3 years since we published our Nrtsearch blog post and over 4 years since we started using Nrtsearch, our Lucene-based search engine, in production. We have since migrated over 90% of Elasticsearch traffic to Nrtsearch. We are excited to announce the release of Nrtsearch 1.0.0 with…",
     "fetchedAt": "2026-07-11T13:24:27.033Z"
   },
@@ -115,7 +149,10 @@
     "url": "https://engineeringblog.yelp.com/2025/04/journey-to-zero-trust-access.html",
     "source": "yelp",
     "publishedAt": "2025-04-14T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "security",
+      "architecture"
+    ],
     "summary": "Glossary ZTA: zero trust architecture SAML: security assertion markup language (an SSO facilitation protocol) Devbox: a remote server used to develop software Zero Trust Access Remote Future Yelp is now a fully remote company, which means our employee base has become increasingly distributed across…",
     "fetchedAt": "2026-07-11T13:24:27.033Z"
   },
@@ -125,7 +162,10 @@
     "url": "https://engineeringblog.yelp.com/2025/02/revenue-automation-series-building-revenue-data-pipeline.html",
     "source": "yelp",
     "publishedAt": "2025-02-18T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "devops",
+      "data"
+    ],
     "summary": "Background As Yelp’s business continues to grow, the revenue streams have become more complex due to the increased number of transactions, new products and services. These changes over time have challenged the manual processes involved in Revenue Recognition. As described in the first post of the…",
     "fetchedAt": "2026-07-11T13:24:27.033Z"
   },
@@ -135,7 +175,9 @@
     "url": "https://engineeringblog.yelp.com/2025/02/search-query-understanding-with-LLMs.html",
     "source": "yelp",
     "publishedAt": "2025-02-03T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "How we bring LLM intelligence to millions of daily searches at Yelp. From the moment a user enters a search query to when we present a list of results, understanding the user’s intent is crucial for meeting their needs. Were they looking for a general category of business for that evening, a…",
     "fetchedAt": "2026-07-11T13:24:27.033Z"
   },
@@ -145,7 +187,12 @@
     "url": "https://engineeringblog.yelp.com/2025/01/enhancing-neural-network-training-at-yelp.html",
     "source": "yelp",
     "publishedAt": "2025-01-21T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ml",
+      "networking",
+      "architecture",
+      "data"
+    ],
     "summary": "At Yelp, we encountered challenges that prompted us to enhance the training time of our ad-revenue generating models, which use a Wide and Deep Neural Network architecture for predicting ad click-through rates (pCTR). These models handle large tabular datasets with small parameter spaces, requiring…",
     "fetchedAt": "2026-07-11T13:24:27.033Z"
   },
@@ -155,7 +202,10 @@
     "url": "https://engineeringblog.yelp.com/2024/12/revisiting-compute-scaling.html",
     "source": "yelp",
     "publishedAt": "2024-12-12T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "infra",
+      "cloud"
+    ],
     "summary": "As mentioned in our earlier blog post Fine-tuning AWS ASGs with Attribute Based Instance Selection, we recently embarked on an exciting journey to enhance our Kubernetes cluster’s node autoscaler infrastructure. In this blog post, we’ll delve into the rationale behind transitioning from our…",
     "fetchedAt": "2026-07-11T13:24:27.033Z"
   },
@@ -165,7 +215,9 @@
     "url": "https://engineeringblog.yelp.com/2024/12/modernization-of-yelp's-legacy-billing-system.html",
     "source": "yelp",
     "publishedAt": "2024-12-05T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "devops"
+    ],
     "summary": "This blog focuses on how Yelp successfully implemented a multi-year, cross-organizational initiative to modernize its billing processes. The goal was to automate its revenue recognition system by enhancing integration capabilities with third-party financial systems, all while maintaining the…",
     "fetchedAt": "2026-07-11T13:24:29.057Z"
   },
@@ -175,7 +227,10 @@
     "url": "https://engineeringblog.yelp.com/2024/11/loading-data-into-redshift-with-dbt.html",
     "source": "yelp",
     "publishedAt": "2024-11-05T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "data"
+    ],
     "summary": "At Yelp, we embrace innovation and thrive on exploring new possibilities. With our consumers’ ever growing appetite for data, we recently revisited how we could load data into Redshift more efficiently. In this blog post, we explore how DBT can be used seamlessly with Redshift Spectrum to read data…",
     "fetchedAt": "2026-07-11T13:24:29.057Z"
   },
@@ -185,7 +240,10 @@
     "url": "https://engineeringblog.yelp.com/2024/10/how-we-improved-our-android-navigation-performance-by-~30.html",
     "source": "yelp",
     "publishedAt": "2024-10-07T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "performance"
+    ],
     "summary": "In 2019, Yelp’s Core Android team led an effort to boost navigation performance in Yelp’s Consumer app. We switched from building screens with multiple separate activities to using fragments inside a single activity. In this blog post, we’ll cover our solution, how we approached the migration and…",
     "fetchedAt": "2026-07-11T13:24:29.057Z"
   },
@@ -195,7 +253,10 @@
     "url": "https://engineeringblog.yelp.com/2024/10/migrating-from-postgres-to-mysql.html",
     "source": "yelp",
     "publishedAt": "2024-10-06T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "backend"
+    ],
     "summary": "The Yelp Reservations service (yelp_res) is the service that powers reservations on Yelp. It was acquired along with Seatme in 2013, and is a Django service and webapp. It powers the reservation backend and logic for Yelp Guest Manager, our iPad app for restaurants, and handles diner and partner…",
     "fetchedAt": "2026-07-11T13:24:29.057Z"
   },
@@ -205,7 +266,10 @@
     "url": "https://engineeringblog.yelp.com/2024/09/boosting-ml-pipeline-efficiency-direct-cassandra-ingestion-from-spark.html",
     "source": "yelp",
     "publishedAt": "2024-09-18T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ml",
+      "data"
+    ],
     "summary": "Machine Learning Feature Stores ML Feature Store at Yelp Many of Yelp’s core capabilities such as business search, ads, and reviews are powered by Machine Learning (ML). In order to ensure these capabilities are well supported, we have built a dedicated ML platform. One of the pillars of this…",
     "fetchedAt": "2026-07-11T13:24:29.057Z"
   },
@@ -215,7 +279,11 @@
     "url": "https://engineeringblog.yelp.com/2024/08/dbt-Generic-Tests-in-Sessions-Validation-at-Yelp.html",
     "source": "yelp",
     "publishedAt": "2024-08-13T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "observability",
+      "testing",
+      "data"
+    ],
     "summary": "Sessions, Where Everything Started For the past few years, Yelp has been using dbt as one of the tools to develop data products that power data marts, which are one stop shops for high visibility dashboards pertaining to top level business metrics. One of the key data products that’s owned by my…",
     "fetchedAt": "2026-07-11T13:24:29.057Z"
   },
@@ -225,7 +293,10 @@
     "url": "https://engineeringblog.yelp.com/2024/08/multi-metric-paasta.html",
     "source": "yelp",
     "publishedAt": "2024-08-06T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "observability",
+      "infra"
+    ],
     "summary": "We’re excited to announce that multi-metric horizontal autoscaling is available for all services at Yelp. This allows us to scale services using multiple metrics, such as the number of in-flight requests and CPU utilization, rather than relying on a single metric. We expect this to provide us with…",
     "fetchedAt": "2026-07-11T13:24:29.057Z"
   },
@@ -235,7 +306,11 @@
     "url": "https://engineeringblog.yelp.com/2024/05/fine-tuning-AWS-ASGs-with-attribute-based-instance-selection.html",
     "source": "yelp",
     "publishedAt": "2024-04-30T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "infra",
+      "cloud",
+      "architecture"
+    ],
     "summary": "This is the next installment of our blog series on improving our autoscaling infrastructure. In the previous blog posts (Open-sourcing Clusterman, Recycling kubernetes nodes) we explained the architecture and inner-working of Clusterman. This time we are discussing how attribute based instance…",
     "fetchedAt": "2026-07-11T13:24:29.057Z"
   },
@@ -245,7 +320,9 @@
     "url": "https://engineeringblog.yelp.com/2024/03/moderating-inappropriate-video-content-at-yelp.html",
     "source": "yelp",
     "publishedAt": "2024-03-26T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "video"
+    ],
     "summary": "One of Yelp’s top priorities is the trust and safety of our users. Yelp’s platform is most well-known for its reviews, and its moderation practices have been recognised in academic research for mitigating misinformation and building consumer trust. In addition to reviews, Yelp’s Trust and Safety…",
     "fetchedAt": "2026-07-11T13:24:31.226Z"
   },
@@ -255,7 +332,10 @@
     "url": "https://engineeringblog.yelp.com/2024/03/chaos-yelps-unified-framework-for-server-driven-ui.html",
     "source": "yelp",
     "publishedAt": "2024-03-13T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "frontend"
+    ],
     "summary": "Yelp develops two major applications, Yelp & Yelp for Business, for Web (Desktop & Mobile), iOS, and Android platforms. That’s eight unique clients! Keeping a fresh, consistent UI on all these clients is a major challenge. Server-driven UI (SDUI) has become a standard industry technique for…",
     "fetchedAt": "2026-07-11T13:24:31.226Z"
   },
@@ -265,7 +345,9 @@
     "url": "https://engineeringblog.yelp.com/2024/03/keeping-track-of-engineering-wide-goals-and-migrations.html",
     "source": "yelp",
     "publishedAt": "2024-03-12T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "observability"
+    ],
     "summary": "What is Engineering Effectiveness Metrics (EE Metrics)? EE Metrics was envisioned as a hub that helps teams manage their technical debt. EE Metrics provides every team with a detailed web page that contains information about technical debt that needs to be addressed. It also serves as a platform to…",
     "fetchedAt": "2026-07-11T13:24:31.226Z"
   },
@@ -275,7 +357,10 @@
     "url": "https://engineeringblog.yelp.com/2024/03/ai-pipeline-inappropriate-language-detection.html",
     "source": "yelp",
     "publishedAt": "2024-03-11T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai",
+      "data"
+    ],
     "summary": "Yelp’s mission is to connect consumers with great local businesses by giving them access to reliable and useful information. Consumer trust is one of our top priorities, which is why we make significant investments in technology and human moderation to protect the integrity and quality of content…",
     "fetchedAt": "2026-07-11T13:24:31.226Z"
   },
@@ -285,7 +370,11 @@
     "url": "https://engineeringblog.yelp.com/2024/03/building-data-abstractions-with-streaming-at-yelp.html",
     "source": "yelp",
     "publishedAt": "2024-03-07T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "video",
+      "data",
+      "infra"
+    ],
     "summary": "Yelp relies heavily on streaming to synchronize enormous volumes of data in real time. This is facilitated by Yelp’s underlying data pipeline infrastructure, which manages the real-time flow of millions of messages originating from a plethora of services. This blog post covers how we leverage…",
     "fetchedAt": "2026-07-11T13:24:31.226Z"
   },
@@ -305,7 +394,10 @@
     "url": "https://engineeringblog.yelp.com/2023/07/overview-of-jupyterhub-ecosystem.html",
     "source": "yelp",
     "publishedAt": "2023-07-24T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "devops",
+      "data"
+    ],
     "summary": "At Yelp, Apache Spark and JupyterHub are heavily used for batch processing and interactive use-cases, such as in building feature models, conducting ad-hoc data analysis, sharing templates, making on-boarding materials, creating visualizations, and producing sales reports. Our initial deployments…",
     "fetchedAt": "2026-07-11T13:24:31.226Z"
   },
@@ -315,7 +407,9 @@
     "url": "https://engineeringblog.yelp.com/2023/07/speeding-up-delivery-with-merge-queues.html",
     "source": "yelp",
     "publishedAt": "2023-07-10T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "testing"
+    ],
     "summary": "Merging code safely can be quite time consuming for busy repositories. A common method is to test and merge branches serially, and one at a time, in order to ensure the safety of the main branch. However, this method does not scale well when many developers want to merge code at the same time. In…",
     "fetchedAt": "2026-07-11T13:24:31.226Z"
   },
@@ -325,7 +419,9 @@
     "url": "https://engineeringblog.yelp.com/2023/05/dependency-management-at-scale.html",
     "source": "yelp",
     "publishedAt": "2023-05-16T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "security"
+    ],
     "summary": "Keeping project dependencies up to date is an ever-growing concern. An increasing number of dependencies is used for even the most simple applications. It’s easy for teams to deprioritize maintaining them, resulting in numerous security vulnerabilities. As dependencies become increasingly out of…",
     "fetchedAt": "2026-07-11T13:24:33.256Z"
   },
@@ -335,7 +431,11 @@
     "url": "https://engineeringblog.yelp.com/2023/04/performance-for-free-on-android-with-our-mvi-library.html",
     "source": "yelp",
     "publishedAt": "2023-04-23T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "performance",
+      "architecture"
+    ],
     "summary": "In 2018, Yelp switched from using the MVP architecture to the MVI architecture for Android development. Since then, adoption of our new MVI architecture library has risen and we’ve seen some great performance and scalability wins. In this blog post, we’ll cover why we switched to MVI in the first…",
     "fetchedAt": "2026-07-11T13:24:33.256Z"
   },
@@ -345,7 +445,9 @@
     "url": "https://engineeringblog.yelp.com/2023/04/yelp-content-as-embeddings.html",
     "source": "yelp",
     "publishedAt": "2023-04-19T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Yelp aims to offer easily accessible high-quality content. We need to tag, organize and rank online content to attain this goal. For this purpose, Yelp engineers have started using general embeddings on different data. It improves usability and efficiency for all kinds of model development. Having…",
     "fetchedAt": "2026-07-11T13:24:33.256Z"
   },
@@ -355,7 +457,13 @@
     "url": "https://engineeringblog.yelp.com/2023/03/gondola-an-internal-paas-architecture-for-frontend-app-deployment.html",
     "source": "yelp",
     "publishedAt": "2023-03-02T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "devops",
+      "product",
+      "architecture",
+      "infra",
+      "frontend"
+    ],
     "summary": "The Yelp website serves millions of users and business owners each day, and engineers in our product teams are constantly adding and improving features across hundreds of pages. Webcore, Yelp’s frontend infrastructure team, is always looking to ensure that web developers can ship their changes…",
     "fetchedAt": "2026-07-11T13:24:33.256Z"
   },
@@ -365,7 +473,9 @@
     "url": "https://engineeringblog.yelp.com/2023/01/rebuilding-a-cassandra-cluster-using-yelps-data-pipeline.html",
     "source": "yelp",
     "publishedAt": "2023-01-29T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Robots are frequently used in the manufacturing industry for numerous use-cases. Amongst many, one case is to eliminate defective products automatically from reaching the finished goods inventory. The same principles of these systems can be adopted to filter out malformed data from datastores. This…",
     "fetchedAt": "2026-07-11T13:24:33.256Z"
   },
@@ -375,7 +485,10 @@
     "url": "https://engineeringblog.yelp.com/2023/01/recycling-kubernetes-nodes.html",
     "source": "yelp",
     "publishedAt": "2023-01-04T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "infra",
+      "security"
+    ],
     "summary": "Manually managing the lifecycle of Kubernetes nodes can become difficult as the cluster scales. Especially if your clusters are multi-tenant and self-managed. You may need to replace nodes for various reasons, such as OS upgrades and security patches. One of the biggest challenges is how to…",
     "fetchedAt": "2026-07-11T13:24:33.256Z"
   },
@@ -385,7 +498,13 @@
     "url": "https://engineeringblog.yelp.com/2022/12/lessons-from-ab-testing-on-bandit-subjects.html",
     "source": "yelp",
     "publishedAt": "2022-12-20T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ml",
+      "experimentation",
+      "product",
+      "performance",
+      "testing"
+    ],
     "summary": "Abstract Compared to full-scale ML, multi-armed bandit is a lighter weight solution that can help teams quickly optimize their product features without major commitments. However, bandits need to have a candidate selection step when they have too many items to choose from. Using A/B testing to…",
     "fetchedAt": "2026-07-11T13:24:33.256Z"
   },
@@ -395,7 +514,10 @@
     "url": "https://engineeringblog.yelp.com/2022/08/spark-data-lineage.html",
     "source": "yelp",
     "publishedAt": "2022-08-03T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "product",
+      "data"
+    ],
     "summary": "In this blog post, we introduce Spark-Lineage, an in-house product to track and visualize how data at Yelp is processed, stored, and transferred among our services. What is Spark-Lineage? Spark and Spark-ETL: At Yelp, Spark is considered a first-class citizen, handling batch jobs in all corners,…",
     "fetchedAt": "2026-07-11T13:24:33.256Z"
   },
@@ -405,7 +527,11 @@
     "url": "https://engineeringblog.yelp.com/2022/08/android-in-analytics-infra.html",
     "source": "yelp",
     "publishedAt": "2022-08-02T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "data",
+      "infra"
+    ],
     "summary": "At Yelp, we have a reasonably large Android community for a company of Yelp’s size. These talented and skilled Android engineers work on Yelp’s client and business applications. We would like to share some of the unique challenges that we’ve experienced along with our various efforts to overcome…",
     "fetchedAt": "2026-07-11T13:24:35.281Z"
   },
@@ -415,7 +541,9 @@
     "url": "https://engineeringblog.yelp.com/2022/07/writing-emails-using-react.html",
     "source": "yelp",
     "publishedAt": "2022-07-19T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "frontend"
+    ],
     "summary": "As part of our effort to connect users with great local businesses, Yelp sends out tens of millions of emails every month. In order to support the scale of those sends, we rely on third-party Email Service Providers (ESPs) as well as our internal email system, Mercury. Delivering the emails is just…",
     "fetchedAt": "2026-07-11T13:24:35.281Z"
   },
@@ -425,7 +553,10 @@
     "url": "https://engineeringblog.yelp.com/2022/07/migrating-from-styleguidist-to-storybook.html",
     "source": "yelp",
     "publishedAt": "2022-07-05T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "infra",
+      "frontend"
+    ],
     "summary": "One of the core tenets for our infrastructure and engineering effectiveness teams at Yelp is ensuring we have a best-in-class developer experience. Our React monorepo codebase has steadily grown as developers create new React components, but our existing React Styleguidist (Styleguidist, for short)…",
     "fetchedAt": "2026-07-11T13:24:35.281Z"
   },
@@ -435,7 +566,11 @@
     "url": "https://engineeringblog.yelp.com/2022/06/a-simply-ordinary-reduction.html",
     "source": "yelp",
     "publishedAt": "2022-06-26T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "experimentation",
+      "performance",
+      "data"
+    ],
     "summary": "Experimentation has become standard practice for companies, and one of the most important aspects is how to evaluate the results to make ship/no-ship decisions. Have you run into experiments where you don’t have enough data for statistically significant results or perhaps the performance of your…",
     "fetchedAt": "2026-07-11T13:24:35.281Z"
   },
@@ -445,7 +580,11 @@
     "url": "https://engineeringblog.yelp.com/2022/06/data-sanitization-with-vitess.html",
     "source": "yelp",
     "publishedAt": "2022-06-21T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "devops",
+      "data"
+    ],
     "summary": "Our community of users will always come first, which is why Yelp takes significant measures to protect sensitive user information. In this spirit, the Database Reliability Engineering team implemented a data sanitization process long ago to prevent any sensitive information from leaving the…",
     "fetchedAt": "2026-07-11T13:24:35.281Z"
   },
@@ -455,7 +594,9 @@
     "url": "https://engineeringblog.yelp.com/2022/04/beyond-matrix-factorization-using-hybrid-features-for-user-business-recommendations.html",
     "source": "yelp",
     "publishedAt": "2022-04-24T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "Yelp’s mission is to connect people with great local businesses. On the Recommendations & Discovery team, we sift through billions of users-business interactions to learn user preferences. Our solutions power several products across Yelp such as personalized push notifications, email engagement…",
     "fetchedAt": "2026-07-11T13:24:35.281Z"
   },
@@ -465,7 +606,11 @@
     "url": "https://engineeringblog.yelp.com/2022/03/kafka-on-paasta-part-two.html",
     "source": "yelp",
     "publishedAt": "2022-03-02T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "infra",
+      "devops",
+      "architecture"
+    ],
     "summary": "In a previous post we detailed the architecture and motivation for developing our new PaaSTA-based deployment model. We’d now like to share our strategy for seamlessly migrating our existing Kafka clusters from EC2 to our Kubernetes-based internal compute platform. To help facilitate the migration,…",
     "fetchedAt": "2026-07-11T13:24:35.281Z"
   },
@@ -475,7 +620,10 @@
     "url": "https://engineeringblog.yelp.com/2022/02/server-side-rendering-at-scale.html",
     "source": "yelp",
     "publishedAt": "2022-02-21T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "performance",
+      "frontend"
+    ],
     "summary": "At Yelp, we use Server Side Rendering (SSR) to improve the performance of our React-based frontend pages. After a string of production incidents in early 2021, we realized our existing SSR system was failing to scale as we migrated more pages from Python-based templates to React. Throughout the…",
     "fetchedAt": "2026-07-11T13:24:35.281Z"
   },
@@ -485,7 +633,9 @@
     "url": "https://engineeringblog.yelp.com/2022/02/developing-a-new-native-ads-dashboard-using-server-driven-ui.html",
     "source": "yelp",
     "publishedAt": "2022-02-14T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "frontend"
+    ],
     "summary": "Updating the ads experience for Yelp Advertisers by creating a new Native Ads Dashboard using Server-Driven UI. What is the Ads Dashboard? The Yelp Ads Dashboard is a tool that advertisers can use to update their ad settings and keep track of how their ad is performing. In 2020, we revamped the Ads…",
     "fetchedAt": "2026-07-11T13:24:37.375Z"
   },
@@ -495,7 +645,12 @@
     "url": "https://engineeringblog.yelp.com/2021/12/kafka-on-paasta-part-one.html",
     "source": "yelp",
     "publishedAt": "2021-12-14T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "infra",
+      "devops",
+      "architecture",
+      "data"
+    ],
     "summary": "Yelp’s Kafka infrastructure ingests tens of billions of messages each day to facilitate data driven decisions and power business-critical pipelines and services. We have recently made some improvements to our Kafka deployment architecture by running some of our clusters on PaaSTA, Yelp’s own…",
     "fetchedAt": "2026-07-11T13:24:37.375Z"
   },
@@ -505,7 +660,10 @@
     "url": "https://engineeringblog.yelp.com/2021/12/building-a-unified-setup-flow-to-better-onboard-business-users.html",
     "source": "yelp",
     "publishedAt": "2021-12-07T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "career",
+      "performance"
+    ],
     "summary": "At Yelp we are always striving to optimize our user experience so we can help guide our customers to success. We aim to streamline the onboarding process for business owners by centralizing customer products into a single page. The Challenge Yelp offers an array of free and paid products that help…",
     "fetchedAt": "2026-07-11T13:24:37.375Z"
   },
@@ -515,7 +673,9 @@
     "url": "https://engineeringblog.yelp.com/2021/11/building-a-server-driven-foundation-for-mobile-app-development.html",
     "source": "yelp",
     "publishedAt": "2021-11-29T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile"
+    ],
     "summary": "Yelp has many teams of mobile developers who collectively maintain two different mobile apps on iOS and Android: Yelp (hereinafter “Consumer App”) and Yelp for Business (hereinafter “Biz App”). We’re always looking for ways to ship features more quickly and consistently on all these platforms! We…",
     "fetchedAt": "2026-07-11T13:24:37.375Z"
   },
@@ -525,7 +685,9 @@
     "url": "https://engineeringblog.yelp.com/2021/10/awesome-women-in-engineering-hosts-its-first-virtual-summit.html",
     "source": "yelp",
     "publishedAt": "2021-10-24T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "networking"
+    ],
     "summary": "Yelp’s employee resource group for women in engineering, Awesome Women in Engineering (AWE), recently held its first virtual summit! The summit was designed for women and allies at Yelp to learn, network, and have fun. AWE started in 2013 with a mission to build a strong community for women and…",
     "fetchedAt": "2026-07-11T13:24:37.375Z"
   },
@@ -545,7 +707,9 @@
     "url": "https://engineeringblog.yelp.com/2021/08/engineering-career-series-building-a-thriving-engineering-team.html",
     "source": "yelp",
     "publishedAt": "2021-08-11T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "career"
+    ],
     "summary": "This post brings our Engineering Career Series to an end. I hope you’ve enjoyed reading it as much as we’ve enjoyed sharing Yelp’s philosophy on building engineering careers in a thoughtful, equitable, and enjoyable way. As the series has shown, building a thriving engineering team requires ongoing…",
     "fetchedAt": "2026-07-11T13:24:37.375Z"
   },
@@ -555,7 +719,10 @@
     "url": "https://engineeringblog.yelp.com/2021/07/engineering-career-series-fostering-inclusion-and-belonging-within-yelp-engineering.html",
     "source": "yelp",
     "publishedAt": "2021-07-28T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "culture",
+      "career"
+    ],
     "summary": "Recruiting, hiring, and onboarding new employees in Engineering at Yelp is a multi-team, cross-functional effort as we have laid out in our Career Series blog posts. But once people are here, how do we retain them? While career advancement, technical leadership, and pay equity are all important…",
     "fetchedAt": "2026-07-11T13:24:37.375Z"
   },
@@ -565,7 +732,9 @@
     "url": "https://engineeringblog.yelp.com/2021/07/engineering-career-series-ensuring-pay-equity-and-career-progression-in-yelp-engineering.html",
     "source": "yelp",
     "publishedAt": "2021-07-14T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "career"
+    ],
     "summary": "At Yelp, we care deeply about ensuring all employees are compensated fairly for their contributions, regardless of their gender, race, and ethnicity. Within Yelp Engineering, we work hard to achieve equal pay for equal work through a combination of tactics: Well-defined career levels and…",
     "fetchedAt": "2026-07-11T13:24:39.408Z"
   },
@@ -575,7 +744,10 @@
     "url": "https://engineeringblog.yelp.com/2021/07/why-yelps-hiring-strategy-in-canada-no-longer-includes-offices.html",
     "source": "yelp",
     "publishedAt": "2021-07-11T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "career",
+      "product"
+    ],
     "summary": "When Yelp first started building engineering and product teams in Canada in 2019, our plan was to create a workforce based out of our Toronto office. Over the past year as we adapted to being an entirely remote workforce we realized, like many companies, that people don’t need to work in offices to…",
     "fetchedAt": "2026-07-11T13:24:39.408Z"
   },
@@ -585,7 +757,11 @@
     "url": "https://engineeringblog.yelp.com/2021/07/analyzing-experiments-with-changing-cohort-allocations.html",
     "source": "yelp",
     "publishedAt": "2021-07-05T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "observability",
+      "experimentation",
+      "testing"
+    ],
     "summary": "Introduction Have you ever run an A/B test and needed to change cohort allocations in the middle of the experiment? If so, you might have observed some surprising results when analyzing your metrics. Changing cohort allocation can make experiment analysis tricky and even lead to false conclusions…",
     "fetchedAt": "2026-07-11T13:24:39.408Z"
   },
@@ -595,7 +771,9 @@
     "url": "https://engineeringblog.yelp.com/2021/07/engineering-career-series-how-we-think-about-engineering-management.html",
     "source": "yelp",
     "publishedAt": "2021-06-30T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "career"
+    ],
     "summary": "In our last post we talked about technical leadership, one of the growth paths available to software engineers at Yelp. In this post we’d like to share more about engineering management, which is another path that some software engineers choose after some time in the industry. We’ll start with an…",
     "fetchedAt": "2026-07-11T13:24:39.408Z"
   },
@@ -605,7 +783,10 @@
     "url": "https://engineeringblog.yelp.com/2021/06/engineering-career-series-technical-leadership-at-yelp.html",
     "source": "yelp",
     "publishedAt": "2021-06-16T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "observability",
+      "career"
+    ],
     "summary": "Hi there! In this post we’re discussing technical leadership, a topic that is paramount to any engineering organization, but is also hard to define. Even observing whether your team, organization, or company has good technical leadership can be a challenge. You might be thinking right now, “Am I a…",
     "fetchedAt": "2026-07-11T13:24:39.408Z"
   },
@@ -615,7 +796,9 @@
     "url": "https://engineeringblog.yelp.com/2021/06/modernizing-business-data-indexing.html",
     "source": "yelp",
     "publishedAt": "2021-06-06T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "On the Yelp app and website, there are many occasions where we need to show detailed business information. We refer to this process as Data Hydration, filling out a “dry” business with compelling, rich data. Whether on the home screen, search results page or business details page, there is a large…",
     "fetchedAt": "2026-07-11T13:24:39.408Z"
   },
@@ -625,7 +808,9 @@
     "url": "https://engineeringblog.yelp.com/2021/06/engineering-career-series-career-paths-for-engineers-at-yelp.html",
     "source": "yelp",
     "publishedAt": "2021-06-02T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "career"
+    ],
     "summary": "About 5 years after joining Yelp, I was managing several teams in our Hamburg, Germany office and asked my manager, a director at the time, what were the expectations for an engineering manager versus a director. While the conversation was helpful to me at that moment, the gist was basically “we…",
     "fetchedAt": "2026-07-11T13:24:39.408Z"
   },
@@ -635,7 +820,9 @@
     "url": "https://engineeringblog.yelp.com/2021/05/engineering-career-series-how-we-onboard-engineers-across-the-world-at-yelp.html",
     "source": "yelp",
     "publishedAt": "2021-05-19T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "career"
+    ],
     "summary": "Like most companies, Yelp has had to make substantial changes to the way we onboard new team members over the past year. Yelpers have always been naturally good at fostering a welcoming and supportive atmosphere for new employees. Translating this into a welcoming and supportive virtual atmosphere…",
     "fetchedAt": "2026-07-11T13:24:39.408Z"
   },
@@ -655,7 +842,9 @@
     "url": "https://engineeringblog.yelp.com/2021/05/engineering-career-series-using-structured-interviews-to-improve-equity.html",
     "source": "yelp",
     "publishedAt": "2021-05-05T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "career"
+    ],
     "summary": "For years, Yelp continued to use an interview process that was created when we were a 50-200 person Engineering organization, with only a handful of interviewers: Each interviewer wrote their own interview questions A few senior leaders gave overall hire/no hire decisions for every panel…",
     "fetchedAt": "2026-07-11T13:24:41.543Z"
   },
@@ -675,7 +864,10 @@
     "url": "https://engineeringblog.yelp.com/2021/04/engineering-career-series-hiring-a-diverse-team-by-reducing-bias.html",
     "source": "yelp",
     "publishedAt": "2021-04-21T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "culture",
+      "career"
+    ],
     "summary": "Compared to where we started, Yelp’s technical organization has made a lot of headway over the years when it comes to diverse hiring. While our approach to this work continues to evolve, we’ve made significant progress in improving the diversity of our organizations by, among other things, reducing…",
     "fetchedAt": "2026-07-11T13:24:41.543Z"
   },
@@ -685,7 +877,10 @@
     "url": "https://engineeringblog.yelp.com/2021/04/engineering-career-series-building-a-happy-diverse-and-inclusive-engineering-team.html",
     "source": "yelp",
     "publishedAt": "2021-04-07T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "culture",
+      "career"
+    ],
     "summary": "I considered writing this as a clickbaity listicle: “7 secrets of engineering team management - you won’t believe number three!” Unfortunately that’s impossible, because it’s a much harder topic, and anyway, number three is: “many years of ongoing investment in building the right team culture,…",
     "fetchedAt": "2026-07-11T13:24:41.543Z"
   },
@@ -695,7 +890,10 @@
     "url": "https://engineeringblog.yelp.com/2021/04/powering-messaging-enabledness-with-yelps-data-infrastructure.html",
     "source": "yelp",
     "publishedAt": "2021-04-04T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data",
+      "infra"
+    ],
     "summary": "In addition to helping people find great places to eat, Yelp connects people with great local professionals to help them accomplish tasks like making their next big move, fixing that leaky faucet, or repairing a broken phone screen. Instead of spending time calling several businesses, users can…",
     "fetchedAt": "2026-07-11T13:24:41.543Z"
   },
@@ -715,7 +913,10 @@
     "url": "https://engineeringblog.yelp.com/2021/01/boosting-user-conversion-with-ux-performance-wins.html",
     "source": "yelp",
     "publishedAt": "2021-01-26T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "performance",
+      "frontend"
+    ],
     "summary": "Everyone loves graphs going up and to the right, unless they reflect your page load timings. This blog post is about curtailing higher page load times. Yelp for Business Owners allows business owners to manage their listing, respond to reviews, edit their business information, upload business…",
     "fetchedAt": "2026-07-11T13:24:41.543Z"
   },
@@ -725,7 +926,10 @@
     "url": "https://engineeringblog.yelp.com/2021/01/whose-code-is-it-anyway.html",
     "source": "yelp",
     "publishedAt": "2021-01-12T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "product",
+      "infra"
+    ],
     "summary": "Improving Code Ownership at Yelp In this prior blog post, Kent talked about how the Engineering Effectiveness (EE) organization was created at Yelp to reduce communication complexity between core teams and product teams. Core teams need to communicate infrastructure changes, manage the deprecation…",
     "fetchedAt": "2026-07-11T13:24:43.758Z"
   },
@@ -735,7 +939,9 @@
     "url": "https://engineeringblog.yelp.com/2020/12/now-you-see-me-how-nice-and-pdq-plots-uncover-model-behaviors-hidden-by-partial-dependence-plots.html",
     "source": "yelp",
     "publishedAt": "2020-12-16T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ml"
+    ],
     "summary": "Many machine learning (ML) practitioners use partial dependence plots (PDP) to gain insights into model behaviors. But have you run into situations where PDPs average two groups with different behaviors and produce curves applicable to none? Are you longing for tools that help you understand…",
     "fetchedAt": "2026-07-11T13:24:43.758Z"
   },
@@ -745,7 +951,10 @@
     "url": "https://engineeringblog.yelp.com/2020/11/orchestrating-cassandra-on-kubernetes-with-operators.html",
     "source": "yelp",
     "publishedAt": "2020-11-15T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "infra",
+      "devops"
+    ],
     "summary": "This post is about how Yelp is transitioning from the management of Cassandra clusters in EC2 to orchestrating the same clusters in production on Kubernetes. We will start by discussing the EC2-based deployment we have used for the past few years, followed by an introduction to the Cassandra…",
     "fetchedAt": "2026-07-11T13:24:43.758Z"
   },
@@ -755,7 +964,11 @@
     "url": "https://engineeringblog.yelp.com/2020/11/tales-of-a-mobile-developer-on-consumer-growth.html",
     "source": "yelp",
     "publishedAt": "2020-11-12T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "product",
+      "data"
+    ],
     "summary": "Engineers on Yelp’s Consumer Growth team work closely with product managers, data scientists, and designers to increase user acquisition, engagement and retention to fuel the rest of the business. The team is central to growing the number of active users on the Yelp platform. In-App Update,…",
     "fetchedAt": "2026-07-11T13:24:43.758Z"
   },
@@ -765,7 +978,10 @@
     "url": "https://engineeringblog.yelp.com/2020/11/minimizing-read-write-mysql-downtime.html",
     "source": "yelp",
     "publishedAt": "2020-11-08T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "data"
+    ],
     "summary": "The relational database of choice at Yelp is MySQL and it powers much of the Yelp app and yelp.com. MySQL does not include a native high-availability solution for the replacement of a primary server, which is a single point of failure. This is a tradeoff of its dedication to ensuring consistency.…",
     "fetchedAt": "2026-07-11T13:24:43.758Z"
   },
@@ -775,7 +991,9 @@
     "url": "https://engineeringblog.yelp.com/2020/10/introducing-folium-enabling-reproducible-notebooks-at-yelp.html",
     "source": "yelp",
     "publishedAt": "2020-10-20T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Jupyter notebooks are a key tool that powers Yelp data. It allows us to do ad hoc development interactively and analyze data with visualization support. As a result, we rely on Jupyter to build models, create features, run Spark jobs for big data analysis, etc. Since notebooks play a crucial role…",
     "fetchedAt": "2026-07-11T13:24:43.758Z"
   },
@@ -785,7 +1003,12 @@
     "url": "https://engineeringblog.yelp.com/2020/10/flink-on-paasta.html",
     "source": "yelp",
     "publishedAt": "2020-10-13T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "infra",
+      "devops",
+      "video",
+      "data"
+    ],
     "summary": "At Yelp we process terabytes of streaming data a day using Apache Flink to power a wide range of applications: ETL pipelines, push notifications, bot filtering, sessionization and more. We run hundreds and hundreds of Flink jobs, so routine operations like deployments, restarts, and savepoints…",
     "fetchedAt": "2026-07-11T13:24:43.758Z"
   },
@@ -795,7 +1018,10 @@
     "url": "https://engineeringblog.yelp.com/2020/10/dream-query.html",
     "source": "yelp",
     "publishedAt": "2020-10-06T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data",
+      "backend"
+    ],
     "summary": "At Yelp, new web pages and app screens are powered by GraphQL for fetching data. This blog post describes the Dream Query – a pattern our feature teams use when refactoring or creating new pages. (Check out our previous blog post to see how we dynamically codegen DataLoaders to implement the server…",
     "fetchedAt": "2026-07-11T13:24:43.758Z"
   },
@@ -805,7 +1031,15 @@
     "url": "https://engineeringblog.yelp.com/2020/10/improving-the-performance-of-the-prometheus-jmx-exporter.html",
     "source": "yelp",
     "publishedAt": "2020-10-01T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "observability",
+      "open-source",
+      "career",
+      "performance",
+      "data",
+      "infra"
+    ],
     "summary": "At Yelp, usage of Prometheus, the open-source monitoring system and time series database, is blossoming. Yelp is initially focusing on onboarding infrastructure services to be monitored via Prometheus, one such service being Apache Kafka. This blogpost discusses some of the performance issues we…",
     "fetchedAt": "2026-07-11T13:24:45.842Z"
   },
@@ -815,7 +1049,11 @@
     "url": "https://engineeringblog.yelp.com/2020/07/ML-platform-overview.html",
     "source": "yelp",
     "publishedAt": "2020-06-30T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ml",
+      "video",
+      "data"
+    ],
     "summary": "Understanding data is a vital part of Yelp’s success. To connect our consumers with great local businesses, we make millions of recommendations every day for a variety of tasks like: Finding you immediate quotes for a plumber to fix your leaky sink Helping you discover which restaurants are open…",
     "fetchedAt": "2026-07-11T13:24:45.842Z"
   },
@@ -825,7 +1063,12 @@
     "url": "https://engineeringblog.yelp.com/2020/06/how-businesses-have-reacted-to-covid-19-using-yelp-features.html",
     "source": "yelp",
     "publishedAt": "2020-06-14T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "devops",
+      "data",
+      "frontend"
+    ],
     "summary": "Yelp periodically releases an open, all-purpose dataset for learning. The dataset is a subset of our businesses, reviews, and user data to inform government policy, academic research, and business strategy, among other uses. It has provided opportunities including teaching students about databases,…",
     "fetchedAt": "2026-07-11T13:24:45.842Z"
   },
@@ -835,7 +1078,10 @@
     "url": "https://engineeringblog.yelp.com/2020/04/open-sourcing-dataloader-codegen.html",
     "source": "yelp",
     "publishedAt": "2020-04-07T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data",
+      "backend"
+    ],
     "summary": "We’re open sourcing dataloader-codegen, an opinionated JavaScript library for automatically generating DataLoaders over a set of resources (e.g. HTTP endpoints). Go check it out on GitHub! This blog post discusses the motivation and some the lessons we learned along the way. Managing GraphQL…",
     "fetchedAt": "2026-07-11T13:24:45.842Z"
   },
@@ -845,7 +1091,10 @@
     "url": "https://engineeringblog.yelp.com/2020/03/an-ever-evolving-company-requires-an-ever-evolving-communication-plan.html",
     "source": "yelp",
     "publishedAt": "2020-03-05T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "product"
+    ],
     "summary": "It’s 2014 and your teams are divided by platform, something like: Web, Mobile Web, Android, and iOS. In order to launch features, product managers jump from platform to platform and teams move fast. Really fast. Lines of code in each repository increase to the point where you now name them…",
     "fetchedAt": "2026-07-11T13:24:45.842Z"
   },
@@ -855,7 +1104,10 @@
     "url": "https://engineeringblog.yelp.com/2020/03/spark-on-paasta.html",
     "source": "yelp",
     "publishedAt": "2020-03-01T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ml",
+      "ai"
+    ],
     "summary": "Yelp extensively utilizes distributed batch processing for a diverse set of problems and workflows. Some examples include: Computation over Yelp’s review corpus to identify restaurants that have great views Training ML models to predict personalized business collections for individual users…",
     "fetchedAt": "2026-07-11T13:24:45.842Z"
   },
@@ -865,7 +1117,12 @@
     "url": "https://engineeringblog.yelp.com/2020/02/accelerating-retention-experiments-with-partially-observed-data.html",
     "source": "yelp",
     "publishedAt": "2020-02-19T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "observability",
+      "experimentation",
+      "testing",
+      "data"
+    ],
     "summary": "Summary Here at Yelp, we generate business wins and a better platform by running A/B tests to measure the revenue impact of different user and business experience interventions. Accurately estimating key revenue indicators, such as the probability a customer retains at least \\(n\\)-days (\\(n\\)-day…",
     "fetchedAt": "2026-07-11T13:24:45.842Z"
   },
@@ -875,7 +1132,10 @@
     "url": "https://engineeringblog.yelp.com/2020/02/grace-hopper-yelp-2019.html",
     "source": "yelp",
     "publishedAt": "2020-02-11T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ml",
+      "product"
+    ],
     "summary": "Last October we sent a group of Yelpers to the 2019 Grace Hopper Celebration! Here are a few takeaways and reflections from some of our attendees. Who attended? Surashree K., software engineer on Semantic Business Information Clara M., product design lead on Content Anna F., machine learning…",
     "fetchedAt": "2026-07-11T13:24:45.842Z"
   },
@@ -885,7 +1145,10 @@
     "url": "https://engineeringblog.yelp.com/2020/02/open-sourcing-varanus-and-rusty-jetpack.html",
     "source": "yelp",
     "publishedAt": "2020-02-05T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "data"
+    ],
     "summary": "Varanus The monitor lizards are large lizards in the genus Varanus. Some time ago, our Android app got into a loop of sending data, due to some unlikely interactions between several different systems, which briefly overwhelmed our servers before we were able to turn it off. Fortunately, key code…",
     "fetchedAt": "2026-07-11T13:24:47.874Z"
   },
@@ -895,7 +1158,11 @@
     "url": "https://engineeringblog.yelp.com/2020/01/modernizing-ads-targeting-machine-learning-pipeline.html",
     "source": "yelp",
     "publishedAt": "2020-01-29T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ml",
+      "product",
+      "data"
+    ],
     "summary": "Yelp’s mission is to connect users with great local businesses. As part of that mission, we provide local businesses with an ads product to help them better reach out to users. This product strives to showcase the most relevant ads to the user without taking away from their overall search…",
     "fetchedAt": "2026-07-11T13:24:47.874Z"
   },
@@ -905,7 +1172,10 @@
     "url": "https://engineeringblog.yelp.com/2020/01/streams-and-monk-how-yelp-approaches-kafka-in-2020.html",
     "source": "yelp",
     "publishedAt": "2020-01-21T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "observability",
+      "architecture"
+    ],
     "summary": "We launched our very first Kafka cluster at Yelp more than five years ago. It was not monitored, did not expose any metrics, and we definitely did not have anyone on call for it. One year later, Kafka had already become one of the most important distributed systems running at Yelp, and today has…",
     "fetchedAt": "2026-07-11T13:24:47.874Z"
   },
@@ -915,7 +1185,9 @@
     "url": "https://engineeringblog.yelp.com/2020/01/automated-idor-discovery-through-stateful-swagger-fuzzing.html",
     "source": "yelp",
     "publishedAt": "2020-01-15T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "security"
+    ],
     "summary": "Scaling security coverage in a growing company is hard. The only way to do this effectively is to empower front-line developers to be able to easily discover, triage, and fix vulnerabilities before they make it to production servers. Today, we’re excited to announce that we’ll be open-sourcing…",
     "fetchedAt": "2026-07-11T13:24:47.874Z"
   },
@@ -925,7 +1197,10 @@
     "url": "https://engineeringblog.yelp.com/2019/12/cassandra-source-connector-part-2.html",
     "source": "yelp",
     "publishedAt": "2019-12-17T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "video",
+      "data"
+    ],
     "summary": "The first half of this post covered the requirements and design choices of the Cassandra Source Connector and dove into the details of the CDC Publisher. As described, the CDC Publisher processes Cassandra CDC data and publishes it as loosely ordered PartitionUpdate objects into Kafka as…",
     "fetchedAt": "2026-07-11T13:24:47.874Z"
   },
@@ -945,7 +1220,11 @@
     "url": "https://engineeringblog.yelp.com/2019/12/cassandra-source-connector-part-1.html",
     "source": "yelp",
     "publishedAt": "2019-12-04T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "devops",
+      "video",
+      "data"
+    ],
     "summary": "At Yelp, we use Cassandra to power a variety of use cases. As of the date of publication, there are 25 Cassandra clusters running in production, each with varying sizes of deployment. The data stored in these clusters is often required as-is or in a transformed state by other use cases, such as…",
     "fetchedAt": "2026-07-11T13:24:47.874Z"
   },
@@ -955,7 +1234,11 @@
     "url": "https://engineeringblog.yelp.com/2019/11/organizing-and-securing-third-party-cdn-assets-at-yelp.html",
     "source": "yelp",
     "publishedAt": "2019-11-19T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "networking",
+      "architecture",
+      "frontend"
+    ],
     "summary": "At Yelp, we use a service-oriented architecture to serve our web pages. This consists of a lot of frontend services, each of which is responsible for serving different pages (e.g., the search page or a business listing page). In these frontend services, we use a couple of third-party JavaScript/CSS…",
     "fetchedAt": "2026-07-11T13:24:47.874Z"
   },
@@ -965,7 +1248,11 @@
     "url": "https://engineeringblog.yelp.com/2019/11/open-source-clusterman.html",
     "source": "yelp",
     "publishedAt": "2019-11-10T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "infra",
+      "open-source",
+      "backend"
+    ],
     "summary": "Earlier this year, I wrote a blog post showing off some cool features of our in-house compute cluster autoscaler, Clusterman (our Cluster Manager). This time, I’m back with two announcements that I’m really excited about! Firstly, in the last few months, we’ve added another supported backend to…",
     "fetchedAt": "2026-07-11T13:24:49.924Z"
   },
@@ -975,7 +1262,10 @@
     "url": "https://engineeringblog.yelp.com/2019/11/inside-tensorflow.html",
     "source": "yelp",
     "publishedAt": "2019-11-07T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ml",
+      "networking"
+    ],
     "summary": "It’s probably not surprising that Yelp utilizes deep neural networks in its quest to connect people with great local businesses. One example is the selection of photos you see in the Yelp app and website, where neural networks try to identify the best quality photos for the business displayed. A…",
     "fetchedAt": "2026-07-11T13:24:49.924Z"
   },
@@ -985,7 +1275,9 @@
     "url": "https://engineeringblog.yelp.com/2019/11/winning-the-hackathon-with-sourcegraph.html",
     "source": "yelp",
     "publishedAt": "2019-10-31T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Visualizing how code is used across the organization is a vital part of our engineers’ day-to-day workflow - and we have a *lot* of code to search through! This blog post details our journey of adopting Sourcegraph at Yelp to help our engineers maintain and dig through the tens of gigabytes of data…",
     "fetchedAt": "2026-07-11T13:24:49.924Z"
   },
@@ -995,7 +1287,9 @@
     "url": "https://engineeringblog.yelp.com/2019/10/beyond-labels-stories-of-asian-pacific-islanders-at-yelp.html",
     "source": "yelp",
     "publishedAt": "2019-10-27T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "backend"
+    ],
     "summary": "During Asian Pacific American Heritage Month, ColorCoded (a Yelp employee resource group) hosted a panel discussion called “Beyond Labels: Stories of Asian Pacific Islanders (API)* at Yelp.” We heard stories from five API Yelpers about their cultural backgrounds, identities, and thoughts on what it…",
     "fetchedAt": "2026-07-11T13:24:49.924Z"
   },
@@ -1005,7 +1299,12 @@
     "url": "https://engineeringblog.yelp.com/2019/10/open-sourcing-spark-redshift-community.html",
     "source": "yelp",
     "publishedAt": "2019-10-24T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "cloud",
+      "data",
+      "infra"
+    ],
     "summary": "At Yelp, we are heavy users of both Spark and Redshift. We’re excited to announce spark-redshift-community, a fork from databricks’ original spark-redshift project. spark-redshift is a Scala package which uses Amazon S3 to efficiently read and write data from AWS Redshift into Spark DataFrames.…",
     "fetchedAt": "2026-07-11T13:24:49.924Z"
   },
@@ -1015,7 +1314,10 @@
     "url": "https://engineeringblog.yelp.com/2019/10/redesigning-yelp-for-apple-watch-with-swiftui.html",
     "source": "yelp",
     "publishedAt": "2019-10-20T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "video"
+    ],
     "summary": "At this year’s WWDC, Apple unveiled SwiftUI, a framework that helps developers build declarative user interfaces. At Yelp, we were immediately excited about it and were looking for a way to start adopting it. We decided that our Apple Watch application was the perfect candidate for modernization…",
     "fetchedAt": "2026-07-11T13:24:49.924Z"
   },
@@ -1025,7 +1327,10 @@
     "url": "https://engineeringblog.yelp.com/2019/10/discovering-popular-dishes-with-deep-learning.html",
     "source": "yelp",
     "publishedAt": "2019-10-07T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ml",
+      "data"
+    ],
     "summary": "Introduction Yelp is home to nearly 200 million user-submitted reviews and even more photos. This data is rich with information about businesses and user opinions. Through the application of cutting-edge machine learning techniques, we’re able to extract and share insights from this data. In…",
     "fetchedAt": "2026-07-11T13:24:49.924Z"
   },
@@ -1035,7 +1340,10 @@
     "url": "https://engineeringblog.yelp.com/2019/10/first-awe-summit-sf.html",
     "source": "yelp",
     "publishedAt": "2019-10-03T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "career",
+      "product"
+    ],
     "summary": "Last month, we held our first Awesome Women in Engineering (AWE) Summit at our headquarters in San Francisco. AWE’s mission is to build a strong community for women and allies in our engineering and product departments by facilitating professional career-building activities, leadership, and…",
     "fetchedAt": "2026-07-11T13:24:49.924Z"
   },
@@ -1045,7 +1353,9 @@
     "url": "https://engineeringblog.yelp.com/2019/09/breaking-down-technical-interview.html",
     "source": "yelp",
     "publishedAt": "2019-09-08T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "career"
+    ],
     "summary": "Finding that first job in the tech industry can be a daunting task. You might not get a response to your application, or maybe you’ll move forward with the interview, but it doesn’t pan out in the end. You might wonder, “How are other people successful at getting offers? What do others do…",
     "fetchedAt": "2026-07-11T13:24:51.966Z"
   },
@@ -1055,7 +1365,11 @@
     "url": "https://engineeringblog.yelp.com/2019/07/maptype-fast-doc-value-lookups-for-map-data-in-elasticsearch.html",
     "source": "yelp",
     "publishedAt": "2019-07-29T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ml",
+      "performance",
+      "data"
+    ],
     "summary": "The ability to quickly serve search results is essential for Yelp. Ranking performance has a significant impact on the time it takes to process a search request, and it’s crucial for fast ranking that we can quickly look up the data that’s fed into our machine learning models. Per-document map-like…",
     "fetchedAt": "2026-07-11T13:24:51.966Z"
   },
@@ -1065,7 +1379,12 @@
     "url": "https://engineeringblog.yelp.com/2019/06/autoscaling-aws-step-functions-activities.html",
     "source": "yelp",
     "publishedAt": "2019-06-25T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "cloud",
+      "architecture",
+      "infra",
+      "backend"
+    ],
     "summary": "In an ongoing effort to break down our monolithic applications into microservices here at Yelp, we’ve migrated several business flows to modern architecture using AWS Step Functions. Transactional ordering at Yelp covers a wide variety of verticals, including food (delivery/takeout orders),…",
     "fetchedAt": "2026-07-11T13:24:51.966Z"
   },
@@ -1075,7 +1394,11 @@
     "url": "https://engineeringblog.yelp.com/2019/05/introducing-bento.html",
     "source": "yelp",
     "publishedAt": "2019-05-01T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "open-source",
+      "product"
+    ],
     "summary": "Today we’re proud to introduce Bento, an open source framework for building modularized Android user interfaces, created here at Yelp. Over the past year, we’ve seen great developer productivity gains and product design flexibility from using Bento on our most critical screens. In this post we’ll…",
     "fetchedAt": "2026-07-11T13:24:51.966Z"
   },
@@ -1105,7 +1428,11 @@
     "url": "https://engineeringblog.yelp.com/2019/02/autoscaling-mesos-clusters-with-clusterman.html",
     "source": "yelp",
     "publishedAt": "2019-02-18T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "observability",
+      "cloud",
+      "infra"
+    ],
     "summary": "Here at Yelp, we host a lot of servers in the cloud. In order to make our website more reliable—yet cost-efficient during periods of low utilization—we need to be able to autoscale clusters based on usage metrics. There are quite a few existing technologies for this purpose, but none of them really…",
     "fetchedAt": "2026-07-11T13:24:51.966Z"
   },
@@ -1115,7 +1442,9 @@
     "url": "https://engineeringblog.yelp.com/2019/02/yelp-dataset-challenge-round11-winner.html",
     "source": "yelp",
     "publishedAt": "2019-02-05T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "The eleventh round of the Yelp Dataset Challenge ran throughout the first half of 2018 and we received many impressive, original, and fascinating submissions. As usual, we were struck by the quality of the entries: keep up the good work, folks! Today, we are proud to announce the grand prize winner…",
     "fetchedAt": "2026-07-11T13:24:51.966Z"
   },
@@ -1125,7 +1454,9 @@
     "url": "https://engineeringblog.yelp.com/2019/01/migrating-kafkas-zookeeper-with-no-downtime.html",
     "source": "yelp",
     "publishedAt": "2019-01-16T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Here at Yelp we use Kafka extensively. In fact, we send billions of messages a day through our various clusters. Behind the scenes, Kafka uses Zookeeper for various distributed coordination tasks, such as deciding which Kafka broker is in charge of assigning partition leaders and storing metadata…",
     "fetchedAt": "2026-07-11T13:24:54.026Z"
   },
@@ -1135,7 +1466,9 @@
     "url": "https://engineeringblog.yelp.com/2018/12/joinery-a-tale-of-unwindowed-joins.html",
     "source": "yelp",
     "publishedAt": "2018-12-10T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Summary At Yelp, we generate a wide array of high throughput data streams spanning logs, business data, and application data. These streams need to be joined, filtered, aggregated, and sometimes even quickly transformed. To facilitate this process, the engineering team has invested a significant…",
     "fetchedAt": "2026-07-11T13:24:54.026Z"
   },
@@ -1145,7 +1478,9 @@
     "url": "https://engineeringblog.yelp.com/2018/11/ttl-as-a-service.html",
     "source": "yelp",
     "publishedAt": "2018-11-18T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "security"
+    ],
     "summary": "Security and usability are often at odds with one another, a fact that is best illustrated by access control. Deny everyone, and you’ll have a super secure system that no one can use; allow everyone, and you’ll maximize usability at the cost of security. The Principle of Least Privilege exists to…",
     "fetchedAt": "2026-07-11T13:24:54.026Z"
   },
@@ -1155,7 +1490,9 @@
     "url": "https://engineeringblog.yelp.com/2018/11/all-about-yelp-hackathon.html",
     "source": "yelp",
     "publishedAt": "2018-11-06T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "product"
+    ],
     "summary": "It’s time for our fall Hackathon! At Yelp, Hackathons are two-day events that provide unstructured time for our engineering and product teams to work on whatever may scratch their creative itch! Hackathon truly embodies our company values of “Playing Well with Others” and “Being Unboring,” as it…",
     "fetchedAt": "2026-07-11T13:24:54.026Z"
   },
@@ -1165,7 +1502,13 @@
     "url": "https://engineeringblog.yelp.com/2018/10/a-guide-to-software-engineering-for-the-visually-impaired.html",
     "source": "yelp",
     "publishedAt": "2018-10-28T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "video",
+      "architecture",
+      "data",
+      "infra",
+      "backend"
+    ],
     "summary": "Introduction My name is Abrar Sheikh, and I’m a backend engineer on Yelp’s Distributed Systems team. Our team enables real-time data transfers between microservices and different data stores by building streaming infrastructure on top of Kafka using technologies like Python, Scala, and Apache…",
     "fetchedAt": "2026-07-11T13:24:54.026Z"
   },
@@ -1175,7 +1518,10 @@
     "url": "https://engineeringblog.yelp.com/2018/10/yelp-production-engineering-documentation-style-guide.html",
     "source": "yelp",
     "publishedAt": "2018-10-15T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "devops",
+      "infra"
+    ],
     "summary": "Documentation is something that many of us in software and site reliability engineering struggle with – even if we recognize its importance, it can still be a struggle to write it consistently and to write it well. While we in Yelp’s Production Engineering group are no different, over the last few…",
     "fetchedAt": "2026-07-11T13:24:54.026Z"
   },
@@ -1185,7 +1531,10 @@
     "url": "https://engineeringblog.yelp.com/2018/10/how-we-are-keeping-our-android-ui-consistent.html",
     "source": "yelp",
     "publishedAt": "2018-10-07T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "frontend"
+    ],
     "summary": "Every day, we ship the Yelp experience to millions of users through our website and mobile apps. Our design team is committed to shaping the best interfaces to make Yelp easier to understand and more practical for users. Writing a review should be as simple as searching for a restaurant or…",
     "fetchedAt": "2026-07-11T13:24:54.026Z"
   },
@@ -1195,7 +1544,9 @@
     "url": "https://engineeringblog.yelp.com/2018/08/first-awe-eu-summit.html",
     "source": "yelp",
     "publishedAt": "2018-08-02T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "culture"
+    ],
     "summary": "At Yelp we pride ourselves on employee inclusiveness and building employee resource groups. We are excited to share with you the learnings of our first Awesome Women in Engineering (AWE) Summit in Europe, a one-day event on diversity and inclusion, leadership, and tech. We have two engineering…",
     "fetchedAt": "2026-07-11T13:24:54.026Z"
   },
@@ -1205,7 +1556,9 @@
     "url": "https://engineeringblog.yelp.com/2018/08/yelp-dataset-challenge-round10-winner.html",
     "source": "yelp",
     "publishedAt": "2018-08-01T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Round 10 Winners The tenth round of the Yelp Dataset Challenge ran throughout the second half of 2017 and we received many impressive, original, and fascinating submissions. As usual, we were struck by the quality of the entries: keep up the good work, folks! Today, we are proud to announce the…",
     "fetchedAt": "2026-07-11T13:24:56.138Z"
   },
@@ -1215,7 +1568,9 @@
     "url": "https://engineeringblog.yelp.com/2018/07/happy-10th-birthday-to-yelp-on-ios.html",
     "source": "yelp",
     "publishedAt": "2018-07-15T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile"
+    ],
     "summary": "Yelp hit a big milestone last week: ten years ago, Yelp launched on the Apple App Store! On July 10th, 2008, Apple officially launched what was then known as the iPhone App Store, giving iPhone users their first-ever opportunity to run third-party native apps on their devices. It launched with a…",
     "fetchedAt": "2026-07-11T13:24:56.138Z"
   },
@@ -1225,7 +1580,10 @@
     "url": "https://engineeringblog.yelp.com/2018/06/android-search-perf-improvements-part-3.html",
     "source": "yelp",
     "publishedAt": "2018-06-20T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "performance"
+    ],
     "summary": "In our previous blog post, we made changes to the app that improved the initial rendering performance and scroll performance of the search results in the Yelp android app. In this blog post, we’ll cover how we monitor the performance of these changes and future changes to the app to ensure no…",
     "fetchedAt": "2026-07-11T13:24:56.138Z"
   },
@@ -1235,7 +1593,9 @@
     "url": "https://engineeringblog.yelp.com/2018/06/yelps-secret-detector.html",
     "source": "yelp",
     "publishedAt": "2018-06-10T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "security"
+    ],
     "summary": "We are always looking for new ways to bolster our security posture to keep our users and businesses safe. Today, we’re happy to announce that we will be open-sourcing our detect-secrets framework to prevent secrets from being committed to our codebase. This aligns well with our value to always…",
     "fetchedAt": "2026-07-11T13:24:56.138Z"
   },
@@ -1245,7 +1605,10 @@
     "url": "https://engineeringblog.yelp.com/2018/06/how-yelp-modularized-the-android-app.html",
     "source": "yelp",
     "publishedAt": "2018-06-03T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "testing"
+    ],
     "summary": "When the Yelp Android App was first built it was a monolith, with almost everything inside a single module. Single modules are easier to deal with; there are no complex dependency graphs to account for and some details of how the app is managed, such as how testing is implemented, are simpler.…",
     "fetchedAt": "2026-07-11T13:24:56.138Z"
   },
@@ -1255,7 +1618,10 @@
     "url": "https://engineeringblog.yelp.com/2018/06/fast-order-search.html",
     "source": "yelp",
     "publishedAt": "2018-05-31T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "data"
+    ],
     "summary": "Since its inception in 2013, Yelp has grown its transactions platform to tens of millions of orders. With this growth, it’s become slow and cumbersome to rely solely on MySQL for searching and retrieving user orders. Transactions at Yelp are built around integrations with dozens of external…",
     "fetchedAt": "2026-07-11T13:24:56.138Z"
   },
@@ -1265,7 +1631,11 @@
     "url": "https://engineeringblog.yelp.com/2018/05/android-search-perf-improvements-part-2.html",
     "source": "yelp",
     "publishedAt": "2018-05-16T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "observability",
+      "performance"
+    ],
     "summary": "In our previous blog post, we established a performance improvement lifecycle and explored the first step by defining what metrics we wanted to measure and establishing a baseline on which we can improve. In this blog post, we’ll cover how we improved our two metrics of initial render timings and…",
     "fetchedAt": "2026-07-11T13:24:56.138Z"
   },
@@ -1275,7 +1645,11 @@
     "url": "https://engineeringblog.yelp.com/2018/05/pyspark-coding-practices-lessons-learned.html",
     "source": "yelp",
     "publishedAt": "2018-05-13T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ml",
+      "devops",
+      "testing"
+    ],
     "summary": "In our previous post, we discussed how we used PySpark to build a large-scale distributed machine learning model. In this post, we will describe our experience and some of the lessons learned while deploying PySpark code in a production environment. Yelp’s systems have robust testing in place. It’s…",
     "fetchedAt": "2026-07-11T13:24:56.138Z"
   },
@@ -1285,7 +1659,11 @@
     "url": "https://engineeringblog.yelp.com/2018/05/scaling-collaborative-filtering-with-pyspark.html",
     "source": "yelp",
     "publishedAt": "2018-05-06T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ml",
+      "ai",
+      "data"
+    ],
     "summary": "Here at Yelp our core mission is to connect users with great local businesses. On the engineering side, that requires us to tackle big data and machine learning problems. One of the natural ways to apply machine learning to our core mission is to deliver relevant and personalized business…",
     "fetchedAt": "2026-07-11T13:24:58.178Z"
   },
@@ -1295,7 +1673,10 @@
     "url": "https://engineeringblog.yelp.com/2018/05/android-search-perf-improvements-part-1.html",
     "source": "yelp",
     "publishedAt": "2018-05-01T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "performance"
+    ],
     "summary": "#perfmatters At Yelp, we’ve been working hard to improve the performance of our search results on mobile devices (iOS and Android). We know that performance matters from a numbers perspective, but another reason why we’ve decided to invest more in performance is due to a recent increase in user…",
     "fetchedAt": "2026-07-11T13:24:58.178Z"
   },
@@ -1305,7 +1686,11 @@
     "url": "https://engineeringblog.yelp.com/2018/04/open-sourcing-salsa.html",
     "source": "yelp",
     "publishedAt": "2018-04-23T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "open-source",
+      "frontend"
+    ],
     "summary": "What is Salsa? Salsa is an open source library that renders iOS views and exports them into a Sketch file. We built Salsa to help bridge the gap between design and engineering in an effort to create a single source of truth for visual styling of UI. Why use Salsa A few years ago, we started putting…",
     "fetchedAt": "2026-07-11T13:24:58.178Z"
   },
@@ -1325,7 +1710,12 @@
     "url": "https://engineeringblog.yelp.com/2018/04/black-box-auditing.html",
     "source": "yelp",
     "publishedAt": "2018-04-11T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "video",
+      "data",
+      "infra"
+    ],
     "summary": "Since Yelp introduced its real-time streaming data infrastructure, “Data Pipeline”, it has grown in scope and matured vastly. It now supports some of Yelp’s most critical business requirements in its mission to connect people with great local businesses. Today, it has expanded into a diverse…",
     "fetchedAt": "2026-07-11T13:24:58.178Z"
   },
@@ -1335,7 +1725,9 @@
     "url": "https://engineeringblog.yelp.com/2018/03/css-in-the-age-of-react.html",
     "source": "yelp",
     "publishedAt": "2018-03-04T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "frontend"
+    ],
     "summary": "With hundreds of engineers, developers and designers working on Yelp, ensuring visual consistency across Yelp is a challenging task. We’ve been migrating our web components from Yelp Cheetah to React to increase designer and developer productivity while ensuring visual consistency across our web…",
     "fetchedAt": "2026-07-11T13:24:58.178Z"
   },
@@ -1345,7 +1737,10 @@
     "url": "https://engineeringblog.yelp.com/2018/03/introducing-logfeeder.html",
     "source": "yelp",
     "publishedAt": "2018-03-01T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "security",
+      "infra"
+    ],
     "summary": "Introduction The collection and processing of logs is essential to good security. One of the primary functions of a security team is to keep organizations safe by eliminating blind spots in infrastructure. Breach investigations without logs result in a lot of guesswork. Worse, the activities of an…",
     "fetchedAt": "2026-07-11T13:24:58.178Z"
   },
@@ -1365,7 +1760,14 @@
     "url": "https://engineeringblog.yelp.com/2018/02/making-30x-performance-improvements-on-yelps-mysqlstreamer.html",
     "source": "yelp",
     "publishedAt": "2018-02-04T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "video",
+      "performance",
+      "testing",
+      "data",
+      "infra"
+    ],
     "summary": "Introduction MySQLStreamer is an important application in Yelp’s Data Pipeline infrastructure. It’s responsible for streaming high-volume, business-critical data from our MySQL clusters into our Kafka-powered Data Pipeline. When we rolled out the first test version of MySQLStreamer, the system…",
     "fetchedAt": "2026-07-11T13:25:00.242Z"
   },
@@ -1375,7 +1777,9 @@
     "url": "https://engineeringblog.yelp.com/2018/01/dataset-challenge-round-11.html",
     "source": "yelp",
     "publishedAt": "2018-01-28T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Yelp Dataset Challenge Round 11 Is On! The eleventh round of the Yelp Dataset Challenge has opened. It will run until June 30, 2018. As in the past, the Yelp Dataset Challenge gives college students access to reviews and businesses from 11 metropolitan areas scattered over 4 different countries.…",
     "fetchedAt": "2026-07-11T13:25:00.242Z"
   },
@@ -1385,7 +1789,11 @@
     "url": "https://engineeringblog.yelp.com/2018/01/growing-cache-friendly-trees-part2.html",
     "source": "yelp",
     "publishedAt": "2018-01-16T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ml",
+      "observability",
+      "data"
+    ],
     "summary": "Growing Cache Friendly Trees In case you missed it, Part I of this blog series outlines how we built a distributed machine learning platform to train gradient boosted tree (GBT) models on large datasets. While we were able to observe significant improvements in offline metrics, the resulting models…",
     "fetchedAt": "2026-07-11T13:25:00.242Z"
   },
@@ -1395,7 +1803,10 @@
     "url": "https://engineeringblog.yelp.com/2018/01/building-a-distributed-ml-pipeline-part1.html",
     "source": "yelp",
     "publishedAt": "2018-01-08T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ml",
+      "data"
+    ],
     "summary": "Building a Distributed Machine Learning Pipeline As a part of Yelp’s mission to connect people with great local businesses, we help businesses reach potential customers through advertising and organic search results. The goal of Yelp’s advertising platform is to show relevant businesses to users…",
     "fetchedAt": "2026-07-11T13:25:00.242Z"
   },
@@ -1405,7 +1816,9 @@
     "url": "https://engineeringblog.yelp.com/2018/01/yelp-dataset-challenge-round9-winner.html",
     "source": "yelp",
     "publishedAt": "2018-01-07T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Yelp Dataset Challenge Round 9 Winners The ninth round of the Yelp Dataset Challenge ran throughout the first half of 2017 and, as usual, we received a large number of highly impressive and interesting submissions. Needless to say, we were struck by the quality of the entries: keep up the good…",
     "fetchedAt": "2026-07-11T13:25:00.242Z"
   },
@@ -1415,7 +1828,9 @@
     "url": "https://engineeringblog.yelp.com/2017/12/keeping-yelp-two-steps-ahead-how-we-built-gset-to-protect-employee-email.html",
     "source": "yelp",
     "publishedAt": "2017-12-19T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "security"
+    ],
     "summary": "Earlier this year, Gmail users across the globe were affected by one of the largest phishing attacks of its kind. Yelp emails were among the many corporate email systems that experienced this Google Docs phishing attack. Fortunately, our security engineers had already prepared for this level of…",
     "fetchedAt": "2026-07-11T13:25:00.242Z"
   },
@@ -1425,7 +1840,9 @@
     "url": "https://engineeringblog.yelp.com/2017/11/breaking-down-the-monolith-with-aws-step-functions.html",
     "source": "yelp",
     "publishedAt": "2017-11-26T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "cloud"
+    ],
     "summary": "As we’ve discussed in earlier blog posts, Yelp Engineering has been working hard to break down our largest monolithic code base (yelp-main) for the past few years. We’ve made great progress but some of our oldest, most critical code remains within yelp-main. A great example of an older, more…",
     "fetchedAt": "2026-07-11T13:25:00.242Z"
   },
@@ -1445,7 +1862,10 @@
     "url": "https://engineeringblog.yelp.com/2017/11/yelp-returned-to-grace-hopper-once-more-in-orlando.html",
     "source": "yelp",
     "publishedAt": "2017-11-02T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "product"
+    ],
     "summary": "Yelp returned to Grace Hopper Celebration once more, this time in Orlando! Let’s take a look at what GHC2017 is all about from the insights of our attendees. Who Neha H.: Android engineer @ Search User Experience team Grace J.: Recruiting manager @ University Recruiting team Tiffany K.: Product…",
     "fetchedAt": "2026-07-11T13:25:02.272Z"
   },
@@ -1455,7 +1875,10 @@
     "url": "https://engineeringblog.yelp.com/2017/10/day-in-the-life-of-a-product-manager.html",
     "source": "yelp",
     "publishedAt": "2017-10-18T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "career",
+      "product"
+    ],
     "summary": "Meet Brittany Cheng, a 5-star Product Manager! Learn what she loves about product management and how she has grown over her career here at Yelp. Are you interested in building great products? Do you love working with different teams? Are you motivated by the user experience? Mentorship, ownership,…",
     "fetchedAt": "2026-07-11T13:25:02.272Z"
   },
@@ -1465,7 +1888,12 @@
     "url": "https://engineeringblog.yelp.com/2017/10/signalform-charts-as-code-with-signalfx-and-terraform.html",
     "source": "yelp",
     "publishedAt": "2017-10-05T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "observability",
+      "performance",
+      "data",
+      "infra"
+    ],
     "summary": "Monitoring the health of our systems is a critical part of maintaining Yelp’s infrastructure. We collect millions of data points that help us observe the performance and status of our services. This data powers visualization and monitoring systems so that we can alert on anomalies and derive…",
     "fetchedAt": "2026-07-11T13:25:02.272Z"
   },
@@ -1475,7 +1903,10 @@
     "url": "https://engineeringblog.yelp.com/2017/09/the-road-to-hsts.html",
     "source": "yelp",
     "publishedAt": "2017-09-10T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "security",
+      "networking"
+    ],
     "summary": "What is HTTP Strict Transport Security? HTTP Strict Transport Security, commonly referred to as HSTS, is a Web standard that aims to ensure all web resources off a domain are fetched over a secure transport layer. The core objective of HSTS is to protect users against passive and active network…",
     "fetchedAt": "2026-07-11T13:25:02.272Z"
   },
@@ -1485,7 +1916,10 @@
     "url": "https://engineeringblog.yelp.com/2017/09/introducing-yelp-events-data-to-our-developer-apis.html",
     "source": "yelp",
     "publishedAt": "2017-09-05T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data",
+      "backend"
+    ],
     "summary": "Starting today, Yelp Events data will be available through our Fusion API and GraphQL API to provide rich, local events data in our API as part of our developer beta program. Since launching Yelp Fusion last September, we’ve seen developers use our business data in unique and interesting ways and…",
     "fetchedAt": "2026-07-11T13:25:02.272Z"
   },
@@ -1495,7 +1929,9 @@
     "url": "https://engineeringblog.yelp.com/2017/08/yelp-open-dataset-and-dataset-challenge-round-10.html",
     "source": "yelp",
     "publishedAt": "2017-08-29T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Introducing The Yelp Open Dataset About five years ago, we announced the Yelp Dataset Challenge: a competition that lets students explore and research with the help of our large corpus of data. Each participant can also formally submit their projects for the chance to win prizes. Over the years…",
     "fetchedAt": "2026-07-11T13:25:02.272Z"
   },
@@ -1505,7 +1941,11 @@
     "url": "https://engineeringblog.yelp.com/2017/08/auto-suppressing-tests-for-more-reliable-code-in-our-android-app.html",
     "source": "yelp",
     "publishedAt": "2017-08-23T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "testing",
+      "frontend"
+    ],
     "summary": "Automated testing is really important for ensuring your code is bug-free and works as expected but UI tests are particularly challenging as they tend to be flaky and unreliable. For an app like Yelp, a lot of tests are needed so developers will often see tests flake. You can look at test history to…",
     "fetchedAt": "2026-07-11T13:25:02.272Z"
   },
@@ -1525,7 +1965,9 @@
     "url": "https://engineeringblog.yelp.com/2017/07/what-does-a-yelp-associate-product-manager-do.html",
     "source": "yelp",
     "publishedAt": "2017-07-19T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "product"
+    ],
     "summary": "Fred Wang has already done a lot. He graduated from U Penn’s Wharton School with degrees in Finance and Operations Management and then headed to New York City to co-found a startup. No big deal. Finding himself at a crossroads a few years later, he decided to try his luck on the west coast and…",
     "fetchedAt": "2026-07-11T13:25:04.324Z"
   },
@@ -1535,7 +1977,9 @@
     "url": "https://engineeringblog.yelp.com/2017/07/generating-web-pages-in-parallel-with-pagelets.html",
     "source": "yelp",
     "publishedAt": "2017-07-05T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "performance"
+    ],
     "summary": "At Yelp, pagelets are a server-side optimization to parallelize the rendering of web pages across multiple web workers (loosely inspired by Facebook’s Big Pipe). We’ve implemented this and have been running it successfully in production for a while now. This blog post is about our journey…",
     "fetchedAt": "2026-07-11T13:25:04.324Z"
   },
@@ -1545,7 +1989,10 @@
     "url": "https://engineeringblog.yelp.com/2017/06/moving-yelps-core-business-search-to-elasticsearch.html",
     "source": "yelp",
     "publishedAt": "2017-06-28T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "devops",
+      "backend"
+    ],
     "summary": "While newer search engines at Yelp typically use Elasticsearch as a backend, Yelp’s core business search used its own custom backend, built directly on top of Lucene. This system was one of the oldest systems at Yelp to still be deployed in production. Some features of this custom search engine…",
     "fetchedAt": "2026-07-11T13:25:04.324Z"
   },
@@ -1555,7 +2002,9 @@
     "url": "https://engineeringblog.yelp.com/2017/06/upcoming-deprecation-of-yelp-api-v2.html",
     "source": "yelp",
     "publishedAt": "2017-06-27T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "backend"
+    ],
     "summary": "As we continue to invest in the Yelp Fusion API, we are announcing that Yelp API v2 will be discontinued on June 30, 2018. If you are currently using v2 API endpoints, you have until June 30, 2018 to move them over to the Yelp Fusion API. We hope this gives everyone sufficient time to transition…",
     "fetchedAt": "2026-07-11T13:25:04.324Z"
   },
@@ -1565,7 +2014,9 @@
     "url": "https://engineeringblog.yelp.com/2017/06/dataset-round-8-winners.html",
     "source": "yelp",
     "publishedAt": "2017-06-22T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Yelp Dataset Challenge Round 8 Winners The eighth round of the Yelp Dataset Challenge ran throughout the first half of 2017 and, as usual, we received a large number of very impressive and interesting submissions. Today, we are proud to announce the grand prize winner of the $5,000 award:…",
     "fetchedAt": "2026-07-11T13:25:04.324Z"
   },
@@ -1585,7 +2036,11 @@
     "url": "https://engineeringblog.yelp.com/2017/05/introducing-yelps-local-graph.html",
     "source": "yelp",
     "publishedAt": "2017-05-02T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "video",
+      "data",
+      "backend"
+    ],
     "summary": "We’re continuously adding new features to our API to make it easier for developers to integrate with our data and share great local businesses through their apps. Today, we’re releasing access to query our data via GraphQL, a graph query language. This is available immediately through our developer…",
     "fetchedAt": "2026-07-11T13:25:04.324Z"
   },
@@ -1595,7 +2050,11 @@
     "url": "https://engineeringblog.yelp.com/2017/04/how-yelp-runs-millions-of-tests-every-day.html",
     "source": "yelp",
     "publishedAt": "2017-04-25T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "devops",
+      "testing",
+      "architecture"
+    ],
     "summary": "Fast feature development is critical to a company’s success. We all strive to increase developer productivity by decreasing the time to test, deploy, and monitor changes. To enable developers to push code safely, we run more than 20 million tests every day using our in-house distributed system…",
     "fetchedAt": "2026-07-11T13:25:04.324Z"
   },
@@ -1605,7 +2064,10 @@
     "url": "https://engineeringblog.yelp.com/2017/04/continuous-integration-on-android.html",
     "source": "yelp",
     "publishedAt": "2017-04-19T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "testing"
+    ],
     "summary": "Continuous Integration (CI) is a powerful tool for the Android team at Yelp. It gives us a platform to ensure quality on all eight of our Android apps, allowing us to emphasize testing and ensure our newest features aren’t breaking our oldest masterpieces. For example, we don’t want Yelfies to…",
     "fetchedAt": "2026-07-11T13:25:06.420Z"
   },
@@ -1615,7 +2077,12 @@
     "url": "https://engineeringblog.yelp.com/2017/03/returning-to-grace-hopper-bringing-our-workshop-back-for-round-two.html",
     "source": "yelp",
     "publishedAt": "2017-03-07T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "databases",
+      "data",
+      "backend"
+    ],
     "summary": "Jen W. is a backend engineer at Yelp in San Francisco and, when not running after her toddler, loves nothing more than to knit while watching superhero TV. Susanne L. is a database engineer at Yelp in San Francisco and loves to [b/h]ike the hilly city and its surroundings. Wei W. is an iOS engineer…",
     "fetchedAt": "2026-07-11T13:25:06.420Z"
   },
@@ -1635,7 +2102,9 @@
     "url": "https://engineeringblog.yelp.com/2017/02/recent-improvements-to-the-fusion-api.html",
     "source": "yelp",
     "publishedAt": "2017-02-15T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "backend"
+    ],
     "summary": "Since our launch of the Yelp Fusion API, we’ve been working hard over the past few months, fixing bugs people have reported on GitHub and adding missing features. We’ve also added a few things to improve the overall experience: The search endpoint got a small update on filtering by attributes.…",
     "fetchedAt": "2026-07-11T13:25:06.420Z"
   },
@@ -1645,7 +2114,9 @@
     "url": "https://engineeringblog.yelp.com/2017/02/open-sourcing-yelp-love.html",
     "source": "yelp",
     "publishedAt": "2017-02-13T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "culture"
+    ],
     "summary": "Encouraging positivity has been a central pillar to Yelp’s culture from the beginning. If a teammate rolls out a huge feature, helps you out in a bind, or just makes a funny joke, we believe you should be able to show them a small token of appreciation. That’s why we developed an internal tool…",
     "fetchedAt": "2026-07-11T13:25:06.420Z"
   },
@@ -1655,7 +2126,9 @@
     "url": "https://engineeringblog.yelp.com/2017/01/announcing-docker-hook-support-for-pre-commit.html",
     "source": "yelp",
     "publishedAt": "2017-01-30T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "infra"
+    ],
     "summary": "In 2014, Yelp launched pre-commit, a framework for managing pre-commit hooks. Since then, the community has contributed many different hooks to help with development in a wide variety of languages, including Python, Ruby, Go, Node.js, and Clojure. You can see a list of many of these here.…",
     "fetchedAt": "2026-07-11T13:25:06.420Z"
   },
@@ -1665,7 +2138,9 @@
     "url": "https://engineeringblog.yelp.com/2017/01/dataset-round-7-winners-and-announcing-round-9.html",
     "source": "yelp",
     "publishedAt": "2017-01-24T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Yelp Dataset Challenge Round 7 Winners The seventh round of the Yelp Dataset Challenge ran throughout the first half of 2016 and, as usual, we were impressed with the projects and ideas that came out of the challenge. Today, we are proud to announce the grand prize winner of the $5,000 award:…",
     "fetchedAt": "2026-07-11T13:25:06.420Z"
   },
@@ -1675,7 +2150,9 @@
     "url": "https://engineeringblog.yelp.com/2017/01/what-its-like-to-be-a-first-time-speaker-at-grace-hopper.html",
     "source": "yelp",
     "publishedAt": "2017-01-18T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "product"
+    ],
     "summary": "Alexa H. has been a Product Designer at Yelp for two years, having previously graduated from California College of the Arts studying Graphic Design. This year at Grace Hopper, she co-presented “Ask questions, lots of questions: A workshop for practicing building beautiful presentations in Google…",
     "fetchedAt": "2026-07-11T13:25:06.420Z"
   },
@@ -1695,7 +2172,9 @@
     "url": "https://engineeringblog.yelp.com/2016/11/finding-beautiful-yelp-photos-using-deep-learning.html",
     "source": "yelp",
     "publishedAt": "2016-11-28T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ml"
+    ],
     "summary": "Yelp users upload around 100,000 photos a day to a collection of tens of millions, and that rate continues to grow. In fact, we’re seeing a growth rate for photos that is outpacing the rate of reviews. These photos provide a rich tapestry of information about the content and quality of local…",
     "fetchedAt": "2026-07-11T13:25:08.431Z"
   },
@@ -1705,7 +2184,10 @@
     "url": "https://engineeringblog.yelp.com/2016/11/open-sourcing-yelps-data-pipeline.html",
     "source": "yelp",
     "publishedAt": "2016-11-16T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "data"
+    ],
     "summary": "For the past few months we’ve been spreading the word about our shiny new Data Pipeline: a Python-based tool that streams and transforms real-time data to services that need it. We wrote a series of blog posts covering how we replicate messages from our MySQL tables, how we track schemas and…",
     "fetchedAt": "2026-07-11T13:25:08.431Z"
   },
@@ -1715,7 +2197,9 @@
     "url": "https://engineeringblog.yelp.com/2016/11/Comparing-searches-at-the-DNC-and-RNC.html",
     "source": "yelp",
     "publishedAt": "2016-11-03T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Ah - politics. It’s frustrating, it’s funny, it’s serious business. It is perhaps one of the best windows we have into the nature of the human condition. So we think it’s fitting that we combine politics with another window into human nature - search data. In particular, Yelp’s PR team was…",
     "fetchedAt": "2026-07-11T13:25:08.431Z"
   },
@@ -1725,7 +2209,12 @@
     "url": "https://engineeringblog.yelp.com/2016/10/redshift-connector.html",
     "source": "yelp",
     "publishedAt": "2016-10-16T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "video",
+      "data",
+      "infra"
+    ],
     "summary": "This post is part of a series covering Yelp's real-time streaming data infrastructure. Our series explores in-depth how we stream MySQL and Cassandra data at real-time, how we automatically track & migrate schemas, how we process and transform streams, and finally how we connect all of this into…",
     "fetchedAt": "2026-07-11T13:25:08.431Z"
   },
@@ -1745,7 +2234,12 @@
     "url": "https://engineeringblog.yelp.com/2016/09/data-pipeline-salesforce-connector.html",
     "source": "yelp",
     "publishedAt": "2016-09-26T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "video",
+      "data",
+      "infra"
+    ],
     "summary": "This post is part of a series covering Yelp's real-time streaming data infrastructure. Our series explores in-depth how we stream MySQL and Cassandra data at real-time, how we automatically track & migrate schemas, how we process and transform streams, and finally how we connect all of this into…",
     "fetchedAt": "2026-07-11T13:25:08.431Z"
   },
@@ -1765,7 +2259,9 @@
     "url": "https://engineeringblog.yelp.com/2016/09/yelp-public-bug-bounty-map.html",
     "source": "yelp",
     "publishedAt": "2016-09-05T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "security"
+    ],
     "summary": "For the past two years we’ve been running a private bug-bounty program. We worked with academic researchers and bug hunters from all over the world and, as a result, we have fixed over a hundred potential vulnerabilities, and have paid bug bounties to dozens of security experts. Today we’re…",
     "fetchedAt": "2026-07-11T13:25:10.688Z"
   },
@@ -1775,7 +2271,12 @@
     "url": "https://engineeringblog.yelp.com/2016/08/paastorm-a-streaming-processor.html",
     "source": "yelp",
     "publishedAt": "2016-08-24T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "video",
+      "data",
+      "infra"
+    ],
     "summary": "This post is part of a series covering Yelp's real-time streaming data infrastructure. Our series explores in-depth how we stream MySQL and Cassandra data at real-time, how we automatically track & migrate schemas, how we process and transform streams, and finally how we connect all of this into…",
     "fetchedAt": "2026-07-11T13:25:10.688Z"
   },
@@ -1795,7 +2296,9 @@
     "url": "https://engineeringblog.yelp.com/2016/08/amira-automated-malware-incident-response-and-analysis.html",
     "source": "yelp",
     "publishedAt": "2016-08-17T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "open-source"
+    ],
     "summary": "Brave malware analysts at Yelp have spent a lot of time looking at the digital forensics from potentially infected macOS systems, gathered using our open source project, OSXCollector. Early on, we automated parts of the analysis process, augmenting the initial set of digital forensics collected…",
     "fetchedAt": "2026-07-11T13:25:10.688Z"
   },
@@ -1805,7 +2308,12 @@
     "url": "https://engineeringblog.yelp.com/2016/08/more-than-just-a-schema-store.html",
     "source": "yelp",
     "publishedAt": "2016-08-10T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "video",
+      "data",
+      "infra"
+    ],
     "summary": "This post is part of a series covering Yelp's real-time streaming data infrastructure. Our series explores in-depth how we stream MySQL and Cassandra data at real-time, how we automatically track & migrate schemas, how we process and transform streams, and finally how we connect all of this into…",
     "fetchedAt": "2026-07-11T13:25:10.688Z"
   },
@@ -1815,7 +2323,11 @@
     "url": "https://engineeringblog.yelp.com/2016/08/how-we-scaled-our-ad-analytics-with-cassandra.html",
     "source": "yelp",
     "publishedAt": "2016-08-07T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "data",
+      "backend"
+    ],
     "summary": "On the Ad Backend team, we recently moved our ad analytics data from MySQL to Apache Cassandra. Here’s why we thought Cassandra was a good fit for our application, and some lessons we learned that you might find useful if you’re thinking about using Cassandra! Why Cassandra? First, a little bit…",
     "fetchedAt": "2026-07-11T13:25:10.688Z"
   },
@@ -1825,7 +2337,9 @@
     "url": "https://engineeringblog.yelp.com/2016/08/yelp-dataset-challenge-round6-winner.html",
     "source": "yelp",
     "publishedAt": "2016-08-03T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Yelp Dataset Challenge Round 6 Winners The sixth round of the Yelp Dataset Challenge ran throughout the second half of 2015 and we were really impressed with the projects and ideas that came out of the challenge. Today, we are proud to announce the grand prize winner of the $5,000 award: “Topic…",
     "fetchedAt": "2026-07-11T13:25:10.688Z"
   },
@@ -1835,7 +2349,12 @@
     "url": "https://engineeringblog.yelp.com/2016/08/streaming-mysql-tables-in-real-time-to-kafka.html",
     "source": "yelp",
     "publishedAt": "2016-07-31T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "video",
+      "data",
+      "infra"
+    ],
     "summary": "This post is part of a series covering Yelp's real-time streaming data infrastructure. Our series explores in-depth how we stream MySQL and Cassandra data at real-time, how we automatically track & migrate schemas, how we process and transform streams, and finally how we connect all of this into…",
     "fetchedAt": "2026-07-11T13:25:10.688Z"
   },
@@ -1845,7 +2364,10 @@
     "url": "https://engineeringblog.yelp.com/2016/07/announcing-yelp-api-v3-developer-preview.html",
     "source": "yelp",
     "publishedAt": "2016-07-17T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data",
+      "backend"
+    ],
     "summary": "For the past few months we’ve been working on revamping our API based off your feedback of wanting more Yelp data and functionality. Today, we’re excited to announce that the newest version of our API is entering developer preview. What’s new? We’re exposing two new features as part of the…",
     "fetchedAt": "2026-07-11T13:25:12.999Z"
   },
@@ -1855,7 +2377,12 @@
     "url": "https://engineeringblog.yelp.com/2016/07/billions-of-messages-a-day-yelps-real-time-data-pipeline.html",
     "source": "yelp",
     "publishedAt": "2016-07-13T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "video",
+      "data",
+      "infra"
+    ],
     "summary": "This post is part of a series covering Yelp's real-time streaming data infrastructure. Our series explores in-depth how we stream MySQL and Cassandra data at real-time, how we automatically track & migrate schemas, how we process and transform streams, and finally how we connect all of this into…",
     "fetchedAt": "2026-07-11T13:25:12.999Z"
   },
@@ -1875,7 +2402,12 @@
     "url": "https://engineeringblog.yelp.com/2016/06/monitoring-cassandra-at-scale.html",
     "source": "yelp",
     "publishedAt": "2016-05-31T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "observability",
+      "data",
+      "infra"
+    ],
     "summary": "At Yelp we leverage Cassandra to fulfill a diverse workload that seems to combine every consistency and availability tradeoff imaginable. It is a fantastically versatile datastore, and a great complement for our developers to our MySQL and Elasticsearch offerings. However, our infrastructure is not…",
     "fetchedAt": "2026-07-11T13:25:12.999Z"
   },
@@ -1885,7 +2417,9 @@
     "url": "https://engineeringblog.yelp.com/2016/05/autoscaling-paasta-services.html",
     "source": "yelp",
     "publishedAt": "2016-05-24T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "infra"
+    ],
     "summary": "If you haven’t heard about PaaSTA before, feel free to check out the blog post introducing it. One step in creating a service is to decide how many compute resources it needs. From the inception of PaaSTA, changing a service’s resource allocation has required manually editing and pushing new…",
     "fetchedAt": "2026-07-11T13:25:12.999Z"
   },
@@ -1895,7 +2429,10 @@
     "url": "https://engineeringblog.yelp.com/2016/05/yelpicons.html",
     "source": "yelp",
     "publishedAt": "2016-05-17T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "networking"
+    ],
     "summary": "It’s 10:00 AM and a designer just created a new icon for Yelp. At 10:05 AM iOS has received a newly versioned CocoaPod containing 1x, 2x, and 3x PNGs, Android has received an AAR Library containing mdpi, hdpi, xhdpi, and xxhdpi WebPs, and the Web CDN has a new SVG and PNG spritesheet, code to…",
     "fetchedAt": "2026-07-11T13:25:12.999Z"
   },
@@ -1905,7 +2442,10 @@
     "url": "https://engineeringblog.yelp.com/2016/05/yelp-android-app-went-on-a-diet.html",
     "source": "yelp",
     "publishedAt": "2016-05-11T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "networking"
+    ],
     "summary": "Whether it’s battery usage, network, or time, we care a lot about our users’ resources. A big app creates a barrier of entry for users on metered or low speed networks. Last Thanksgiving, our automated alerts let us know that our app size was getting larger than we’d like, and making it harder for…",
     "fetchedAt": "2026-07-11T13:25:12.999Z"
   },
@@ -1915,7 +2455,10 @@
     "url": "https://engineeringblog.yelp.com/2016/05/yelp-kaggle-photo-challenge-interview-2.html",
     "source": "yelp",
     "publishedAt": "2016-05-03T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ml",
+      "career"
+    ],
     "summary": "The Yelp Restaurant Photo Classification competition challenged Kagglers to assign attribute labels to restaurants based on a collection of user-submitted photos. At the final tally, 355 players tackled this unique machine learning problem. Last week, we published Dmitrii Tsybulevskii’s 1st place…",
     "fetchedAt": "2026-07-11T13:25:12.999Z"
   },
@@ -1925,7 +2468,9 @@
     "url": "https://engineeringblog.yelp.com/2016/05/yelp-online-hackathon-winners.html",
     "source": "yelp",
     "publishedAt": "2016-05-01T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "backend"
+    ],
     "summary": "The results are in for the inaugural Yelp online hackathon which was held a few months ago (Jan. 25-Mar. 25). We were looking for cool, innovative uses of the Yelp API and received 60 submissions with 759 developers signed up to participate from around the world. Winners were chosen based on…",
     "fetchedAt": "2026-07-11T13:25:15.299Z"
   },
@@ -1935,7 +2480,9 @@
     "url": "https://engineeringblog.yelp.com/2016/04/yelp-kaggle-photo-challenge-interview-1.html",
     "source": "yelp",
     "publishedAt": "2016-04-27T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "career"
+    ],
     "summary": "A few months ago, Yelp partnered with Kaggle to run an image classification competition, which ran from December 2015 to April 2016. 355 Kagglers accepted Yelp’s challenge to predict restaurant attributes using nothing but user-submitted photos. We’d like to thank all the participants who made this…",
     "fetchedAt": "2026-07-11T13:25:15.299Z"
   },
@@ -1945,7 +2492,10 @@
     "url": "https://engineeringblog.yelp.com/2016/04/dropdown-like-its-hot.html",
     "source": "yelp",
     "publishedAt": "2016-04-12T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "frontend"
+    ],
     "summary": "As our number of mobile web visitors continues to increase, we want to make sure that the user experience is great on small screens. This quarter, we took some time to assess our reusable UI components and look for ways to improve their behavior across devices. We found a lot of room for…",
     "fetchedAt": "2026-07-11T13:25:15.299Z"
   },
@@ -1955,7 +2505,10 @@
     "url": "https://engineeringblog.yelp.com/2016/03/elastalert-part-two.html",
     "source": "yelp",
     "publishedAt": "2016-03-22T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "security",
+      "networking"
+    ],
     "summary": "It’s 10:51 PM on a Friday, and someone on the internet has decided to try to break into your network. They are guessing passwords and generating failed login events. Your security team is paged, the attacker is blocked, and everyone can go back to bed. This is one example of the power of…",
     "fetchedAt": "2026-07-11T13:25:15.299Z"
   },
@@ -1975,7 +2528,11 @@
     "url": "https://engineeringblog.yelp.com/2016/02/leaping-into-february.html",
     "source": "yelp",
     "publishedAt": "2016-02-04T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "observability",
+      "performance",
+      "data"
+    ],
     "summary": "February is going to be an exciting month! We’re looking forward to hosting our third Girl Geek Dinner next week which will feature talks from Yelp engineers on topics like learning, system performance metrics, and service monitoring. We’ll be present at the WSDM Conference that focuses on data…",
     "fetchedAt": "2026-07-11T13:25:15.299Z"
   },
@@ -1985,7 +2542,9 @@
     "url": "https://engineeringblog.yelp.com/2016/02/yelp-dataset-challenge-round7-announcement.html",
     "source": "yelp",
     "publishedAt": "2016-02-02T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "What can you learn from a Photo? Show us with the Yelp Dataset Challenge Round 7! The Challenge The Yelp Dataset Challenge provides the academic community with a real-world dataset over which to apply their research. We encourage students to take advantage of this wealth of data to develop and…",
     "fetchedAt": "2026-07-11T13:25:15.299Z"
   },
@@ -1995,7 +2554,9 @@
     "url": "https://engineeringblog.yelp.com/2016/01/yelp-dataset-challenge-round5-winner.html",
     "source": "yelp",
     "publishedAt": "2016-01-18T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Yelp Dataset Challenge Round 5 Winners The fifth round of the Yelp Dataset Challenge ran throughout the first half of 2015 and we were quite impressed with the projects and concepts that came out of the challenge. Today, we are proud to announce the grand prize winner of the $5,000 award: “From…",
     "fetchedAt": "2026-07-11T13:25:15.299Z"
   },
@@ -2005,7 +2566,10 @@
     "url": "https://engineeringblog.yelp.com/2016/01/critical-css-middleware-inlining-the-important-css-rules-on-the-fly.html",
     "source": "yelp",
     "publishedAt": "2016-01-11T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "performance",
+      "frontend"
+    ],
     "summary": "Website performance can be judged in a lot of ways, but perhaps the most important is user-perceived performance: the amount of time that is taken between clicking a link and having the desired page rendered on the screen. A big part of keeping things feeling snappy is understanding which bits of…",
     "fetchedAt": "2026-07-11T13:25:17.402Z"
   },
@@ -2015,7 +2579,11 @@
     "url": "https://engineeringblog.yelp.com/2016/01/dumb-init-an-init-for-docker.html",
     "source": "yelp",
     "publishedAt": "2016-01-05T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "infra",
+      "devops",
+      "testing"
+    ],
     "summary": "At Yelp we use Docker containers everywhere: we run tests in them, build tools around them, and even deploy them into production. In this post we introduce dumb-init, a simple init system written in C which we use inside our containers. Lightweight containers have made running a single process…",
     "fetchedAt": "2026-07-11T13:25:17.402Z"
   },
@@ -2025,7 +2593,11 @@
     "url": "https://engineeringblog.yelp.com/2015/12/yelp-restaurant-photo-classification-kaggle.html",
     "source": "yelp",
     "publishedAt": "2015-12-22T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "devops",
+      "video",
+      "data"
+    ],
     "summary": "We’re excited to release our first image dataset with hundreds of thousands of user-submitted photos as part of a challenge to all data scientists, launching this week on Kaggle! Yelp’s users provide several kinds of “unstructured” data such as reviews, photos, and videos. They can also answer…",
     "fetchedAt": "2026-07-11T13:25:17.402Z"
   },
@@ -2035,7 +2607,9 @@
     "url": "https://engineeringblog.yelp.com/2015/12/how-we-made-yelp-search-filters-data-driven.html",
     "source": "yelp",
     "publishedAt": "2015-12-01T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Yelp has an incredible amount of information about businesses to power local search experiences. Many of our users use our advanced search filters to explore and find exactly the place they are looking for. While most people don’t have any trouble filtering their searches using filters such as…",
     "fetchedAt": "2026-07-11T13:25:17.402Z"
   },
@@ -2045,7 +2619,9 @@
     "url": "https://engineeringblog.yelp.com/2015/12/its-the-holiday-season-and-were-giving-you-a-present-paasta.html",
     "source": "yelp",
     "publishedAt": "2015-11-30T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "open-source"
+    ],
     "summary": "In case you missed it last month, we open sourced PaaSTA, our platform-as-a-service which received a lot of excitement and support from the community. We want to bring our friends together to learn more, so we’re hosting our last Yelp Tech Talk of the year in conjunction with Mesosphere on December…",
     "fetchedAt": "2026-07-11T13:25:17.402Z"
   },
@@ -2055,7 +2631,10 @@
     "url": "https://engineeringblog.yelp.com/2015/11/introducing-paasta-an-open-platform-as-a-service.html",
     "source": "yelp",
     "publishedAt": "2015-11-09T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "architecture",
+      "backend"
+    ],
     "summary": "As an Operations engineer, my first priority is to keep the site up. A close second is enabling developers to quickly go from an idea to running code in production. Once an organization grows, the only sane way to ship code with any reasonable frequency is to split it up into microservices, also…",
     "fetchedAt": "2026-07-11T13:25:17.402Z"
   },
@@ -2085,7 +2664,9 @@
     "url": "https://engineeringblog.yelp.com/2015/10/fullerite-a-new-mineral-to-collect-metrics.html",
     "source": "yelp",
     "publishedAt": "2015-10-25T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "observability"
+    ],
     "summary": "Collecting System Metrics at Scale Monitoring system metrics (e.g. CPU utilization, loadavg, memory) is not a new problem. It’s been necessary for a long time and there are a few that already exist, most notably diamond and collectd. At Yelp, we run thousands of different machines hosted all over…",
     "fetchedAt": "2026-07-11T13:25:19.719Z"
   },
@@ -2095,7 +2676,9 @@
     "url": "https://engineeringblog.yelp.com/2015/10/how-we-use-deep-learning-to-classify-business-photos-at-yelp.html",
     "source": "yelp",
     "publishedAt": "2015-10-18T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ml"
+    ],
     "summary": "Yelp hosts tens of millions of photos uploaded by Yelpers from all around the world. The wide variety of these photos provides a rich window into local businesses, a window we’re only just peeking through today. One way we’re trying to open that window is by developing a photo understanding system…",
     "fetchedAt": "2026-07-11T13:25:19.719Z"
   },
@@ -2105,7 +2688,9 @@
     "url": "https://engineeringblog.yelp.com/2015/10/elastalert-alerting-at-scale-with-elasticsearch.html",
     "source": "yelp",
     "publishedAt": "2015-10-05T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Elasticsearch at Yelp Yelp’s web servers log data from the millions of sessions that our users initiate with Yelp every day. Our engineering teams can learn a lot from this data and use it to help monitor many critical systems. If you know what you’re looking for, archiving log files and retrieving…",
     "fetchedAt": "2026-07-11T13:25:19.719Z"
   },
@@ -2115,7 +2700,9 @@
     "url": "https://engineeringblog.yelp.com/2015/10/start-fall-with-a-little-yelp.html",
     "source": "yelp",
     "publishedAt": "2015-10-01T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "career"
+    ],
     "summary": "In two weeks we’ll be attending Grace Hopper for the third time in a row and we’re really excited to support Susanne L., Wei W., and Jen W. as they present about “Crucial Conversations in Your Career.” Our team learned a lot last year and we look forward to sharing more lessons with you again after…",
     "fetchedAt": "2026-07-11T13:25:19.719Z"
   },
@@ -2125,7 +2712,9 @@
     "url": "https://engineeringblog.yelp.com/2015/10/intern-project-building-the-yelp-ios-widget.html",
     "source": "yelp",
     "publishedAt": "2015-09-30T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile"
+    ],
     "summary": "We recently launched Yelp’s new Today Widget, so now you can search Yelp with a single tap from anywhere on your iPhone or iPad (iOS 8+). Today Widgets live in Notification Center, which can be accessed anywhere on the device by swiping on the top of the screen. You can search directly for a…",
     "fetchedAt": "2026-07-11T13:25:19.719Z"
   },
@@ -2135,7 +2724,9 @@
     "url": "https://engineeringblog.yelp.com/2015/09/designing-the-android-navigation-drawer.html",
     "source": "yelp",
     "publishedAt": "2015-09-13T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile"
+    ],
     "summary": "Since the dawn of time – or a very long time at least – the Yelp Android app has relied on a springboard design pattern for its navigation. This once-popular pattern served us well through the years as it allowed users quick access to Yelp’s most-used features. However, the design came with a…",
     "fetchedAt": "2026-07-11T13:25:19.719Z"
   },
@@ -2155,7 +2746,10 @@
     "url": "https://engineeringblog.yelp.com/2015/08/docker-in-the-real-world-at-yelp.html",
     "source": "yelp",
     "publishedAt": "2015-08-24T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "infra",
+      "devops"
+    ],
     "summary": "Thousands of businesses use Yelp SeatMe every day to manage their seating and reservations. Having a stable system is incredibly important to us, given how critical this system is to many businesses. This blog post is going to dive into how we use Docker to reliably develop and deploy Yelp SeatMe.…",
     "fetchedAt": "2026-07-11T13:25:19.719Z"
   },
@@ -2165,7 +2759,9 @@
     "url": "https://engineeringblog.yelp.com/2015/08/yelp-dataset-challenge-rides-again.html",
     "source": "yelp",
     "publishedAt": "2015-08-16T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "6. An impressive number. It’s 1 x 2 x 3 AND 1 + 2 + 3. It’s brilliant AND the number of degrees of freedom a rigid object has to move in three dimensions. It’s where we are in the history of the Yelp Academic Dataset challenge. We’ve had 5 rounds, hundreds of academic papers written, and we are…",
     "fetchedAt": "2026-07-11T13:25:21.930Z"
   },
@@ -2185,7 +2781,10 @@
     "url": "https://engineeringblog.yelp.com/2015/08/iphone-vs-android-what-does-your-phone-say-about-you.html",
     "source": "yelp",
     "publishedAt": "2015-08-06T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "data"
+    ],
     "summary": "It’s the battle of our generation - iPhone vs. Android - and Yelp has some novel data on what makes these devices different. Users of both are aligned in their passion of using Yelp to find restaurants as well as nightlife, plumbers and even dentists. However, when we dug into the search queries,…",
     "fetchedAt": "2026-07-11T13:25:21.930Z"
   },
@@ -2195,7 +2794,9 @@
     "url": "https://engineeringblog.yelp.com/2015/07/know-thyself-my-internship-quest-to-build-a-framework-to-analyze-our-yelp-feed.html",
     "source": "yelp",
     "publishedAt": "2015-07-30T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Over the years Yelp has built cool integrations with partners such as Apple, Microsoft, Yahoo and many others that have enabled users to interact with our rich dataset in unique ways. One of the methods we’ve used to achieve these integrations is by building a robust, scalable data feeds system,…",
     "fetchedAt": "2026-07-11T13:25:21.930Z"
   },
@@ -2205,7 +2806,10 @@
     "url": "https://engineeringblog.yelp.com/2015/07/glide-how-yelps-android-app-loads-images.html",
     "source": "yelp",
     "publishedAt": "2015-07-16T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "networking"
+    ],
     "summary": "Dynamically loaded images are a cornerstone of many Android applications. At Yelp, images are critical to how we connect consumers with great businesses. As network connections and device hardware have become more powerful, the quantity and quality of images that users have come to expect has…",
     "fetchedAt": "2026-07-11T13:25:21.930Z"
   },
@@ -2215,7 +2819,9 @@
     "url": "https://engineeringblog.yelp.com/2015/07/yelp-api-now-returns-action-links.html",
     "source": "yelp",
     "publishedAt": "2015-07-01T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "backend"
+    ],
     "summary": "Savvy developers like you already know that the Yelp API is the best place to get information on local businesses. Today, as a part of our on-going integration with our friends at both Yelp SeatMe and Yelp Eat24, we are excited to announce an additional feature of the API: “Action Links.” Action…",
     "fetchedAt": "2026-07-11T13:25:21.930Z"
   },
@@ -2225,7 +2831,10 @@
     "url": "https://engineeringblog.yelp.com/2015/06/new-yelp-api-console-lifes-easier-in-v2.html",
     "source": "yelp",
     "publishedAt": "2015-06-29T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "backend"
+    ],
     "summary": "Yelp’s API allows any developer to build rich user experiences by integrating Yelp’s local business information, reviews, and pictures into their web and mobile applications. We announced in January that we have ambitious plans to make it easier than ever for developers to integrate a local layer…",
     "fetchedAt": "2026-07-11T13:25:21.930Z"
   },
@@ -2235,7 +2844,9 @@
     "url": "https://engineeringblog.yelp.com/2015/06/advanced-uitableviews-made-simple-yltableview.html",
     "source": "yelp",
     "publishedAt": "2015-06-11T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile"
+    ],
     "summary": "Let’s say you had a great new idea for a Todo app and set out to build an awesome iPhone application. After firing up your copy of Xcode, you’d probably start by creating a UITableView – a critical part of the iOS SDK that allows you to build scrolling views. At Yelp, we’ve been playing around with…",
     "fetchedAt": "2026-07-11T13:25:21.930Z"
   },
@@ -2265,7 +2876,11 @@
     "url": "https://engineeringblog.yelp.com/2015/05/https-client-testing-made-easy.html",
     "source": "yelp",
     "publishedAt": "2015-05-17T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "security",
+      "networking",
+      "testing"
+    ],
     "summary": "You’ve probably read about the recent AFNetworking vulnerability. Nowadays, it’s not sufficient to just test your SSL certificates. You must also test how your clients use these certificates to have confidence your users aren’t getting pwned. There are plenty of tools to test broken cipher suites…",
     "fetchedAt": "2026-07-11T13:25:24.003Z"
   },
@@ -2275,7 +2890,10 @@
     "url": "https://engineeringblog.yelp.com/2015/05/yelp-tech-talks-mobile-testing-1-2-3-wrap-up.html",
     "source": "yelp",
     "publishedAt": "2015-05-07T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "testing"
+    ],
     "summary": "Last week we held our second tech talk, focusing on mobile, in a new internal series we launched this year. The presenters covered two very important topics in mobile: wearable apps and testing. Building Our Apple Watch App The evening started with a talk by Bill M. who lead the efforts to build…",
     "fetchedAt": "2026-07-11T13:25:24.003Z"
   },
@@ -2285,7 +2903,11 @@
     "url": "https://engineeringblog.yelp.com/2015/04/mycroft-load-data-into-redshift-automatically.html",
     "source": "yelp",
     "publishedAt": "2015-04-29T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "devops",
+      "data"
+    ],
     "summary": "Yelp generates terabytes of logs every day. Starting in 2010 with the release of mrjob, Yelp has relied heavily on Amazon Elastic MapReduce (EMR) and MapReduce jobs to analyze this data. While MapReduce works well to repeatedly answer the same question, it’s not a great tool to answer questions…",
     "fetchedAt": "2026-07-11T13:25:24.003Z"
   },
@@ -2295,7 +2917,10 @@
     "url": "https://engineeringblog.yelp.com/2015/04/data-science-contest-keeping-it-fresh-predict-restaurant-health-scores.html",
     "source": "yelp",
     "publishedAt": "2015-04-27T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "testing",
+      "data"
+    ],
     "summary": "Yelp connects people with local businesses and along the way we’ve gathered rich data about customers’ experiences at those businesses via reviews, tips, check-ins and business attributes. We are constantly asking ourselves how the collective wisdom of Yelpers can be used to better inform cities in…",
     "fetchedAt": "2026-07-11T13:25:24.003Z"
   },
@@ -2305,7 +2930,9 @@
     "url": "https://engineeringblog.yelp.com/2015/04/cocoapods-or-how-to-stop-worrying-about-dependency-management.html",
     "source": "yelp",
     "publishedAt": "2015-03-31T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile"
+    ],
     "summary": "Yelp has had an iOS app for as long as third-party iOS apps have existed. Maintaining a codebase with that much history is always interesting and sometimes challenging, and one of the biggest challenges is dependency management. For a long time, git submodules met most of our needs and caused…",
     "fetchedAt": "2026-07-11T13:25:24.003Z"
   },
@@ -2315,7 +2942,9 @@
     "url": "https://engineeringblog.yelp.com/2015/03/yelp-hackathon-16-what-the-hack-is-a-kuhlkdebeulefotoapparat.html",
     "source": "yelp",
     "publishedAt": "2015-03-26T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "product"
+    ],
     "summary": "A couple of weeks ago, the Yelp Product & Engineering teams put their creative minds together to work on our coolest, funniest and hardcore-est of ideas at the 16th edition of our internal Hackathon. As always, the food was plentiful- our kitchens were stacked with delicious catered food, fresh…",
     "fetchedAt": "2026-07-11T13:25:24.003Z"
   },
@@ -2325,7 +2954,10 @@
     "url": "https://engineeringblog.yelp.com/2015/03/analyzing-the-web-for-the-price-of-a-sandwich.html",
     "source": "yelp",
     "publishedAt": "2015-03-19T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "open-source",
+      "infra"
+    ],
     "summary": "I geek out about the Common Crawl. It’s an open source crawl of huge parts of the Internet, accessible for anyone to use. You have full access to the HTML and text of billions of web pages. What’s more, you can scan the entire thing, tens of terabytes, for just a few bucks on Amazon EC2. These days…",
     "fetchedAt": "2026-07-11T13:25:26.087Z"
   },
@@ -2335,7 +2967,9 @@
     "url": "https://engineeringblog.yelp.com/2015/03/march-events-yelp.html",
     "source": "yelp",
     "publishedAt": "2015-03-10T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "This month we’re ramping up and preparing for an awesome time at PyCon. We’ll be there in full force next month so look for us there at booth 606! Be sure to catch a presentation by our own Soups R. on Friday, April 10 at 12:10 where he’ll be speaking on Data Science in Advertising: Or a future…",
     "fetchedAt": "2026-07-11T13:25:26.087Z"
   },
@@ -2355,7 +2989,10 @@
     "url": "https://engineeringblog.yelp.com/2015/02/yelp-dataset-challenge-is-doubling-up.html",
     "source": "yelp",
     "publishedAt": "2015-02-05T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "testing",
+      "data"
+    ],
     "summary": "Two years, four highly competitive rounds, over $35,000 in cash prizes awarded and several hundred peer-reviewed papers later: the Yelp Dataset Challenge is doubling up. We are proud to announce our latest dataset that includes information about local businesses in 10 cities across 4 countries.…",
     "fetchedAt": "2026-07-11T13:25:26.087Z"
   },
@@ -2385,7 +3022,10 @@
     "url": "https://engineeringblog.yelp.com/2015/01/animating-the-mobile-web.html",
     "source": "yelp",
     "publishedAt": "2015-01-26T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "video"
+    ],
     "summary": "One of the most engaging features of Yelp is our photos and videos gallery. When you visit a Yelp Business Page inside of the mobile app, there is a photo at the top of the page to provide visual context. It also serves as a compelling entry point to our photo viewer if you pull it down. We wanted…",
     "fetchedAt": "2026-07-11T13:25:26.087Z"
   },
@@ -2395,7 +3035,12 @@
     "url": "https://engineeringblog.yelp.com/2015/01/title-ctes-and-window-functions-unleashing-the-power-of-redshift.html",
     "source": "yelp",
     "publishedAt": "2015-01-20T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "devops",
+      "product",
+      "data"
+    ],
     "summary": "At Yelp, we’re very big fans of Amazon’s RedShift data warehouse. We have multiple deployments of RedShift with different data sets in use by product management, sales analytics, ads, SeatMe and many other teams. While it minimizes a lot of the work the RedShift team has done to call RedShift a…",
     "fetchedAt": "2026-07-11T13:25:26.087Z"
   },
@@ -2405,7 +3050,9 @@
     "url": "https://engineeringblog.yelp.com/2015/01/2014-highlights-from-the-yelp-engineering-team.html",
     "source": "yelp",
     "publishedAt": "2015-01-13T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "open-source"
+    ],
     "summary": "2014 was a busy year for us at Yelp Engineering and with 2015 having just kicked off, we wanted to highlight some of our most exciting events from last year. Open Source Yelp loves open source. We love contributing back to the developer and open source communities and last year was no exception to…",
     "fetchedAt": "2026-07-11T13:25:28.414Z"
   },
@@ -2415,7 +3062,10 @@
     "url": "https://engineeringblog.yelp.com/2015/01/osxcollector-forensic-collection-and-automated-analysis-for-os-x.html",
     "source": "yelp",
     "publishedAt": "2015-01-11T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "security",
+      "networking"
+    ],
     "summary": "Introducing OSXCollector We use Macs a lot at Yelp, which means that we see our fair share of Mac-specific security alerts. Host based detectors will tell us about known malware infestations or weird new startup items. Network based detectors see potential C2 callouts or DNS requests to resolve…",
     "fetchedAt": "2026-07-11T13:25:28.414Z"
   },
@@ -2425,7 +3075,9 @@
     "url": "https://engineeringblog.yelp.com/2015/01/mysql-at-yelp.html",
     "source": "yelp",
     "publishedAt": "2015-01-06T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases"
+    ],
     "summary": "This past November, Yelp Engineering hosted a Bay Area Girl Geek Dinner and I had the pleasure of presenting a brief overview of how Yelp uses MySQL. I received a lot of great questions and wanted to take a few minutes to share the information with our wider blog audience. Overview: MySQL @ Yelp…",
     "fetchedAt": "2026-07-11T13:25:28.414Z"
   },
@@ -2485,7 +3137,9 @@
     "url": "https://engineeringblog.yelp.com/2014/11/yelp-dataset-challenge-round-3-winners-and-dataset-tools-for-round-4.html",
     "source": "yelp",
     "publishedAt": "2014-11-05T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Yelp Dataset Challenge Round 3 Winners We recently opened the fourth round of the Yelp Dataset Challenge. This announcement included an update to the dataset, adding four new international cities and bringing the total number of reviews in the dataset to over one million. You can download it and…",
     "fetchedAt": "2026-07-11T13:25:30.463Z"
   },
@@ -2515,7 +3169,9 @@
     "url": "https://engineeringblog.yelp.com/2014/10/scaling-traffic-from-0-to-139-million-unique-visitors.html",
     "source": "yelp",
     "publishedAt": "2014-10-30T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "networking"
+    ],
     "summary": "At LAUNCH Scale last week, I gave a talk to over 75 co-founders (CEOs and CTOs) on how we’ve scaled traffic here at Yelp. It brought back memories of Darwin biting through our ethernet cable and reminded me of the run up to our IPO, making sure we had enough capacity to handle the expected surge in…",
     "fetchedAt": "2026-07-11T13:25:30.463Z"
   },
@@ -2525,7 +3181,10 @@
     "url": "https://engineeringblog.yelp.com/2014/10/introducing-pyleus.html",
     "source": "yelp",
     "publishedAt": "2014-10-14T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "open-source",
+      "data"
+    ],
     "summary": "Yelp loves Python, and we use it at scale to power our websites and process the huge amount of data we produce. Pyleus is a new open-source framework that aims to do for Storm what mrjob, another open-source Yelp project, does for Hadoop: let developers process large amounts of data in pure Python…",
     "fetchedAt": "2026-07-11T13:25:30.463Z"
   },
@@ -2535,7 +3194,13 @@
     "url": "https://engineeringblog.yelp.com/2014/10/using-moe-the-metric-optimization-engine-to-optimize-an-ab-testing-experiment-framework.html",
     "source": "yelp",
     "publishedAt": "2014-10-08T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ml",
+      "open-source",
+      "experimentation",
+      "performance",
+      "testing"
+    ],
     "summary": "A/B Testing Experiment Frameworks and MOE We recently open sourced MOE, the Metric Optimization Engine, a machine learning tool for solving global, black box optimization problems. An example application for such a system is optimally running online A/B experiments. A/B testing segments the users…",
     "fetchedAt": "2026-07-11T13:25:30.463Z"
   },
@@ -2545,7 +3210,9 @@
     "url": "https://engineeringblog.yelp.com/2014/10/october-events-at-yelp.html",
     "source": "yelp",
     "publishedAt": "2014-10-05T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "performance"
+    ],
     "summary": "October will be a busy month for all of us, with a lot of great conferences and events happening back-to-back. We start the month off with an SF Python meetup in collaboration with PyLadies. Zach Musgrave will be presenting on performance profiling in production. Later this month, Scott Clark will…",
     "fetchedAt": "2026-07-11T13:25:30.463Z"
   },
@@ -2565,7 +3232,9 @@
     "url": "https://engineeringblog.yelp.com/2014/09/intern-project-real-time-log-tailing-with-franz-our-kafka-wrapper.html",
     "source": "yelp",
     "publishedAt": "2014-09-28T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "At Yelp, we often need to analyze data in real time. Right now most of our data is aggregated and logged using a system called Scribe. This means that real-time processes currently depend on tailing Scribe, reading messages as they are added to the end of the logs. Simply tailing the logs means…",
     "fetchedAt": "2026-07-11T13:25:32.474Z"
   },
@@ -2585,7 +3254,9 @@
     "url": "https://engineeringblog.yelp.com/2014/09/yelp-sponsors-women-who-code-wwcode.html",
     "source": "yelp",
     "publishedAt": "2014-09-09T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "career"
+    ],
     "summary": "We’re happy to announce that we are one of the first official sponsors of Women Who Code! WWCode is an organization whose goal is to help women excel in technology careers. WWCode and Yelp started working together three years ago when the meetup group was created. We’ve hosted many of their events…",
     "fetchedAt": "2026-07-11T13:25:32.474Z"
   },
@@ -2595,7 +3266,9 @@
     "url": "https://engineeringblog.yelp.com/2014/09/csp_reports_at_scale.html",
     "source": "yelp",
     "publishedAt": "2014-09-07T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "security"
+    ],
     "summary": "CSP is Awesome Content Security Policy isn’t new, but it is so powerful that it still feels like the new hotness. The ability to add a header to HTTP responses that tightens user-agent security rules and reports on violations is really powerful. Don’t want to load scripts from third party domain?…",
     "fetchedAt": "2026-07-11T13:25:32.474Z"
   },
@@ -2615,7 +3288,9 @@
     "url": "https://engineeringblog.yelp.com/2014/08/announcing-pre-commit-yelps-multi-language-package-manager-for-pre-commit-hooks.html",
     "source": "yelp",
     "publishedAt": "2014-08-26T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "testing"
+    ],
     "summary": "At Yelp we rely heavily on pre-commit hooks to find and fix common issues before changes are submitted for code review. We run our hooks before every commit to automatically point out issues like missing semicolons, whitespace problems, and testing statements in code. Automatically fixing these…",
     "fetchedAt": "2026-07-11T13:25:32.474Z"
   },
@@ -2625,7 +3300,9 @@
     "url": "https://engineeringblog.yelp.com/2014/08/hack209-dockersh.html",
     "source": "yelp",
     "publishedAt": "2014-08-25T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "infra"
+    ],
     "summary": "Yelp’s engineering team loves Docker. We’re already using it for a growing number of projects internally but there are applications that Docker isn’t a great fit for, such as providing independent (VM like) containers on shared hardware for people to interactively ssh into. You can, of course, run…",
     "fetchedAt": "2026-07-11T13:25:32.474Z"
   },
@@ -2645,7 +3322,9 @@
     "url": "https://engineeringblog.yelp.com/2014/08/august-events-at-yelp-our-schedule-is-heating-up.html",
     "source": "yelp",
     "publishedAt": "2014-08-10T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "security"
+    ],
     "summary": "We’ve got a busy month ahead of us with several great events being held at Yelp HQ. We hope everyone was able to catch our security team over at BSides LV this past week where one of our engineers, Ioannis, presented on honeypots and ran a workshop teaching people how to set up one of their own.…",
     "fetchedAt": "2026-07-11T13:25:34.538Z"
   },
@@ -2655,7 +3334,9 @@
     "url": "https://engineeringblog.yelp.com/2014/08/keeping-yelp-safe-at-security-bsides-las-vegas.html",
     "source": "yelp",
     "publishedAt": "2014-08-03T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "security"
+    ],
     "summary": "People say that security is hard and that’s exactly why we have a dedicated security team here at Yelp! We place tremendous importance on securing our environment, our employees and the millions of visitors who trust Yelp every month. Information Security is not a solo endeavor. You have to…",
     "fetchedAt": "2026-07-11T13:25:34.538Z"
   },
@@ -2665,7 +3346,10 @@
     "url": "https://engineeringblog.yelp.com/2014/08/the-yelp-dataset-challenge-goes-international-new-data-new-cities-open-to-students-worldwide.html",
     "source": "yelp",
     "publishedAt": "2014-07-31T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ml",
+      "data"
+    ],
     "summary": "The Challenge The Yelp Dataset Challenge provides the academic community with a real-world dataset over which to apply their research. We encourage students to take advantage of this wealth of data to develop and extend their own research in data science and machine learning. Students who submit…",
     "fetchedAt": "2026-07-11T13:25:34.538Z"
   },
@@ -2675,7 +3359,13 @@
     "url": "https://engineeringblog.yelp.com/2014/07/introducing-moe-metric-optimization-engine-a-new-open-source-machine-learning-service-for-optimal-ex.html",
     "source": "yelp",
     "publishedAt": "2014-07-23T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ml",
+      "open-source",
+      "experimentation",
+      "performance",
+      "testing"
+    ],
     "summary": "At Yelp we run a lot of A/B tests. By constantly trying new features and testing their impact, we are able to continue evolving our products and make them as useful as possible. However, running online A/B tests can be expensive (in opportunity cost, user experience, or revenue) and time consuming…",
     "fetchedAt": "2026-07-11T13:25:34.538Z"
   },
@@ -2695,7 +3385,10 @@
     "url": "https://engineeringblog.yelp.com/2014/04/more-yelp-in-your-ruby.html",
     "source": "yelp",
     "publishedAt": "2014-04-28T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data",
+      "backend"
+    ],
     "summary": "What’s that you say? Your Ruby applications are feeling a little empty and meaningless without Yelp data to make them shine? Well, consider your prayers answered because today we’re launching our official Ruby Gem for interfacing with the Yelp API! Find the gem online now, and start using Yelp data…",
     "fetchedAt": "2026-07-11T13:25:34.538Z"
   },
@@ -2705,7 +3398,10 @@
     "url": "https://engineeringblog.yelp.com/2014/04/april-showers-bring-more-talks-to-yelp.html",
     "source": "yelp",
     "publishedAt": "2014-04-06T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "architecture",
+      "data"
+    ],
     "summary": "Yelp is hosting many exciting talks this month! Let’s take a closer look at two, but be sure to check out all of the links below to see what’s in the pipeline. What does it take to monitor an architecture that is continually in flux and being changed by hundreds of developers? A seriously flexible…",
     "fetchedAt": "2026-07-11T13:25:34.538Z"
   },
@@ -2715,7 +3411,10 @@
     "url": "https://engineeringblog.yelp.com/2014/03/mysql-replication-network-issues-and-why-you-might-want-to-upgrade.html",
     "source": "yelp",
     "publishedAt": "2014-03-30T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "performance"
+    ],
     "summary": "pre.mysql-block { overflow-x: auto; margin: 0 0 1em 1em; } At Yelp, we use MySQL replication to provide the performance we need to serve our 120 million monthly unique visitors. In this post Josh Snyder walks us through some of the internals of MySQL’s replication system, and discusses an issue…",
     "fetchedAt": "2026-07-11T13:25:34.538Z"
   },
@@ -2745,7 +3444,9 @@
     "url": "https://engineeringblog.yelp.com/2014/02/yelp-dataset-challenge-round-2-winner-and-new-data.html",
     "source": "yelp",
     "publishedAt": "2014-02-19T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "The Challenge The second round of the Yelp Dataset Challenge opened in May 2013, giving students access to our massive Phoenix Academic Dataset, with reviews and businesses from the greater Phoenix metro area. The Yelp team is very excited to provide the academic community with a rich dataset over…",
     "fetchedAt": "2026-07-11T13:25:36.535Z"
   },
@@ -2765,7 +3466,9 @@
     "url": "https://engineeringblog.yelp.com/2014/02/fab-february-events-yelp.html",
     "source": "yelp",
     "publishedAt": "2014-02-06T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "It’s a big month for awesome events at Yelp HQ! Of special interest to those wondering how Yelp uses Hadoop is the Hadoop User Group on the 19th. I’ll be presenting on where Hadoop fits into our Big Data stack. Unfortunately, Hadoop isn’t quite pixie dust you can sprinkle on data and transmorph it…",
     "fetchedAt": "2026-07-11T13:25:36.535Z"
   },
@@ -2785,7 +3488,11 @@
     "url": "https://engineeringblog.yelp.com/2013/12/yelp-internship-program-summer-2013.html",
     "source": "yelp",
     "publishedAt": "2013-12-18T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "devops",
+      "testing"
+    ],
     "summary": "This summer, our interns spent their weekdays in downtown San Francisco alongside full-time engineers developing some of Yelp’s latest releases: mobile reviews, Yelp’s launch in Brazil, and others still in the works. Mark M. and Olivia G., interns from our mobile and community teams, shared a…",
     "fetchedAt": "2026-07-11T13:25:36.535Z"
   },
@@ -2805,7 +3512,9 @@
     "url": "https://engineeringblog.yelp.com/2013/11/whoa-that-embedded-web-view-looks-hot-in-your-ios-app.html",
     "source": "yelp",
     "publishedAt": "2013-11-06T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile"
+    ],
     "summary": "This post comes to us from Allen C., an engineer on our mobile team. The mobile team has dozens of innovations under their belt, and today Allen explains how the iOS team uses HTML views to quickly roll out features that originate on the web. In the third quarter of 2013, the Yelp mobile app was…",
     "fetchedAt": "2026-07-11T13:25:38.608Z"
   },
@@ -2815,7 +3524,9 @@
     "url": "https://engineeringblog.yelp.com/2013/11/data-quality-how-yelp-stacks-up-to-the-competition.html",
     "source": "yelp",
     "publishedAt": "2013-11-06T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Here at Yelp we take pride in providing accurate business listings. This is a harder problem than you might think. There are about 50 million businesses listed on Yelp, businesses come and go at an astonishing rate, and reasonable people can — and frequently do — disagree about whether a piece of…",
     "fetchedAt": "2026-07-11T13:25:38.608Z"
   },
@@ -2835,7 +3546,12 @@
     "url": "https://engineeringblog.yelp.com/2013/10/yelp-dataset-challenge-winners-round-two-now-live.html",
     "source": "yelp",
     "publishedAt": "2013-10-01T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ml",
+      "devops",
+      "testing",
+      "data"
+    ],
     "summary": "The Challenge The inaugural Yelp Dataset Challenge opened in March 2013 with the release of our latest academic dataset featuring reviews and businesses from the greater Phoenix metro area. The goal of the dataset was to encourage development of new techniques in data analysis and machine learning…",
     "fetchedAt": "2026-07-11T13:25:38.608Z"
   },
@@ -2875,7 +3591,9 @@
     "url": "https://engineeringblog.yelp.com/2013/07/building-the-wordmap.html",
     "source": "yelp",
     "publishedAt": "2013-07-10T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Mark W. and Chris C. are part of the team behind our recently launched Wordmap, and today they give us a peek behind the scenes. Read on to learn how we’re helping people with a critical need: avoiding hipsters (oh yea, and connecting with great local businesses!) We have a lot of data here at…",
     "fetchedAt": "2026-07-11T13:25:38.608Z"
   },
@@ -2885,7 +3603,9 @@
     "url": "https://engineeringblog.yelp.com/2013/07/django.html",
     "source": "yelp",
     "publishedAt": "2013-07-07T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "backend"
+    ],
     "summary": "Something that we value at Yelp is keeping things new and exciting. A few days ago, we were able to host a brand new meetup group, the San Francisco Django Meetup Group! They launched their summer speaker series by inviting Randall Degges to discuss how he grew his Python API company using…",
     "fetchedAt": "2026-07-11T13:25:40.664Z"
   },
@@ -2895,7 +3615,10 @@
     "url": "https://engineeringblog.yelp.com/2013/06/never-stop-learning-schools-out-yelps-in.html",
     "source": "yelp",
     "publishedAt": "2013-06-11T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ml",
+      "data"
+    ],
     "summary": "Machine Learning (ML) plays a critical role here at Yelp. It allows us to transform Big Data into usable information. A major area of research in ML is understanding how to apply the myriad of techniques available to an engineer. In addition to deciding on which algorithm to use, a practitioner…",
     "fetchedAt": "2026-07-11T13:25:40.664Z"
   },
@@ -2905,7 +3628,12 @@
     "url": "https://engineeringblog.yelp.com/2013/05/grossquerychecker-dont-get-surprised-by-query-performance-in-production.html",
     "source": "yelp",
     "publishedAt": "2013-05-13T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "performance",
+      "testing",
+      "data"
+    ],
     "summary": "Ever been woken up at 3am by a misbehaving database query? Jenni S., Yelp’s MySQL DBA, walks us through Yelp’s system to prevent such rude awakenings. Here at Yelp, we push multiple times a day. We do this safely and surely with our process of code review, integration, automated testing, and…",
     "fetchedAt": "2026-07-11T13:25:40.664Z"
   },
@@ -2915,7 +3643,10 @@
     "url": "https://engineeringblog.yelp.com/2013/05/databases-selenium-and-mlbase-oh-may.html",
     "source": "yelp",
     "publishedAt": "2013-05-07T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "data"
+    ],
     "summary": "In addition to the public events we hold at Yelp, every Friday an engineer at Yelp presents on a topic they’re passionate about. The talks range from topics far afield from computers, to technical deep dives on some of the core trade-offs we make at Yelp. I’m happy to share one of the latter today,…",
     "fetchedAt": "2026-07-11T13:25:40.664Z"
   },
@@ -2925,7 +3656,9 @@
     "url": "https://engineeringblog.yelp.com/2013/04/april-events-at-yelp.html",
     "source": "yelp",
     "publishedAt": "2013-04-11T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "networking"
+    ],
     "summary": "Last Tuesday, we stepped out of our technical meetup norm and hosted an event group whose mission is to improve the lives of women around the world. Spark is an organization comprised of a network of young philanthropic entrepreneurs. Their members offer pro bono services to up-and-coming women’s…",
     "fetchedAt": "2026-07-11T13:25:40.664Z"
   },
@@ -2935,7 +3668,9 @@
     "url": "https://engineeringblog.yelp.com/2013/04/event-listing-classifier-an-intern-story.html",
     "source": "yelp",
     "publishedAt": "2013-04-03T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ml"
+    ],
     "summary": "What projects do interns work on? What are some of the machine learning algorithms we use to solve real world problems? Do interns work in teams solving critical problems, or just do small research tasks? These are some of the questions I frequently get when talking with candidates, so I invited…",
     "fetchedAt": "2026-07-11T13:25:40.664Z"
   },
@@ -2945,7 +3680,9 @@
     "url": "https://engineeringblog.yelp.com/2013/03/mrjob-sprint-at-pycon-2013.html",
     "source": "yelp",
     "publishedAt": "2013-03-10T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "open-source"
+    ],
     "summary": "Sudarshan G., Yelp’s current leading engineer behind mrjob, writes this week about an exciting opportunity to contribute to one of our most popular open source libraries: mrjob. We are happy to announce that we are running a mrjob sprint at Pycon 2013. mrjob is an open source Python framework for…",
     "fetchedAt": "2026-07-11T13:25:40.664Z"
   },
@@ -2975,7 +3712,9 @@
     "url": "https://engineeringblog.yelp.com/2013/01/mission-beyond-the-mobile-browser.html",
     "source": "yelp",
     "publishedAt": "2013-01-21T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile"
+    ],
     "summary": "Last year we published an article explaining the reasoning behind the birth of our mobile site, Mission: Mobile Makeover. Since then, we’ve been hard at work, dedicated to improving this new Yelp property and transform it into an app-like experience. Ideally? Forget about your browser, and keep on…",
     "fetchedAt": "2026-07-11T13:25:42.671Z"
   },
@@ -2985,7 +3724,9 @@
     "url": "https://engineeringblog.yelp.com/2013/01/bringing-health-inspection-scores-to-yelp.html",
     "source": "yelp",
     "publishedAt": "2013-01-16T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "backend"
+    ],
     "summary": "Our post today is by Will L., an engineering intern on one of Yelp’s backend teams this past fall. Will walks us through the challenges of bringing restaurant health inspection scores to Yelp, a feature we announced today at the United States Conference of Mayors in Washington, DC. As you may have…",
     "fetchedAt": "2026-07-11T13:25:42.671Z"
   },
@@ -2995,7 +3736,9 @@
     "url": "https://engineeringblog.yelp.com/2013/01/more-january-events-at-yelp.html",
     "source": "yelp",
     "publishedAt": "2013-01-15T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "open-source"
+    ],
     "summary": "We host several external meetup groups every month, but sometimes, they want us to present, too! SF Hadoop Users invited Sudarshan Gaikaiwair, one of our Yelptastic engineers to speak about mrjob, our MapReduce framework. mrjob is an open source project that runs on top of Hadoop. While mrjob can…",
     "fetchedAt": "2026-07-11T13:25:42.671Z"
   },
@@ -3005,7 +3748,11 @@
     "url": "https://engineeringblog.yelp.com/2013/01/january-events-at-yelp.html",
     "source": "yelp",
     "publishedAt": "2013-01-06T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "video",
+      "architecture"
+    ],
     "summary": "Want to know what widows, rivers, and pig bristles have to do with typography? Listen to Carolina de Bartolo ( @carodebartolo) explain why Typography Matters in the video below! Designers + Geeks is an engaging meetup that covers everything from beautiful architecture to mobile development. At an…",
     "fetchedAt": "2026-07-11T13:25:42.671Z"
   },
@@ -3015,7 +3762,9 @@
     "url": "https://engineeringblog.yelp.com/2012/12/yelp-reinvents.html",
     "source": "yelp",
     "publishedAt": "2012-12-26T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "video"
+    ],
     "summary": "Last month, Yelp was asked to talk about our experiences with Amazon’s Web Services at their re:Invent conference in Las Vegas. I was delighted to be able to attend, speak, and learn from other speakers. All videos from the conference have been published, and below I’ve highlighted the sections…",
     "fetchedAt": "2026-07-11T13:25:42.671Z"
   },
@@ -3025,7 +3774,10 @@
     "url": "https://engineeringblog.yelp.com/2012/12/building-and-testing-yelp-mobile.html",
     "source": "yelp",
     "publishedAt": "2012-12-11T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "testing"
+    ],
     "summary": "The mobile team at Yelp always strives to bring the best possible experience to your mobile device, but what does it take to accomplish this? For Yelp’s iOS app, in addition to tools used by many iOS developers — Xcode for a development environment, Git for version control — we have found other…",
     "fetchedAt": "2026-07-11T13:25:42.671Z"
   },
@@ -3035,7 +3787,11 @@
     "url": "https://engineeringblog.yelp.com/2012/08/firefly-illuminate-your-websites-performance.html",
     "source": "yelp",
     "publishedAt": "2012-08-16T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "open-source",
+      "performance",
+      "infra"
+    ],
     "summary": "One of Yelp’s core values is “play well with others.” So it’s no surprise that Yelp thrives with open source projects written by others, and gives back by sharing projects of our own. That’s why I’m excited to share this post by the manager of our Infrastructure team, Oliver N. (or as he’s known…",
     "fetchedAt": "2026-07-11T13:25:42.671Z"
   },
@@ -3045,7 +3801,10 @@
     "url": "https://engineeringblog.yelp.com/2012/08/gps-vs-wifi-the-battle-for-location-accuracy-using-yelp-check-ins.html",
     "source": "yelp",
     "publishedAt": "2012-08-13T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "data"
+    ],
     "summary": "Our next post comes from Mason G., superstar intern on our IOS team. While not assembling a 20-monitor wide version of Mario that displays the entire level at once, Mason has been cranking out features for our shiny iPhone and iPad apps. Yelp thrives on data, so it is no suprise that one of Mason’s…",
     "fetchedAt": "2026-07-11T13:25:44.674Z"
   },
@@ -3055,7 +3814,12 @@
     "url": "https://engineeringblog.yelp.com/2012/07/introducing-emrio-optimize-your-aws-bills.html",
     "source": "yelp",
     "publishedAt": "2012-07-22T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "devops",
+      "cloud",
+      "performance",
+      "data"
+    ],
     "summary": "This post comes to us from Sean, one of our Data Mining interns and a student at the University of Pittsburgh. Sean wrote production code his first week here, and hasn’t slowed down since. I’m happy to see his main project released today: it’s called EMRio (pronounced like the Italian plumber).…",
     "fetchedAt": "2026-07-11T13:25:44.674Z"
   },
@@ -3065,7 +3829,9 @@
     "url": "https://engineeringblog.yelp.com/2012/06/datamining-and-visualization-with-the-academic-dataset.html",
     "source": "yelp",
     "publishedAt": "2012-06-03T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "One of the qualities Yelp looks for in engineers is a passion for making sense of “big data.” But as a student or newbie in the field of data science, how are you supposed to demonstrate that passion? Enter the Yelp Academic Dataset, a snapshot of review, user, and business data from the…",
     "fetchedAt": "2026-07-11T13:25:44.674Z"
   },
@@ -3085,7 +3851,9 @@
     "url": "https://engineeringblog.yelp.com/2012/04/hackthon-7-are-you-a-nerd.html",
     "source": "yelp",
     "publishedAt": "2012-04-22T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ai"
+    ],
     "summary": "It’s that time of year again: when Yelp engineers huddle for 48 hours to dream up and build some trippy stuff – and Yelp Hack@thon 7 proved no different! There was everything from custom Magic: The Gathering cards personalized for Yelp, our own version of Hungry, Hungry Hippos with (you guessed it)…",
     "fetchedAt": "2026-07-11T13:25:44.674Z"
   },
@@ -3105,7 +3873,10 @@
     "url": "https://engineeringblog.yelp.com/2012/04/diving-into-yelpy-insights.html",
     "source": "yelp",
     "publishedAt": "2012-04-09T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "product",
+      "testing"
+    ],
     "summary": "As you may have seen on our Yelp Official Blog, we recently did a post on a new feature we are testing: Yelpy Insights. Here on the Engineering and Product Blog, we wanted to dive into the work our engineering team did to help discover and display Yelpy Insights. The Idea: Yelpy Insights was…",
     "fetchedAt": "2026-07-11T13:25:44.674Z"
   },
@@ -3115,7 +3886,12 @@
     "url": "https://engineeringblog.yelp.com/2011/12/lookin-good-ui-verification-in-ghunit.html",
     "source": "yelp",
     "publishedAt": "2011-12-14T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "devops",
+      "testing",
+      "frontend"
+    ],
     "summary": "Here at Yelp, we build some popular mobile apps. We have around 5 million monthly unique users and about 1/3 of all Yelp searches come from mobile. Our apps continue to grow in complexity as we add new features. We try our best to test before releases, however, sometimes UI breaks and we don’t…",
     "fetchedAt": "2026-07-11T13:25:44.674Z"
   },
@@ -3125,7 +3901,10 @@
     "url": "https://engineeringblog.yelp.com/2011/11/mission-mobile-makeover.html",
     "source": "yelp",
     "publishedAt": "2011-11-03T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "devops"
+    ],
     "summary": "As previously reported, we recently released a brand new mobile site, hand made with love for our more than 8 million users with mobile Webkit browsers who visited www.yelp.com from mobile devices in August. Surprisingly, there are a lot of challenges when creating a whole new, albeit mini, website…",
     "fetchedAt": "2026-07-11T13:25:46.758Z"
   },
@@ -3135,7 +3914,9 @@
     "url": "https://engineeringblog.yelp.com/2011/11/output-filtering-failure.html",
     "source": "yelp",
     "publishedAt": "2011-10-31T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile"
+    ],
     "summary": "About a month ago, we launched m.yelp.com specifically targeting iPhone, Android, and WebKit-based smart phones. Our engineering team pushes code live on average three times a day. Moving fast means we need to have sound engineering practices internally — such as code reviews by peers and automated…",
     "fetchedAt": "2026-07-11T13:25:46.758Z"
   },
@@ -3145,7 +3926,9 @@
     "url": "https://engineeringblog.yelp.com/2011/09/calling-all-data-miners.html",
     "source": "yelp",
     "publishedAt": "2011-09-22T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Summers are tough here at Yelp’s HQ in San Francisco. It’s hard to keep up with all the hot new businesses, order the best food at every restaurant you visit, or even just find that fancy dive bar your friends have been chatting up. If you’re anything like me, you aren’t satisfied just using these…",
     "fetchedAt": "2026-07-11T13:25:46.758Z"
   },
@@ -3165,7 +3948,9 @@
     "url": "https://engineeringblog.yelp.com/2011/07/day-in-the-life-of-a-yelp-engineer.html",
     "source": "yelp",
     "publishedAt": "2011-07-08T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "testing"
+    ],
     "summary": "Check out the latest post on the main Yelp blog about a day in the life of one of our engineers, JR Heard!",
     "fetchedAt": "2026-07-11T13:25:46.758Z"
   },
@@ -3185,7 +3970,10 @@
     "url": "https://engineeringblog.yelp.com/2011/04/parcelgen-a-code-generator-for-android-data-objects.html",
     "source": "yelp",
     "publishedAt": "2011-04-18T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "data"
+    ],
     "summary": "When I switched from working on Yelp’s iPhone app to our Android app, one of the first things I encountered was the radical difference between the equivalent classes to handle what I normally consider a “screen” or “page” of an app. On Android, an Activity handles what on iOS you use a…",
     "fetchedAt": "2026-07-11T13:25:46.758Z"
   },
@@ -3205,7 +3993,10 @@
     "url": "https://engineeringblog.yelp.com/2011/03/we-store-the-vast-majority-of-our-data-at-yelp-in-mysql-during-normal-traffic-hours-were-issuing-tens-of-thousands-of-state.html",
     "source": "yelp",
     "publishedAt": "2011-03-20T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "data"
+    ],
     "summary": "At Yelp, we store nearly all of our data in MySQL. At any given time we’re issuing tens of thousands of SQL queries to our database cluster per second, with some individual servers going above the 10k qps mark. Our database cluster consists of billions of rows. In response to a lot of different…",
     "fetchedAt": "2026-07-11T13:25:48.797Z"
   },
@@ -3225,7 +4016,9 @@
     "url": "https://engineeringblog.yelp.com/2011/02/upcoming-tech-events-at-yelp.html",
     "source": "yelp",
     "publishedAt": "2011-02-23T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "testing"
+    ],
     "summary": "Over the next couple of weeks, Yelp is going to be hosting two open-to-the-public events for members of the software development community: PyPy Just-in-Time Interpreters March 3rd, 6pm Armin Rigo of the PyPy project will be giving a presentation on achievements made by PyPy, the “fastest, most…",
     "fetchedAt": "2026-07-11T13:25:48.797Z"
   },
@@ -3235,7 +4028,9 @@
     "url": "https://engineeringblog.yelp.com/2011/02/the-problem-on-the-device-but-not-the-sim-the-following-code-would-crash-on-views-that-implemented-drawinrect-methods-tha.html",
     "source": "yelp",
     "publishedAt": "2011-02-22T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "architecture"
+    ],
     "summary": "Alan on our iPhone team recently encountered a tricky bug that had to do with the ObjectiveC compiler and differences in architecture between ARM and x86. The Problem On the device (but not the sim), the following code would crash on views that implemented drawInRect methods that returned a CGPoint…",
     "fetchedAt": "2026-07-11T13:25:48.797Z"
   },
@@ -3275,7 +4070,9 @@
     "url": "https://engineeringblog.yelp.com/2010/10/now-testify.html",
     "source": "yelp",
     "publishedAt": "2010-10-06T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "testing"
+    ],
     "summary": "The Yelp code base has been under development for over six years. We push multiple times a day. We don’t have a dedicated QA team. Yelpers get very angry when their detailed account of how that waitress was totally into them doesn’t get saved. Effective automated testing is the only way we can stay…",
     "fetchedAt": "2026-07-11T13:25:48.797Z"
   },
@@ -3285,7 +4082,9 @@
     "url": "https://engineeringblog.yelp.com/2010/09/tron.html",
     "source": "yelp",
     "publishedAt": "2010-09-13T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "As Yelp has grown over the years, we’ve amassed huge collections of data - the collective output of the actions of tens of millions of users. Analyzing this data helps us improve the user experience across the site, from ranking businesses and extracting “review highlights” to fighting spam and…",
     "fetchedAt": "2026-07-11T13:25:50.848Z"
   },
@@ -3295,7 +4094,9 @@
     "url": "https://engineeringblog.yelp.com/2010/09/push-it.html",
     "source": "yelp",
     "publishedAt": "2010-09-07T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "devops"
+    ],
     "summary": "At Yelp, we push new code live every day. Pushing daily allows us to quickly prototype new features and squash bugs in a proactive manner. Because we aim to deploy new code so often, we’re always looking for ways to make the process efficient and painless. There are four main stages to the Yelp…",
     "fetchedAt": "2026-07-11T13:25:50.848Z"
   },
@@ -3305,7 +4106,9 @@
     "url": "https://engineeringblog.yelp.com/2010/08/what-the-underage-engineers-work-on-at-yelp.html",
     "source": "yelp",
     "publishedAt": "2010-08-23T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "testing"
+    ],
     "summary": "This summer, we were fortunate to have 7 awesome interns join us for a 12-week internship at Yelp HQ. Coming from elite schools across the nation, these interns weren’t fetching us coffee or making copies. They were working side by side with our best and brightest on some of the most important and…",
     "fetchedAt": "2026-07-11T13:25:50.848Z"
   },
@@ -3325,7 +4128,10 @@
     "url": "https://engineeringblog.yelp.com/2010/08/yelp-engineers-discover-blogging.html",
     "source": "yelp",
     "publishedAt": "2010-08-08T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "observability",
+      "architecture"
+    ],
     "summary": "For six years we’ve been hammering away on this little website of ours, feeding the needs of a steadily growing user-base with awesome features, freaky-good SEO and an elegant, performant architecture. What started out as a couple of guys in a room together is now nearly forty engineers developing…",
     "fetchedAt": "2026-07-11T13:25:50.848Z"
   }

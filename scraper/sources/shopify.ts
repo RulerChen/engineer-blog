@@ -54,14 +54,15 @@ export function parseShopifyArchivePage(html: string, pageUrl: string): ArchiveP
     const publishedAt =
       dateText && !Number.isNaN(Date.parse(dateText)) ? new Date(dateText).toISOString() : "";
 
+    const summary = summarize("");
     articles.push({
       id: articleId(absolute),
       title,
       url: normalizeUrl(absolute),
       source: "shopify",
       publishedAt,
-      tags: resolveTags([], "shopify"),
-      summary: summarize(""),
+      tags: resolveTags([], "shopify", `${title} ${summary}`),
+      summary,
       fetchedAt,
     });
   });

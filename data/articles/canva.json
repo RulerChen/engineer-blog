@@ -380,7 +380,9 @@
     "url": "https://www.canva.dev/blog/engineering/a-journey-through-colour-space-with-ffmpeg",
     "source": "canva",
     "publishedAt": "2023-04-17T00:00:01.000Z",
-    "tags": [],
+    "tags": [
+      "video"
+    ],
     "summary": "For those who want to understand what color spaces are, find out how to transform videos from one color space into another one, or read about how I almost went crazy trying to find out why videos generated with Canva look slightly off in terms of color.",
     "fetchedAt": "2026-07-11T13:24:14.568Z"
   },

@@ -55,14 +55,15 @@ export function parseSlackArchivePage(html: string, pageUrl: string): ArchivePag
       m[1].replace(/-/g, " "),
     );
 
+    const summary = summarize(post.find(".ts-entry__excerpt").first().html() ?? "");
     articles.push({
       id: articleId(absolute),
       title,
       url: normalizeUrl(absolute),
       source: "slack",
       publishedAt,
-      tags: resolveTags(tags, "slack"),
-      summary: summarize(post.find(".ts-entry__excerpt").first().html() ?? ""),
+      tags: resolveTags(tags, "slack", `${title} ${summary}`),
+      summary,
       fetchedAt,
     });
   });

@@ -60,14 +60,15 @@ export function parseDuolingoArchivePage(html: string, pageUrl: string): Archive
     const absolute = new URL(href, pageUrl).toString();
     const publishedAt =
       dateText && !Number.isNaN(Date.parse(dateText)) ? new Date(dateText).toISOString() : "";
+    const summary = summarize(summaryHtml);
     articles.push({
       id: articleId(absolute),
       title,
       url: normalizeUrl(absolute),
       source: "duolingo",
       publishedAt,
-      tags: resolveTags(["Engineering"], "duolingo"),
-      summary: summarize(summaryHtml),
+      tags: resolveTags(["Engineering"], "duolingo", `${title} ${summary}`),
+      summary,
       fetchedAt,
     });
   };

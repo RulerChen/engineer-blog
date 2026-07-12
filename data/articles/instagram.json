@@ -57,7 +57,9 @@
     "url": "https://engineering.fb.com/2024/06/13/web/mlow-metas-low-bitrate-audio-codec",
     "source": "instagram",
     "publishedAt": "2024-06-13T14:45:58.000Z",
-    "tags": [],
+    "tags": [
+      "testing"
+    ],
     "summary": "At Meta, we support real-time communication (RTC) for billions of people through our apps, including WhatsApp, Instagram, and Messenger. We are working to make RTC accessible by providing a high-quality experience for everyone – even those who might not have the fastest connections or the latest…",
     "fetchedAt": "2026-07-11T16:01:18.952Z"
   },
@@ -133,7 +135,9 @@
     "url": "https://engineering.fb.com/2022/11/04/video-engineering/instagram-video-processing-encoding-reduction",
     "source": "instagram",
     "publishedAt": "2022-11-04T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "video"
+    ],
     "summary": "",
     "fetchedAt": "2026-07-11T16:01:18.952Z"
   },
@@ -225,7 +229,9 @@
     "url": "https://engineering.fb.com/2021/01/26/ml-applications/news-feed-ranking",
     "source": "instagram",
     "publishedAt": "2021-01-26T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "ml"
+    ],
     "summary": "",
     "fetchedAt": "2026-07-11T16:01:18.952Z"
   },
@@ -295,7 +301,9 @@
     "url": "https://engineering.fb.com/2020/09/14/networking-traffic/throughput-autoscaling",
     "source": "instagram",
     "publishedAt": "2020-09-14T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "infra"
+    ],
     "summary": "",
     "fetchedAt": "2026-07-11T16:01:20.581Z"
   },
@@ -315,7 +323,9 @@
     "url": "https://engineering.fb.com/2019/11/25/networking-traffic/networking-scale-boston-2019",
     "source": "instagram",
     "publishedAt": "2019-11-25T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "networking"
+    ],
     "summary": "",
     "fetchedAt": "2026-07-11T16:01:20.581Z"
   }

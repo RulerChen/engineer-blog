@@ -238,7 +238,9 @@
     "url": "https://slack.engineering/astra-dynamic-chunks-how-we-saved-by-redesigning-a-key-part-of-astra",
     "source": "slack",
     "publishedAt": "2024-11-17T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "data"
+    ],
     "summary": "Introduction Slack handles a lot of log data. In fact, we consume over 6 million log messages per second. That…",
     "fetchedAt": "2026-07-11T12:16:36.922Z"
   },
@@ -482,7 +484,10 @@
     "url": "https://slack.engineering/the-query-strikes-again",
     "source": "slack",
     "publishedAt": "2023-11-14T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "databases",
+      "data"
+    ],
     "summary": "On Thursday, 12 Oct. 2022, the EMEA part of the Datastores team — the team responsible for Slack’s database…",
     "fetchedAt": "2026-07-11T12:16:40.755Z"
   },
@@ -583,7 +588,9 @@
     "url": "https://slack.engineering/tracing-notifications",
     "source": "slack",
     "publishedAt": "2023-04-03T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "observability"
+    ],
     "summary": "Notifications are a key aspect of the Slack user experience. Users rely on timely notifications of mentions and…",
     "fetchedAt": "2026-07-11T12:16:42.739Z"
   },
@@ -607,7 +614,9 @@
     "url": "https://slack.engineering/hakana-taking-hack-seriously",
     "source": "slack",
     "publishedAt": "2023-02-07T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "open-source"
+    ],
     "summary": "TL; DR: We’re announcing a new open source type checker for Hack, called Hakana. Slack launched in 2014, built…",
     "fetchedAt": "2026-07-11T12:16:42.739Z"
   },
@@ -657,7 +666,9 @@
     "url": "https://slack.engineering/mobile-developer-experience-at-slack",
     "source": "slack",
     "publishedAt": "2022-10-11T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile"
+    ],
     "summary": "At Slack, the goal of the Mobile Developer Experience Team (DevXp) is to empower developers to ship code with…",
     "fetchedAt": "2026-07-11T12:16:44.720Z"
   },
@@ -679,7 +690,9 @@
     "url": "https://slack.engineering/a-day-in-the-life-of-a-cloud-engineer-at-slack-australia",
     "source": "slack",
     "publishedAt": "2022-09-28T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "cloud"
+    ],
     "summary": "06:15 AM My two young kids come in waking me up, presenting me with iPads in the hopes of a quick game of…",
     "fetchedAt": "2026-07-11T12:16:44.720Z"
   },
@@ -879,7 +892,9 @@
     "url": "https://slack.engineering/building-self-driving-kafka-clusters-using-open-source-components",
     "source": "slack",
     "publishedAt": "2022-02-10T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "open-source"
+    ],
     "summary": "In this article, I will talk about how Slack uses Kafka, and how a small-but-mighty team built and…",
     "fetchedAt": "2026-07-11T12:16:48.647Z"
   },
@@ -1007,7 +1022,9 @@
     "url": "https://slack.engineering/building-android-conversation-bubbles",
     "source": "slack",
     "publishedAt": "2021-08-24T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile"
+    ],
     "summary": "We recently rolled out support for Conversation Bubbles for DMs and Group DMs on Android 11. In case you’re not…",
     "fetchedAt": "2026-07-11T12:16:52.592Z"
   },
@@ -1076,7 +1093,10 @@
     "url": "https://slack.engineering/how-a-jenkins-job-broke-our-jenkins-ui",
     "source": "slack",
     "publishedAt": "2021-06-02T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "infra",
+      "frontend"
+    ],
     "summary": "Artwork courtesy of the Jenkins project. At Slack we manage a sophisticated Jenkins infrastructure to…",
     "fetchedAt": "2026-07-11T12:16:52.592Z"
   },
@@ -1096,7 +1116,9 @@
     "url": "https://slack.engineering/load-testing-with-koi-pond",
     "source": "slack",
     "publishedAt": "2021-04-22T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "testing"
+    ],
     "summary": "Complex systems are difficult to reason about at scale; we often can’t accurately extrapolate system behavior…",
     "fetchedAt": "2026-07-11T12:16:54.518Z"
   },
@@ -1106,7 +1128,11 @@
     "url": "https://slack.engineering/client-tracing-understanding-mobile-and-desktop-application-performance-at-scale",
     "source": "slack",
     "publishedAt": "2021-03-23T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "observability",
+      "performance"
+    ],
     "summary": "A customer writes in and says the dreaded words: “My app is slow”. Here we go… Performance problems can be a…",
     "fetchedAt": "2026-07-11T12:16:54.518Z"
   },
@@ -1153,7 +1179,10 @@
     "url": "https://slack.engineering/women-in-security-at-slack",
     "source": "slack",
     "publishedAt": "2021-01-19T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "security",
+      "culture"
+    ],
     "summary": "Since its inception, Slack has fostered a culture of inclusion and diversity. The Security organization at Slack…",
     "fetchedAt": "2026-07-11T12:16:54.518Z"
   },
@@ -1163,7 +1192,9 @@
     "url": "https://slack.engineering/a-day-in-the-life-of-a-backend-platform-engineer-at-slack-pune",
     "source": "slack",
     "publishedAt": "2021-01-12T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "backend"
+    ],
     "summary": "5:25 am First alarm rings. *Snooze.* 6:30 am The final alarm rings and I know this is the last one, so I get up…",
     "fetchedAt": "2026-07-11T12:16:54.518Z"
   },
@@ -1279,7 +1310,10 @@
     "url": "https://slack.engineering/tracing-at-slack-thinking-in-causal-graphs",
     "source": "slack",
     "publishedAt": "2020-08-27T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "observability",
+      "architecture"
+    ],
     "summary": "“Why is it slow?” is the hardest problem to debug in a complex distributed system like Slack. To diagnose…",
     "fetchedAt": "2026-07-11T12:16:56.575Z"
   },
@@ -1343,7 +1377,10 @@
     "url": "https://slack.engineering/scaling-end-to-end-user-interface-tests",
     "source": "slack",
     "publishedAt": "2020-06-10T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "culture",
+      "testing"
+    ],
     "summary": "At Slack, Quality is a shared responsibility. The Quality Engineering team is focused on creating a culture of…",
     "fetchedAt": "2026-07-11T12:16:58.590Z"
   },
@@ -1399,7 +1436,10 @@
     "url": "https://slack.engineering/a-day-in-the-life-of-a-mobile-product-engineer-at-slack",
     "source": "slack",
     "publishedAt": "2020-04-20T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "mobile",
+      "product"
+    ],
     "summary": "6:45 am My alarm is set for 6:45 but I often wake up before it goes off. I tend to wake up earlier during…",
     "fetchedAt": "2026-07-11T12:17:00.474Z"
   },
@@ -1409,7 +1449,9 @@
     "url": "https://slack.engineering/hacklang-at-slack-a-better-php",
     "source": "slack",
     "publishedAt": "2020-04-13T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "backend"
+    ],
     "summary": "Slack launched in 2014 with a PHP 5 backend. Along with several other companies, we switched to HHVM in 2016…",
     "fetchedAt": "2026-07-11T12:17:00.474Z"
   },
@@ -1493,7 +1535,9 @@
     "url": "https://slack.engineering/a-day-in-the-life-of-a-backend-foundation-engineer-at-slack",
     "source": "slack",
     "publishedAt": "2019-11-13T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "backend"
+    ],
     "summary": "6:00 am While it’s not always easy to get up before seven, particularly when the sun hasn’t risen yet, being…",
     "fetchedAt": "2026-07-11T12:17:02.723Z"
   },
@@ -1712,7 +1756,10 @@
     "url": "https://slack.engineering/defining-a-career-path-for-developer-relations",
     "source": "slack",
     "publishedAt": "2019-03-13T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "career",
+      "product"
+    ],
     "summary": "Developer Relations (DevRel) is an interdisciplinary role that sits in a border space between product,…",
     "fetchedAt": "2026-07-11T12:17:06.565Z"
   },
@@ -1746,7 +1793,9 @@
     "url": "https://slack.engineering/re-architecting-slacks-workspace-preferences-how-to-move-to-an-eav-model-to-support-scalability",
     "source": "slack",
     "publishedAt": "2018-08-08T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "performance"
+    ],
     "summary": "Scaling is hard. Design decisions that initially seemed reasonable break down with little warning, and suddenly…",
     "fetchedAt": "2026-07-11T12:17:06.565Z"
   },
@@ -2079,7 +2128,10 @@
     "url": "https://slack.engineering/weaving-threads",
     "source": "slack",
     "publishedAt": "2017-01-17T16:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "devops",
+      "product"
+    ],
     "summary": "This is a guest post from the Product team working on the newly released Threads feature. If you use Slack to…",
     "fetchedAt": "2026-07-11T12:17:14.743Z"
   },

@@ -144,7 +144,10 @@
     "url": "https://github.blog/engineering/platform-security/post-quantum-security-for-ssh-access-on-github",
     "source": "github",
     "publishedAt": "2025-09-15T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "security",
+      "data"
+    ],
     "summary": "GitHub is introducing post-quantum secure key exchange methods for SSH access to better protect Git data in transit.",
     "fetchedAt": "2026-07-11T13:23:40.981Z"
   },
@@ -174,7 +177,9 @@
     "url": "https://github.blog/engineering/user-experience/design-system-annotations-part-2-advanced-methods-of-annotating-components",
     "source": "github",
     "publishedAt": "2025-05-09T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "frontend"
+    ],
     "summary": "How to build custom annotations for your design system components or use Figma’s Code Connect to help capture important accessibility details before development.",
     "fetchedAt": "2026-07-11T13:23:40.981Z"
   },
@@ -184,7 +189,9 @@
     "url": "https://github.blog/engineering/user-experience/design-system-annotations-part-1-how-accessibility-gets-left-out-of-components",
     "source": "github",
     "publishedAt": "2025-05-09T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "frontend"
+    ],
     "summary": "The Accessibility Design team created a set of annotations to bridge the gaps that design systems alone can’t fix and proactively addresses accessibility issues within Primer components.",
     "fetchedAt": "2026-07-11T13:23:40.981Z"
   },
@@ -224,7 +231,9 @@
     "url": "https://github.blog/developer-skills/career-growth/how-engineers-can-use-one-on-ones-with-their-manager-to-accelerate-career-growth",
     "source": "github",
     "publishedAt": "2025-03-27T00:00:00.000Z",
-    "tags": [],
+    "tags": [
+      "career"
+    ],
     "summary": "Go beyond status updates and use these meetings to surface challenges, solve problems, and drive impact.",
     "fetchedAt": "2026-07-11T13:23:40.981Z"
   },

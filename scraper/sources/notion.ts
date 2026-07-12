@@ -4,6 +4,7 @@ import { crawlArchive } from "../src/backfill.js";
 import { USER_AGENT } from "../src/http.js";
 import { articleId, normalizeUrl } from "../src/normalize.js";
 import { summarize } from "../src/sanitize.js";
+import { resolveTags } from "../src/tags.js";
 import type { Article, Source } from "../src/types.js";
 
 /**
@@ -58,7 +59,7 @@ export function parseNotionListingPage(html: string, pageUrl: string): ArchivePa
       url: normalizeUrl(absolute),
       source: "notion",
       publishedAt: "", // not available on the listing page; filled in by fetchNotionArticles
-      tags: [],
+      tags: resolveTags([], "notion", `${title} ${summary}`),
       summary: summarize(summary),
       fetchedAt,
     });

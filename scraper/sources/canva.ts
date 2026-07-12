@@ -51,14 +51,16 @@ export function parseCanvaArchivePage(html: string, pageUrl: string): ArchivePag
         ? new Date(post.publishedDate).toISOString()
         : "";
 
+    const title = post.title.trim();
+    const summary = summarize(post.abstract ?? "");
     articles.push({
       id: articleId(absolute),
-      title: post.title.trim(),
+      title,
       url: normalizeUrl(absolute),
       source: "canva",
       publishedAt,
-      tags: resolveTags(post.tags ?? [], "canva"),
-      summary: summarize(post.abstract ?? ""),
+      tags: resolveTags(post.tags ?? [], "canva", `${title} ${summary}`),
+      summary,
       fetchedAt,
     });
   }

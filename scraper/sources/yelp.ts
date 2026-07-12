@@ -46,14 +46,15 @@ export function parseYelpArchivePage(html: string, pageUrl: string): ArchivePage
     const publishedAt =
       dateText && !Number.isNaN(Date.parse(dateText)) ? new Date(dateText).toISOString() : "";
 
+    const summary = summarize(post.find(".post-preview p").first().html() ?? "");
     articles.push({
       id: articleId(absolute),
       title,
       url: normalizeUrl(absolute),
       source: "yelp",
       publishedAt,
-      tags: resolveTags([], "yelp"),
-      summary: summarize(post.find(".post-preview p").first().html() ?? ""),
+      tags: resolveTags([], "yelp", `${title} ${summary}`),
+      summary,
       fetchedAt,
     });
   });
