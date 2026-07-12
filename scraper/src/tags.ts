@@ -109,6 +109,55 @@ const EXACT_MATCH: Record<string, CanonicalTag> = {
   "software-engineering": "general",
   "platform-engineering": "infra",
   microservices: "architecture",
+  // AWS "News" blog category noise — meta/marketing labels with no topic signal.
+  announcements: "general",
+  news: "general",
+  launch: "general",
+  featured: "general",
+  events: "general",
+  webinars: "general",
+  regions: "general",
+  "thought leadership": "general",
+  "partner solutions": "general",
+  sustainability: "general",
+  industries: "general",
+  retail: "general",
+  education: "general",
+  startup: "general",
+  saas: "general",
+  "marketing & advertising": "general",
+  "internet of things": "general",
+  "game development": "general",
+  games: "general",
+  "contact lens for amazon connect": "general",
+  developer: "general",
+  // AWS product/service families and generic vocabulary not caught by keyword rules.
+  "developer tools": "devops",
+  "migration & transfer services": "devops",
+  migration: "devops",
+  resilience: "devops",
+  "management tools": "devops",
+  "management & governance": "devops",
+  "billing & account management": "devops",
+  "resource access manager (ram)": "devops",
+  identity: "security",
+  compute: "infra",
+  storage: "infra",
+  "application services": "backend",
+  ".net": "backend",
+  python: "backend",
+  // One-off AWS service names not worth generalizing into a keyword rule.
+  "amazon opensearch service": "observability",
+  "amazon workspaces": "infra",
+  "amazon connect": "general",
+  "amazon gamelift": "general",
+  "price reduction": "general",
+  "amazon eks distro": "infra",
+  "amazon corretto": "backend",
+  "amazon location": "general",
+  "amazon elastic vmware service (amazon evs)": "infra",
+  "amazon application recovery controller (arc)": "devops",
+  "amazon simple email service (ses)": "backend",
 };
 
 /** Ordered keyword/substring fallback rules, tried only when the exact-match
@@ -118,14 +167,26 @@ const KEYWORD_RULES: { pattern: RegExp; tag: CanonicalTag }[] = [
   { pattern: /kubernetes|k8s|docker|container/i, tag: "infra" },
   { pattern: /android|ios|mobile|swift|kotlin/i, tag: "mobile" },
   { pattern: /machine.?learning|deep.?learning|\bml\b|neural/i, tag: "ml" },
-  { pattern: /\bllm\b|large.?language.?model|generative.?ai|\bai\b|gpt/i, tag: "ai" },
-  { pattern: /database|\bsql\b|nosql|postgres|mysql/i, tag: "databases" },
-  { pattern: /security|encrypt|vulnerabilit|auth(entication|orization)?/i, tag: "security" },
+  {
+    pattern:
+      /\bllm\b|large.?language.?model|generative.?ai|generative.?bi|foundation.?model|\bai\b|gpt|artificial.?intelligence|bedrock|sagemaker|\bamazon q\b|\bnova\b|personalize|\bpolly\b|\bkiro\b|strands.?agents/i,
+    tag: "ai",
+  },
+  {
+    pattern:
+      /database|\bsql\b|nosql|postgres|mysql|aurora|dynamodb|redshift|\brds\b|documentdb|neptune|elasticache|memorydb|keyspaces|\bdsql\b/i,
+    tag: "databases",
+  },
+  {
+    pattern:
+      /security|encrypt|vulnerabilit|auth(entication|orization)?|guardduty|cognito|inspector|compliance/i,
+    tag: "security",
+  },
   { pattern: /privacy/i, tag: "security" },
   { pattern: /observ|monitoring|logging|tracing|metrics/i, tag: "observability" },
   { pattern: /devops|ci.?cd|deploy|release|automation|reliability|\bsre\b/i, tag: "devops" },
   { pattern: /cloud|\baws\b|\bgcp\b|azure/i, tag: "cloud" },
-  { pattern: /network|traffic|cdn|dns/i, tag: "networking" },
+  { pattern: /network|traffic|cdn|dns|\bvpc\b|route.?53/i, tag: "networking" },
   { pattern: /open.?source/i, tag: "open-source" },
   { pattern: /culture|diversity|inclusion|life.?at/i, tag: "culture" },
   { pattern: /video|streaming|media/i, tag: "video" },
@@ -136,10 +197,22 @@ const KEYWORD_RULES: { pattern: RegExp; tag: CanonicalTag }[] = [
   { pattern: /performance|latency|scalability|optimi[sz]/i, tag: "performance" },
   { pattern: /test(ing)?|quality.?assurance|\bqa\b/i, tag: "testing" },
   { pattern: /architecture|microservice|distributed.?system/i, tag: "architecture" },
-  { pattern: /data|analytic|pipeline|etl/i, tag: "data" },
-  { pattern: /infra|platform.?engineering|site.?reliability/i, tag: "infra" },
+  {
+    pattern:
+      /data|analytic|pipeline|etl|athena|\bemr\b|kinesis|quick.?sight|quick.?suite|business.?intelligence/i,
+    tag: "data",
+  },
+  {
+    pattern:
+      /infra|platform.?engineering|site.?reliability|\bec2\b|\bebs\b|\bfsx\b|lightsail|graviton|firecracker|serverless|auto.?scaling|elastic.?load.?balancing|lambda@edge|elastic.?block.?store|\bs3\b/i,
+    tag: "infra",
+  },
   { pattern: /frontend|\bui\b|\bux\b|react|css|design.?system/i, tag: "frontend" },
-  { pattern: /backend|\bapi\b|graphql|microservice/i, tag: "backend" },
+  {
+    pattern:
+      /backend|\bapi\b|graphql|microservice|eventbridge|\bsns\b|\bsqs\b|application.?integration/i,
+    tag: "backend",
+  },
 ];
 
 function resolveTag(rawTag: string): CanonicalTag | null {
