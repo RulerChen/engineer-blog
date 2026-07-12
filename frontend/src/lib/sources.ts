@@ -1,6 +1,5 @@
 /** Source id → display name shown on company badges and filters. */
 export const sourceNames: Record<string, string> = {
-  google: "Google",
   meta: "Meta",
   netflix: "Netflix",
   uber: "Uber",
@@ -16,11 +15,8 @@ export const sourceNames: Record<string, string> = {
   discord: "Discord",
   cloudflare: "Cloudflare",
   github: "GitHub",
-  etsy: "Etsy",
   linkedin: "LinkedIn",
   coinbase: "Coinbase",
-  doordash: "DoorDash",
-  instacart: "Instacart",
   lyft: "Lyft",
   canva: "Canva",
   datadog: "Datadog",
@@ -31,18 +27,11 @@ export const sourceNames: Record<string, string> = {
   grab: "Grab",
   atlassian: "Atlassian",
   openai: "OpenAI",
-  anthropic: "Anthropic",
-  deepmind: "Google DeepMind",
-  huggingface: "Hugging Face",
   "aws-architecture": "AWS Architecture Blog",
-  "aws-news": "AWS News Blog",
-  cockroachlabs: "Cockroach Labs",
-  databricks: "Databricks",
   instagram: "Instagram Engineering",
   janestreet: "Jane Street",
   line: "LINE Engineering",
   nvidia: "NVIDIA Developer Blog",
-  twitch: "Twitch",
   manual: "Manual",
 };
 
