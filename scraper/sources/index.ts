@@ -1,28 +1,18 @@
 import type { Source } from "../src/types.js";
 import { airbnb } from "./airbnb.js";
-import { anthropic } from "./anthropic.js";
 import { atlassian } from "./atlassian.js";
 import { awsArchitecture } from "./aws-architecture.js";
-import { awsNews } from "./aws-news.js";
 import { booking } from "./booking.js";
 import { canva } from "./canva.js";
 import { cloudflare } from "./cloudflare.js";
-import { cockroachlabs } from "./cockroachlabs.js";
 import { coinbase } from "./coinbase.js";
-import { databricks } from "./databricks.js";
 import { datadog } from "./datadog.js";
-import { deepmind } from "./deepmind.js";
 import { discord } from "./discord.js";
-import { doordash } from "./doordash.js";
 import { dropbox } from "./dropbox.js";
 import { duolingo } from "./duolingo.js";
-import { etsy } from "./etsy.js";
 import { figma } from "./figma.js";
 import { github } from "./github.js";
-import { google } from "./google.js";
 import { grab } from "./grab.js";
-import { huggingface } from "./huggingface.js";
-import { instacart } from "./instacart.js";
 import { instagram } from "./instagram.js";
 import { janestreet } from "./janestreet.js";
 import { line } from "./line.js";
@@ -39,13 +29,11 @@ import { shopify } from "./shopify.js";
 import { slack } from "./slack.js";
 import { spotify } from "./spotify.js";
 import { stripe } from "./stripe.js";
-import { twitch } from "./twitch.js";
 import { uber } from "./uber.js";
 import { yelp } from "./yelp.js";
 
 /** Adding a source later = adding one entry here (and one module). */
 export const sources: Source[] = [
-  google,
   meta,
   netflix,
   uber,
@@ -61,11 +49,8 @@ export const sources: Source[] = [
   discord,
   cloudflare,
   github,
-  etsy,
   linkedin,
   coinbase,
-  doordash,
-  instacart,
   lyft,
   canva,
   datadog,
@@ -76,18 +61,11 @@ export const sources: Source[] = [
   grab,
   atlassian,
   openai,
-  anthropic,
-  deepmind,
-  huggingface,
   awsArchitecture,
-  awsNews,
-  cockroachlabs,
-  databricks,
   instagram,
   janestreet,
   line,
   nvidia,
-  twitch,
 ];
 
 export function getSource(id: string): Source | undefined {
