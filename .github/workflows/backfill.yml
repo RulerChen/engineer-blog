@@ -32,7 +32,6 @@ on:
           - anthropic
           - deepmind
           - huggingface
-          - aws-architecture
           - aws-news
           - cockroachlabs
           - databricks

@@ -1,7 +1,6 @@
 import type { Source } from "../src/types.js";
 import { airbnb } from "./airbnb.js";
 import { atlassian } from "./atlassian.js";
-import { awsArchitecture } from "./aws-architecture.js";
 import { booking } from "./booking.js";
 import { canva } from "./canva.js";
 import { cloudflare } from "./cloudflare.js";
@@ -61,7 +60,6 @@ export const sources: Source[] = [
   grab,
   atlassian,
   openai,
-  awsArchitecture,
   instagram,
   janestreet,
   line,
