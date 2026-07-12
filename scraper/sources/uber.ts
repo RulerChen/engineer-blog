@@ -52,7 +52,6 @@ export function parseUberArchivePage(html: string, pageUrl: string): ArchivePage
       publishedAt,
       tags: resolveTags(category ? [category] : [], "uber"),
       summary: summarize(card.find(".blog-card-excerpt").first().html() ?? ""),
-      thumbnail: card.find(".blog-card-img").first().attr("src") ?? null,
       fetchedAt,
     });
   });

@@ -7,7 +7,6 @@
     "publishedAt": "2026-06-04T19:00:00.000Z",
     "tags": [],
     "summary": "Learn how we built a self-serve DLQ Explorer that makes failed jobs easy to query, debug, and safely replay—without direct S3 access.",
-    "thumbnail": "https://images.ctfassets.net/spoqsaf9291f/6mNb0t2IDtDoSS3yqUbz9F/397c748e2e06d986fa370a7ee7a1adcb/Building_observability_illustration.png",
     "fetchedAt": "2026-07-11T13:19:47.532Z"
   },
   {
@@ -18,7 +17,6 @@
     "publishedAt": "2026-04-09T16:00:00.000Z",
     "tags": [],
     "summary": "Learn how we built multi-region data infrastructure—spanning search, analytics, AI, and event logging—to ensure customer data is processed and stored entirely within its home region.",
-    "thumbnail": "https://images.ctfassets.net/spoqsaf9291f/1KtoUwmAq73SS0zataxTaA/92b40a5edc64798d5b2502727dacaf44/tech-data-res.png",
     "fetchedAt": "2026-07-11T13:19:47.532Z"
   },
   {
@@ -29,7 +27,6 @@
     "publishedAt": "2026-04-02T16:00:00.000Z",
     "tags": [],
     "summary": "How we built a CI guardrail to catch breaking schema changes automatically, and some of the design decisions that shaped it.",
-    "thumbnail": "https://images.ctfassets.net/spoqsaf9291f/40DNsjKnqiyNxU51ObX0VP/76eeda0e48ad612e8cfd78f0c14affe7/schema-changes.png",
     "fetchedAt": "2026-07-11T13:19:47.532Z"
   },
   {
@@ -40,7 +37,6 @@
     "publishedAt": "2026-03-18T16:00:00.000Z",
     "tags": [],
     "summary": "In recent months, we decided to revisit our page designs and apply our design rules to them more consistently.",
-    "thumbnail": "https://images.ctfassets.net/spoqsaf9291f/26lULUvPs4WrNm0wWsfKLM/a0d13daace0db77bb702ead7659f7de2/redesign-pages.png",
     "fetchedAt": "2026-07-11T13:19:47.532Z"
   },
   {
@@ -51,7 +47,6 @@
     "publishedAt": "2026-02-27T20:00:00.000Z",
     "tags": [],
     "summary": "A look inside the security model behind Custom Agents, and what we learned testing it at scale.",
-    "thumbnail": "https://images.ctfassets.net/spoqsaf9291f/4RZJLDma73t7wq8zDybmKn/3c1ef62d4885e9b3fb25a22839238fd3/security-thumb.png",
     "fetchedAt": "2026-07-11T13:19:47.532Z"
   },
   {
@@ -62,7 +57,6 @@
     "publishedAt": "2026-02-19T17:00:00.000Z",
     "tags": [],
     "summary": "This is the story of how we scaled our vector search infrastructure by 10x while simultaneously reducing costs by 90 percent over the past two years.",
-    "thumbnail": "https://images.ctfassets.net/spoqsaf9291f/YM6RSKRianuyHhgwY6N2d/2d8933d345255e0575a93b384f5e74c6/vector-search.png",
     "fetchedAt": "2026-07-11T13:19:47.532Z"
   },
   {
@@ -73,7 +67,6 @@
     "publishedAt": "2026-02-12T17:00:00.000Z",
     "tags": [],
     "summary": "Today, we’re excited to open-source Spot Balancer in collaboration with AWS, a tool that helped us reduce Spark compute costs by up to 90% while maintaining reliability.",
-    "thumbnail": "https://images.ctfassets.net/spoqsaf9291f/5s3GAhDkeXAtDHcDHH2Mr0/08944e6a193f6c283fe8591413f78103/spark-aws.png",
     "fetchedAt": "2026-07-11T13:19:47.532Z"
   },
   {
@@ -84,7 +77,6 @@
     "publishedAt": "2026-01-12T08:00:00.000Z",
     "tags": [],
     "summary": "See how Notion’s security team built Scruff, an AI teammate that automates alert triage, speeds investigations, and scales with on-call demand.",
-    "thumbnail": "https://images.ctfassets.net/spoqsaf9291f/NvVgkokbJfUu0JCKpGgjX/a5590b9aab68277d6718c3279ff4d491/dart.png",
     "fetchedAt": "2026-07-11T13:19:47.532Z"
   },
   {
@@ -95,7 +87,6 @@
     "publishedAt": "2025-12-11T17:00:00.000Z",
     "tags": [],
     "summary": "Offline Mode was Notion's most requested feature for years, but building it meant solving tough technical challenges around our unique block architecture. Here's the architecture and data model that made it possible.",
-    "thumbnail": "https://images.ctfassets.net/spoqsaf9291f/5WnfTNNBjFCt7nU1eCrum6/24e9b711a12968f133d8c22e20544426/how-we-built-offline.png",
     "fetchedAt": "2026-07-11T13:19:47.532Z"
   },
   {
@@ -106,7 +97,6 @@
     "publishedAt": "2025-07-15T07:00:00.000Z",
     "tags": [],
     "summary": "Earlier this year, we got requests for a Notion MCP server that would let AI agents work directly with Notion workspaces. Here’s how we built it, from our initial open-source experiment to today’s hosted solution with custom tools designed specifically for AI workflows.",
-    "thumbnail": "https://images.ctfassets.net/spoqsaf9291f/6EZ0oLK21oN6lebvzRYhp0/05950122b755d99ae69ae0b847a19848/notion-mcp-tech-blog.png",
     "fetchedAt": "2026-07-11T13:19:47.532Z"
   },
   {
@@ -117,7 +107,6 @@
     "publishedAt": "2025-05-29T23:00:00.000Z",
     "tags": [],
     "summary": "How we combine AI with structured data to deliver a best-in-class work product.",
-    "thumbnail": "https://images.ctfassets.net/spoqsaf9291f/DJRByAfsreqr0wGYqRXxd/897f67557447a5846758a90b52ccd6cc/Hero_Notion_AI.png",
     "fetchedAt": "2026-07-11T13:19:49.383Z"
   },
   {
@@ -128,7 +117,6 @@
     "publishedAt": "2025-03-03T14:00:00.000Z",
     "tags": [],
     "summary": "Our custom ESLint approach gradually modernizes code without slowing development. By systematically tracking violations and distributing the workload of fixing them, we maintain high code-quality standards while keeping engineers focused on what matters most.",
-    "thumbnail": "https://images.ctfassets.net/spoqsaf9291f/4iNeODTOiKlzrPFCNDMhdt/f51bf7f651a75597e2d20bef6a49015d/eslint.png",
     "fetchedAt": "2026-07-11T13:19:49.383Z"
   },
   {
@@ -139,7 +127,6 @@
     "publishedAt": "2025-02-01T00:00:00.000Z",
     "tags": [],
     "summary": "Our challenge: load millions of personalized, sometimes animated emojis into a workspace without breaking everything. As we strive to make Notion the happiest workspace on earth, it was a technical puzzle worth solving.",
-    "thumbnail": "https://images.ctfassets.net/spoqsaf9291f/3zbMi5OP9qkj0z8W2z9qAu/797045d8e022cfc0ebeca4a4d196e70b/Dcn5r99WkAAb5md.jpeg",
     "fetchedAt": "2026-07-11T13:19:49.383Z"
   },
   {
@@ -150,7 +137,6 @@
     "publishedAt": "2024-10-09T13:00:00.000Z",
     "tags": [],
     "summary": "From chaos to clarity: How Notion transformed its data catalog for better efficiency and insights with TypeScript, JSON Schema, and LLMs.",
-    "thumbnail": "https://images.ctfassets.net/spoqsaf9291f/1krFiNjia8JjF17bk9tqDQ/22564529a86d37bb48a52174746ee361/blog_thumbnail.png",
     "fetchedAt": "2026-07-11T13:19:49.383Z"
   },
   {
@@ -161,7 +147,6 @@
     "publishedAt": "2024-09-23T13:00:00.000Z",
     "tags": [],
     "summary": "Enhancing infrastructure visibility and performance with a queue proxy service",
-    "thumbnail": "https://images.ctfassets.net/spoqsaf9291f/1iuKo1p6Or7uYWiXZYXqJd/032b0258c2a0819841aaddcceb7d46d3/redisqueue_hero.png",
     "fetchedAt": "2026-07-11T13:19:49.383Z"
   },
   {
@@ -172,7 +157,6 @@
     "publishedAt": "2024-07-10T07:00:00.000Z",
     "tags": [],
     "summary": "You might have noticed that browsing Notion recently got faster. It's 20 percent faster, to be precise. Here's how we did it.",
-    "thumbnail": "https://images.ctfassets.net/spoqsaf9291f/5Il1OQrvESva5WJEvEb815/1f247d333413efeb9c77df54aca59ac2/WASM_SQLite_-_thumbnail.png",
     "fetchedAt": "2026-07-11T13:19:49.383Z"
   },
   {
@@ -183,7 +167,6 @@
     "publishedAt": "2024-07-01T07:00:00.000Z",
     "tags": [],
     "summary": "In the past 3 years Notion's data has expanded 10x. Here's how we built our data lake to manage this growth.",
-    "thumbnail": "https://images.ctfassets.net/spoqsaf9291f/5HSfpRCcmHCTklYjCScL5G/129ad2b19406703a3aa97a49a62351b3/Data_Lake_thumbnail.png",
     "fetchedAt": "2026-07-11T13:19:49.383Z"
   },
   {
@@ -194,7 +177,6 @@
     "publishedAt": "2024-05-01T07:00:00.000Z",
     "tags": [],
     "summary": "Here's our approach to optimizing app startup and our ongoing efforts to enhance the mobile experience for all our Android users.",
-    "thumbnail": "https://images.ctfassets.net/spoqsaf9291f/1inqYV70OxsZ62ASUdYjZQ/6afc59ac2cc697d1d0f8e649bea4b901/android-speed-face.png",
     "fetchedAt": "2026-07-11T13:19:49.383Z"
   },
   {
@@ -205,7 +187,6 @@
     "publishedAt": "2024-03-05T17:00:00.000Z",
     "tags": [],
     "summary": "Companies need to listen to the next generation of workers and adopt tools that work for all employees. The knowledge workers of today aren’t afraid to demand change, and the companies that aren’t open to it risk losing their best and brightest new talent.",
-    "thumbnail": "https://images.ctfassets.net/spoqsaf9291f/02zieXvcEvqCTCH2Cqs9B/5a0517dd3fa0cffd5f423e381316da95/gen-z-workforce.png",
     "fetchedAt": "2026-07-11T13:19:49.383Z"
   },
   {
@@ -216,7 +197,6 @@
     "publishedAt": "2023-07-17T07:00:00.000Z",
     "tags": [],
     "summary": "How we horizontally re-sharded our databases (and nobody noticed).",
-    "thumbnail": "https://images.ctfassets.net/spoqsaf9291f/2cqHQ1pgvgxtJbYFv8NTe/49b0f286ba6447a01ca125e1259d27d2/sharding-2-thumb.png",
     "fetchedAt": "2026-07-11T13:19:49.383Z"
   },
   {
@@ -227,7 +207,6 @@
     "publishedAt": "2022-01-20T08:00:00.000Z",
     "tags": [],
     "summary": "The ability to access Notion content through an API is one of the top requested features from our users. Learn about how we designed our REST API to meet the challenge of preserving the flexibility and expressivity of Notion’s data model.",
-    "thumbnail": "https://images.ctfassets.net/spoqsaf9291f/1vzzobwqnJf6bC2XApoU9o/78527d34f6679071a92476ae4b16f1f6/api-thumb.png",
     "fetchedAt": "2026-07-11T13:19:51.952Z"
   },
   {
@@ -238,7 +217,6 @@
     "publishedAt": "2021-10-06T07:00:00.000Z",
     "tags": [],
     "summary": "This months-long project migrated Notion’s PostgreSQL monolith into a horizontally-partitioned database fleet — an effort to make Notion faster and more reliable for years to come.",
-    "thumbnail": "https://images.ctfassets.net/spoqsaf9291f/1DX7ZrgbAjNhpjhp1g4yFN/9781390a19c619e96a0420f1a0a12807/sharding-thumb.png",
     "fetchedAt": "2026-07-11T13:19:51.952Z"
   },
   {
@@ -249,7 +227,6 @@
     "publishedAt": "2021-08-11T23:00:00.000Z",
     "tags": [],
     "summary": "Improving performance and user experience by moving from a client-rendered marketing site to a static site generated by Next.js.",
-    "thumbnail": "https://images.ctfassets.net/spoqsaf9291f/ZAhop3UifQeNERDCSaAAp/d3b11bc723baad3d4ccfb8bf6755fd4d/static-site-thumb.png",
     "fetchedAt": "2026-07-11T13:19:51.952Z"
   },
   {
@@ -260,7 +237,6 @@
     "publishedAt": "2021-05-18T07:00:00.000Z",
     "tags": [],
     "summary": "Notion’s data model enables the product’s most foundational component: blocks. Through blocks, we allow users more flexibility and better control over their information.",
-    "thumbnail": "https://images.ctfassets.net/spoqsaf9291f/1qZYPcpXVBzoVmQjR9FZN2/da600e17670e17a59c8af6e97a50f2fe/how-blocks-work.png",
     "fetchedAt": "2026-07-11T13:19:51.952Z"
   }
 ]

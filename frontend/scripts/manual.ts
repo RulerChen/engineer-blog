@@ -9,7 +9,6 @@ export interface ManualArticleInput {
   publishedAt: string;
   tags?: string[];
   summary?: string;
-  thumbnail?: string | null;
   fetchedAt?: string;
 }
 
@@ -22,7 +21,6 @@ export function toArticle(input: ManualArticleInput): Article {
     publishedAt: input.publishedAt,
     tags: input.tags ?? [],
     summary: input.summary ?? "",
-    thumbnail: input.thumbnail ?? null,
     fetchedAt: input.fetchedAt ?? input.publishedAt,
   };
 }

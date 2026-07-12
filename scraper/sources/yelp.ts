@@ -45,7 +45,6 @@ export function parseYelpArchivePage(html: string, pageUrl: string): ArchivePage
     const dateText = post.find("li.post-date").first().text().trim();
     const publishedAt =
       dateText && !Number.isNaN(Date.parse(dateText)) ? new Date(dateText).toISOString() : "";
-    const imgSrc = post.find(".column-beta img").first().attr("src");
 
     articles.push({
       id: articleId(absolute),
@@ -55,7 +54,6 @@ export function parseYelpArchivePage(html: string, pageUrl: string): ArchivePage
       publishedAt,
       tags: resolveTags([], "yelp"),
       summary: summarize(post.find(".post-preview p").first().html() ?? ""),
-      thumbnail: imgSrc ? new URL(imgSrc, pageUrl).toString() : null,
       fetchedAt,
     });
   });

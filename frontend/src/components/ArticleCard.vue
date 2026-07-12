@@ -27,8 +27,7 @@ const avatarStyle = computed(() => {
 
 <template>
   <article class="article-card">
-    <img v-if="article.thumbnail" class="thumb" :src="article.thumbnail" alt="" loading="lazy" />
-    <div v-else class="avatar" :style="avatarStyle">
+    <div class="avatar" :style="avatarStyle">
       {{ sourceName(article.source).charAt(0) }}
     </div>
     <div class="body">

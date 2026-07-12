@@ -62,7 +62,6 @@ export function parseShopifyArchivePage(html: string, pageUrl: string): ArchiveP
       publishedAt,
       tags: resolveTags([], "shopify"),
       summary: summarize(""),
-      thumbnail: post.find("img").first().attr("src") ?? null,
       fetchedAt,
     });
   });

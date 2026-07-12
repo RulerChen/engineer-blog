@@ -64,7 +64,6 @@ export function parseFigmaArchivePage(html: string, pageUrl: string): ArchivePag
       publishedAt,
       tags: resolveTags(tags, "figma"),
       summary: summarize(post.find("footer p").first().html() ?? ""),
-      thumbnail: post.find('img[data-loading="true"]').first().attr("src") ?? null,
       fetchedAt,
     });
   });

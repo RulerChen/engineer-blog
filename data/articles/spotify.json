@@ -9,7 +9,6 @@
       "data"
     ],
     "summary": "At Spotify, data problems used to follow a specific pattern. You'd look for the relevant dashboard, there... The post Encoding Your Domain Expert: The Context Layer Behind Spotify's Data Assistant appeared first on Spotify Engineering .",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T12:18:30.363Z"
   },
   {
@@ -22,7 +21,6 @@
       "ai"
     ],
     "summary": "At Code with Claude, Spotify’s chief architect shared how we make both teams and AI agents more effective. The post Coding Is No Longer the Constraint: Scaling Developer Experience to Teams and Agents at Spotify appeared first on Spotify Engineering .",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T12:18:30.363Z"
   },
   {
@@ -35,7 +33,6 @@
       "data"
     ],
     "summary": "TL;DR LLM evals, automated judges that assess relevance, coherence, and quality at scale, are a powerful new... The post Better Experiments with LLM Evals — A funnel, not a fork appeared first on Spotify Engineering .",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T12:18:30.363Z"
   },
   {
@@ -48,7 +45,6 @@
       "ai"
     ],
     "summary": "Turning OpenAPI spec and Markdown files into a conversational ads management tool — no compiled code required. The post Building a Natural Language Interface to the Spotify Ads API with Claude Code Plugins appeared first on Spotify Engineering .",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T12:18:30.363Z"
   },
   {
@@ -62,7 +58,6 @@
       "data"
     ],
     "summary": "How we used Honk, Backstage, and Fleet Management to ease the pain of migrating thousands of datasets. The post Background Coding Agents: Supercharging Downstream Consumer Dataset Migrations (Honk, Part 4) appeared first on Spotify Engineering .",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T12:18:30.363Z"
   },
   {
@@ -75,7 +70,6 @@
       "infra"
     ],
     "summary": "AI agents are transforming the way we build — and even how we think of ourselves as software developers. Both...",
-    "thumbnail": "https://images.ctfassets.net/p762jor363g1/2seNuCdUrHGujnFYULE0o2/6af51bd83e0828c7c051624480af2804/2026mar-anthropic-eng-blog-header-lockup.png",
     "fetchedAt": "2026-07-11T12:18:30.363Z"
   },
   {
@@ -88,7 +82,6 @@
       "data"
     ],
     "summary": "What if we could identify interesting listening moments from your year, and tell you a story about them?",
-    "thumbnail": "https://images.ctfassets.net/p762jor363g1/5aopwNgblWAOgdoa0wQJtT/277dba4272511720a9ff2e148a88a05e/Inside-The-Archive-featured.png",
     "fetchedAt": "2026-07-11T12:18:30.363Z"
   },
   {
@@ -101,7 +94,6 @@
       "ml"
     ],
     "summary": "When we kicked this off, we weren’t trying to ship an “AI feature.” We were trying to fix a structural...",
-    "thumbnail": "https://images.ctfassets.net/p762jor363g1/4l9eUZZUkoQoPh2nM83TFC/64c59cdaf982d6e078d7b3eb53a14536/Agentic-advertising-featured.png",
     "fetchedAt": "2026-07-11T12:18:30.363Z"
   },
   {
@@ -114,7 +106,6 @@
       "mobile"
     ],
     "summary": "In Part 2, we will peek under the hood at the tooling that makes the Spotify release process possible.",
-    "thumbnail": "https://images.ctfassets.net/p762jor363g1/71j14YPhkb7exdwGJVJTY7/ea363f7f74cd73bec5afad1a7a70c95c/How_we_release_the_main_Spotify_app_Part_2_featured_final.png",
     "fetchedAt": "2026-07-11T12:18:30.363Z"
   },
   {
@@ -127,7 +118,6 @@
       "open-source"
     ],
     "summary": "TL;DR Established in 2022 as a way to help support the great open source ecosystem projects that Spotify...",
-    "thumbnail": "https://images.ctfassets.net/p762jor363g1/3BCWgCZ2Wv8q02DcUUWflr/4285c9b90add72e61f2f88995e3ff6b7/Spotify-FOSS-Fund-2025-featured.png",
     "fetchedAt": "2026-07-11T12:18:30.363Z"
   },
   {
@@ -141,7 +131,6 @@
       "data"
     ],
     "summary": "The technical and practical rationale for a clear separation between these domains.",
-    "thumbnail": "https://images.ctfassets.net/p762jor363g1/5Sm5Wp3PxVhgGKiydBmCOe/ce264b39544e9b789d91a9ea7791fec8/Personalization_and_experimentation_featured_final.png",
     "fetchedAt": "2026-07-11T12:18:30.363Z"
   },
   {
@@ -152,7 +141,6 @@
     "publishedAt": "2025-12-08T16:00:00.000Z",
     "tags": [],
     "summary": "The system we built to ensure our AI agents produce predictable, trustworthy code.",
-    "thumbnail": "https://images.ctfassets.net/p762jor363g1/71oyRmTiwKcPmPNK2nZVDZ/ad4a9f47a3bddbb4f900a01474f1ce6f/honk-pt3.png",
     "fetchedAt": "2026-07-11T12:18:30.363Z"
   },
   {
@@ -165,7 +153,6 @@
       "infra"
     ],
     "summary": "We explore context engineering for background coding agents and what makes a good migration prompt.",
-    "thumbnail": "https://images.ctfassets.net/p762jor363g1/7MBa1DqihAMdnJktxXdiJn/5db5a607355caa8777863f71fede1eae/honk-pt2.png",
     "fetchedAt": "2026-07-11T12:18:30.363Z"
   }
 ]

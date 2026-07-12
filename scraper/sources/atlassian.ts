@@ -36,7 +36,7 @@ const LISTING_URL = "https://www.atlassian.com/blog/how-we-build";
  * with a `datePublished` field mirrored in a `<time datetime>` element.
  *
  * So, like Notion/Discord, this is a two-stage crawl: `parseAtlassianListingPage`
- * (via `crawlArchive`) collects title/url/summary/thumbnail/tag from the
+ * (via `crawlArchive`) collects title/url/summary/tag from the
  * topic listing, then `fetchAtlassianArchive` makes one additional,
  * sequential, delayed request per post to read its real publish date from
  * the JSON-LD block. Posts whose date can't be resolved are dropped.
@@ -48,7 +48,6 @@ const LISTING_URL = "https://www.atlassian.com/blog/how-we-build";
  *   text is identical but sits as a sibling, not inside the link).
  * - Summary: `p.description`.
  * - Category/tag: `a.term-lozenge` (e.g. "How We Build").
- * - Thumbnail: the card's first `<img>` `src`.
  * - Next page: `a.next-link` inside `.rkv-curator-pagination`; absent on
  *   the last page.
  */
@@ -71,7 +70,6 @@ export function parseAtlassianListingPage(html: string, pageUrl: string): Archiv
       .map((_j, tag) => $(tag).text().trim())
       .get()
       .filter(Boolean);
-    const imgSrc = card.find("img").first().attr("src");
 
     articles.push({
       id: articleId(absolute),
@@ -81,7 +79,6 @@ export function parseAtlassianListingPage(html: string, pageUrl: string): Archiv
       publishedAt: "", // not available on the listing page; filled in by fetchAtlassianArchive
       tags: resolveTags(tags, "atlassian"),
       summary: summarize(summary),
-      thumbnail: imgSrc ? new URL(imgSrc, pageUrl).toString() : null,
       fetchedAt,
     });
   });

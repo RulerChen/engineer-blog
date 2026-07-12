@@ -7,7 +7,6 @@
     "publishedAt": "2026-06-15T00:00:00.000Z",
     "tags": [],
     "summary": "Jane Street is known for being an OCaml shop, but for years now Python has been our second major programming language, acting as the primary tool for data analysis and (especially importantly these days) machine learning. Most of our traders and researchers think and write in Python, even as the…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -18,7 +17,6 @@
     "publishedAt": "2026-06-07T00:00:00.000Z",
     "tags": [],
     "summary": "I’ve been telling people for the last 25 years that Jane Street as an organization was just not interested in formal methods.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -29,7 +27,6 @@
     "publishedAt": "2026-05-26T00:00:00.000Z",
     "tags": [],
     "summary": "We’ve always found strace useful but somewhat hard to work with. Its output is often inscrutable, it’s hard to follow subprocesses or threads, and if you want to filter syscalls you have to rerun the trace with a flag for each one. What you want in debugging is a tool for exploring, refining, etc.,…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -40,7 +37,6 @@
     "publishedAt": "2026-04-22T00:00:00.000Z",
     "tags": [],
     "summary": "Attention is a computational primitive at the core of modern language models, allowing internal representations to reference and influence each other. It’s how these models handle sequential data in the first place.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -51,7 +47,6 @@
     "publishedAt": "2026-02-24T00:00:00.000Z",
     "tags": [],
     "summary": "A lot of “capture-the-flag” style ML puzzles give you a black box neural net, and your job is to figure out what it does. When we were thinking of creating our own ML puzzle early last year, we wanted to do something a little different. We thought it’d be neat to give users a complete specification…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -62,7 +57,6 @@
     "publishedAt": "2026-02-11T00:00:00.000Z",
     "tags": [],
     "summary": "At the end of last year, we decided to try something new: a challenge that would run alongside Advent of Code , where we asked the community to show us how they could design hardware to solve the same problems. We had no idea what level of participation to expect, but we received a huge number of…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -73,7 +67,6 @@
     "publishedAt": "2026-02-05T00:00:00.000Z",
     "tags": [],
     "summary": "For a long time I was skeptical of LLMs—whenever I reached for them I was disappointed by the results. Last year I tried Copilot and Cursor to tweak a game I’d built, and neither generated working changes. At a previous job I tried Gemini to outline product briefs and generate wireframes, but ended…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -84,7 +77,6 @@
     "publishedAt": "2026-01-06T00:00:00.000Z",
     "tags": [],
     "summary": "I recently ported the Hardcaml_step_testbench library , one of the libraries that we use at Jane Street for Hardcaml simulations, from using monads to using algebraic effects, a new OCaml 5 feature. This blog post walks through what algebraic effects are, why you should consider using them in lieu…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -95,7 +87,6 @@
     "publishedAt": "2025-12-03T00:00:00.000Z",
     "tags": [],
     "summary": "Testing is an essential part of building reliable software. It’s a form of documentation, a reminder of mistakes of the past, and a boost of confidence when you want to refactor. But mostly, testing is a way of showing that your code is correct and resilient. Because it’s so important, we’ve…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -106,7 +97,6 @@
     "publishedAt": "2025-11-24T00:00:00.000Z",
     "tags": [],
     "summary": "Update: We got over 200 submissions to this challenge, spanning a wide variety of HDL languages and hardware platforms! We featured our favorite submissions in the results blog post, check it out here",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -117,7 +107,6 @@
     "publishedAt": "2025-08-27T00:00:00.000Z",
     "tags": [],
     "summary": "Yet again, we’re at the end of our internship season, and so it’s time to summarize what the interns were up to!",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -128,7 +117,6 @@
     "publishedAt": "2025-07-02T00:00:00.000Z",
     "tags": [],
     "summary": "We recently ran across a strange higgs-bugson that manifested itself in a critical system that stores and distributes the firm’s trading activity data, called Gord. (A higgs-bugson is a bug that is reported in practice but difficult to reproduce, named for the Higgs boson , a particle which was…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -139,7 +127,6 @@
     "publishedAt": "2025-06-14T00:00:00.000Z",
     "tags": [],
     "summary": "At Jane Street, we’ve been actively making improvements to OCaml for a long time. Over the last few years, we’ve started to build some fairly ambitious extensions to the language. Our aim is to make OCaml a great language for performance engineering . This work has always been open source, and our…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -150,7 +137,6 @@
     "publishedAt": "2025-03-22T00:00:00.000Z",
     "tags": [],
     "summary": "Update: For the 2025 Advent of Code, we ran an Advent of FPGA Challenge where we invited the community to implement their own synthesizable solutions to this year’s puzzles! We got over 200 submissions spanning a wide variety of HDL languages and hardware platforms, check out our favorite solutions…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -161,7 +147,6 @@
     "publishedAt": "2025-01-24T00:00:00.000Z",
     "tags": [],
     "summary": "A “build system” is one of the most important tools in a developer’s toolbox. Roughly, it figures out how to create runnable programs from a bunch of different source files by calling out to the compiler, setting up and executing test suites, and so on. Because you interact with it daily, above all…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -172,7 +157,6 @@
     "publishedAt": "2024-10-04T00:00:00.000Z",
     "tags": [],
     "summary": "Like most places, Jane Street largely teaches developers through a kind of apprenticeship model. A team matching process tries to thoughtfully match new devs to a team that suits them; and from there carefully chosen projects, one-on-one mentorship, code review, and close collaboration with people…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -183,7 +167,6 @@
     "publishedAt": "2024-08-29T00:00:00.000Z",
     "tags": [],
     "summary": "It’s no secret that Jane Street is an active participant in the programming language community, and we’re excited to be attending ICFP 2024 , the International Conference on Functional Programming, in Milan next week! Most members of our OCaml Language team will be there, and as usual, we look…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -194,7 +177,6 @@
     "publishedAt": "2024-08-26T00:00:00.000Z",
     "tags": [],
     "summary": "We’re once again at the end of our internship season, and it’s time do our annual review of what the interns achieved while they were here.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -205,7 +187,6 @@
     "publishedAt": "2024-07-22T00:00:00.000Z",
     "tags": [],
     "summary": "Neural networks are often thought of as opaque, black-box function approximators, but theoretical tools let us describe and visualize their behavior. In particular, let’s study piecewise-linearity, a property many neural networks share. This property has been studied before , but we’ll try to…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -216,7 +197,6 @@
     "publishedAt": "2023-09-12T00:00:00.000Z",
     "tags": [],
     "summary": "We’re once again at the end of our internship season, and it’s my task to provide a few highlights of what the dev interns accomplished while they were here.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -227,7 +207,6 @@
     "publishedAt": "2023-09-01T00:00:00.000Z",
     "tags": [],
     "summary": "OCaml with Jane Street extensions is available from our public opam repo . Only a slice of the features described in this series are currently implemented.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -238,7 +217,6 @@
     "publishedAt": "2023-07-06T00:00:00.000Z",
     "tags": [],
     "summary": "Jane Street is excited to announce our sponsorship of SoME3 , Grant Sanderson and James Schloss’s third Summer of Math Exposition. SoME is a contest that Grant and James created to encourage the development of fun and interesting mathematics education videos.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -249,7 +227,6 @@
     "publishedAt": "2023-06-21T00:00:00.000Z",
     "tags": [],
     "summary": "OCaml with Jane Street extensions is available from our public opam repo . Only a slice of the features described in this series are currently implemented.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -260,7 +237,6 @@
     "publishedAt": "2023-05-26T00:00:00.000Z",
     "tags": [],
     "summary": "OCaml with Jane Street extensions is available from our public opam repo . Only a slice of the features described in this series are currently implemented.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -271,7 +247,6 @@
     "publishedAt": "2023-04-14T00:00:00.000Z",
     "tags": [],
     "summary": "Our traders and researchers love Python for its agility and for its huge open-source ecosystem, especially when it comes to machine learning. But the heavy use of notebooks can make it difficult to support. Notebooks have a very different lifecycle than regular code, and aren’t always rigorously…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -282,7 +257,6 @@
     "publishedAt": "2023-01-09T00:00:00.000Z",
     "tags": [],
     "summary": "At Jane Street we use a pattern/library called “expect tests” that makes test-writing feel like a REPL session, or like exploratory programming in a Jupyter notebook—with feedback cycles so fast and joyful that it feels almost tactile. Having used them for some time now this is the only way I’d…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -293,7 +267,6 @@
     "publishedAt": "2022-12-07T00:00:00.000Z",
     "tags": [],
     "summary": "In 2022 a consortium of companies ran an international competition, called the ZPrize , to advance the state of the art in “zero-knowledge” cryptography. We decided to have a go in our free time at submitting solutions to both the Multi-Scalar Multiplication (MSM) and Number Theoretic Transform…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -304,7 +277,6 @@
     "publishedAt": "2022-11-23T00:00:00.000Z",
     "tags": [],
     "summary": "The Dojima rice market, established around 1716, is widely considered to be the world’s first organized futures exchange. Instead of directly exchanging money for rice on the spot, merchants would agree on a price and future date at which rice and money would be exchanged. This allowed farmers and…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -315,7 +287,6 @@
     "publishedAt": "2022-11-17T00:00:00.000Z",
     "tags": [],
     "summary": "One of the problems we wrestle with at Jane Street is how to understand and manage the costs associated with the positions we hold: things like margin, financing costs, market risk, regulatory capital requirements, and so on. To that end, we’ve built systems that estimate these costs and propose…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -326,7 +297,6 @@
     "publishedAt": "2022-08-30T00:00:00.000Z",
     "tags": [],
     "summary": "We are excited to announce the launch of the Jane Street Graduate Research Fellowship!",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -337,7 +307,6 @@
     "publishedAt": "2022-08-25T00:00:00.000Z",
     "tags": [],
     "summary": "We’re once again at the end of our internship season, and it’s my task to provide a few highlights of what the interns accomplished while they were here.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -348,7 +317,6 @@
     "publishedAt": "2022-03-04T00:00:00.000Z",
     "tags": [],
     "summary": "We are excited to announce research internships in our Tools and Compilers group.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -359,7 +327,6 @@
     "publishedAt": "2022-01-14T00:00:00.000Z",
     "tags": [],
     "summary": "Software engineering intern candidates often ask how team placement works and how much input incoming interns have over their teams and projects. We know team placement is an important factor for many students when deciding which internship to accept. We’ve spent considerable time and thought on…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -370,7 +337,6 @@
     "publishedAt": "2022-01-11T00:00:00.000Z",
     "tags": [],
     "summary": "Intel Processor Trace is a hardware technology that can record all program execution flow along with timing information accurate to around 30ns. As far as I can tell a l m o s t nobody uses it, seemingly because capturing the data is tricky and, without any visualization tools, you’re forced to…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -381,7 +347,6 @@
     "publishedAt": "2021-10-21T00:00:00.000Z",
     "tags": [],
     "summary": "We spend a lot of time on education at Jane Street. Like, really a lot.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -392,7 +357,6 @@
     "publishedAt": "2021-08-26T00:00:00.000Z",
     "tags": [],
     "summary": "We recently restructured our standard libraries at Jane Street in a way that eliminates the difference between Core_kernel and Core and we’re happy with the result. The new layout should reach the open source world before the end of the year.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -403,7 +367,6 @@
     "publishedAt": "2021-08-09T00:00:00.000Z",
     "tags": [],
     "summary": "It’s the end of another dev internship season, and this one marked something of a transition, since halfway through the season, NY-based interns were invited back to the recently reinvigorated office. Which means that many more of us got the chance to meet and hang out with the interns in person…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -414,7 +377,6 @@
     "publishedAt": "2021-06-15T00:00:00.000Z",
     "tags": [],
     "summary": "This role has been filled",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -425,7 +387,6 @@
     "publishedAt": "2020-12-01T00:00:00.000Z",
     "tags": [],
     "summary": "I am pleased to announce that we have recently released a slew of new Hardcaml libraries!",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -436,7 +397,6 @@
     "publishedAt": "2020-11-24T00:00:00.000Z",
     "tags": [],
     "summary": "Jane Street is running a Kaggle contest based on a real problem with real financial data. If you like ML projects, or think you might, head over and check it out . We think it’s a pretty fun one. The prizes are pretty good too, with a total $100K being paid out.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -447,7 +407,6 @@
     "publishedAt": "2020-10-06T00:00:00.000Z",
     "tags": [],
     "summary": "Memory issues can be hard to track down. A function that only allocates a few small objects can cause a space leak if it’s called often enough and those objects are never collected. Even then, many objects are supposed to be long-lived. How can a tool, armed with data on allocations and their…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -458,7 +417,6 @@
     "publishedAt": "2020-09-15T00:00:00.000Z",
     "tags": [],
     "summary": "Since version 4.10, OCaml offers a new best-fit memory allocator alongside its existing default, the next-fit allocator. At Jane Street, we've seen a big improvement after switching over to the new allocator. This post isn't about how the new allocator works. For that, the best source is these…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -469,7 +427,6 @@
     "publishedAt": "2020-08-31T00:00:00.000Z",
     "tags": [],
     "summary": "I’m excited (and slightly terrified) to announce that Jane Street is releasing a new podcast, called Signals and Threads , and I’m going to be the host.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -480,7 +437,6 @@
     "publishedAt": "2020-08-17T00:00:00.000Z",
     "tags": [],
     "summary": "It’s been an unusual internship season.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -491,7 +447,6 @@
     "publishedAt": "2020-07-24T00:00:00.000Z",
     "tags": [],
     "summary": "We’re busy preparing for our software engineering fall hiring season . Over the years we’ve done our best to make our interview process more transparent to candidates. While many candidates show up knowing something about what our interviews look like, much of the information floating around on the…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -502,7 +457,6 @@
     "publishedAt": "2020-06-22T00:00:00.000Z",
     "tags": [],
     "summary": "At Jane Street, we have some experience using FPGAs for low-latency systems–FPGAs are programmable hardware where you get the speed of an application-specific integrated circuit (ASIC) but without being committed to a design that’s burned into the chip. It wasn’t so long ago that FPGAs were…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -513,7 +467,6 @@
     "publishedAt": "2020-06-01T00:00:00.000Z",
     "tags": [],
     "summary": "At Jane Street, an “expect test” is a test where you don’t manually write the output you’d like to check your code against – instead, this output is captured automatically and inserted by a tool into the testing code itself. If further runs produce different output, the test fails, and you’re…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -524,7 +477,6 @@
     "publishedAt": "2020-04-17T00:00:00.000Z",
     "tags": [],
     "summary": "Web browsers have supported custom plug-ins and extensions since the 1990s, giving users the ability to add their own features and tools for improving workflow or building closer integration with applications or databases running on back-end servers.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -535,7 +487,6 @@
     "publishedAt": "2020-02-20T00:00:00.000Z",
     "tags": [],
     "summary": "Jane Street has been posting tech talks from internal speakers and invited guests for years—and they’re all available on our YouTube channel:",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -546,7 +497,6 @@
     "publishedAt": "2020-02-03T00:00:00.000Z",
     "tags": [],
     "summary": "When we set up a schedule on a computer, such as a list of commands to run every day at particular times via Linux cron jobs , we expect that schedule to execute reliably. Of course we’ll check the logs to see whether the job has failed, but we never question whether the cron daemon itself will…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -557,7 +507,6 @@
     "publishedAt": "2019-12-16T00:00:00.000Z",
     "tags": [],
     "summary": "The cover image is based on Jupiter family by NASA/JPL.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -568,7 +517,6 @@
     "publishedAt": "2019-12-06T00:00:00.000Z",
     "tags": [],
     "summary": "Updates and a New Run",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -579,7 +527,6 @@
     "publishedAt": "2019-10-14T00:00:00.000Z",
     "tags": [],
     "summary": "My job involves a lot of staring at large numbers, mostly latencies in nanoseconds, and picking out magnitudes like microseconds. I noticed myself constantly counting digits in my text editor, in my terminal, and in Jupyter notebooks in my browser.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -590,7 +537,6 @@
     "publishedAt": "2019-08-30T00:00:00.000Z",
     "tags": [],
     "summary": "Jane Street’s intern program yet again is coming to an end, which is a nice opportunity to look back over the summer and see what they’ve accomplished.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -601,7 +547,6 @@
     "publishedAt": "2019-08-19T00:00:00.000Z",
     "tags": [],
     "summary": "Back when the Raspberry Pi was first released in 2012 Michael Bacarella wrote a blog post on using OCaml and Async on this little device. Since then installing OCaml via opam has become a pretty smooth experience and everything works out of the box when using Raspbian – the default Raspberry Pi…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -612,7 +557,6 @@
     "publishedAt": "2019-08-16T00:00:00.000Z",
     "tags": [],
     "summary": "As our Tools & Compilers team has grown, the kinds of projects we work on has become more ambitious. Here are some of the major things we’re currently working on:",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -623,7 +567,6 @@
     "publishedAt": "2019-07-12T00:00:00.000Z",
     "tags": [],
     "summary": "Now that OCaml 4.08 has been released, let’s have a look at what was accomplished, with a particular focus on how our plans for 4.08 fared. I’ll mostly focus on work that we in the Jane Street Tools & Compilers team were involved with, but we are just some of the contributors to the OCaml compiler,…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -634,7 +577,6 @@
     "publishedAt": "2019-07-09T00:00:00.000Z",
     "tags": [],
     "summary": "Welcome to another post in our series of how to use OCaml for machine learning. In previous posts we’ve discussed artistic style-transfer and reinforcement learning . If you haven’t read these feel free to do so now, we’ll wait right here until you’re done. Ready? Ok, let’s continue …",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -645,7 +587,6 @@
     "publishedAt": "2019-05-13T00:00:00.000Z",
     "tags": [],
     "summary": "At Jane Street, for the last several years, we have been increasingly interested in machine learning and its many use cases. This is why it was exciting when earlier this year myself and a few of my colleagues had the opportunity to attend the AAAI 2019 conference. We’d like to take this space to…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -656,7 +597,6 @@
     "publishedAt": "2019-04-17T00:00:00.000Z",
     "tags": [],
     "summary": "If you haven’t heard of it, Depth First Learning is a wonderful resource for learning about machine learning.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -667,7 +607,6 @@
     "publishedAt": "2019-02-28T00:00:00.000Z",
     "tags": [],
     "summary": "Jane Street is sponsoring this year’s MakeMIT hackathon , and we wanted to create a prize for the winners that would do justice to the maker spirit of the competition. As makers ourselves – it’s not unusual to find a “software” engineer here who hacks on FPGAs or who has a CNC machine at home – it…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -678,7 +617,6 @@
     "publishedAt": "2019-02-28T00:00:00.000Z",
     "tags": [],
     "summary": "At Jane Street, over the last few years, we’ve been increasingly exploring machine learning to improve our models. Many of us are fascinated by the rapid improvement we see in a wide variety of applications due to developments in deep learning and reinforcement learning, both for its exciting…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -689,7 +627,6 @@
     "publishedAt": "2019-02-02T00:00:00.000Z",
     "tags": [],
     "summary": "In a previous blog post we detailed how we used OCaml to reproduce some classical deep-learning results that would usually be implemented in Python. Here we will do the same with some Reinforcement Learning (RL) experiments.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -700,7 +637,6 @@
     "publishedAt": "2019-01-29T00:00:00.000Z",
     "tags": [],
     "summary": "This blog post is about an interesting detail about machine learning that I came across as a researcher at Jane Street - that of the interaction between L2 regularization, also known as weight decay, and batch normalization.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -711,7 +647,6 @@
     "publishedAt": "2019-01-15T00:00:00.000Z",
     "tags": [],
     "summary": "At Jane Street, our web UIs are built on top of an in-house framework called Incr_dom , modeled in part on React’s virtual DOM . Rendering different views efficiently in response to changes made to a shared model is a quintessentially incremental computation—so it should be no surprise that…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -722,7 +657,6 @@
     "publishedAt": "2018-09-26T00:00:00.000Z",
     "tags": [],
     "summary": "At Jane Street, we often work with data that has a very low signal-to-noise ratio, but fortunately we also have a lot of data. Where practitioners in many fields might be accustomed to having tens or hundreds of thousands of correctly labeled examples, some of our problems are more like having a…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -733,7 +667,6 @@
     "publishedAt": "2018-09-20T00:00:00.000Z",
     "tags": [],
     "summary": "Last year we held a machine learning seminar in our London office, which was an opportunity to reproduce some classical deep learning results with a nice twist: we used OCaml as a programming language rather than Python. This allowed us to train models defined in a functional way in OCaml on a GPU…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -744,7 +677,6 @@
     "publishedAt": "2018-08-06T00:00:00.000Z",
     "tags": [],
     "summary": "Yet again, intern season is coming to a close, and so it’s time to look back at what the interns have achieved in their short time with us. I’m always impressed by what our interns manage to squeeze into the summer, and this year is no different.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -755,7 +687,6 @@
     "publishedAt": "2018-06-29T00:00:00.000Z",
     "tags": [],
     "summary": "With the external release of OCaml 4.07.0 imminent, we in Jane Street’s Tools & Compilers group have been planning what we want to work on for inclusion in OCaml 4.08. These days OCaml uses (or at least attempts) a time-based release process with releases scheduled every 6 months. We’re trying to…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -766,7 +697,6 @@
     "publishedAt": "2018-04-22T00:00:00.000Z",
     "tags": [],
     "summary": "Expect tests are a technique I’ve written about before , but until recently, it’s been a little on the theoretical side. That’s because it’s been hard to take these ideas out for a spin due to lack of tooling outside of Jane Street’s walls.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -777,7 +707,6 @@
     "publishedAt": "2018-04-04T00:00:00.000Z",
     "tags": [],
     "summary": "One of the joys of working at Jane Street for the last 15 or so years has been seeing how our software stack has grown in scope. When I started, I was building pretty narrowly focused systems for doing statistical research on trading strategies, and then building systems for executing those same…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -788,7 +717,6 @@
     "publishedAt": "2018-03-27T00:00:00.000Z",
     "tags": [],
     "summary": "Imagine a system for editing and reviewing code where:",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -799,7 +727,6 @@
     "publishedAt": "2018-02-16T00:00:00.000Z",
     "tags": [],
     "summary": "Interested in learning OCaml? In the NYC area? Then this might be for you!",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -810,7 +737,6 @@
     "publishedAt": "2018-02-15T00:00:00.000Z",
     "tags": [],
     "summary": "People often think of formal methods and theorem provers as forbidding tools, cool in theory but with a steep learning curve that makes them hard to use in real life. In this post, we’re going to describe a case we ran into recently where we were able to leverage theorem proving technology, Z3 in…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -821,7 +747,6 @@
     "publishedAt": "2017-12-20T00:00:00.000Z",
     "tags": [],
     "summary": "As Jane Street grows, the quality of the development tools we use matters more and more. We increasingly work on the OCaml compiler itself: adding useful language features, fine-tuning the type system and improving the performance of the generated code. Alongside this, we also work on the…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -832,7 +757,6 @@
     "publishedAt": "2017-10-31T00:00:00.000Z",
     "tags": [],
     "summary": "This post is aimed at readers who are already familiar with stochastic gradient descent (SGD) and terms like “batch size”. For an introduction to these ideas, I recommend Goodfellow et al.’s Deep Learning , in particular the introduction and, for more about SGD, Chapter 8. The relevance of SGD is…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -843,7 +767,6 @@
     "publishedAt": "2017-10-29T00:00:00.000Z",
     "tags": [],
     "summary": "It’s time for our next Jane Street Tech Talk . When we’ve solicited suggestions for topics, one common request has been to talk about our internal development process. Our next talk, How Jane Street Does Code Review , should fit the bill. The talk is being given by our own Ian Henry, and discusses…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -854,7 +777,6 @@
     "publishedAt": "2017-09-26T00:00:00.000Z",
     "tags": [],
     "summary": "After a summer hiatus, the Jane Street Tech Talks series is back on for the fall! Last we left it, our very own Dominick LoBraico presented on the evolution of our internal configuration methodology and the systems that support it. For anybody that missed it, you can check out a recording of the…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -865,7 +787,6 @@
     "publishedAt": "2017-08-28T00:00:00.000Z",
     "tags": [],
     "summary": "Trading is a competitive business. You need great people and great technology, of course, but also trading strategies that make money. Where do those strategies come from? In this post we’ll discuss how the interplay of data, math and technology informs how we develop and run strategies.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -876,7 +797,6 @@
     "publishedAt": "2017-08-25T00:00:00.000Z",
     "tags": [],
     "summary": "For those of you interested in what what interns do at Jane Street, here’s a post from former intern Tristan Hume, on his work developing tree-diffing algorithms last summer at Jane Street. It’s a fun (and very detailed!) read.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -887,7 +807,6 @@
     "publishedAt": "2017-08-24T00:00:00.000Z",
     "tags": [],
     "summary": "People seem to enjoy talking about programming methodologies. They give them cute names, like eXtreme programming , Agile , and Scrum ; run conferences and build communities around them; write books that describe how to use them in excruciating detail; and manifestos that lay out their philosophy.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -898,7 +817,6 @@
     "publishedAt": "2017-08-16T00:00:00.000Z",
     "tags": [],
     "summary": "Jane Street is looking to hire an engineer with experience in both software and hardware design to work on FPGA-based applications, and on tools for creating such applications.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -909,7 +827,6 @@
     "publishedAt": "2017-08-14T00:00:00.000Z",
     "tags": [],
     "summary": "Intern season is coming to a close, and it’s a nice time to look back (as I’ve done in previous years ) and review some of what the interns did while they were here. The dev intern program has grown considerably, with almost 40 dev interns between our NY, London, and Hong Kong offices.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -920,7 +837,6 @@
     "publishedAt": "2017-05-11T00:00:00.000Z",
     "tags": [],
     "summary": "There are abundant resources online trying to scare programmers away from using shell scripts. Most of them, if anything, succeed in convincing the reader to blindly put something that resembles",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -931,7 +847,6 @@
     "publishedAt": "2017-05-01T00:00:00.000Z",
     "tags": [],
     "summary": "Update: I’m excited to say that we’ve now hired a (great!) technical writer, so the position is closed.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -942,7 +857,6 @@
     "publishedAt": "2017-04-25T00:00:00.000Z",
     "tags": [],
     "summary": "We have a new tech talk coming up on May 17th, from our very own Dominick LoBraico. This one is about how to represent configurations with programs. In some sense, this is an obvious idea. Lots of programmers have experienced the dysphoria that comes from watching your elegant little configuration…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -953,7 +867,6 @@
     "publishedAt": "2017-04-20T00:00:00.000Z",
     "tags": [],
     "summary": "It’s often surprising just how much software performance depends on how the software is deployed. All the time and effort you’ve invested in optimization can be erased by a few bad decisions in scheduler policy, affinity, or background workload on a server.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -964,7 +877,6 @@
     "publishedAt": "2017-03-20T00:00:00.000Z",
     "tags": [],
     "summary": "From now and then, I found myself having to write some mechanical and repetitive code. The usual solution for this is to write a code generator; for instance in the form of a ppx rewriter in the case of OCaml code. This however comes with a cost: code generators are harder to review than plain code…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -975,7 +887,6 @@
     "publishedAt": "2017-03-15T00:00:00.000Z",
     "tags": [],
     "summary": "I’m happy to announce our next public tech talk , called Seven Implementations of Incremental , on Wednesday, April 5th, presented by yours truly. You can register here .",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -986,7 +897,6 @@
     "publishedAt": "2017-02-28T00:00:00.000Z",
     "tags": [],
     "summary": "Are you thinking about applying to Jane Street for a software engineering role? Or already have a phone interview scheduled but unsure what to expect? Read on as we walk through an example phone interview with you.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -997,7 +907,6 @@
     "publishedAt": "2017-02-16T00:00:00.000Z",
     "tags": [],
     "summary": "Our first Jane Street Tech Talk went really well! Thanks to everyone who came and made it a fun event.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -1008,7 +917,6 @@
     "publishedAt": "2017-01-11T00:00:00.000Z",
     "tags": [],
     "summary": "UPDATE : We are full up. Tons of people signed up for the talk, and we’re now at the limit of what we feel like we can support in the space. Thanks for all the interest, and if you didn’t get into this one, don’t worry, we have more talks coming!",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -1019,7 +927,6 @@
     "publishedAt": "2017-01-09T00:00:00.000Z",
     "tags": [],
     "summary": "Spacetime is a new memory profiling facility for OCaml to help find space leaks and unwanted allocations. Whilst still a little rough around the edges, we’ve found it to be a very useful tool. Since there’s not much documentation for using spacetime beyond this readme , I’ve written a little intro…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -1030,7 +937,6 @@
     "publishedAt": "2016-11-08T00:00:00.000Z",
     "tags": [],
     "summary": "Ppx is a preprocessing system for OCaml where one maps over the OCaml abstract syntax tree (AST) to interpret some special syntax fragments to generate code.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -1041,7 +947,6 @@
     "publishedAt": "2016-10-27T00:00:00.000Z",
     "tags": [],
     "summary": "I was recently invited to do the keynote at the Commercial Users of Functional Programming workshop, a 15-year-old gathering which is attached to ICFP, the primary academic functional programming conference.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -1052,7 +957,6 @@
     "publishedAt": "2016-09-13T00:00:00.000Z",
     "tags": [],
     "summary": "Now that the interns have mostly gone back to school, it’s a good time to look back at what they did while they were here. We had a bumper crop – more than 30 dev interns between our London, New York and Hong Kong offices – and they worked on just about every corner of our code-base.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -1063,7 +967,6 @@
     "publishedAt": "2016-08-31T00:00:00.000Z",
     "tags": [],
     "summary": "Recruiting talented people has always been challenging.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -1074,7 +977,6 @@
     "publishedAt": "2016-08-30T00:00:00.000Z",
     "tags": [],
     "summary": "In the last few years, we’ve spent more and more effort working on developer tools, to the point where we now have a tools-and-compilers group devoted to the area, for which we’re actively hiring.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -1085,7 +987,6 @@
     "publishedAt": "2016-06-21T00:00:00.000Z",
     "tags": [],
     "summary": "Earlier this year, we created a ppx_let , a PPX rewriter that introduces a syntax for working with monadic and applicative libraries like Command, Async, Result and Incremental. We’ve now amassed about six months of experience with it, and we’ve now seen enough to recommend it to a wider audience.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   },
   {
@@ -1096,7 +997,6 @@
     "publishedAt": "2016-05-23T00:00:00.000Z",
     "tags": [],
     "summary": "At Jane Street, we have always been heavy users of pre-processors, first with camlp4 and now ppx. Pre-processing makes the infrastructure a bit more complex, but it save us a lot of time by taking care of a lot of tedious boilerplate code and in some case makes the code a bit prettier.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:21.839Z"
   }
 ]

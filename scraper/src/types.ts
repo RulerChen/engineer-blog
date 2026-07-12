@@ -6,7 +6,6 @@ export interface Article {
   publishedAt: string; // ISO 8601
   tags: string[]; // from RSS categories or scraped labels; may be empty
   summary: string; // RSS description, HTML-stripped, truncated to ~300 chars
-  thumbnail: string | null; // cover image URL if the feed provides one
   fetchedAt: string; // ISO 8601, first time this article was seen
 }
 

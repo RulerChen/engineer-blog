@@ -51,7 +51,6 @@ export function parseStripeArchivePage(html: string, pageUrl: string): ArchivePa
     const publishedAt =
       dateAttr && !Number.isNaN(Date.parse(dateAttr)) ? new Date(dateAttr).toISOString() : "";
     const category = post.find("a.BlogCategoryLink").first().text().trim();
-    const thumbnail = post.find("img.BlogImageCard__image").first().attr("src")?.trim() ?? null;
 
     articles.push({
       id: articleId(absolute),
@@ -61,7 +60,6 @@ export function parseStripeArchivePage(html: string, pageUrl: string): ArchivePa
       publishedAt,
       tags: resolveTags(category ? [category] : [], "stripe"),
       summary: summarize(post.find(".BlogIndexPost__body p").first().html() ?? ""),
-      thumbnail,
       fetchedAt,
     });
   });

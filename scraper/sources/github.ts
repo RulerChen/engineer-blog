@@ -25,7 +25,6 @@ import type { Article, Source } from "../src/types.js";
  *   footer — an actual ISO date, not just human text.
  * - Category: the single `a.first-post-category` link above the title.
  * - Summary: the `<p>` inside the `.f4-mktg.color-fg-muted` div.
- * - Thumbnail: `img.wp-post-image` inside the card's thumbnail wrapper.
  * - Next page: `<link rel="next">` in `<head>`, mirrored by
  *   `.pagination a.next_page` in the body.
  */
@@ -54,7 +53,6 @@ export function parseGithubArchivePage(html: string, pageUrl: string): ArchivePa
       publishedAt,
       tags: resolveTags(category ? [category] : [], "github"),
       summary: summarize(post.find(".f4-mktg.color-fg-muted p").first().html() ?? ""),
-      thumbnail: post.find("img.wp-post-image").first().attr("src") ?? null,
       fetchedAt,
     });
   });

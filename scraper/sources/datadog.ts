@@ -19,7 +19,7 @@ import type { Source } from "../src/types.js";
  * 2026-07-01 at capture time — so it already functions as a full archive.
  * `backfill` reuses the same feed fetch rather than a separate archive
  * scraper, since there is no fuller history available anywhere else on the
- * site. Items carry no `<category>`/tag or enclosure/thumbnail data.
+ * site. Items carry no `<category>`/tag or enclosure data.
  */
 export const datadog: Source = {
   id: "datadog",

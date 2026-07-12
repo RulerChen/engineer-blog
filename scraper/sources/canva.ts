@@ -32,13 +32,6 @@ interface CanvaNextData {
  * dated April 2015 — the blog's oldest post). So instead of a DOM/CSS
  * selector, this parser reads that embedded JSON directly; the whole archive
  * is already present in one response, so `nextUrl` is always `null`.
- *
- * There is no reliable way to recover a real thumbnail URL for each post from
- * this JSON — the `image` field is a source-relative path (e.g.
- * `engineering/<slug>/images/thumbnail.png`) that doesn't map to the
- * build-hashed `/_next/static/media/...` URLs actually served — so
- * `thumbnail` is left `null` for every article, same as Dropbox's
- * `/all-stories` backfill (which also has no per-post image in its listing).
  */
 export function parseCanvaArchivePage(html: string, pageUrl: string): ArchivePage {
   const $ = cheerio.load(html);
@@ -66,7 +59,6 @@ export function parseCanvaArchivePage(html: string, pageUrl: string): ArchivePag
       publishedAt,
       tags: resolveTags(post.tags ?? [], "canva"),
       summary: summarize(post.abstract ?? ""),
-      thumbnail: null,
       fetchedAt,
     });
   }

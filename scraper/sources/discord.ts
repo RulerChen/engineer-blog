@@ -67,7 +67,6 @@ export function parseDiscordCategoryPage(html: string, pageUrl: string): Archive
       publishedAt: "", // not available on the listing page; filled in by fetchDiscordArchive
       tags: resolveTags(category ? [category] : [], "discord"),
       summary: summarize(summary),
-      thumbnail: card.find("img").first().attr("src") ?? null,
       fetchedAt,
     });
   });

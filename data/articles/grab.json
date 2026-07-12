@@ -11,7 +11,6 @@
       "general"
     ],
     "summary": "Introduction: The evolution of Grab’s Data Lake At Grab’s scale, managing petabytes of data across billions of S3 objects demands more than a storage layer. It demands a robust architectural primitive that supports the high-concurrency needs of a modern “Lakehouse.” Our goal is full storage-compute…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -26,7 +25,6 @@
       "general"
     ],
     "summary": "Introduction Counter Service is used across Grab’s anti-fraud platform to answer time-windowed count questions, such as recent ride requests by a user or failed payment attempts on a card. The service handles tens of thousands of queries per second (QPS) with about a billion requests per day, while…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -41,7 +39,6 @@
       "general"
     ],
     "summary": "Distroless adoption at Grab Grab is migrating from heavy base images to Distroless images to reduce security risks. By limiting each container to the application and its runtime dependencies, we shed non-essential binaries and associated Common Vulnerabilities and Exposures (CVEs). This migration…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -56,7 +53,6 @@
       "general"
     ],
     "summary": "Introduction In Part 1 , we introduced Palana , Grab’s Kubernetes-native secure execution platform for autonomous AI agents. We discussed the underlying need for isolated environments and covered its core design principles: treating isolation as the unit of trust, keeping credentials out of agent…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -71,7 +67,6 @@
       "general"
     ],
     "summary": "Abstract Artificial intelligence (AI) agents are moving from experiments into everyday engineering workflows. They can read code, call application programming interfaces (APIs), run tests, create merge requests, answer Slack messages, and keep long-running state. That makes them useful, but it also…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -84,7 +79,6 @@
       "general"
     ],
     "summary": "Introduction: The journey of documentation at Grab In early 2021, Grab adopted a Docs-as-Code approach to address gaps in our technical documentation processes, as illustrated in our blog post Embracing a Docs-as-Code . Inspired by the practices of other market leaders, we integrated documentation…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -99,7 +93,6 @@
       "data"
     ],
     "summary": "Introduction Data drives every decision we make at Grab. As our operations scale, so does our need for robust, real-time data ingestion and processing frameworks. Enter Hugo: our self-service data platform that has long empowered teams to seamlessly route data into our Data Lake. Today, Hugo is…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -114,7 +107,6 @@
       "performance"
     ],
     "summary": "Introduction Long integrated development environment (IDE) sync/indexing times can quietly erode developer productivity, making code navigation sluggish, spiking memory usage, and slowing down Jetpack Compose preview updates, turning the IDE into a bottleneck rather than a helpful tool. For Android…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -130,7 +122,6 @@
       "data"
     ],
     "summary": "Introduction Ensuring the reliability of Apache Flink deployments in Grab is crucial for the availability of our business-critical, real-time applications. While all applications are tested in a staging environment before getting promoted to the production environment, there is still a class of…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -145,7 +136,6 @@
       "general"
     ],
     "summary": "Introduction In Part I , we discussed why Grab is investing in a data mesh, referred to as the Signals Marketplace within Grab, as part of our evolving data culture. We also explained how data certification aids teams in reliably reusing data across different domains. However, cultural change…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -159,7 +149,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/firefighting/banner.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -172,7 +161,6 @@
       "ai"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/r8-optimization/banner.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -185,7 +173,6 @@
       "performance"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/image-caching/banner-image.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -198,7 +185,6 @@
       "ai"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/cursor-at-grab/banner-cursor.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -211,7 +197,6 @@
       "databases"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/docker-lazy-loading/banner-1.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -224,7 +209,6 @@
       "ai"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/brix/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -237,7 +221,6 @@
       "mobile"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/auto-tracking/auto-sdk-banner.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -250,7 +233,6 @@
       "databases"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/cdp-scenario/banner-1.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -264,7 +246,6 @@
       "performance"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/decade-of-defense/banner.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -278,7 +259,6 @@
       "performance"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/real-time-data-quality-monitoring/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -292,7 +272,6 @@
       "performance"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/spellvault-img/banner.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -306,7 +285,6 @@
       "performance"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/mac-cloud-exit/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -320,7 +298,6 @@
       "performance"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/custom-vision-llm-at-grab/banner-1.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -335,7 +312,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/ml-predictive-autoscaling-for-flink/banner.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -350,7 +326,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/nvida-triton/banner.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -363,7 +338,6 @@
       "databases"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/memory-counter-golang/banner-1.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -377,7 +351,6 @@
       "ml"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/user-found-model-img/banner-4.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -391,7 +364,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/partner-gateway/banner-1.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -404,7 +376,6 @@
       "general"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/taming-monorepo-beast/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -419,7 +390,6 @@
       "general"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/data-mesh-at-grab-part-1/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -433,7 +403,6 @@
       "cloud"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/grab-ml-store/banner-figure-1.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -447,7 +416,6 @@
       "infra"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/service-mesh-evolution/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -458,7 +426,6 @@
     "publishedAt": "2025-07-07T07:23:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/dispatchgym/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -472,7 +439,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/rust-blog/banner-design.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -485,7 +451,6 @@
       "databases"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/flink-sql/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -499,7 +464,6 @@
       "security"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/dex-in-action/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -514,7 +478,6 @@
       "ai"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/birth-of-grabgpt/grabgpt-banner.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -528,7 +491,6 @@
       "ai"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/riskops-sop-img/banner-figure-1.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -542,7 +504,6 @@
       "ai"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/sop-llm-agent-framework-img/banner-figure-1.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -556,7 +517,6 @@
       "general"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/evaluate-performance-remove-redis-from-scylla-service/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -569,7 +529,6 @@
       "general"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/Facilitating-Docs-as-Code/banner-img-2.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -584,7 +543,6 @@
       "observability"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/improving-hugo-stability/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -598,7 +556,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/spark-observability-image/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -611,7 +568,6 @@
       "general"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/TechDocs-at-Grab/banner-img3.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -626,7 +582,6 @@
       "performance"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/grabaigateway/GenAIGateway-banner-3.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -640,7 +595,6 @@
       "security"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/embracing-passwordless-authentication-with-passkey/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -655,7 +609,6 @@
       "product"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/turbocharging-grabunlimited-with-temporal/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -670,7 +623,6 @@
       "video"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/seamless-migration/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -684,7 +636,6 @@
       "ai"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/llm_kit/llmkit-banner.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -698,7 +649,6 @@
       "performance"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/how-we-reduced-grabx-sdk-initialisation-time/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -712,7 +662,6 @@
       "ai"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/metasensev2/metasense-banner.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -726,7 +675,6 @@
       "performance"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/reduced-memory-cpu-usage-grabx-sdk/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -740,7 +688,6 @@
       "ai"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/llm-assisted-vector-similarity-search/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -754,7 +701,6 @@
       "ai"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/rag-llm/rag-llm-banner.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -768,7 +714,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/catwalk-evolution/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -782,7 +727,6 @@
       "ai"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/hubble-data-discovery/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -796,7 +740,6 @@
       "mobile"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/live-activity/live-activity-banner.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -810,7 +753,6 @@
       "ai"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/the-creation-of-our-powerful-campaign-builder/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -824,7 +766,6 @@
       "ai"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/chimera-sandbox/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -837,7 +778,6 @@
       "general"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/improved-translation-experience-with-cost-efficiency/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -852,7 +792,6 @@
       "ai"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/llm-powered-data-classification/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -866,7 +805,6 @@
       "experimentation"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/profile-guided-optimisation/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -880,7 +818,6 @@
       "performance"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/evaluate-business-impact-of-marketing-campaigns/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -894,7 +831,6 @@
       "performance"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/no-version-left-behind-our-epic-journey-of-gitlab-upgrades/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -908,7 +844,6 @@
       "security"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/data-observability/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -922,7 +857,6 @@
       "experimentation"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/grabx-decision-engine/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -936,7 +870,6 @@
       "observability"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/iris/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -949,7 +882,6 @@
       "performance"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/project-bonsai/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -962,7 +894,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/near-realtime-data-analytics/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -973,7 +904,6 @@
     "publishedAt": "2024-02-20T00:22:10.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/attribution-platform/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -986,7 +916,6 @@
       "performance"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/dynamic-marketplace/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1000,7 +929,6 @@
       "video"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/rethinking-streaming-processing-data-exploration/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1014,7 +942,6 @@
       "cloud"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/kafka-on-kubernetes/cover.jpeg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1027,7 +954,6 @@
       "security"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/cybersec-bug/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1040,7 +966,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/frequency-capping/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1054,7 +979,6 @@
       "video"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/elegant-platform/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1067,7 +991,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/road-localisation-grabmaps/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1080,7 +1003,6 @@
       "networking"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/graph-modelling-guidelines/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1094,7 +1016,6 @@
       "performance"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/scaling-marketing-for-merchants/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1108,7 +1029,6 @@
       "performance"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/scalable-lookalike-audience/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1121,7 +1041,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/building-hyperlocal-grabmaps/cover.jpeg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1135,7 +1054,6 @@
       "performance"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/streamlining-grabs-segmentation-platform/cover.jpeg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1149,7 +1067,6 @@
       "networking"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/graph-anomaly-model/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1163,7 +1080,6 @@
       "performance"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/zero-traffic-cost/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1176,7 +1092,6 @@
       "general"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/go-module-proxy/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1191,7 +1106,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/pii-masking/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1204,7 +1118,6 @@
       "general"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/performance-bottlenecks/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1218,7 +1131,6 @@
       "general"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/iOS-CI-infrastructure-with-observability-tools/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1231,7 +1143,6 @@
       "general"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/faster_using_the_go_plugin_to_replace_Lua_VM/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1246,7 +1157,6 @@
       "video"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/safer-flink-deployments/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1259,7 +1169,6 @@
       "general"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/message-center/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1272,7 +1181,6 @@
       "general"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/evolution-of-quality/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1285,7 +1193,6 @@
       "general"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/determining-tech-stack/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1299,7 +1206,6 @@
       "security"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/migrating-to-abac/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1314,7 +1220,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/securing-gitops-pipeline/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1327,7 +1232,6 @@
       "general"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/geohash-plugin/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1341,7 +1245,6 @@
       "networking"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/graph-service-platform/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1355,7 +1258,6 @@
       "performance"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/zero-trust-with-kafka/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1368,7 +1270,6 @@
       "general"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/kartacam-powers-grabmaps/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1382,7 +1283,6 @@
       "security"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/graph-for-fraud-detection/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1395,7 +1295,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/query-expansion-based-on-user-behaviour/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1408,7 +1307,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/using-mobile-sensor-data-to-encourage-safer-driving/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1422,7 +1320,6 @@
       "devops"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/auto-rule-testing/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1436,7 +1333,6 @@
       "architecture"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/how-we-store-millions-orders/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1449,7 +1345,6 @@
       "devops"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/automated-faq/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1462,7 +1357,6 @@
       "security"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/graph-visualisation/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1475,7 +1369,6 @@
       "security"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/facial-recognition/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1488,7 +1381,6 @@
       "security"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/graph-concepts/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1502,7 +1394,6 @@
       "cloud"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/automated-experiment-analysis/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1516,7 +1407,6 @@
       "performance"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/search-architecture-revamp/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1527,7 +1417,6 @@
     "publishedAt": "2022-05-04T03:55:55.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/doc-as-code/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1540,7 +1429,6 @@
       "networking"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/graph-intro/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1554,7 +1442,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/how-we-reduced-our-ci-yaml/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1567,7 +1454,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/kafka-connect/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1578,7 +1464,6 @@
     "publishedAt": "2022-04-01T00:20:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/supporting-large-campaigns-at-scale/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1592,7 +1477,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/telematics/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1606,7 +1490,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/real-time-data-ingestion/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1620,7 +1503,6 @@
       "performance"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/abacus-issuing-points-for-multiple-sources/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1634,7 +1516,6 @@
       "cloud"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/exposing-kafka-cluster/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1647,7 +1528,6 @@
       "general"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/scalable-ads-server/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1661,7 +1541,6 @@
       "security"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/biometrics-authentication/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1674,7 +1553,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/using-real-world-patterns-to-improve-matching/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1688,7 +1566,6 @@
       "databases"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/designing-products-and-services-based-on-jtbd/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1703,7 +1580,6 @@
       "databases"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/search-indexing-optimisation/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1718,7 +1594,6 @@
       "performance"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/multi-armed-bandit-system-recommendation/image7.jpeg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1732,7 +1607,6 @@
       "cloud"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/grabfood-bundle/image11.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1747,7 +1621,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/protecting-personal-data-in-grabs-imagery/banner.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1760,7 +1633,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/processing-etl-tasks-with-ratchet/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1773,7 +1645,6 @@
       "general"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/app-modularisation-at-scale/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1786,7 +1657,6 @@
       "product"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/reshaping-chat-support/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1800,7 +1670,6 @@
       "performance"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/market-store/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1814,7 +1683,6 @@
       "ml"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/archivist/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1827,7 +1695,6 @@
       "devops"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/our-journey-to-continuous-delivery-at-grab-part2/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1841,7 +1708,6 @@
       "ml"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/smartchat/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1855,7 +1721,6 @@
       "general"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/learn-how-grab-leveraged-performance-marketing-automation/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1869,7 +1734,6 @@
       "general"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/one-small-step-closer-to-containerising-service-binaries/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1882,7 +1746,6 @@
       "product"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/customer-support-workforce-routing/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1895,7 +1758,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/mirror-cache-blog/mirror-cache-blog-cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1908,7 +1770,6 @@
       "product"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/grabmart-product-team-experience/grabmartblogcover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1921,7 +1782,6 @@
       "experimentation"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/trident-real-time-event-processing-at-scale/cover.jpeg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1935,7 +1795,6 @@
       "architecture"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/pharos-searching-nearby-drivers-on-road-network-at-scale/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1948,7 +1807,6 @@
       "security"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/reflecting-on-the-five-years-of-bug-bounty-at-grab/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1961,7 +1819,6 @@
       "mobile"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/how-grab-is-blazing-through-the-super-app-bazel-migration/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1972,7 +1829,6 @@
     "publishedAt": "2020-11-23T06:21:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/democratising-fare-storage-at-scale-using-event-sourcing/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1986,7 +1842,6 @@
       "general"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/keeping-170-libraries-up-to-date/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -1999,7 +1854,6 @@
       "infra"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/optimally-scaling-kafka-consumer-applications/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2012,7 +1866,6 @@
       "devops"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/our-journey-to-continuous-delivery-at-grab/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2023,7 +1876,6 @@
     "publishedAt": "2020-09-07T08:43:40.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/uncovering-the-truth-behind-lua-and-redis-data-consistency/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2037,7 +1889,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/data-gateway/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2048,7 +1899,6 @@
     "publishedAt": "2020-08-12T10:02:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/go-module-a-guide-for-monorepos-part-1/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2062,7 +1912,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/the-journey-of-deploying-apache-airflow-at-Grab/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2073,7 +1922,6 @@
     "publishedAt": "2020-06-29T14:34:40.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/how-we-built-our-in-house-chat-platform-for-the-web/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2084,7 +1932,6 @@
     "publishedAt": "2020-05-29T11:34:40.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/go-module-a-guide-for-monorepos-part-1/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2097,7 +1944,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/does-southeast-asia-run-on-coffee/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2110,7 +1956,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/grabchat-much-talk-data-to-me/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2123,7 +1968,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/seven-facts-about-grab-partner-drivers-in-sg/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2137,7 +1981,6 @@
       "mobile"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/tackling-ui-test-execution-time-imbalance-for-xcode-parallel-testing/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2151,7 +1994,6 @@
       "performance"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/returning-storage-space-back-to-our-users/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2164,7 +2006,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/grab-posisi/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2175,7 +2016,6 @@
     "publishedAt": "2020-01-08T15:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/preventing-app-performance-degradation-due-to-sudden-ride-demand-spikes/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2188,7 +2028,6 @@
       "infra"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/plumbing-at-scale/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2202,7 +2041,6 @@
       "performance"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/journey-to-a-faster-everyday-super-app/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2217,7 +2055,6 @@
       "architecture"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/marionette-enabling-e2e-user-scenario-simulation/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2230,7 +2067,6 @@
       "backend"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/domain-driven-development-in-golang/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2241,7 +2077,6 @@
     "publishedAt": "2019-11-05T10:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/driving-sea-forward-through-people-focused-design/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2255,7 +2090,6 @@
       "security"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/griffin/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2269,7 +2103,6 @@
       "security"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/using-grabs-trust-counter-service-to-detect-fraud-successfully/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2284,7 +2117,6 @@
       "architecture"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/about-being-a-principal-engineer-at-grab/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2297,7 +2129,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/data-first-sla-always/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2310,7 +2141,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/save-your-place-with-grab/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2323,7 +2153,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/automated-erp-charges/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2336,7 +2165,6 @@
       "observability"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/how-built-logging-stack/cover.jpeg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2349,7 +2177,6 @@
       "ml"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/grab-everyday-super-app/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2363,7 +2190,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/catwalk-serving-machine-learning-models-at-scale/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2376,7 +2202,6 @@
       "mobile"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/react-native-in-grabpay/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2387,7 +2212,6 @@
     "publishedAt": "2019-05-28T18:43:40.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/connecting-the-invisibles-to-design-seamless-experiences/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2400,7 +2224,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/tourist-chat-data-story/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2413,7 +2236,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/bubble-tea-craze-on-grabfood/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2424,7 +2246,6 @@
     "publishedAt": "2019-05-07T10:23:20.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/why-you-should-organise-an-immersion-trip-for-your-next-project/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2437,7 +2258,6 @@
       "backend"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/preventing-pipeline-calls-from-crashing-redis-clusters/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2450,7 +2270,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/poi-entrances-venues-door-to-door/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2464,7 +2283,6 @@
       "mobile"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/loki-dynamic-mock-server-http-tcp-testing/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2477,7 +2295,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/correcting-restaurant-locations-harnessing-wisdom-of-the-crowd/cover.jpeg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2490,7 +2307,6 @@
       "architecture"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/beyond-retries-part-3/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2503,7 +2319,6 @@
       "architecture"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/beyond-retries-part-2/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2516,7 +2331,6 @@
       "architecture"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/beyond-retries-part-1/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2529,7 +2343,6 @@
       "architecture"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/context-deadlines-and-how-to-set-them/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2542,7 +2355,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/peak-shift-demand-travel-trends/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2555,7 +2367,6 @@
       "observability"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/structured-logging/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2568,7 +2379,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/data-ingestion-transformation-product-insights/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2581,7 +2391,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/understanding-supply-demand-ride-hailing-data/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2595,7 +2404,6 @@
       "experimentation"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/experimentation-platform-data-pipeline/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2606,7 +2414,6 @@
     "publishedAt": "2019-01-08T10:55:40.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/designing-resilient-systems-part-2/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2620,7 +2427,6 @@
       "databases"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/big-data-real-time-presto-talariadb/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2631,7 +2437,6 @@
     "publishedAt": "2018-12-21T06:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/designing-resilient-systems-part-1/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2644,7 +2449,6 @@
       "architecture"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/chaos-engineering/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2659,7 +2463,6 @@
       "frontend"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/feature-toggles-ab-testing/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2673,7 +2476,6 @@
       "testing"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/mockers/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2686,7 +2488,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/journey-tourist-grab/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2699,7 +2500,6 @@
       "backend"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/quotas-service/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2712,7 +2512,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/boh-prize/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2727,7 +2526,6 @@
       "frontend"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/building-grab-s-experimentation-platform/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2741,7 +2539,6 @@
       "general"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/introducing-grab-kit/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2754,7 +2551,6 @@
       "experimentation"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/experiment-chat-booking-cancellations/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2769,7 +2565,6 @@
       "architecture"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/deep-dive-into-database-timeouts-in-rails/cover.jpeg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2782,7 +2577,6 @@
       "cloud"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/dealing-with-the-meltdown-patch-at-grab/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2795,7 +2589,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/grabshare-at-the-intelligent-transportation-engineering-conference/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2806,7 +2599,6 @@
     "publishedAt": "2017-12-08T03:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/grabbing-growth-a-growth-hacking-story/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2819,7 +2611,6 @@
       "data"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/the-data-and-science-behind-grabshare-part-i/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2832,7 +2623,6 @@
       "career"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/the-art-of-hiring-good-engineers/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2845,7 +2635,6 @@
       "backend"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/banner.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2858,7 +2647,6 @@
       "career"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/so-you-need-to-hire-good-engineers/cover.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2871,7 +2659,6 @@
       "security"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/come-and-hackallthethings-at-grab/banner.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2884,7 +2671,6 @@
       "backend"
     ],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2897,7 +2683,6 @@
       "frontend"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/grabs-front-end-study-guide/front-end-at-grab-banner.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2910,7 +2695,6 @@
       "networking"
     ],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2923,7 +2707,6 @@
       "cloud"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/driving-southeast-asia-forward-with-aws/cover.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2937,7 +2720,6 @@
       "product"
     ],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2951,7 +2733,6 @@
       "networking"
     ],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2965,7 +2746,6 @@
       "cloud"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/scaling-like-a-boss-with-presto/presto-architecture.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2978,7 +2758,6 @@
       "mobile"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/ios-automation/corgi-macbook.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -2991,7 +2770,6 @@
       "mobile"
     ],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -3004,7 +2782,6 @@
       "backend"
     ],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -3017,7 +2794,6 @@
       "career"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/how-grab-hires-engineers-in-singapore/grab-engineers-working.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -3030,7 +2806,6 @@
       "career"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/battling-with-tech-giants/user-trust-offsite-group-photo.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -3043,7 +2818,6 @@
       "cloud"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/zero-downtime-migration/data-comparison.png",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -3056,7 +2830,6 @@
       "career"
     ],
     "summary": "",
-    "thumbnail": "https://engineering.grab.com/img/grab-vietnam-careers-week/son-hai.jpg",
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -3067,7 +2840,6 @@
     "publishedAt": "2016-10-12T18:43:40.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -3082,7 +2854,6 @@
       "architecture"
     ],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -3095,7 +2866,6 @@
       "frontend"
     ],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -3109,7 +2879,6 @@
       "frontend"
     ],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -3120,7 +2889,6 @@
     "publishedAt": "2016-02-04T03:46:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   },
   {
@@ -3133,7 +2901,6 @@
       "cloud"
     ],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:25:52.930Z"
   }
 ]

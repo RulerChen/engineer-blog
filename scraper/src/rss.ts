@@ -26,7 +26,6 @@ export async function parseFeed(
       publishedAt: item.isoDate ?? (item.pubDate ? new Date(item.pubDate).toISOString() : ""),
       tags: resolveTags(item.categories ?? [], sourceId),
       summary: summarize(item.content ?? item.contentSnippet ?? ""),
-      thumbnail: item.enclosure?.url ?? null,
       fetchedAt,
     });
   }

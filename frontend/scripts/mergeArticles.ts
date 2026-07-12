@@ -18,7 +18,7 @@ export function mergeArticleFiles(
   const byId = new Map<string, Article>();
   for (const article of manual) byId.set(article.id, article);
   for (const article of perSource.flat()) byId.set(article.id, article);
-  return filterExcluded([...byId.values()], excluded).sort(
+  return filterExcluded([...byId.values()], excluded).toSorted(
     (a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt),
   );
 }

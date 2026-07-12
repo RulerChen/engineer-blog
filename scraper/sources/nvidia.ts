@@ -15,7 +15,7 @@ import type { Source } from "../src/types.js";
  * entries spanning 2026-04-24 through 2026-07-10 at capture time. Atom
  * `<category>` elements aren't picked up by the shared RSS parser's
  * `item.categories` field for this feed, and entries carry no RSS
- * `enclosure`, so tags/thumbnail come back empty.
+ * `enclosure`, so tags come back empty.
  *
  * `developer.nvidia.com/blog/page/2/` etc. look like a paginated archive
  * (`<link rel="next">` in `<head>`, standard WordPress pagination), but the

@@ -18,9 +18,7 @@ import type { Source } from "../src/types.js";
  * the present. The feed doesn't paginate (`?page=2` returns the same 100
  * items), so this is also the deepest history available anywhere on the
  * site; `backfill` reuses the same feed fetch rather than a separate archive
- * scraper. Items carry no `<category>`; thumbnails are served via
- * `<media:thumbnail>`, which the shared RSS parser doesn't read, so
- * `thumbnail` is always `null`.
+ * scraper. Items carry no `<category>`.
  */
 export const deepmind: Source = {
   id: "deepmind",

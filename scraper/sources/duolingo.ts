@@ -35,14 +35,12 @@ import type { Article, Source } from "../src/types.js";
  * - The hero post: `section.heroSection.desktop-view` (a duplicate
  *   `.mobile-view` hero repeats the same post without a date, so only the
  *   desktop variant is used). Title is the `<h1>`'s enclosing `<a>`; date is
- *   `time[datetime]` (ISO `YYYY-MM-DD`); summary is `.hero--description p`;
- *   thumbnail is the `<img>` in `.hero-content--right`.
+ *   `time[datetime]` (ISO `YYYY-MM-DD`); summary is `.hero--description p`.
  * - Each of the three "featured card" posts: `div.featured-card`. The title
  *   link is the direct-child `<a>` of `.feature-card--content` (the other
  *   `<a>` there, for the author, sits nested inside `.caption-wrap` and is
- *   excluded by the child combinator); date is `time[datetime]`; thumbnail is
- *   the `<img>` inside `.feature-card--image`. These cards carry no excerpt
- *   text in the markup, so `summary` is left empty.
+ *   excluded by the child combinator); date is `time[datetime]`. These cards
+ *   carry no excerpt text in the markup, so `summary` is left empty.
  * - No per-post category data is present in the markup (only the implicit
  *   page-level "Engineering" tag), so every article is tagged `["Engineering"]`.
  */
@@ -57,7 +55,6 @@ export function parseDuolingoArchivePage(html: string, pageUrl: string): Archive
     title: string,
     dateText: string | undefined,
     summaryHtml: string,
-    thumbnail: string | null | undefined,
   ) => {
     if (!href || !title) return;
     const absolute = new URL(href, pageUrl).toString();
@@ -71,7 +68,6 @@ export function parseDuolingoArchivePage(html: string, pageUrl: string): Archive
       publishedAt,
       tags: resolveTags(["Engineering"], "duolingo"),
       summary: summarize(summaryHtml),
-      thumbnail: thumbnail ?? null,
       fetchedAt,
     });
   };
@@ -85,7 +81,6 @@ export function parseDuolingoArchivePage(html: string, pageUrl: string): Archive
       titleEl.text().trim(),
       hero.find("time[datetime]").first().attr("datetime"),
       hero.find(".hero--description p").first().html() ?? "",
-      hero.find(".hero-content--right img").first().attr("src"),
     );
   }
 
@@ -93,13 +88,7 @@ export function parseDuolingoArchivePage(html: string, pageUrl: string): Archive
     const card = $(el);
     const link = card.find(".feature-card--content > a").first();
     const title = link.find("h3").first().text().trim();
-    addArticle(
-      link.attr("href"),
-      title,
-      card.find("time[datetime]").first().attr("datetime"),
-      "",
-      card.find(".feature-card--image img").first().attr("src"),
-    );
+    addArticle(link.attr("href"), title, card.find("time[datetime]").first().attr("datetime"), "");
   });
 
   return { articles, nextUrl: null };

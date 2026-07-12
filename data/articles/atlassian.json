@@ -7,7 +7,6 @@
     "publishedAt": "2026-07-08T17:46:44.000Z",
     "tags": [],
     "summary": "In Q4 FY26, Atlassian’s People Insights (PI) team stopped treating AI as a productivity add-on and committed to something harder: fully agentifying its operations.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/02/rovo-at-work-ai-agents-in-action-hero-1120x545@2x-300x146.png",
     "fetchedAt": "2026-07-11T13:25:55.766Z"
   },
   {
@@ -18,7 +17,6 @@
     "publishedAt": "2026-06-30T05:40:55.000Z",
     "tags": [],
     "summary": "Adopting AI technology without an effective strategy is costing the Fortune 500 an estimated $161 billion a year.* Enterprises are making big investments in this space but are struggling to realise the returns. We know the technology is designed to make businesses more efficient, but we’re still…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/06/csd-26922-1200x627-a-300x157.png",
     "fetchedAt": "2026-07-11T13:25:55.766Z"
   },
   {
@@ -29,7 +27,6 @@
     "publishedAt": "2026-06-24T22:28:33.000Z",
     "tags": [],
     "summary": "Atlassian’s People Team believes the future will only be discovered through experimentation. These are their bets for the HR craft.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/06/blog_hero_img_avani_hr-beliefs_16x9@2x-1-300x169.png",
     "fetchedAt": "2026-07-11T13:25:55.766Z"
   },
   {
@@ -40,7 +37,6 @@
     "publishedAt": "2026-06-18T00:11:03.000Z",
     "tags": [],
     "summary": "Last December, when the Rovo hybrid orchestrator was introduced, a hierarchical multi-agent system was introduced, where specialized subagents last introduced, one for Jira, one for Confluence, one for Slack, and so on — each handled their own domain. The hybrid orchestrator would decompose a…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/06/ambient-pattern_atlassian_pictoral_cloud_primary_yelllow-3x_m646ns8g667bhppvg5t4qwm-customformat_0-300x169.jpg",
     "fetchedAt": "2026-07-11T13:25:55.766Z"
   },
   {
@@ -51,7 +47,6 @@
     "publishedAt": "2026-06-15T15:59:47.000Z",
     "tags": [],
     "summary": "We tested Google’s DESIGN.md format against our MCP server and AI skills to see where a single portable markdown file fits in your design system tooling. Here’s what we learned.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/06/designmd-300x146.jpg",
     "fetchedAt": "2026-07-11T13:25:55.766Z"
   },
   {
@@ -62,7 +57,6 @@
     "publishedAt": "2026-06-10T22:23:23.000Z",
     "tags": [],
     "summary": "A novel, enterprise-scale architecture for modular ML development, high-velocity experimentation, and embedded governance – powering thousands of production workflows that underpin AI systems serving millions of Rovo users globally. Introduction: Engineering for Speed, Scale, and Governance in…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/06/csd-27391-1120x545-2x-300x146.png",
     "fetchedAt": "2026-07-11T13:25:55.766Z"
   },
   {
@@ -73,7 +67,6 @@
     "publishedAt": "2026-06-01T16:17:35.000Z",
     "tags": [],
     "summary": "AI is moving fast, and Atlassian app teams are rolling out new features at a cracking pace! In a quest to make sure that UX content stayed top quality, our content design team created the Content Assistant: a helpful teammate powered by Atlassian’s Rovo. It quickly became one of the business’s…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/05/content-agent-300x146.jpg",
     "fetchedAt": "2026-07-11T13:25:55.766Z"
   },
   {
@@ -84,7 +77,6 @@
     "publishedAt": "2026-05-29T04:19:46.000Z",
     "tags": [],
     "summary": "AI use is accelerating across the modern enterprise. Teams are moving faster. The barrier to building will continue to drop. But the cost of building the wrong thing is about to skyrocket, because teams can now ship more of it, faster. Atlassian’s State of Teams 2026 report found that 89% of…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/12/ambient-pattern_atlassian_pictoral_automation-repeat_primary_lime@3x-300x173.png",
     "fetchedAt": "2026-07-11T13:25:55.766Z"
   },
   {
@@ -95,7 +87,6 @@
     "publishedAt": "2026-05-14T01:31:25.000Z",
     "tags": [],
     "summary": "As Jira Cloud grows to support larger and more complex customers, so does the configuration that powers their work: custom fields, work types (formerly issue types), screens, schemes, and workflows. Over time, many of these entities become unused or redundant. The result is configuration…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/abstract-combo-2-blue-300x169.png",
     "fetchedAt": "2026-07-11T13:25:55.766Z"
   },
   {
@@ -106,7 +97,6 @@
     "publishedAt": "2026-05-06T18:26:51.000Z",
     "tags": [],
     "summary": "Over the past few decades in the technology industry, some of the biggest constraints to building products have been about having enough engineers, time, or compute. For the first time, that era is ending. Tech teams are experiencing a revolution unlike anything they’ve seen before. The barriers to…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/ai-talks_tamar-gamma_blog-hero_1920x1080-300x169.png",
     "fetchedAt": "2026-07-11T13:25:55.766Z"
   },
   {
@@ -117,7 +107,6 @@
     "publishedAt": "2026-04-29T23:37:48.000Z",
     "tags": [],
     "summary": "A year ago, my workflow looked very different. When a design problem opened up, I explored it by hand. Multiple screens. Multiple flows. Sometimes two or three versions of the same interaction just to compare one subtle difference. Divergent ideas spread across endless pages and files. The work…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/control-panels-1-300x146.png",
     "fetchedAt": "2026-07-11T13:25:55.766Z"
   },
   {
@@ -128,7 +117,6 @@
     "publishedAt": "2026-04-29T23:33:38.000Z",
     "tags": [],
     "summary": "Everyone is shipping AI products now, and most look impressive in demos but fail in the messy reality of daily work. The problem often isn’t the model; it’s the product built around it. In this article, I’ll share what I’ve learned building AI products in environments where trust isn’t optional,…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/heroimage-option-1-300x146.png",
     "fetchedAt": "2026-07-11T13:25:55.766Z"
   },
   {
@@ -139,7 +127,6 @@
     "publishedAt": "2026-04-29T21:47:25.000Z",
     "tags": [],
     "summary": "At Atlassian, we use Merge Queues to ship frequent changes with confidence and streamline pull request merges. Across some of our busiest codebases, Merge Queues have sharply reduced incident frequency and turned merging from a stressful bottleneck into a background task. Today, most of our largest…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/bitbucket_merge_queues-1-300x169.png",
     "fetchedAt": "2026-07-11T13:25:55.766Z"
   },
   {
@@ -150,7 +137,6 @@
     "publishedAt": "2026-04-27T15:42:37.000Z",
     "tags": [],
     "summary": "At Atlassian, a new kind of role is collapsing the gap between idea and reality and changing how quickly teams can move from ‘what if’ to ‘here it is.’",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/dtscreativitytocode-300x146.jpg",
     "fetchedAt": "2026-07-11T13:25:55.766Z"
   },
   {
@@ -161,7 +147,6 @@
     "publishedAt": "2026-04-16T01:52:39.000Z",
     "tags": [],
     "summary": "Over the past two years the Confluence team has spent a significant amount of time investing into improving performance – halving the 90th percentile latency for completing page loads…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/06/csd-9865-confluence-admin-blog-300x146.png",
     "fetchedAt": "2026-07-11T13:25:55.766Z"
   },
   {
@@ -172,7 +157,6 @@
     "publishedAt": "2026-04-13T19:30:00.000Z",
     "tags": [],
     "summary": "At Atlassian, we are often asked how we are adapting internally to AI and transforming our R&D organization to be AI native. One lever we have used successfully is an event we call AI Builders Week. Each quarter, we bring together hundreds of product managers and designers to learn new AI skills…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/ai-builder_behind-scenes_1920x1080-300x169.png",
     "fetchedAt": "2026-07-11T13:25:58.266Z"
   },
   {
@@ -183,7 +167,6 @@
     "publishedAt": "2026-04-13T00:56:18.000Z",
     "tags": [],
     "summary": "Introduction Forge is Atlassian’s cloud app development platform. It’s a serverless, Atlassian-hosted environment that allows developers to extend products like Jira and Confluence, and it powers thousands of apps running inside customer organizations. As Forge grew, we introduced usage-based…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/atl-25-01_dev-template-blogbanner_updates-20250723-153320-300x146.png",
     "fetchedAt": "2026-07-11T13:25:58.266Z"
   },
   {
@@ -194,7 +177,6 @@
     "publishedAt": "2026-04-06T17:06:32.000Z",
     "tags": [],
     "summary": "Learn how Rovo’s collaborative AI canvas was engineered—unifying streaming, structure, and agent-powered workflows to build smarter content creation features.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/fy26-sil-engblog-37-1120x545_@2x-1560x760-1-300x146.png",
     "fetchedAt": "2026-07-11T13:25:58.266Z"
   },
   {
@@ -205,7 +187,6 @@
     "publishedAt": "2026-03-16T20:30:00.000Z",
     "tags": [],
     "summary": "Rovo brings meaning‑aware search, chat, and agents to Jira, Confluence, and your connected tools, so teams can quickly find the right artifacts and move forward with confidence. Instead of forcing you to remember exact titles or ticket IDs, Rovo focuses on what you mean. This makes all the…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/itsm-grid-purple-300x169.png",
     "fetchedAt": "2026-07-11T13:25:58.266Z"
   },
   {
@@ -216,7 +197,6 @@
     "publishedAt": "2026-03-09T23:34:19.000Z",
     "tags": [],
     "summary": "After a year of our users leveraging Rovo’s AI capabilities within Jira, we analysed usage data to identify if and how users’ productivity had been impacted. We found that users who adopted Rovo’s AI capabilities within Jira started work 30% faster and ultimately get an extra day of productivity…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/ado-dots-purple-300x169.png",
     "fetchedAt": "2026-07-11T13:25:58.266Z"
   },
   {
@@ -227,7 +207,6 @@
     "publishedAt": "2026-03-05T22:10:43.000Z",
     "tags": [],
     "summary": "2025 was an impactful year for Bitbucket Cloud. As we enter 2026, Bitbucket will be continuing this momentum by making architectural improvements aimed at two goals: improving scalability and resiliency, and laying the foundation for Bitbucket Cloud data residency, starting with the European Union…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/ado-line-saffron-300x169.png",
     "fetchedAt": "2026-07-11T13:25:58.266Z"
   },
   {
@@ -238,7 +217,6 @@
     "publishedAt": "2026-02-20T02:10:07.000Z",
     "tags": [],
     "summary": "In a huge, multi-tenant product like Jira Cloud, a “small” change anywhere in the system can quietly make life harder for some of our biggest customers, long before our global metrics show a problem. Feature flags, gradual rollouts, and tenant-specific data and traffic shapes mean these regressions…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/02/fy26-sil-engblog-50-1120x545_@2x-1-300x146.png",
     "fetchedAt": "2026-07-11T13:25:58.266Z"
   },
   {
@@ -249,7 +227,6 @@
     "publishedAt": "2025-12-15T23:55:10.000Z",
     "tags": [],
     "summary": "Introduction: Jira Cloud is undergoing a substantial rearchitecture, moving its foundation to a cloud‑native, multi‑tenant platform built for massive scale, speed, and reliability. In this post, we’ll take you behind the scenes on why we’re making these changes, the architectural principles guiding…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/12/fy26-sil-engblog-48_1120x545_@2x-300x146.png",
     "fetchedAt": "2026-07-11T13:25:58.266Z"
   },
   {
@@ -260,7 +237,6 @@
     "publishedAt": "2025-12-15T23:50:48.000Z",
     "tags": [],
     "summary": "Accessibility isn’t a separate track of design; it defines its quality. That’s why accessibility is integrated into the Atlassian Design System at every level: to ensure our apps work for everyone by default. With accessibility treated as part of our design craft rather than a compliance checkbox,…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/12/accessible-design-is-good-design-300x146.png",
     "fetchedAt": "2026-07-11T13:25:58.266Z"
   },
   {
@@ -271,7 +247,6 @@
     "publishedAt": "2025-12-15T17:42:36.000Z",
     "tags": [],
     "summary": "Establishing progressive deployments to control blast radius for the most active types of changes in an architecture is often well worth the investment. But what about those less frequent, or sometimes obscure changes? Learn how Atlassian used the rich integration ecosystem available in Bitbucket…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/12/ambient-pattern_atlassian_pictoral_automation-repeat_primary_blue@3x-300x173.png",
     "fetchedAt": "2026-07-11T13:25:58.266Z"
   },
   {
@@ -282,7 +257,6 @@
     "publishedAt": "2025-12-15T17:41:30.000Z",
     "tags": [],
     "summary": "Atlassian built a unified customer data lake to overcome limitations in analytics, data export, and operational database strain as their cloud customer base grew. By adopting a logical replication and data mesh approach, they enabled real-time analytics, secure data exports, and scalable dashboards…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/12/csd-22910_fy26-other-data-lake-diagram-1120x545_@2x-300x146.png",
     "fetchedAt": "2026-07-11T13:25:58.266Z"
   },
   {
@@ -293,7 +267,6 @@
     "publishedAt": "2025-12-09T23:26:03.000Z",
     "tags": [],
     "summary": "Mobbing with AI is a tight loop where the mob designs the work, sets standards, and reviews everything, while AI accelerates execution with fast drafts, tests, and options. Together they iterate in small cycles, capture learnings, and update specs so the AI keeps improving at “how this team works,”…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/12/fy26-sil-engblog-44_1120x545_@2x-300x146.png",
     "fetchedAt": "2026-07-11T13:25:58.266Z"
   },
   {
@@ -304,7 +277,6 @@
     "publishedAt": "2025-12-09T20:47:05.000Z",
     "tags": [],
     "summary": "At Atlassian, play is often where the real ideas begin. Earlier this year, during our ShipIt hackathon (where Atlassians drop everything to build bold new ideas), a simple sketch I received sparked something unexpected: Whiteboard’s very first easter egg. What began as a tiny racing experiment…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/12/f1-header-300x145.png",
     "fetchedAt": "2026-07-11T13:25:58.266Z"
   },
   {
@@ -315,7 +287,6 @@
     "publishedAt": "2025-12-08T23:10:45.000Z",
     "tags": [],
     "summary": "Flaky tests erode trust in CI and waste thousands of engineering hours. This article explains how Atlassian built Flakinator, a scalable, stack‑agnostic platform that automatically detects, quarantines, and manages flaky tests across millions of daily executions.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/abstract-combo-1-neutral-300x169.png",
     "fetchedAt": "2026-07-11T13:25:58.266Z"
   },
   {
@@ -326,7 +297,6 @@
     "publishedAt": "2025-12-04T00:34:44.000Z",
     "tags": [],
     "summary": "Rovo Dev CLI combines powerful AI with mutation testing tools like Pitest to automatically write high‑quality tests, improve mutation coverage, and raise PRs for you.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/12/fy26-sil-engblog-43-1120x545_@2x-300x146.png",
     "fetchedAt": "2026-07-11T13:25:58.266Z"
   },
   {
@@ -337,7 +307,6 @@
     "publishedAt": "2025-12-01T17:50:07.000Z",
     "tags": [],
     "summary": "Discover how we built Race Mode, a mini-game in Confluence whiteboards, combining play, performance, and fun for teams.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/11/image-20251124-140652-300x146.png",
     "fetchedAt": "2026-07-11T13:26:00.832Z"
   },
   {
@@ -348,7 +317,6 @@
     "publishedAt": "2025-11-26T19:17:23.000Z",
     "tags": [],
     "summary": "Design is changing, and so are our tools. At Atlassian, we’re bringing AI into design and engineering with purpose. Early on, we doubted it could meet our design‑system standards; we’ve since learned it can when grounded in collaboration, efficiency, and craft. AI reduces inefficiencies and…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/11/ai-tooling-1.5.6-4-2-300x145.png",
     "fetchedAt": "2026-07-11T13:26:00.832Z"
   },
   {
@@ -359,7 +327,6 @@
     "publishedAt": "2025-11-24T23:20:46.000Z",
     "tags": [],
     "summary": "Explore how Atlassian’s JSM Virtual Agent uses AI to automate customer support, streamline chat workflows, and deliver faster, more accurate resolutions for teams worldwide.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/security-saffron-300x169.png",
     "fetchedAt": "2026-07-11T13:26:00.832Z"
   },
   {
@@ -370,7 +337,6 @@
     "publishedAt": "2025-11-20T20:20:07.000Z",
     "tags": [],
     "summary": "Atlassian’s CPR program untangled complex service dependencies, boosting platform reliability and recoverability. By simplifying architecture and fostering a culture of dependency awareness, CPR strengthened Atlassian’s cloud resilience.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/11/fy26-sil-engblog-38-1120x545_@2x-300x146.png",
     "fetchedAt": "2026-07-11T13:26:00.832Z"
   },
   {
@@ -381,7 +347,6 @@
     "publishedAt": "2025-11-10T23:28:59.000Z",
     "tags": [],
     "summary": "Rovo Dev flags 2.8× more bugs and 1.4× more maintainability issues than humans, helping Atlassian teams resolve the code review comments that matter most and ship quality code faster.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/11/fy26-sil-engblog-39-1120x545_@2x-300x146.png",
     "fetchedAt": "2026-07-11T13:26:00.832Z"
   },
   {
@@ -392,7 +357,6 @@
     "publishedAt": "2025-11-06T18:00:00.000Z",
     "tags": [],
     "summary": "Harness Atlassian’s platform to build, deliver, and monetize AI-native solutions—with tools to create powerful solutions only possible in the Atlassian Ecosystem.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/11/blog-post-image-why-build-on-atlassian-300x162.png",
     "fetchedAt": "2026-07-11T13:26:00.832Z"
   },
   {
@@ -403,7 +367,6 @@
     "publishedAt": "2025-11-04T17:24:44.000Z",
     "tags": [],
     "summary": "Discover how Atlassian migrated over 3,000 Jira and Confluence instances to AWS Graviton, boosting performance and efficiency at scale.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/11/fy26-sil-engblog-40-1120x545_@2x-300x146.png",
     "fetchedAt": "2026-07-11T13:26:00.832Z"
   },
   {
@@ -414,7 +377,6 @@
     "publishedAt": "2025-10-28T21:35:03.000Z",
     "tags": [],
     "summary": "Discover how Ford Motor Company empowers its people and drives continuous improvement by applying data-driven insights and automation with Atlassian Cloud Enterprise. Learn how a 120-year legacy brand is transforming its culture and operations through connected teams and actionable analytics.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/10/pnews-blog-hero-%E2%80%94-ford-illustration-1200-x-675-px-300x169.png",
     "fetchedAt": "2026-07-11T13:26:00.832Z"
   },
   {
@@ -425,7 +387,6 @@
     "publishedAt": "2025-10-01T16:18:56.000Z",
     "tags": [],
     "summary": "DevMate is Atlassian’s in-house CLI tool that slashes React Native build times and automates environment setup—making development faster, smoother, and more consistent for our teams.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/09/fy26-sil-engblog-35-1120x545_@2x-300x146.png",
     "fetchedAt": "2026-07-11T13:26:00.832Z"
   },
   {
@@ -436,7 +397,6 @@
     "publishedAt": "2025-09-09T16:57:30.000Z",
     "tags": [],
     "summary": "Explore Atlassian’s modern icon system and the design journey behind its evolution.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/09/behind-the-screens-300x146.png",
     "fetchedAt": "2026-07-11T13:26:00.832Z"
   },
   {
@@ -447,7 +407,6 @@
     "publishedAt": "2025-08-25T23:22:58.000Z",
     "tags": [],
     "summary": "Atlassian is enhancing coding agents by using machine learning to identify well-scoped Jira work items and provide relevant code context, making AI-powered development faster, smarter, and more reliable for software teams.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/08/fy26-sil-engblog-30-1120x545_@2x-300x146.png",
     "fetchedAt": "2026-07-11T13:26:00.832Z"
   },
   {
@@ -458,7 +417,6 @@
     "publishedAt": "2025-08-25T23:22:23.000Z",
     "tags": [],
     "summary": "Atlassian’s ML-based comment ranker filters LLM code review comments, boosting quality and efficiency with proprietary data.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/08/fy26-sil-engblog-31-1120x545_@2x-300x146.png",
     "fetchedAt": "2026-07-11T13:26:00.832Z"
   },
   {
@@ -469,7 +427,6 @@
     "publishedAt": "2025-08-22T18:05:39.000Z",
     "tags": [],
     "summary": "LLMs represent a rapidly advancing area of technology, with various foundation model providers competing to build the leading solution. Like any technology, the differing models often have a spectrum of their own strengths and weaknesses. Atlassian currently partners with an array of leading…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/08/1120x545-300x146.png",
     "fetchedAt": "2026-07-11T13:26:00.832Z"
   },
   {
@@ -480,7 +437,6 @@
     "publishedAt": "2025-08-14T19:20:11.000Z",
     "tags": [],
     "summary": "A practical guide to planning, running, and applying content design research.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/08/header-image-1125x545-1-1-300x146.png",
     "fetchedAt": "2026-07-11T13:26:00.832Z"
   },
   {
@@ -491,7 +447,6 @@
     "publishedAt": "2025-07-30T20:58:01.000Z",
     "tags": [],
     "summary": "Speech editing at Loom lets users update parts of their video instantly, without re-recording. Powered by advanced AI, this technology enables seamless, high-quality edits—like swapping names or company details in your own voice—making video creation faster, more flexible, and highly personalized.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/07/csd-18766_engineeringblogfy25hero_engblog-28_1200x627-300x157.jpg",
     "fetchedAt": "2026-07-11T13:26:00.832Z"
   },
   {
@@ -502,7 +457,6 @@
     "publishedAt": "2025-07-22T17:00:00.000Z",
     "tags": [],
     "summary": "Future-thinking German insurer BarmeniaGothaer brings together thousands of employees on Atlassian’s tools to deliver even more value for policyholders",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/07/csd-20051-fy26-cm-barmenia-gotaher-headshot-collage_1129x545@2x-300x145.png",
     "fetchedAt": "2026-07-11T13:26:04.283Z"
   },
   {
@@ -513,7 +467,6 @@
     "publishedAt": "2025-07-22T17:00:00.000Z",
     "tags": [],
     "summary": "Powering Enterprise-scale AI As Atlassian’s AI capabilities continue to scale rapidly across multiple products, a pressing challenge emerged: how do we deliver world-class AI-powered solutions to millions of users without compromising on latency, flexibility, and operational control? The answer:…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/07/blog_1120x545@2x-300x146.png",
     "fetchedAt": "2026-07-11T13:26:04.283Z"
   },
   {
@@ -524,7 +477,6 @@
     "publishedAt": "2025-07-02T00:07:43.000Z",
     "tags": [],
     "summary": "Discover how Atlassian migrated four million Jira databases to AWS Aurora—at scale and with minimal user impact. Learn about the technical challenges, strategies, and outcomes that enabled this ambitious transformation in reliability, performance, and cost efficiency",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/07/engblog-29_540x256-300x142.png",
     "fetchedAt": "2026-07-11T13:26:04.283Z"
   },
   {
@@ -535,7 +487,6 @@
     "publishedAt": "2025-06-26T16:33:07.000Z",
     "tags": [],
     "summary": "Removing JavaScript barrel files from our Jira frontend codebase led to a 75% reduction in build times, with significantly faster TypeScript highlighting and unit testing. This large-scale automated change also improved CI efficiency and made code navigation much clearer for developers.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/06/atlassian_pictorial_automation-text-repeat_tint_yellow-3x_qvmkq6nnb54hkmgmqspvnwhp-300x173.png",
     "fetchedAt": "2026-07-11T13:26:04.283Z"
   },
   {
@@ -546,7 +497,6 @@
     "publishedAt": "2025-06-11T16:37:14.000Z",
     "tags": [],
     "summary": "Admission control in OpenSearch helps keep clusters stable by limiting incoming requests when nodes are under heavy load. Atlassian saw improved search reliability after enabling this feature, especially during traffic spikes.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/06/engineering-blog-fy25-hero-image-engblog-21-1200x628-1-300x157.png",
     "fetchedAt": "2026-07-11T13:26:04.283Z"
   },
   {
@@ -557,7 +507,6 @@
     "publishedAt": "2025-05-23T16:00:00.000Z",
     "tags": [],
     "summary": "We get it, learning a new development platform takes time. Reading docs is one thing, but actually building something? That’s where the real learning happens. That’s why we launched Forge Quest, a self-guided coding challenge designed to help developers level up their Forge skills by doing…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/05/csd-17441-blog-01-intro-to-forge-quest@2x-300x146.png",
     "fetchedAt": "2026-07-11T13:26:04.283Z"
   },
   {
@@ -568,7 +517,6 @@
     "publishedAt": "2025-05-01T17:32:13.000Z",
     "tags": [],
     "summary": "Atlassian’s SBOM platform generates detailed software inventories for compliance and security, using tools like Syft and cdxgen.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/04/engblog-17_1200x627-300x157.png",
     "fetchedAt": "2026-07-11T13:26:04.283Z"
   },
   {
@@ -579,7 +527,6 @@
     "publishedAt": "2025-04-23T23:33:08.000Z",
     "tags": [],
     "summary": "Atlassian’s HULA framework automates repetitive coding tasks, boosting developer efficiency while keeping engineers in control. Recognized by ICSE 2025, HULA is shaping the future of AI-assisted development.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/04/csd-15753_engineeringblog_fy25_hero_announcement_1200x627-300x157.png",
     "fetchedAt": "2026-07-11T13:26:04.283Z"
   },
   {
@@ -590,7 +537,6 @@
     "publishedAt": "2025-04-17T22:24:39.000Z",
     "tags": [],
     "summary": "Migrating Jira cloud instances involves three steps: exporting data, transforming it, and importing it into a new instance. This process, aided by Atlassian tools, ensures data integrity and minimizes disruption, especially useful for consolidating accounts or moving specific projects.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/04/csd-17177_engineeringblogfy25hero_engblog-20_1200x627-300x157.png",
     "fetchedAt": "2026-07-11T13:26:04.283Z"
   },
   {
@@ -601,7 +547,6 @@
     "publishedAt": "2025-04-10T21:45:00.000Z",
     "tags": [],
     "summary": "Meet Atlassian’s bold new typefaces and discover the journey that brought them to life.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/04/typograhy-header-300x136.png",
     "fetchedAt": "2026-07-11T13:26:04.283Z"
   },
   {
@@ -612,7 +557,6 @@
     "publishedAt": "2025-02-28T17:47:31.000Z",
     "tags": [],
     "summary": "Content designers aren’t just considering the user experience anymore. They’re shaping the product itself.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/02/final-4-2-300x146.png",
     "fetchedAt": "2026-07-11T13:26:04.283Z"
   },
   {
@@ -623,7 +567,6 @@
     "publishedAt": "2025-02-28T17:46:07.000Z",
     "tags": [],
     "summary": "Because content design is a craft that is both new and somewhat misunderstood cross-functionally, content designers can often feel like the delightfully odd weirdo in the triad meeting.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/02/fs2s_header-1-300x150.jpg",
     "fetchedAt": "2026-07-11T13:26:04.283Z"
   },
   {
@@ -634,7 +577,6 @@
     "publishedAt": "2025-02-28T17:21:56.000Z",
     "tags": [],
     "summary": "Introduction Organizations use multiple project management tools to track work, leading to fragmentation, collaboration barriers, increased complexity, and higher costs. As organizations face macroeconomic challenges, there’s a push to consolidate work into fewer project management tools to…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/02/engineeringblog-fy25-engblog-6-1200x627-2x-300x157.png",
     "fetchedAt": "2026-07-11T13:26:04.283Z"
   },
   {
@@ -645,7 +587,6 @@
     "publishedAt": "2025-02-14T00:43:26.000Z",
     "tags": [],
     "summary": "Introduction Bitbucket Cloud is a Git-based code hosting and collaboration solution. It serves both HTTPS and SSH traffic over the internet. Our engineering team recently completed a major architectural update of Bitbucket’s public facing Edge load balancing and proxy solution. Licensing and…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/02/engineeringblog_fy25-engblog-8_1200x627_@2x-300x157.png",
     "fetchedAt": "2026-07-11T13:26:04.283Z"
   },
   {
@@ -656,7 +597,6 @@
     "publishedAt": "2025-01-31T22:46:14.000Z",
     "tags": [],
     "summary": "Discover how we tackled the challenge of creating a unified navigation system that simplifies cross-product experiences and works for all teams.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/01/image-20250117-195256-300x146.png",
     "fetchedAt": "2026-07-11T13:26:04.283Z"
   },
   {
@@ -667,7 +607,6 @@
     "publishedAt": "2025-01-30T23:58:39.000Z",
     "tags": [],
     "summary": "Introduction Rovo Chat is an AI-powered assistant designed to boost productivity and unlock creativity through a simple chat interface. By leveraging a mix of advanced Large Language Models (LLMs) such as GPT, Claude, Gemini, Mistral, and LLaMA, Rovo Chat transforms the way enterprises interact…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2025/01/csd-15754_engineeringblog_fy25_hero-engblog-9-300x157.png",
     "fetchedAt": "2026-07-11T13:26:06.332Z"
   },
   {
@@ -678,7 +617,6 @@
     "publishedAt": "2025-01-15T00:54:07.000Z",
     "tags": [],
     "summary": "By migrating to Atlassian Cloud, Riverty boosts productivity and innovation across technical and non-technical teams with cutting-edge Cloud-only products.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/07/csd-12227-riverty-cloud-webinar-1120x545-1-300x146.png",
     "fetchedAt": "2026-07-11T13:26:06.332Z"
   },
   {
@@ -689,7 +627,6 @@
     "publishedAt": "2025-01-15T00:48:58.000Z",
     "tags": [],
     "summary": "Atlassian Announces Local Data Residency Program",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/05/csd-11051_blog-header_1120x545-2x-300x146.png",
     "fetchedAt": "2026-07-11T13:26:06.332Z"
   },
   {
@@ -700,7 +637,6 @@
     "publishedAt": "2024-12-18T00:12:00.000Z",
     "tags": [],
     "summary": "Adapting to Change: How Key Trends in Data, AI, and Design-Led Innovation Will Shape the Future of Products",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/abstract-line-2-blue-300x169.png",
     "fetchedAt": "2026-07-11T13:26:06.332Z"
   },
   {
@@ -711,7 +647,6 @@
     "publishedAt": "2024-12-17T23:50:57.000Z",
     "tags": [],
     "summary": "Journey through the design process of Atlassian’s new navigation",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/12/image-20241217-230415-300x146.png",
     "fetchedAt": "2026-07-11T13:26:06.332Z"
   },
   {
@@ -722,7 +657,6 @@
     "publishedAt": "2024-12-17T21:06:39.000Z",
     "tags": [],
     "summary": "Learn how user insights and data helped transform Smart Values into a game-changing feature at Atlassian.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/12/image-20241218-010617-300x146.png",
     "fetchedAt": "2026-07-11T13:26:06.332Z"
   },
   {
@@ -733,7 +667,6 @@
     "publishedAt": "2024-12-17T18:54:15.000Z",
     "tags": [],
     "summary": "How Atlassian streamlined drag-and-drop interactions with a modular, high-performance solution, delivering visual consistency, accessibility, and delight across products.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/12/pragmatic-drag-and-drop-2-20241218-005023-300x146.png",
     "fetchedAt": "2026-07-11T13:26:06.332Z"
   },
   {
@@ -744,7 +677,6 @@
     "publishedAt": "2024-11-22T20:00:00.000Z",
     "tags": [],
     "summary": "At Atlassian, there are many situations we need to move large amounts of data between different systems – validating and transforming them in-flight. What is unique about Atlassian’s use cases is that several require data pipelines to be entirely provisioned at run time. Normally, we’d consider…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/11/engineering_blog_1120x545-1-300x146.png",
     "fetchedAt": "2026-07-11T13:26:06.332Z"
   },
   {
@@ -755,7 +687,6 @@
     "publishedAt": "2024-11-01T16:00:00.000Z",
     "tags": [],
     "summary": "Over the last few years, Software Supply Chain Security has rapidly emerged as a critical aspect in the software development lifecycle, ensuring compliance, enhancing security measures, and building trust with customers. As Atlassian relies on a myriad of first and third-party sources/artifacts,…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/abstract-line-1-neutral-300x169.png",
     "fetchedAt": "2026-07-11T13:26:06.332Z"
   },
   {
@@ -766,7 +697,6 @@
     "publishedAt": "2024-10-28T18:12:53.000Z",
     "tags": [],
     "summary": "Scaling is a nice problem to have. It usually means your product is successful and there is more demand than you can offer. Scaling is a challenging problem to have. It usually means that a beautiful design you implemented just recently no longer works and significant parts of your system may need…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/10/image-20240625-014502-300x141.png",
     "fetchedAt": "2026-07-11T13:26:06.332Z"
   },
   {
@@ -777,7 +707,6 @@
     "publishedAt": "2024-05-08T14:42:49.000Z",
     "tags": [],
     "summary": "At Atlassian, our internal data lake is regularly used by more than half of the company; grows in excess of 85 terabytes a day; and it powers both internal and customer facing experiences. Not bad for something that started as a ShipIt (a regular company wide innovation day) project . Part of the…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/image-29-300x284.png",
     "fetchedAt": "2026-07-11T13:26:06.332Z"
   },
   {
@@ -788,7 +717,6 @@
     "publishedAt": "2024-01-16T19:28:05.000Z",
     "tags": [],
     "summary": "What is Confluence automation? Confluence automation is an admin feature available in Confluence Premium and Enterprise that can help teams manage their content at scale. When admins create and enable automation rules, Confluence automation works behind the scenes to complete routine functions that…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/image-27-300x150.png",
     "fetchedAt": "2026-07-11T13:26:06.332Z"
   },
   {
@@ -799,7 +727,6 @@
     "publishedAt": "2023-11-13T13:39:41.000Z",
     "tags": [],
     "summary": "Atlassian is built on the power of teamwork and collaboration. One of our latest offerings in this vein is Confluence whiteboards. Unlike traditional blogs and pages in Confluence, whiteboards provide an infinite canvas for real-time collaboration, brainstorming, and diagramming. Providing a fluid…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/render-300x135.jpg",
     "fetchedAt": "2026-07-11T13:26:06.332Z"
   },
   {
@@ -810,7 +737,6 @@
     "publishedAt": "2023-08-11T03:00:00.000Z",
     "tags": [],
     "summary": "“It’s time to make coding fun again” Some of the best code I’ve ever seen was as a young developer at Microsoft working on the Windows NT operating system. I would finish my work for the day, then come back after dinner just to read the kernel. It was so well-written, it was like poetry. […]",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/hero-image-3-300x146.jpeg",
     "fetchedAt": "2026-07-11T13:26:06.332Z"
   },
   {
@@ -821,7 +747,6 @@
     "publishedAt": "2023-08-08T11:31:01.000Z",
     "tags": [],
     "summary": "At Atlassian we build software which unleashes the potential of all teams. As cross-disciplinary teams ourselves, we empathise with one key fact: work and collaboration is messy. Indeed: how often have you found yourself brainstorming ideas and immediately turning them into a perfect arrangement of…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/image-7-300x193.png",
     "fetchedAt": "2026-07-11T13:26:06.332Z"
   },
   {
@@ -832,7 +757,6 @@
     "publishedAt": "2023-06-23T10:39:00.000Z",
     "tags": [],
     "summary": "How Atlassian uses encryption at scale to protect your data, the challenges we faced on the way, and the technology we built to get us there.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:26:08.535Z"
   },
   {
@@ -843,7 +767,6 @@
     "publishedAt": "2022-11-18T07:48:18.000Z",
     "tags": [],
     "summary": "In July 2022, Atlassian implemented 1time, the company’s own multi-factor authentication (MFA) library with time-based one-time passwords (TOTP), moving away from a previous MFA provider. MFA allows Atlassian accounts to enhance their account security by providing a second factor besides their…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/image1-201x300.png",
     "fetchedAt": "2026-07-11T13:26:08.535Z"
   },
   {
@@ -854,7 +777,6 @@
     "publishedAt": "2022-09-02T21:41:40.000Z",
     "tags": [],
     "summary": "In late 2021, we fully migrated Bitbucket Cloud from a data center to AWS to improve reliability, security, and performance. One of our focus areas in this massive project was migrating complex CI/CD (Continuous Integration / Continuous Delivery) workflows to Bitbucket Pipelines. We wanted to…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/software-analytics-1-1-300x128.png",
     "fetchedAt": "2026-07-11T13:26:08.535Z"
   },
   {
@@ -865,7 +787,6 @@
     "publishedAt": "2022-08-18T03:47:59.000Z",
     "tags": [],
     "summary": "In 2019, we wrote about Tenant Context Service (TCS), a critical infrastructure service at Atlassian which is called multiple times in the path of every web request for the majority of our cloud products. Since then, the TCS team has worked on many improvements to our client sidecar (a sidecar is a…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/image-1-3-300x146.png",
     "fetchedAt": "2026-07-11T13:26:08.535Z"
   },
   {
@@ -876,7 +797,6 @@
     "publishedAt": "2022-07-29T06:14:03.000Z",
     "tags": [],
     "summary": "Recently, the Trello engineering team fixed a React bug where Trello’s date picker wouldn’t render correctly. When some customers tried to edit the date on a Trello card, they’d only see a blank popover. At first, no one on the team was able to reproduce the bug or anything similar to it. The…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/screen-shot-2022-07-13-at-1.39.36-pm-1-300x116.png",
     "fetchedAt": "2026-07-11T13:26:08.535Z"
   },
   {
@@ -887,7 +807,6 @@
     "publishedAt": "2022-07-12T02:06:56.000Z",
     "tags": [],
     "summary": "The Trello engineering, design, and product teams recently created new colorful and accessible board themes using CSS custom properties (also known as CSS variables). We began with the following questions: While applying a dark or light theme to an application is common, how can we build a fun,…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/image-1-1-300x232.png",
     "fetchedAt": "2026-07-11T13:26:08.535Z"
   },
   {
@@ -898,7 +817,6 @@
     "publishedAt": "2022-06-21T23:03:15.000Z",
     "tags": [],
     "summary": "Bitbucket Cloud is a Git based code hosting and collaboration tool that allows you to interact with your repositories over either HTTPS or SSH. The services that host each protocol share many common components and underlying infrastructure, but in the past, SSH has outperformed HTTPS when uploading…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/git-push-graph-1-1-300x144.png",
     "fetchedAt": "2026-07-11T13:26:08.535Z"
   },
   {
@@ -909,7 +827,6 @@
     "publishedAt": "2022-04-30T03:28:23.000Z",
     "tags": [],
     "summary": "This PIR is available in the following languages:日本語 Letter from our co-founders & co-CEOs We want to acknowledge the outage that disrupted service for customers earlier this month. We understand that our products are mission critical to your business, and we don’t take that responsibility lightly.…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/hot-pir-diagrams-and-visuals-final-1-2-300x169.png",
     "fetchedAt": "2026-07-11T13:26:08.535Z"
   },
   {
@@ -920,7 +837,6 @@
     "publishedAt": "2022-04-13T08:30:29.000Z",
     "tags": [],
     "summary": "As of Apr 18, 2022, 23:57 UTC, all customers impacted by the outage have been restored. On Monday, April 4th, 2022 PT approximately 400 Atlassian Cloud customers experienced a full outage across their Atlassian products. As of April 18th, 2022, we have now restored our customers impacted by the…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/blog-hero-customers1@2x-1-2048x997-1-1-300x146.png",
     "fetchedAt": "2026-07-11T13:26:08.535Z"
   },
   {
@@ -931,7 +847,6 @@
     "publishedAt": "2021-11-03T22:10:23.000Z",
     "tags": [],
     "summary": "A while back, we spoke about What does a Product Growth engineer work on? This was a great introduction to the world of Growth engineering and what we, engineers, do. This blog is going to look more into the details of how we do an experiment, using a real production example. We introduce the flow…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/017c9315-4219-4259-9986-8859a512ba4c-1-295x300.png",
     "fetchedAt": "2026-07-11T13:26:08.535Z"
   },
   {
@@ -942,7 +857,6 @@
     "publishedAt": "2021-10-21T22:00:00.000Z",
     "tags": [],
     "summary": "Over the last five years, Atlassian has gone through an incredible transformation. We began as a company that built on-premise software and grew to a cloud-first business with 15 million monthly active users hosted on our cloud products. Our cloud customers include enterprises with increasingly…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:26:08.535Z"
   },
   {
@@ -953,7 +867,6 @@
     "publishedAt": "2021-08-26T23:53:10.000Z",
     "tags": [],
     "summary": "The beginning of multi-region in cloud We have written before about our journey from our own data centres to utilising AWS. This migration of Jira and Confluence into AWS was only the start of our journey of evolving our architecture to a more cloud-native approach. In this blog, we want to talk…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/image-20210811-021246-1-300x253.png",
     "fetchedAt": "2026-07-11T13:26:08.535Z"
   },
   {
@@ -964,7 +877,6 @@
     "publishedAt": "2021-07-21T22:42:13.000Z",
     "tags": [],
     "summary": "We are happy to announce that Confluence Cloud Search is now powered by a new, scalable, and improved platform since August 2020. This has played an integral role in achieving our 10K goal (10k users per tenant), which went live on August 17, 2020. This blog describes more reasons for moving to the…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/screen-shot-2021-05-19-at-2.37.33-pm-1-300x143.png",
     "fetchedAt": "2026-07-11T13:26:08.535Z"
   },
   {
@@ -975,7 +887,6 @@
     "publishedAt": "2021-07-08T00:43:30.000Z",
     "tags": [],
     "summary": "Atlassian developers use Splunk as the primary tool to search for and analyze logs from applications, appliances, and platforms. As Atlassian grows and introduces new features and services to our customers, the volume of telemetry data, including logs shipped to our Observability data sinks like…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/splunk-usage1-1-300x118.png",
     "fetchedAt": "2026-07-11T13:26:08.535Z"
   },
   {
@@ -986,7 +897,6 @@
     "publishedAt": "2021-06-15T02:16:29.000Z",
     "tags": [],
     "summary": "Atlassian’s mission is to unleash the potential in every team. Our products help teams organize, discuss, and complete their work.​ Atlassian offers products and services such as Jira, Confluence, Trello, and Bitbucket. The products we build at Atlassian have hundreds of developers working on them,…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/4f5c2f52-614a-4afa-b5e3-54ee7bcf187f-1-300x138.png",
     "fetchedAt": "2026-07-11T13:26:08.535Z"
   },
   {
@@ -997,7 +907,6 @@
     "publishedAt": "2021-06-02T22:00:00.000Z",
     "tags": [],
     "summary": "At Atlassian, we’ve found that the key ingredients to empower autonomous teams are ownership, trust, and a common language. We want every team to own our customers’ success. As opposed to a static command and control model, we start from a position of trust in every team and continually work…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/corp-670_promotional-assets-for-sri-s-engineering-blog_newsletter_628x528-300x252.png",
     "fetchedAt": "2026-07-11T13:26:11.074Z"
   },
   {
@@ -1008,7 +917,6 @@
     "publishedAt": "2021-04-12T23:00:00.000Z",
     "tags": [],
     "summary": "People. That is my leadership strategy – pure and simple. Find amazing people. Give them tools, frameworks, teammates, autonomy, and a mission. Do everything in my power to help them do their best work. Over the last five years, we’ve done just that – created an amazing engineering team to help…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/db729202-466c-4870-a50d-98581de69180-1-300x270.png",
     "fetchedAt": "2026-07-11T13:26:11.074Z"
   },
   {
@@ -1019,7 +927,6 @@
     "publishedAt": "2021-02-02T11:40:14.000Z",
     "tags": [],
     "summary": "Jira Cloud poses some unique database scaling challenges, due to high query complexity causing high database load and slow queries. Queries run against the database are often highly repetitive and on the surface very cachable, but are not currently being cached. Horizontal scaling is the main…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/d8b36fab-981a-4d63-a7e8-75c99ed6e4bf-1-300x124.png",
     "fetchedAt": "2026-07-11T13:26:11.074Z"
   },
   {
@@ -1030,7 +937,6 @@
     "publishedAt": "2020-12-23T00:34:19.000Z",
     "tags": [],
     "summary": "This is the third and final blog in our series on our recent work reducing the amount of JavaScript downloaded from the Jira cloud front-end (Read part 1 and part 2). This blog describes the work that was done to create a Webpack plugin to de-duplicate transitive dependencies. We found that this…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/screen-shot-2020-04-26-at-1.56.22-pm-1-300x265.png",
     "fetchedAt": "2026-07-11T13:26:11.074Z"
   },
   {
@@ -1041,7 +947,6 @@
     "publishedAt": "2020-12-06T06:23:35.000Z",
     "tags": [],
     "summary": "This is the second blog in our three-part series covering some recent work in Jira cloud front-end to reduce the amount of JavaScript that’s downloaded when loading pages. Part 1 focused on the process of discovering and implementing a relatively small performance fix with a significant impact. In…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/image-20201008-045629-1-300x173.png",
     "fetchedAt": "2026-07-11T13:26:11.074Z"
   },
   {
@@ -1052,7 +957,6 @@
     "publishedAt": "2020-11-17T06:11:09.000Z",
     "tags": [],
     "summary": "At Atlassian, we are continuously working to improve the performance of Jira Cloud. This is something we’ve mentioned a number of times in the past: backend improvements found through profiling, changing serialization formats, introducing server-side rendering, and improving our React architecture.…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/fd5d4994-e711-4883-b0ae-7f207f2781db-1-300x207.jpeg",
     "fetchedAt": "2026-07-11T13:26:11.074Z"
   },
   {
@@ -1063,7 +967,6 @@
     "publishedAt": "2020-10-22T02:51:15.000Z",
     "tags": [],
     "summary": "This blog covers the journey of Confluence Cloud – the team workspace for collaboration and knowledge sharing used by thousands of companies – and how we aim to take it to the next level, with scale, performance, and resilience as the key motivators. Moving Confluence to a stateless multi-tenant…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/monolith2-3-1-300x237.png",
     "fetchedAt": "2026-07-11T13:26:11.074Z"
   },
   {
@@ -1074,7 +977,6 @@
     "publishedAt": "2020-10-08T09:32:48.000Z",
     "tags": [],
     "summary": "Bitbucket’s usage is growing Two services at the core of Bitbucket are gu-bb and gu-api, responsible for serving the Bitbucket website and our public REST API. These services are built on the Django web framework, serving millions of requests every hour. On average, each of these requests…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/database-diagram-1-300x252.png",
     "fetchedAt": "2026-07-11T13:26:11.074Z"
   },
   {
@@ -1085,7 +987,6 @@
     "publishedAt": "2020-07-25T02:42:58.000Z",
     "tags": [],
     "summary": "Getting features out the door and cleaning up significant architectural tech debt are not mutually exclusive",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/0f2d1593-dc9a-49be-8cf0-d70e7feaa05b-1-300x169.png",
     "fetchedAt": "2026-07-11T13:26:11.074Z"
   },
   {
@@ -1096,7 +997,6 @@
     "publishedAt": "2020-06-23T07:33:48.000Z",
     "tags": [],
     "summary": "A deep dive into React Resource Router and its impact on the Jira Cloud experience.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/data-center-lime-300x169.png",
     "fetchedAt": "2026-07-11T13:26:11.074Z"
   },
   {
@@ -1107,7 +1007,6 @@
     "publishedAt": "2020-06-10T07:15:22.000Z",
     "tags": [],
     "summary": "Many Bitbucket Server customers have development teams spread across the globe. Over the years, we’ve heard from many of them, asking us if we could speed up Git operations for their remote teams. In 2015, we gave customers this capability with Bitbucket Smart Mirrors. Smart Mirrors are a read-only…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/image_1-1-156x300.png",
     "fetchedAt": "2026-07-11T13:26:11.074Z"
   },
   {
@@ -1118,7 +1017,6 @@
     "publishedAt": "2020-05-21T16:00:00.000Z",
     "tags": [],
     "summary": "Atlassian has many different software development teams within our Engineering organization. Some teams focus on products such as Jira, Confluence, or Bitbucket. Many others work on platform-focused capabilities or infrastructure shared between products. In this blog post, we’re going to focus on…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/image-20200303-001521-1-300x163.png",
     "fetchedAt": "2026-07-11T13:26:11.074Z"
   },
   {
@@ -1129,7 +1027,6 @@
     "publishedAt": "2020-05-13T02:33:16.000Z",
     "tags": [],
     "summary": "Insights and advice from Atlassian software engineering leaders.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/atlassian-tech-leaders-1-300x105.png",
     "fetchedAt": "2026-07-11T13:26:11.074Z"
   },
   {
@@ -1140,7 +1037,6 @@
     "publishedAt": "2020-04-24T07:21:28.000Z",
     "tags": [],
     "summary": "Atlassian’s mission is to help unleash the potential of every team, and a critical part of that is to create a world-class cloud platform that can support the needs of our largest customers. For Jira, this means supporting massive numbers of Issues in a single Jira site. A significant part of Jira…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/automation-repeat-neutral-300x169.png",
     "fetchedAt": "2026-07-11T13:26:11.074Z"
   },
   {
@@ -1151,7 +1047,6 @@
     "publishedAt": "2020-04-08T23:00:48.000Z",
     "tags": [],
     "summary": "A hidden gem in Kubernetes might be holding a lot of information.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/event_reason_distributions-1-300x127.png",
     "fetchedAt": "2026-07-11T13:26:11.074Z"
   },
   {
@@ -1162,7 +1057,6 @@
     "publishedAt": "2020-02-04T16:26:00.000Z",
     "tags": [],
     "summary": "For the past 18 months, we’ve been iterating on and improving a React server-side rendering service to support the frontend in our cloud-hosted Jira offering. During this time, the service has grown fairly organically from a side-project spiking a proof-of-concept, to a performance-critical service…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/1ayjdz2sneunqmgz0bhcuoa.gif",
     "fetchedAt": "2026-07-11T13:26:13.114Z"
   },
   {
@@ -1173,7 +1067,6 @@
     "publishedAt": "2020-01-22T17:24:26.000Z",
     "tags": [],
     "summary": "Today, the infrastructure world is moving much faster than ever before. It’s easy to provision hundreds of servers in seconds and have them online and usable within minutes. With all of that power comes the ability to iterate faster – and the potential for more bugs, more incidents, and more…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/abstract-combo-1-purple-300x169.png",
     "fetchedAt": "2026-07-11T13:26:13.114Z"
   },
   {
@@ -1184,7 +1077,6 @@
     "publishedAt": "2019-11-05T17:14:27.000Z",
     "tags": [],
     "summary": "Imagine a team working remotely or collocated. The team is made up of engineers, architects, designers, and product managers, and they all use Jira Software to collaborate on their day-to-day work. However, every time one of them updates an issue, project, or board, their fellow team members do not…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/1ctwxcxmdxwwdqlu-mrmwog-300x231.png",
     "fetchedAt": "2026-07-11T13:26:13.114Z"
   },
   {
@@ -1195,7 +1087,6 @@
     "publishedAt": "2019-09-05T03:45:36.000Z",
     "tags": [],
     "summary": "As an individual contributor at Atlassian, one aspect of my job is resolving bugs in production. This can be a challenging and enjoyable form of problem solving. I recently helped understand and fix an intermittent problem with Jira Cloud. It was an interesting tale, not just because of the root…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/automation-repeat-neutral-300x169.png",
     "fetchedAt": "2026-07-11T13:26:13.114Z"
   },
   {
@@ -1206,7 +1097,6 @@
     "publishedAt": "2019-08-28T16:06:34.000Z",
     "tags": [],
     "summary": "Trello is currently undergoing a big technological shift on the frontend, and an important part of this shift has been our approach to incrementally adopting GraphQL. We’ve used a client-side GraphQL schema (in a creative way) to quickly unlock the benefits of GraphQL. If you’re considering moving…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/work-management-saffron-300x169.png",
     "fetchedAt": "2026-07-11T13:26:13.114Z"
   },
   {
@@ -1217,7 +1107,6 @@
     "publishedAt": "2019-08-22T18:08:33.000Z",
     "tags": [],
     "summary": "Our journey toward a better migration path for customers.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2019/08/blog-cmpt-migrates-hero@2x-300x146.png",
     "fetchedAt": "2026-07-11T13:26:13.114Z"
   },
   {
@@ -1228,7 +1117,6 @@
     "publishedAt": "2019-05-21T20:09:03.000Z",
     "tags": [],
     "summary": "Engineering stateless, high-availability cloud services comes with juuuuuuust a few challenges. Here’s how we (eventually) slayed the dragon.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2019/05/we-engineered-vertigo-on-top-of-aws_featured@3x-300x146.png",
     "fetchedAt": "2026-07-11T13:26:13.114Z"
   },
   {
@@ -1239,7 +1127,6 @@
     "publishedAt": "2019-04-02T16:37:45.000Z",
     "tags": [],
     "summary": "An implementation-first approach to API development is all well and good… but might spec-first be even better?",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2019/04/blog-illustration-new-approach-rest-api-780x380-@2x-300x146.png",
     "fetchedAt": "2026-07-11T13:26:13.114Z"
   },
   {
@@ -1250,7 +1137,6 @@
     "publishedAt": "2019-03-08T02:00:39.000Z",
     "tags": [],
     "summary": "Go behind the scenes with the Jira team and see how we performance-engineered our way to a zero-affinity cloud architecture that runs at enterprise scale.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2019/03/performance-engineering-jira-cloud-blog-illustration-v7-300x146.png",
     "fetchedAt": "2026-07-11T13:26:13.114Z"
   },
   {
@@ -1261,7 +1147,6 @@
     "publishedAt": "2019-03-07T21:00:26.000Z",
     "tags": [],
     "summary": "Eight ways women are shaping sports, science, and society.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2017/03/international-womens-day-2019@3x-300x146.png",
     "fetchedAt": "2026-07-11T13:26:13.114Z"
   },
   {
@@ -1272,7 +1157,6 @@
     "publishedAt": "2019-02-13T21:06:16.000Z",
     "tags": [],
     "summary": "On the security team, we don’t manage any Atlassian products like other Atlassian teams do. Our main product is trust, and that’s a job that’s never finished. To me, security is more of a mindset; one of constant diligence, continuous improvement, and seeking out ways to innovate. Sometimes…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2019/02/atlassian-handles-security_-featured@2x-300x137.png",
     "fetchedAt": "2026-07-11T13:26:13.114Z"
   },
   {
@@ -1283,7 +1167,6 @@
     "publishedAt": "2019-01-04T15:00:44.000Z",
     "tags": [],
     "summary": "Follow senior architect Robbie Gates all the way down the rabbit hole to the JVM code, and learn a few new debugging tricks to keep up your sleeve.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2019/01/artboard-18-copy-8@3x-300x146.png",
     "fetchedAt": "2026-07-11T13:26:13.114Z"
   },
   {
@@ -1294,7 +1177,6 @@
     "publishedAt": "2018-12-05T19:35:22.000Z",
     "tags": [],
     "summary": "Coding? That was the easy bit. Delivering the largest project in Atlassian history was all about staying true to proven engineering principles – plus a few new ones.",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2018/12/artboard-17-copy-8@3x-300x146.png",
     "fetchedAt": "2026-07-11T13:26:13.114Z"
   },
   {
@@ -1305,7 +1187,6 @@
     "publishedAt": "2018-10-23T17:00:32.000Z",
     "tags": [],
     "summary": "Cloud is a big part of Atlassian’s future, and we’re more focused than ever on delivering a great Server to Cloud migration experience. When developing software, there is no better way to test than doing it yourself. So that’s what we did. In an effort to learn more, understand pain points, and…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2018/10/cloud-migration_featured@2x-300x150.png",
     "fetchedAt": "2026-07-11T13:26:13.114Z"
   },
   {
@@ -1316,7 +1197,6 @@
     "publishedAt": "2018-10-17T17:00:12.000Z",
     "tags": [],
     "summary": "Just a few decades ago, Nike was a Greek goddess who personified victory. Apple was the fruit you polished and gave to your teacher. And subways were simply underground transit systems. Today, well-planned marketing campaigns have replaced a goddess with shoes, fruit with computers, and trains with…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2018/10/marketing-plan_featured@2x-300x150.png",
     "fetchedAt": "2026-07-11T13:26:13.114Z"
   },
   {
@@ -1327,7 +1207,6 @@
     "publishedAt": "2018-10-10T03:18:00.000Z",
     "tags": [],
     "summary": "The underlying storage engine that powers Trello’s data environment was unhealthy and sluggish, so we invested time into fixing it with the hope that our future selves could then focus on the data and the people who need it. So far it’s working (for example, we reduced the overall data size by…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/ado-line-lime-300x169.png",
     "fetchedAt": "2026-07-11T13:26:16.315Z"
   },
   {
@@ -1338,7 +1217,6 @@
     "publishedAt": "2018-03-30T03:51:47.000Z",
     "tags": [],
     "summary": "Trello has been using RabbitMQ for the last three years. Prior to RabbitMQ, we were relying on a Redis Pub-Sub implementation. Recently, due to RabbitMQ’s questionable behavior when network partitions occur, we’ve made the switch over to Kafka. This blog post goes into depth on our RabbitMQ…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/ado-combo-blue-300x169.png",
     "fetchedAt": "2026-07-11T13:26:16.315Z"
   },
   {
@@ -1349,7 +1227,6 @@
     "publishedAt": "2018-03-14T03:18:25.000Z",
     "tags": [],
     "summary": "Bugs! No matter how many times I decree that my coworkers and I must stop writing bugs, we keep on doing it anyways. Even worse, sometimes those bugs make it into production, where users run into them! The fact of the matter is, you are going to someday release a buggy app. Even with layers of […]",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/itsm-repeat-purple-300x169.png",
     "fetchedAt": "2026-07-11T13:26:16.315Z"
   },
   {
@@ -1360,7 +1237,6 @@
     "publishedAt": "2018-02-26T17:00:49.000Z",
     "tags": [],
     "summary": "Over the last few years, Atlassian has grown from a few hundred to a few thousand Atlassians globally. This kind of growth impacts everyone in the organization, but the People Team – who manage the ins and outs of employee experience – has a unique relationship to it. As we’ve grown, one of the…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2018/02/trello-growth-planning_featured@2x-300x150.png",
     "fetchedAt": "2026-07-11T13:26:16.315Z"
   },
   {
@@ -1371,7 +1247,6 @@
     "publishedAt": "2018-02-21T02:29:22.000Z",
     "tags": [],
     "summary": "Have you ever returned to work in the morning and found a couple of Trello boards with this lovely cryptic red box? “You have been disconnected from the Trello Server for too long.” – wait, what? Over the Christmas / New Years break we deployed some changes to reduce how frequently this frustrating…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/itsm-line-neutral-300x169.png",
     "fetchedAt": "2026-07-11T13:26:16.315Z"
   },
   {
@@ -1382,7 +1257,6 @@
     "publishedAt": "2018-01-31T02:36:28.000Z",
     "tags": [],
     "summary": "This post is intended to be a sequel to the Talking Kotlin podcast episode that featured Huyen Tue Dao and me. We recorded it in May 2017. If you haven’t given it a listen, go check it out! A quick recap from the conversation: We started using Kotlin in October of 2016, right around when Kotlin…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/ado-dots-saffron-300x169.png",
     "fetchedAt": "2026-07-11T13:26:16.315Z"
   },
   {
@@ -1393,7 +1267,6 @@
     "publishedAt": "2017-09-30T00:18:20.000Z",
     "tags": [],
     "summary": "When your company grows, the demands placed on your design organization fundamentally change – there are more moving parts, and the systems and processes that used to work when the entire design team could sit in the same conference room start to break down. It’s an ongoing challenge, so we thought…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/Design-workflow_feature@2x-300x150.png",
     "fetchedAt": "2026-07-11T13:26:16.315Z"
   },
   {
@@ -1404,7 +1277,6 @@
     "publishedAt": "2017-05-26T03:08:22.000Z",
     "tags": [],
     "summary": "For the past few months we’ve been working on bringing Unsplash into Trello. Check out Trello’s blog post announcing the launch if you missed it! It was a great experience because Unsplash is really cool and we knew our users would love it (I know WE do ❤️). It was also a great experience because…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/automation-repeat-purple-300x169.png",
     "fetchedAt": "2026-07-11T13:26:16.315Z"
   },
   {
@@ -1415,7 +1287,6 @@
     "publishedAt": "2017-04-19T01:35:36.000Z",
     "tags": [],
     "summary": "tl;dr: Don’t use Node 7 until this PR is released. Background We’ve been working for quite some time to try and transition the Trello Server codebase to Node v7. Initially this was prevented by our quite old version of Mongoose, which got slower (by about 20%) when upgrading. After working through…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/itsm-line-lime-300x169.png",
     "fetchedAt": "2026-07-11T13:26:16.315Z"
   },
   {
@@ -1426,7 +1297,6 @@
     "publishedAt": "2017-03-31T03:18:00.000Z",
     "tags": [],
     "summary": "Early on, we realized that we needed some way to communicate to the user when data isn’t synced with the server yet. Otherwise, you could end up in a frustrating situation where you see a card you created on your device, but no one else can see it and you don’t know why. Design The […]",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/aldhwq7-300x71.png",
     "fetchedAt": "2026-07-11T13:26:16.315Z"
   },
   {
@@ -1437,7 +1307,6 @@
     "publishedAt": "2017-03-22T03:17:00.000Z",
     "tags": [],
     "summary": "Most of what I’ve written so far has been about uploading changes from the client to the server. But we found it is equally important to download changes from the server periodically, too. What use is offline mode when you aren’t viewing fresh data? How can you share perspective with someone if you…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/itsm-combo-lime-300x169.png",
     "fetchedAt": "2026-07-11T13:26:16.315Z"
   },
   {
@@ -1448,7 +1317,6 @@
     "publishedAt": "2017-03-17T01:31:00.000Z",
     "tags": [],
     "summary": "On page 52 of my copy of K&R, in a discussion of the ?: operator, is this line of code: printf(“You have %d item%s.n”, n, n==1 ? “” : “s”); And thus began my decades-long proliferation of plural-unfriendly strings. I would later learn that not all languages base pluralization on whether the…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/ado-combo-purple-300x169.png",
     "fetchedAt": "2026-07-11T13:26:16.315Z"
   },
   {
@@ -1459,7 +1327,6 @@
     "publishedAt": "2017-03-14T21:01:55.000Z",
     "tags": [],
     "summary": "When writing offline mode, attachments proved to be a uniquely difficult aspect of syncing. The nature of attachments differ from other data in Trello. Most data in Trello are simple numbers and strings. Files are an entirely different beast; they’re large and unwieldy. File permissions On Android,…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/network-neutral-300x169.png",
     "fetchedAt": "2026-07-11T13:26:16.315Z"
   },
   {
@@ -1470,7 +1337,6 @@
     "publishedAt": "2017-03-10T04:14:00.000Z",
     "tags": [],
     "summary": "I want to call out a surprisingly tricky problem we ran into when developing offline mode: handling identifiers. In Trello, all models have an ID. Each board, list, card, etc. It’s how we define relationships between models as well as how we communicate with the server about them. When you’re…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/ycffrtp-300x133.png",
     "fetchedAt": "2026-07-11T13:26:16.315Z"
   },
   {
@@ -1481,7 +1347,6 @@
     "publishedAt": "2017-03-03T02:58:32.000Z",
     "tags": [],
     "summary": "Analyzing time to an event can answer many questions about a population. Medicine, epidemiology, and actuarial science have historically analyzed lifespans. For example, actuaries use life tables to assess the probability of someone living to a certain age. Researchers may analyze the likelihood of…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/itsm-repeat-blue-300x169.png",
     "fetchedAt": "2026-07-11T13:26:18.722Z"
   },
   {
@@ -1492,7 +1357,6 @@
     "publishedAt": "2017-03-01T04:13:03.000Z",
     "tags": [],
     "summary": "In the last article we discussed how we sync our changes with the server. Ideally, those HTTP requests would always work – if only we could walk the rosy path of best-case scenarios! Unfortunately, when it comes to network requests, all sorts of madness can occur. It’s best to bake madness-handling…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/ado-dots-blue-300x169.png",
     "fetchedAt": "2026-07-11T13:26:18.722Z"
   },
   {
@@ -1503,7 +1367,6 @@
     "publishedAt": "2017-02-23T04:12:19.000Z",
     "tags": [],
     "summary": "Going offline meant using our database for all immediate changes to the client. But obviously we later want to sync those changes with the server. The basic idea behind our sync is to store changes made offline as a series of deltas that are later uploaded to the server. In this post I’m going to…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/ado-dots-neutral-300x169.png",
     "fetchedAt": "2026-07-11T13:26:18.722Z"
   },
   {
@@ -1514,7 +1377,6 @@
     "publishedAt": "2017-02-15T04:10:52.000Z",
     "tags": [],
     "summary": "Good news, everyone! The Trello mobile apps now work offline! Offline mode has been the most requested mobile feature for years. It’s frustrating to lose the ability to use Trello when you enter the subway or you’re flying on a plane. Even more importantly, using Trello in an area with poor cell…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2024/08/bd13sua-300x165.png",
     "fetchedAt": "2026-07-11T13:26:18.722Z"
   },
   {
@@ -1525,7 +1387,6 @@
     "publishedAt": "2017-01-13T13:22:27.000Z",
     "tags": [],
     "summary": "For those new to Docker, let me say “Welcome to the party!” It’s an easy way to deploy, run, and manage applications using vm-like containers that are independent of elements like hardware and language, which makes these containers highly portable. And it’s all the rage. So how do you deploy Java…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2017/01/how-to-deploy-java-apps-with-docker-a-quick-tutorial@3x-300x146.png",
     "fetchedAt": "2026-07-11T13:26:18.722Z"
   },
   {
@@ -1536,7 +1397,6 @@
     "publishedAt": "2016-09-15T01:39:15.000Z",
     "tags": [],
     "summary": "When coding i18n support in an iOS app, you need to know technical things like how to use Localizable.strings files and NSLocalizedString(). And when designing the UI, you need to understand right-to-left interfaces and remember that any element with text can vary in width considerably. But one…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/abstract-line-1-blue-300x169.png",
     "fetchedAt": "2026-07-11T13:26:18.722Z"
   },
   {
@@ -1547,7 +1407,6 @@
     "publishedAt": "2016-08-17T03:09:00.000Z",
     "tags": [],
     "summary": "For many years, Trello Android has used a simple system for upgrading the database schema: drop the entire database, recreate it, and repopulate the data from the server! While far from ideal, this solution worked because the Trello server was the only source of truth. Any change you made in the…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/04/abstract-line-2-lime-300x169.png",
     "fetchedAt": "2026-07-11T13:26:18.722Z"
   },
   {
@@ -1558,7 +1417,6 @@
     "publishedAt": "2016-06-16T16:00:50.000Z",
     "tags": [],
     "summary": "The HR team at Atlassian was using excel and email to manage their projects. That is, until the bright-eyed Jira Core team approached ’em with a proposition: Implement Jira Core for them to manage their HR projects if they told us everything about the experience. Boom! We had ourselves a deal. And…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/jira-core-default-300x150.png",
     "fetchedAt": "2026-07-11T13:26:18.722Z"
   },
   {
@@ -1569,7 +1427,6 @@
     "publishedAt": "2016-05-10T13:00:07.000Z",
     "tags": [],
     "summary": "Marketing can be a cyclical process. We marketers typically plan projects, assign work, review content, publish, and then…. start all over again. At the beginning of each quarter, we approach this process with bright-eyed enthusiasm, big ideas, and a clear plan of attack. But as the months wear on,…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:26:18.722Z"
   },
   {
@@ -1580,7 +1437,6 @@
     "publishedAt": "2016-03-10T14:00:42.000Z",
     "tags": [],
     "summary": "I can hold my own with math and numbers, but I don’t love them. I have to admit though, I’m starting to love data. Like many marketers, I spend a lot of time thinking about blogs. And blogging itself is becoming increasingly data-informed (if not fully data-driven, but that’s another story). How…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/BlogIdeaIssue-300x132.png",
     "fetchedAt": "2026-07-11T13:26:18.722Z"
   },
   {
@@ -1591,7 +1447,6 @@
     "publishedAt": "2016-03-02T02:56:39.000Z",
     "tags": [],
     "summary": "We’ve talked about our CSS a lot in the past. We did a State of the Trello CSS and published a guide for writing CSS. We’ve wrapped up everything we’ve learned into Trellisheets, a public repo for all things CSS at Trello. What’s in the project? Our core CSS files. We use these on multiple sites to…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:26:18.722Z"
   },
   {
@@ -1602,7 +1457,6 @@
     "publishedAt": "2016-02-01T14:00:46.000Z",
     "tags": [],
     "summary": "Git hooks are awesome in the context of continuous integration, so I want to share three CI-related use cases and point you to some ready-made hooks you can add to your workflow. If you’re new to Git hooks, no worries: we’ll start with the basics.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:26:18.722Z"
   },
   {
@@ -1613,7 +1467,6 @@
     "publishedAt": "2015-06-11T14:00:05.000Z",
     "tags": [],
     "summary": "The way we help each other inside of organizations is changing. With internal team collaboration so critical to success, how teams service and provide support to others in the organization is becoming a new way of approaching work. In our latest blog on this topic, we found that 50% of…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/Screen-Shot-2015-06-10-at-11.05.15-AM-300x154.png",
     "fetchedAt": "2026-07-11T13:26:18.722Z"
   },
   {
@@ -1624,7 +1477,6 @@
     "publishedAt": "2015-04-25T02:02:21.000Z",
     "tags": [],
     "summary": "We, like all of you, watched with great anticipation in September as Apple announced their latest technological marvel. At the time we had no idea what this meant for our current iOS app. What kind of capabilities would WatchKit have and how could we integrate that into our existing codebase? Now…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:26:18.722Z"
   },
   {
@@ -1635,7 +1487,6 @@
     "publishedAt": "2015-04-01T03:08:50.000Z",
     "tags": [],
     "summary": "The Android team at Trello is happy to announce our first open source Android library, Victor! It’s a Gradle plugin that lets you use SVGs as resources in your Android apps. Victor started as a request from our designers. They were regularly creating vector icons that they would later convert to…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:26:18.722Z"
   },
   {
@@ -1646,7 +1497,6 @@
     "publishedAt": "2014-10-03T12:00:33.000Z",
     "tags": [],
     "summary": "(Yes the title of this post is a pun, apologies!) I have written about aliases before! See for example a collection of my favorite git aliases or peruse my personal list on Bitbucket. Recently at our Summit I showed a simple technique that can really unleash the power of your Git command line.…",
-    "thumbnail": "https://atlassianblog.wpengine.com/wp-content/uploads/2014/10/one-weird-trick-for-powerful-git-aliases@3x-300x146.png",
     "fetchedAt": "2026-07-11T13:26:21.059Z"
   }
 ]

@@ -12,7 +12,6 @@ function makeArticle(n: number, overrides: Partial<Article> = {}): Article {
     publishedAt: "2026-07-10T00:00:00.000Z",
     tags: ["infra"],
     summary: `Summary ${n}`,
-    thumbnail: null,
     fetchedAt: new Date().toISOString(),
     ...overrides,
   };

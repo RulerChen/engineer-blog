@@ -11,7 +11,6 @@ function makeArticle(id: string, publishedAt: string, source: string): Article {
     publishedAt,
     tags: [],
     summary: "",
-    thumbnail: null,
     fetchedAt: publishedAt,
   };
 }

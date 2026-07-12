@@ -7,7 +7,6 @@
     "publishedAt": "2026-06-30T00:00:00.000Z",
     "tags": [],
     "summary": "Discord's API spans 1700+ endpoints across hundreds of Kubernetes deployments. The challenge: tracking per-feature hosting costs without restructuring. Jim Benton helps explain how Discord tackled the situation.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -18,7 +17,6 @@
     "publishedAt": "2026-06-10T00:00:00.000Z",
     "tags": [],
     "summary": "Discord is updating requirements to how apps access certain data within servers, changing the review threshold and requiring annual review. Here's what's changing and why.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:37:19.988Z"
   },
   {
@@ -29,7 +27,6 @@
     "publishedAt": "2026-06-09T00:00:00.000Z",
     "tags": [],
     "summary": "Moving Discord’s voice and video onto Cloudflare's edge network. Closer servers, lower ping in most regions, and a few real bugs getting there.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:37:19.988Z"
   },
   {
@@ -40,7 +37,6 @@
     "publishedAt": "2026-06-02T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/640658a746a8ce16d18f27ac_027_Header.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -51,7 +47,6 @@
     "publishedAt": "2026-05-08T00:00:00.000Z",
     "tags": [],
     "summary": "You've been asked to stand up a brand-new database cluster, meaning a whole day of configuring dozens of nodes, validating replication, wiring up dual-write pipelines… what if this whole ordeal took less than two hours? This is how we got ourselves into this exact mess, and how we made our way out…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:37:19.988Z"
   },
   {
@@ -62,7 +57,6 @@
     "publishedAt": "2026-04-29T00:00:00.000Z",
     "tags": [],
     "summary": "On March 25th, voice and video on Discord suffered major degradation beginning at 12:13 PDT, lasting a little over three hours. Learn how the issue originated, how it affected systems across Discord, how we recovered, and how we’re preventing the same problem from reoccurring.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -73,7 +67,6 @@
     "publishedAt": "2026-04-24T00:00:00.000Z",
     "tags": [],
     "summary": "Too many experiment metrics can make meaningful changes harder to detect. Learn how Discord used simulations and Principal Component Analysis to maximize signal and reduce noise.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -84,7 +77,6 @@
     "publishedAt": "2026-04-07T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/667ca990841c88f9a0902de7_Blog%20Header.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -95,7 +87,6 @@
     "publishedAt": "2026-04-07T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/65f2076093e33c36f6469d7b_App%20Pitches%20Header.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -106,7 +97,6 @@
     "publishedAt": "2026-04-07T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/650b82b99e601c8658b56f8c_blog%20header.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -117,7 +107,6 @@
     "publishedAt": "2026-04-06T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/66e887e79d3b4d4fc25d279f_E2EE%2004.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -128,7 +117,6 @@
     "publishedAt": "2026-04-06T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/65ef677ee8abedb282b396a3_image5.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -139,7 +127,6 @@
     "publishedAt": "2026-03-12T00:00:00.000Z",
     "tags": [],
     "summary": "Developers can now claim and customize their game’s profiles on Discord. Curate your game’s presence on the platform to help people discover more about your game, and get your server verified in the process! Read on to see how it works.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -150,7 +137,6 @@
     "publishedAt": "2026-03-09T00:00:00.000Z",
     "tags": [],
     "summary": "At GDC 2026, Discord gives developers more ways to close the gap between connection and play.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -161,7 +147,6 @@
     "publishedAt": "2026-03-04T00:00:00.000Z",
     "tags": [],
     "summary": "Join Senior Software Engineer Nick Krichevsky as he explains how Discord added distributed tracing to Elixir's message passing and optimized it to handle millions of concurrent users.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -172,7 +157,6 @@
     "publishedAt": "2026-02-19T00:00:00.000Z",
     "tags": [],
     "summary": "Discord uses Osprey to quickly detect and remove new types of harm from putting our customers at risk. Now we’re open-sourcing this tool so others can do the same.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:37:19.988Z"
   },
   {
@@ -183,7 +167,6 @@
     "publishedAt": "2026-01-20T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/612414349957074a5778efc4_1_8eA5bgAG9NmCJshhccMhZQ.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -194,7 +177,6 @@
     "publishedAt": "2025-12-11T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/611edbe549d60191dc525ffe_1_adCZ02GlC4QaA89bZ2Kt1A.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -205,7 +187,6 @@
     "publishedAt": "2025-12-08T00:00:00.000Z",
     "tags": [],
     "summary": "Check out the finer details of the more technical fixes implemented into Discord recently.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -216,7 +197,6 @@
     "publishedAt": "2025-10-09T00:00:00.000Z",
     "tags": [],
     "summary": "From manual GPU configs to one-command clusters: Join Serrana Aguirregaray and Nathaniel Jenkins as they tell the story of Discord's journey to build a developer-friendly ML infrastructure on Ray for 200M+ monthly active users.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:37:19.988Z"
   },
   {
@@ -227,7 +207,6 @@
     "publishedAt": "2025-09-03T00:00:00.000Z",
     "tags": [],
     "summary": "Check out the finer details of the more technical fixes implemented into Discord recently.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -238,7 +217,6 @@
     "publishedAt": "2025-09-02T00:00:00.000Z",
     "tags": [],
     "summary": "From March 1st, 2026, all clients and apps must be updated to utilize DAVE’s end-to-end encryption support for voice and video calls. In this blog, we explore the challenges we encountered bringing E2EE to browsers, and share what you may need to do to ensure your app can still connect to voice…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:37:19.988Z"
   },
   {
@@ -249,7 +227,6 @@
     "publishedAt": "2025-08-13T00:00:00.000Z",
     "tags": [],
     "summary": "The Discord Social SDK is coming out of closed beta! Developers can now take advantage of Discord’s voice and text chat in their games and help players connect for longer playtimes by enhancing their multiplayer experiences.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -260,7 +237,6 @@
     "publishedAt": "2025-08-04T00:00:00.000Z",
     "tags": [],
     "summary": "Check out the finer details of the more technical fixes implemented into Discord recently.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -271,7 +247,6 @@
     "publishedAt": "2025-07-07T00:00:00.000Z",
     "tags": [],
     "summary": "Check out the finer details of the more technical fixes implemented into Discord recently.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -282,7 +257,6 @@
     "publishedAt": "2025-04-24T00:00:00.000Z",
     "tags": [],
     "summary": "Learn how Discord scaled its search infrastructure to index trillions of messages and unlock new features.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -293,7 +267,6 @@
     "publishedAt": "2025-04-16T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/614233b64d1e7ec1556caf32_1_jAwf-40J1rziW5LsHLm5-A.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -304,7 +277,6 @@
     "publishedAt": "2025-04-09T00:00:00.000Z",
     "tags": [],
     "summary": "Explore how Discord supercharged dbt with a tailored solution designed for performance, developer productivity, and data quality.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:37:19.988Z"
   },
   {
@@ -315,7 +287,6 @@
     "publishedAt": "2025-03-17T00:00:00.000Z",
     "tags": [],
     "summary": "Today, we’re announcing our new Social SDK that empowers game developers of all sizes to implement Discord-powered features directly in their games, helping players easily talk, connect and enhance their social experiences.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -326,7 +297,6 @@
     "publishedAt": "2025-03-17T00:00:00.000Z",
     "tags": [],
     "summary": "We'll create a home where you can monitor playtests, gather feedback, and talk with those who want to be part of your game's success.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -337,7 +307,6 @@
     "publishedAt": "2025-03-16T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/67d0c4e0932bb59c7f6271e5_2024_10_DiscordBlog_UsingDiscord-1.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -348,7 +317,6 @@
     "publishedAt": "2025-03-06T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/67c89ad3a10d50046822918a_2024_10_DiscordBlog_Safety-3.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -359,7 +327,6 @@
     "publishedAt": "2025-02-27T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/674654533573280b4d1afb80_image9.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -370,7 +337,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/675b68bade331881c764f6c0_image2.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -381,7 +347,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/66f32a54662d368aadb7c6c1_UD_BlogBanner_1800x720.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -392,7 +357,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/66eb613c599add632ab1fbcb_image1.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -403,7 +367,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/66eb67698c19f39b38d643ab_image1.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -414,7 +377,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/65e7a9bc23b72d8693d02dd1_Backup%20Blog%20Headers%20(1).png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -425,7 +387,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/6631551c895bc91d1b753bc5_image1.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -436,7 +397,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/66107dc6c4e701c49567aef3_Products__Features_-_1.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -447,7 +407,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/660343140d8853def4fe54ca_Policy__Safety_-_8_Shield.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -458,7 +417,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/65e7a9bc23b72d8693d02dd1_Backup%20Blog%20Headers%20(1).png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -469,7 +427,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/65d7ad5b24c7d419f791d461_image4.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -480,7 +437,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/657c912af207f6fba400eccb_Dev%20Blog%20Header.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -491,7 +447,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/6578bd5345289c1be8d4f5d4_Policy%20and%20Safety%20(1).png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -502,7 +457,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/6555194328bacbf541b78da4_Engineering%20-%202%20(1).png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -513,7 +467,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/65690639d911b0d8f5dc758e_DDevs_250k_blogheader.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -524,7 +477,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/63178bf5d9f1714116f6a66d_Resources%20%26%20Education%20-%203.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -535,7 +487,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/62a281f083081c68ebb94672_Discord%20HQ%20-%203.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -546,7 +497,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/652f1c815306637db31ca3b8_image2.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -557,7 +507,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/64d66915e701ef8cc6179040_Policy__Safety_-_3.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -568,7 +517,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/64c41f102044065060fc0610_Engineering%20-%201.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -579,7 +527,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/64407c741f67190b27525f0c_image1.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -590,7 +537,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/64139c34c797ae6a8a8eed59_blog%20header.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -601,7 +547,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/635acde66203b15fdc48146f_2022_Q3_AppDirectory_Dev_BlogHeader_1800x720.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -612,7 +557,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/62fa96e012a1658e5e213eb5_Untitled.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -623,7 +567,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/62f6808d44eec83f582d68b5_Resources%20%26%20Education%20-%202.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -634,7 +577,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/61fc38b519cf1b6213676d5d_202201002_COM_DataScienceBlog_1800x720.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -645,7 +587,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/61aa7642a72a1b627d695f49_Discord-Elixir-Blog-Header.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -656,7 +597,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/619575c462b70073305c7cbb_Engineering-Blog-Header-Updated.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -667,7 +607,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/611ea52f24129763b2e5eee5_1_6soUZv1WHyekDqTmSAuM_g.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -678,7 +617,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/611ea97c3267e8bc01e721ac_1_I3UXBtICu_-3cAoT29yIEg.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -689,7 +627,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/611ebd65c1bb62001ebfd1d7_1_0shYsBvQNRyLAKcnnIQauw.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -700,7 +637,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/611ed6b3ff0df3e75a6b3c28_1_BYeVEgTVQia4MD5LSLoUlA.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -711,7 +647,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/611ed88188db6c4aeb477a51_1_Xrs64ioQm2DcmH9Si-M3pw.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -722,7 +657,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/611ed66f85397422ce588149_0_GLaMGau4SRoFGUy5.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -733,7 +667,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/6123e8929ab4cd84c9f20c13_1_wtla_J4eY8-ftoQznTPiFA.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -744,7 +677,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/6123ec15e88d6875093a2a48_1_yheNL5Q0ZoZPtnKvLKj4zQ.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -755,7 +687,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/612402e4de509b850c5e9b8c_1_maPImYoUp2vfPm8DuSCjFQ.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -766,7 +697,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/6124069803554eee8943664d_1_bKWsjP3Tq4CjVe4tg3AB9w.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -777,7 +707,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/61240c2ba0d4313e9250a078_1_VuxdZXwJQfacQ6B33-eP_g.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -788,7 +717,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/612417da1b3daba08042018a_1_00kEvmqaOlUCqDuGXc-lkA.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -799,7 +727,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/61242f04a0d431a06a634efe_1_Cp6gsHPSSldjx0y_fe8_5A.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -810,7 +737,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/6123eaa73fdd6da8f25c07ee_1_WNy93pNIoIiBsfViOZnK0Q.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -821,7 +747,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/6123edad853342675a966a92_1_hljDsBz6KOBEYaNgDaicfg.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -832,7 +757,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/6123ef41915026439a73b51e_1_l0Ual-wRpqzcuVH1E81GUw.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -843,7 +767,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/6124024934aa8718da9fb6fd_1_4YkOfk2dNswnXU0t1rNAvA.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -854,7 +777,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/61240f73f562ea4f9609b690_1_J2847gN_7gZ0Xt4trA5kcg.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -865,7 +787,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/61241e834e08ec42ff5ffd16_1_3us80HYolUv7D81dpT5v3w.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -876,7 +797,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/612427a107733647f557b89b_1_fhlbR-pa7VTzc1mEtcDScA.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   },
   {
@@ -887,7 +807,6 @@
     "publishedAt": "2025-02-26T16:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/612433c554b45604e59caff8_1_jDSr2IHN-xGs7mEX9CFkYQ.png",
     "fetchedAt": "2026-07-11T13:21:20.604Z"
   }
 ]

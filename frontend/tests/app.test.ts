@@ -12,7 +12,6 @@ const articles: Article[] = [
     publishedAt: "2026-07-10T00:00:00.000Z",
     tags: ["streaming"],
     summary: "How we stream.",
-    thumbnail: null,
     fetchedAt: "2026-07-11T00:00:00.000Z",
   },
   {
@@ -23,7 +22,6 @@ const articles: Article[] = [
     publishedAt: "2026-07-09T00:00:00.000Z",
     tags: ["ml"],
     summary: "Ranking systems.",
-    thumbnail: null,
     fetchedAt: "2026-07-01T00:00:00.000Z",
   },
 ];

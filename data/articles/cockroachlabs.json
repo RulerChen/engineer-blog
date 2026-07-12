@@ -7,7 +7,6 @@
     "publishedAt": "2026-07-08T00:00:00.000Z",
     "tags": [],
     "summary": "Modern AI applications are no longer single-shot inference calls. They are long-running agents that plan, act, observe, and retry across time.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -18,7 +17,6 @@
     "publishedAt": "2026-07-07T00:00:00.000Z",
     "tags": [],
     "summary": "Why does AI require a new approach to infrastructure?",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -29,7 +27,6 @@
     "publishedAt": "2026-07-02T00:00:00.000Z",
     "tags": [],
     "summary": "RoachFest London 2026 has been and gone, and I'm still buzzing.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -40,7 +37,6 @@
     "publishedAt": "2026-07-01T00:00:00.000Z",
     "tags": [],
     "summary": "Agent loops fail in production for reasons that have little to do with the model, and everything to do with what happens to their state between iterations.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -51,7 +47,6 @@
     "publishedAt": "2026-06-29T00:00:00.000Z",
     "tags": [],
     "summary": "The database you choose at the start of an AI project is the one you'll be living with, or paying to escape, for years.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -62,7 +57,6 @@
     "publishedAt": "2026-06-19T00:00:00.000Z",
     "tags": [],
     "summary": "The thundering herd of the past was externally triggered.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -73,7 +67,6 @@
     "publishedAt": "2026-06-11T00:00:00.000Z",
     "tags": [],
     "summary": "What happens when you connect a fleet of autonomous AI agents to your enterprise data stack? You quickly discover...",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -84,7 +77,6 @@
     "publishedAt": "2026-06-10T00:00:00.000Z",
     "tags": [],
     "summary": "What do the Uber budget blowout, a 24x token multiplier, and context teach us about building a real business case for AI Agents in production?",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -95,7 +87,6 @@
     "publishedAt": "2026-06-09T00:00:00.000Z",
     "tags": [],
     "summary": "Cockroach Labs has been hosting our annual database conference since 2022, and I'm honored to be MCing RoachFest London for the third year running.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -106,7 +97,6 @@
     "publishedAt": "2026-06-04T00:00:00.000Z",
     "tags": [],
     "summary": "Most enterprise AI teams have built an agent that was impressive; far fewer have shipped one without a production incident that made someone question the whole program.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -117,7 +107,6 @@
     "publishedAt": "2026-06-01T00:00:00.000Z",
     "tags": [],
     "summary": "Organizations across fintech, healthcare, retail, gaming, SaaS, and scores more verticals are embedding AI into business-critical offerings.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -128,7 +117,6 @@
     "publishedAt": "2026-05-28T00:00:00.000Z",
     "tags": [],
     "summary": "When your AI agent makes a bad decision in production, what do you blame?",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -139,7 +127,6 @@
     "publishedAt": "2026-05-26T00:00:00.000Z",
     "tags": [],
     "summary": "We are pleased to announce that Cockroach Labs has a new paper appearing at SIGMOD 2026: Scalable Leader Leases For Multi Consensus Groups in CockroachDB.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -150,7 +137,6 @@
     "publishedAt": "2026-05-19T00:00:00.000Z",
     "tags": [],
     "summary": "Cockroach Labs is pleased to announce we have achieved the Amazon Web Services (AWS) Generative AI Competency.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -161,7 +147,6 @@
     "publishedAt": "2026-05-12T00:00:00.000Z",
     "tags": [],
     "summary": "Agents get better when they learn from interactions over time.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -172,7 +157,6 @@
     "publishedAt": "2026-05-11T00:00:00.000Z",
     "tags": [],
     "summary": "For a certain set of customers, the conversation about CockroachDB Cloud always hits the same wall.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -183,7 +167,6 @@
     "publishedAt": "2026-05-05T00:00:00.000Z",
     "tags": [],
     "summary": "When your application talks to your database over the public internet, every hop is one more place something can go wrong, leading to potential latency, misconfiguration, or (worst case) exposure.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -194,7 +177,6 @@
     "publishedAt": "2026-04-30T00:00:00.000Z",
     "tags": [],
     "summary": "As AI systems become embedded in core business workflows, they increasingly interact directly with systems of record, turning model outputs into durable state changes.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -205,7 +187,6 @@
     "publishedAt": "2026-04-28T00:00:00.000Z",
     "tags": [],
     "summary": "Autonomous agents behave fundamentally differently from humans or “faster users,” and that difference reshapes the demands placed on your database.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -216,7 +197,6 @@
     "publishedAt": "2026-04-22T00:00:00.000Z",
     "tags": [],
     "summary": "Last week in San Francisco, Cockroach Labs hosted a private dinner: \"Cockroach Connect: The Enterprise Reckoning.\"",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -227,7 +207,6 @@
     "publishedAt": "2026-04-16T00:00:00.000Z",
     "tags": [],
     "summary": "When Becca Taft first sat in on one of Michael Stonebraker's research group meetings at MIT, she wasn't planning to work on databases.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -238,7 +217,6 @@
     "publishedAt": "2026-04-14T00:00:00.000Z",
     "tags": [],
     "summary": "CockroachDB runs background work — backups, schema changes, statistics collection, changefeeds — in the same processes that serve user queries. Traditionally, this creates a tension...",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -249,7 +227,6 @@
     "publishedAt": "2026-04-09T00:00:00.000Z",
     "tags": [],
     "summary": "Multi-region deployments are often motivated by resilience: If a region goes down, your system should keep serving traffic. But resilience is only part of the story.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -260,7 +237,6 @@
     "publishedAt": "2026-04-08T00:00:00.000Z",
     "tags": [],
     "summary": "The CockroachDB database fault tolerance demo lets you trigger a real availability zone (AZ) failure within your cluster.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -271,7 +247,6 @@
     "publishedAt": "2026-04-06T00:00:00.000Z",
     "tags": [],
     "summary": "The data landscape for European enterprises is shifting, shaped by an intersection of technological ambition and a sophisticated regulatory environment.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -282,7 +257,6 @@
     "publishedAt": "2026-04-02T00:00:00.000Z",
     "tags": [],
     "summary": "The fintech companies and quant firms that define the next decade aren't just building better products. They're succeeding with more resilient fintech infrastructure.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -293,7 +267,6 @@
     "publishedAt": "2026-03-25T00:00:00.000Z",
     "tags": [],
     "summary": "AI is changing how we build software applications. The more important shift, however, is happening underneath it: how infrastructure is managed and operated.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -304,7 +277,6 @@
     "publishedAt": "2026-03-25T00:00:00.000Z",
     "tags": [],
     "summary": "Production database operations for AI agents, with enterprise security built in.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -315,7 +287,6 @@
     "publishedAt": "2026-03-25T00:00:00.000Z",
     "tags": [],
     "summary": "Today Cockroach Labs is announcing new capabilities that make CockroachDB agent-ready, giving AI agents a secure, structured way to work with your database.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -326,7 +297,6 @@
     "publishedAt": "2026-03-25T00:00:00.000Z",
     "tags": [],
     "summary": "AI-assisted development is rapidly moving from experimentation to expectation.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -337,7 +307,6 @@
     "publishedAt": "2026-03-17T00:00:00.000Z",
     "tags": [],
     "summary": "Aerospace has a scaling problem, but it's not about data volume alone.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -348,7 +317,6 @@
     "publishedAt": "2026-03-13T00:00:00.000Z",
     "tags": [],
     "summary": "In the evolution of cloud-native security, identity has become the new perimeter.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -359,7 +327,6 @@
     "publishedAt": "2026-03-11T00:00:00.000Z",
     "tags": [],
     "summary": "Groww is India’s #1 stock broker with 16 million active users and $11 billion in market cap.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -370,7 +337,6 @@
     "publishedAt": "2026-03-10T00:00:00.000Z",
     "tags": [],
     "summary": "30% of leaders say the database is the first point of failure in AI overload scenarios. That is not because teams chose the wrong cloud. It is not because they miscalculated capacity. It is because most traditional databases were built for a different era of computing. They were designed around…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -381,7 +347,6 @@
     "publishedAt": "2026-03-06T00:00:00.000Z",
     "tags": [],
     "summary": "Before RKO 2026 officially began, its theme – Unstoppable — was already on display.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -392,7 +357,6 @@
     "publishedAt": "2026-02-26T00:00:00.000Z",
     "tags": [],
     "summary": "Recently we launched an integration with LangChain, the most popular orchestration framework for developing applications with large language models, to simplify development of production-ready agentic AI applications with CockroachDB. This integration provides out-of-the-box support for CockroachDB…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -403,7 +367,6 @@
     "publishedAt": "2026-02-25T00:00:00.000Z",
     "tags": [],
     "summary": "Fintech is one of the most competitive and highly regulated industries in the world. Whether you’re a payment processor, digital-first bank, trading platform, or wallet provider, your infrastructure is directly tied to customer trust. In this environment, outages aren’t just technical incidents; a…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -414,7 +377,6 @@
     "publishedAt": "2026-02-24T00:00:00.000Z",
     "tags": [],
     "summary": "In betting and gaming, growth is rarely gradual. Traffic spikes around major sporting events. Millions of real-time transactions hit your platform at once, and every one of them has to be correct. When the database falters, the consequences aren’t abstract. Revenue stops. Players lose trust.…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -425,7 +387,6 @@
     "publishedAt": "2026-02-20T00:00:00.000Z",
     "tags": [],
     "summary": "If you own payments infrastructure, platform stability, or risk controls at a payments company, this article’s title is not a rhetorical question.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -436,7 +397,6 @@
     "publishedAt": "2026-02-18T00:00:00.000Z",
     "tags": [],
     "summary": "Every year at RoachFest, we hear directly from the teams running some of the most demanding data workloads in production. RoachFest 2025 was no different—except this year, a clear theme emerged across customer sessions: primary data and metadata are often mission-critical.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -447,7 +407,6 @@
     "publishedAt": "2026-02-17T00:00:00.000Z",
     "tags": [],
     "summary": "83% of technology leaders believe their infrastructure will fail under AI pressure within two years. That number is not meant to provoke alarm. It’s simply a fact that reflects the forward-looking judgment of 1,125 global engineering and technology leaders who are already seeing stress where their…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -458,7 +417,6 @@
     "publishedAt": "2026-02-13T00:00:00.000Z",
     "tags": [],
     "summary": "AI agents are no longer a thought experiment. They’re already writing code, calling APIs, retrying failed requests, and coordinating work at machine speed. And they’re about to put unprecedented pressure on the systems we use to store and move data.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -469,7 +427,6 @@
     "publishedAt": "2026-02-12T00:00:00.000Z",
     "tags": [],
     "summary": "As AI-driven and agentic applications push data platforms into new territory, data architects are increasingly forced to choose between correctness, simplicity, and scale. Today, we’re removing that tradeoff — announcing support for 300-node clusters with 2.2M tpmC and 1.2PB of data in CockroachDB…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -480,7 +437,6 @@
     "publishedAt": "2026-02-11T00:00:00.000Z",
     "tags": [],
     "summary": "In Part 1 of this article series on Global Reporting Platforms, we explored why traditional reporting architectures are increasingly unable to keep up with modern business demands.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -491,7 +447,6 @@
     "publishedAt": "2026-02-09T00:00:00.000Z",
     "tags": [],
     "summary": "Database modernization is a priority for many enterprises in 2026, as pressure builds for applications to grow more distributed, failure-tolerant, and globally accessible. Increasing cloud deployments may seem like a quick cure...",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -502,7 +457,6 @@
     "publishedAt": "2026-02-06T00:00:00.000Z",
     "tags": [],
     "summary": "Building mission-critical applications on CockroachDB demands robust observability. In complex, microservices-oriented architectures, it can be especially hard to correlate activity and pinpoint problems between different application services and the database layer.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -513,7 +467,6 @@
     "publishedAt": "2026-02-05T00:00:00.000Z",
     "tags": [],
     "summary": "CockroachDB users don’t all show up in the same place or follow the same path. Some are just starting to evaluate distributed SQL. Others are deep in implementation details, or they may already be operating cloud-based clusters. A growing number are building day-to-day with an AI coding assistant…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -524,7 +477,6 @@
     "publishedAt": "2026-02-04T00:00:00.000Z",
     "tags": [],
     "summary": "Two major cloud outages in two weeks made one thing painfully clear: your fraud defenses can’t depend on any single region or provider being perfect all the time. Microsoft’s Azure Front Door misconfiguration rippled through widely used services and status systems, just days after a separate AWS…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -535,7 +487,6 @@
     "publishedAt": "2026-02-03T00:00:00.000Z",
     "tags": [],
     "summary": "Enterprise security is a key factor in reducing cost-of-ownership and getting new solutions into production efficiently. With CockroachDB v26.1, available as of February 3rd in CockroachDB Cloud and February 18th for CockroachDB self-hosted, we are introducing security improvements that help…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -546,7 +497,6 @@
     "publishedAt": "2026-02-02T00:00:00.000Z",
     "tags": [],
     "summary": "From retail investing and global card payments to large-scale lending, fintech platforms are being pushed to their limits. User expectations are rising, regulations are tightening, and transaction volumes are growing faster and more unpredictably than ever before. Across these domains, one theme is…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -557,7 +507,6 @@
     "publishedAt": "2026-01-29T00:00:00.000Z",
     "tags": [],
     "summary": "Before AI workloads entered production en masse, infrastructural resilience was already key to mission-critical applications. But in 2026, resilience alone won’t be enough. The real challenge, one that’s already reshaping engineering priorities and strategic business initiatives is resilience at…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -568,7 +517,6 @@
     "publishedAt": "2026-01-28T00:00:00.000Z",
     "tags": [],
     "summary": "Data doesn’t just serve the business anymore. Data is the business. Every transaction, every decision, every customer experience depends on having timely, trustworthy insight – not weekly, not daily, but continuously.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -579,7 +527,6 @@
     "publishedAt": "2026-01-27T00:00:00.000Z",
     "tags": [],
     "summary": "\"I'll know it when I see it\" is the classic car buyer's line, but it's also the one thing old-school search bars totally fail to deliver. Traditional keyword search fails when a customer wants a car that \"looks like this photo from Fast and Furious.\" This is where vector search comes in,…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -590,7 +537,6 @@
     "publishedAt": "2026-01-26T00:00:00.000Z",
     "tags": [],
     "summary": "When it comes to real-time applications, resilience isn't a nice-to-have, it’s a necessity. In this post, we’ll walk through a live demo designed to stress-test CockroachDB’s ability to detect anomalies in a stream of financial transactions. Along the way, we’ll simulate production traffic, observe…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -601,7 +547,6 @@
     "publishedAt": "2026-01-21T00:00:00.000Z",
     "tags": [],
     "summary": "Migrating a database is always a high-stakes operation. Downtime, data correctness, data loss, and customer experience are all on the line. Not to mention the business risk if a migration goes poorly. While there are a number of third-party tools that support data migration to CockroachDB, we have…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -612,7 +557,6 @@
     "publishedAt": "2026-01-20T00:00:00.000Z",
     "tags": [],
     "summary": "Over the past year, it’s become increasingly clear that the most consequential change in AI isn’t happening in models — it’s happening in volume. As agentic systems move from experimentation into production and autonomy, autonomous activity is beginning to rival, and poised to exceed, human-driven…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -623,7 +567,6 @@
     "publishedAt": "2026-01-16T00:00:00.000Z",
     "tags": [],
     "summary": "Oracle and Amazon Aurora continue to power many mission-critical applications. As cloud-scale workloads evolve, however, the definition of \"enterprise-ready\" has fundamentally shifted.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -634,7 +577,6 @@
     "publishedAt": "2026-01-15T00:00:00.000Z",
     "tags": [],
     "summary": "Modern applications rely on CockroachDB for workloads where resilience, correctness and availability are absolutely critical. Whether it’s being deployed for payment systems, identity provider systems, or transactional systems, one thing is certain: If the underlying database platform of these…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -645,7 +587,6 @@
     "publishedAt": "2026-01-14T00:00:00.000Z",
     "tags": [],
     "summary": "Today’s SaaS products face twin demands: the digital identity layer must be seamless and enterprise-grade, and the data layer must scale globally while remaining reliably consistent.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -656,7 +597,6 @@
     "publishedAt": "2026-01-13T00:00:00.000Z",
     "tags": [],
     "summary": "At its foundation, CockroachDB depends on a key-value storage engine called Pebble. In CockroachDB v25.4, the storage team introduced value separation within Pebble: an optimization that improves compaction efficiency for many workloads. Value separation increases the throughput of the core of…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -667,7 +607,6 @@
     "publishedAt": "2026-01-07T00:00:00.000Z",
     "tags": [],
     "summary": "Agentic AI systems represent a big shift for artificial intelligence: from stateless inference to autonomous, long-running software agents that plan, reason, act, observe outcomes, and adapt over time. These agents operate continuously, coordinate with other agents and tools, and maintain evolving…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -678,7 +617,6 @@
     "publishedAt": "2025-12-30T00:00:00.000Z",
     "tags": [],
     "summary": "AI workloads have become business-critical applications. Agentic systems, real-time inference, recommendation engines, fraud detection, and retrieval-augmented generation (RAG) are live and impacting the customer experience.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -689,7 +627,6 @@
     "publishedAt": "2025-12-29T00:00:00.000Z",
     "tags": [],
     "summary": "High demand should be a good thing, but retailers are now facing a new threat: “success disasters.” In 2026, major retailers will move beyond traditional scaling strategies and start preparing for this different kind of challenge. Not the slow, manageable kind of success, but the sudden surge of…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -700,7 +637,6 @@
     "publishedAt": "2025-12-12T00:00:00.000Z",
     "tags": [],
     "summary": "FinTech teams are operating under more pressure than ever. As digital financial services become the default for consumers and enterprises alike, the margin for error has all but disappeared. Users expect every interaction to be instantaneous, accurate, and always available, with very little…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -711,7 +647,6 @@
     "publishedAt": "2025-12-10T00:00:00.000Z",
     "tags": [],
     "summary": "When Isaac Wong talks about building systems, he puts people before servers or code. A mathematician turned engineering leader, Wong is constantly connecting abstract theory with real-world resilience. Today, as Executive Vice President of R&D at Cockroach Labs, he leads teams shaping one of the…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -722,7 +657,6 @@
     "publishedAt": "2025-12-09T00:00:00.000Z",
     "tags": [],
     "summary": "Every major cloud hyperscaler is having global impact outages. The 2024 Microsoft incident happened due to a bug in Crowdstrike. Google Cloud failed this summer because of a small configuration issue. AWS's most popular region US-East-1 was impacted in October 2025 due to a small change in one of…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -733,7 +667,6 @@
     "publishedAt": "2025-12-04T00:00:00.000Z",
     "tags": [],
     "summary": "In the early years of computing, “consistency” had a clear home: the database. If your transactions were atomic and your indexes balanced, you could sleep at night knowing your system was sound.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -744,7 +677,6 @@
     "publishedAt": "2025-10-02T00:00:00.000Z",
     "tags": [],
     "summary": "AI systems, from LLM pipelines to generative image models, produce staggering volumes of unstructured data. But it's not the raw objects that cause operational headaches – it's the metadata: versions, references, lifecycles, and access policies. Without metadata management tools built into the…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -755,7 +687,6 @@
     "publishedAt": "2025-09-04T00:00:00.000Z",
     "tags": [],
     "summary": "Unlike traditional relational databases, CockroachDB's distributed architecture requires new approaches to deployment topologies, schema design, performance tuning, monitoring, and operational best practices. CockroachDB delivers global scale, zero-downtime operations, and strong consistency.…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -766,7 +697,6 @@
     "publishedAt": "2025-08-19T00:00:00.000Z",
     "tags": [],
     "summary": "AI has moved far beyond the experimental phase. Now it's powering customer experiences, streamlining operations, and driving entirely new business models.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -777,7 +707,6 @@
     "publishedAt": "2025-06-05T00:00:00.000Z",
     "tags": [],
     "summary": "Information today is generated and consumed in unprecedented magnitudes. With every click, swipe, and transaction, massive amounts of data are collected, waiting to be harnessed for insights, decision-making, and innovation. Today, more than 80% of the data that organizations generate is…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -788,7 +717,6 @@
     "publishedAt": "2025-05-30T00:00:00.000Z",
     "tags": [],
     "summary": "When you're building a transport operations platform to optimize global fleets, \"good enough\" isn't good enough.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -799,7 +727,6 @@
     "publishedAt": "2025-01-06T00:00:00.000Z",
     "tags": [],
     "summary": "Before we begin a comparison blog post about PostgreSQL, we must first acknowledge that it is one of the most reliable and widely used databases in the history of software. The world owes a debt of gratitude to the open source community that has built and supported this important project for the…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -810,7 +737,6 @@
     "publishedAt": "2024-05-08T00:00:00.000Z",
     "tags": [],
     "summary": "Everybody, from banking applications to retailers to SaaS applications, deals with payment processing. But architecting a system that can deal with payments at scale is challenging.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -821,7 +747,6 @@
     "publishedAt": "2024-04-30T00:00:00.000Z",
     "tags": [],
     "summary": "Metadata management is a critical part of any business application. Let’s take a quick look at what metadata is, why it’s important, and how you can architect your application to ensure highly available, consistent metadata at scale.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -832,7 +757,6 @@
     "publishedAt": "2024-04-02T00:00:00.000Z",
     "tags": [],
     "summary": "",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -843,7 +767,6 @@
     "publishedAt": "2024-02-09T00:00:00.000Z",
     "tags": [],
     "summary": "The challenges facing sports betting platforms are rigorous: they have to be fast and consistent in a way that’s similar to high-frequency trading platforms. At the same time, they have a variety of data-locality requirements to comply with depending on which states or countries they serve. In this…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -854,7 +777,6 @@
     "publishedAt": "2024-01-05T00:00:00.000Z",
     "tags": [],
     "summary": "Companies are increasingly chasing zero-RPO and zero-RTO solutions to ensure that their applications remain online no matter what. And it’s easy to see why: according to 2020 research from Gartner the average cost of IT downtime is $5,600 per minute.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -865,7 +787,6 @@
     "publishedAt": "2023-12-27T00:00:00.000Z",
     "tags": [],
     "summary": "CRDB is shorthand for CockroachDB: the scalable, consistently-replicated, distributed SQL database. A single instance of CRDB can scale from a one laptop to thousands of servers distributed all around the world.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -876,7 +797,6 @@
     "publishedAt": "2023-10-16T00:00:00.000Z",
     "tags": [],
     "summary": "High CPU usage can bring your database – and with it, your application – grinding to a halt. This is, unfortunately, a fairly common problem. But it also can be a relatively easy fix. Let’s take a look at how to check CPU usage in Postgres, and how to troubleshoot for some of the most common causes…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -887,7 +807,6 @@
     "publishedAt": "2023-10-11T00:00:00.000Z",
     "tags": [],
     "summary": "Nearly every business has tier 0 applications that are critical for delivering their services to customers: these are the applications that make the money. Any disruption or downtime can result in significant financial losses and damage to a company’s reputation. Adopting multi-region application…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -898,7 +817,6 @@
     "publishedAt": "2023-10-09T00:00:00.000Z",
     "tags": [],
     "summary": "The cloud is, by definition, a distributed system. Distributed application architecture is mainstream in the world of software — you wouldn’t build any other way. For more than a decade, though, the database has lagged behind. The architecture of traditional relational databases frequently…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -909,7 +827,6 @@
     "publishedAt": "2023-10-02T00:00:00.000Z",
     "tags": [],
     "summary": "In this article, we’ll take a look at how to safely add and drop columns from a SQL database using ALTER TABLE … ADD and ALTER TABLE … DROP COLUMN. We will also briefly touch on adding and dropping constraints on SQL tables, since that functions in the same way and since it’s important to consider…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -920,7 +837,6 @@
     "publishedAt": "2023-09-07T00:00:00.000Z",
     "tags": [],
     "summary": "Reliability is your most important feature. It’s easy to get bogged down in the minutiae of planning, building, and shipping new product features. But at the end of the day, if your application isn’t available (or customers are turned away by a sluggish experience), none of those features matter.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -931,7 +847,6 @@
     "publishedAt": "2023-06-28T00:00:00.000Z",
     "tags": [],
     "summary": "Foreign keys are an important element of any relational database. But when you’re setting up your database schema, it’s relatively easy to create problems for yourself if the foreign keys aren’t set up correctly. Here are three of the most common mistakes made with foreign keys, and a little advice…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -942,7 +857,6 @@
     "publishedAt": "2023-06-13T00:00:00.000Z",
     "tags": [],
     "summary": "It’s 10 o’clock. Do you know where your data is? Chances are, it’s nestled snugly in its database. But chances are that it’s also less secure than you might think. Even in sophisticated systems with backups and failover plans, data loss is possible. And importantly, it can happen without you…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -953,7 +867,6 @@
     "publishedAt": "2023-06-07T00:00:00.000Z",
     "tags": [],
     "summary": "In a distributed database, a hotspot is an overworked node – in other words, a part of the database that’s processing a greater share of the total workload than it is meant to handle.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -964,7 +877,6 @@
     "publishedAt": "2023-05-08T00:00:00.000Z",
     "tags": [],
     "summary": "Upserts are useful for anyone who works with a database to know, but the term “upsert” might not even appear in your DBMS’s documentation! So what is an upsert, anyway? And why might it not be mentioned in your docs?",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -975,7 +887,6 @@
     "publishedAt": "2023-04-10T00:00:00.000Z",
     "tags": [],
     "summary": "So you need to scale. That’s a good problem to have! But should you scale up or scale out? There’s no easy answer, so let’s take a closer look at horizontal scaling vs. vertical scaling , how they compare, and what the pros and cons are for each approach.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -986,7 +897,6 @@
     "publishedAt": "2023-04-04T00:00:00.000Z",
     "tags": [],
     "summary": "Before the dominance of the cloud, calculating the cost of a database was a pretty simple equation: software costs + hardware costs = database costs. If you chose an open source product, the software cost might melt away. While the cloud has fundamentally changed how we consume and deploy software,…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -997,7 +907,6 @@
     "publishedAt": "2023-03-14T00:00:00.000Z",
     "tags": [],
     "summary": "November 25, 2020. If you work in tech infrastructure, that’s a date you probably remember. On that day, AWS’s US-east-1 experienced a significant outage, and it broke a pretty significant percentage of the internet. Adobe, League of Legends, Roku, Sirius XM, Amazon, Flickr, Giphy, and many, many…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -1008,7 +917,6 @@
     "publishedAt": "2023-02-16T00:00:00.000Z",
     "tags": [],
     "summary": "Transactions make up an important part of the database workload for most modern applications. And when it comes time to scale up operations for a growing business, distributing those workloads across multiple hardware systems for horizontal scalability, high availability, and fault tolerance is…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -1019,7 +927,6 @@
     "publishedAt": "2022-06-27T00:00:00.000Z",
     "tags": [],
     "summary": "Relational databases are great for transactional workloads. But things can get messy when multiple transactions start trying to access the same data at the same time. Luckily, in many SQL databases there’s a solution for that: SELECT FOR UPDATE.",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -1030,7 +937,6 @@
     "publishedAt": "2022-06-03T00:00:00.000Z",
     "tags": [],
     "summary": "Choosing the right metadata store should be contingent on your system architecture. There is no definitive ‘right choice’. But if you are building your products or services on top of distributed systems then your choices are certainly narrowed. Recently, the data security company Rubrik, wrote a…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -1041,7 +947,6 @@
     "publishedAt": "2022-05-03T00:00:00.000Z",
     "tags": [],
     "summary": "3 basic rules for choosing indexes There are a few basic rules to keep in mind when choosing indexes for a database. A good index should have these three properties: Usefulness: Speed up the execution of some queries (or enforce a constraint) Clustering: Keep records that are likely to be accessed…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -1052,7 +957,6 @@
     "publishedAt": "2022-01-27T00:00:00.000Z",
     "tags": [],
     "summary": "The design of CockroachDB is based on Google’s Spanner data storage system. One of the most surprising and inspired facets of Spanner is its use of atomic clocks and GPS clocks to give participating nodes really accurate wall time synchronization. The designers of Spanner call this “TrueTime”, and…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -1063,7 +967,6 @@
     "publishedAt": "2022-01-18T00:00:00.000Z",
     "tags": [],
     "summary": "Developing a modern application means developing for the cloud, with uptime, scalability, geographic distribution, and low latency at the forefront of concerns. This has led to the widespread adoption of application architectures based on event-driven microservices. Breaking the elements of an…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -1074,7 +977,6 @@
     "publishedAt": "2021-02-23T00:00:00.000Z",
     "tags": [],
     "summary": "A few days ago, prompted by a Hacker News post, my friend Ivo texted me saying “Does your head ever explode when you’re thinking about databases and consistency semantics and whatever models? It just sounds like pointless taxonomy stuff. We are -serializable whereas QuinoaDB is only…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   },
   {
@@ -1085,7 +987,6 @@
     "publishedAt": "2021-02-22T00:00:00.000Z",
     "tags": [],
     "summary": "It’s been over six years since CockroachDB became a GitHub project. In that time, the project has racked up more than 20,000 GitHub stars, which is a simple way for GitHub users to bookmark repositories that interest them. Naturally, we’ve wondered how people find out about our project. Are there…",
-    "thumbnail": null,
     "fetchedAt": "2026-07-11T16:01:16.347Z"
   }
 ]

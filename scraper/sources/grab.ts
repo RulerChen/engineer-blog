@@ -59,7 +59,6 @@ export function parseGrabArchivePage(html: string, pageUrl: string): ArchivePage
       .map((_i, tag) => $(tag).text().trim())
       .get()
       .filter(Boolean);
-    const imgSrc = featured.find("img").first().attr("src");
     articles.push({
       id: articleId(absolute),
       title: featuredTitle,
@@ -68,7 +67,6 @@ export function parseGrabArchivePage(html: string, pageUrl: string): ArchivePage
       publishedAt,
       tags: resolveTags(tags, "grab"),
       summary: summarize(featured.find(".post-content").first().html() ?? ""),
-      thumbnail: imgSrc ? new URL(imgSrc, pageUrl).toString() : null,
       fetchedAt,
     });
   }
@@ -86,10 +84,9 @@ export function parseGrabArchivePage(html: string, pageUrl: string): ArchivePage
       dateAttr && !Number.isNaN(Date.parse(dateAttr)) ? new Date(dateAttr).toISOString() : "";
     const tags = post
       .find("span.post-card-tag")
-      .map((_i, tag) => $(tag).text().trim())
+      .map((_j, tag) => $(tag).text().trim())
       .get()
       .filter(Boolean);
-    const imgSrc = post.find("img").first().attr("src");
 
     articles.push({
       id: articleId(absolute),
@@ -99,7 +96,6 @@ export function parseGrabArchivePage(html: string, pageUrl: string): ArchivePage
       publishedAt,
       tags: resolveTags(tags, "grab"),
       summary: summarize(""),
-      thumbnail: imgSrc ? new URL(imgSrc, pageUrl).toString() : null,
       fetchedAt,
     });
   });

@@ -11,7 +11,6 @@ function makeArticle(id: string): Article {
     publishedAt: "2026-07-01T00:00:00.000Z",
     tags: [],
     summary: "",
-    thumbnail: null,
     fetchedAt: "2026-07-01T00:00:00.000Z",
   };
 }

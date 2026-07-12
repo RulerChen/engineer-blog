@@ -85,7 +85,6 @@ export function parseSpotifyArchivePage(html: string, pageUrl: string): ArchiveP
         "spotify",
       ),
       summary: summarize(post.find(`.${prefix}__description`).first().text().trim()),
-      thumbnail: post.find(`.${prefix}__image img`).first().attr("src") ?? null,
       fetchedAt,
     });
   });

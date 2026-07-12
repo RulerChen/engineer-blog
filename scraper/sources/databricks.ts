@@ -25,7 +25,7 @@ import type { Source } from "../src/types.js";
  * post-page category check) to even filter down to engineering — not a
  * reasonable one-time backfill. So, like Datadog, `backfill` reuses the same
  * feed fetch; there is no fuller accessible history. Items carry no
- * enclosure/thumbnail data.
+ * enclosure data.
  */
 export const databricks: Source = {
   id: "databricks",
