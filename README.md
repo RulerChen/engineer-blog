@@ -1,95 +1,99 @@
 # engineer-blog
 
-Aggregates posts from engineering/tech blogs across the industry into a single
-searchable feed. A scraper (`scraper/`) fetches each company's RSS feed daily
-and, where a real dated archive exists, backfills historical posts; the
-frontend (`frontend/`) renders the merged result.
+A hand-curated reading list of engineering articles and papers. Everything is
+added deliberately — there is no scraper. `data/entries.json` is the single
+source of truth, and a Vue single-page app renders it as a searchable,
+filterable feed deployed to GitHub Pages.
 
-## Sources
+This used to aggregate ~30 company RSS feeds automatically. That produced a lot
+of volume and very little signal, so the scraper was removed in favor of adding
+things by hand through the UI, and the repo collapsed from a monorepo into a
+plain frontend project.
 
-31 companies are currently configured. "Status" reflects the data actually
-present in `data/articles/` as of the last scrape, not just whether the
-source is registered.
+## Adding an entry
 
-| Company                                                                            | Source ID    | Status                                                                                                                                                                                           |
-| ---------------------------------------------------------------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Airbnb Engineering](https://medium.com/airbnb-engineering)                        | `airbnb`     | 10 articles (2026-04-07 → 2026-06-09)                                                                                                                                                            |
-| [Atlassian Developer](https://www.atlassian.com/blog/how-we-build)                 | `atlassian`  | 150 articles (2014-10-03 → 2026-07-08)                                                                                                                                                           |
-| [Booking.com Tech Blog](https://medium.com/booking-com-data-science)               | `booking`    | 10 articles (2025-10-31 → 2026-07-10)                                                                                                                                                            |
-| [Canva Engineering Blog](https://www.canva.dev/blog/engineering/)                  | `canva`      | 68 articles (2015-03-25 → 2025-10-20)                                                                                                                                                            |
-| [The Cloudflare Blog](https://blog.cloudflare.com/tag/engineering/)                | `cloudflare` | 19 articles (2024-06-03 → 2026-06-18) — no deeper archive available (feed/listing cap at ~20 recent posts)                                                                                       |
-| [Coinbase Blog](https://www.coinbase.com/blog/landing/engineering)                 | `coinbase`   | **Blocked** — the site 403s every request in this environment, even with a browser User-Agent (looks like a TLS/network-level fingerprint check); may succeed from a different network (e.g. CI) |
-| [Discord Blog: Engineering & Developers](https://discord.com/category/engineering) | `discord`    | 81 articles (2025-02-26 → 2026-06-30)                                                                                                                                                            |
-| [Dropbox Tech Blog](https://dropbox.tech/)                                         | `dropbox`    | 404 articles (2010-07-13 → 2026-06-25)                                                                                                                                                           |
-| [GitHub Engineering](https://github.blog/engineering/)                             | `github`     | 166 articles (2013-02-21 → 2026-07-10)                                                                                                                                                           |
-| [Grab Tech](https://engineering.grab.com/)                                         | `grab`       | 233 articles (2015-12-28 → 2026-07-10)                                                                                                                                                           |
-| [Instagram Engineering](https://engineering.fb.com/tag/instagram/)                 | `instagram`  | 27 articles (2019-11-25 → 2025-11-17) — folded into Engineering at Meta's `instagram` tag                                                                                                        |
-| [Jane Street Tech Blog](https://blog.janestreet.com/)                              | `janestreet` | 100 articles (2016-05-23 → 2026-06-15)                                                                                                                                                           |
-| [LINE Engineering](https://techblog.lycorp.co.jp/en/)                              | `line`       | 50 articles (2025-10-01 → 2026-06-29) — LINE's own blog is defunct post-LY Corporation merger; sourced from the successor LY Corporation Tech Blog, no deeper archive available                  |
-| [LinkedIn Engineering](https://engineering.linkedin.com/blog)                      | `linkedin`   | 6 articles (2023-09-19 → 2026-06-17) — no RSS feed exists; no deeper archive available                                                                                                           |
-| [Lyft Engineering](https://eng.lyft.com/)                                          | `lyft`       | 10 articles (2025-12-15 → 2026-07-09) — Medium-hosted, no deeper archive available                                                                                                               |
-| [Engineering at Meta](https://engineering.fb.com/)                                 | `meta`       | 9 articles (2026-05-12 → 2026-07-01)                                                                                                                                                             |
-| [Netflix TechBlog](https://netflixtechblog.com/)                                   | `netflix`    | 10 articles (2026-06-19 → 2026-06-29) — Medium-hosted, no deeper archive available                                                                                                               |
-| [Notion Engineering](https://www.notion.so/blog/topic/tech)                        | `notion`     | 24 articles (2021-05-18 → 2026-06-04)                                                                                                                                                            |
-| [NVIDIA Developer Blog](https://developer.nvidia.com/blog/)                        | `nvidia`     | 100 articles (2026-04-24 → 2026-07-10) — feed doesn't paginate further                                                                                                                           |
-| [OpenAI](https://openai.com/news/)                                                 | `openai`     | 1040 articles (2015-12-11 → 2026-07-10)                                                                                                                                                          |
-| [PayPal Engineering](https://medium.com/paypal-tech)                               | `paypal`     | 10 articles (2023-10-24 → 2026-06-15) — Medium-hosted, no deeper archive available                                                                                                               |
-| [Pinterest Engineering](https://medium.com/pinterest-engineering)                  | `pinterest`  | 10 articles (2026-04-13 → 2026-06-25) — Medium-hosted, no deeper archive available                                                                                                               |
-| [Shopify Engineering](https://shopify.engineering/)                                | `shopify`    | 18 articles (2021-12-09 → 2026-06-09)                                                                                                                                                            |
-| [Slack Engineering](https://slack.engineering/)                                    | `slack`      | 193 articles (2016-01-24 → 2026-06-11)                                                                                                                                                           |
-| [Spotify Engineering](https://engineering.atspotify.com/)                          | `spotify`    | 13 articles (2025-11-23 → 2026-06-10) — no server-rendered pagination available                                                                                                                  |
-| [Stripe Blog: Engineering](https://stripe.com/blog/engineering)                    | `stripe`     | 46 articles (2012-06-13 → 2026-03-02)                                                                                                                                                            |
-| [Uber Blog](https://eng.uber.com/)                                                 | `uber`       | 30 articles (2024-07-25 → 2026-07-09) — `eng.uber.com` is a single curated page with no pagination                                                                                               |
-| [Yelp Engineering Blog](https://engineeringblog.yelp.com/)                         | `yelp`       | 333 articles (2010-08-08 → 2026-05-27)                                                                                                                                                           |
-| [Duolingo Engineering](https://blog.duolingo.com/hub/engineering/)                 | `duolingo`   | 4 articles (2026-04-15 → 2026-06-24) — no pagination available                                                                                                                                   |
-| [Figma Engineering](https://www.figma.com/blog/engineering/)                       | `figma`      | 39 articles (2023-05-02 → 2026-06-30) — single curated page, no pagination                                                                                                                       |
-| [Datadog Engineering](https://www.datadoghq.com/blog/engineering/)                 | `datadog`    | 96 articles (2016-07-11 → 2026-07-01)                                                                                                                                                            |
+Hit **+ Add** in the site header. The form takes a title, URL, date, source,
+and tags, and offers two ways to save:
 
-### Not included
+- **Commit to GitHub** — commits the new record straight to
+  `data/entries.json` via the GitHub Contents API. The push triggers the deploy
+  workflow, so the entry is live in about a minute. Needs a token (below).
+- **Copy JSON** — copies the record to your clipboard so you can paste it into
+  the `data/entries.json` array yourself. No token, no setup.
 
-- **Twitter Engineering** — the blog was discontinued in the rebrand to X;
-  `blog.x.com/engineering` is fully gated behind a Cloudflare JS challenge with
-  no server-rendered content, feed, or dated archive reachable without
-  executing browser JS.
-- **GitLab**, **Twilio**, **Reddit** — investigated and skipped: none publish
-  a genuinely engineering-specific blog with real per-item publish dates
-  (as opposed to a general company blog, or a listing with no dates at all).
+Either way the entry shows up in the list immediately, flagged **Pending
+deploy** until the rebuild actually publishes it.
+
+### Token setup for the automatic path
+
+Open the **GitHub token** panel in the form and paste a
+[fine-grained PAT](https://github.com/settings/personal-access-tokens) scoped to
+this repository only, with **Contents: read and write**. Nothing else is needed.
+
+The token is kept in that browser's `localStorage` and sent only to
+`api.github.com`. It is a repo-write credential living in a browser, which is
+the tradeoff for committing without a backend — if you'd rather not keep one
+there, the Copy JSON path does the same job with an extra paste.
+
+## Data format
+
+`data/entries.json` is an array of records. Only `title`, `url`, and
+`publishedAt` are required; `id` is derived from the URL at build time and never
+stored, so re-adding the same URL updates the existing entry instead of
+duplicating it.
+
+```json
+[
+  {
+    "kind": "paper",
+    "title": "Attention Is All You Need",
+    "url": "https://arxiv.org/abs/1706.03762",
+    "source": "Google",
+    "publishedAt": "2017-06-12",
+    "tags": ["ml", "ai"],
+    "addedAt": "2026-08-22T00:00:00.000Z"
+  }
+]
+```
+
+| Field         | Notes                                                                      |
+| ------------- | -------------------------------------------------------------------------- |
+| `kind`        | `"article"` (default) or `"paper"`. Papers get a badge in the list.        |
+| `source`      | The company the entry came from.                                           |
+| `publishedAt` | `YYYY-MM-DD` or a full ISO timestamp.                                      |
+| `tags`        | Free-form. The form suggests a starting set, but anything goes.            |
+| `addedAt`     | When you added it, used for the "updated" line. Defaults to `publishedAt`. |
+
+The file is hand-editable — deleting an entry means deleting its object, which
+is why there is no separate exclusion list any more.
 
 ## Development
 
-See `scraper/` and `frontend/` for the two workspaces. `npm run fetch -w
-scraper` runs the daily RSS fetch across all sources; `npm run backfill -w
-scraper -- <id>` backfills a single source's historical archive where
-supported.
+```sh
+npm install
+npm run dev          # builds articles.json, then serves the site
+npm run lint && npm run format && npm run typecheck
+```
 
-## Curating articles
+A single package at the repo root — no workspaces, no git hooks, no test suite.
+`npm run lint`, `format`, and `typecheck` are the same three checks CI runs, so
+run them yourself before pushing.
 
-Two hand-edited files at the repo root let you clean up the feed without
-touching the scraper's per-source archives directly:
+```
+src/          Vue app — components, composables, lib
+scripts/      buildEntries.ts, articleId.ts (node-only, build time)
+data/         entries.json — the content
+public/       generated articles.json (git-ignored)
+```
 
-- **`data/excluded.json`** — a list of articles to hide and stop re-scraping.
-  Add an entry with either the article's `url` or its `id` (both resolve to
-  the same stable hash used everywhere else):
+`scripts/buildEntries.ts` compiles `data/entries.json` into
+`public/articles.json`. It runs automatically before `dev` and `build`, or on
+demand via `npm run build-data`.
 
-  ```json
-  [
-    {
-      "url": "https://example.com/some-product-post",
-      "note": "product announcement, not technical"
-    }
-  ]
-  ```
+Deploys happen on every push to `main` via `.github/workflows/deploy.yml`.
 
-  Excluded articles are dropped both at the next scrape (so they stop
-  reappearing in `data/articles/<source>.json`) and immediately at the next
-  frontend build (`npm run build -w frontend` runs `mergeArticles.ts`, which
-  reads this file too) — no need to wait for the next scrape to hide one.
+## Historical design notes
 
-- **`data/manual.json`** — articles to add by hand that the scraper missed.
-  Only `title`, `url`, and `publishedAt` are required; `id` is derived from
-  `url` automatically, so if the scraper later picks up the same URL for
-  real, the two entries merge into one (the scraped version wins):
-
-  ```json
-  [{ "title": "...", "url": "...", "publishedAt": "2026-07-10" }]
-  ```
+`docs/superpowers/` holds the original design documents from when this was an
+automated aggregator. They are kept as a record and describe the scraper and tag
+taxonomy that no longer exist.

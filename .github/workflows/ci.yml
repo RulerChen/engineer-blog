@@ -25,5 +25,3 @@ jobs:
         run: npm run format
       - name: Typecheck
         run: npm run typecheck
-      - name: Test
-        run: npm test

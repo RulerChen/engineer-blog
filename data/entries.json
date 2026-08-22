@@ -1,0 +1,38 @@
+[
+  {
+    "kind": "article",
+    "title": "Git at any scale",
+    "url": "https://cursor.com/en-US/blog/git-at-any-scale",
+    "source": "Cursor",
+    "publishedAt": "2026-08-18",
+    "tags": ["git", "distributed-system", "cloud"],
+    "addedAt": "2026-08-22T12:43:59.115Z"
+  },
+  {
+    "kind": "paper",
+    "title": "Attention Is All You Need",
+    "url": "https://arxiv.org/abs/1706.03762",
+    "source": "Google",
+    "publishedAt": "2017-06-12",
+    "tags": ["artificial-intelligence", "machine-learning"],
+    "addedAt": "2026-08-22T00:00:00.000Z"
+  },
+  {
+    "kind": "article",
+    "title": "Designing robust and predictable APIs with idempotency",
+    "url": "https://stripe.com/blog/idempotency",
+    "source": "Stripe",
+    "publishedAt": "2017-02-22",
+    "tags": ["api-design"],
+    "addedAt": "2026-08-22T00:00:00.000Z"
+  },
+  {
+    "kind": "article",
+    "title": "How Discord Stores Billions of Messages",
+    "url": "https://discord.com/blog/how-discord-stores-billions-of-messages",
+    "source": "Discord",
+    "publishedAt": "2017-01-13",
+    "tags": ["database", "distributed-system"],
+    "addedAt": "2026-08-22T00:00:00.000Z"
+  }
+]

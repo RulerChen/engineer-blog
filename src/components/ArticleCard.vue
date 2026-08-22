@@ -1,0 +1,76 @@
+<script setup lang="ts">
+import { computed } from "vue";
+import { avatarHue } from "../lib/avatar.js";
+import { sourceName } from "../lib/sources.js";
+import type { Article } from "../types.js";
+
+const props = withDefaults(
+  defineProps<{ article: Article; bookmarked: boolean; pending?: boolean }>(),
+  { pending: false },
+);
+const emit = defineEmits<{ toggleBookmark: [id: string] }>();
+
+const displayDate = computed(() =>
+  new Date(props.article.publishedAt).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  }),
+);
+
+const avatarLetter = computed(() => {
+  const name = sourceName(props.article.source);
+  return name ? name.charAt(0) : props.article.kind === "paper" ? "¶" : "·";
+});
+
+const avatarStyle = computed(() => {
+  const hue = `oklch(0.55 0.1 ${avatarHue(props.article.source || props.article.kind)})`;
+  return {
+    background: `color-mix(in srgb, ${hue} 16%, var(--card))`,
+    color: `color-mix(in srgb, ${hue} 60%, var(--ink))`,
+    border: `1px solid color-mix(in srgb, ${hue} 30%, transparent)`,
+  };
+});
+</script>
+
+<template>
+  <article class="article-card">
+    <div class="avatar" :style="avatarStyle">
+      {{ avatarLetter }}
+    </div>
+    <div class="body">
+      <div class="meta">
+        <span v-if="article.source" class="company">{{ sourceName(article.source) }}</span>
+        <span v-if="article.source" class="dot">·</span>
+        <time :datetime="article.publishedAt">{{ displayDate }}</time>
+        <span v-if="pending" class="pending-badge">Pending deploy</span>
+      </div>
+      <h2>
+        <a class="title-link" :href="article.url" target="_blank" rel="noopener noreferrer">
+          {{ article.title }}
+        </a>
+      </h2>
+      <div v-if="article.kind === 'paper' || article.tags.length" class="tags">
+        <span v-if="article.kind === 'paper'" class="kind-badge">Paper</span>
+        <span v-for="tag in article.tags" :key="tag" class="tag">{{ tag }}</span>
+      </div>
+    </div>
+    <button
+      class="bookmark-button"
+      :title="bookmarked ? 'Remove bookmark' : 'Save for later'"
+      @click="emit('toggleBookmark', article.id)"
+    >
+      <svg
+        viewBox="0 0 24 24"
+        width="16"
+        height="16"
+        :fill="bookmarked ? 'currentColor' : 'none'"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linejoin="round"
+      >
+        <path d="M6 3.5h12v17l-6-4.2-6 4.2z"></path>
+      </svg>
+    </button>
+  </article>
+</template>

@@ -1,5 +1,5 @@
 node_modules/
 dist/
 coverage/
-frontend/public/articles.json
+public/articles.json
 *.log
