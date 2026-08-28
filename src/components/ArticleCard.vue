@@ -20,11 +20,11 @@ const displayDate = computed(() =>
 
 const avatarLetter = computed(() => {
   const name = sourceName(props.article.source);
-  return name ? name.charAt(0) : props.article.kind === "paper" ? "¶" : "·";
+  return name ? name.charAt(0) : "·";
 });
 
 const avatarStyle = computed(() => {
-  const hue = `oklch(0.55 0.1 ${avatarHue(props.article.source || props.article.kind)})`;
+  const hue = `oklch(0.55 0.1 ${avatarHue(props.article.source)})`;
   return {
     background: `color-mix(in srgb, ${hue} 16%, var(--card))`,
     color: `color-mix(in srgb, ${hue} 60%, var(--ink))`,
@@ -50,8 +50,7 @@ const avatarStyle = computed(() => {
           {{ article.title }}
         </a>
       </h2>
-      <div v-if="article.kind === 'paper' || article.tags.length" class="tags">
-        <span v-if="article.kind === 'paper'" class="kind-badge">Paper</span>
+      <div v-if="article.tags.length" class="tags">
         <span v-for="tag in article.tags" :key="tag" class="tag">{{ tag }}</span>
       </div>
     </div>

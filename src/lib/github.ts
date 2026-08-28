@@ -48,7 +48,7 @@ export function base64ToUtf8(base64: string): string {
 }
 
 export function commitMessage(entry: EntryInput): string {
-  return `data: add ${entry.kind ?? "article"} "${entry.title}"`;
+  return `data: add entry "${entry.title}"`;
 }
 
 /** A GitHub API failure with a message worth showing in the form. */

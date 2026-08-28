@@ -56,21 +56,16 @@ const knownTags = computed(() => topTags(all.value, Infinity).map((t) => t.tag))
 
 const stats = computed(() => {
   if (all.value.length === 0) return "";
-  const lastUpdated = all.value.reduce(
-    (max, a) => (a.addedAt > max ? a.addedAt : max),
-    all.value[0].addedAt,
+  const latest = all.value.reduce(
+    (max, a) => (a.publishedAt > max ? a.publishedAt : max),
+    all.value[0].publishedAt,
   );
-  const date = new Date(lastUpdated).toLocaleDateString("en-US", {
+  const date = new Date(latest).toLocaleDateString("en-US", {
     year: "numeric",
     month: "short",
     day: "numeric",
   });
-  const papers = all.value.filter((a) => a.kind === "paper").length;
-  const kinds =
-    papers > 0
-      ? `${all.value.length - papers} articles · ${papers} papers`
-      : `${all.value.length} articles`;
-  return `${kinds} · updated ${date}`;
+  return `${all.value.length} entries · latest ${date}`;
 });
 
 const shown = computed(() =>
@@ -96,7 +91,7 @@ const emptyText = computed(() => {
     return "Tap the bookmark on any entry to keep it here for later.";
   }
   if (all.value.length === 0) {
-    return "Add the first article or paper with the + button up top.";
+    return "Add the first entry with the + button up top.";
   }
   return "No entries match your filters. Try widening the date range or removing a filter.";
 });
@@ -118,13 +113,11 @@ function onAdded(entry: EntryInput): void {
   pending.value = [
     {
       id: `pending:${entry.url}`,
-      kind: entry.kind ?? "article",
       title: entry.title,
       url: entry.url,
       source: entry.source ?? "",
       publishedAt,
       tags: entry.tags ?? [],
-      addedAt: entry.addedAt ?? publishedAt,
     },
     ...pending.value,
   ];
@@ -150,7 +143,7 @@ onMounted(async () => {
         <div class="logo-mark heading-font">E</div>
         <h1 class="heading-font">Engineer Blog Aggregator</h1>
         <div class="header-spacer"></div>
-        <button class="add-button" title="Add an article or paper" @click="showForm = true">
+        <button class="add-button" title="Add an entry" @click="showForm = true">
           <span class="add-plus">+</span>
           <span class="add-text">Add</span>
         </button>
@@ -197,7 +190,7 @@ onMounted(async () => {
       />
 
       <footer class="site-footer">
-        A hand-curated reading list of engineering writing and papers
+        A hand-curated reading list of engineering writing
         <span v-if="stats">· {{ stats }}</span>
       </footer>
     </div>

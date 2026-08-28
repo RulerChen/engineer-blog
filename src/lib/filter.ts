@@ -76,7 +76,3 @@ export function topTags(articles: Article[], limit = 30): { tag: string; count: 
     .toSorted((a, b) => b.count - a.count || a.tag.localeCompare(b.tag))
     .slice(0, limit);
 }
-
-export function isNew(article: Article, now = new Date()): boolean {
-  return now.getTime() - Date.parse(article.addedAt) < DAY_MS;
-}

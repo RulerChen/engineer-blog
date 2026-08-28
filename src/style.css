@@ -666,15 +666,6 @@ input::placeholder {
 }
 
 /* Card badges */
-.article-card .tags .kind-badge {
-  font-size: 11.5px;
-  font-weight: 800;
-  letter-spacing: 0.03em;
-  padding: 3px 10px;
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--accent) 14%, transparent);
-  color: var(--accent);
-}
 .article-card .meta .pending-badge {
   font-size: 10.5px;
   font-weight: 800;
@@ -790,32 +781,6 @@ input::placeholder {
   font-size: 12px;
   font-weight: 700;
   color: var(--accent);
-}
-
-/* Article / paper picker inside the form */
-.kind-toggle {
-  display: inline-flex;
-  gap: 4px;
-  background: var(--chip);
-  border-radius: 999px;
-  padding: 4px;
-  align-self: flex-start;
-}
-.kind-option {
-  padding: 7px 20px;
-  border-radius: 999px;
-  border: none;
-  background: transparent;
-  color: var(--muted);
-  font-family: inherit;
-  font-size: 13px;
-  font-weight: 800;
-  cursor: pointer;
-}
-.kind-option.active {
-  background: var(--card);
-  color: var(--accent);
-  box-shadow: var(--shadow);
 }
 
 /* Tag picker */

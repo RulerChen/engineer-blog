@@ -48,7 +48,7 @@ const duplicate = computed(() => {
 });
 
 /** The record that would be written — also what the copy-JSON path hands over. */
-const preview = computed(() => draftToEntry(draft.value, new Date().toISOString()));
+const preview = computed(() => draftToEntry(draft.value));
 const previewJson = computed(() => serializeEntry(preview.value));
 
 /** Tags matching what has been typed so far, offered under the input. */
@@ -142,23 +142,6 @@ function onClearToken(): void {
       </header>
 
       <div class="modal-body">
-        <div class="kind-toggle">
-          <button
-            class="kind-option"
-            :class="{ active: draft.kind === 'article' }"
-            @click="draft.kind = 'article'"
-          >
-            Article
-          </button>
-          <button
-            class="kind-option"
-            :class="{ active: draft.kind === 'paper' }"
-            @click="draft.kind = 'paper'"
-          >
-            Paper
-          </button>
-        </div>
-
         <label class="field">
           <span class="field-label">Title</span>
           <input v-model="draft.title" type="text" placeholder="What is it called?" />

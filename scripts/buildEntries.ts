@@ -11,16 +11,13 @@ function toIso(value: string): string {
 }
 
 export function toArticle(input: EntryInput): Article {
-  const publishedAt = toIso(input.publishedAt);
   return {
     id: articleId(input.url),
-    kind: input.kind ?? "article",
     title: input.title,
     url: input.url,
     source: input.source ?? "",
-    publishedAt,
+    publishedAt: toIso(input.publishedAt),
     tags: input.tags ?? [],
-    addedAt: input.addedAt ? toIso(input.addedAt) : publishedAt,
   };
 }
 
