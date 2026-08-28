@@ -25,6 +25,6 @@
     "url": "https://discord.com/blog/how-discord-stores-billions-of-messages",
     "source": "Discord",
     "publishedAt": "2017-01-13",
-    "tags": ["database", "distributed-system"]
+    "tags": ["cassandra", "database", "distributed-system"]
   }
 ]
