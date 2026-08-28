@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import type { FilterState } from "../lib/filter.js";
+import { seriesLabel } from "../lib/series.js";
 import { sourceName } from "../lib/sources.js";
 
 const props = defineProps<{
@@ -190,10 +191,14 @@ const dateLabel = computed(() => {
   }
 });
 
+/** The one filter with no dropdown of its own — it is set by clicking a card's series row. */
+const activeSeries = computed(() => (props.state.series ? seriesLabel(props.state.series) : ""));
+
 const hasFilters = computed(
   () =>
     props.state.companies.length > 0 ||
     props.state.tags.length > 0 ||
+    props.state.series !== null ||
     props.state.datePreset !== "all" ||
     props.state.query.trim() !== "",
 );
@@ -202,6 +207,7 @@ function clearAll(): void {
   props.state.query = "";
   props.state.companies = [];
   props.state.tags = [];
+  props.state.series = null;
   props.state.datePreset = "all";
   props.state.dateFrom = null;
   props.state.dateTo = null;
@@ -300,6 +306,16 @@ function clearAll(): void {
         </div>
       </div>
     </div>
+
+    <button
+      v-if="activeSeries"
+      class="series-active"
+      title="Stop showing only this series"
+      @click="state.series = null"
+    >
+      <span>{{ activeSeries }}</span>
+      <span class="series-x">✕</span>
+    </button>
 
     <button v-if="hasFilters" class="filter-clear-all" @click="clearAll">Clear all</button>
   </div>

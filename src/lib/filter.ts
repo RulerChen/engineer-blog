@@ -6,6 +6,8 @@ export interface FilterState {
   query: string;
   companies: string[];
   tags: string[];
+  /** Series slug to narrow to, or null for every entry. Set by clicking a card's series row. */
+  series: string | null;
   datePreset: DatePreset;
   dateFrom: string | null; // YYYY-MM-DD, custom preset only
   dateTo: string | null; // YYYY-MM-DD, custom preset only
@@ -16,6 +18,7 @@ export function emptyFilter(): FilterState {
     query: "",
     companies: [],
     tags: [],
+    series: null,
     datePreset: "all",
     dateFrom: null,
     dateTo: null,
@@ -51,6 +54,7 @@ export function applyFilters(articles: Article[], state: FilterState, now = new 
   return articles.filter((article) => {
     if (companies.size > 0 && !companies.has(article.source)) return false;
     if (tags.size > 0 && !article.tags.some((tag) => tags.has(tag))) return false;
+    if (state.series && article.series !== state.series) return false;
     const published = Date.parse(article.publishedAt);
     if (published < from || published >= to) return false;
     if (query && !article.title.toLowerCase().includes(query)) return false;

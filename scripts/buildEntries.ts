@@ -11,7 +11,7 @@ function toIso(value: string): string {
 }
 
 export function toArticle(input: EntryInput): Article {
-  return {
+  const article: Article = {
     id: articleId(input.url),
     title: input.title,
     url: input.url,
@@ -19,6 +19,10 @@ export function toArticle(input: EntryInput): Article {
     publishedAt: toIso(input.publishedAt),
     tags: input.tags ?? [],
   };
+  // Left off entirely when absent — most entries are standalone, and articles.json
+  // is shipped to every visitor.
+  if (input.series) article.series = input.series;
+  return article;
 }
 
 /**

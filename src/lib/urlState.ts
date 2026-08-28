@@ -7,6 +7,7 @@ export function stateToQuery(state: FilterState): string {
   if (state.query) params.set("q", state.query);
   if (state.companies.length > 0) params.set("companies", state.companies.join(","));
   if (state.tags.length > 0) params.set("tags", state.tags.join(","));
+  if (state.series) params.set("series", state.series);
   if (state.datePreset !== "all") params.set("date", state.datePreset);
   if (state.datePreset === "custom") {
     if (state.dateFrom) params.set("from", state.dateFrom);
@@ -25,6 +26,7 @@ export function queryToState(search: string): FilterState {
     query: params.get("q") ?? "",
     companies: list("companies"),
     tags: list("tags"),
+    series: params.get("series") || null,
     datePreset,
     dateFrom: datePreset === "custom" ? params.get("from") : null,
     dateTo: datePreset === "custom" ? params.get("to") : null,

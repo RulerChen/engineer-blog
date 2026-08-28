@@ -1,3 +1,4 @@
+import { normalizeSeries } from "./series.js";
 import { tryNormalizeUrl } from "./url.js";
 
 /**
@@ -10,6 +11,8 @@ export interface EntryInput {
   url: string;
   source?: string;
   publishedAt: string; // YYYY-MM-DD or full ISO 8601
+  /** Slug grouping this entry with its other parts. Same slug = same series. */
+  series?: string;
   tags?: string[];
 }
 
@@ -19,6 +22,7 @@ export interface EntryDraft {
   url: string;
   source: string;
   publishedAt: string;
+  series: string;
   tags: string[];
 }
 
@@ -28,6 +32,7 @@ export function emptyDraft(): EntryDraft {
     url: "",
     source: "",
     publishedAt: "",
+    series: "",
     tags: [],
   };
 }
@@ -65,18 +70,20 @@ export function hasErrors(errors: DraftErrors): boolean {
  */
 export function draftToEntry(draft: EntryDraft): EntryInput {
   const source = draft.source.trim();
+  const series = normalizeSeries(draft.series);
   const entry: EntryInput = {
     title: draft.title.trim(),
     url: draft.url.trim(),
     publishedAt: draft.publishedAt,
   };
   if (source) entry.source = source;
+  if (series) entry.series = series;
   if (draft.tags.length > 0) entry.tags = [...draft.tags];
   return entry;
 }
 
 /** Stable key order, so the JSON stays readable and diffs stay minimal. */
-const KEY_ORDER: (keyof EntryInput)[] = ["title", "url", "source", "publishedAt", "tags"];
+const KEY_ORDER: (keyof EntryInput)[] = ["title", "url", "source", "publishedAt", "series", "tags"];
 
 /**
  * One record in its canonical on-disk shape: fixed key order, tags sorted

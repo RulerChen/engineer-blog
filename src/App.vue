@@ -9,6 +9,7 @@ import { useBookmarks } from "./composables/useBookmarks.js";
 import { useTheme } from "./composables/useTheme.js";
 import type { EntryInput } from "./lib/entry.js";
 import { topTags } from "./lib/filter.js";
+import { buildSeriesIndex, knownSeries } from "./lib/series.js";
 import { sourceName } from "./lib/sources.js";
 import { normalizeUrl } from "./lib/url.js";
 import type { Article } from "./types.js";
@@ -36,6 +37,12 @@ const { state, filtered, companies, tags } = useArticleFilter(all);
 const { theme, toggleTheme } = useTheme();
 const { bookmarks, toggleBookmark } = useBookmarks();
 
+/**
+ * Built from every entry, not the filtered view, so a card still says "Part 2 of
+ * 4" while a company or tag filter is hiding the other three.
+ */
+const seriesIndex = computed(() => buildSeriesIndex(all.value));
+
 const pendingIds = computed(() => pending.value.map((a) => a.id));
 const knownSources = computed(() =>
   [...new Set(all.value.map((a) => a.source).filter(Boolean))].toSorted((a, b) =>
@@ -53,6 +60,8 @@ const existingUrls = computed(() =>
 );
 /** Every tag already in use, most-used first, so the form suggests real ones. */
 const knownTags = computed(() => topTags(all.value, Infinity).map((t) => t.tag));
+/** Same idea for series: only slugs already in the data, so parts actually meet up. */
+const knownSeriesIds = computed(() => knownSeries(all.value));
 
 const stats = computed(() => {
   if (all.value.length === 0) return "";
@@ -68,9 +77,15 @@ const stats = computed(() => {
   return `${all.value.length} entries · latest ${date}`;
 });
 
-const shown = computed(() =>
-  viewSaved.value ? filtered.value.filter((a) => bookmarks.value.includes(a.id)) : filtered.value,
-);
+const shown = computed(() => {
+  const list = viewSaved.value
+    ? filtered.value.filter((a) => bookmarks.value.includes(a.id))
+    : filtered.value;
+  // Narrowed to one series, newest-first is backwards: it is a reading list now.
+  return state.series ? list.toReversed() : list;
+});
+
+const orderLabel = computed(() => (state.series ? "in series order" : "newest first"));
 
 const countLabel = computed(
   () =>
@@ -100,9 +115,17 @@ function clearFilters(): void {
   state.query = "";
   state.companies = [];
   state.tags = [];
+  state.series = null;
   state.datePreset = "all";
   state.dateFrom = null;
   state.dateTo = null;
+}
+
+/** Reading one series start to finish — from a card's series row. */
+function selectSeries(id: string): void {
+  state.series = id;
+  viewSaved.value = false;
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 /** Mirror the build script's mapping so a just-committed entry renders like the real thing. */
@@ -117,6 +140,7 @@ function onAdded(entry: EntryInput): void {
       url: entry.url,
       source: entry.source ?? "",
       publishedAt,
+      series: entry.series,
       tags: entry.tags ?? [],
     },
     ...pending.value,
@@ -175,11 +199,12 @@ onMounted(async () => {
             <span>{{ savedTabLabel }}</span>
           </button>
         </div>
-        <span class="count-label">{{ countLabel }} · newest first</span>
+        <span class="count-label">{{ countLabel }} · {{ orderLabel }}</span>
       </div>
 
       <ArticleList
         :articles="shown"
+        :series-index="seriesIndex"
         :bookmarked-ids="bookmarks"
         :pending-ids="pendingIds"
         :empty-title="emptyTitle"
@@ -187,6 +212,7 @@ onMounted(async () => {
         :show-clear-button="!viewSaved && all.length > 0"
         @toggle-bookmark="toggleBookmark"
         @clear-filters="clearFilters"
+        @select-series="selectSeries"
       />
 
       <footer class="site-footer">
@@ -199,6 +225,7 @@ onMounted(async () => {
       v-if="showForm"
       :known-sources="knownSources"
       :known-tags="knownTags"
+      :known-series="knownSeriesIds"
       :existing-urls="existingUrls"
       @close="showForm = false"
       @added="onAdded"

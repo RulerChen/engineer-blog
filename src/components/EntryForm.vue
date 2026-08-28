@@ -16,12 +16,14 @@ import {
   REPO_OWNER,
   saveToken,
 } from "../lib/github.js";
+import { normalizeSeries, seriesLabel } from "../lib/series.js";
 import { normalizeTag, suggestTags } from "../lib/tags.js";
 import { tryNormalizeUrl } from "../lib/url.js";
 
 const props = defineProps<{
   knownSources: string[];
   knownTags: string[];
+  knownSeries: string[];
   existingUrls: string[];
 }>();
 const emit = defineEmits<{ close: []; added: [entry: EntryInput] }>();
@@ -54,6 +56,12 @@ const previewJson = computed(() => serializeEntry(preview.value));
 /** Tags matching what has been typed so far, offered under the input. */
 const tagSuggestions = computed(() =>
   suggestTags(tagInput.value, props.knownTags, draft.value.tags),
+);
+
+/** What the slug will become once saved — typing "Storing Messages" still joins the series. */
+const seriesSlug = computed(() => normalizeSeries(draft.value.series));
+const seriesIsNew = computed(
+  () => seriesSlug.value !== "" && !props.knownSeries.includes(seriesSlug.value),
 );
 
 /** True once the typed tag is new — the input itself becomes the "add this" option. */
@@ -208,6 +216,23 @@ function onClearToken(): void {
             </button>
           </div>
         </div>
+
+        <label class="field">
+          <span class="field-label">Series <span class="field-optional">optional</span></span>
+          <input
+            v-model="draft.series"
+            type="text"
+            list="known-series"
+            placeholder="Group sequels under one slug, e.g. discord-message-storage"
+          />
+          <datalist id="known-series">
+            <option v-for="id in props.knownSeries" :key="id" :value="id"></option>
+          </datalist>
+          <span v-if="seriesSlug" class="field-hint">
+            Saved as <code>{{ seriesSlug }}</code> — shows as “{{ seriesLabel(seriesSlug) }}”.
+            {{ seriesIsNew ? "New series; the card links up once a second part is added." : "" }}
+          </span>
+        </label>
 
         <details class="token-panel" :open="showToken">
           <summary>GitHub token {{ token ? "· saved" : "· not set" }}</summary>

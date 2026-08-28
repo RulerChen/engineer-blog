@@ -1,14 +1,21 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { avatarHue } from "../lib/avatar.js";
+import type { Series } from "../lib/series.js";
 import { sourceName } from "../lib/sources.js";
 import type { Article } from "../types.js";
 
 const props = withDefaults(
-  defineProps<{ article: Article; bookmarked: boolean; pending?: boolean }>(),
-  { pending: false },
+  defineProps<{
+    article: Article;
+    bookmarked: boolean;
+    pending?: boolean;
+    /** The series this entry belongs to, if it belongs to one with other parts. */
+    series?: Series;
+  }>(),
+  { pending: false, series: undefined },
 );
-const emit = defineEmits<{ toggleBookmark: [id: string] }>();
+const emit = defineEmits<{ toggleBookmark: [id: string]; selectSeries: [id: string] }>();
 
 const displayDate = computed(() =>
   new Date(props.article.publishedAt).toLocaleDateString("en-US", {
@@ -17,6 +24,20 @@ const displayDate = computed(() =>
     day: "numeric",
   }),
 );
+
+/** Where this entry sits in its series, and the parts either side of it. */
+const seriesPart = computed(() => {
+  const series = props.series;
+  if (!series) return null;
+  const index = series.parts.findIndex((part) => part.id === props.article.id);
+  if (index === -1) return null;
+  return {
+    number: index + 1,
+    total: series.parts.length,
+    previous: series.parts[index - 1] ?? null,
+    next: series.parts[index + 1] ?? null,
+  };
+});
 
 const avatarLetter = computed(() => {
   const name = sourceName(props.article.source);
@@ -52,6 +73,48 @@ const avatarStyle = computed(() => {
       </h2>
       <div v-if="article.tags.length" class="tags">
         <span v-for="tag in article.tags" :key="tag" class="tag">{{ tag }}</span>
+      </div>
+      <div v-if="series && seriesPart" class="series-strip">
+        <button
+          class="series-name"
+          :title="`Show only ${series.label}`"
+          @click="emit('selectSeries', series.id)"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            width="12"
+            height="12"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M4 6h10M4 12h10M4 18h10M18 5v14M18 19l-2.5-2.5M18 19l2.5-2.5"></path>
+          </svg>
+          <span>{{ series.label }}</span>
+        </button>
+        <span class="series-part">Part {{ seriesPart.number }} of {{ seriesPart.total }}</span>
+        <a
+          v-if="seriesPart.previous"
+          class="series-sibling"
+          :href="seriesPart.previous.url"
+          :title="seriesPart.previous.title"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ← {{ seriesPart.previous.title }}
+        </a>
+        <a
+          v-if="seriesPart.next"
+          class="series-sibling"
+          :href="seriesPart.next.url"
+          :title="seriesPart.next.title"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {{ seriesPart.next.title }} →
+        </a>
       </div>
     </div>
     <button

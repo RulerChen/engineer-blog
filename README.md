@@ -6,8 +6,7 @@ This used to aggregate ~30 company RSS feeds automatically. That produced a lot 
 
 ## Adding an entry
 
-Hit **+ Add** in the site header. The form takes a title, URL, date, source,
-and tags, and offers two ways to save:
+Hit **+ Add** in the site header. The form takes a title, URL, date, source, series, and tags, and offers two ways to save:
 
 - **Commit to GitHub** — commits the new record straight to `data/entries.json` via the GitHub Contents API. The push triggers the deploy workflow, so the entry is live in about a minute. Needs a token (below).
 - **Copy JSON** — copies the record to your clipboard so you can paste it into the `data/entries.json` array yourself. No token, no setup.
@@ -25,18 +24,26 @@ Either way the entry shows up in the list immediately, flagged **Pending deploy*
     "url": "https://arxiv.org/abs/1706.03762",
     "source": "Google",
     "publishedAt": "2017-06-12",
+    "series": "google-transformers",
     "tags": ["ml", "ai"]
   }
 ]
 ```
 
-| Field         | Notes                                                           |
-| ------------- | --------------------------------------------------------------- |
-| `source`      | The company the entry came from.                                |
-| `publishedAt` | `YYYY-MM-DD` or a full ISO timestamp.                           |
-| `tags`        | Free-form. The form suggests a starting set, but anything goes. |
+| Field         | Notes                                                                |
+| ------------- | -------------------------------------------------------------------- |
+| `source`      | The company the entry came from.                                     |
+| `publishedAt` | `YYYY-MM-DD` or a full ISO timestamp.                                |
+| `series`      | Optional slug. See below.                                            |
+| `tags`        | Free-form. The form suggests tags already in use, but anything goes. |
 
 The file is hand-editable — deleting an entry means deleting its object, which is why there is no separate exclusion list any more.
+
+## Series
+
+Give each part of a sequel the same `series` slug and the cards link up: `Discord message storage · Part 1 of 2`, with links to the parts either side, and clicking the name filters the list to that series in reading order. Order comes from `publishedAt` — there is no ordering field and no separate index.
+
+Scope the slug to its blog (`discord-message-storage`, not `storing-messages`) or it collides the moment another company writes about the same thing. Slugs normalize like tags, the display name is derived from them, and a slug used by only one entry is ignored — so a typo quietly does nothing.
 
 ## Development
 

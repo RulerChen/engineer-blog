@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import { computed, ref, watch } from "vue";
+import type { Series } from "../lib/series.js";
 import type { Article } from "../types.js";
 import ArticleCard from "./ArticleCard.vue";
 
 const props = withDefaults(
   defineProps<{
     articles: Article[];
+    /** Series slug → its parts, built from the full dataset so part numbers survive filtering. */
+    seriesIndex?: Map<string, Series>;
     bookmarkedIds?: string[];
     pendingIds?: string[];
     emptyTitle?: string;
@@ -13,6 +16,7 @@ const props = withDefaults(
     showClearButton?: boolean;
   }>(),
   {
+    seriesIndex: () => new Map(),
     bookmarkedIds: () => [],
     pendingIds: () => [],
     emptyTitle: "No articles found",
@@ -21,7 +25,11 @@ const props = withDefaults(
   },
 );
 
-const emit = defineEmits<{ toggleBookmark: [id: string]; clearFilters: [] }>();
+const emit = defineEmits<{
+  toggleBookmark: [id: string];
+  clearFilters: [];
+  selectSeries: [id: string];
+}>();
 
 const INITIAL_VISIBLE = 20;
 const LOAD_INCREMENT = 40;
@@ -57,7 +65,9 @@ const hasMore = computed(() => visibleCount.value < props.articles.length);
           :article="article"
           :bookmarked="bookmarkedSet.has(article.id)"
           :pending="pendingSet.has(article.id)"
+          :series="article.series ? seriesIndex.get(article.series) : undefined"
           @toggle-bookmark="emit('toggleBookmark', $event)"
+          @select-series="emit('selectSeries', $event)"
         />
       </div>
       <div v-if="hasMore" class="load-more-wrap">
