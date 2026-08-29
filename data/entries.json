@@ -1,10 +1,26 @@
 [
   {
-    "title": "Git at any scale",
-    "url": "https://cursor.com/en-US/blog/git-at-any-scale",
+    "title": "1.5x faster MoE training with custom MXFP8 kernels",
+    "url": "https://cursor.com/blog/kernels",
     "source": "Cursor",
-    "publishedAt": "2026-08-18",
-    "tags": ["git", "s3"]
+    "publishedAt": "2025-08-29",
+    "series": "cursor-moe-kernels",
+    "tags": ["ai-training"]
+  },
+  {
+    "title": "Fast regex search: indexing text for agent tools",
+    "url": "https://cursor.com/blog/fast-regex-search",
+    "source": "Cursor",
+    "publishedAt": "2026-03-23",
+    "tags": ["regex"]
+  },
+  {
+    "title": "Mixture-of-Kittens: our open-source MoE megakernel for NVL72s",
+    "url": "https://cursor.com/blog/mixture-of-kittens",
+    "source": "Cursor",
+    "publishedAt": "2026-08-04",
+    "series": "cursor-moe-kernels",
+    "tags": ["ai-training"]
   },
   {
     "title": "How Discord Stores Billions of Messages",
@@ -172,6 +188,13 @@
     "url": "https://openai.com/index/mrc-supercomputer-networking",
     "source": "OpenAI",
     "publishedAt": "2026-05-05",
-    "tags": ["networking", "ai-infra"]
+    "tags": ["networking", "ai-training"]
+  },
+  {
+    "title": "Git at any scale",
+    "url": "https://cursor.com/blog/git-at-any-scale",
+    "source": "Cursor",
+    "publishedAt": "2026-08-18",
+    "tags": ["git", "s3"]
   }
 ]
