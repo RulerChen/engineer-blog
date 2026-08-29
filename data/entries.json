@@ -28,7 +28,7 @@
     "source": "Discord",
     "publishedAt": "2017-07-06",
     "series": "discord-elixir-scaling",
-    "tags": ["elixir", "erlang"]
+    "tags": ["elixir"]
   },
   {
     "title": "How Discord Handles Two and Half Million Concurrent Voice Users using WebRTC",
@@ -57,7 +57,7 @@
     "source": "Discord",
     "publishedAt": "2023-10-25",
     "series": "discord-elixir-scaling",
-    "tags": ["elixir", "erlang"]
+    "tags": ["elixir"]
   },
   {
     "title": "How Discord Reduced Websocket Traffic by 40%",

@@ -21,6 +21,11 @@ export interface Article {
   type: EntryType;
   /** Company or blog the entry came from. */
   source: string;
+  /**
+   * File name of the site's icon under public/icons/, when one has been fetched.
+   * Absent for a domain no icon could be found for — the card letters it instead.
+   */
+  icon?: string;
   publishedAt: string; // ISO 8601
   /** Series slug shared with the other parts, when the entry is one of several. */
   series?: string;

@@ -1,8 +1,9 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import type { EntryInput } from "../src/lib/entry.js";
 import { normalizeEntryType } from "../src/lib/entryType.js";
+import { iconDomain } from "../src/lib/icon.js";
 import type { Article } from "../src/types.js";
 import { articleId } from "./articleId.js";
 
@@ -11,7 +12,17 @@ function toIso(value: string): string {
   return /^\d{4}-\d{2}-\d{2}$/.test(value) ? `${value}T00:00:00.000Z` : value;
 }
 
-export function toArticle(input: EntryInput): Article {
+/**
+ * Domain -> icon file name, read off the files fetchIcons.ts left in
+ * public/icons/. The directory listing *is* the manifest: a hand-dropped SVG
+ * for a site whose favicon looks bad needs no second place to be registered.
+ */
+export async function readIcons(dir: string): Promise<Map<string, string>> {
+  const files = await readdir(dir).catch(() => [] as string[]);
+  return new Map(files.map((file) => [file.replace(/\.[^.]+$/, ""), file]));
+}
+
+export function toArticle(input: EntryInput, icons?: Map<string, string>): Article {
   const article: Article = {
     id: articleId(input.url),
     title: input.title,
@@ -26,6 +37,9 @@ export function toArticle(input: EntryInput): Article {
   // write-ups, and articles.json is shipped to every visitor.
   if (input.series) article.series = input.series;
   if (input.commentary?.length) article.commentary = input.commentary;
+  const domain = iconDomain(input.url);
+  const icon = domain ? icons?.get(domain) : undefined;
+  if (icon) article.icon = icon;
   return article;
 }
 
@@ -34,10 +48,10 @@ export function toArticle(input: EntryInput): Article {
  * the same url win (so re-adding an entry updates it), and the result is sorted
  * newest-first because the UI renders it in order.
  */
-export function buildArticles(inputs: EntryInput[]): Article[] {
+export function buildArticles(inputs: EntryInput[], icons?: Map<string, string>): Article[] {
   const byId = new Map<string, Article>();
   for (const input of inputs) {
-    const article = toArticle(input);
+    const article = toArticle(input, icons);
     byId.set(article.id, article);
   }
   return [...byId.values()].toSorted(
@@ -49,7 +63,8 @@ async function main(): Promise<void> {
   const entriesPath = fileURLToPath(new URL("../data/entries.json", import.meta.url));
   const outDir = fileURLToPath(new URL("../public/", import.meta.url));
   const inputs = JSON.parse(await readFile(entriesPath, "utf8")) as EntryInput[];
-  const articles = buildArticles(inputs);
+  const icons = await readIcons(join(outDir, "icons"));
+  const articles = buildArticles(inputs, icons);
   await mkdir(outDir, { recursive: true });
   await writeFile(join(outDir, "articles.json"), JSON.stringify(articles), "utf8");
   console.log(`wrote ${articles.length} entries`);

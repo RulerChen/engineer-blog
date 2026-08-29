@@ -1,9 +1,10 @@
 /**
  * What an entry *is*, as opposed to what it is about: a blog post, an academic
- * paper, a book, a recorded talk. Kept to a closed set — unlike tags, this is a
- * shape the card draws an icon for, so a new value needs an icon to go with it.
+ * paper, a book, a recorded talk, a taught course. Kept to a closed set — unlike
+ * tags, this is a shape the card draws an icon for, so a new value needs an icon
+ * to go with it.
  */
-export type EntryType = "article" | "paper" | "book" | "video";
+export type EntryType = "article" | "paper" | "book" | "video" | "course";
 
 export const DEFAULT_ENTRY_TYPE: EntryType = "article";
 
@@ -47,6 +48,13 @@ export const ENTRY_TYPES: EntryTypeMeta[] = [
     id: "video",
     label: "Video",
     paths: ["M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z", "M10.5 8.5 16 12l-5.5 3.5z"],
+  },
+  {
+    // A screen on a stand, not another play triangle — a course has to read
+    // apart from a video at 15px, and the two are the likeliest pair to confuse.
+    id: "course",
+    label: "Course",
+    paths: ["M2 3h20", "M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3", "m7 21 5-5 5 5"],
   },
 ];
 

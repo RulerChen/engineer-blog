@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, ref } from "vue";
 import { avatarHue } from "../lib/avatar.js";
 import { entryTypeMeta } from "../lib/entryType.js";
 import type { Series } from "../lib/series.js";
@@ -49,8 +49,23 @@ const avatarLetter = computed(() => {
   return name ? name.charAt(0) : "·";
 });
 
+/**
+ * A cached icon can still 404 in the browser — it was deleted, or the entry is
+ * one added in this session and never built. One failure per card is enough to
+ * fall back to the letter for good.
+ */
+const iconBroken = ref(false);
+const iconSrc = computed(() => {
+  if (!props.article.icon || iconBroken.value) return null;
+  return `${import.meta.env.BASE_URL}icons/${props.article.icon}`;
+});
+
 const avatarStyle = computed(() => {
   const hue = `oklch(0.55 0.1 ${avatarHue(props.article.source)})`;
+  // A logo carries its own shape and colour, so it sits bare on the card — the
+  // tint and the plate would both read as the brand's. The hue is kept for the
+  // lettered fallback, which needs the frame to look like anything at all.
+  if (iconSrc.value) return {};
   return {
     background: `color-mix(in srgb, ${hue} 16%, var(--card))`,
     color: `color-mix(in srgb, ${hue} 60%, var(--ink))`,
@@ -62,7 +77,15 @@ const avatarStyle = computed(() => {
 <template>
   <article class="article-card">
     <div class="avatar" :style="avatarStyle">
-      {{ avatarLetter }}
+      <img
+        v-if="iconSrc"
+        :src="iconSrc"
+        alt=""
+        loading="lazy"
+        decoding="async"
+        @error="iconBroken = true"
+      />
+      <template v-else>{{ avatarLetter }}</template>
     </div>
     <div class="body">
       <div class="meta">

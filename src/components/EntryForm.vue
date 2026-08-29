@@ -21,10 +21,10 @@ import {
 import { normalizeSeries, seriesLabel } from "../lib/series.js";
 import { normalizeTag, suggestTags } from "../lib/tags.js";
 import { tryNormalizeUrl } from "../lib/url.js";
+import DatePicker from "./DatePicker.vue";
 import EntryTypeIcon from "./EntryTypeIcon.vue";
 
 const props = defineProps<{
-  knownSources: string[];
   knownTags: string[];
   knownSeries: string[];
   existingUrls: string[];
@@ -55,6 +55,31 @@ const duplicate = computed(() => {
 /** The record that would be written — also what the copy-JSON path hands over. */
 const preview = computed(() => draftToEntry(draft.value));
 const previewJson = computed(() => serializeEntry(preview.value));
+
+/**
+ * Series slugs matching what has been typed, offered as chips. A slug has to
+ * match an existing one exactly to group with it, so the suggestions are the
+ * point of the field — but only once there is something to match: an untouched
+ * field listing every series in the data is noise, and most entries are not
+ * part of one. `<datalist>` did this natively, but its dropdown is the
+ * browser's and cannot be themed. Matching is case-insensitive; the suggestion
+ * keeps the curated spelling.
+ */
+function matching(query: string, known: string[], limit = 6): string[] {
+  const q = query.trim().toLowerCase();
+  if (!q) return [];
+  return known
+    .filter((name) => name.toLowerCase() !== q)
+    .filter((name) => name.toLowerCase().includes(q))
+    .toSorted((a, b) => {
+      const aPrefix = a.toLowerCase().startsWith(q) ? 0 : 1;
+      const bPrefix = b.toLowerCase().startsWith(q) ? 0 : 1;
+      return aPrefix - bPrefix || a.length - b.length || a.localeCompare(b);
+    })
+    .slice(0, limit);
+}
+
+const seriesSuggestions = computed(() => matching(draft.value.series, props.knownSeries));
 
 /** Tags matching what has been typed so far, offered under the input. */
 const tagSuggestions = computed(() =>
@@ -202,17 +227,14 @@ function onClearToken(): void {
             <input
               v-model="draft.source"
               type="text"
-              list="known-sources"
+              autocomplete="off"
               placeholder="Netflix, Figma, Google…"
             />
-            <datalist id="known-sources">
-              <option v-for="name in props.knownSources" :key="name" :value="name"></option>
-            </datalist>
           </label>
 
           <label class="field">
             <span class="field-label">Published</span>
-            <input v-model="draft.publishedAt" type="date" />
+            <DatePicker v-model="draft.publishedAt" />
             <span v-if="showError('publishedAt')" class="field-error">
               {{ showError("publishedAt") }}
             </span>
@@ -253,12 +275,19 @@ function onClearToken(): void {
           <input
             v-model="draft.series"
             type="text"
-            list="known-series"
+            autocomplete="off"
             placeholder="Group sequels under one slug, e.g. discord-message-storage"
           />
-          <datalist id="known-series">
-            <option v-for="id in props.knownSeries" :key="id" :value="id"></option>
-          </datalist>
+          <div v-if="seriesSuggestions.length" class="chip-suggestions">
+            <button
+              v-for="id in seriesSuggestions"
+              :key="id"
+              class="tag-chip"
+              @click="draft.series = id"
+            >
+              {{ id }}
+            </button>
+          </div>
           <span v-if="seriesSlug" class="field-hint">
             Saved as <code>{{ seriesSlug }}</code> — shows as “{{ seriesLabel(seriesSlug) }}”.
             {{ seriesIsNew ? "New series; the card links up once a second part is added." : "" }}

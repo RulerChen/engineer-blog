@@ -11,7 +11,6 @@ import type { EntryInput } from "./lib/entry.js";
 import { normalizeEntryType } from "./lib/entryType.js";
 import { topTags } from "./lib/filter.js";
 import { buildSeriesIndex, knownSeries } from "./lib/series.js";
-import { sourceName } from "./lib/sources.js";
 import { normalizeUrl } from "./lib/url.js";
 import type { Article } from "./types.js";
 
@@ -45,11 +44,6 @@ const { bookmarks, toggleBookmark } = useBookmarks();
 const seriesIndex = computed(() => buildSeriesIndex(all.value));
 
 const pendingIds = computed(() => pending.value.map((a) => a.id));
-const knownSources = computed(() =>
-  [...new Set(all.value.map((a) => a.source).filter(Boolean))].toSorted((a, b) =>
-    sourceName(a).localeCompare(sourceName(b)),
-  ),
-);
 const existingUrls = computed(() =>
   all.value.flatMap((a) => {
     try {
@@ -218,7 +212,6 @@ onMounted(async () => {
 
     <EntryForm
       v-if="showForm"
-      :known-sources="knownSources"
       :known-tags="knownTags"
       :known-series="knownSeriesIds"
       :existing-urls="existingUrls"

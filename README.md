@@ -52,7 +52,7 @@ The file is hand-editable — deleting an entry means deleting its object, which
 
 ## Types
 
-`type` is one of `article`, `paper`, `book`, `video` — what an entry _is_, as opposed to `tags`, which say what it is about. The card draws it as an icon at the front of the meta row and leaves the filter row alone: it labels an entry, it does not narrow the list.
+`type` is one of `article`, `paper`, `book`, `video`, `course` — what an entry _is_, as opposed to `tags`, which say what it is about. The card draws it as an icon at the front of the meta row and leaves the filter row alone: it labels an entry, it does not narrow the list.
 
 Unlike tags the set is closed, because every value needs an icon drawn for it in `src/lib/entryType.ts`. `article` is the default and is never written to disk — leaving it off and writing `"type": "article"` produce the same record — so the field only appears on the entries that are something else. An unrecognized value in hand-edited JSON reads as an article rather than breaking the build.
 
@@ -80,11 +80,17 @@ A single package at the repo root — no workspaces, no git hooks, no test suite
 
 ```
 src/          Vue app — components, composables, lib
-scripts/      buildEntries.ts, articleId.ts (node-only, build time)
+scripts/      buildEntries.ts, fetchIcons.ts, articleId.ts (node-only, build time)
 data/         entries.json — the content
-public/       generated articles.json (git-ignored)
+public/       icons/ — cached site icons (committed); articles.json (git-ignored)
 ```
 
 `scripts/buildEntries.ts` compiles `data/entries.json` into `public/articles.json`. It runs automatically before `dev` and `build`, or on demand via `npm run build-data`.
+
+### Site icons
+
+Cards show the source's own icon instead of a lettered avatar. `scripts/fetchIcons.ts` runs just before the build and downloads one icon per new domain into `public/icons/<domain>.<ext>` — it reads what the site's home page declares, falls back to the conventional paths and then to Google's favicon service, and prefers vector or anything at least 64px wide. Domains that already have a file are skipped, so a normal build makes no network calls; the files are committed for that reason.
+
+Nothing here is authoritative. If a site's favicon is ugly, low-resolution, or invisible against the dark theme, drop a better file at `public/icons/<domain>.svg` and the script will leave it alone from then on. A domain no icon could be found for keeps the lettered avatar.
 
 Deploys happen on every push to `main` via `.github/workflows/deploy.yml`.

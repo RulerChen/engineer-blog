@@ -5,12 +5,14 @@ export function normalizeTag(raw: string): string {
 
 /**
  * Tags to offer for the current input, drawn only from `known` — the tags already
- * used in the data, most-used first. There is no static palette: suggesting tags
- * nobody has curated is how near-duplicates ("database" vs "databases") get into
- * the data and split a filter in two. With no query this is just the head of that
- * list; while typing, matches are ranked prefix-first, then by length, so the
- * closest tag lands nearest the cursor. Anything genuinely new is still typed in
- * free-form — the form flags it as a new tag.
+ * used in the data. There is no static palette: suggesting tags nobody has
+ * curated is how near-duplicates ("database" vs "databases") get into the data
+ * and split a filter in two. Nothing is offered until something is typed: the
+ * head of the list answers a question nobody asked, and it pushes the rest of
+ * the form down every time the modal opens. While typing, matches are ranked
+ * prefix-first, then by length, so the closest tag lands nearest the cursor.
+ * Anything genuinely new is still typed in free-form — the form flags it as a
+ * new tag.
  */
 export function suggestTags(
   query: string,
@@ -18,14 +20,14 @@ export function suggestTags(
   selected: string[],
   limit = 10,
 ): string[] {
+  const q = normalizeTag(query);
+  if (!q) return [];
+
   const taken = new Set(selected);
   const pool: string[] = [];
   for (const tag of known) {
     if (!taken.has(tag) && !pool.includes(tag)) pool.push(tag);
   }
-
-  const q = normalizeTag(query);
-  if (!q) return pool.slice(0, limit);
 
   return pool
     .filter((tag) => tag.includes(q))

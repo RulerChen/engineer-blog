@@ -482,6 +482,14 @@ input::placeholder {
   font-family: "Bricolage Grotesque", sans-serif;
   font-weight: 800;
   font-size: 19px;
+  overflow: hidden;
+}
+/* Fills the unframed avatar box, short of its corners so a wide wordmark fits. */
+.article-card .avatar img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  border-radius: 5px;
 }
 .article-card .body {
   flex: 1;
@@ -859,6 +867,147 @@ input::placeholder {
   outline: none;
   border-color: var(--accent);
 }
+.field input::placeholder {
+  color: var(--muted);
+}
+
+/* Text selection in the palette's accent rather than system blue. */
+.field input::selection {
+  color: var(--ink);
+  background: color-mix(in srgb, var(--accent) 28%, var(--card));
+}
+/* Suggested names under a text field — the themed stand-in for a <datalist>. */
+.chip-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* Date field */
+.date-picker {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.date-picker input {
+  padding-right: 38px;
+}
+.date-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 36px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 0 11px 11px 0;
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+}
+.date-toggle:hover,
+.date-toggle.active {
+  color: var(--accent);
+}
+.date-popup {
+  position: absolute;
+  z-index: 10;
+  top: calc(100% + 6px);
+  right: 0;
+  width: 258px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--card);
+  box-shadow: var(--shadow-hover);
+}
+.date-nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-bottom: 6px;
+}
+.date-nav button {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: none;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+}
+.date-nav button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.date-title {
+  flex: 1;
+  padding: 5px 0;
+  border: 0;
+  border-radius: 8px;
+  background: none;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+.date-title:hover {
+  background: var(--chip);
+}
+/* Months and years are twelve wide cells rather than a seven-column month. */
+.date-grid.zoomed {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  padding-top: 4px;
+}
+.date-grid.zoomed .date-day {
+  height: 38px;
+}
+.date-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+.date-weekday {
+  display: grid;
+  place-items: center;
+  height: 24px;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--muted);
+}
+.date-day,
+.date-blank {
+  height: 30px;
+  border-radius: 9px;
+}
+.date-day {
+  border: 1px solid transparent;
+  background: none;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+.date-day:hover {
+  background: var(--chip);
+}
+/* Today is an outline and the selection is a fill, so both can show at once. */
+.date-day.today {
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+}
+.date-day.selected {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  font-weight: 800;
+}
+
 .field-error {
   font-size: 12px;
   font-weight: 700;
@@ -950,8 +1099,9 @@ input::placeholder {
   flex-wrap: nowrap;
   gap: 4px;
 }
+/* Five icons and two inputs share this row; any wider and the url wraps away. */
 .type-toggle.compact .type-option {
-  padding: 8px;
+  padding: 6px;
 }
 
 /* Tag picker */
