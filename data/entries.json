@@ -43,7 +43,13 @@
     "source": "Discord",
     "publishedAt": "2023-03-06",
     "series": "discord-message-storage",
-    "tags": ["scylladb", "cassandra", "rust"]
+    "tags": ["scylladb", "cassandra", "rust"],
+    "commentary": [
+      {
+        "source": "Hello Interview",
+        "url": "https://www.hellointerview.com/learn/system-design/in-the-wild/discord-messages-scylladb"
+      }
+    ]
   },
   {
     "title": "Maxjourney: Pushing Discord's Limits with a Million+ Online Users in a Single Server",

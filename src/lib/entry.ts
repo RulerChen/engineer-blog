@@ -1,5 +1,6 @@
 import { normalizeSeries } from "./series.js";
 import { tryNormalizeUrl } from "./url.js";
+import type { Commentary } from "../types.js";
 
 /**
  * Shape of one hand-written record in data/entries.json. This is the file's
@@ -14,6 +15,8 @@ export interface EntryInput {
   /** Slug grouping this entry with its other parts. Same slug = same series. */
   series?: string;
   tags?: string[];
+  /** Other people's write-ups about this entry — `{ source, url }` each. */
+  commentary?: Commentary[];
 }
 
 /** Editable form state, before validation turns it into an EntryInput. */
@@ -24,6 +27,8 @@ export interface EntryDraft {
   publishedAt: string;
   series: string;
   tags: string[];
+  /** Always carries one blank row at the end for typing into; blanks are dropped on save. */
+  commentary: Commentary[];
 }
 
 export function emptyDraft(): EntryDraft {
@@ -34,13 +39,26 @@ export function emptyDraft(): EntryDraft {
     publishedAt: "",
     series: "",
     tags: [],
+    commentary: [blankCommentary()],
   };
+}
+
+export function blankCommentary(): Commentary {
+  return { source: "", url: "" };
+}
+
+/** Rows with a url, trimmed. A row left entirely blank is not an error, just nothing. */
+export function filledCommentary(rows: Commentary[]): Commentary[] {
+  return rows
+    .map((row) => ({ source: row.source.trim(), url: row.url.trim() }))
+    .filter((row) => row.url !== "");
 }
 
 export interface DraftErrors {
   title?: string;
   url?: string;
   publishedAt?: string;
+  commentary?: string;
 }
 
 export function validateDraft(draft: EntryDraft): DraftErrors {
@@ -55,6 +73,12 @@ export function validateDraft(draft: EntryDraft): DraftErrors {
     errors.publishedAt = "Published date is required.";
   } else if (Number.isNaN(Date.parse(draft.publishedAt))) {
     errors.publishedAt = "Use a YYYY-MM-DD date.";
+  }
+  const links = filledCommentary(draft.commentary);
+  if (links.some((row) => !tryNormalizeUrl(row.url))) {
+    errors.commentary = "One of the commentary links isn't a valid URL.";
+  } else if (links.some((row) => !row.source)) {
+    errors.commentary = "Every commentary link needs a name — it is the link's only label.";
   }
   return errors;
 }
@@ -79,11 +103,21 @@ export function draftToEntry(draft: EntryDraft): EntryInput {
   if (source) entry.source = source;
   if (series) entry.series = series;
   if (draft.tags.length > 0) entry.tags = [...draft.tags];
+  const commentary = filledCommentary(draft.commentary);
+  if (commentary.length > 0) entry.commentary = commentary;
   return entry;
 }
 
 /** Stable key order, so the JSON stays readable and diffs stay minimal. */
-const KEY_ORDER: (keyof EntryInput)[] = ["title", "url", "source", "publishedAt", "series", "tags"];
+const KEY_ORDER: (keyof EntryInput)[] = [
+  "title",
+  "url",
+  "source",
+  "publishedAt",
+  "series",
+  "tags",
+  "commentary",
+];
 
 /**
  * One record in its canonical on-disk shape: fixed key order, tags sorted
@@ -96,6 +130,11 @@ export function normalizeEntry(entry: EntryInput): EntryInput {
     if (entry[key] !== undefined) ordered[key] = entry[key];
   }
   if (entry.tags) ordered.tags = entry.tags.toSorted((a, b) => a.localeCompare(b));
+  // Key order fixed here too, but the rows keep the order they were written in:
+  // unlike tags, which one to read first is a judgement the curator made.
+  if (entry.commentary) {
+    ordered.commentary = entry.commentary.map((row) => ({ source: row.source, url: row.url }));
+  }
   return ordered as unknown as EntryInput;
 }
 

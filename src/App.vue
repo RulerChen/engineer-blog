@@ -142,6 +142,7 @@ function onAdded(entry: EntryInput): void {
       publishedAt,
       series: entry.series,
       tags: entry.tags ?? [],
+      commentary: entry.commentary,
     },
     ...pending.value,
   ];

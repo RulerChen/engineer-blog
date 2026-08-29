@@ -19,9 +19,10 @@ export function toArticle(input: EntryInput): Article {
     publishedAt: toIso(input.publishedAt),
     tags: input.tags ?? [],
   };
-  // Left off entirely when absent — most entries are standalone, and articles.json
-  // is shipped to every visitor.
+  // Both left off entirely when absent — most entries are standalone and have no
+  // write-ups, and articles.json is shipped to every visitor.
   if (input.series) article.series = input.series;
+  if (input.commentary?.length) article.commentary = input.commentary;
   return article;
 }
 

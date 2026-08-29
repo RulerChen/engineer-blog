@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import {
+  blankCommentary,
   draftToEntry,
   emptyDraft,
   hasErrors,
@@ -41,7 +42,7 @@ const commitUrl = ref("");
 const copied = ref(false);
 
 const errors = computed(() => validateDraft(draft.value));
-const showError = (field: "title" | "url" | "publishedAt"): string =>
+const showError = (field: "title" | "url" | "publishedAt" | "commentary"): string =>
   submitted.value ? (errors.value[field] ?? "") : "";
 
 const duplicate = computed(() => {
@@ -74,6 +75,18 @@ function addTag(tag: string): void {
   const clean = normalizeTag(tag);
   if (clean && !draft.value.tags.includes(clean)) draft.value.tags.push(clean);
   tagInput.value = "";
+}
+
+/** Keep exactly one blank row at the end, so there is always somewhere to type. */
+function ensureBlankCommentary(): void {
+  const rows = draft.value.commentary;
+  const last = rows.at(-1);
+  if (!last || last.source.trim() || last.url.trim()) rows.push(blankCommentary());
+}
+
+function removeCommentary(index: number): void {
+  draft.value.commentary.splice(index, 1);
+  ensureBlankCommentary();
 }
 
 function removeTag(tag: string): void {
@@ -233,6 +246,41 @@ function onClearToken(): void {
             {{ seriesIsNew ? "New series; the card links up once a second part is added." : "" }}
           </span>
         </label>
+
+        <div class="field">
+          <span class="field-label"> Commentary <span class="field-optional">optional</span> </span>
+          <div v-for="(row, index) in draft.commentary" :key="index" class="commentary-row">
+            <input
+              v-model="row.source"
+              class="commentary-source"
+              type="text"
+              placeholder="Who wrote it"
+              @input="ensureBlankCommentary"
+            />
+            <input
+              v-model="row.url"
+              class="commentary-url"
+              type="url"
+              placeholder="https://…"
+              @input="ensureBlankCommentary"
+            />
+            <button
+              v-if="draft.commentary.length > 1"
+              class="commentary-remove"
+              title="Remove this link"
+              @click="removeCommentary(index)"
+            >
+              ✕
+            </button>
+          </div>
+          <span v-if="showError('commentary')" class="field-error">
+            {{ showError("commentary") }}
+          </span>
+          <span v-else class="field-hint">
+            Someone else's write-up about this article. The card links to it by name — there is no
+            title, so use one you would recognize.
+          </span>
+        </div>
 
         <details class="token-panel" :open="showToken">
           <summary>GitHub token {{ token ? "· saved" : "· not set" }}</summary>

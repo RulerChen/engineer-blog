@@ -71,8 +71,31 @@ const avatarStyle = computed(() => {
           {{ article.title }}
         </a>
       </h2>
-      <div v-if="article.tags.length" class="tags">
+      <div v-if="article.tags.length || article.commentary?.length" class="tags">
         <span v-for="tag in article.tags" :key="tag" class="tag">{{ tag }}</span>
+        <a
+          v-for="link in article.commentary"
+          :key="link.url"
+          class="tag commentary-chip"
+          :href="link.url"
+          :title="`Someone else's write-up — ${link.url}`"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            width="10"
+            height="10"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 12a8 8 0 0 1-8 8H4l2.2-2.9A8 8 0 1 1 21 12z"></path>
+          </svg>
+          {{ sourceName(link.source) }}
+        </a>
       </div>
       <div v-if="series && seriesPart" class="series-strip">
         <button

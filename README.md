@@ -6,7 +6,7 @@ This used to aggregate ~30 company RSS feeds automatically. That produced a lot 
 
 ## Adding an entry
 
-Hit **+ Add** in the site header. The form takes a title, URL, date, source, series, and tags, and offers two ways to save:
+Hit **+ Add** in the site header. The form takes a title, URL, date, source, series, tags, and commentary links, and offers two ways to save:
 
 - **Commit to GitHub** — commits the new record straight to `data/entries.json` via the GitHub Contents API. The push triggers the deploy workflow, so the entry is live in about a minute. Needs a token (below).
 - **Copy JSON** — copies the record to your clipboard so you can paste it into the `data/entries.json` array yourself. No token, no setup.
@@ -25,7 +25,10 @@ Either way the entry shows up in the list immediately, flagged **Pending deploy*
     "source": "Google",
     "publishedAt": "2017-06-12",
     "series": "google-transformers",
-    "tags": ["ml", "ai"]
+    "tags": ["ml", "ai"],
+    "commentary": [
+      { "source": "Jay Alammar", "url": "https://jalammar.github.io/illustrated-transformer/" }
+    ]
   }
 ]
 ```
@@ -36,8 +39,15 @@ Either way the entry shows up in the list immediately, flagged **Pending deploy*
 | `publishedAt` | `YYYY-MM-DD` or a full ISO timestamp.                                |
 | `series`      | Optional slug. See below.                                            |
 | `tags`        | Free-form. The form suggests tags already in use, but anything goes. |
+| `commentary`  | Optional. Other people's write-ups about the entry. See below.       |
 
 The file is hand-editable — deleting an entry means deleting its object, which is why there is no separate exclusion list any more.
+
+## Commentary
+
+Someone else's explainer or notes on an entry go in `commentary`, as `{ source, url }` — a name and a link, no title and no date. They hang off the original entry rather than becoming entries of their own: a personal blog post is not what this list is curating, and adding one as an entry would put a second card for the same topic in the feed and a second name in the company filter.
+
+The card renders them as an outlined chip at the end of the tag row, so `source` is the link's only label — use the name you would recognize it by, not the domain. Order is kept as written; unlike tags it is not sorted, because which one to read first is your call.
 
 ## Series
 

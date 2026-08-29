@@ -528,6 +528,7 @@ input::placeholder {
 }
 .article-card .tags {
   display: flex;
+  align-items: center;
   gap: 6px;
   flex-wrap: wrap;
 }
@@ -538,6 +539,28 @@ input::placeholder {
   border-radius: 999px;
   background: var(--chip);
   color: var(--chip-ink);
+}
+/* Someone else's write-up, sitting in the tag row: outlined so it reads as a
+   link rather than one more tag. Padding is the tag's minus the border, so the
+   two chips come out the same height. */
+.article-card .commentary-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 9px;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--muted);
+}
+/* Set off from the tags: they describe the article, this one leaves it. Adds to
+   the row's 6px gap rather than replacing it, so chips stay grouped together. */
+.article-card span.tag + .commentary-chip {
+  margin-left: 12px;
+}
+.article-card .commentary-chip:hover {
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  color: var(--accent);
 }
 .bookmark-button {
   width: 34px;
@@ -867,6 +890,33 @@ input::placeholder {
   padding: 1px 5px;
   border-radius: 5px;
   font-size: 11.5px;
+}
+
+/* Commentary rows */
+.commentary-row {
+  display: flex;
+  gap: 8px;
+}
+.commentary-row .commentary-source {
+  flex: 0 1 150px;
+}
+.commentary-row .commentary-url {
+  flex: 1 1 200px;
+  min-width: 0;
+}
+.commentary-remove {
+  flex: 0 0 auto;
+  width: 38px;
+  border-radius: 11px;
+  border: 1.5px solid var(--line);
+  background: var(--card);
+  color: var(--muted);
+  font-size: 13px;
+  cursor: pointer;
+}
+.commentary-remove:hover {
+  color: var(--ink);
+  border-color: color-mix(in srgb, var(--ink) 30%, var(--line));
 }
 
 /* Tag picker */
