@@ -152,5 +152,26 @@
     "source": "Notion",
     "publishedAt": "2026-08-10",
     "tags": ["elasticsearch", "spark"]
+  },
+  {
+    "title": "Scaling PostgreSQL to power 800 million ChatGPT users",
+    "url": "https://openai.com/index/scaling-postgresql",
+    "source": "OpenAI",
+    "publishedAt": "2026-01-22",
+    "tags": ["postgresql"]
+  },
+  {
+    "title": "How OpenAI delivers low-latency voice AI at scale",
+    "url": "https://openai.com/index/delivering-low-latency-voice-ai-at-scale",
+    "source": "OpenAI",
+    "publishedAt": "2026-05-04",
+    "tags": ["webrtc"]
+  },
+  {
+    "title": "Unlocking large scale AI training networks with MRC (Multipath Reliable Connection)",
+    "url": "https://openai.com/index/mrc-supercomputer-networking",
+    "source": "OpenAI",
+    "publishedAt": "2026-05-05",
+    "tags": ["networking", "ai-infra"]
   }
 ]
