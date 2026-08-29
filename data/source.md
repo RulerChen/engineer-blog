@@ -1,4 +1,5 @@
 - [discord](https://discord.com/category/engineering)
 - [notion](https://www.notion.com/blog/topic/tech)
-- [openai](https://openai.com/news/engineering/)
+- [openai](https://openai.com/news/engineering)
 - [cursor](https://cursor.com/blog)
+- [shopify](https://shopify.engineering)
