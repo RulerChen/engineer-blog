@@ -8,6 +8,7 @@ import { useArticleFilter } from "./composables/useArticleFilter.js";
 import { useBookmarks } from "./composables/useBookmarks.js";
 import { useTheme } from "./composables/useTheme.js";
 import type { EntryInput } from "./lib/entry.js";
+import { normalizeEntryType } from "./lib/entryType.js";
 import { topTags } from "./lib/filter.js";
 import { buildSeriesIndex, knownSeries } from "./lib/series.js";
 import { sourceName } from "./lib/sources.js";
@@ -85,13 +86,6 @@ const shown = computed(() => {
   return state.series ? list.toReversed() : list;
 });
 
-const orderLabel = computed(() => (state.series ? "in series order" : "newest first"));
-
-const countLabel = computed(
-  () =>
-    `${shown.value.length.toLocaleString("en-US")} ${shown.value.length === 1 ? "entry" : "entries"}`,
-);
-
 const savedTabLabel = computed(
   () => `Saved${bookmarks.value.length ? ` · ${bookmarks.value.length}` : ""}`,
 );
@@ -138,6 +132,7 @@ function onAdded(entry: EntryInput): void {
       id: `pending:${entry.url}`,
       title: entry.title,
       url: entry.url,
+      type: normalizeEntryType(entry.type),
       source: entry.source ?? "",
       publishedAt,
       series: entry.series,
@@ -186,22 +181,21 @@ onMounted(async () => {
     <p v-else-if="loadError" class="error">Could not load entries. Try refreshing.</p>
     <div v-else class="layout">
       <SearchBar v-model="state.query" />
-      <FilterPanel :state="state" :companies="companies" :tags="tags" />
-
-      <div class="tabs-row">
-        <div class="tabs">
-          <button class="tab-button" :class="{ active: !viewSaved }" @click="viewSaved = false">
-            All
-          </button>
-          <button class="tab-button" :class="{ active: viewSaved }" @click="viewSaved = true">
-            <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor" stroke="none">
-              <path d="M6 3.5h12v17l-6-4.2-6 4.2z"></path>
-            </svg>
-            <span>{{ savedTabLabel }}</span>
-          </button>
-        </div>
-        <span class="count-label">{{ countLabel }} · {{ orderLabel }}</span>
-      </div>
+      <FilterPanel :state="state" :companies="companies" :tags="tags">
+        <template #end>
+          <div class="tabs">
+            <button class="tab-button" :class="{ active: !viewSaved }" @click="viewSaved = false">
+              All
+            </button>
+            <button class="tab-button" :class="{ active: viewSaved }" @click="viewSaved = true">
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor" stroke="none">
+                <path d="M6 3.5h12v17l-6-4.2-6 4.2z"></path>
+              </svg>
+              <span>{{ savedTabLabel }}</span>
+            </button>
+          </div>
+        </template>
+      </FilterPanel>
 
       <ArticleList
         :articles="shown"

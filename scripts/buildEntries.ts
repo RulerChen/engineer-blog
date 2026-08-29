@@ -2,6 +2,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import type { EntryInput } from "../src/lib/entry.js";
+import { normalizeEntryType } from "../src/lib/entryType.js";
 import type { Article } from "../src/types.js";
 import { articleId } from "./articleId.js";
 
@@ -15,6 +16,8 @@ export function toArticle(input: EntryInput): Article {
     id: articleId(input.url),
     title: input.title,
     url: input.url,
+    // Unset or misspelled by hand both read as an article, so every card gets an icon.
+    type: normalizeEntryType(input.type),
     source: input.source ?? "",
     publishedAt: toIso(input.publishedAt),
     tags: input.tags ?? [],

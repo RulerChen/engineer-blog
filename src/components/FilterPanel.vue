@@ -318,5 +318,9 @@ function clearAll(): void {
     </button>
 
     <button v-if="hasFilters" class="filter-clear-all" @click="clearAll">Clear all</button>
+
+    <div class="filter-panel-end">
+      <slot name="end" />
+    </div>
   </div>
 </template>

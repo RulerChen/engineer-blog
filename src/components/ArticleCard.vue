@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { avatarHue } from "../lib/avatar.js";
+import { entryTypeMeta } from "../lib/entryType.js";
 import type { Series } from "../lib/series.js";
 import { sourceName } from "../lib/sources.js";
 import type { Article } from "../types.js";
+import EntryTypeIcon from "./EntryTypeIcon.vue";
 
 const props = withDefaults(
   defineProps<{
@@ -39,6 +41,9 @@ const seriesPart = computed(() => {
   };
 });
 
+/** Tooltip for the meta-row icon — the icon itself carries no words. */
+const typeLabel = computed(() => entryTypeMeta(props.article.type).label);
+
 const avatarLetter = computed(() => {
   const name = sourceName(props.article.source);
   return name ? name.charAt(0) : "·";
@@ -61,6 +66,7 @@ const avatarStyle = computed(() => {
     </div>
     <div class="body">
       <div class="meta">
+        <EntryTypeIcon :type="article.type" :size="16" class="entry-type" :title="typeLabel" />
         <span v-if="article.source" class="company">{{ sourceName(article.source) }}</span>
         <span v-if="article.source" class="dot">·</span>
         <time :datetime="article.publishedAt">{{ displayDate }}</time>
@@ -78,22 +84,11 @@ const avatarStyle = computed(() => {
           :key="link.url"
           class="tag commentary-chip"
           :href="link.url"
-          :title="`Someone else's write-up — ${link.url}`"
+          :title="`Someone else's ${entryTypeMeta(link.type).label.toLowerCase()} — ${link.url}`"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <svg
-            viewBox="0 0 24 24"
-            width="10"
-            height="10"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M21 12a8 8 0 0 1-8 8H4l2.2-2.9A8 8 0 1 1 21 12z"></path>
-          </svg>
+          <EntryTypeIcon :type="link.type" :size="13" />
           {{ sourceName(link.source) }}
         </a>
       </div>

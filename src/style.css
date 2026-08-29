@@ -417,13 +417,8 @@ input::placeholder {
 }
 
 /* Tabs + result count */
-.tabs-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 4px;
-  flex-wrap: wrap;
-  gap: 10px;
+.filter-panel-end {
+  margin-left: auto;
 }
 .tabs {
   display: inline-flex;
@@ -451,12 +446,6 @@ input::placeholder {
   color: var(--accent);
   box-shadow: var(--shadow);
 }
-.count-label {
-  font-size: 13px;
-  color: var(--muted);
-  font-weight: 600;
-}
-
 /* Article list */
 .article-list {
   display: flex;
@@ -515,6 +504,11 @@ input::placeholder {
 }
 .article-card .meta .dot {
   opacity: 0.5;
+}
+/* What the entry is — article, paper, book, video. Leads the meta row as an icon
+   only: the silhouette is the label, and a word here would crowd the company. */
+.article-card .meta .entry-type {
+  flex-shrink: 0;
 }
 .article-card h2 {
   margin: 0;
@@ -896,9 +890,10 @@ input::placeholder {
 .commentary-row {
   display: flex;
   gap: 8px;
+  flex-wrap: wrap;
 }
 .commentary-row .commentary-source {
-  flex: 0 1 150px;
+  flex: 1 1 130px;
 }
 .commentary-row .commentary-url {
   flex: 1 1 200px;
@@ -917,6 +912,46 @@ input::placeholder {
 .commentary-remove:hover {
   color: var(--ink);
   border-color: color-mix(in srgb, var(--ink) 30%, var(--line));
+}
+
+/* Type picker — the whole set laid out at once, so choosing is a glance rather
+   than opening a menu. The commentary rows reuse it icon-only. */
+.type-toggle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.type-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 11px;
+  border: 1.5px solid var(--line);
+  background: var(--card);
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.type-option:hover {
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--line));
+  color: var(--ink);
+}
+.type-option.active {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, var(--card));
+  color: var(--accent);
+}
+/* On a commentary row there is no width for four labels, so the icon carries it. */
+.type-toggle.compact {
+  flex: 0 0 auto;
+  flex-wrap: nowrap;
+  gap: 4px;
+}
+.type-toggle.compact .type-option {
+  padding: 8px;
 }
 
 /* Tag picker */

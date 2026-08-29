@@ -6,7 +6,7 @@ This used to aggregate ~30 company RSS feeds automatically. That produced a lot 
 
 ## Adding an entry
 
-Hit **+ Add** in the site header. The form takes a title, URL, date, source, series, tags, and commentary links, and offers two ways to save:
+Hit **+ Add** in the site header. The form takes a title, URL, type, date, source, series, tags, and commentary links, and offers two ways to save:
 
 - **Commit to GitHub** — commits the new record straight to `data/entries.json` via the GitHub Contents API. The push triggers the deploy workflow, so the entry is live in about a minute. Needs a token (below).
 - **Copy JSON** — copies the record to your clipboard so you can paste it into the `data/entries.json` array yourself. No token, no setup.
@@ -22,12 +22,18 @@ Either way the entry shows up in the list immediately, flagged **Pending deploy*
   {
     "title": "Attention Is All You Need",
     "url": "https://arxiv.org/abs/1706.03762",
+    "type": "paper",
     "source": "Google",
     "publishedAt": "2017-06-12",
     "series": "google-transformers",
     "tags": ["ml", "ai"],
     "commentary": [
-      { "source": "Jay Alammar", "url": "https://jalammar.github.io/illustrated-transformer/" }
+      { "source": "Jay Alammar", "url": "https://jalammar.github.io/illustrated-transformer/" },
+      {
+        "source": "Yannic Kilcher",
+        "url": "https://www.youtube.com/watch?v=iDulhoQ2pro",
+        "type": "video"
+      }
     ]
   }
 ]
@@ -35,6 +41,7 @@ Either way the entry shows up in the list immediately, flagged **Pending deploy*
 
 | Field         | Notes                                                                |
 | ------------- | -------------------------------------------------------------------- |
+| `type`        | What it is. Optional — omitted means `article`. See below.           |
 | `source`      | The company the entry came from.                                     |
 | `publishedAt` | `YYYY-MM-DD` or a full ISO timestamp.                                |
 | `series`      | Optional slug. See below.                                            |
@@ -43,11 +50,17 @@ Either way the entry shows up in the list immediately, flagged **Pending deploy*
 
 The file is hand-editable — deleting an entry means deleting its object, which is why there is no separate exclusion list any more.
 
+## Types
+
+`type` is one of `article`, `paper`, `book`, `video` — what an entry _is_, as opposed to `tags`, which say what it is about. The card draws it as an icon at the front of the meta row and leaves the filter row alone: it labels an entry, it does not narrow the list.
+
+Unlike tags the set is closed, because every value needs an icon drawn for it in `src/lib/entryType.ts`. `article` is the default and is never written to disk — leaving it off and writing `"type": "article"` produce the same record — so the field only appears on the entries that are something else. An unrecognized value in hand-edited JSON reads as an article rather than breaking the build.
+
 ## Commentary
 
-Someone else's explainer or notes on an entry go in `commentary`, as `{ source, url }` — a name and a link, no title and no date. They hang off the original entry rather than becoming entries of their own: a personal blog post is not what this list is curating, and adding one as an entry would put a second card for the same topic in the feed and a second name in the company filter.
+Someone else's explainer or notes on an entry go in `commentary`, as `{ source, url }` plus an optional `type` — a name, a link, and what shape it is, no title and no date. They hang off the original entry rather than becoming entries of their own: a personal blog post is not what this list is curating, and adding one as an entry would put a second card for the same topic in the feed and a second name in the company filter.
 
-The card renders them as an outlined chip at the end of the tag row, so `source` is the link's only label — use the name you would recognize it by, not the domain. Order is kept as written; unlike tags it is not sorted, because which one to read first is your call.
+The card renders them as an outlined chip at the end of the tag row, carrying the same type icon as an entry — a video explainer of a paper is worth telling apart from a written one before you click. `source` is the chip's only label — use the name you would recognize it by, not the domain. Order is kept as written; unlike tags it is not sorted, because which one to read first is your call.
 
 ## Series
 

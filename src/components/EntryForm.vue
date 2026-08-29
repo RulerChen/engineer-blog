@@ -9,6 +9,7 @@ import {
   validateDraft,
   type EntryInput,
 } from "../lib/entry.js";
+import { ENTRY_TYPES } from "../lib/entryType.js";
 import {
   commitEntry,
   ENTRIES_PATH,
@@ -20,6 +21,7 @@ import {
 import { normalizeSeries, seriesLabel } from "../lib/series.js";
 import { normalizeTag, suggestTags } from "../lib/tags.js";
 import { tryNormalizeUrl } from "../lib/url.js";
+import EntryTypeIcon from "./EntryTypeIcon.vue";
 
 const props = defineProps<{
   knownSources: string[];
@@ -178,6 +180,22 @@ function onClearToken(): void {
           </span>
         </label>
 
+        <div class="field">
+          <span class="field-label">Type</span>
+          <div class="type-toggle">
+            <button
+              v-for="option in ENTRY_TYPES"
+              :key="option.id"
+              class="type-option"
+              :class="{ active: draft.type === option.id }"
+              @click="draft.type = option.id"
+            >
+              <EntryTypeIcon :type="option.id" :size="15" />
+              <span>{{ option.label }}</span>
+            </button>
+          </div>
+        </div>
+
         <div class="field-row">
           <label class="field">
             <span class="field-label">Company</span>
@@ -250,6 +268,18 @@ function onClearToken(): void {
         <div class="field">
           <span class="field-label"> Commentary <span class="field-optional">optional</span> </span>
           <div v-for="(row, index) in draft.commentary" :key="index" class="commentary-row">
+            <div class="type-toggle compact">
+              <button
+                v-for="option in ENTRY_TYPES"
+                :key="option.id"
+                class="type-option"
+                :class="{ active: (row.type ?? 'article') === option.id }"
+                :title="option.label"
+                @click="row.type = option.id"
+              >
+                <EntryTypeIcon :type="option.id" :size="15" />
+              </button>
+            </div>
             <input
               v-model="row.source"
               class="commentary-source"
@@ -277,8 +307,8 @@ function onClearToken(): void {
             {{ showError("commentary") }}
           </span>
           <span v-else class="field-hint">
-            Someone else's write-up about this article. The card links to it by name — there is no
-            title, so use one you would recognize.
+            Someone else's write-up about this entry — a post, a paper, a video. The card links to
+            it by name and type, so use a name you would recognize.
           </span>
         </div>
 
