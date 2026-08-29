@@ -8,13 +8,6 @@
     "tags": ["ai-training"]
   },
   {
-    "title": "Fast regex search: indexing text for agent tools",
-    "url": "https://cursor.com/blog/fast-regex-search",
-    "source": "Cursor",
-    "publishedAt": "2026-03-23",
-    "tags": ["regex"]
-  },
-  {
     "title": "Mixture-of-Kittens: our open-source MoE megakernel for NVL72s",
     "url": "https://cursor.com/blog/mixture-of-kittens",
     "source": "Cursor",
@@ -128,13 +121,6 @@
     "tags": ["sqlite", "wasm"]
   },
   {
-    "title": "Observability for Notion's Redis Queue",
-    "url": "https://www.notion.com/blog/observability-for-notions-redis-queue",
-    "source": "Notion",
-    "publishedAt": "2024-09-23",
-    "tags": ["redis"]
-  },
-  {
     "title": "How we made Notion available offline",
     "url": "https://www.notion.com/blog/how-we-made-notion-available-offline",
     "source": "Notion",
@@ -184,7 +170,7 @@
     "tags": ["webrtc"]
   },
   {
-    "title": "Unlocking large scale AI training networks with MRC (Multipath Reliable Connection)",
+    "title": "Supercomputer networking to accelerate large scale AI training",
     "url": "https://openai.com/index/mrc-supercomputer-networking",
     "source": "OpenAI",
     "publishedAt": "2026-05-05",
