@@ -7,7 +7,7 @@
 - [cursor](https://cursor.com/blog) : 2026-08-30
 - [discord](https://discord.com/category/engineering) : 2026-08-30
 - [doordash](https://careersatdoordash.com/engineering-blog) :
-- [dropbox](https://dropbox.tech) :
+- [dropbox](https://dropbox.tech) : 2026-08-30
 - [figma](https://www.figma.com/blog/engineering) : 2026-08-30
 - [github](https://github.blog/category/engineering) :
 - [google](https://research.google/blog/) :
@@ -21,5 +21,5 @@
 - [stripe](https://stripe.com/blog) :
 - [slack](https://slack.engineering) :
 - [spotify](https://engineering.atspotify.com) :
-- [twitter]
+- [twitter](https://blog.x.com/engineering) :
 - [uber](https://eng.uber.com) : 2026-08-30
