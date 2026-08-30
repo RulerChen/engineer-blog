@@ -1376,5 +1376,91 @@
     "source": "Stripe",
     "publishedAt": "2026-08-26",
     "tags": ["network", "proxy", "load-balance", "go"]
+  },
+  {
+    "title": "Context aware MySQL pools via HAProxy",
+    "url": "https://github.blog/engineering/infrastructure/context-aware-mysql-pools-via-haproxy/",
+    "source": "GitHub",
+    "publishedAt": "2016-08-17",
+    "tags": ["database", "mysql", "haproxy"]
+  },
+  {
+    "title": "MySQL High Availability at GitHub",
+    "url": "https://github.blog/engineering/infrastructure/mysql-high-availability-at-github/",
+    "source": "GitHub",
+    "publishedAt": "2018-06-20",
+    "tags": ["database", "reliability", "replication", "mysql"]
+  },
+  {
+    "title": "Debugging network stalls on Kubernetes",
+    "url": "https://github.blog/engineering/infrastructure/debugging-network-stalls-on-kubernetes/",
+    "source": "GitHub",
+    "publishedAt": "2019-11-21",
+    "tags": ["container", "operating-system", "kubernetes", "kernel"]
+  },
+  {
+    "title": "How we scaled the GitHub API with a sharded, replicated rate limiter in Redis",
+    "url": "https://github.blog/engineering/infrastructure/how-we-scaled-github-api-sharded-replicated-rate-limiter-redis/",
+    "source": "GitHub",
+    "publishedAt": "2021-04-05",
+    "tags": ["reliability", "overload-control", "redis"]
+  },
+  {
+    "title": "Partitioning GitHub’s relational databases to handle scale",
+    "url": "https://github.blog/engineering/infrastructure/partitioning-githubs-relational-databases-scale/",
+    "source": "GitHub",
+    "publishedAt": "2021-09-27",
+    "tags": ["database", "sharding", "mysql", "vitess"]
+  },
+  {
+    "title": "A brief history of code search at GitHub",
+    "url": "https://github.blog/engineering/architecture-optimization/a-brief-history-of-code-search-at-github/",
+    "source": "GitHub",
+    "publishedAt": "2021-12-15",
+    "series": "github-code-search",
+    "tags": ["search", "indexing", "elasticsearch"]
+  },
+  {
+    "title": "Scaling Git’s garbage collection",
+    "url": "https://github.blog/engineering/architecture-optimization/scaling-gits-garbage-collection/",
+    "source": "GitHub",
+    "publishedAt": "2022-09-13",
+    "tags": ["storage", "git"]
+  },
+  {
+    "title": "The technology behind GitHub’s new code search",
+    "url": "https://github.blog/engineering/architecture-optimization/the-technology-behind-githubs-new-code-search/",
+    "source": "GitHub",
+    "publishedAt": "2023-02-06",
+    "series": "github-code-search",
+    "tags": ["search", "indexing", "rust", "kafka"]
+  },
+  {
+    "title": "Upgrading GitHub.com to MySQL 8.0",
+    "url": "https://github.blog/engineering/infrastructure/upgrading-github-com-to-mysql-8-0/",
+    "source": "GitHub",
+    "publishedAt": "2023-12-07",
+    "tags": ["database", "migration", "replication", "mysql"]
+  },
+  {
+    "title": "How we improved push processing on GitHub",
+    "url": "https://github.blog/engineering/architecture-optimization/how-we-improved-push-processing-on-github/",
+    "source": "GitHub",
+    "publishedAt": "2024-06-11",
+    "tags": ["architecture", "monolith", "job-queue", "kafka"]
+  },
+  {
+    "title": "Breaking down CPU speed: How utilization impacts performance",
+    "url": "https://github.blog/engineering/architecture-optimization/breaking-down-cpu-speed-how-utilization-impacts-performance/",
+    "source": "GitHub",
+    "publishedAt": "2024-11-25",
+    "tags": ["reliability", "capacity-planning", "hardware"]
+  },
+  {
+    "title": "From latency to instant: Modernizing GitHub Issues navigation performance",
+    "url": "https://github.blog/engineering/architecture-optimization/from-latency-to-instant-modernizing-github-issues-navigation-performance/",
+    "source": "GitHub",
+    "publishedAt": "2026-05-14",
+    "tags": ["frontend", "indexeddb", "react"]
   }
 ]

@@ -9,7 +9,7 @@
 - [doordash](https://careersatdoordash.com/engineering-blog) :
 - [dropbox](https://dropbox.tech) : 2026-08-30
 - [figma](https://www.figma.com/blog/engineering) : 2026-08-30
-- [github](https://github.blog/category/engineering) :
+- [github](https://github.blog/category/engineering) : 2026-08-30
 - [google](https://research.google/blog/) :
 - [linkedin](https://engineering.linkedin.com/blog) :
 - [meta](https://engineering.fb.com) :
