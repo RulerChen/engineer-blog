@@ -9,7 +9,7 @@ import { useBookmarks } from "./composables/useBookmarks.js";
 import { useTheme } from "./composables/useTheme.js";
 import type { EntryInput } from "./lib/entry.js";
 import { normalizeEntryType } from "./lib/entryType.js";
-import { topTags } from "./lib/filter.js";
+import { tagCounts } from "./lib/filter.js";
 import { buildSeriesIndex, knownSeries } from "./lib/series.js";
 import { normalizeUrl } from "./lib/url.js";
 import type { Article } from "./types.js";
@@ -54,7 +54,7 @@ const existingUrls = computed(() =>
   }),
 );
 /** Every tag already in use, most-used first, so the form suggests real ones. */
-const knownTags = computed(() => topTags(all.value, Infinity).map((t) => t.tag));
+const knownTags = computed(() => tagCounts(all.value).map((t) => t.tag));
 /** Same idea for series: only slugs already in the data, so parts actually meet up. */
 const knownSeriesIds = computed(() => knownSeries(all.value));
 

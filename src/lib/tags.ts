@@ -5,11 +5,13 @@ export function normalizeTag(raw: string): string {
 
 /**
  * Tags to offer for the current input, drawn only from `known` — the tags already
- * used in the data. There is no static palette: suggesting tags nobody has
- * curated is how near-duplicates ("database" vs "databases") get into the data
- * and split a filter in two. Nothing is offered until something is typed: the
- * head of the list answers a question nobody asked, and it pushes the rest of
- * the form down every time the modal opens. While typing, matches are ranked
+ * used in the data. `data/tags.md` fixes the first two levels of the vocabulary,
+ * but nothing is hard-coded here: technology names are an open set, and the data
+ * is the only list of them that cannot go stale. There is no static palette —
+ * suggesting tags nobody has curated is how near-duplicates ("database" vs
+ * "databases") get into the data and split a filter in two. Nothing is offered
+ * until something is typed: the head of the list answers a question nobody
+ * asked, and it pushes the rest of the form down every time the modal opens. While typing, matches are ranked
  * prefix-first, then by length, so the closest tag lands nearest the cursor.
  * Anything genuinely new is still typed in free-form — the form flags it as a
  * new tag.

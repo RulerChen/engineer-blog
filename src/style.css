@@ -229,6 +229,47 @@ input::placeholder {
 .filter-menu input[type="search"]:focus {
   border-color: var(--accent);
 }
+.filter-menu-mode {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0 14px 10px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 6px;
+}
+.filter-menu-mode .mode-label {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+.filter-menu-mode .mode-toggle {
+  display: inline-flex;
+  gap: 4px;
+  padding: 2px;
+  border-radius: 999px;
+  border: 1.5px solid var(--line);
+  background: var(--bg);
+}
+.filter-menu-mode .mode-option {
+  padding: 3px 12px;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  color: var(--chip-ink);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.filter-menu-mode .mode-option:hover {
+  color: var(--accent);
+}
+.filter-menu-mode .mode-option.active {
+  background: var(--accent);
+  color: #fff8f0;
+}
+
 .filter-menu-list {
   max-height: 264px;
   overflow-y: auto;

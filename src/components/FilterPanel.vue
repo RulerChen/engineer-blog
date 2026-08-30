@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
-import type { FilterState } from "../lib/filter.js";
+import type { FilterState, TagMode } from "../lib/filter.js";
 import { seriesLabel } from "../lib/series.js";
 import { sourceName } from "../lib/sources.js";
 
@@ -47,9 +47,16 @@ const filteredTags = computed(() => {
 const companyLabel = computed(() =>
   props.state.companies.length ? `${props.state.companies.length} selected` : "All companies",
 );
-const tagLabel = computed(() =>
-  props.state.tags.length ? `${props.state.tags.length} selected` : "All topics",
-);
+/** The mode only changes what the selection means once there are two tags to combine. */
+const tagLabel = computed(() => {
+  const n = props.state.tags.length;
+  if (n === 0) return "All topics";
+  return n > 1 && props.state.tagMode === "all" ? `${n} selected · all` : `${n} selected`;
+});
+
+function setTagMode(mode: TagMode): void {
+  props.state.tagMode = mode;
+}
 
 // ---- month-range date picker ----
 const MONTH_NAMES = [
@@ -207,6 +214,7 @@ function clearAll(): void {
   props.state.query = "";
   props.state.companies = [];
   props.state.tags = [];
+  props.state.tagMode = "any";
   props.state.series = null;
   props.state.datePreset = "all";
   props.state.dateFrom = null;
@@ -251,6 +259,27 @@ function clearAll(): void {
       </button>
       <div v-if="openMenu === 'tag'" class="filter-menu" style="z-index: 60">
         <input v-model="tagSearch" type="text" placeholder="Find a topic…" autofocus />
+        <div class="filter-menu-mode">
+          <span class="mode-label">Match</span>
+          <div class="mode-toggle">
+            <button
+              class="mode-option"
+              :class="{ active: state.tagMode === 'any' }"
+              title="Show entries carrying at least one of the selected topics"
+              @click="setTagMode('any')"
+            >
+              Any
+            </button>
+            <button
+              class="mode-option"
+              :class="{ active: state.tagMode === 'all' }"
+              title="Show only entries carrying every selected topic"
+              @click="setTagMode('all')"
+            >
+              All
+            </button>
+          </div>
+        </div>
         <div class="filter-menu-list">
           <button
             v-for="t in filteredTags"

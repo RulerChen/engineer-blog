@@ -1,4 +1,4 @@
-import { type DatePreset, type FilterState, emptyFilter } from "./filter.js";
+import { type DatePreset, type FilterState, type TagMode, emptyFilter } from "./filter.js";
 
 const PRESETS: DatePreset[] = ["all", "week", "month", "year", "custom"];
 
@@ -6,7 +6,11 @@ export function stateToQuery(state: FilterState): string {
   const params = new URLSearchParams();
   if (state.query) params.set("q", state.query);
   if (state.companies.length > 0) params.set("companies", state.companies.join(","));
-  if (state.tags.length > 0) params.set("tags", state.tags.join(","));
+  if (state.tags.length > 0) {
+    params.set("tags", state.tags.join(","));
+    // "any" is the default, so only the narrowing choice needs carrying
+    if (state.tagMode === "all") params.set("tagMode", "all");
+  }
   if (state.series) params.set("series", state.series);
   if (state.datePreset !== "all") params.set("date", state.datePreset);
   if (state.datePreset === "custom") {
@@ -26,6 +30,7 @@ export function queryToState(search: string): FilterState {
     query: params.get("q") ?? "",
     companies: list("companies"),
     tags: list("tags"),
+    tagMode: params.get("tagMode") === "all" ? ("all" as TagMode) : ("any" as TagMode),
     series: params.get("series") || null,
     datePreset,
     dateFrom: datePreset === "custom" ? params.get("from") : null,

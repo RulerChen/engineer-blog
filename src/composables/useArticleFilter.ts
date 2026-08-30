@@ -1,5 +1,5 @@
 import { computed, reactive, watch, type ComputedRef, type Ref } from "vue";
-import { applyFilters, companyCounts, topTags, type FilterState } from "../lib/filter.js";
+import { applyFilters, companyCounts, tagCounts, type FilterState } from "../lib/filter.js";
 import { queryToState, stateToQuery } from "../lib/urlState.js";
 import type { Article } from "../types.js";
 
@@ -23,6 +23,6 @@ export function useArticleFilter(articles: Ref<Article[]>): ArticleFilter {
     state,
     filtered: computed(() => applyFilters(articles.value, state)),
     companies: computed(() => companyCounts(articles.value)),
-    tags: computed(() => topTags(articles.value)),
+    tags: computed(() => tagCounts(articles.value)),
   };
 }
