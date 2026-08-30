@@ -9,7 +9,7 @@ Neither of the last two is required and they are independent. Two or three tags 
 Closed set; adding one is a deliberate change to this file, not a typing decision at the form. A domain names a class of technical problem, never a team, a product, or a company's business — `platform`, `developer-experience` and `sync` were all tried and removed for exactly that. A post may carry two when it genuinely spans both; a third means it is being summarized rather than filed.
 
 | Domain             | Recurring concepts under it                                                                |
-|--------------------|--------------------------------------------------------------------------------------------|
+| ------------------ | ------------------------------------------------------------------------------------------ |
 | `frontend`         | `offline`                                                                                  |
 | `mobile`           | `ios` `android`                                                                            |
 | `network`          | `load-balance` `dns` `tls` `http` `proxy`                                                  |
@@ -30,7 +30,6 @@ Closed set; adding one is a deliberate change to this file, not a typing decisio
 | `security`         | -                                                                                          |
 | `hardware`         | -                                                                                          |
 | `other`            | -                                                                                          |
-
 
 `other` is a queue, not a domain: it means the maintainer has not decided yet. More than a handful sitting there means a domain is missing — read them together and see what they share. An entry never stays untagged instead, because untagged is invisible to every filter and `other` is at least a list someone can work through.
 
