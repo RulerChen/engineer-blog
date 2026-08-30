@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, watch } from "vue";
+import { computed, nextTick, onBeforeUnmount, ref, watch } from "vue";
 import type { Series } from "../lib/series.js";
 import type { Article } from "../types.js";
 import ArticleCard from "./ArticleCard.vue";
@@ -33,6 +33,8 @@ const emit = defineEmits<{
 
 const INITIAL_VISIBLE = 20;
 const LOAD_INCREMENT = 40;
+/** Start loading this far before the sentinel actually reaches the viewport. */
+const PRELOAD_MARGIN = 600;
 const visibleCount = ref(INITIAL_VISIBLE);
 
 watch(
@@ -46,6 +48,42 @@ const bookmarkedSet = computed(() => new Set(props.bookmarkedIds));
 const pendingSet = computed(() => new Set(props.pendingIds));
 const visible = computed(() => props.articles.slice(0, visibleCount.value));
 const hasMore = computed(() => visibleCount.value < props.articles.length);
+
+const sentinel = ref<HTMLElement | null>(null);
+const autoLoad = typeof IntersectionObserver !== "undefined";
+let observer: IntersectionObserver | null = null;
+let filling = false;
+
+/** Keep loading while the sentinel stays in range — one batch may not fill a tall viewport. */
+async function fillViewport() {
+  if (filling) return;
+  filling = true;
+  try {
+    while (hasMore.value) {
+      await nextTick();
+      const el = sentinel.value;
+      if (!el || el.getBoundingClientRect().top > window.innerHeight + PRELOAD_MARGIN) return;
+      visibleCount.value += LOAD_INCREMENT;
+    }
+  } finally {
+    filling = false;
+  }
+}
+
+watch(sentinel, (el) => {
+  observer?.disconnect();
+  observer = null;
+  if (!el || !autoLoad) return;
+  observer = new IntersectionObserver(
+    (entries) => {
+      if (entries.some((entry) => entry.isIntersecting)) void fillViewport();
+    },
+    { rootMargin: `0px 0px ${PRELOAD_MARGIN}px 0px` },
+  );
+  observer.observe(el);
+});
+
+onBeforeUnmount(() => observer?.disconnect());
 </script>
 
 <template>
@@ -70,14 +108,18 @@ const hasMore = computed(() => visibleCount.value < props.articles.length);
           @select-series="emit('selectSeries', $event)"
         />
       </div>
-      <div v-if="hasMore" class="load-more-wrap">
-        <button class="load-more" @click="visibleCount += LOAD_INCREMENT">
+      <div v-if="hasMore" ref="sentinel" class="load-more-wrap">
+        <button v-if="!autoLoad" class="load-more" @click="visibleCount += LOAD_INCREMENT">
           Load {{ LOAD_INCREMENT }} more
         </button>
-        <span class="showing-label">
+        <span v-else class="loading-dots" aria-hidden="true"><i /><i /><i /></span>
+        <span class="showing-label" aria-live="polite">
           Showing {{ visible.length.toLocaleString("en-US") }} of
           {{ articles.length.toLocaleString("en-US") }}
         </span>
+      </div>
+      <div v-else class="showing-label list-end">
+        Showing all {{ articles.length.toLocaleString("en-US") }}
       </div>
     </template>
   </div>

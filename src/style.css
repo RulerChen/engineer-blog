@@ -609,6 +609,44 @@ input::placeholder {
   font-size: 12.5px;
   color: var(--muted);
 }
+.list-end {
+  text-align: center;
+  padding-top: 4px;
+}
+.loading-dots {
+  display: flex;
+  gap: 5px;
+}
+.loading-dots i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--muted);
+  animation: dot-pulse 1s ease-in-out infinite;
+}
+.loading-dots i:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.loading-dots i:nth-child(3) {
+  animation-delay: 0.3s;
+}
+@keyframes dot-pulse {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-3px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .loading-dots i {
+    animation: none;
+    opacity: 0.5;
+  }
+}
 
 /* Empty / loading / error states */
 .empty,
