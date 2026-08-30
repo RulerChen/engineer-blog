@@ -27,6 +27,7 @@ If yes, take it. If no, skip it. Everything below is that question in more detai
 - Opinion or prediction pieces with no system behind them.
 - Work already represented in the list — the same work, not merely the same topic.
 - Roundups and recaps of other posts.
+- Work whose premise has since dissolved — the constraint it solved was removed by the language, platform, or upstream project, or the system it describes is retired and its replacement is already in the list.
 
 ## When unsure
 
@@ -38,11 +39,13 @@ Otherwise it goes in **Unsure**, not in Reject. A borderline post is a call for 
 
 Word count. Recency. Popularity or share count. Whether the topic or tag already appears in the list — neither as a reason to include nor to exclude.
 
+Age is not recency. Recency says the newer post is the better one — never a reason to include or exclude. Obsolescence says the problem itself is gone: the workaround is now a language feature, the tuning knob has a sane default, the project is archived. A 2016 post about a problem you still have goes in. Ask what changed in the world, not how long ago it was written, and say which change when you reject on this ground.
+
 ## Output when scanning
 
 Three sections. Never drop a post from all three.
 
-**Collect** — one line each: title, URL, publish date, one sentence on why it passes.
+**Collect** — one line each: the title linked to the post, publish date, one sentence on why it passes.
 
 **Unsure** — same format, plus what makes it borderline and which way you lean. Anything you would have rejected with hesitation belongs here.
 
@@ -53,5 +56,5 @@ Do not write to `data/entries.json` until the picks are confirmed.
 The format of the output is
 
 ```md
-title / url / publish date / one sentence on why it passes
+title(link) / publish date / one sentence on why it passes
 ```

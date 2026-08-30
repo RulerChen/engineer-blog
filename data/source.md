@@ -1,6 +1,25 @@
+- [airbnb](https://medium.com/airbnb-engineering) :
+- [amazon](https://www.amazon.science/blog) :
+- [atlassian](https://www.atlassian.com/blog/development) :
+- [booking](https://blog.booking.com) :
+- [canva](https://www.canva.dev/blog/engineering) :
+- [cloudflare](https://blog.cloudflare.com) :
 - [cursor](https://cursor.com/blog) : 2026-08-30
 - [discord](https://discord.com/category/engineering) : 2026-08-30
+- [doordash](https://careersatdoordash.com/engineering-blog) :
+- [dropbox](https://dropbox.tech) :
 - [figma](https://www.figma.com/blog/engineering) : 2026-08-30
+- [github](https://github.blog/category/engineering) :
+- [google](https://research.google/blog/) :
+- [linkedin](https://engineering.linkedin.com/blog) :
+- [meta](https://engineering.fb.com) :
+- [netflix](https://netflixtechblog.com) :
 - [notion](https://www.notion.com/blog/topic/tech) : 2026-08-30
+- [pinterest](https://medium.com/pinterest-engineering)
 - [openai](https://openai.com/news/engineering) : 2026-08-30
 - [shopify](https://shopify.engineering) : 2026-08-30
+- [stripe](https://stripe.com/blog) :
+- [slack](https://slack.engineering) :
+- [spotify](https://engineering.atspotify.com) :
+- [twitter]
+- [uber](https://eng.uber.com) : 2026-08-30
