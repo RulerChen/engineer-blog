@@ -111,7 +111,7 @@
     "url": "https://www.notion.com/blog/building-and-scaling-notions-data-lake",
     "source": "Notion",
     "publishedAt": "2024-07-01",
-    "tags": ["data-lake", "spark", "s3"]
+    "tags": ["data-lake", "spark", "s3", "oltp-to-olap"]
   },
   {
     "title": "How we sped up Notion in the browser with WASM SQLite",
@@ -292,7 +292,7 @@
     "url": "https://shopify.engineering/capturing-every-change-shopify-sharded-monolith",
     "source": "Shopify",
     "publishedAt": "2021-03-12",
-    "tags": ["mysql", "kafka", "cdc"]
+    "tags": ["mysql", "kafka", "cdc", "oltp-to-olap"]
   },
   {
     "title": "Shopify's Path to a Faster Trino Query Execution: Infrastructure",
@@ -460,5 +460,194 @@
     "source": "Shopify",
     "publishedAt": "2026-05-28",
     "tags": ["agent"]
+  },
+  {
+    "title": "Multiplayer editing in Figma",
+    "url": "https://www.figma.com/blog/multiplayer-editing-in-figma/",
+    "source": "Figma",
+    "publishedAt": "2016-09-28",
+    "series": "figma-multiplayer",
+    "tags": ["crdt"]
+  },
+  {
+    "title": "Realtime editing of ordered sequences",
+    "url": "https://www.figma.com/blog/realtime-editing-of-ordered-sequences/",
+    "source": "Figma",
+    "publishedAt": "2017-03-06",
+    "series": "figma-multiplayer",
+    "tags": ["crdt"]
+  },
+  {
+    "title": "An alternative approach to rate limiting",
+    "url": "https://www.figma.com/blog/an-alternative-approach-to-rate-limiting/",
+    "source": "Figma",
+    "publishedAt": "2017-04-12",
+    "tags": ["rate-limiting", "redis"]
+  },
+  {
+    "title": "Rust in production at Figma",
+    "url": "https://www.figma.com/blog/rust-in-production-at-figma/",
+    "source": "Figma",
+    "publishedAt": "2018-05-02",
+    "tags": ["rust"]
+  },
+  {
+    "title": "How Figma's multiplayer technology works",
+    "url": "https://www.figma.com/blog/how-figmas-multiplayer-technology-works/",
+    "source": "Figma",
+    "publishedAt": "2019-10-16",
+    "series": "figma-multiplayer",
+    "tags": ["crdt", "websocket"]
+  },
+  {
+    "title": "A deep dive on deep search",
+    "url": "https://www.figma.com/blog/deep-search/",
+    "source": "Figma",
+    "publishedAt": "2020-07-21",
+    "series": "figma-search",
+    "tags": ["elasticsearch"]
+  },
+  {
+    "title": "GraphQL, meet LiveGraph: a real-time data system at scale",
+    "url": "https://www.figma.com/blog/livegraph-real-time-data-fetching-at-figma/",
+    "source": "Figma",
+    "publishedAt": "2021-10-14",
+    "series": "figma-livegraph",
+    "tags": ["graphql"]
+  },
+  {
+    "title": "Postmortem: Service disruptions on June 6 & 7 2022",
+    "url": "https://www.figma.com/blog/postmortem-service-disruptions-on-june-6-and-7-2022/",
+    "source": "Figma",
+    "publishedAt": "2022-06-15",
+    "tags": ["redis", "postmortem"]
+  },
+  {
+    "title": "Making multiplayer more reliable",
+    "url": "https://www.figma.com/blog/making-multiplayer-more-reliable/",
+    "source": "Figma",
+    "publishedAt": "2022-10-20",
+    "series": "figma-multiplayer",
+    "tags": ["dynamodb"]
+  },
+  {
+    "title": "The growing pains of database architecture",
+    "url": "https://www.figma.com/blog/how-figma-scaled-to-multiple-databases/",
+    "source": "Figma",
+    "publishedAt": "2023-04-04",
+    "series": "figma-postgresql-scaling",
+    "tags": ["postgresql"]
+  },
+  {
+    "title": "How Figma's databases team lived to tell the scale",
+    "url": "https://www.figma.com/blog/how-figmas-databases-team-lived-to-tell-the-scale/",
+    "source": "Figma",
+    "publishedAt": "2024-03-14",
+    "series": "figma-postgresql-scaling",
+    "tags": ["postgresql"]
+  },
+  {
+    "title": "Speeding up C++ build times",
+    "url": "https://www.figma.com/blog/speeding-up-build-times/",
+    "source": "Figma",
+    "publishedAt": "2024-04-25",
+    "tags": ["cpp"]
+  },
+  {
+    "title": "Keeping it 100(x) with real-time data at scale",
+    "url": "https://www.figma.com/blog/livegraph-real-time-data-at-scale/",
+    "source": "Figma",
+    "publishedAt": "2024-05-17",
+    "series": "figma-livegraph",
+    "tags": ["graphql", "postgresql"]
+  },
+  {
+    "title": "Speeding up file load times, one page at a time",
+    "url": "https://www.figma.com/blog/speeding-up-file-load-times-one-page-at-a-time/",
+    "source": "Figma",
+    "publishedAt": "2024-05-22",
+    "series": "figma-file-load-perf",
+    "tags": []
+  },
+  {
+    "title": "How we migrated onto K8s in less than 12 months",
+    "url": "https://www.figma.com/blog/migrating-onto-kubernetes/",
+    "source": "Figma",
+    "publishedAt": "2024-08-08",
+    "tags": ["kubernetes", "cloud"]
+  },
+  {
+    "title": "The search for speed in Figma",
+    "url": "https://www.figma.com/blog/the-search-for-speed-in-figma-opensearch/",
+    "source": "Figma",
+    "publishedAt": "2024-10-10",
+    "series": "figma-search",
+    "tags": ["opensearch"]
+  },
+  {
+    "title": "The infrastructure behind AI search in Figma",
+    "url": "https://www.figma.com/blog/the-infrastructure-behind-ai-search-in-figma/",
+    "source": "Figma",
+    "publishedAt": "2024-10-15",
+    "series": "figma-ai-search",
+    "tags": ["machine-learning", "opensearch", "dynamodb"]
+  },
+  {
+    "title": "How we built AI search in Figma",
+    "url": "https://www.figma.com/blog/how-we-built-ai-search-in-figma/",
+    "source": "Figma",
+    "publishedAt": "2024-10-25",
+    "series": "figma-ai-search",
+    "tags": ["machine-learning"]
+  },
+  {
+    "title": "From multi-day latency to near real-time insights: Figma's data pipeline upgrade",
+    "url": "https://www.figma.com/blog/figmas-data-pipeline-upgrade/",
+    "source": "Figma",
+    "publishedAt": "2025-05-29",
+    "tags": ["cdc", "kafka", "snowflake", "s3", "oltp-to-olap"]
+  },
+  {
+    "title": "Supporting faster file load times with memory optimizations in Rust",
+    "url": "https://www.figma.com/blog/supporting-faster-file-load-times-with-memory-optimizations-in-rust/",
+    "source": "Figma",
+    "publishedAt": "2025-06-18",
+    "series": "figma-file-load-perf",
+    "tags": ["rust"]
+  },
+  {
+    "title": "Figma rendering: Powered by WebGPU",
+    "url": "https://www.figma.com/blog/figma-rendering-powered-by-webgpu/",
+    "source": "Figma",
+    "publishedAt": "2025-09-18",
+    "tags": ["webgpu"]
+  },
+  {
+    "title": "Figma's next-generation data caching platform",
+    "url": "https://www.figma.com/blog/figmas-next-generation-data-caching-platform/",
+    "source": "Figma",
+    "publishedAt": "2026-03-25",
+    "tags": ["redis"]
+  },
+  {
+    "title": "PGKeeper: Building the bouncer we needed for Postgres",
+    "url": "https://www.figma.com/blog/pgkeeper-building-the-bouncer-we-needed-for-postgres/",
+    "source": "Figma",
+    "publishedAt": "2026-05-04",
+    "tags": ["postgresql"]
+  },
+  {
+    "title": "Improving performance in the layers panel",
+    "url": "https://www.figma.com/blog/improving-performance-in-the-layers-panel/",
+    "source": "Figma",
+    "publishedAt": "2026-06-11",
+    "tags": []
+  },
+  {
+    "title": "Building accessibility into a canvas-based product",
+    "url": "https://www.figma.com/blog/building-accessibility-into-a-canvas-based-product/",
+    "source": "Figma",
+    "publishedAt": "2026-07-01",
+    "tags": ["accessibility"]
   }
 ]

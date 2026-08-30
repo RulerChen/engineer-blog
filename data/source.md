@@ -1,5 +1,6 @@
 - [cursor](https://cursor.com/blog) : 2026-08-30
 - [discord](https://discord.com/category/engineering) : 2026-08-30
+- [figma](https://www.figma.com/blog/engineering) : 2026-08-30
 - [notion](https://www.notion.com/blog/topic/tech) : 2026-08-30
 - [openai](https://openai.com/news/engineering) : 2026-08-30
 - [shopify](https://shopify.engineering) : 2026-08-30
