@@ -18,7 +18,7 @@
 - [pinterest](https://medium.com/pinterest-engineering)
 - [openai](https://openai.com/news/engineering) : 2026-08-30
 - [shopify](https://shopify.engineering) : 2026-08-30
-- [stripe](https://stripe.com/blog) :
+- [stripe](https://stripe.dev/blog) : 2026-08-30
 - [slack](https://slack.engineering) :
 - [spotify](https://engineering.atspotify.com) :
 - [twitter](https://blog.x.com/engineering) :
