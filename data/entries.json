@@ -182,5 +182,283 @@
     "source": "Cursor",
     "publishedAt": "2026-08-18",
     "tags": ["git", "s3"]
+  },
+  {
+    "title": "Surviving Flashes of High-Write Traffic Using Scriptable Load Balancers (Part I)",
+    "url": "https://shopify.engineering/surviving-flashes-of-high-write-traffic-using-scriptable-load-balancers-part-i",
+    "source": "Shopify",
+    "publishedAt": "2017-02-03",
+    "series": "shopify-flash-write-traffic",
+    "tags": ["nginx"]
+  },
+  {
+    "title": "Surviving Flashes of High-Write Traffic Using Scriptable Load Balancers (Part II)",
+    "url": "https://shopify.engineering/surviving-flashes-of-high-write-traffic-using-scriptable-load-balancers-part-ii",
+    "source": "Shopify",
+    "publishedAt": "2017-02-05",
+    "series": "shopify-flash-write-traffic",
+    "tags": ["nginx"]
+  },
+  {
+    "title": "A Pods Architecture To Allow Shopify To Scale",
+    "url": "https://shopify.engineering/a-pods-architecture-to-allow-shopify-to-scale",
+    "source": "Shopify",
+    "publishedAt": "2018-03-02",
+    "tags": ["mysql"]
+  },
+  {
+    "title": "Running Apache Kafka on Kubernetes at Shopify",
+    "url": "https://shopify.engineering/running-apache-kafka-on-kubernetes-at-shopify",
+    "source": "Shopify",
+    "publishedAt": "2018-11-07",
+    "tags": ["kafka", "kubernetes"]
+  },
+  {
+    "title": "Deconstructing the Monolith",
+    "url": "https://shopify.engineering/deconstructing-monolith-designing-software-maximizes-developer-productivity",
+    "source": "Shopify",
+    "publishedAt": "2019-02-21",
+    "series": "shopify-monolith-modularization",
+    "tags": ["monolith"]
+  },
+  {
+    "title": "How Shopify Manages Petabyte Scale MySQL Backup and Restore",
+    "url": "https://shopify.engineering/shopify-manages-petabyte-scale-mysql-backup-restore",
+    "source": "Shopify",
+    "publishedAt": "2019-10-01",
+    "tags": ["mysql"]
+  },
+  {
+    "title": "Your Circuit Breaker is Misconfigured",
+    "url": "https://shopify.engineering/circuit-breaker-misconfigured",
+    "source": "Shopify",
+    "publishedAt": "2020-02-18",
+    "tags": ["redis", "circuit-breaker"]
+  },
+  {
+    "title": "Categorizing Products at Scale",
+    "url": "https://shopify.engineering/categorizing-products-at-scale",
+    "source": "Shopify",
+    "publishedAt": "2020-04-30",
+    "series": "shopify-product-classification",
+    "tags": ["machine-learning"]
+  },
+  {
+    "title": "Using DNS Traffic Management to Add Resiliency to Shopify’s Services",
+    "url": "https://shopify.engineering/using-dns-traffic-management-add-resiliency-shopify-services",
+    "source": "Shopify",
+    "publishedAt": "2020-08-05",
+    "tags": ["dns"]
+  },
+  {
+    "title": "Under Deconstruction: The State of Shopify’s Monolith",
+    "url": "https://shopify.engineering/shopify-monolith",
+    "source": "Shopify",
+    "publishedAt": "2020-09-16",
+    "series": "shopify-monolith-modularization",
+    "tags": ["monolith"]
+  },
+  {
+    "title": "How to Introduce Composite Primary Keys in Rails",
+    "url": "https://shopify.engineering/how-to-introduce-composite-primary-keys-in-rails",
+    "source": "Shopify",
+    "publishedAt": "2020-10-29",
+    "tags": ["mysql"]
+  },
+  {
+    "title": "Pummelling the Platform-Performance Testing Shopify",
+    "url": "https://shopify.engineering/performance-testing-shopify",
+    "source": "Shopify",
+    "publishedAt": "2020-12-02",
+    "series": "shopify-bfcm-perf-testing",
+    "tags": ["load-testing", "go"]
+  },
+  {
+    "title": "Capacity Planning at Scale",
+    "url": "https://shopify.engineering/capacity-planning-shopify",
+    "source": "Shopify",
+    "publishedAt": "2020-12-03",
+    "tags": []
+  },
+  {
+    "title": "Read Consistency with Database Replicas",
+    "url": "https://shopify.engineering/read-consistency-database-replicas",
+    "source": "Shopify",
+    "publishedAt": "2021-02-22",
+    "tags": ["mysql"]
+  },
+  {
+    "title": "Capturing Every Change From Shopify’s Sharded Monolith",
+    "url": "https://shopify.engineering/capturing-every-change-shopify-sharded-monolith",
+    "source": "Shopify",
+    "publishedAt": "2021-03-12",
+    "tags": ["mysql", "kafka", "cdc"]
+  },
+  {
+    "title": "Shopify's Path to a Faster Trino Query Execution: Infrastructure",
+    "url": "https://shopify.engineering/faster-trino-query-execution-infrastructure",
+    "source": "Shopify",
+    "publishedAt": "2021-07-09",
+    "series": "shopify-trino-performance",
+    "tags": ["trino"]
+  },
+  {
+    "title": "Using Rich Image and Text Data to Categorize Products at Scale",
+    "url": "https://shopify.engineering/using-rich-image-text-data-categorize-products",
+    "source": "Shopify",
+    "publishedAt": "2021-09-08",
+    "series": "shopify-product-classification",
+    "tags": ["machine-learning"]
+  },
+  {
+    "title": "Shard Balancing: Moving Shops Confidently with Zero-Downtime at Terabyte-scale",
+    "url": "https://shopify.engineering/mysql-database-shard-balancing-terabyte-scale",
+    "source": "Shopify",
+    "publishedAt": "2021-09-24",
+    "tags": ["mysql"]
+  },
+  {
+    "title": "Debugging Systems in the Cloud: MySQL, Kubernetes, and Cgroups",
+    "url": "https://shopify.engineering/debugging-systems-cloud-mysql-kubernetes-cgroups",
+    "source": "Shopify",
+    "publishedAt": "2021-10-21",
+    "tags": ["mysql", "kubernetes", "cloud"]
+  },
+  {
+    "title": "Shopify's Path to a Faster Trino Query Execution: Custom Verification, Benchmarking, and Profiling Tooling",
+    "url": "https://shopify.engineering/faster-trino-query-execution-verification-benchmarking-profiling",
+    "source": "Shopify",
+    "publishedAt": "2021-10-27",
+    "series": "shopify-trino-performance",
+    "tags": ["trino"]
+  },
+  {
+    "title": "Upgrading MySQL at Shopify",
+    "url": "https://shopify.engineering/upgrading-mysql-shopify",
+    "source": "Shopify",
+    "publishedAt": "2021-12-02",
+    "tags": ["mysql"]
+  },
+  {
+    "title": "Scaling Shopify's BFCM Live Map: An Apache Flink Redesign",
+    "url": "https://shopify.engineering/bfcm-live-map-2021-apache-flink-redesign",
+    "source": "Shopify",
+    "publishedAt": "2021-12-10",
+    "tags": ["flink", "redis"]
+  },
+  {
+    "title": "Lessons Learned From Running Apache Airflow at Scale",
+    "url": "https://shopify.engineering/lessons-learned-apache-airflow-scale",
+    "source": "Shopify",
+    "publishedAt": "2022-05-23",
+    "tags": ["airflow", "kubernetes"]
+  },
+  {
+    "title": "Spin Infrastructure Adventures: Containers, Systemd, and CGroups",
+    "url": "https://shopify.engineering/spin-infrastructure-adventures-containers-systemd-cgroups",
+    "source": "Shopify",
+    "publishedAt": "2022-07-15",
+    "tags": ["operating-system", "kubernetes"]
+  },
+  {
+    "title": "Leveraging Go Worker Pools to Scale Server-side Data Sharing",
+    "url": "https://shopify.engineering/leveraging-go-worker-pools",
+    "source": "Shopify",
+    "publishedAt": "2022-09-09",
+    "tags": ["go"]
+  },
+  {
+    "title": "Safely Adding NOT NULL Columns to Your Database Tables",
+    "url": "https://shopify.engineering/add-not-null-colums-to-database",
+    "source": "Shopify",
+    "publishedAt": "2022-10-04",
+    "tags": ["mysql"]
+  },
+  {
+    "title": "Reducing BigQuery Costs: How We Fixed A $1 Million Query",
+    "url": "https://shopify.engineering/reducing-bigquery-costs",
+    "source": "Shopify",
+    "publishedAt": "2022-11-03",
+    "tags": ["bigquery"]
+  },
+  {
+    "title": "Migrating our Largest Mobile App to React Native",
+    "url": "https://shopify.engineering/migrating-our-largest-mobile-app-to-react-native",
+    "source": "Shopify",
+    "publishedAt": "2022-12-27",
+    "tags": ["react-native"]
+  },
+  {
+    "title": "Performance Testing At Scale—for BFCM and Beyond",
+    "url": "https://shopify.engineering/scale-performance-testing",
+    "source": "Shopify",
+    "publishedAt": "2023-01-27",
+    "series": "shopify-bfcm-perf-testing",
+    "tags": ["load-testing", "kubernetes"]
+  },
+  {
+    "title": "Horizontally scaling the Rails backend of Shop app with Vitess",
+    "url": "https://shopify.engineering/horizontally-scaling-the-rails-backend-of-shop-app-with-vitess",
+    "source": "Shopify",
+    "publishedAt": "2024-01-17",
+    "tags": ["vitess", "mysql", "rails"]
+  },
+  {
+    "title": "Improving Shopify App’s Performance",
+    "url": "https://shopify.engineering/improving-shopify-app-s-performance",
+    "source": "Shopify",
+    "publishedAt": "2024-03-05",
+    "tags": ["react-native"]
+  },
+  {
+    "title": "Mitigating Deadlocks in high concurrency environments",
+    "url": "https://shopify.engineering/mitigating-deadlocks-in-high-concurrency-environments",
+    "source": "Shopify",
+    "publishedAt": "2024-08-14",
+    "tags": ["mysql"]
+  },
+  {
+    "title": "Evolution of Product Classification at Shopify: From Categories to Comprehensive Product Understanding",
+    "url": "https://shopify.engineering/evolution-product-classification",
+    "source": "Shopify",
+    "publishedAt": "2025-05-08",
+    "series": "shopify-product-classification",
+    "tags": ["machine-learning"]
+  },
+  {
+    "title": "How AI Agents are Evolving Shopify's Product Taxonomy at Scale",
+    "url": "https://shopify.engineering/product-taxonomy-at-scale",
+    "source": "Shopify",
+    "publishedAt": "2025-10-09",
+    "series": "shopify-product-classification",
+    "tags": ["agent"]
+  },
+  {
+    "title": "Building world-class product search at Shopify: Where C++ excellence meets ML innovation",
+    "url": "https://shopify.engineering/world-class-product-search",
+    "source": "Shopify",
+    "publishedAt": "2025-11-12",
+    "tags": ["cpp", "machine-learning"]
+  },
+  {
+    "title": "2,000 robots walk into a shop: Simulated A/B testing",
+    "url": "https://shopify.engineering/simgym",
+    "source": "Shopify",
+    "publishedAt": "2026-02-27",
+    "tags": ["agent"]
+  },
+  {
+    "title": "We replaced Redis with MySQL for inventory reservations—and it scaled",
+    "url": "https://shopify.engineering/scaling-inventory-reservations",
+    "source": "Shopify",
+    "publishedAt": "2026-05-12",
+    "tags": ["mysql", "redis"]
+  },
+  {
+    "title": "Under the River",
+    "url": "https://shopify.engineering/under-the-river",
+    "source": "Shopify",
+    "publishedAt": "2026-05-28",
+    "tags": ["agent"]
   }
 ]

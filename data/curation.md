@@ -12,10 +12,10 @@ If yes, take it. If no, skip it. Everything below is that question in more detai
 
 ## Do collect
 
-- A specific system described under real production load, with the problem and the constraints named.
-- A migration, rewrite, or architectural change where the reasoning is kept in — what broke, what was tried, why the final choice won, what it cost.
+- A specific system under real production load, with the problem and constraints named.
+- A migration, rewrite, or architectural change with the reasoning kept in — what broke, what was tried, why the final choice won, what it cost.
 - Numbers measured in production: latency, throughput, cost, scale, before and after.
-- A hard technical problem explained in enough detail that someone outside the company could act on it.
+- A hard technical problem explained well enough that an outsider could act on it.
 - Failures and postmortems — usually the highest-signal thing on any blog.
 
 ## Don't collect
@@ -23,15 +23,16 @@ If yes, take it. If no, skip it. Everything below is that question in more detai
 - Product launches, feature announcements, changelogs, release notes — even when written by engineers.
 - Marketing under an engineering byline: framed as how something was built, but really an argument for using it.
 - Company and people posts: culture, hiring, onboarding, events, awards, team retrospectives.
-- Tutorials and getting-started material, whether for their own tools or for well-known public ones.
+- Tutorials and getting-started material, for their own tools or for well-known public ones.
 - Opinion or prediction pieces with no system behind them.
 - Work already represented in the list — the same work, not merely the same topic.
 - Roundups and recaps of other posts.
 
 ## When unsure
 
-1. Strip the company name from the title. Does it still describe a technical problem? If it now reads as an ad, or the takeaway is "this company is doing well", skip it.
-2. Prefer fewer. The list is hand-curated — a borderline entry costs more than a missed one. Leave it out and say so.
+Strip the company name from the title. Does it still describe a technical problem? If it now reads as an ad, or the takeaway is "this company is doing well", it's a reject.
+
+Otherwise it goes in **Unsure**, not in Reject. A borderline post is a call for the maintainer to make, and a good post lost to a silent reject costs more than one extra line to read.
 
 ## Never use as a signal
 
@@ -39,4 +40,18 @@ Word count. Recency. Popularity or share count. Whether the topic or tag already
 
 ## Output when scanning
 
-For each candidate, one line: title, URL, publish date, and one sentence on why it passes. List rejects separately as title + a few words on why — so the call can be overridden without re-reading the blog. Do not write to `data/entries.json` until the picks are confirmed.
+Three sections. Never drop a post from all three.
+
+**Collect** — one line each: title, URL, publish date, one sentence on why it passes.
+
+**Unsure** — same format, plus what makes it borderline and which way you lean. Anything you would have rejected with hesitation belongs here.
+
+**Reject** — no output needed.
+
+Do not write to `data/entries.json` until the picks are confirmed.
+
+The format of the output is
+
+```md
+title / url / publish date / one sentence on why it passes
+```
