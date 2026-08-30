@@ -27,18 +27,13 @@ const displayDate = computed(() =>
   }),
 );
 
-/** Where this entry sits in its series, and the parts either side of it. */
+/** Where this entry sits in its series. */
 const seriesPart = computed(() => {
   const series = props.series;
   if (!series) return null;
   const index = series.parts.findIndex((part) => part.id === props.article.id);
   if (index === -1) return null;
-  return {
-    number: index + 1,
-    total: series.parts.length,
-    previous: series.parts[index - 1] ?? null,
-    next: series.parts[index + 1] ?? null,
-  };
+  return { number: index + 1, total: series.parts.length };
 });
 
 /** Tooltip for the meta-row icon — the icon itself carries no words. */
@@ -136,26 +131,6 @@ const avatarStyle = computed(() => {
           <span>{{ series.label }}</span>
         </button>
         <span class="series-part">Part {{ seriesPart.number }} of {{ seriesPart.total }}</span>
-        <a
-          v-if="seriesPart.previous"
-          class="series-sibling"
-          :href="seriesPart.previous.url"
-          :title="seriesPart.previous.title"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          ← {{ seriesPart.previous.title }}
-        </a>
-        <a
-          v-if="seriesPart.next"
-          class="series-sibling"
-          :href="seriesPart.next.url"
-          :title="seriesPart.next.title"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {{ seriesPart.next.title }} →
-        </a>
       </div>
     </div>
     <button

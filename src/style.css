@@ -695,9 +695,6 @@ input::placeholder {
   .article-card {
     padding: 16px;
   }
-  .article-card .series-sibling {
-    max-width: 100%;
-  }
   .filter-menu {
     width: 260px;
   }
@@ -772,19 +769,6 @@ input::placeholder {
 }
 .article-card .series-part {
   font-weight: 700;
-}
-.article-card .series-sibling {
-  max-width: 260px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  color: var(--muted);
-  font-weight: 600;
-  border-bottom: 1px solid transparent;
-}
-.article-card .series-sibling:hover {
-  color: var(--accent);
-  border-bottom-color: color-mix(in srgb, var(--accent) 40%, transparent);
 }
 .series-active {
   display: inline-flex;
