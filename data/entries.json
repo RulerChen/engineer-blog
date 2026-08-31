@@ -249,13 +249,6 @@
     "tags": ["testing", "load-testing", "go"]
   },
   {
-    "title": "Capacity Planning at Scale",
-    "url": "https://shopify.engineering/capacity-planning-shopify",
-    "source": "Shopify",
-    "publishedAt": "2020-12-03",
-    "tags": ["reliability", "capacity-planning"]
-  },
-  {
     "title": "Read Consistency with Database Replicas",
     "url": "https://shopify.engineering/read-consistency-database-replicas",
     "source": "Shopify",
@@ -364,7 +357,7 @@
     "tags": ["mobile", "react-native"]
   },
   {
-    "title": "Performance Testing At Scale—for BFCM and Beyond",
+    "title": "Performance Testing At Scale-for BFCM and Beyond",
     "url": "https://shopify.engineering/scale-performance-testing",
     "source": "Shopify",
     "publishedAt": "2023-01-27",
@@ -401,14 +394,6 @@
     "tags": ["machine-learning"]
   },
   {
-    "title": "How AI Agents are Evolving Shopify's Product Taxonomy at Scale",
-    "url": "https://shopify.engineering/product-taxonomy-at-scale",
-    "source": "Shopify",
-    "publishedAt": "2025-10-09",
-    "series": "shopify-product-classification",
-    "tags": ["machine-learning", "agent"]
-  },
-  {
     "title": "Building world-class product search at Shopify: Where C++ excellence meets ML innovation",
     "url": "https://shopify.engineering/world-class-product-search",
     "source": "Shopify",
@@ -435,14 +420,6 @@
     "source": "Shopify",
     "publishedAt": "2026-05-28",
     "tags": ["machine-learning", "agent"]
-  },
-  {
-    "title": "Multiplayer editing in Figma",
-    "url": "https://www.figma.com/blog/multiplayer-editing-in-figma/",
-    "source": "Figma",
-    "publishedAt": "2016-09-28",
-    "series": "figma-multiplayer",
-    "tags": ["architecture", "crdt"]
   },
   {
     "title": "Realtime editing of ordered sequences",
@@ -609,13 +586,6 @@
     "url": "https://www.figma.com/blog/improving-performance-in-the-layers-panel/",
     "source": "Figma",
     "publishedAt": "2026-06-11",
-    "tags": ["frontend"]
-  },
-  {
-    "title": "Building accessibility into a canvas-based product",
-    "url": "https://www.figma.com/blog/building-accessibility-into-a-canvas-based-product/",
-    "source": "Figma",
-    "publishedAt": "2026-07-01",
     "tags": ["frontend"]
   },
   {
@@ -969,14 +939,6 @@
     "tags": ["storage"]
   },
   {
-    "title": "Scaling to exabytes and beyond",
-    "url": "https://dropbox.tech/infrastructure/magic-pocket-infrastructure",
-    "source": "Dropbox",
-    "publishedAt": "2016-03-14",
-    "series": "dropbox-magic-pocket",
-    "tags": ["storage", "object-storage", "s3"]
-  },
-  {
     "title": "Inside the Magic Pocket",
     "url": "https://dropbox.tech/infrastructure/inside-the-magic-pocket",
     "source": "Dropbox",
@@ -1080,13 +1042,6 @@
     "source": "Dropbox",
     "publishedAt": "2019-01-08",
     "tags": ["api-design", "grpc"]
-  },
-  {
-    "title": "Finding Kafka’s throughput limit in Dropbox infrastructure",
-    "url": "https://dropbox.tech/infrastructure/finding-kafkas-throughput-limit-in-dropbox-infrastructure",
-    "source": "Dropbox",
-    "publishedAt": "2019-01-30",
-    "tags": ["testing", "load-testing", "kafka"]
   },
   {
     "title": "How we optimized Magic Pocket for cold storage",
@@ -1236,13 +1191,6 @@
     "source": "Dropbox",
     "publishedAt": "2025-07-02",
     "tags": ["hardware"]
-  },
-  {
-    "title": "A practical blueprint for evaluating conversational AI at scale",
-    "url": "https://dropbox.tech/machine-learning/practical-blueprint-evaluating-conversational-ai-at-scale-dash",
-    "source": "Dropbox",
-    "publishedAt": "2025-10-02",
-    "tags": ["machine-learning", "llm"]
   },
   {
     "title": "Improving storage efficiency in Magic Pocket, our immutable blob store",
@@ -1397,13 +1345,6 @@
     "tags": ["architecture", "monolith", "job-queue", "kafka"]
   },
   {
-    "title": "Breaking down CPU speed: How utilization impacts performance",
-    "url": "https://github.blog/engineering/architecture-optimization/breaking-down-cpu-speed-how-utilization-impacts-performance/",
-    "source": "GitHub",
-    "publishedAt": "2024-11-25",
-    "tags": ["reliability", "capacity-planning", "hardware"]
-  },
-  {
     "title": "From latency to instant: Modernizing GitHub Issues navigation performance",
     "url": "https://github.blog/engineering/architecture-optimization/from-latency-to-instant-modernizing-github-issues-navigation-performance/",
     "source": "GitHub",
@@ -1445,13 +1386,6 @@
     "publishedAt": "2020-01-15",
     "series": "slack-airflow-upgrades",
     "tags": ["data", "etl", "airflow"]
-  },
-  {
-    "title": "Deploys at Slack",
-    "url": "https://slack.engineering/deploys-at-slack/",
-    "source": "Slack",
-    "publishedAt": "2020-03-29",
-    "tags": ["architecture", "ci-cd"]
   },
   {
     "title": "A Terrible, Horrible, No-Good, Very Bad Day at Slack",
