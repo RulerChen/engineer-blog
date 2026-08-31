@@ -1462,5 +1462,142 @@
     "source": "GitHub",
     "publishedAt": "2026-05-14",
     "tags": ["frontend", "indexeddb", "react"]
+  },
+  {
+    "title": "Personalized channel recommendations in Slack",
+    "url": "https://slack.engineering/personalized-channel-recommendations-in-slack/",
+    "source": "Slack",
+    "publishedAt": "2016-09-06",
+    "tags": ["machine-learning"]
+  },
+  {
+    "title": "Search at Slack",
+    "url": "https://slack.engineering/search-at-slack/",
+    "source": "Slack",
+    "publishedAt": "2017-02-07",
+    "tags": ["search", "ranking", "solr"]
+  },
+  {
+    "title": "Scaling Slack’s Job Queue",
+    "url": "https://slack.engineering/scaling-slacks-job-queue/",
+    "source": "Slack",
+    "publishedAt": "2017-12-06",
+    "tags": ["architecture", "job-queue", "kafka", "redis"]
+  },
+  {
+    "title": "Evolving the Slack API",
+    "url": "https://slack.engineering/evolving-the-slack-api/",
+    "source": "Slack",
+    "publishedAt": "2018-01-25",
+    "tags": ["api-design", "rest"]
+  },
+  {
+    "title": "Engineering dive into Slack Enterprise Key Management",
+    "url": "https://slack.engineering/engineering-dive-into-slack-enterprise-key-management/",
+    "source": "Slack",
+    "publishedAt": "2019-03-18",
+    "tags": ["security", "aws-kms"]
+  },
+  {
+    "title": "Reliably Upgrading Apache Airflow at Slack’s Scale",
+    "url": "https://slack.engineering/reliably-upgrading-apache-airflow-at-slacks-scale/",
+    "source": "Slack",
+    "publishedAt": "2020-01-15",
+    "series": "slack-airflow-upgrades",
+    "tags": ["data", "etl", "airflow"]
+  },
+  {
+    "title": "Deploys at Slack",
+    "url": "https://slack.engineering/deploys-at-slack/",
+    "source": "Slack",
+    "publishedAt": "2020-03-29",
+    "tags": ["architecture", "ci-cd"]
+  },
+  {
+    "title": "A Terrible, Horrible, No-Good, Very Bad Day at Slack",
+    "url": "https://slack.engineering/a-terrible-horrible-no-good-very-bad-day-at-slack/",
+    "source": "Slack",
+    "publishedAt": "2020-06-29",
+    "series": "slack-may-2020-outage",
+    "tags": ["reliability", "postmortem", "haproxy", "consul"]
+  },
+  {
+    "title": "All Hands on Deck",
+    "url": "https://slack.engineering/all-hands-on-deck/",
+    "source": "Slack",
+    "publishedAt": "2020-06-29",
+    "series": "slack-may-2020-outage",
+    "tags": ["reliability", "postmortem"]
+  },
+  {
+    "title": "Blocking Slack Invite Spam With Machine Learning",
+    "url": "https://slack.engineering/blocking-slack-invite-spam-with-machine-learning/",
+    "source": "Slack",
+    "publishedAt": "2020-08-10",
+    "tags": ["machine-learning"]
+  },
+  {
+    "title": "Migrating Slack Airflow to Python 3 Without Disruption",
+    "url": "https://slack.engineering/migrating-slack-airflow-to-python-3-without-disruption/",
+    "source": "Slack",
+    "publishedAt": "2020-11-19",
+    "series": "slack-airflow-upgrades",
+    "tags": ["data", "etl", "airflow", "python"]
+  },
+  {
+    "title": "Scaling Datastores at Slack with Vitess",
+    "url": "https://slack.engineering/scaling-datastores-at-slack-with-vitess/",
+    "source": "Slack",
+    "publishedAt": "2020-12-01",
+    "tags": ["database", "sharding", "migration", "mysql", "vitess"]
+  },
+  {
+    "title": "Slack’s Outage on January 4th 2021",
+    "url": "https://slack.engineering/slacks-outage-on-january-4th-2021/",
+    "source": "Slack",
+    "publishedAt": "2021-02-01",
+    "tags": ["reliability", "postmortem"]
+  },
+  {
+    "title": "Migrating Millions of Concurrent Websockets to Envoy",
+    "url": "https://slack.engineering/migrating-millions-of-concurrent-websockets-to-envoy/",
+    "source": "Slack",
+    "publishedAt": "2021-03-15",
+    "tags": ["network", "load-balance", "envoy", "haproxy", "websocket"]
+  },
+  {
+    "title": "Building Self-driving Kafka clusters using open source components",
+    "url": "https://slack.engineering/building-self-driving-kafka-clusters-using-open-source-components/",
+    "source": "Slack",
+    "publishedAt": "2022-02-11",
+    "tags": ["architecture", "kafka", "zookeeper"]
+  },
+  {
+    "title": "How We Use Terraform At Slack",
+    "url": "https://slack.engineering/how-we-use-terraform-at-slack/",
+    "source": "Slack",
+    "publishedAt": "2022-10-25",
+    "tags": ["cloud", "terraform"]
+  },
+  {
+    "title": "Slack’s Migration to a Cellular Architecture",
+    "url": "https://slack.engineering/slacks-migration-to-a-cellular-architecture/",
+    "source": "Slack",
+    "publishedAt": "2023-08-22",
+    "tags": ["architecture", "reliability", "envoy"]
+  },
+  {
+    "title": "Executing Cron Scripts Reliably At Scale",
+    "url": "https://slack.engineering/executing-cron-scripts-reliably-at-scale/",
+    "source": "Slack",
+    "publishedAt": "2023-09-28",
+    "tags": ["architecture", "job-queue"]
+  },
+  {
+    "title": "Unlocking Efficiency and Performance: Navigating the Spark 3 and EMR 6 Upgrade Journey at Slack",
+    "url": "https://slack.engineering/unlocking-efficiency-and-performance-navigating-the-spark-3-and-emr-6-upgrade-journey-at-slack/",
+    "source": "Slack",
+    "publishedAt": "2024-07-02",
+    "tags": ["data", "etl", "spark", "emr", "hive"]
   }
 ]
