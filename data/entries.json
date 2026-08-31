@@ -202,7 +202,6 @@
     "url": "https://shopify.engineering/deconstructing-monolith-designing-software-maximizes-developer-productivity",
     "source": "Shopify",
     "publishedAt": "2019-02-21",
-    "series": "shopify-monolith-modularization",
     "tags": ["architecture", "monolith"]
   },
   {
@@ -233,14 +232,6 @@
     "source": "Shopify",
     "publishedAt": "2020-08-05",
     "tags": ["network", "dns"]
-  },
-  {
-    "title": "Under Deconstruction: The State of Shopify’s Monolith",
-    "url": "https://shopify.engineering/shopify-monolith",
-    "source": "Shopify",
-    "publishedAt": "2020-09-16",
-    "series": "shopify-monolith-modularization",
-    "tags": ["architecture", "monolith"]
   },
   {
     "title": "How to Introduce Composite Primary Keys in Rails",
@@ -469,13 +460,6 @@
     "tags": ["reliability", "overload-control", "redis"]
   },
   {
-    "title": "Rust in production at Figma",
-    "url": "https://www.figma.com/blog/rust-in-production-at-figma/",
-    "source": "Figma",
-    "publishedAt": "2018-05-02",
-    "tags": ["language", "rust"]
-  },
-  {
     "title": "How Figma's multiplayer technology works",
     "url": "https://www.figma.com/blog/how-figmas-multiplayer-technology-works/",
     "source": "Figma",
@@ -670,13 +654,6 @@
     "source": "Uber",
     "publishedAt": "2017-09-05",
     "tags": ["machine-learning", "training"]
-  },
-  {
-    "title": "Denial By DNS: Uber's Open Source Tool for Preventing Resource Exhaustion by DNS Outages",
-    "url": "https://www.uber.com/blog/denial-by-dns/",
-    "source": "Uber",
-    "publishedAt": "2017-12-05",
-    "tags": ["network", "dns"]
   },
   {
     "title": "Building Reliable Reprocessing and Dead Letter Queues with Apache Kafka",
@@ -1008,20 +985,6 @@
     "tags": ["storage", "object-storage"]
   },
   {
-    "title": "Enabling HTTP/2 for Dropbox web services: experiences and observations",
-    "url": "https://dropbox.tech/infrastructure/enabling-http2-for-dropbox-web-services-experiences-and-observations",
-    "source": "Dropbox",
-    "publishedAt": "2016-05-11",
-    "tags": ["network", "http"]
-  },
-  {
-    "title": "Going deeper with Project Infinite",
-    "url": "https://dropbox.tech/infrastructure/going-deeper-with-project-infinite",
-    "source": "Dropbox",
-    "publishedAt": "2016-05-24",
-    "tags": ["operating-system", "kernel"]
-  },
-  {
     "title": "Pocket watch: Verifying exabytes of data",
     "url": "https://dropbox.tech/infrastructure/pocket-watch",
     "source": "Dropbox",
@@ -1216,14 +1179,6 @@
     "tags": ["reliability", "disaster-recovery"]
   },
   {
-    "title": "A look inside our sixth generation of server hardware",
-    "url": "https://dropbox.tech/infrastructure/sixth-generation-server-hardware",
-    "source": "Dropbox",
-    "publishedAt": "2022-06-29",
-    "series": "dropbox-server-hardware",
-    "tags": ["hardware"]
-  },
-  {
     "title": "Everything in its write place: Cloud storage abstraction with Object Store",
     "url": "https://dropbox.tech/infrastructure/abstracting-cloud-storage-backends-with-object-store",
     "source": "Dropbox",
@@ -1280,7 +1235,6 @@
     "url": "https://dropbox.tech/infrastructure/seventh-generation-server-hardware",
     "source": "Dropbox",
     "publishedAt": "2025-07-02",
-    "series": "dropbox-server-hardware",
     "tags": ["hardware"]
   },
   {
@@ -1325,13 +1279,6 @@
     "source": "Stripe",
     "publishedAt": "2024-04-15",
     "tags": ["machine-learning", "training", "spark"]
-  },
-  {
-    "title": "Test clocks: How we made it easier to test Stripe Billing integrations",
-    "url": "https://stripe.dev/blog/test-clocks-how-we-made-it-easier-to-test-stripe-billing-integrations",
-    "source": "Stripe",
-    "publishedAt": "2024-05-09",
-    "tags": ["testing"]
   },
   {
     "title": "How Stripe’s document databases supported 99.999% uptime with zero-downtime data migrations",
@@ -1492,13 +1439,6 @@
     "tags": ["api-design", "rest"]
   },
   {
-    "title": "Engineering dive into Slack Enterprise Key Management",
-    "url": "https://slack.engineering/engineering-dive-into-slack-enterprise-key-management/",
-    "source": "Slack",
-    "publishedAt": "2019-03-18",
-    "tags": ["security", "aws-kms"]
-  },
-  {
     "title": "Reliably Upgrading Apache Airflow at Slack’s Scale",
     "url": "https://slack.engineering/reliably-upgrading-apache-airflow-at-slacks-scale/",
     "source": "Slack",
@@ -1518,23 +1458,7 @@
     "url": "https://slack.engineering/a-terrible-horrible-no-good-very-bad-day-at-slack/",
     "source": "Slack",
     "publishedAt": "2020-06-29",
-    "series": "slack-may-2020-outage",
     "tags": ["reliability", "postmortem", "haproxy", "consul"]
-  },
-  {
-    "title": "All Hands on Deck",
-    "url": "https://slack.engineering/all-hands-on-deck/",
-    "source": "Slack",
-    "publishedAt": "2020-06-29",
-    "series": "slack-may-2020-outage",
-    "tags": ["reliability", "postmortem"]
-  },
-  {
-    "title": "Blocking Slack Invite Spam With Machine Learning",
-    "url": "https://slack.engineering/blocking-slack-invite-spam-with-machine-learning/",
-    "source": "Slack",
-    "publishedAt": "2020-08-10",
-    "tags": ["machine-learning"]
   },
   {
     "title": "Migrating Slack Airflow to Python 3 Without Disruption",
@@ -1571,13 +1495,6 @@
     "source": "Slack",
     "publishedAt": "2022-02-11",
     "tags": ["architecture", "kafka", "zookeeper"]
-  },
-  {
-    "title": "How We Use Terraform At Slack",
-    "url": "https://slack.engineering/how-we-use-terraform-at-slack/",
-    "source": "Slack",
-    "publishedAt": "2022-10-25",
-    "tags": ["cloud", "terraform"]
   },
   {
     "title": "Slack’s Migration to a Cellular Architecture",
