@@ -219,26 +219,11 @@
     "tags": ["reliability", "overload-control", "redis"]
   },
   {
-    "title": "Categorizing Products at Scale",
-    "url": "https://shopify.engineering/categorizing-products-at-scale",
-    "source": "Shopify",
-    "publishedAt": "2020-04-30",
-    "series": "shopify-product-classification",
-    "tags": ["machine-learning"]
-  },
-  {
     "title": "Using DNS Traffic Management to Add Resiliency to Shopify’s Services",
     "url": "https://shopify.engineering/using-dns-traffic-management-add-resiliency-shopify-services",
     "source": "Shopify",
     "publishedAt": "2020-08-05",
     "tags": ["network", "dns"]
-  },
-  {
-    "title": "How to Introduce Composite Primary Keys in Rails",
-    "url": "https://shopify.engineering/how-to-introduce-composite-primary-keys-in-rails",
-    "source": "Shopify",
-    "publishedAt": "2020-10-29",
-    "tags": ["database", "schema", "mysql"]
   },
   {
     "title": "Pummelling the Platform-Performance Testing Shopify",
@@ -619,13 +604,6 @@
     "tags": ["observability", "tracing"]
   },
   {
-    "title": "Meet Michelangelo: Uber's Machine Learning Platform",
-    "url": "https://www.uber.com/blog/michelangelo-machine-learning-platform/",
-    "source": "Uber",
-    "publishedAt": "2017-09-05",
-    "tags": ["machine-learning", "training"]
-  },
-  {
     "title": "Building Reliable Reprocessing and Dead Letter Queues with Apache Kafka",
     "url": "https://www.uber.com/blog/reliable-reprocessing/",
     "source": "Uber",
@@ -748,13 +726,6 @@
     "source": "Uber",
     "publishedAt": "2021-11-18",
     "tags": ["observability", "tracing"]
-  },
-  {
-    "title": "How We Saved 70K Cores Across 30 Mission-Critical Services (Large-Scale, Semi-Automated Go GC Tuning @Uber)",
-    "url": "https://www.uber.com/blog/how-we-saved-70k-cores-across-30-mission-critical-services/",
-    "source": "Uber",
-    "publishedAt": "2021-12-22",
-    "tags": ["language", "garbage-collection", "go"]
   },
   {
     "title": "Cost Efficiency @ Scale in Big Data File Format",
@@ -962,13 +933,6 @@
     "tags": ["storage", "object-storage"]
   },
   {
-    "title": "(Re)Introducing Edgestore",
-    "url": "https://dropbox.tech/infrastructure/reintroducing-edgestore",
-    "source": "Dropbox",
-    "publishedAt": "2016-08-30",
-    "tags": ["database", "mysql"]
-  },
-  {
     "title": "Evolution of Dropbox’s Edge Network",
     "url": "https://dropbox.tech/infrastructure/evolution-of-dropboxs-edge-network",
     "source": "Dropbox",
@@ -984,27 +948,11 @@
     "tags": ["network", "http", "nginx"]
   },
   {
-    "title": "Infrastructure update: evolution of the Dropbox backbone network",
-    "url": "https://dropbox.tech/infrastructure/infrastructure-update-evolution-of-the-dropbox-backbone-network",
-    "source": "Dropbox",
-    "publishedAt": "2017-09-15",
-    "series": "dropbox-edge-network",
-    "tags": ["network"]
-  },
-  {
     "title": "Handling system failures during payment communication",
     "url": "https://dropbox.tech/infrastructure/handling-system-failures-during-payment-communication",
     "source": "Dropbox",
     "publishedAt": "2017-09-29",
     "tags": ["reliability"]
-  },
-  {
-    "title": "Meet Bandaid, the Dropbox service proxy",
-    "url": "https://dropbox.tech/infrastructure/meet-bandaid-the-dropbox-service-proxy",
-    "source": "Dropbox",
-    "publishedAt": "2018-03-01",
-    "series": "dropbox-load-balancing",
-    "tags": ["network", "load-balance", "proxy"]
   },
   {
     "title": "Extending Magic Pocket Innovation with the first petabyte scale SMR drive deployment",
@@ -1280,13 +1228,6 @@
     "tags": ["network", "proxy", "load-balance", "go"]
   },
   {
-    "title": "Context aware MySQL pools via HAProxy",
-    "url": "https://github.blog/engineering/infrastructure/context-aware-mysql-pools-via-haproxy/",
-    "source": "GitHub",
-    "publishedAt": "2016-08-17",
-    "tags": ["database", "mysql", "haproxy"]
-  },
-  {
     "title": "MySQL High Availability at GitHub",
     "url": "https://github.blog/engineering/infrastructure/mysql-high-availability-at-github/",
     "source": "GitHub",
@@ -1359,13 +1300,6 @@
     "tags": ["frontend", "indexeddb", "react"]
   },
   {
-    "title": "Personalized channel recommendations in Slack",
-    "url": "https://slack.engineering/personalized-channel-recommendations-in-slack/",
-    "source": "Slack",
-    "publishedAt": "2016-09-06",
-    "tags": ["machine-learning"]
-  },
-  {
     "title": "Search at Slack",
     "url": "https://slack.engineering/search-at-slack/",
     "source": "Slack",
@@ -1387,27 +1321,11 @@
     "tags": ["api-design", "rest"]
   },
   {
-    "title": "Reliably Upgrading Apache Airflow at Slack’s Scale",
-    "url": "https://slack.engineering/reliably-upgrading-apache-airflow-at-slacks-scale/",
-    "source": "Slack",
-    "publishedAt": "2020-01-15",
-    "series": "slack-airflow-upgrades",
-    "tags": ["data", "etl", "airflow"]
-  },
-  {
     "title": "A Terrible, Horrible, No-Good, Very Bad Day at Slack",
     "url": "https://slack.engineering/a-terrible-horrible-no-good-very-bad-day-at-slack/",
     "source": "Slack",
     "publishedAt": "2020-06-29",
     "tags": ["reliability", "postmortem", "haproxy", "consul"]
-  },
-  {
-    "title": "Migrating Slack Airflow to Python 3 Without Disruption",
-    "url": "https://slack.engineering/migrating-slack-airflow-to-python-3-without-disruption/",
-    "source": "Slack",
-    "publishedAt": "2020-11-19",
-    "series": "slack-airflow-upgrades",
-    "tags": ["data", "etl", "airflow", "python"]
   },
   {
     "title": "Scaling Datastores at Slack with Vitess",
@@ -1457,5 +1375,211 @@
     "source": "Slack",
     "publishedAt": "2024-07-02",
     "tags": ["data", "etl", "spark", "emr", "hive"]
+  },
+  {
+    "title": "Avoiding double payments in a distributed payments system",
+    "url": "https://medium.com/airbnb-engineering/avoiding-double-payments-in-a-distributed-payments-system-2981f6b070bb",
+    "source": "Airbnb",
+    "publishedAt": "2019-04-16",
+    "tags": ["architecture", "microservice"]
+  },
+  {
+    "title": "Skipper: Building Airbnb’s embedded workflow engine",
+    "url": "https://medium.com/airbnb-engineering/skipper-building-airbnbs-embedded-workflow-engine-f6c34552146f",
+    "source": "Airbnb",
+    "publishedAt": "2026-04-28",
+    "tags": ["architecture", "job-queue"]
+  },
+  {
+    "title": "Capturing Data Evolution in a Service-Oriented Architecture",
+    "url": "https://medium.com/airbnb-engineering/capturing-data-evolution-in-a-service-oriented-architecture-72f7c643ee6f",
+    "source": "Airbnb",
+    "publishedAt": "2018-08-15",
+    "tags": ["data", "cdc", "mysql", "kafka"]
+  },
+  {
+    "title": "Continuous Delivery at Airbnb",
+    "url": "https://medium.com/airbnb-engineering/continuous-delivery-at-airbnb-6ac042bc7876",
+    "source": "Airbnb",
+    "publishedAt": "2022-04-22",
+    "tags": ["architecture", "ci-cd", "spinnaker"]
+  },
+  {
+    "title": "Mussel — Airbnb’s Key-Value Store for Derived Data",
+    "url": "https://medium.com/airbnb-engineering/mussel-airbnbs-key-value-store-for-derived-data-406b9fa1b296",
+    "source": "Airbnb",
+    "publishedAt": "2022-10-10",
+    "series": "airbnb-key-value-store",
+    "tags": ["database", "kafka"]
+  },
+  {
+    "title": "Building a Next-Generation Key-Value Store at Airbnb",
+    "url": "https://medium.com/airbnb-engineering/building-a-next-generation-key-value-store-at-airbnb-0de8465ba354",
+    "source": "Airbnb",
+    "publishedAt": "2025-09-24",
+    "series": "airbnb-key-value-store",
+    "tags": ["database", "migration"]
+  },
+  {
+    "title": "Nebula as a Storage Platform to Build Airbnb’s Search Backends",
+    "url": "https://medium.com/airbnb-engineering/nebula-as-a-storage-platform-to-build-airbnbs-search-backends-ecc577b05f06",
+    "source": "Airbnb",
+    "publishedAt": "2016-12-15",
+    "tags": ["storage", "dynamodb"]
+  },
+  {
+    "title": "Achieving High Availability with distributed database on Kubernetes at Airbnb",
+    "url": "https://medium.com/airbnb-engineering/achieving-high-availability-with-distributed-database-on-kubernetes-at-airbnb-58cc2e9856f4",
+    "source": "Airbnb",
+    "publishedAt": "2025-07-28",
+    "tags": ["database", "container", "kubernetes"]
+  },
+  {
+    "title": "Seamless Istio Upgrades at Scale",
+    "url": "https://medium.com/airbnb-engineering/seamless-istio-upgrades-at-scale-bcb0e49c5cf8",
+    "source": "Airbnb",
+    "publishedAt": "2025-08-07",
+    "tags": ["network", "proxy", "istio"]
+  },
+  {
+    "title": "Upgrading Data Warehouse Infrastructure at Airbnb",
+    "url": "https://medium.com/airbnb-engineering/upgrading-data-warehouse-infrastructure-at-airbnb-a4e18f09b6d5",
+    "source": "Airbnb",
+    "publishedAt": "2022-09-26",
+    "tags": ["data", "data-lake", "iceberg", "spark"]
+  },
+  {
+    "title": "How Airbnb achieved metric consistency at scale",
+    "url": "https://medium.com/airbnb-engineering/how-airbnb-achieved-metric-consistency-at-scale-f23cc53dea70",
+    "source": "Airbnb",
+    "publishedAt": "2021-04-30",
+    "series": "airbnb-minerva",
+    "tags": ["data", "etl"]
+  },
+  {
+    "title": "How Airbnb standardized metric computation at scale",
+    "url": "https://medium.com/airbnb-engineering/airbnb-metric-computation-with-minerva-part-2-9afe6695b486",
+    "source": "Airbnb",
+    "publishedAt": "2021-06-01",
+    "series": "airbnb-minerva",
+    "tags": ["data", "etl", "spark"]
+  },
+  {
+    "title": "How Airbnb enables consistent data consumption at scale",
+    "url": "https://medium.com/airbnb-engineering/how-airbnb-enables-consistent-data-consumption-at-scale-1c0b6a8b9206",
+    "source": "Airbnb",
+    "publishedAt": "2021-09-21",
+    "series": "airbnb-minerva",
+    "tags": ["data"]
+  },
+  {
+    "title": "Apache Flink on Kubernetes",
+    "url": "https://medium.com/airbnb-engineering/apache-flink-on-kubernetes-84425d66ee11",
+    "source": "Airbnb",
+    "publishedAt": "2024-07-31",
+    "tags": ["data", "stream-processing", "container", "kubernetes", "flink"]
+  },
+  {
+    "title": "Building a fault-tolerant metrics storage system at Airbnb",
+    "url": "https://medium.com/airbnb-engineering/building-a-fault-tolerant-metrics-storage-system-at-airbnb-26a01a6e7017",
+    "source": "Airbnb",
+    "publishedAt": "2026-04-21",
+    "tags": ["observability", "metrics", "victoriametrics"]
+  },
+  {
+    "title": "Operationalizing Node.js for Server Side Rendering",
+    "url": "https://medium.com/airbnb-engineering/operationalizing-node-js-for-server-side-rendering-c5ba718acfc9",
+    "source": "Airbnb",
+    "publishedAt": "2018-07-18",
+    "tags": ["frontend", "nodejs"]
+  },
+  {
+    "title": "Embedding-Based Retrieval for Airbnb Search",
+    "url": "https://medium.com/airbnb-engineering/embedding-based-retrieval-for-airbnb-search-aabebfc85839",
+    "source": "Airbnb",
+    "publishedAt": "2025-03-19",
+    "tags": ["search", "vector", "machine-learning"]
+  },
+  {
+    "title": "Improving Search Ranking for Maps",
+    "url": "https://medium.com/airbnb-engineering/improving-search-ranking-for-maps-13b03f2c2cca",
+    "source": "Airbnb",
+    "publishedAt": "2024-12-18",
+    "tags": ["search", "ranking", "machine-learning"]
+  },
+  {
+    "title": "Transforming Location Retrieval at Airbnb: A Journey from Heuristics to Reinforcement Learning",
+    "url": "https://medium.com/airbnb-engineering/transforming-location-retrieval-at-airbnb-a-journey-from-heuristics-to-reinforcement-learning-d33ffc4ddb8f",
+    "source": "Airbnb",
+    "publishedAt": "2024-11-11",
+    "tags": ["search", "ranking", "machine-learning"]
+  },
+  {
+    "title": "Building Airbnb’s Internationalization Platform",
+    "url": "https://medium.com/airbnb-engineering/building-airbnbs-internationalization-platform-45cf0104b63c",
+    "source": "Airbnb",
+    "publishedAt": "2020-10-27",
+    "tags": ["architecture"]
+  },
+  {
+    "title": "From Static Rate Limiting to Adaptive Traffic Management in Airbnb’s Key-Value Store",
+    "url": "https://medium.com/airbnb-engineering/from-static-rate-limiting-to-adaptive-traffic-management-in-airbnbs-key-value-store-29362764e5c2",
+    "source": "Airbnb",
+    "publishedAt": "2025-10-09",
+    "series": "airbnb-key-value-store",
+    "tags": ["reliability", "overload-control", "database"]
+  },
+  {
+    "title": "Improving Istio Propagation Delay",
+    "url": "https://medium.com/airbnb-engineering/improving-istio-propagation-delay-d4da9b5b9f90",
+    "source": "Airbnb",
+    "publishedAt": "2023-03-23",
+    "tags": ["network", "proxy", "istio"]
+  },
+  {
+    "title": "Building Services at Airbnb, Part 1",
+    "url": "https://medium.com/airbnb-engineering/building-services-at-airbnb-part-1-c4c1d8fa811b",
+    "source": "Airbnb",
+    "publishedAt": "2017-12-12",
+    "series": "airbnb-building-services",
+    "tags": ["architecture", "microservice", "thrift"]
+  },
+  {
+    "title": "Building Services at Airbnb, Part 2",
+    "url": "https://medium.com/airbnb-engineering/building-services-at-airbnb-part-2-142be1c5d506",
+    "source": "Airbnb",
+    "publishedAt": "2018-05-15",
+    "series": "airbnb-building-services",
+    "tags": ["architecture", "observability", "metrics"]
+  },
+  {
+    "title": "Building Services at Airbnb, Part 3",
+    "url": "https://medium.com/airbnb-engineering/building-services-at-airbnb-part-3-ac6d4972fc2d",
+    "source": "Airbnb",
+    "publishedAt": "2018-12-11",
+    "series": "airbnb-building-services",
+    "tags": ["reliability", "overload-control", "architecture"]
+  },
+  {
+    "title": "Building Services at Airbnb, Part 4",
+    "url": "https://medium.com/airbnb-engineering/building-services-at-airbnb-part-4-23c95e428064",
+    "source": "Airbnb",
+    "publishedAt": "2020-09-30",
+    "series": "airbnb-building-services",
+    "tags": ["testing", "architecture", "thrift"]
+  },
+  {
+    "title": "Himeji: A Scalable Centralized System for Authorization at Airbnb",
+    "url": "https://medium.com/airbnb-engineering/himeji-a-scalable-centralized-system-for-authorization-at-airbnb-341664924574",
+    "source": "Airbnb",
+    "publishedAt": "2021-04-20",
+    "tags": ["security", "architecture"]
+  },
+  {
+    "title": "Listing Embeddings in Search Ranking",
+    "url": "https://medium.com/airbnb-engineering/listing-embeddings-for-similar-listing-recommendations-and-real-time-personalization-in-search-601172f7603e",
+    "source": "Airbnb",
+    "publishedAt": "2018-03-13",
+    "tags": ["search", "ranking", "machine-learning"]
   }
 ]

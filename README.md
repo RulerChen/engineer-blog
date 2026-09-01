@@ -16,9 +16,11 @@ A single package at the repo root — no workspaces, no git hooks, no test suite
 src/          Vue app — components, composables, lib
 scripts/      buildEntries.ts, fetchIcons.ts, articleId.ts (node-only, build time)
 data/         entries.json — the content
-public/       icons/ — cached site icons (committed); articles.json (git-ignored)
+public/       icons/ — cached source icons, named after the entry's `source` (committed); articles.json (git-ignored)
 ```
 
 `scripts/buildEntries.ts` compiles `data/entries.json` into `public/articles.json`. It runs automatically before `dev` and `build`, or on demand via `npm run build-data`.
+
+`scripts/fetchIcons.ts` fills `public/icons/` — one file per `source`, named after it. It asks two brand-SVG sets for the company's drawn logo (Iconify's `logos`, then svgl) before falling back to scraping the blog's own favicon, and turns down a wordmark or a mark drawn for one theme only. A monochrome logo is saved as a `name.svg` / `name.dark.svg` pair the card swaps by theme. Any file you drop in by hand wins over all of it, for good.
 
 Deploys happen on every push to `main` via `.github/workflows/deploy.yml`.

@@ -532,6 +532,23 @@ input::placeholder {
   object-fit: contain;
   border-radius: 5px;
 }
+/* A monochrome logo ships as a light/dark pair. The two are stacked in one grid
+   cell and cross-faded on the same 0.25s curve as the card's colours: swapping
+   `display` snapped the mark into place while the background behind it was
+   still a quarter-second from arriving, and kept the off-theme half out of
+   layout, so a lazy image only began loading at the moment of the switch. */
+.article-card .avatar img.light-only,
+.article-card .avatar img.dark-only {
+  grid-area: 1 / 1;
+  transition: opacity 0.25s ease;
+}
+.article-card .avatar img.dark-only,
+[data-theme="dark"] .article-card .avatar img.light-only {
+  opacity: 0;
+}
+[data-theme="dark"] .article-card .avatar img.dark-only {
+  opacity: 1;
+}
 .article-card .body {
   flex: 1;
   min-width: 0;

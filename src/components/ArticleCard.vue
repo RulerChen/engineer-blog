@@ -50,10 +50,17 @@ const avatarLetter = computed(() => {
  * fall back to the letter for good.
  */
 const iconBroken = ref(false);
-const iconSrc = computed(() => {
-  if (!props.article.icon || iconBroken.value) return null;
-  return `${import.meta.env.BASE_URL}icons/${props.article.icon}`;
-});
+function iconUrl(file: string | undefined): string | null {
+  if (!file || iconBroken.value) return null;
+  return `${import.meta.env.BASE_URL}icons/${file}`;
+}
+const iconSrc = computed(() => iconUrl(props.article.icon));
+/**
+ * A monochrome logo ships as two files and the theme picks one. The swap is CSS
+ * rather than a `theme` prop because both are a few hundred bytes and the card
+ * has no other reason to know which theme it is in.
+ */
+const iconDarkSrc = computed(() => iconUrl(props.article.iconDark));
 
 const avatarStyle = computed(() => {
   const hue = `oklch(0.55 0.1 ${avatarHue(props.article.source)})`;
@@ -75,12 +82,22 @@ const avatarStyle = computed(() => {
       <img
         v-if="iconSrc"
         :src="iconSrc"
+        :class="{ 'light-only': iconDarkSrc }"
         alt=""
         loading="lazy"
         decoding="async"
         @error="iconBroken = true"
       />
-      <template v-else>{{ avatarLetter }}</template>
+      <img
+        v-if="iconDarkSrc"
+        :src="iconDarkSrc"
+        class="dark-only"
+        alt=""
+        loading="lazy"
+        decoding="async"
+        @error="iconBroken = true"
+      />
+      <template v-if="!iconSrc">{{ avatarLetter }}</template>
     </div>
     <div class="body">
       <div class="meta">

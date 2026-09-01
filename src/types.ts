@@ -22,10 +22,15 @@ export interface Article {
   /** Company or blog the entry came from. */
   source: string;
   /**
-   * File name of the site's icon under public/icons/, when one has been fetched.
-   * Absent for a domain no icon could be found for — the card letters it instead.
+   * File name of the source's icon under public/icons/, when one has been fetched.
+   * Absent for a company no icon could be found for — the card letters it instead.
    */
   icon?: string;
+  /**
+   * The same mark drawn for a dark card, when the logo is monochrome and needs
+   * two files. Absent for a full-colour logo, which reads on either theme.
+   */
+  iconDark?: string;
   publishedAt: string; // ISO 8601
   /** Series slug shared with the other parts, when the entry is one of several. */
   series?: string;

@@ -3,7 +3,7 @@ import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import type { EntryInput } from "../src/lib/entry.js";
 import { normalizeEntryType } from "../src/lib/entryType.js";
-import { iconDomain } from "../src/lib/icon.js";
+import { iconKey, parseIconFile } from "../src/lib/icon.js";
 import type { Article } from "../src/types.js";
 import { articleId } from "./articleId.js";
 
@@ -12,17 +12,33 @@ function toIso(value: string): string {
   return /^\d{4}-\d{2}-\d{2}$/.test(value) ? `${value}T00:00:00.000Z` : value;
 }
 
-/**
- * Domain -> icon file name, read off the files fetchIcons.ts left in
- * public/icons/. The directory listing *is* the manifest: a hand-dropped SVG
- * for a site whose favicon looks bad needs no second place to be registered.
- */
-export async function readIcons(dir: string): Promise<Map<string, string>> {
-  const files = await readdir(dir).catch(() => [] as string[]);
-  return new Map(files.map((file) => [file.replace(/\.[^.]+$/, ""), file]));
+/** The one or two files a company's mark is drawn across. */
+export interface IconFiles {
+  light: string;
+  dark?: string;
 }
 
-export function toArticle(input: EntryInput, icons?: Map<string, string>): Article {
+/**
+ * Source key -> icon file names, read off the files fetchIcons.ts left in
+ * public/icons/. The directory listing *is* the manifest: a hand-dropped SVG
+ * for a company whose favicon looks bad needs no second place to be registered.
+ */
+export async function readIcons(dir: string): Promise<Map<string, IconFiles>> {
+  const files = await readdir(dir).catch(() => [] as string[]);
+  const icons = new Map<string, IconFiles>();
+  for (const file of files.toSorted()) {
+    const parsed = parseIconFile(file);
+    if (!parsed) continue;
+    const entry = icons.get(parsed.key) ?? { light: "" };
+    if (parsed.dark) entry.dark = file;
+    else entry.light = file;
+    icons.set(parsed.key, entry);
+  }
+  // A lone `x.dark.svg` is half a pair and reads on neither card on its own.
+  return new Map([...icons].filter(([, entry]) => entry.light));
+}
+
+export function toArticle(input: EntryInput, icons?: Map<string, IconFiles>): Article {
   const article: Article = {
     id: articleId(input.url),
     title: input.title,
@@ -37,9 +53,10 @@ export function toArticle(input: EntryInput, icons?: Map<string, string>): Artic
   // write-ups, and articles.json is shipped to every visitor.
   if (input.series) article.series = input.series;
   if (input.commentary?.length) article.commentary = input.commentary;
-  const domain = iconDomain(input.url);
-  const icon = domain ? icons?.get(domain) : undefined;
-  if (icon) article.icon = icon;
+  const key = iconKey(input.source);
+  const icon = key ? icons?.get(key) : undefined;
+  if (icon) article.icon = icon.light;
+  if (icon?.dark) article.iconDark = icon.dark;
   return article;
 }
 
@@ -48,7 +65,7 @@ export function toArticle(input: EntryInput, icons?: Map<string, string>): Artic
  * the same url win (so re-adding an entry updates it), and the result is sorted
  * newest-first because the UI renders it in order.
  */
-export function buildArticles(inputs: EntryInput[], icons?: Map<string, string>): Article[] {
+export function buildArticles(inputs: EntryInput[], icons?: Map<string, IconFiles>): Article[] {
   const byId = new Map<string, Article>();
   for (const input of inputs) {
     const article = toArticle(input, icons);
