@@ -1,4 +1,4 @@
-- [airbnb](https://medium.com/airbnb-engineering) :
+- [airbnb](https://medium.com/airbnb-engineering) : 2026-09-01
 - [amazon](https://www.amazon.science/blog) :
 - [atlassian](https://www.atlassian.com/blog/development) :
 - [booking](https://blog.booking.com) :
