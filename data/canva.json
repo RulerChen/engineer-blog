@@ -1,0 +1,123 @@
+[
+  {
+    "title": "Session revocations at scale",
+    "url": "https://www.canva.dev/blog/engineering/session-revocations-at-scale/",
+    "source": "Canva",
+    "publishedAt": "2026-07-22",
+    "tags": ["security", "storage", "object-storage", "s3"]
+  },
+  {
+    "title": "How to improve search without looking at queries or results",
+    "url": "https://www.canva.dev/blog/engineering/how-to-improve-search-without-looking-at-queries-or-results/",
+    "source": "Canva",
+    "publishedAt": "2024-11-25",
+    "tags": ["search", "machine-learning", "llm"]
+  },
+  {
+    "title": "Real-time mouse pointers",
+    "url": "https://www.canva.dev/blog/engineering/realtime-mouse-pointers/",
+    "source": "Canva",
+    "publishedAt": "2024-08-15",
+    "tags": ["network", "webrtc", "redis"]
+  },
+  {
+    "title": "How Canva collects 25 billion events per day",
+    "url": "https://www.canva.dev/blog/engineering/product-analytics-event-collection/",
+    "source": "Canva",
+    "publishedAt": "2024-07-10",
+    "tags": ["data", "stream-processing", "kinesis"]
+  },
+  {
+    "title": "Scaling to Count Billions",
+    "url": "https://www.canva.dev/blog/engineering/scaling-to-count-billions/",
+    "source": "Canva",
+    "publishedAt": "2024-04-12",
+    "tags": ["data", "etl", "database", "snowflake"]
+  },
+  {
+    "title": "Ship Shape",
+    "url": "https://www.canva.dev/blog/engineering/ship-shape/",
+    "source": "Canva",
+    "publishedAt": "2023-11-10",
+    "tags": ["machine-learning", "inference", "frontend"]
+  },
+  {
+    "title": "How Canva saves millions annually in Amazon S3 costs",
+    "url": "https://www.canva.dev/blog/engineering/optimising-s3-savings/",
+    "source": "Canva",
+    "publishedAt": "2023-05-04",
+    "tags": ["storage", "tiering", "s3"]
+  },
+  {
+    "title": "Deep Learning for Infinite (Multi-Lingual) Keywords",
+    "url": "https://www.canva.dev/blog/engineering/deep-learning-for-infinite-multi-lingual-keywords/",
+    "source": "Canva",
+    "publishedAt": "2023-01-24",
+    "tags": ["machine-learning", "training", "pytorch"]
+  },
+  {
+    "title": "From Zero to 50 Million Uploads per Day: Scaling Media at Canva",
+    "url": "https://www.canva.dev/blog/engineering/from-zero-to-50-million-uploads-per-day-scaling-media-at-canva/",
+    "source": "Canva",
+    "publishedAt": "2022-11-29",
+    "tags": ["database", "migration", "dynamodb", "mysql"]
+  },
+  {
+    "title": "Search Pipeline: Part II",
+    "url": "https://www.canva.dev/blog/engineering/search-pipeline-part-ii/",
+    "source": "Canva",
+    "publishedAt": "2022-11-17",
+    "series": "canva-search-pipeline",
+    "tags": ["search", "ranking", "architecture"]
+  },
+  {
+    "title": "Search Pipeline: Part I",
+    "url": "https://www.canva.dev/blog/engineering/search-pipeline-part-i/",
+    "source": "Canva",
+    "publishedAt": "2022-11-02",
+    "series": "canva-search-pipeline",
+    "tags": ["search", "architecture"]
+  },
+  {
+    "title": "Simple, Fast, and Scalable Reverse Image Search Using Perceptual Hashes and DynamoDB",
+    "url": "https://www.canva.dev/blog/engineering/simple-fast-and-scalable-reverse-image-search-using-perceptual-hashes-and-dynamodb/",
+    "source": "Canva",
+    "publishedAt": "2022-10-16",
+    "tags": ["search", "indexing", "dynamodb"]
+  },
+  {
+    "title": "Supporting GPU-accelerated Machine Learning with Kubernetes and Nix",
+    "url": "https://www.canva.dev/blog/engineering/supporting-gpu-accelerated-machine-learning-with-kubernetes-and-nix/",
+    "source": "Canva",
+    "publishedAt": "2022-07-05",
+    "tags": ["container", "kubernetes", "machine-learning", "nix"]
+  },
+  {
+    "title": "Migrating from Solr to Elasticsearch, and their differences",
+    "url": "https://www.canva.dev/blog/engineering/migrating-from-solr-to-elasticsearch-and-their-differences/",
+    "source": "Canva",
+    "publishedAt": "2022-02-14",
+    "tags": ["search", "indexing", "elasticsearch", "solr"]
+  },
+  {
+    "title": "Machine learning hyperparameter optimization with Argo",
+    "url": "https://www.canva.dev/blog/engineering/machine-learning-hyperparameter-optimization-with-argo/",
+    "source": "Canva",
+    "publishedAt": "2021-09-16",
+    "tags": ["machine-learning", "training", "argo-workflows"]
+  },
+  {
+    "title": "Enabling real-time collaboration with RSocket",
+    "url": "https://www.canva.dev/blog/engineering/enabling-real-time-collaboration-with-rsocket/",
+    "source": "Canva",
+    "publishedAt": "2021-05-27",
+    "tags": ["network", "load-balance", "rsocket", "websocket"]
+  },
+  {
+    "title": "Lessons learnt from building reactive microservices for Canva Live",
+    "url": "https://www.canva.dev/blog/engineering/lessons-learnt-from-building-reactive-microservices-for-canva-live/",
+    "source": "Canva",
+    "publishedAt": "2020-10-12",
+    "tags": ["architecture", "microservice", "redis"]
+  }
+]
