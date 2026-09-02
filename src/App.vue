@@ -7,8 +7,6 @@ import SearchBar from "./components/SearchBar.vue";
 import { useArticleFilter } from "./composables/useArticleFilter.js";
 import { useBookmarks } from "./composables/useBookmarks.js";
 import { useTheme } from "./composables/useTheme.js";
-import type { EntryInput } from "./lib/entry.js";
-import { normalizeEntryType } from "./lib/entryType.js";
 import { tagCounts } from "./lib/filter.js";
 import { buildSeriesIndex, knownSeries } from "./lib/series.js";
 import { normalizeUrl } from "./lib/url.js";
@@ -20,18 +18,9 @@ const loadError = ref(false);
 const viewSaved = ref(false);
 const showForm = ref(false);
 
-/**
- * Entries committed in this session. The site serves a static articles.json, so
- * a fresh commit only shows up after the deploy rebuilds — these are held in
- * memory and flagged in the list until then.
- */
-const pending = ref<Article[]>([]);
-
-/** Newest published first — the list's only ordering, pending entries included. */
+/** Newest published first — the list's only ordering. */
 const all = computed(() =>
-  [...pending.value, ...articles.value].toSorted(
-    (a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt),
-  ),
+  articles.value.toSorted((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt)),
 );
 const { state, filtered, companies, tags } = useArticleFilter(all);
 const { theme, toggleTheme } = useTheme();
@@ -43,7 +32,6 @@ const { bookmarks, toggleBookmark } = useBookmarks();
  */
 const seriesIndex = computed(() => buildSeriesIndex(all.value));
 
-const pendingIds = computed(() => pending.value.map((a) => a.id));
 const existingUrls = computed(() =>
   all.value.flatMap((a) => {
     try {
@@ -116,25 +104,20 @@ function selectSeries(id: string): void {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-/** Mirror the build script's mapping so a just-committed entry renders like the real thing. */
-function onAdded(entry: EntryInput): void {
-  const publishedAt = /^\d{4}-\d{2}-\d{2}$/.test(entry.publishedAt)
-    ? `${entry.publishedAt}T00:00:00.000Z`
-    : entry.publishedAt;
-  pending.value = [
-    {
-      id: `pending:${entry.url}`,
-      title: entry.title,
-      url: entry.url,
-      type: normalizeEntryType(entry.type),
-      source: entry.source ?? "",
-      publishedAt,
-      series: entry.series,
-      tags: entry.tags ?? [],
-      commentary: entry.commentary,
-    },
-    ...pending.value,
-  ];
+/**
+ * Filtering by a tag off a card's chip. A toggle, exactly like the filter
+ * panel's own list — clicking the chip that is already filtering removes it,
+ * which is the only way back out from the card. Adding one scrolls up, because
+ * the list under the pointer is about to be a different one; removing one does
+ * not, so the entry you were reading stays where it is.
+ */
+function selectTag(tag: string): void {
+  if (state.tags.includes(tag)) {
+    state.tags = state.tags.filter((t) => t !== tag);
+    return;
+  }
+  state.tags = [...state.tags, tag];
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 onMounted(async () => {
@@ -195,13 +178,14 @@ onMounted(async () => {
         :articles="shown"
         :series-index="seriesIndex"
         :bookmarked-ids="bookmarks"
-        :pending-ids="pendingIds"
+        :active-tags="state.tags"
         :empty-title="emptyTitle"
         :empty-text="emptyText"
         :show-clear-button="!viewSaved && all.length > 0"
         @toggle-bookmark="toggleBookmark"
         @clear-filters="clearFilters"
         @select-series="selectSeries"
+        @select-tag="selectTag"
       />
 
       <footer class="site-footer">
@@ -216,7 +200,6 @@ onMounted(async () => {
       :known-series="knownSeriesIds"
       :existing-urls="existingUrls"
       @close="showForm = false"
-      @added="onAdded"
     />
   </div>
 </template>

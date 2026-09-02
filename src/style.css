@@ -599,6 +599,22 @@ input::placeholder {
   border-radius: 999px;
   background: var(--chip);
   color: var(--chip-ink);
+  border: 0;
+}
+/* A tag chip is a filter button. Same shape as it always was — only the cursor
+   and the hover say so, so the row still reads as labels rather than controls. */
+.article-card .tag-filter {
+  cursor: pointer;
+}
+.article-card .tag-filter:hover {
+  background: color-mix(in srgb, var(--accent) 16%, var(--chip));
+  color: var(--accent);
+}
+/* Already filtering on this one: filled in, so the chip that is narrowing the
+   list is visible from the card and clicking it again is the way back out. */
+.article-card .tag-filter.active {
+  background: var(--accent);
+  color: var(--bg);
 }
 /* Someone else's write-up, sitting in the tag row: outlined so it reads as a
    link rather than one more tag. Padding is the tag's minus the border, so the
@@ -614,7 +630,7 @@ input::placeholder {
 }
 /* Set off from the tags: they describe the article, this one leaves it. Adds to
    the row's 6px gap rather than replacing it, so chips stay grouped together. */
-.article-card span.tag + .commentary-chip {
+.article-card .tag + .commentary-chip {
   margin-left: 12px;
 }
 .article-card .commentary-chip:hover {
@@ -784,16 +800,6 @@ input::placeholder {
 .add-button .add-plus {
   font-size: 16px;
   line-height: 1;
-}
-
-/* Card badges */
-.article-card .meta .pending-badge {
-  font-size: 10.5px;
-  font-weight: 800;
-  padding: 2px 8px;
-  border-radius: 999px;
-  border: 1px dashed var(--line);
-  color: var(--muted);
 }
 
 /* Series row on a card, and the chip that shows a series filter is on */
@@ -1228,46 +1234,6 @@ input::placeholder {
   font-size: 9px;
 }
 
-/* Token panel */
-.token-panel {
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 10px 12px;
-  background: var(--card);
-}
-.token-panel > summary {
-  cursor: pointer;
-  font-size: 12.5px;
-  font-weight: 800;
-  color: var(--chip-ink);
-}
-.token-hint {
-  font-size: 12px;
-  line-height: 1.5;
-  color: var(--muted);
-  margin: 10px 0;
-}
-.token-row {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-.token-row input {
-  flex: 1 1 200px;
-  min-width: 0;
-  padding: 9px 12px;
-  border-radius: 10px;
-  border: 1.5px solid var(--line);
-  background: var(--bg);
-  color: var(--ink);
-  font-family: inherit;
-  font-size: 13px;
-}
-.token-row input:focus {
-  outline: none;
-  border-color: var(--accent);
-}
-
 /* Form feedback */
 .form-error,
 .form-success {
@@ -1285,10 +1251,6 @@ input::placeholder {
 .form-success {
   color: var(--accent);
   background: color-mix(in srgb, var(--accent) 12%, transparent);
-}
-.form-success a {
-  color: inherit;
-  text-decoration: underline;
 }
 .json-preview {
   border-top: 1px solid var(--line);

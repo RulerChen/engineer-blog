@@ -1,0 +1,248 @@
+[
+  {
+    "title": "Improving storage efficiency in Magic Pocket, our immutable blob store",
+    "url": "https://dropbox.tech/infrastructure/improving-storage-efficiency-in-magic-pocket-our-immutable-blob-store",
+    "source": "Dropbox",
+    "publishedAt": "2026-04-02",
+    "series": "dropbox-magic-pocket",
+    "tags": ["encoding", "object-storage", "storage"]
+  },
+  {
+    "title": "Seventh-generation server hardware at Dropbox: our most efficient and capable architecture yet",
+    "url": "https://dropbox.tech/infrastructure/seventh-generation-server-hardware",
+    "source": "Dropbox",
+    "publishedAt": "2025-07-02",
+    "tags": ["hardware"]
+  },
+  {
+    "title": "Selecting a model for semantic search at Dropbox scale",
+    "url": "https://dropbox.tech/machine-learning/selecting-model-semantic-search-dropbox-ai",
+    "source": "Dropbox",
+    "publishedAt": "2024-12-11",
+    "tags": ["machine-learning", "search"]
+  },
+  {
+    "title": "What’s new with Robinhood, our in-house load balancing service",
+    "url": "https://dropbox.tech/infrastructure/robinhood-in-house-load-balancing-service",
+    "source": "Dropbox",
+    "publishedAt": "2024-10-23",
+    "series": "dropbox-load-balancing",
+    "tags": ["envoy", "load-balance", "network"]
+  },
+  {
+    "title": "Meet Chrono, our scalable, consistent, metadata caching solution",
+    "url": "https://dropbox.tech/infrastructure/meet-chrono-our-scalable-consistent-metadata-caching-solution",
+    "source": "Dropbox",
+    "publishedAt": "2024-07-25",
+    "tags": ["caching", "database"]
+  },
+  {
+    "title": "After four years of SMR storage, here's what we love—and what comes next",
+    "url": "https://dropbox.tech/infrastructure/four-years-of-smr-storage-what-we-love-and-whats-next",
+    "source": "Dropbox",
+    "publishedAt": "2023-03-08",
+    "series": "dropbox-smr-storage",
+    "tags": ["hardware", "storage"]
+  },
+  {
+    "title": "Increasing Magic Pocket write throughput by removing our SSD cache disks",
+    "url": "https://dropbox.tech/infrastructure/increasing-magic-pocket-write-throughput-by-removing-our-ssd-cache-disks",
+    "source": "Dropbox",
+    "publishedAt": "2022-12-08",
+    "series": "dropbox-magic-pocket",
+    "tags": ["block-storage", "storage"]
+  },
+  {
+    "title": "Future-proofing our metadata stack with Panda, a scalable key-value store",
+    "url": "https://dropbox.tech/infrastructure/panda-metadata-stack-petabyte-scale-transactional-key-value-store",
+    "source": "Dropbox",
+    "publishedAt": "2022-11-03",
+    "tags": ["database", "mysql"]
+  },
+  {
+    "title": "Everything in its write place: Cloud storage abstraction with Object Store",
+    "url": "https://dropbox.tech/infrastructure/abstracting-cloud-storage-backends-with-object-store",
+    "source": "Dropbox",
+    "publishedAt": "2022-10-11",
+    "tags": ["object-storage", "s3", "storage"]
+  },
+  {
+    "title": "That time we unplugged a data center to test our disaster readiness",
+    "url": "https://dropbox.tech/infrastructure/disaster-readiness-test-failover-blackhole-sjc",
+    "source": "Dropbox",
+    "publishedAt": "2022-04-25",
+    "tags": ["disaster-recovery", "reliability"]
+  },
+  {
+    "title": "Atlas: Our journey from a Python monolith to a managed platform",
+    "url": "https://dropbox.tech/infrastructure/atlas--our-journey-from-a-python-monolith-to-a-managed-platform",
+    "source": "Dropbox",
+    "publishedAt": "2021-03-04",
+    "tags": ["architecture", "microservice", "monolith", "python"]
+  },
+  {
+    "title": "Alki, or how we learned to stop worrying and love cold metadata",
+    "url": "https://dropbox.tech/infrastructure/alki--or-how-we-learned-to-stop-worrying-and-love-cold-metadata",
+    "source": "Dropbox",
+    "publishedAt": "2020-12-17",
+    "tags": ["s3", "storage", "tiering"]
+  },
+  {
+    "title": "How we designed Dropbox ATF: an async task framework",
+    "url": "https://dropbox.tech/infrastructure/asynchronous-task-scheduling-at-dropbox",
+    "source": "Dropbox",
+    "publishedAt": "2020-11-11",
+    "tags": ["architecture", "job-queue"]
+  },
+  {
+    "title": "Broccoli: Syncing faster by syncing less",
+    "url": "https://dropbox.tech/infrastructure/-broccoli--syncing-faster-by-syncing-less",
+    "source": "Dropbox",
+    "publishedAt": "2020-08-04",
+    "series": "dropbox-sync-engine",
+    "tags": ["compression", "storage"]
+  },
+  {
+    "title": "How we migrated Dropbox from Nginx to Envoy",
+    "url": "https://dropbox.tech/infrastructure/how-we-migrated-dropbox-from-nginx-to-envoy",
+    "source": "Dropbox",
+    "publishedAt": "2020-07-30",
+    "tags": ["envoy", "network", "nginx", "proxy"]
+  },
+  {
+    "title": "Speeding up a Git monorepo at Dropbox with <200 lines of code",
+    "url": "https://dropbox.tech/application/speeding-up-a-git-monorepo-at-dropbox-with--200-lines-of-code",
+    "source": "Dropbox",
+    "publishedAt": "2020-06-10",
+    "tags": ["architecture", "git", "monorepo"]
+  },
+  {
+    "title": "Testing sync at Dropbox",
+    "url": "https://dropbox.tech/infrastructure/-testing-our-new-sync-engine",
+    "source": "Dropbox",
+    "publishedAt": "2020-04-20",
+    "series": "dropbox-sync-engine",
+    "tags": ["testing"]
+  },
+  {
+    "title": "Rewriting the heart of our sync engine",
+    "url": "https://dropbox.tech/infrastructure/rewriting-the-heart-of-our-sync-engine",
+    "source": "Dropbox",
+    "publishedAt": "2020-03-09",
+    "series": "dropbox-sync-engine",
+    "tags": ["rust", "storage"]
+  },
+  {
+    "title": "Enhancing Bandaid load balancing at Dropbox by leveraging real-time backend server load information",
+    "url": "https://dropbox.tech/infrastructure/enhancing-bandaid-load-balancing-at-dropbox-by-leveraging-real-time-backend-server-load-information",
+    "source": "Dropbox",
+    "publishedAt": "2019-09-18",
+    "series": "dropbox-load-balancing",
+    "tags": ["load-balance", "network"]
+  },
+  {
+    "title": "SMR: What we learned in our first year",
+    "url": "https://dropbox.tech/infrastructure/smr-what-we-learned-in-our-first-year",
+    "source": "Dropbox",
+    "publishedAt": "2019-07-30",
+    "series": "dropbox-smr-storage",
+    "tags": ["hardware", "storage"]
+  },
+  {
+    "title": "How we optimized Magic Pocket for cold storage",
+    "url": "https://dropbox.tech/infrastructure/how-we-optimized-magic-pocket-for-cold-storage",
+    "source": "Dropbox",
+    "publishedAt": "2019-05-06",
+    "series": "dropbox-magic-pocket",
+    "tags": ["storage", "tiering"]
+  },
+  {
+    "title": "Courier: Dropbox migration to gRPC",
+    "url": "https://dropbox.tech/infrastructure/courier-dropbox-migration-to-grpc",
+    "source": "Dropbox",
+    "publishedAt": "2019-01-08",
+    "tags": ["api-design", "grpc"]
+  },
+  {
+    "title": "Cape Technical Deep Dive",
+    "url": "https://dropbox.tech/infrastructure/cape-technical-deep-dive",
+    "source": "Dropbox",
+    "publishedAt": "2018-12-21",
+    "tags": ["cdc", "data", "kafka"]
+  },
+  {
+    "title": "Cross shard transactions at 10 million requests per second",
+    "url": "https://dropbox.tech/infrastructure/cross-shard-transactions-at-10-million-requests-per-second",
+    "source": "Dropbox",
+    "publishedAt": "2018-11-09",
+    "tags": ["database", "mysql", "sharding"]
+  },
+  {
+    "title": "Dropbox traffic infrastructure: Edge network",
+    "url": "https://dropbox.tech/infrastructure/dropbox-traffic-infrastructure-edge-network",
+    "source": "Dropbox",
+    "publishedAt": "2018-10-10",
+    "series": "dropbox-edge-network",
+    "tags": ["network", "proxy"]
+  },
+  {
+    "title": "Architecture of Nautilus, the new Dropbox search engine",
+    "url": "https://dropbox.tech/machine-learning/architecture-of-nautilus-the-new-dropbox-search-engine",
+    "source": "Dropbox",
+    "publishedAt": "2018-09-27",
+    "tags": ["indexing", "search"]
+  },
+  {
+    "title": "Extending Magic Pocket Innovation with the first petabyte scale SMR drive deployment",
+    "url": "https://dropbox.tech/infrastructure/extending-magic-pocket-innovation-with-the-first-petabyte-scale-smr-drive-deployment",
+    "source": "Dropbox",
+    "publishedAt": "2018-06-12",
+    "series": "dropbox-smr-storage",
+    "tags": ["hardware", "storage"]
+  },
+  {
+    "title": "Handling system failures during payment communication",
+    "url": "https://dropbox.tech/infrastructure/handling-system-failures-during-payment-communication",
+    "source": "Dropbox",
+    "publishedAt": "2017-09-29",
+    "tags": ["reliability"]
+  },
+  {
+    "title": "Optimizing web servers for high throughput and low latency",
+    "url": "https://dropbox.tech/infrastructure/optimizing-web-servers-for-high-throughput-and-low-latency",
+    "source": "Dropbox",
+    "publishedAt": "2017-09-06",
+    "tags": ["http", "network", "nginx"]
+  },
+  {
+    "title": "Evolution of Dropbox’s Edge Network",
+    "url": "https://dropbox.tech/infrastructure/evolution-of-dropboxs-edge-network",
+    "source": "Dropbox",
+    "publishedAt": "2017-06-19",
+    "series": "dropbox-edge-network",
+    "tags": ["network", "proxy"]
+  },
+  {
+    "title": "Pocket watch: Verifying exabytes of data",
+    "url": "https://dropbox.tech/infrastructure/pocket-watch",
+    "source": "Dropbox",
+    "publishedAt": "2016-07-06",
+    "series": "dropbox-magic-pocket",
+    "tags": ["object-storage", "storage"]
+  },
+  {
+    "title": "Inside the Magic Pocket",
+    "url": "https://dropbox.tech/infrastructure/inside-the-magic-pocket",
+    "source": "Dropbox",
+    "publishedAt": "2016-05-06",
+    "series": "dropbox-magic-pocket",
+    "tags": ["object-storage", "storage"]
+  },
+  {
+    "title": "Streaming File Synchronization",
+    "url": "https://dropbox.tech/infrastructure/streaming-file-synchronization",
+    "source": "Dropbox",
+    "publishedAt": "2014-07-10",
+    "tags": ["storage"]
+  }
+]

@@ -1,4 +1,4 @@
-import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
+import { mkdir, readdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import type { EntryInput } from "../src/lib/entry.js";
@@ -6,6 +6,7 @@ import { normalizeEntryType } from "../src/lib/entryType.js";
 import { iconKey, parseIconFile } from "../src/lib/icon.js";
 import type { Article } from "../src/types.js";
 import { articleId } from "./articleId.js";
+import { readEntries } from "./readEntries.js";
 
 /** Bare YYYY-MM-DD is treated as UTC midnight; anything else is passed through. */
 function toIso(value: string): string {
@@ -77,9 +78,8 @@ export function buildArticles(inputs: EntryInput[], icons?: Map<string, IconFile
 }
 
 async function main(): Promise<void> {
-  const entriesPath = fileURLToPath(new URL("../data/entries.json", import.meta.url));
   const outDir = fileURLToPath(new URL("../public/", import.meta.url));
-  const inputs = JSON.parse(await readFile(entriesPath, "utf8")) as EntryInput[];
+  const inputs = await readEntries();
   const icons = await readIcons(join(outDir, "icons"));
   const articles = buildArticles(inputs, icons);
   await mkdir(outDir, { recursive: true });

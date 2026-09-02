@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Building a data plane from scratch: Stripe’s own high-performance distributed proxy",
+    "url": "https://stripe.dev/blog/building-a-data-plane-from-scratch-stripes-own-high-performance-distributed-proxy",
+    "source": "Stripe",
+    "publishedAt": "2026-08-26",
+    "tags": ["go", "load-balance", "network", "proxy"]
+  },
+  {
+    "title": "Minions: Stripe’s one-shot, end-to-end coding agents—Part 2",
+    "url": "https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents-part-2",
+    "source": "Stripe",
+    "publishedAt": "2026-02-19",
+    "series": "stripe-minions",
+    "tags": ["agent", "machine-learning"]
+  },
+  {
+    "title": "Minions: Stripe’s one-shot, end-to-end coding agents",
+    "url": "https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents",
+    "source": "Stripe",
+    "publishedAt": "2026-02-09",
+    "series": "stripe-minions",
+    "tags": ["agent", "machine-learning"]
+  },
+  {
+    "title": "How we built it: Real-time analytics for Stripe Billing",
+    "url": "https://stripe.dev/blog/how-we-built-it-real-time-analytics-for-stripe-billing",
+    "source": "Stripe",
+    "publishedAt": "2025-09-16",
+    "tags": ["data", "flink", "pinot", "spark", "stream-processing"]
+  },
+  {
+    "title": "How we built it: Jurisdiction resolution for Stripe Tax",
+    "url": "https://stripe.dev/blog/how-we-built-it-jurisdiction-resolution-for-stripe-tax",
+    "source": "Stripe",
+    "publishedAt": "2025-07-10",
+    "tags": ["architecture", "geospatial"]
+  },
+  {
+    "title": "How Stripe’s document databases supported 99.999% uptime with zero-downtime data migrations",
+    "url": "https://stripe.dev/blog/how-stripes-document-databases-supported-99.999-uptime-with-zero-downtime-data-migrations",
+    "source": "Stripe",
+    "publishedAt": "2024-06-06",
+    "tags": ["database", "migration", "mongodb"]
+  },
+  {
+    "title": "Shepherd: How Stripe adapted Chronon to scale ML feature development",
+    "url": "https://stripe.dev/blog/shepherd-how-stripe-adapted-chronon-to-scale-ml-feature-development",
+    "source": "Stripe",
+    "publishedAt": "2024-04-15",
+    "tags": ["machine-learning", "spark", "training"]
+  },
+  {
+    "title": "Ledger: Stripe’s system for tracking and validating money movement",
+    "url": "https://stripe.dev/blog/ledger-stripe-system-for-tracking-and-validating-money-movement",
+    "source": "Stripe",
+    "publishedAt": "2024-02-16",
+    "tags": ["architecture"]
+  },
+  {
+    "title": "How we built it: Stripe Radar",
+    "url": "https://stripe.dev/blog/how-we-built-it-stripe-radar",
+    "source": "Stripe",
+    "publishedAt": "2023-03-29",
+    "tags": ["inference", "machine-learning"]
+  },
+  {
+    "title": "Stripe’s payments APIs: The first 10 years",
+    "url": "https://stripe.dev/blog/payment-api-design",
+    "source": "Stripe",
+    "publishedAt": "2020-12-15",
+    "tags": ["api-design", "rest"]
+  }
+]

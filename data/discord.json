@@ -1,0 +1,77 @@
+[
+  {
+    "title": "How Discord Automates ScyllaDB Clusters at Scale",
+    "url": "https://discord.com/blog/how-discord-automates-scylladb-clusters-at-scale",
+    "source": "Discord",
+    "publishedAt": "2026-05-08",
+    "tags": ["database", "scylladb"]
+  },
+  {
+    "title": "How Discord Indexes Trillions of Messages",
+    "url": "https://discord.com/blog/how-discord-indexes-trillions-of-messages",
+    "source": "Discord",
+    "publishedAt": "2025-04-24",
+    "series": "discord-message-search",
+    "tags": ["elasticsearch", "indexing", "search"]
+  },
+  {
+    "title": "How Discord Reduced Websocket Traffic by 40%",
+    "url": "https://discord.com/blog/how-discord-reduced-websocket-traffic-by-40-percent",
+    "source": "Discord",
+    "publishedAt": "2024-09-20",
+    "tags": ["network", "websocket"]
+  },
+  {
+    "title": "Maxjourney: Pushing Discord's Limits with a Million+ Online Users in a Single Server",
+    "url": "https://discord.com/blog/maxjourney-pushing-discords-limits-with-a-million-plus-online-users-in-a-single-server",
+    "source": "Discord",
+    "publishedAt": "2023-10-25",
+    "series": "discord-elixir-scaling",
+    "tags": ["architecture", "elixir"]
+  },
+  {
+    "title": "How Discord Stores Trillions of Messages",
+    "url": "https://discord.com/blog/how-discord-stores-trillions-of-messages",
+    "source": "Discord",
+    "publishedAt": "2023-03-06",
+    "series": "discord-message-storage",
+    "tags": ["cassandra", "database", "migration", "rust", "scylladb"],
+    "commentary": [
+      {
+        "source": "Hello Interview",
+        "url": "https://www.hellointerview.com/learn/system-design/in-the-wild/discord-messages-scylladb"
+      }
+    ]
+  },
+  {
+    "title": "How Discord Handles Two and Half Million Concurrent Voice Users using WebRTC",
+    "url": "https://discord.com/blog/how-discord-handles-two-and-half-million-concurrent-voice-users-using-webrtc",
+    "source": "Discord",
+    "publishedAt": "2018-09-10",
+    "tags": ["network", "webrtc"]
+  },
+  {
+    "title": "How Discord Scaled Elixir to 5,000,000 Concurrent Users",
+    "url": "https://discord.com/blog/how-discord-scaled-elixir-to-5-000-000-concurrent-users",
+    "source": "Discord",
+    "publishedAt": "2017-07-06",
+    "series": "discord-elixir-scaling",
+    "tags": ["architecture", "elixir"]
+  },
+  {
+    "title": "How Discord Indexes Billions of Messages",
+    "url": "https://discord.com/blog/how-discord-indexes-billions-of-messages",
+    "source": "Discord",
+    "publishedAt": "2017-03-16",
+    "series": "discord-message-search",
+    "tags": ["elasticsearch", "indexing", "search"]
+  },
+  {
+    "title": "How Discord Stores Billions of Messages",
+    "url": "https://discord.com/blog/how-discord-stores-billions-of-messages",
+    "source": "Discord",
+    "publishedAt": "2017-01-13",
+    "series": "discord-message-storage",
+    "tags": ["cassandra", "database"]
+  }
+]

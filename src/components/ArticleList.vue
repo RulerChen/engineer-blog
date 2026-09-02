@@ -10,7 +10,8 @@ const props = withDefaults(
     /** Series slug → its parts, built from the full dataset so part numbers survive filtering. */
     seriesIndex?: Map<string, Series>;
     bookmarkedIds?: string[];
-    pendingIds?: string[];
+    /** Tags currently filtered on, forwarded to every card's tag chips. */
+    activeTags?: string[];
     emptyTitle?: string;
     emptyText?: string;
     showClearButton?: boolean;
@@ -18,7 +19,7 @@ const props = withDefaults(
   {
     seriesIndex: () => new Map(),
     bookmarkedIds: () => [],
-    pendingIds: () => [],
+    activeTags: () => [],
     emptyTitle: "No articles found",
     emptyText: "No articles match your filters.",
     showClearButton: false,
@@ -29,6 +30,7 @@ const emit = defineEmits<{
   toggleBookmark: [id: string];
   clearFilters: [];
   selectSeries: [id: string];
+  selectTag: [tag: string];
 }>();
 
 const INITIAL_VISIBLE = 20;
@@ -45,7 +47,6 @@ watch(
 );
 
 const bookmarkedSet = computed(() => new Set(props.bookmarkedIds));
-const pendingSet = computed(() => new Set(props.pendingIds));
 const visible = computed(() => props.articles.slice(0, visibleCount.value));
 const hasMore = computed(() => visibleCount.value < props.articles.length);
 
@@ -102,10 +103,11 @@ onBeforeUnmount(() => observer?.disconnect());
           :key="article.id"
           :article="article"
           :bookmarked="bookmarkedSet.has(article.id)"
-          :pending="pendingSet.has(article.id)"
           :series="article.series ? seriesIndex.get(article.series) : undefined"
+          :active-tags="activeTags"
           @toggle-bookmark="emit('toggleBookmark', $event)"
           @select-series="emit('selectSeries', $event)"
+          @select-tag="emit('selectTag', $event)"
         />
       </div>
       <div v-if="hasMore" ref="sentinel" class="load-more-wrap">

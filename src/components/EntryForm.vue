@@ -7,17 +7,9 @@ import {
   hasErrors,
   serializeEntry,
   validateDraft,
-  type EntryInput,
 } from "../lib/entry.js";
 import { ENTRY_TYPES } from "../lib/entryType.js";
-import {
-  commitEntry,
-  ENTRIES_PATH,
-  loadToken,
-  REPO_NAME,
-  REPO_OWNER,
-  saveToken,
-} from "../lib/github.js";
+import { iconKey } from "../lib/icon.js";
 import { normalizeSeries, seriesLabel } from "../lib/series.js";
 import { normalizeTag, suggestTags } from "../lib/tags.js";
 import { tryNormalizeUrl } from "../lib/url.js";
@@ -29,18 +21,14 @@ const props = defineProps<{
   knownSeries: string[];
   existingUrls: string[];
 }>();
-const emit = defineEmits<{ close: []; added: [entry: EntryInput] }>();
+const emit = defineEmits<{ close: [] }>();
 
 const draft = ref(emptyDraft());
 const submitted = ref(false);
 const tagInput = ref("");
 
-const token = ref(loadToken());
-const showToken = ref(false);
-const busy = ref(false);
 const errorMessage = ref("");
 const successMessage = ref("");
-const commitUrl = ref("");
 const copied = ref(false);
 
 const errors = computed(() => validateDraft(draft.value));
@@ -55,6 +43,8 @@ const duplicate = computed(() => {
 /** The record that would be written — also what the copy-JSON path hands over. */
 const preview = computed(() => draftToEntry(draft.value));
 const previewJson = computed(() => serializeEntry(preview.value));
+/** The per-company file this record belongs in — what Copy JSON tells you to paste into. */
+const targetPath = computed(() => `data/${iconKey(preview.value.source) ?? "other"}.json`);
 
 /**
  * Series slugs matching what has been typed, offered as chips. A slug has to
@@ -120,42 +110,12 @@ function removeTag(tag: string): void {
   draft.value.tags = draft.value.tags.filter((t) => t !== tag);
 }
 
-function reset(): void {
-  draft.value = emptyDraft();
-  submitted.value = false;
-  tagInput.value = "";
-  errorMessage.value = "";
-  copied.value = false;
-}
-
-/** Shared gate for both submit paths: mark as submitted so errors show, then validate. */
+/** Mark as submitted so errors show, then validate. */
 function ready(): boolean {
   submitted.value = true;
   errorMessage.value = "";
   successMessage.value = "";
-  commitUrl.value = "";
   return !hasErrors(errors.value);
-}
-
-async function onCommit(): Promise<void> {
-  if (!ready()) return;
-  if (!token.value.trim()) {
-    showToken.value = true;
-    errorMessage.value = "Add a GitHub token first, or use Copy JSON and paste it by hand.";
-    return;
-  }
-  busy.value = true;
-  try {
-    const entry = preview.value;
-    commitUrl.value = await commitEntry(entry);
-    successMessage.value = "Committed. The site rebuilds and picks it up in about a minute.";
-    emit("added", entry);
-    reset();
-  } catch (err) {
-    errorMessage.value = err instanceof Error ? err.message : "Commit failed.";
-  } finally {
-    busy.value = false;
-  }
 }
 
 async function onCopy(): Promise<void> {
@@ -163,21 +123,10 @@ async function onCopy(): Promise<void> {
   try {
     await navigator.clipboard.writeText(previewJson.value);
     copied.value = true;
-    successMessage.value = `Copied. Paste it into the ${ENTRIES_PATH} array and commit.`;
+    successMessage.value = `Copied. Paste it into ${targetPath.value}, newest first, and commit.`;
   } catch {
     errorMessage.value = "Couldn't reach the clipboard — select the JSON below and copy it.";
   }
-}
-
-function onSaveToken(): void {
-  saveToken(token.value.trim());
-  showToken.value = false;
-  errorMessage.value = "";
-}
-
-function onClearToken(): void {
-  token.value = "";
-  saveToken("");
 }
 </script>
 
@@ -201,7 +150,7 @@ function onClearToken(): void {
           <input v-model="draft.url" type="url" placeholder="https://…" />
           <span v-if="showError('url')" class="field-error">{{ showError("url") }}</span>
           <span v-else-if="duplicate" class="field-warning">
-            This URL is already in the list — committing will overwrite that entry.
+            This URL is already in the list — re-adding it updates that entry.
           </span>
         </label>
 
@@ -341,28 +290,8 @@ function onClearToken(): void {
           </span>
         </div>
 
-        <details class="token-panel" :open="showToken">
-          <summary>GitHub token {{ token ? "· saved" : "· not set" }}</summary>
-          <p class="token-hint">
-            A fine-grained token with <strong>Contents: read and write</strong> on
-            {{ REPO_OWNER }}/{{ REPO_NAME }}, used to commit {{ ENTRIES_PATH }} directly. It is
-            stored in this browser's localStorage only — if you'd rather not keep one here, use Copy
-            JSON instead.
-          </p>
-          <div class="token-row">
-            <input v-model="token" type="password" placeholder="github_pat_…" />
-            <button class="btn-secondary" @click="onSaveToken">Save</button>
-            <button v-if="token" class="btn-secondary" @click="onClearToken">Clear</button>
-          </div>
-        </details>
-
         <p v-if="errorMessage" class="form-error">{{ errorMessage }}</p>
-        <p v-if="successMessage" class="form-success">
-          {{ successMessage }}
-          <a v-if="commitUrl" :href="commitUrl" target="_blank" rel="noopener noreferrer">
-            View commit
-          </a>
-        </p>
+        <p v-if="successMessage" class="form-success">{{ successMessage }}</p>
 
         <details class="json-preview">
           <summary>JSON preview</summary>
@@ -371,11 +300,8 @@ function onClearToken(): void {
       </div>
 
       <footer class="modal-footer">
-        <button class="btn-secondary" :disabled="busy" @click="onCopy">
+        <button class="btn-primary" @click="onCopy">
           {{ copied ? "Copied ✓" : "Copy JSON" }}
-        </button>
-        <button class="btn-primary" :disabled="busy" @click="onCommit">
-          {{ busy ? "Committing…" : "Commit to GitHub" }}
         </button>
       </footer>
     </div>

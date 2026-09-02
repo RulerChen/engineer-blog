@@ -1,6 +1,6 @@
 # Curation guideline
 
-How to scan a company engineering blog and decide what belongs in `data/entries.json`.
+How to scan a company engineering blog and decide what belongs in the list.
 
 Read the post, not its length.
 
@@ -51,7 +51,9 @@ Three sections. Never drop a post from all three.
 
 **Reject** — no output needed.
 
-Do not write to `data/entries.json` until the picks are confirmed.
+Do not write to the company's `data/<source>.json` until the picks are confirmed.
+
+When you do write, keep the file newest-first — a new entry usually belongs at the top.
 
 The format of the output is
 

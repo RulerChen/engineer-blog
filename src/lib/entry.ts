@@ -4,7 +4,7 @@ import { tryNormalizeUrl } from "./url.js";
 import type { Commentary } from "../types.js";
 
 /**
- * Shape of one hand-written record in data/entries.json. This is the file's
+ * Shape of one hand-written record in data/<source>.json. This is the files'
  * contract: the entry form writes it, the build script reads it, and it stays
  * editable by hand. `id` is derived from `url` at build time, never stored.
  */
@@ -101,7 +101,7 @@ export function hasErrors(errors: DraftErrors): boolean {
 }
 
 /**
- * Draft → the record that lands in data/entries.json. Empty optional fields are
+ * Draft → the record that lands in data/<source>.json. Empty optional fields are
  * dropped rather than written as `""`/`[]`, so hand-edited and form-written
  * entries look the same and diffs stay small.
  */
@@ -160,7 +160,7 @@ export function normalizeEntry(entry: EntryInput): EntryInput {
   return ordered as unknown as EntryInput;
 }
 
-/** The exact text written to data/entries.json — 2-space indent, trailing newline. */
+/** The exact text written to a data/<source>.json — 2-space indent, trailing newline. */
 export function serializeEntries(entries: EntryInput[]): string {
   return `${JSON.stringify(entries.map(normalizeEntry), null, 2)}\n`;
 }

@@ -11,13 +11,18 @@ const props = withDefaults(
   defineProps<{
     article: Article;
     bookmarked: boolean;
-    pending?: boolean;
     /** The series this entry belongs to, if it belongs to one with other parts. */
     series?: Series;
+    /** Tags currently filtered on, so the chips that are doing the filtering say so. */
+    activeTags?: string[];
   }>(),
-  { pending: false, series: undefined },
+  { series: undefined, activeTags: () => [] },
 );
-const emit = defineEmits<{ toggleBookmark: [id: string]; selectSeries: [id: string] }>();
+const emit = defineEmits<{
+  toggleBookmark: [id: string];
+  selectSeries: [id: string];
+  selectTag: [tag: string];
+}>();
 
 const displayDate = computed(() =>
   new Date(props.article.publishedAt).toLocaleDateString("en-US", {
@@ -105,7 +110,6 @@ const avatarStyle = computed(() => {
         <span v-if="article.source" class="company">{{ sourceName(article.source) }}</span>
         <span v-if="article.source" class="dot">·</span>
         <time :datetime="article.publishedAt">{{ displayDate }}</time>
-        <span v-if="pending" class="pending-badge">Pending deploy</span>
       </div>
       <h2>
         <a class="title-link" :href="article.url" target="_blank" rel="noopener noreferrer">
@@ -113,7 +117,16 @@ const avatarStyle = computed(() => {
         </a>
       </h2>
       <div v-if="article.tags.length || article.commentary?.length" class="tags">
-        <span v-for="tag in article.tags" :key="tag" class="tag">{{ tag }}</span>
+        <button
+          v-for="tag in article.tags"
+          :key="tag"
+          class="tag tag-filter"
+          :class="{ active: activeTags.includes(tag) }"
+          :title="activeTags.includes(tag) ? `Stop filtering by ${tag}` : `Show only ${tag}`"
+          @click="emit('selectTag', tag)"
+        >
+          {{ tag }}
+        </button>
         <a
           v-for="link in article.commentary"
           :key="link.url"

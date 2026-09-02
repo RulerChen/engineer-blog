@@ -3,8 +3,8 @@ import type { Article } from "../types.js";
 
 /**
  * Series ids use the same slug shape as tags, so both stay hand-typeable in
- * data/entries.json and two entries written on different days still land in
- * the same series.
+ * data/<source>.json and two entries written on different days — or filed under
+ * two different companies — still land in the same series.
  */
 export function normalizeSeries(raw: string): string {
   return normalizeTag(raw);

@@ -1,0 +1,338 @@
+[
+  {
+    "title": "Running a Software Factory Efficiently at Uber Scale",
+    "url": "https://www.uber.com/blog/efficient-software-factory/",
+    "source": "Uber",
+    "publishedAt": "2026-08-27",
+    "tags": ["agent", "llm", "machine-learning"]
+  },
+  {
+    "title": "GitFarm: Git as a Service for Large-Scale Monorepos",
+    "url": "https://www.uber.com/blog/gitfarm-as-a-service/",
+    "source": "Uber",
+    "publishedAt": "2026-07-09",
+    "tags": ["architecture", "git", "monorepo"]
+  },
+  {
+    "title": "Zero-Growth Stack, Real Gains: How Stack Allocation Can Save 10% CPU in Go",
+    "url": "https://www.uber.com/blog/zero-growth-stack/",
+    "source": "Uber",
+    "publishedAt": "2026-05-07",
+    "tags": ["go", "language", "memory-management"]
+  },
+  {
+    "title": "How Uber Conquered Database Overload: The Journey from Static Rate-Limiting to Intelligent Load Management",
+    "url": "https://www.uber.com/blog/from-static-rate-limiting-to-intelligent-load-management/",
+    "source": "Uber",
+    "publishedAt": "2026-04-20",
+    "tags": ["overload-control", "reliability"]
+  },
+  {
+    "title": "Uber's Rate Limiting System",
+    "url": "https://www.uber.com/blog/ubers-rate-limiting-system/",
+    "source": "Uber",
+    "publishedAt": "2026-02-12",
+    "tags": ["overload-control", "reliability"]
+  },
+  {
+    "title": "How Uber Scaled Data Replication to Move Petabytes Every Day",
+    "url": "https://www.uber.com/blog/scaled-data-replication/",
+    "source": "Uber",
+    "publishedAt": "2026-01-29",
+    "tags": ["data", "data-lake", "hadoop"]
+  },
+  {
+    "title": "Improving MySQL Cluster Uptime: Making MGR Viable at Scale",
+    "url": "https://www.uber.com/blog/improving-mysql-cluster-uptime-part2/",
+    "source": "Uber",
+    "publishedAt": "2025-12-04",
+    "series": "uber-mysql-cluster-uptime",
+    "tags": ["database", "mysql", "replication"]
+  },
+  {
+    "title": "Improving MySQL Cluster Uptime: Designing Advanced Detection, Mitigation, and Consensus with Group Replication",
+    "url": "https://www.uber.com/blog/improving-mysql-cluster-uptime-part1/",
+    "source": "Uber",
+    "publishedAt": "2025-12-02",
+    "series": "uber-mysql-cluster-uptime",
+    "tags": ["database", "mysql", "replication"]
+  },
+  {
+    "title": "Uber's Strategy to Upgrading 2M+ Spark Jobs",
+    "url": "https://www.uber.com/blog/ubers-strategy-to-upgrading-2m-spark-jobs/",
+    "source": "Uber",
+    "publishedAt": "2025-09-25",
+    "tags": ["data", "spark"]
+  },
+  {
+    "title": "How Uber Serves over 150 Million Reads per Second from Integrated Cache with Stronger Consistency Guarantees",
+    "url": "https://www.uber.com/blog/how-uber-serves-over-150-million-reads/",
+    "source": "Uber",
+    "publishedAt": "2025-08-26",
+    "series": "uber-integrated-cache",
+    "tags": ["caching", "database", "mysql", "redis"]
+  },
+  {
+    "title": "Robust Database Backup Recovery at Uber",
+    "url": "https://www.uber.com/blog/robust-database-backup-recovery-at-uber/",
+    "source": "Uber",
+    "publishedAt": "2025-05-22",
+    "tags": ["backup", "database"]
+  },
+  {
+    "title": "Migrating Uber's Compute Platform to Kubernetes: A Technical Journey",
+    "url": "https://www.uber.com/blog/migrating-ubers-compute-platform-to-kubernetes-a-technical-journey/",
+    "source": "Uber",
+    "publishedAt": "2025-04-24",
+    "tags": ["container", "kubernetes"]
+  },
+  {
+    "title": "Continuous deployment for large monorepos",
+    "url": "https://www.uber.com/blog/continuous-deployment/",
+    "source": "Uber",
+    "publishedAt": "2024-08-26",
+    "tags": ["architecture", "ci-cd", "monorepo"]
+  },
+  {
+    "title": "Upgrading Uber's MySQL Fleet to version 8.0",
+    "url": "https://www.uber.com/blog/upgrading-ubers-mysql-fleet/",
+    "source": "Uber",
+    "publishedAt": "2024-08-08",
+    "tags": ["database", "migration", "mysql"]
+  },
+  {
+    "title": "Migrating a Trillion Entries of Uber's Ledger Data from DynamoDB to LedgerStore",
+    "url": "https://www.uber.com/blog/migrating-from-dynamodb-to-ledgerstore/",
+    "source": "Uber",
+    "publishedAt": "2024-04-11",
+    "series": "uber-ledgerstore",
+    "tags": ["database", "dynamodb", "migration"]
+  },
+  {
+    "title": "How LedgerStore Supports Trillions of Indexes at Uber",
+    "url": "https://www.uber.com/blog/how-ledgerstore-supports-trillions-of-indexes/",
+    "source": "Uber",
+    "publishedAt": "2024-04-04",
+    "series": "uber-ledgerstore",
+    "tags": ["database"]
+  },
+  {
+    "title": "How Uber Serves Over 40 Million Reads Per Second from Online Storage Using an Integrated Cache",
+    "url": "https://www.uber.com/blog/how-uber-serves-over-40-million-reads-per-second-using-an-integrated-cache/",
+    "source": "Uber",
+    "publishedAt": "2024-02-15",
+    "series": "uber-integrated-cache",
+    "tags": ["caching", "database", "mysql", "redis"]
+  },
+  {
+    "title": "NilAway: Practical Nil Panic Detection for Go",
+    "url": "https://www.uber.com/blog/nilaway-practical-nil-panic-detection-for-go/",
+    "source": "Uber",
+    "publishedAt": "2023-11-15",
+    "tags": ["go", "language", "static-analysis"]
+  },
+  {
+    "title": "How Uber Optimized Cassandra Operations At Scale",
+    "url": "https://www.uber.com/blog/how-uber-optimized-cassandra-operations-at-scale/",
+    "source": "Uber",
+    "publishedAt": "2023-07-20",
+    "tags": ["cassandra", "database"]
+  },
+  {
+    "title": "Setting Uber's Transactional Data Lake in Motion with Incremental ETL Using Apache Hudi",
+    "url": "https://www.uber.com/blog/ubers-lakehouse-architecture/",
+    "source": "Uber",
+    "publishedAt": "2023-03-16",
+    "series": "uber-hudi",
+    "tags": ["data", "data-lake", "etl", "hudi"]
+  },
+  {
+    "title": "LeakProf: Featherlight In-Production Goroutine Leak Detection",
+    "url": "https://www.uber.com/blog/leakprof-featherlight-in-production-goroutine-leak-detection/",
+    "source": "Uber",
+    "publishedAt": "2022-11-10",
+    "tags": ["go", "observability", "profiling"]
+  },
+  {
+    "title": "MySQL to MyRocks Migration in Uber's Distributed Datastores",
+    "url": "https://www.uber.com/blog/mysql-to-myrocks-migration-in-uber-distributed-datastores/",
+    "source": "Uber",
+    "publishedAt": "2022-09-01",
+    "tags": ["database", "migration", "mysql", "rocksdb"]
+  },
+  {
+    "title": "Data Race Patterns in Go",
+    "url": "https://www.uber.com/blog/data-race-patterns-in-go/",
+    "source": "Uber",
+    "publishedAt": "2022-06-02",
+    "tags": ["go", "language", "static-analysis"]
+  },
+  {
+    "title": "DeepETA: How Uber Predicts Arrival Times Using Deep Learning",
+    "url": "https://www.uber.com/blog/deepeta-how-uber-predicts-arrival-times/",
+    "source": "Uber",
+    "publishedAt": "2022-02-10",
+    "tags": ["inference", "machine-learning"]
+  },
+  {
+    "title": "Cost Efficiency @ Scale in Big Data File Format",
+    "url": "https://www.uber.com/blog/cost-efficiency-big-data/",
+    "source": "Uber",
+    "publishedAt": "2022-01-25",
+    "tags": ["data", "data-lake", "parquet"]
+  },
+  {
+    "title": "CRISP: Critical Path Analysis for Microservice Architectures",
+    "url": "https://www.uber.com/blog/crisp-critical-path-analysis-for-microservice-architectures/",
+    "source": "Uber",
+    "publishedAt": "2021-11-18",
+    "tags": ["observability", "tracing"]
+  },
+  {
+    "title": "How Uber Migrated Financial Data from DynamoDB to Docstore",
+    "url": "https://www.uber.com/blog/dynamodb-to-docstore-migration/",
+    "source": "Uber",
+    "publishedAt": "2021-11-10",
+    "tags": ["database", "dynamodb", "migration"]
+  },
+  {
+    "title": "Jellyfish: Cost-Effective Data Tiering for Uber's Largest Storage System",
+    "url": "https://www.uber.com/blog/jellyfish-cost-effective-data-tiering/",
+    "source": "Uber",
+    "publishedAt": "2021-09-09",
+    "tags": ["storage", "tiering"]
+  },
+  {
+    "title": "Scaling of Uber's API gateway",
+    "url": "https://www.uber.com/blog/scaling-api-gateway/",
+    "source": "Uber",
+    "publishedAt": "2021-06-08",
+    "series": "uber-api-gateway",
+    "tags": ["api-gateway", "architecture"]
+  },
+  {
+    "title": "The Architecture of Uber's API gateway",
+    "url": "https://www.uber.com/blog/architecture-api-gateway/",
+    "source": "Uber",
+    "publishedAt": "2021-05-19",
+    "series": "uber-api-gateway",
+    "tags": ["api-gateway", "architecture"]
+  },
+  {
+    "title": "Evolving Schemaless into a Distributed SQL Database",
+    "url": "https://www.uber.com/blog/schemaless-sql-database/",
+    "source": "Uber",
+    "publishedAt": "2021-02-23",
+    "series": "uber-schemaless",
+    "tags": ["database", "mysql"]
+  },
+  {
+    "title": "Fast and Reliable Schema-Agnostic Log Analytics Platform",
+    "url": "https://www.uber.com/blog/logging/",
+    "source": "Uber",
+    "publishedAt": "2021-02-19",
+    "tags": ["clickhouse", "elasticsearch", "logging", "observability"]
+  },
+  {
+    "title": "Disaster Recovery for Multi-Region Kafka at Uber",
+    "url": "https://www.uber.com/blog/kafka/",
+    "source": "Uber",
+    "publishedAt": "2020-12-21",
+    "tags": ["disaster-recovery", "kafka", "reliability"]
+  },
+  {
+    "title": "Introducing Domain-Oriented Microservice Architecture",
+    "url": "https://www.uber.com/blog/microservice-architecture/",
+    "source": "Uber",
+    "publishedAt": "2020-07-23",
+    "tags": ["architecture", "microservice"]
+  },
+  {
+    "title": "Building a Large-scale Transactional Data Lake at Uber Using Apache Hudi",
+    "url": "https://www.uber.com/blog/apache-hudi-graduation/",
+    "source": "Uber",
+    "publishedAt": "2020-06-09",
+    "series": "uber-hudi",
+    "tags": ["data", "data-lake", "hudi"]
+  },
+  {
+    "title": "Uber's Big Data Platform: 100+ Petabytes with Minute Latency",
+    "url": "https://www.uber.com/blog/uber-big-data-platform/",
+    "source": "Uber",
+    "publishedAt": "2018-10-17",
+    "tags": ["data", "data-lake", "hadoop"]
+  },
+  {
+    "title": "M3: Uber's Open Source, Large-scale Metrics Platform for Prometheus",
+    "url": "https://www.uber.com/blog/m3/",
+    "source": "Uber",
+    "publishedAt": "2018-08-07",
+    "tags": ["metrics", "observability", "prometheus"]
+  },
+  {
+    "title": "H3: Uber's Hexagonal Hierarchical Spatial Index",
+    "url": "https://www.uber.com/blog/h3/",
+    "source": "Uber",
+    "publishedAt": "2018-06-27",
+    "tags": ["architecture", "geospatial"]
+  },
+  {
+    "title": "Rethinking GPS: Engineering Next-Gen Location at Uber",
+    "url": "https://www.uber.com/blog/rethinking-gps/",
+    "source": "Uber",
+    "publishedAt": "2018-04-19",
+    "tags": ["architecture", "geospatial"]
+  },
+  {
+    "title": "Introducing QALM, Uber's QoS Load Management Framework",
+    "url": "https://www.uber.com/blog/qalm-qos-load-management-framework/",
+    "source": "Uber",
+    "publishedAt": "2018-03-22",
+    "tags": ["overload-control", "reliability"]
+  },
+  {
+    "title": "Code Migration in Production: Rewriting the Sharding Layer of Uber's Schemaless Datastore",
+    "url": "https://www.uber.com/blog/schemaless-rewrite/",
+    "source": "Uber",
+    "publishedAt": "2018-02-22",
+    "series": "uber-schemaless",
+    "tags": ["database", "mysql", "sharding"]
+  },
+  {
+    "title": "Building Reliable Reprocessing and Dead Letter Queues with Apache Kafka",
+    "url": "https://www.uber.com/blog/reliable-reprocessing/",
+    "source": "Uber",
+    "publishedAt": "2018-02-16",
+    "tags": ["architecture", "job-queue", "kafka"]
+  },
+  {
+    "title": "Evolving Distributed Tracing at Uber Engineering",
+    "url": "https://www.uber.com/blog/distributed-tracing/",
+    "source": "Uber",
+    "publishedAt": "2017-02-02",
+    "tags": ["observability", "tracing"]
+  },
+  {
+    "title": "Why Uber Engineering Switched from Postgres to MySQL",
+    "url": "https://www.uber.com/blog/postgres-to-mysql-migration/",
+    "source": "Uber",
+    "publishedAt": "2016-07-26",
+    "tags": ["database", "migration", "mysql", "postgresql"]
+  },
+  {
+    "title": "The Architecture of Schemaless, Uber Engineering's Trip Datastore Using MySQL",
+    "url": "https://www.uber.com/blog/schemaless-part-two-architecture/",
+    "source": "Uber",
+    "publishedAt": "2016-01-15",
+    "series": "uber-schemaless",
+    "tags": ["database", "mysql", "sharding"]
+  },
+  {
+    "title": "Designing Schemaless, Uber Engineering's Scalable Datastore Using MySQL",
+    "url": "https://www.uber.com/blog/schemaless-part-one-mysql-datastore/",
+    "source": "Uber",
+    "publishedAt": "2016-01-12",
+    "series": "uber-schemaless",
+    "tags": ["database", "mysql", "schema"]
+  }
+]

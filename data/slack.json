@@ -1,0 +1,79 @@
+[
+  {
+    "title": "Unlocking Efficiency and Performance: Navigating the Spark 3 and EMR 6 Upgrade Journey at Slack",
+    "url": "https://slack.engineering/unlocking-efficiency-and-performance-navigating-the-spark-3-and-emr-6-upgrade-journey-at-slack/",
+    "source": "Slack",
+    "publishedAt": "2024-07-02",
+    "tags": ["data", "emr", "etl", "hive", "spark"]
+  },
+  {
+    "title": "Executing Cron Scripts Reliably At Scale",
+    "url": "https://slack.engineering/executing-cron-scripts-reliably-at-scale/",
+    "source": "Slack",
+    "publishedAt": "2023-09-28",
+    "tags": ["architecture", "job-queue"]
+  },
+  {
+    "title": "Slack’s Migration to a Cellular Architecture",
+    "url": "https://slack.engineering/slacks-migration-to-a-cellular-architecture/",
+    "source": "Slack",
+    "publishedAt": "2023-08-22",
+    "tags": ["architecture", "envoy", "reliability"]
+  },
+  {
+    "title": "Building Self-driving Kafka clusters using open source components",
+    "url": "https://slack.engineering/building-self-driving-kafka-clusters-using-open-source-components/",
+    "source": "Slack",
+    "publishedAt": "2022-02-11",
+    "tags": ["architecture", "kafka", "zookeeper"]
+  },
+  {
+    "title": "Migrating Millions of Concurrent Websockets to Envoy",
+    "url": "https://slack.engineering/migrating-millions-of-concurrent-websockets-to-envoy/",
+    "source": "Slack",
+    "publishedAt": "2021-03-15",
+    "tags": ["envoy", "haproxy", "load-balance", "network", "websocket"]
+  },
+  {
+    "title": "Slack’s Outage on January 4th 2021",
+    "url": "https://slack.engineering/slacks-outage-on-january-4th-2021/",
+    "source": "Slack",
+    "publishedAt": "2021-02-01",
+    "tags": ["postmortem", "reliability"]
+  },
+  {
+    "title": "Scaling Datastores at Slack with Vitess",
+    "url": "https://slack.engineering/scaling-datastores-at-slack-with-vitess/",
+    "source": "Slack",
+    "publishedAt": "2020-12-01",
+    "tags": ["database", "migration", "mysql", "sharding", "vitess"]
+  },
+  {
+    "title": "A Terrible, Horrible, No-Good, Very Bad Day at Slack",
+    "url": "https://slack.engineering/a-terrible-horrible-no-good-very-bad-day-at-slack/",
+    "source": "Slack",
+    "publishedAt": "2020-06-29",
+    "tags": ["consul", "haproxy", "postmortem", "reliability"]
+  },
+  {
+    "title": "Evolving the Slack API",
+    "url": "https://slack.engineering/evolving-the-slack-api/",
+    "source": "Slack",
+    "publishedAt": "2018-01-25",
+    "tags": ["api-design", "rest"]
+  },
+  {
+    "title": "Scaling Slack’s Job Queue",
+    "url": "https://slack.engineering/scaling-slacks-job-queue/",
+    "source": "Slack",
+    "publishedAt": "2017-12-06",
+    "tags": ["architecture", "job-queue", "kafka", "redis"]
+  },
+  {
+    "title": "Search at Slack",
+    "url": "https://slack.engineering/search-at-slack/",
+    "source": "Slack",
+    "publishedAt": "2017-02-07",
+    "tags": ["ranking", "search", "solr"]
+  }
+]

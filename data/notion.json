@@ -1,0 +1,67 @@
+[
+  {
+    "title": "Rebuilding Notion's lexical search reindexer",
+    "url": "https://www.notion.com/blog/rebuilding-notions-lexical-search-reindexer",
+    "source": "Notion",
+    "publishedAt": "2026-08-10",
+    "tags": ["elasticsearch", "indexing", "search", "spark"]
+  },
+  {
+    "title": "Enabling Multi-Region Data Systems at Notion",
+    "url": "https://www.notion.com/blog/enabling-multi-region-data-systems-at-notion",
+    "source": "Notion",
+    "publishedAt": "2026-04-09",
+    "tags": ["data", "data-lake"]
+  },
+  {
+    "title": "Two years of vector search at Notion: 10x scale, 1/10th cost",
+    "url": "https://www.notion.com/blog/two-years-of-vector-search-at-notion",
+    "source": "Notion",
+    "publishedAt": "2026-02-19",
+    "tags": ["ray", "search", "vector"]
+  },
+  {
+    "title": "Balancing cost and reliability for Spark on Kubernetes",
+    "url": "https://www.notion.com/blog/balancing-cost-and-reliability-for-spark-on-kubernetes",
+    "source": "Notion",
+    "publishedAt": "2026-02-12",
+    "tags": ["data", "kubernetes", "spark"]
+  },
+  {
+    "title": "How we made Notion available offline",
+    "url": "https://www.notion.com/blog/how-we-made-notion-available-offline",
+    "source": "Notion",
+    "publishedAt": "2025-12-11",
+    "tags": ["frontend", "offline", "sqlite"]
+  },
+  {
+    "title": "How we sped up Notion in the browser with WASM SQLite",
+    "url": "https://www.notion.com/blog/how-we-sped-up-notion-in-the-browser-with-wasm-sqlite",
+    "source": "Notion",
+    "publishedAt": "2024-07-10",
+    "tags": ["frontend", "sqlite", "wasm"]
+  },
+  {
+    "title": "Building and scaling Notion's data lake",
+    "url": "https://www.notion.com/blog/building-and-scaling-notions-data-lake",
+    "source": "Notion",
+    "publishedAt": "2024-07-01",
+    "tags": ["cdc", "data", "data-lake", "s3", "spark"]
+  },
+  {
+    "title": "The Great Re-shard: adding Postgres capacity (again) with zero downtime",
+    "url": "https://www.notion.com/blog/the-great-re-shard",
+    "source": "Notion",
+    "publishedAt": "2023-07-17",
+    "series": "notion-postgresql-sharding",
+    "tags": ["database", "postgresql", "sharding"]
+  },
+  {
+    "title": "Herding elephants: Lessons learned from sharding Postgres at Notion",
+    "url": "https://www.notion.com/blog/sharding-postgres-at-notion",
+    "source": "Notion",
+    "publishedAt": "2021-10-06",
+    "series": "notion-postgresql-sharding",
+    "tags": ["database", "postgresql", "sharding"]
+  }
+]

@@ -1,11 +1,10 @@
-import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
+import { mkdir, readdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
-import type { EntryInput } from "../src/lib/entry.js";
 import { iconHost, iconKey, parseIconFile } from "../src/lib/icon.js";
+import { readEntries } from "./readEntries.js";
 
 const ICON_DIR = fileURLToPath(new URL("../public/icons/", import.meta.url));
-const ENTRIES = fileURLToPath(new URL("../data/entries.json", import.meta.url));
 
 /** Sites serve favicons to browsers; a bare fetch gets a 403 from more than a few. */
 const UA =
@@ -253,7 +252,7 @@ async function cached(): Promise<Set<string>> {
 }
 
 async function main(): Promise<void> {
-  const inputs = JSON.parse(await readFile(ENTRIES, "utf8")) as EntryInput[];
+  const inputs = await readEntries();
   // One company, one icon — plus the host it was first seen writing on, which is
   // where we look when svgl has never heard of it. A company that publishes on a
   // platform (Airbnb on medium.com) gets the platform's logo out of that, which
