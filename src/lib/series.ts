@@ -1,14 +1,4 @@
-import { normalizeTag } from "./tags.js";
 import type { Article } from "../types.js";
-
-/**
- * Series ids use the same slug shape as tags, so both stay hand-typeable in
- * data/<source>.json and two entries written on different days — or filed under
- * two different companies — still land in the same series.
- */
-export function normalizeSeries(raw: string): string {
-  return normalizeTag(raw);
-}
 
 /** "storing-messages" → "Storing messages". Derived, never stored. */
 export function seriesLabel(id: string): string {
@@ -48,13 +38,4 @@ export function buildSeriesIndex(articles: Article[]): Map<string, Series> {
     });
   }
   return index;
-}
-
-/** Every series in use, largest first — what the entry form suggests. */
-export function knownSeries(articles: Article[]): string[] {
-  const counts = new Map<string, number>();
-  for (const article of articles) {
-    if (article.series) counts.set(article.series, (counts.get(article.series) ?? 0) + 1);
-  }
-  return [...counts].toSorted((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).map(([id]) => id);
 }

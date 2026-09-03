@@ -1,22 +1,18 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from "vue";
 import ArticleList from "./components/ArticleList.vue";
-import EntryForm from "./components/EntryForm.vue";
 import FilterPanel from "./components/FilterPanel.vue";
 import SearchBar from "./components/SearchBar.vue";
 import { useArticleFilter } from "./composables/useArticleFilter.js";
 import { useBookmarks } from "./composables/useBookmarks.js";
 import { useTheme } from "./composables/useTheme.js";
-import { tagCounts } from "./lib/filter.js";
-import { buildSeriesIndex, knownSeries } from "./lib/series.js";
-import { normalizeUrl } from "./lib/url.js";
+import { buildSeriesIndex } from "./lib/series.js";
 import type { Article } from "./types.js";
 
 const articles = ref<Article[]>([]);
 const loading = ref(true);
 const loadError = ref(false);
 const viewSaved = ref(false);
-const showForm = ref(false);
 
 /** Newest published first — the list's only ordering. */
 const all = computed(() =>
@@ -31,20 +27,6 @@ const { bookmarks, toggleBookmark } = useBookmarks();
  * 4" while a company or tag filter is hiding the other three.
  */
 const seriesIndex = computed(() => buildSeriesIndex(all.value));
-
-const existingUrls = computed(() =>
-  all.value.flatMap((a) => {
-    try {
-      return [normalizeUrl(a.url)];
-    } catch {
-      return [];
-    }
-  }),
-);
-/** Every tag already in use, most-used first, so the form suggests real ones. */
-const knownTags = computed(() => tagCounts(all.value).map((t) => t.tag));
-/** Same idea for series: only slugs already in the data, so parts actually meet up. */
-const knownSeriesIds = computed(() => knownSeries(all.value));
 
 const stats = computed(() => {
   if (all.value.length === 0) return "";
@@ -82,7 +64,7 @@ const emptyText = computed(() => {
     return "Tap the bookmark on any entry to keep it here for later.";
   }
   if (all.value.length === 0) {
-    return "Add the first entry with the + button up top.";
+    return "The reading list is built from the files in data/ — none loaded.";
   }
   return "No entries match your filters. Try widening the date range or removing a filter.";
 });
@@ -140,10 +122,6 @@ onMounted(async () => {
         <div class="logo-mark heading-font">E</div>
         <h1 class="heading-font">Engineer Blog Aggregator</h1>
         <div class="header-spacer"></div>
-        <button class="add-button" title="Add an entry" @click="showForm = true">
-          <span class="add-plus">+</span>
-          <span class="add-text">Add</span>
-        </button>
         <button
           class="theme-toggle"
           :title="theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
@@ -193,13 +171,5 @@ onMounted(async () => {
         <span v-if="stats">· {{ stats }}</span>
       </footer>
     </div>
-
-    <EntryForm
-      v-if="showForm"
-      :known-tags="knownTags"
-      :known-series="knownSeriesIds"
-      :existing-urls="existingUrls"
-      @close="showForm = false"
-    />
   </div>
 </template>

@@ -1,7 +1,6 @@
 /**
- * URL normalization shared by the browser (duplicate detection in the entry
- * form) and the build script (stable id hashing). Must stay dependency-free so
- * it can be bundled for the browser.
+ * URL normalization, used by the build script for stable id hashing. Kept
+ * dependency-free so it can be bundled for the browser too.
  */
 
 /** Lowercase host, strip fragment, strip trailing slash; query kept as-is. */
@@ -13,13 +12,4 @@ export function normalizeUrl(raw: string): string {
     url.pathname = url.pathname.slice(0, -1);
   }
   return url.toString();
-}
-
-/** Same normalization, but returns null instead of throwing on a bad url. */
-export function tryNormalizeUrl(raw: string): string | null {
-  try {
-    return normalizeUrl(raw);
-  } catch {
-    return null;
-  }
 }

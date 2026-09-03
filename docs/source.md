@@ -23,7 +23,7 @@
 - [shopify](https://shopify.engineering) : 2026-08-30
 - [stripe](https://stripe.dev/blog) : 2026-08-30
 - [slack](https://slack.engineering) : 2026-08-31
-- [salesforce](https://developer.salesforce.com/blogs) : 
+- [salesforce](https://developer.salesforce.com/blogs) :
 - [spotify](https://engineering.atspotify.com) :
 - [twitter](https://blog.x.com/engineering) :
 - [uber](https://eng.uber.com) : 2026-08-30
