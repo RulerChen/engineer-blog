@@ -28,20 +28,6 @@ const { bookmarks, toggleBookmark } = useBookmarks();
  */
 const seriesIndex = computed(() => buildSeriesIndex(all.value));
 
-const stats = computed(() => {
-  if (all.value.length === 0) return "";
-  const latest = all.value.reduce(
-    (max, a) => (a.publishedAt > max ? a.publishedAt : max),
-    all.value[0].publishedAt,
-  );
-  const date = new Date(latest).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-  });
-  return `${all.value.length} entries · latest ${date}`;
-});
-
 const shown = computed(() => {
   const list = viewSaved.value
     ? filtered.value.filter((a) => bookmarks.value.includes(a.id))
@@ -122,6 +108,9 @@ onMounted(async () => {
         <div class="logo-mark heading-font">E</div>
         <h1 class="heading-font">Engineer Blog Aggregator</h1>
         <div class="header-spacer"></div>
+        <span v-if="all.length" class="header-count" title="Total entries"
+          >{{ all.length.toLocaleString("en-US") }} entries</span
+        >
         <button
           class="theme-toggle"
           :title="theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
@@ -165,11 +154,6 @@ onMounted(async () => {
         @select-series="selectSeries"
         @select-tag="selectTag"
       />
-
-      <footer class="site-footer">
-        A hand-curated reading list of engineering writing
-        <span v-if="stats">· {{ stats }}</span>
-      </footer>
     </div>
   </div>
 </template>
