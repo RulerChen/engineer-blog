@@ -1,0 +1,254 @@
+[
+  {
+    "title": "A Tale of Two Flink Autoscalers",
+    "url": "https://netflixtechblog.com/a-tale-of-two-flink-autoscalers-e9f6a1b1492b",
+    "source": "Netflix",
+    "publishedAt": "2026-08-21",
+    "tags": ["data", "stream-processing", "flink"]
+  },
+  {
+    "title": "In-House LLM Serving at Netflix",
+    "url": "https://netflixtechblog.com/in-house-llm-serving-at-netflix-a5a8e799ea2c",
+    "source": "Netflix",
+    "publishedAt": "2026-07-17",
+    "tags": ["machine-learning", "inference", "llm"]
+  },
+  {
+    "title": "Building Service Topology at Scale: Architecture, Challenges, and Lessons Learned",
+    "url": "https://netflixtechblog.com/building-service-topology-at-scale-architecture-challenges-and-lessons-learned-f4b792f3f0d8",
+    "source": "Netflix",
+    "publishedAt": "2026-07-13",
+    "tags": ["observability", "architecture", "microservice"]
+  },
+  {
+    "title": "Dynamic Repartitioning for Time Series Workloads",
+    "url": "https://netflixtechblog.com/dynamically-splitting-wide-partitions-in-cassandra-for-time-series-workloads-0eded064f456",
+    "source": "Netflix",
+    "publishedAt": "2026-06-03",
+    "tags": ["database", "sharding", "cassandra"]
+  },
+  {
+    "title": "The Evolution of Cassandra Data Movement at Netflix",
+    "url": "https://netflixtechblog.com/the-evolution-of-cassandra-data-movement-at-netflix-6e13329c80a1",
+    "source": "Netflix",
+    "publishedAt": "2026-05-18",
+    "tags": ["database", "migration", "cassandra"]
+  },
+  {
+    "title": "Scaling LLM Post-Training at Netflix",
+    "url": "https://netflixtechblog.com/scaling-llm-post-training-at-netflix-0046f8790194",
+    "source": "Netflix",
+    "publishedAt": "2026-02-13",
+    "tags": ["machine-learning", "training", "llm"]
+  },
+  {
+    "title": "Automating RDS Postgres to Aurora Postgres Migration",
+    "url": "https://netflixtechblog.com/automating-rds-postgres-to-aurora-postgres-migration-261ca045447f",
+    "source": "Netflix",
+    "publishedAt": "2026-02-12",
+    "tags": ["database", "migration", "postgresql"]
+  },
+  {
+    "title": "High-Throughput Graph Abstraction at Netflix: Part I",
+    "url": "https://netflixtechblog.com/high-throughput-graph-abstraction-at-netflix-part-i-e88063e6f6d5",
+    "source": "Netflix",
+    "publishedAt": "2026-02-09",
+    "tags": ["database", "architecture"]
+  },
+  {
+    "title": "Netflix Live Origin",
+    "url": "https://netflixtechblog.com/netflix-live-origin-41f1b0ad5371",
+    "source": "Netflix",
+    "publishedAt": "2025-12-15",
+    "tags": ["network", "architecture"]
+  },
+  {
+    "title": "How Temporal Powers Reliable Cloud Operations at Netflix",
+    "url": "https://netflixtechblog.com/how-temporal-powers-reliable-cloud-operations-at-netflix-73c69ccb5953",
+    "source": "Netflix",
+    "publishedAt": "2025-12-15",
+    "tags": ["architecture", "job-queue", "reliability"]
+  },
+  {
+    "title": "Mount Mayhem at Netflix: Scaling Containers on Modern CPUs",
+    "url": "https://netflixtechblog.com/mount-mayhem-at-netflix-scaling-containers-on-modern-cpus-f3b09b68beac",
+    "source": "Netflix",
+    "publishedAt": "2025-11-07",
+    "tags": ["container", "operating-system", "kernel"]
+  },
+  {
+    "title": "Behind the Streams: Real-Time Recommendations for Live Events Part 3",
+    "url": "https://netflixtechblog.com/behind-the-streams-real-time-recommendations-for-live-events-e027cb313f8f",
+    "source": "Netflix",
+    "publishedAt": "2025-10-20",
+    "tags": ["reliability", "overload-control", "machine-learning"]
+  },
+  {
+    "title": "Scaling Muse: How Netflix Powers Data-Driven Creative Insights at Trillion-Row Scale",
+    "url": "https://netflixtechblog.com/scaling-muse-how-netflix-powers-data-driven-creative-insights-at-trillion-row-scale-aa9ad326fd77",
+    "source": "Netflix",
+    "publishedAt": "2025-09-22",
+    "tags": ["data", "query-engine", "druid"]
+  },
+  {
+    "title": "Behind the Streams: Building a Reliable Cloud Live Streaming Pipeline for Netflix. Part 2.",
+    "url": "https://netflixtechblog.com/building-a-reliable-cloud-live-streaming-pipeline-for-netflix-8627c608c967",
+    "source": "Netflix",
+    "publishedAt": "2025-09-15",
+    "tags": ["reliability", "architecture"]
+  },
+  {
+    "title": "Behind the Streams: Three Years Of Live at Netflix. Part 1.",
+    "url": "https://netflixtechblog.com/behind-the-streams-live-at-netflix-part-1-d23f917c2f40",
+    "source": "Netflix",
+    "publishedAt": "2025-07-15",
+    "tags": ["architecture", "network"]
+  },
+  {
+    "title": "Netflix Tudum Architecture: from CQRS with Kafka to CQRS with RAW Hollow",
+    "url": "https://netflixtechblog.com/netflix-tudum-architecture-from-cqrs-with-kafka-to-cqrs-with-raw-hollow-86d141b72e52",
+    "source": "Netflix",
+    "publishedAt": "2025-07-10",
+    "tags": ["architecture", "database", "caching"]
+  },
+  {
+    "title": "Netflix’s Distributed Counter Abstraction",
+    "url": "https://netflixtechblog.com/netflixs-distributed-counter-abstraction-8d0c45eb66b2",
+    "source": "Netflix",
+    "publishedAt": "2024-11-12",
+    "tags": ["database", "architecture", "cassandra"]
+  },
+  {
+    "title": "Introducing Netflix’s TimeSeries Data Abstraction Layer",
+    "url": "https://netflixtechblog.com/introducing-netflix-timeseries-data-abstraction-layer-31552f6326f8",
+    "source": "Netflix",
+    "publishedAt": "2024-10-08",
+    "tags": ["database", "sharding", "cassandra"]
+  },
+  {
+    "title": "Introducing Netflix’s Key-Value Data Abstraction Layer",
+    "url": "https://netflixtechblog.com/introducing-netflixs-key-value-data-abstraction-layer-1ea8a0a11b30",
+    "source": "Netflix",
+    "publishedAt": "2024-09-18",
+    "tags": ["database", "api-design", "cassandra"]
+  },
+  {
+    "title": "Java 21 Virtual Threads - Dude, Where’s My Lock?",
+    "url": "https://netflixtechblog.com/java-21-virtual-threads-dude-wheres-my-lock-3052540e231d",
+    "source": "Netflix",
+    "publishedAt": "2024-07-29",
+    "tags": ["language", "java"]
+  },
+  {
+    "title": "Kubernetes And Kernel Panics",
+    "url": "https://netflixtechblog.com/kubernetes-and-kernel-panics-ed620b9c6225",
+    "source": "Netflix",
+    "publishedAt": "2023-10-27",
+    "tags": ["container", "kubernetes", "operating-system"]
+  },
+  {
+    "title": "Migrating Critical Traffic At Scale with No Downtime — Part 1",
+    "url": "https://netflixtechblog.com/migrating-critical-traffic-at-scale-with-no-downtime-part-1-ba1c7a1c7835",
+    "source": "Netflix",
+    "publishedAt": "2023-05-04",
+    "tags": ["testing", "reliability"]
+  },
+  {
+    "title": "Timestone: Netflix’s High-Throughput, Low-Latency Priority Queueing System with Built-in Support for Non-Parallelizable Workloads",
+    "url": "https://netflixtechblog.com/timestone-netflixs-high-throughput-low-latency-priority-queueing-system-with-built-in-support-1abf249ba95f",
+    "source": "Netflix",
+    "publishedAt": "2022-09-28",
+    "tags": ["architecture", "job-queue", "database"]
+  },
+  {
+    "title": "Data Mesh — A Data Movement and Processing Platform @ Netflix",
+    "url": "https://netflixtechblog.com/data-mesh-a-data-movement-and-processing-platform-netflix-1288bcab2873",
+    "source": "Netflix",
+    "publishedAt": "2022-08-01",
+    "tags": ["data", "cdc", "stream-processing"]
+  },
+  {
+    "title": "The Netflix Cosmos Platform",
+    "url": "https://netflixtechblog.com/the-netflix-cosmos-platform-35c14d9351ad",
+    "source": "Netflix",
+    "publishedAt": "2021-03-01",
+    "tags": ["architecture", "microservice", "cloud"]
+  },
+  {
+    "title": "Building Netflix’s Distributed Tracing Infrastructure",
+    "url": "https://netflixtechblog.com/building-netflixs-distributed-tracing-infrastructure-bb856c319304",
+    "source": "Netflix",
+    "publishedAt": "2020-10-19",
+    "tags": ["observability", "tracing", "storage"]
+  },
+  {
+    "title": "DBLog: A Generic Change-Data-Capture Framework",
+    "url": "https://netflixtechblog.com/dblog-a-generic-change-data-capture-framework-69351fb9099b",
+    "source": "Netflix",
+    "publishedAt": "2019-12-17",
+    "tags": ["data", "cdc", "database"]
+  },
+  {
+    "title": "Scaling Time Series Data Storage — Part II",
+    "url": "https://netflixtechblog.com/scaling-time-series-data-storage-part-ii-d67939655586",
+    "source": "Netflix",
+    "publishedAt": "2018-11-05",
+    "tags": ["database", "sharding", "cassandra"]
+  },
+  {
+    "title": "Scaling Time Series Data Storage — Part I",
+    "url": "https://netflixtechblog.com/scaling-time-series-data-storage-part-i-ec2b6d44ba39",
+    "source": "Netflix",
+    "publishedAt": "2018-01-23",
+    "tags": ["database", "sharding", "cassandra"]
+  },
+  {
+    "title": "Artwork Personalization at Netflix",
+    "url": "https://netflixtechblog.com/artwork-personalization-c589f074ad76",
+    "source": "Netflix",
+    "publishedAt": "2017-12-07",
+    "tags": ["machine-learning"]
+  },
+  {
+    "title": "Netflix and Fill",
+    "url": "https://netflixtechblog.com/netflix-and-fill-c43a32b490c0",
+    "source": "Netflix",
+    "publishedAt": "2016-08-11",
+    "tags": ["network", "storage"]
+  },
+  {
+    "title": "Netflix Billing Migration to AWS — Part III",
+    "url": "https://netflixtechblog.com/netflix-billing-migration-to-aws-part-iii-7d94ab9d1f59",
+    "source": "Netflix",
+    "publishedAt": "2016-08-01",
+    "tags": ["database", "migration"]
+  },
+  {
+    "title": "Netflix Billing Migration to AWS — Part II",
+    "url": "https://netflixtechblog.com/netflix-billing-migration-to-aws-part-ii-834f6358126",
+    "source": "Netflix",
+    "publishedAt": "2016-07-20",
+    "tags": ["database", "migration", "architecture"]
+  },
+  {
+    "title": "Netflix Billing Migration to AWS",
+    "url": "https://netflixtechblog.com/netflix-billing-migration-to-aws-451fba085a4",
+    "source": "Netflix",
+    "publishedAt": "2016-06-21",
+    "tags": ["database", "migration", "architecture"]
+  },
+  {
+    "title": "Kafka Inside Keystone Pipeline",
+    "url": "https://netflixtechblog.com/kafka-inside-keystone-pipeline-dd5aeabaf6bb",
+    "source": "Netflix",
+    "publishedAt": "2016-04-27",
+    "tags": ["data", "stream-processing", "kafka"]
+  },
+  {
+    "title": "Fault Tolerance in a High Volume, Distributed System",
+    "url": "https://netflixtechblog.com/fault-tolerance-in-a-high-volume-distributed-system-91ab4faae74a",
+    "source": "Netflix",
+    "publishedAt": "2012-02-29",
+    "tags": ["reliability", "overload-control", "architecture"]
+  }
+]

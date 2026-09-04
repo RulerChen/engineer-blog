@@ -16,7 +16,7 @@
 - [google research](https://research.google/blog/) :
 - [linkedin](https://engineering.linkedin.com/blog) :
 - [meta](https://engineering.fb.com) :
-- [netflix](https://netflixtechblog.com) :
+- [netflix](https://netflixtechblog.com) : 2026-09-04
 - [notion](https://www.notion.com/blog/topic/tech) : 2026-08-30
 - [pinterest](https://medium.com/pinterest-engineering)
 - [openai](https://openai.com/news/engineering) : 2026-08-30
