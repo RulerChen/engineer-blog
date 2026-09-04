@@ -158,6 +158,7 @@
     "url": "https://blog.cloudflare.com/moving-quicksilver-into-production/",
     "source": "Cloudflare",
     "publishedAt": "2020-11-25",
+    "series": "cloudflare-quicksilver",
     "tags": ["database", "storage", "architecture"]
   },
   {
@@ -172,6 +173,7 @@
     "url": "https://blog.cloudflare.com/introducing-quicksilver-configuration-distribution-at-internet-scale/",
     "source": "Cloudflare",
     "publishedAt": "2020-03-30",
+    "series": "cloudflare-quicksilver",
     "tags": ["database", "replication"]
   },
   {

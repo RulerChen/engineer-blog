@@ -60,6 +60,7 @@
     "url": "https://netflixtechblog.com/netflix-live-origin-41f1b0ad5371",
     "source": "Netflix",
     "publishedAt": "2025-12-15",
+    "series": "netflix-live",
     "tags": ["network", "architecture"]
   },
   {
@@ -81,6 +82,7 @@
     "url": "https://netflixtechblog.com/behind-the-streams-real-time-recommendations-for-live-events-e027cb313f8f",
     "source": "Netflix",
     "publishedAt": "2025-10-20",
+    "series": "netflix-live",
     "tags": ["reliability", "overload-control", "machine-learning"]
   },
   {
@@ -95,6 +97,7 @@
     "url": "https://netflixtechblog.com/building-a-reliable-cloud-live-streaming-pipeline-for-netflix-8627c608c967",
     "source": "Netflix",
     "publishedAt": "2025-09-15",
+    "series": "netflix-live",
     "tags": ["reliability", "architecture"]
   },
   {
@@ -102,6 +105,7 @@
     "url": "https://netflixtechblog.com/behind-the-streams-live-at-netflix-part-1-d23f917c2f40",
     "source": "Netflix",
     "publishedAt": "2025-07-15",
+    "series": "netflix-live",
     "tags": ["architecture", "network"]
   },
   {
@@ -193,6 +197,7 @@
     "url": "https://netflixtechblog.com/scaling-time-series-data-storage-part-ii-d67939655586",
     "source": "Netflix",
     "publishedAt": "2018-11-05",
+    "series": "netflix-time-series-storage",
     "tags": ["database", "sharding", "cassandra"]
   },
   {
@@ -200,6 +205,7 @@
     "url": "https://netflixtechblog.com/scaling-time-series-data-storage-part-i-ec2b6d44ba39",
     "source": "Netflix",
     "publishedAt": "2018-01-23",
+    "series": "netflix-time-series-storage",
     "tags": ["database", "sharding", "cassandra"]
   },
   {
@@ -221,6 +227,7 @@
     "url": "https://netflixtechblog.com/netflix-billing-migration-to-aws-part-iii-7d94ab9d1f59",
     "source": "Netflix",
     "publishedAt": "2016-08-01",
+    "series": "netflix-billing-migration",
     "tags": ["database", "migration"]
   },
   {
@@ -228,6 +235,7 @@
     "url": "https://netflixtechblog.com/netflix-billing-migration-to-aws-part-ii-834f6358126",
     "source": "Netflix",
     "publishedAt": "2016-07-20",
+    "series": "netflix-billing-migration",
     "tags": ["database", "migration", "architecture"]
   },
   {
@@ -235,6 +243,7 @@
     "url": "https://netflixtechblog.com/netflix-billing-migration-to-aws-451fba085a4",
     "source": "Netflix",
     "publishedAt": "2016-06-21",
+    "series": "netflix-billing-migration",
     "tags": ["database", "migration", "architecture"]
   },
   {
