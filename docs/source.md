@@ -5,7 +5,7 @@
 - [atlassian](https://www.atlassian.com/blog/development) :
 - [booking](https://blog.booking.com) :
 - [canva](https://www.canva.dev/blog/engineering) : 2026-09-02
-- [cloudflare](https://blog.cloudflare.com) :
+- [cloudflare](https://blog.cloudflare.com) : 2026-09-03
 - [cursor](https://cursor.com/blog) : 2026-08-30
 - [discord](https://discord.com/category/engineering) : 2026-08-30
 - [doordash](https://careersatdoordash.com/engineering-blog) :
