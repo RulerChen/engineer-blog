@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Optimizing cloud economics with linear elastic caching",
+    "url": "https://research.google/blog/optimizing-cloud-economics-with-linear-elastic-caching/",
+    "source": "Google",
+    "publishedAt": "2026-06-25",
+    "tags": ["database", "caching", "spanner"]
+  },
+  {
+    "title": "Solving virtual machine puzzles: How AI is optimizing cloud computing",
+    "url": "https://research.google/blog/solving-virtual-machine-puzzles-how-ai-is-optimizing-cloud-computing/",
+    "source": "Google",
+    "publishedAt": "2025-10-17",
+    "tags": ["cloud", "machine-learning"]
+  },
+  {
+    "title": "Answering billions of reporting queries each day with low latency",
+    "url": "https://research.google/blog/answering-billions-of-reporting-queries-each-day-with-low-latency/",
+    "source": "Google",
+    "publishedAt": "2023-10-20",
+    "tags": ["data", "query-engine", "napa"]
+  },
+  {
+    "title": "Preference learning with automated feedback for cache eviction",
+    "url": "https://research.google/blog/preference-learning-with-automated-feedback-for-cache-eviction/",
+    "source": "Google",
+    "publishedAt": "2023-06-23",
+    "tags": ["network", "machine-learning"]
+  },
+  {
+    "title": "Balanced Partitioning and Hierarchical Clustering at Scale",
+    "url": "https://research.google/blog/balanced-partitioning-and-hierarchical-clustering-at-scale/",
+    "source": "Google",
+    "publishedAt": "2018-03-14",
+    "tags": ["database", "sharding"]
+  },
+  {
+    "title": "Consistent Hashing with Bounded Loads",
+    "url": "https://research.google/blog/consistent-hashing-with-bounded-loads/",
+    "source": "Google",
+    "publishedAt": "2017-04-03",
+    "tags": ["network", "load-balance"]
+  },
+  {
+    "title": "Pulling Back the Curtain on Google’s Network Infrastructure",
+    "url": "https://research.google/blog/pulling-back-the-curtain-on-googles-network-infrastructure/",
+    "source": "Google",
+    "publishedAt": "2015-08-18",
+    "tags": ["network", "hardware"]
+  }
+]
