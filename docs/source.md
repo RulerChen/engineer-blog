@@ -2,8 +2,8 @@
 - [amazon science](https://www.amazon.science/blog) : 
 - [aws](https://aws.amazon.com/blogs/) :
 - [azure](https://azure.microsoft.com/en-us/blog/) :
-- [atlassian](https://www.atlassian.com/blog/development) :
-- [booking](https://blog.booking.com) :
+- [atlassian](https://www.atlassian.com/blog/development) : 2026-09-05
+- [booking](https://blog.booking.com) : 2026-09-05
 - [canva](https://www.canva.dev/blog/engineering) : 2026-09-02
 - [cloudflare](https://blog.cloudflare.com) : 2026-09-03
 - [cursor](https://cursor.com/blog) : 2026-08-30
@@ -23,7 +23,7 @@
 - [shopify](https://shopify.engineering) : 2026-08-30
 - [stripe](https://stripe.dev/blog) : 2026-08-30
 - [slack](https://slack.engineering) : 2026-08-31
-- [salesforce](https://developer.salesforce.com/blogs) :
+- [salesforce](https://developer.salesforce.com/blogs) : 2026-09-05
 - [spotify](https://engineering.atspotify.com) : 2026-09-05
 - [twitter](https://blog.x.com/engineering) :
 - [uber](https://eng.uber.com) : 2026-08-30

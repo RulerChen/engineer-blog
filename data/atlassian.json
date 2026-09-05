@@ -1,0 +1,177 @@
+[
+  {
+    "title": "Budget Allocation at Scale: Building an ML Optimization System for Paid Marketing",
+    "url": "https://www.atlassian.com/blog/how-we-build/budget-allocation-at-scale-building-ml-optimization-system",
+    "source": "Atlassian",
+    "publishedAt": "2026-07-29",
+    "tags": ["machine-learning", "lightgbm"]
+  },
+  {
+    "title": "Scaling StreamHub: Transitioning from Kinesis to Kafka for 145 Billion Daily Events",
+    "url": "https://www.atlassian.com/blog/how-we-build/scaling-streamhub-transitioning-from-kinesis-to-kafka-for-145-billion-daily-events",
+    "source": "Atlassian",
+    "publishedAt": "2026-07-28",
+    "tags": ["data", "stream-processing", "kafka", "kinesis"]
+  },
+  {
+    "title": "The Events Rail: Inside Atlassian's Webhook Delivery Platform",
+    "url": "https://www.atlassian.com/blog/how-we-build/inside-atlassians-webhook-delivery-platform",
+    "source": "Atlassian",
+    "publishedAt": "2026-07-28",
+    "tags": ["architecture", "job-queue", "reliability", "overload-control"]
+  },
+  {
+    "title": "Online index migration and shard-scaling in OpenSearch with AOSC",
+    "url": "https://www.atlassian.com/blog/how-we-build/opensearch-aosc-plugin",
+    "source": "Atlassian",
+    "publishedAt": "2026-07-24",
+    "tags": ["search", "indexing", "opensearch"]
+  },
+  {
+    "title": "Optimisation Tools for Jira: Reducing Configuration Bloat and Enhancing Performance",
+    "url": "https://www.atlassian.com/blog/how-we-build/optimisation-tools-for-jira",
+    "source": "Atlassian",
+    "publishedAt": "2026-05-13",
+    "tags": ["database", "schema", "caching"]
+  },
+  {
+    "title": "Engineering the Forge Billing Platform for Reliability and Scale",
+    "url": "https://www.atlassian.com/blog/how-we-build/engineering-the-forge-billing-platform-for-reliability-and-scale",
+    "source": "Atlassian",
+    "publishedAt": "2026-04-12",
+    "tags": ["data", "stream-processing", "flink"]
+  },
+  {
+    "title": "How We Unlocked Performance at Scale with Jira Platform",
+    "url": "https://www.atlassian.com/blog/how-we-build/how-we-unlocked-performance-at-scale-with-jira-platform",
+    "source": "Atlassian",
+    "publishedAt": "2025-12-15",
+    "tags": ["architecture", "microservice", "database", "caching"]
+  },
+  {
+    "title": "Building a Multi Region Compliant Customer Data Lake at Scale",
+    "url": "https://www.atlassian.com/blog/how-we-build/building-a-multi-region-compliant-customer-data-lake-at-scale",
+    "source": "Atlassian",
+    "publishedAt": "2025-12-15",
+    "tags": ["data", "data-lake", "cdc", "flink"]
+  },
+  {
+    "title": "Migrating the Jira and Confluence applications to AWS Graviton",
+    "url": "https://www.atlassian.com/blog/how-we-build/migrating-the-jira-and-confluence-applications-to-aws-graviton",
+    "source": "Atlassian",
+    "publishedAt": "2025-11-04",
+    "tags": ["hardware", "graviton", "java"]
+  },
+  {
+    "title": "Atlassian's Inference Engine, our self-hosted AI inference service",
+    "url": "https://www.atlassian.com/blog/how-we-build/inference-engine",
+    "source": "Atlassian",
+    "publishedAt": "2025-07-22",
+    "tags": ["machine-learning", "inference", "container", "kubernetes"]
+  },
+  {
+    "title": "Migrating the Jira Database Platform to AWS Aurora",
+    "url": "https://www.atlassian.com/blog/how-we-build/migrating-jira-database-platform-to-aws-aurora",
+    "source": "Atlassian",
+    "publishedAt": "2025-07-01",
+    "tags": ["database", "migration", "postgresql", "aurora"]
+  },
+  {
+    "title": "Enhancing resiliency in opensearch clusters: An in-depth technical exploration of Admission Control",
+    "url": "https://www.atlassian.com/blog/how-we-build/opensearch-admission-control-resiliency",
+    "source": "Atlassian",
+    "publishedAt": "2025-06-11",
+    "tags": ["reliability", "overload-control", "opensearch"]
+  },
+  {
+    "title": "Boosting Performance: How We Scaled and Enhanced Throughput in the Jira Export Service",
+    "url": "https://www.atlassian.com/blog/how-we-build/boosting-performance-how-we-scaled-and-enhanced-throughput-in-the-jira-export-service",
+    "source": "Atlassian",
+    "publishedAt": "2025-04-17",
+    "tags": ["data", "etl"]
+  },
+  {
+    "title": "Lithium: elevating ETL with ephemeral and self-hosted pipelines",
+    "url": "https://www.atlassian.com/blog/how-we-build/lithium",
+    "source": "Atlassian",
+    "publishedAt": "2024-11-22",
+    "tags": ["data", "etl", "kafka"]
+  },
+  {
+    "title": "Evolve your data platform with a Deployment Capability",
+    "url": "https://www.atlassian.com/blog/how-we-build/evolve-your-data-platform-with-a-deployment-capability",
+    "source": "Atlassian",
+    "publishedAt": "2024-05-08",
+    "tags": ["data", "data-lake", "etl"]
+  },
+  {
+    "title": "Here's how one of Atlassian's critical services consistently gets above 99.9999% of availability",
+    "url": "https://www.atlassian.com/blog/how-we-build/atlassian-critical-services-above-six-nines-of-availability",
+    "source": "Atlassian",
+    "publishedAt": "2022-08-17",
+    "tags": ["reliability", "database", "caching"]
+  },
+  {
+    "title": "Post-Incident Review on the Atlassian April 2022 outage",
+    "url": "https://www.atlassian.com/blog/how-we-build/post-incident-review-april-2022-outage",
+    "source": "Atlassian",
+    "publishedAt": "2022-04-29",
+    "tags": ["reliability", "postmortem", "disaster-recovery"]
+  },
+  {
+    "title": "Unlocking reliability with Splunk SmartStore",
+    "url": "https://www.atlassian.com/blog/how-we-build/unlocking-reliability-with-splunk-smartstore",
+    "source": "Atlassian",
+    "publishedAt": "2021-07-07",
+    "tags": ["observability", "logging", "splunk"]
+  },
+  {
+    "title": "Caching JQL search in Jira Cloud",
+    "url": "https://www.atlassian.com/blog/how-we-build/reducing-jql-database-load-with-caches",
+    "source": "Atlassian",
+    "publishedAt": "2021-02-02",
+    "tags": ["database", "caching", "redis"]
+  },
+  {
+    "title": "Scaling, rearchitecting, and decomposing Confluence Cloud",
+    "url": "https://www.atlassian.com/blog/how-we-build/scaling-rearchitecting-and-decomposing-confluence-cloud",
+    "source": "Atlassian",
+    "publishedAt": "2020-10-21",
+    "tags": ["architecture", "microservice", "dynamodb"]
+  },
+  {
+    "title": "Scaling Bitbucket's Database",
+    "url": "https://www.atlassian.com/blog/how-we-build/scaling-bitbuckets-database",
+    "source": "Atlassian",
+    "publishedAt": "2020-10-08",
+    "tags": ["database", "replication", "postgresql"]
+  },
+  {
+    "title": "Solving distributed consistency with Git: how we built Bitbucket Smart Mirror Farms",
+    "url": "https://www.atlassian.com/blog/how-we-build/solving-distributed-consistency-with-git",
+    "source": "Atlassian",
+    "publishedAt": "2020-06-10",
+    "tags": ["architecture", "git"]
+  },
+  {
+    "title": "Scaling React server-side rendering in Jira Cloud",
+    "url": "https://www.atlassian.com/blog/how-we-build/scaling-react-server-side-rendering-in-jira-cloud",
+    "source": "Atlassian",
+    "publishedAt": "2020-02-04",
+    "tags": ["frontend", "react", "redis"]
+  },
+  {
+    "title": "Using an event-driven architecture to improve Jira Software responsiveness",
+    "url": "https://www.atlassian.com/blog/how-we-build/using-an-event-driven-architecture-to-improve-jira-software-responsiveness",
+    "source": "Atlassian",
+    "publishedAt": "2019-11-05",
+    "tags": ["architecture", "frontend", "kinesis"]
+  },
+  {
+    "title": "Sync failure handling",
+    "url": "https://www.atlassian.com/blog/how-we-build/sync-failure-handling",
+    "source": "Atlassian",
+    "publishedAt": "2017-02-28",
+    "tags": ["mobile", "frontend", "offline"]
+  }
+]
