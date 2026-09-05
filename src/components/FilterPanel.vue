@@ -8,6 +8,8 @@ const props = defineProps<{
   state: FilterState;
   companies: { id: string; count: number }[];
   tags: { tag: string; count: number }[];
+  /** Year of the oldest entry — the month grid never goes back further. */
+  minYear: number;
 }>();
 
 const openMenu = ref<"company" | "tag" | "date" | null>(null);
@@ -76,7 +78,7 @@ const MONTH_NAMES = [
 const today = new Date();
 const CURRENT_YEAR = today.getFullYear();
 const MAX_YM = `${CURRENT_YEAR}-${String(today.getMonth() + 1).padStart(2, "0")}`;
-const MIN_YEAR = CURRENT_YEAR - 6;
+const MIN_YEAR = computed(() => Math.min(props.minYear, CURRENT_YEAR));
 
 const pickerYear = ref(CURRENT_YEAR);
 
@@ -111,7 +113,7 @@ function openDateMenu(): void {
   pickerYear.value = fromMonth.value ? Number(fromMonth.value.slice(0, 4)) : CURRENT_YEAR;
 }
 function prevYear(): void {
-  pickerYear.value = Math.max(MIN_YEAR, pickerYear.value - 1);
+  pickerYear.value = Math.max(MIN_YEAR.value, pickerYear.value - 1);
 }
 function nextYear(): void {
   pickerYear.value = Math.min(CURRENT_YEAR, pickerYear.value + 1);
@@ -128,6 +130,8 @@ function pickMonth(ym: string): void {
     props.state.dateFrom = firstDayOf(ym);
     props.state.dateTo = null;
   } else if (ym < fromMonth.value) {
+    // Picked the end of the range first: the earlier click becomes the start.
+    props.state.dateTo = lastDayOf(fromMonth.value);
     props.state.dateFrom = firstDayOf(ym);
   } else {
     props.state.dateTo = lastDayOf(ym);

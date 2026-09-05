@@ -28,6 +28,12 @@ const { bookmarks, toggleBookmark } = useBookmarks();
  */
 const seriesIndex = computed(() => buildSeriesIndex(all.value));
 
+/** `all` is newest-first, so the last entry dates the far end of the date picker. */
+const earliestYear = computed(() => {
+  const oldest = all.value.at(-1);
+  return oldest ? Number(oldest.publishedAt.slice(0, 4)) : new Date().getFullYear();
+});
+
 const shown = computed(() => {
   const list = viewSaved.value
     ? filtered.value.filter((a) => bookmarks.value.includes(a.id))
@@ -125,7 +131,7 @@ onMounted(async () => {
     <p v-else-if="loadError" class="error">Could not load entries. Try refreshing.</p>
     <div v-else class="layout">
       <SearchBar v-model="state.query" />
-      <FilterPanel :state="state" :companies="companies" :tags="tags">
+      <FilterPanel :state="state" :companies="companies" :tags="tags" :min-year="earliestYear">
         <template #end>
           <div class="tabs">
             <button class="tab-button" :class="{ active: !viewSaved }" @click="viewSaved = false">
