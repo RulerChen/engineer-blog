@@ -120,9 +120,6 @@ onBeforeUnmount(() => observer?.disconnect());
           {{ articles.length.toLocaleString("en-US") }}
         </span>
       </div>
-      <div v-else class="showing-label list-end">
-        Showing all {{ articles.length.toLocaleString("en-US") }}
-      </div>
     </template>
   </div>
 </template>
