@@ -18,7 +18,7 @@ Unless user specifies otherwise, please read @docs/source.md for the url of the 
 - Don't collect posts about products announcements, marketing, hiring, culture sharing, management, awards, or any non-technical topics.
 - Don't collect posts written by non-engineers or intern.
 - Don't collect tutorials and getting-started material, own tools or public ones.
-- Don't collect the posts that are too short (< 500 words) and don't provide enough technical details, for example like a post that only contains a few sentences or a post that only contains a link to a video or a slide deck.
+- Don't collect the posts that are too short (< 1000 words) and don't provide enough technical details, for example like a post that only contains a few sentences or a post that only contains a link to a video or a slide deck.
 
 ## Output
 
