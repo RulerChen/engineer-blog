@@ -1,0 +1,149 @@
+[
+  {
+    "title": "Indexing the Data Lake for Online Point Queries",
+    "url": "https://engineering.atspotify.com/2026/7/indexing-the-data-lake-for-online-point-queries",
+    "source": "Spotify",
+    "publishedAt": "2026-07-27",
+    "tags": ["data", "data-lake", "parquet"]
+  },
+  {
+    "title": "Content Ingestion & Podcast Video Incident Report",
+    "url": "https://engineering.atspotify.com/2026/7/content-ingestion-and-podcast-video-incident-report",
+    "source": "Spotify",
+    "publishedAt": "2026-07-20",
+    "tags": ["reliability", "postmortem", "capacity-planning"]
+  },
+  {
+    "title": "Background Coding Agents: Supercharging Downstream Consumer Dataset Migrations (Honk, Part 4)",
+    "url": "https://engineering.atspotify.com/2026/4/background-coding-agents-dataset-migrations-honk-part-4",
+    "source": "Spotify",
+    "publishedAt": "2026-04-22",
+    "tags": ["machine-learning", "agent", "data", "etl"]
+  },
+  {
+    "title": "Background Coding Agents: Predictable Results Through Strong Feedback Loops (Honk, Part 3)",
+    "url": "https://engineering.atspotify.com/2025/12/feedback-loops-background-coding-agents-part-3",
+    "source": "Spotify",
+    "publishedAt": "2025-12-09",
+    "tags": ["machine-learning", "agent", "testing"]
+  },
+  {
+    "title": "Background Coding Agents: Context Engineering (Honk, Part 2)",
+    "url": "https://engineering.atspotify.com/2025/11/context-engineering-background-coding-agents-part-2",
+    "source": "Spotify",
+    "publishedAt": "2025-11-24",
+    "tags": ["machine-learning", "agent", "llm"]
+  },
+  {
+    "title": "1,500+ PRs Later: Spotify’s Journey with Our Background Coding Agent (Honk, Part 1)",
+    "url": "https://engineering.atspotify.com/2025/11/spotifys-background-coding-agent-part-1",
+    "source": "Spotify",
+    "publishedAt": "2025-11-06",
+    "tags": ["machine-learning", "agent"]
+  },
+  {
+    "title": "Large-Scale Generation of ML Podcast Previews at Spotify with Google Dataflow",
+    "url": "https://engineering.atspotify.com/2023/4/large-scale-generation-of-ml-podcast-previews-at-spotify-with-google-dataflow",
+    "source": "Spotify",
+    "publishedAt": "2023-04-13",
+    "tags": ["machine-learning", "inference", "dataflow"]
+  },
+  {
+    "title": "Unleashing ML Innovation at Spotify with Ray",
+    "url": "https://engineering.atspotify.com/2023/2/unleashing-ml-innovation-at-spotify-with-ray",
+    "source": "Spotify",
+    "publishedAt": "2023-02-01",
+    "tags": ["machine-learning", "training", "ray"]
+  },
+  {
+    "title": "Introducing Natural Language Search for Podcast Episodes",
+    "url": "https://engineering.atspotify.com/2022/3/introducing-natural-language-search-for-podcast-episodes",
+    "source": "Spotify",
+    "publishedAt": "2022-03-17",
+    "tags": ["search", "vector", "vespa"]
+  },
+  {
+    "title": "Why We Switched Our Data Orchestration Service",
+    "url": "https://engineering.atspotify.com/2022/3/why-we-switched-our-data-orchestration-service",
+    "source": "Spotify",
+    "publishedAt": "2022-03-14",
+    "tags": ["data", "etl", "flyte"]
+  },
+  {
+    "title": "Changing the Wheels on a Moving Bus — Spotify’s Event Delivery Migration",
+    "url": "https://engineering.atspotify.com/2021/10/changing-the-wheels-on-a-moving-bus-spotify-event-delivery-migration",
+    "source": "Spotify",
+    "publishedAt": "2021-10-20",
+    "tags": ["data", "stream-processing"]
+  },
+  {
+    "title": "How Spotify Optimized the Largest Dataflow Job Ever for Wrapped 2020",
+    "url": "https://engineering.atspotify.com/2021/2/how-spotify-optimized-the-largest-dataflow-job-ever-for-wrapped-2020",
+    "source": "Spotify",
+    "publishedAt": "2021-02-11",
+    "tags": ["data", "etl", "dataflow", "scio"]
+  },
+  {
+    "title": "Spotify’s Event Delivery – Life in the Cloud",
+    "url": "https://engineering.atspotify.com/2019/11/spotifys-event-delivery-life-in-the-cloud",
+    "source": "Spotify",
+    "publishedAt": "2019-11-12",
+    "tags": ["data", "stream-processing", "pubsub"]
+  },
+  {
+    "title": "Smoother Streaming with BBR",
+    "url": "https://engineering.atspotify.com/2018/8/smoother-streaming-with-bbr",
+    "source": "Spotify",
+    "publishedAt": "2018-08-31",
+    "tags": ["network", "tcp", "bbr"]
+  },
+  {
+    "title": "Big Data Processing at Spotify: The Road to Scio (Part 1)",
+    "url": "https://engineering.atspotify.com/2017/10/big-data-processing-at-spotify-the-road-to-scio-part-1",
+    "source": "Spotify",
+    "publishedAt": "2017-10-16",
+    "tags": ["data", "etl", "scio", "dataflow"]
+  },
+  {
+    "title": "Spotify’s Love/Hate Relationship with DNS",
+    "url": "https://engineering.atspotify.com/2017/3/spotifys-love-hate-relationship-with-dns",
+    "source": "Spotify",
+    "publishedAt": "2017-03-31",
+    "tags": ["network", "dns", "bind"]
+  },
+  {
+    "title": "Spotify’s Event Delivery – The Road to the Cloud (Part III)",
+    "url": "https://engineering.atspotify.com/2016/3/spotifys-event-delivery-the-road-to-the-cloud-part-iii",
+    "source": "Spotify",
+    "publishedAt": "2016-03-10",
+    "tags": ["data", "etl", "dataflow"]
+  },
+  {
+    "title": "Spotify’s Event Delivery – The Road to the Cloud (Part II)",
+    "url": "https://engineering.atspotify.com/2016/3/spotifys-event-delivery-the-road-to-the-cloud-part-ii",
+    "source": "Spotify",
+    "publishedAt": "2016-03-03",
+    "tags": ["data", "stream-processing", "pubsub", "kafka"]
+  },
+  {
+    "title": "Spotify’s Event Delivery – The Road to the Cloud (Part I)",
+    "url": "https://engineering.atspotify.com/2016/2/spotifys-event-delivery-the-road-to-the-cloud-part-i",
+    "source": "Spotify",
+    "publishedAt": "2016-02-25",
+    "tags": ["data", "stream-processing", "kafka", "hadoop"]
+  },
+  {
+    "title": "Switching user database on a running system",
+    "url": "https://engineering.atspotify.com/2015/6/user-database-switch",
+    "source": "Spotify",
+    "publishedAt": "2015-06-23",
+    "tags": ["database", "migration", "cassandra", "postgresql"]
+  },
+  {
+    "title": "Date-Tiered Compaction in Apache Cassandra",
+    "url": "https://engineering.atspotify.com/2014/12/date-tiered-compaction",
+    "source": "Spotify",
+    "publishedAt": "2014-12-18",
+    "tags": ["database", "cassandra"]
+  }
+]

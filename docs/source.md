@@ -1,5 +1,5 @@
 - [airbnb](https://medium.com/airbnb-engineering) : 2026-09-01
-- [amazon](https://www.amazon.science/blog) :
+- [amazon science](https://www.amazon.science/blog) : 
 - [aws](https://aws.amazon.com/blogs/) :
 - [azure](https://azure.microsoft.com/en-us/blog/) :
 - [atlassian](https://www.atlassian.com/blog/development) :
@@ -14,7 +14,7 @@
 - [github](https://github.blog/category/engineering) : 2026-08-30
 - [google](https://developers.googleblog.com) :
 - [google research](https://research.google/blog/) :
-- [linkedin](https://engineering.linkedin.com/blog) :
+- [linkedin](https://www.linkedin.com/blog/engineering) :
 - [meta](https://engineering.fb.com) :
 - [netflix](https://netflixtechblog.com) : 2026-09-04
 - [notion](https://www.notion.com/blog/topic/tech) : 2026-08-30
@@ -24,6 +24,6 @@
 - [stripe](https://stripe.dev/blog) : 2026-08-30
 - [slack](https://slack.engineering) : 2026-08-31
 - [salesforce](https://developer.salesforce.com/blogs) :
-- [spotify](https://engineering.atspotify.com) :
+- [spotify](https://engineering.atspotify.com) : 2026-09-05
 - [twitter](https://blog.x.com/engineering) :
 - [uber](https://eng.uber.com) : 2026-08-30
