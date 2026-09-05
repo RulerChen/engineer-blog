@@ -1,0 +1,119 @@
+[
+  {
+    "title": "Inside DoorDash’s Service Mesh Journey: Part 1 — Migration at Scale",
+    "url": "https://careersatdoordash.com/blog/inside-doordashs-service-mesh-journey-part-1-migration-at-scale/",
+    "source": "DoorDash",
+    "publishedAt": "2025-06-18",
+    "tags": [
+      "network",
+      "proxy",
+      "envoy"
+    ]
+  },
+  {
+    "title": "Introducing DoorDash’s in-house search engine",
+    "url": "https://careersatdoordash.com/blog/introducing-doordashs-in-house-search-engine/",
+    "source": "DoorDash",
+    "publishedAt": "2024-02-27",
+    "tags": [
+      "search",
+      "indexing",
+      "lucene",
+      "elasticsearch"
+    ]
+  },
+  {
+    "title": "Cassandra Unleashed: How We Enhanced Cassandra Fleet’s Efficiency and Performance",
+    "url": "https://careersatdoordash.com/blog/cassandra-unleashed-how-we-enhanced-cassandra-fleets-efficiency-and-performance/",
+    "source": "DoorDash",
+    "publishedAt": "2024-01-30",
+    "tags": [
+      "database",
+      "cassandra"
+    ]
+  },
+  {
+    "title": "API-First Approach to Kafka Topic Creation",
+    "url": "https://careersatdoordash.com/blog/api-first-approach-to-kafka-topic-creation/",
+    "source": "DoorDash",
+    "publishedAt": "2023-12-05",
+    "tags": [
+      "data",
+      "kafka",
+      "pulumi",
+      "terraform"
+    ]
+  },
+  {
+    "title": "Using CockroachDB to Reduce Feature Store Costs by 75%",
+    "url": "https://careersatdoordash.com/blog/using-cockroachdb-to-reduce-feature-store-costs-by-75/",
+    "source": "DoorDash",
+    "publishedAt": "2023-03-21",
+    "tags": [
+      "database",
+      "cockroachdb",
+      "redis"
+    ]
+  },
+  {
+    "title": "How We Scaled New Verticals Fulfillment Backend with CockroachDB",
+    "url": "https://careersatdoordash.com/blog/how-we-scaled-new-verticals-fulfillment-backend-with-cockroachdb/",
+    "source": "DoorDash",
+    "publishedAt": "2023-02-07",
+    "tags": [
+      "database",
+      "migration",
+      "cockroachdb",
+      "postgresql"
+    ]
+  },
+  {
+    "title": "Leveraging CockroachDB’s Change Feed for Real-Time Inventory Data Processing",
+    "url": "https://careersatdoordash.com/blog/leveraging-cockroachdbs-change-feed-for-real-time-inventory-data-processing/",
+    "source": "DoorDash",
+    "publishedAt": "2022-11-21",
+    "tags": [
+      "data",
+      "cdc",
+      "cockroachdb",
+      "kafka"
+    ]
+  },
+  {
+    "title": "3 Changes to Expand DoorDash’s Product Search Beyond Delivery",
+    "url": "https://careersatdoordash.com/blog/3-changes-to-expand-doordashs-product-search/",
+    "source": "DoorDash",
+    "publishedAt": "2022-05-10",
+    "tags": [
+      "search",
+      "indexing",
+      "ranking",
+      "elasticsearch"
+    ]
+  },
+  {
+    "title": "Building Faster Indexing with Apache Kafka and Elasticsearch",
+    "url": "https://careersatdoordash.com/blog/open-source-search-indexing/",
+    "source": "DoorDash",
+    "publishedAt": "2021-07-14",
+    "tags": [
+      "search",
+      "indexing",
+      "kafka",
+      "elasticsearch",
+      "flink"
+    ]
+  },
+  {
+    "title": "Integrating a Search Ranking Model into a Prediction Service",
+    "url": "https://careersatdoordash.com/blog/integrating-a-scoring-framework-into-a-prediction-service/",
+    "source": "DoorDash",
+    "publishedAt": "2020-10-01",
+    "tags": [
+      "machine-learning",
+      "inference",
+      "search",
+      "ranking"
+    ]
+  }
+]
