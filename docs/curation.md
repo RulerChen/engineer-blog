@@ -24,7 +24,7 @@ If yes, take it. If no, skip it. Everything below is that question in more detai
 - Opinion or prediction with no system behind it.
 - Roundups and recaps of other posts.
 
-## Output 
+## Output
 
 After scanning a blog, respond with a list of picks and a list of unsure posts, and don't write to the company's `data/<source>.json` until the picks are confirmed.
 

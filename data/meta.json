@@ -4,447 +4,286 @@
     "url": "https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/",
     "source": "Meta",
     "publishedAt": "2026-09-03",
-    "tags": [
-      "network",
-      "proxy",
-      "database",
-      "zippydb"
-    ]
+    "tags": ["network", "proxy", "database", "zippydb"]
   },
   {
     "title": "GEM Training: How Meta Doubled the Efficiency of Its LLM-Scale Ads Foundation Model",
     "url": "https://engineering.fb.com/2026/08/03/ml-applications/training-gem-at-llm-scale-meta-ads-recommendation-foundation-model/",
     "source": "Meta",
     "publishedAt": "2026-08-03",
-    "tags": [
-      "machine-learning",
-      "training",
-      "llm"
-    ]
+    "tags": ["machine-learning", "training", "llm"]
   },
   {
     "title": "Meta's AI Storage Blueprint at Scale",
     "url": "https://engineering.fb.com/2026/07/01/data-infrastructure/metas-ai-storage-blueprint-at-scale/",
     "source": "Meta",
     "publishedAt": "2026-07-01",
-    "tags": [
-      "storage",
-      "tiering",
-      "machine-learning"
-    ]
+    "tags": ["storage", "tiering", "machine-learning"]
   },
   {
     "title": "SilverTorch: Index as Model — A New Retrieval Paradigm for Recommendation Systems",
     "url": "https://engineering.fb.com/2026/05/26/ml-applications/silvertorch-index-as-model-new-retrieval-paradigm-recommendation-systems/",
     "source": "Meta",
     "publishedAt": "2026-05-26",
-    "tags": [
-      "machine-learning",
-      "inference",
-      "search",
-      "vector"
-    ]
+    "tags": ["machine-learning", "inference", "search", "vector"]
   },
   {
     "title": "Meta Adaptive Ranking Model: Bending the Inference Scaling Curve to Serve LLM-Scale Models for Ads",
     "url": "https://engineering.fb.com/2026/03/31/ml-applications/meta-adaptive-ranking-model-bending-the-inference-scaling-curve-to-serve-llm-scale-models-for-ads/",
     "source": "Meta",
     "publishedAt": "2026-03-31",
-    "tags": [
-      "machine-learning",
-      "inference"
-    ]
+    "tags": ["machine-learning", "inference"]
   },
   {
     "title": "Building Prometheus: How Backend Aggregation Enables Gigawatt-Scale AI Clusters",
     "url": "https://engineering.fb.com/2026/02/09/data-center-engineering/building-prometheus-how-backend-aggregation-enables-gigawatt-scale-ai-clusters/",
     "source": "Meta",
     "publishedAt": "2026-02-09",
-    "tags": [
-      "network",
-      "hardware"
-    ]
+    "tags": ["network", "hardware"]
   },
   {
     "title": "Meta's Generative Ads Model (GEM): The Central Brain Accelerating Ads Recommendation AI Innovation",
     "url": "https://engineering.fb.com/2025/11/10/ml-applications/metas-generative-ads-model-gem-the-central-brain-accelerating-ads-recommendation-ai-innovation/",
     "source": "Meta",
     "publishedAt": "2025-11-10",
-    "tags": [
-      "machine-learning",
-      "training"
-    ]
+    "tags": ["machine-learning", "training"]
   },
   {
     "title": "Meta Andromeda: Supercharging Advantage+ automation with the next-gen personalized ads retrieval engine",
     "url": "https://engineering.fb.com/2024/12/02/production-engineering/meta-andromeda-advantage-automation-next-gen-personalized-ads-retrieval-engine/",
     "source": "Meta",
     "publishedAt": "2024-12-02",
-    "tags": [
-      "machine-learning",
-      "inference",
-      "hardware"
-    ]
+    "tags": ["machine-learning", "inference", "hardware"]
   },
   {
     "title": "Sequence learning: A paradigm shift for personalized ads recommendations",
     "url": "https://engineering.fb.com/2024/11/19/data-infrastructure/sequence-learning-personalized-ads-recommendations/",
     "source": "Meta",
     "publishedAt": "2024-11-19",
-    "tags": [
-      "machine-learning",
-      "training"
-    ]
+    "tags": ["machine-learning", "training"]
   },
   {
     "title": "Taming the tail utilization of ads inference at Meta scale",
     "url": "https://engineering.fb.com/2024/07/10/production-engineering/tail-utilization-ads-inference-meta/",
     "source": "Meta",
     "publishedAt": "2024-07-10",
-    "tags": [
-      "reliability",
-      "overload-control",
-      "machine-learning",
-      "inference"
-    ]
+    "tags": ["reliability", "overload-control", "machine-learning", "inference"]
   },
   {
     "title": "Scaling the Instagram Explore recommendations system",
     "url": "https://engineering.fb.com/2023/08/09/ml-applications/scaling-instagram-explore-recommendations-system/",
     "source": "Meta",
     "publishedAt": "2023-08-09",
-    "tags": [
-      "machine-learning",
-      "architecture"
-    ]
+    "tags": ["machine-learning", "architecture"]
   },
   {
     "title": "Building and deploying MySQL Raft at Meta",
     "url": "https://engineering.fb.com/2023/05/16/data-infrastructure/mysql-raft-meta/",
     "source": "Meta",
     "publishedAt": "2023-05-16",
-    "tags": [
-      "database",
-      "replication",
-      "mysql"
-    ]
+    "tags": ["database", "replication", "mysql"]
   },
   {
     "title": "Asynchronous computing at Meta: Overview and learnings",
     "url": "https://engineering.fb.com/2023/01/31/production-engineering/meta-asynchronous-computing/",
     "source": "Meta",
     "publishedAt": "2023-01-31",
-    "tags": [
-      "architecture",
-      "job-queue"
-    ]
+    "tags": ["architecture", "job-queue"]
   },
   {
     "title": "Reducing Instagram's basic video compute time by 94 percent",
     "url": "https://engineering.fb.com/2022/11/04/video-engineering/instagram-video-processing-encoding-reduction/",
     "source": "Meta",
     "publishedAt": "2022-11-04",
-    "tags": [
-      "storage",
-      "encoding"
-    ]
+    "tags": ["storage", "encoding"]
   },
   {
     "title": "How we built a general purpose key value store for Facebook with ZippyDB",
     "url": "https://engineering.fb.com/2021/08/06/core-infra/zippydb/",
     "source": "Meta",
     "publishedAt": "2021-08-06",
-    "tags": [
-      "database",
-      "sharding",
-      "replication",
-      "zippydb"
-    ]
+    "tags": ["database", "sharding", "replication", "zippydb"]
   },
   {
     "title": "Migrating Facebook to MySQL 8.0",
     "url": "https://engineering.fb.com/2021/07/22/data-infrastructure/mysql/",
     "source": "Meta",
     "publishedAt": "2021-07-22",
-    "tags": [
-      "database",
-      "migration",
-      "mysql"
-    ]
+    "tags": ["database", "migration", "mysql"]
   },
   {
     "title": "Consolidating Facebook storage infrastructure with Tectonic file system",
     "url": "https://engineering.fb.com/2021/06/21/data-infrastructure/tectonic-file-system/",
     "source": "Meta",
     "publishedAt": "2021-06-21",
-    "tags": [
-      "storage",
-      "object-storage",
-      "tectonic"
-    ]
+    "tags": ["storage", "object-storage", "tectonic"]
   },
   {
     "title": "Mitigating the effects of silent data corruption at scale",
     "url": "https://engineering.fb.com/2021/02/23/data-infrastructure/silent-data-corruption/",
     "source": "Meta",
     "publishedAt": "2021-02-23",
-    "tags": [
-      "hardware",
-      "reliability"
-    ]
+    "tags": ["hardware", "reliability"]
   },
   {
     "title": "Scaling services with Shard Manager",
     "url": "https://engineering.fb.com/2020/08/24/production-engineering/scaling-services-with-shard-manager/",
     "source": "Meta",
     "publishedAt": "2020-08-24",
-    "tags": [
-      "architecture",
-      "microservice"
-    ]
+    "tags": ["architecture", "microservice"]
   },
   {
     "title": "Managing data store locality at scale with Akkio",
     "url": "https://engineering.fb.com/2018/10/08/core-infra/akkio/",
     "source": "Meta",
     "publishedAt": "2018-10-08",
-    "tags": [
-      "database",
-      "sharding",
-      "zippydb"
-    ]
+    "tags": ["database", "sharding", "zippydb"]
   },
   {
     "title": "Migrating Messenger storage to optimize performance",
     "url": "https://engineering.fb.com/2018/06/26/core-infra/migrating-messenger-storage-to-optimize-performance/",
     "source": "Meta",
     "publishedAt": "2018-06-26",
-    "tags": [
-      "database",
-      "migration",
-      "hbase",
-      "myrocks"
-    ]
+    "tags": ["database", "migration", "hbase", "myrocks"]
   },
   {
     "title": "Open-sourcing Katran, a scalable network load balancer",
     "url": "https://engineering.fb.com/2018/05/22/open-source/open-sourcing-katran-a-scalable-network-load-balancer/",
     "source": "Meta",
     "publishedAt": "2018-05-22",
-    "tags": [
-      "network",
-      "load-balance",
-      "ebpf"
-    ]
+    "tags": ["network", "load-balance", "ebpf"]
   },
   {
     "title": "Migrating a database from InnoDB to MyRocks",
     "url": "https://engineering.fb.com/2017/09/25/core-infra/migrating-a-database-from-innodb-to-myrocks/",
     "source": "Meta",
     "publishedAt": "2017-09-25",
-    "tags": [
-      "database",
-      "migration",
-      "mysql",
-      "myrocks"
-    ]
+    "tags": ["database", "migration", "mysql", "myrocks"]
   },
   {
     "title": "Rapid release at massive scale",
     "url": "https://engineering.fb.com/2017/08/31/web/rapid-release-at-massive-scale/",
     "source": "Meta",
     "publishedAt": "2017-08-31",
-    "tags": [
-      "architecture",
-      "ci-cd"
-    ]
+    "tags": ["architecture", "ci-cd"]
   },
   {
     "title": "LogDevice: a distributed data store for logs",
     "url": "https://engineering.fb.com/2017/08/31/core-infra/logdevice-a-distributed-data-store-for-logs/",
     "source": "Meta",
     "publishedAt": "2017-08-31",
-    "tags": [
-      "storage",
-      "logdevice",
-      "rocksdb"
-    ]
+    "tags": ["storage", "logdevice", "rocksdb"]
   },
   {
     "title": "Beringei: A high-performance time series storage engine",
     "url": "https://engineering.fb.com/2017/02/03/core-infra/beringei-a-high-performance-time-series-storage-engine/",
     "source": "Meta",
     "publishedAt": "2017-02-03",
-    "tags": [
-      "database",
-      "observability",
-      "metrics",
-      "beringei"
-    ]
+    "tags": ["database", "observability", "metrics", "beringei"]
   },
   {
     "title": "MyRocks: A space- and write-optimized MySQL database",
     "url": "https://engineering.fb.com/2016/08/31/core-infra/myrocks-a-space-and-write-optimized-mysql-database/",
     "source": "Meta",
     "publishedAt": "2016-08-31",
-    "tags": [
-      "database",
-      "mysql",
-      "myrocks"
-    ]
+    "tags": ["database", "mysql", "myrocks"]
   },
   {
     "title": "Apache Spark @Scale: A 60 TB+ production use case",
     "url": "https://engineering.fb.com/2016/08/31/core-infra/apache-spark-scale-a-60-tb-production-use-case/",
     "source": "Meta",
     "publishedAt": "2016-08-31",
-    "tags": [
-      "data",
-      "etl",
-      "spark"
-    ]
+    "tags": ["data", "etl", "spark"]
   },
   {
     "title": "Dragon: A distributed graph query engine",
     "url": "https://engineering.fb.com/2016/03/18/data-infrastructure/dragon-a-distributed-graph-query-engine/",
     "source": "Meta",
     "publishedAt": "2016-03-18",
-    "tags": [
-      "data",
-      "query-engine",
-      "dragon"
-    ]
+    "tags": ["data", "query-engine", "dragon"]
   },
   {
     "title": "Under the hood: Facebook's cold storage system",
     "url": "https://engineering.fb.com/2015/05/04/core-infra/under-the-hood-facebook-s-cold-storage-system/",
     "source": "Meta",
     "publishedAt": "2015-05-04",
-    "tags": [
-      "storage",
-      "tiering",
-      "hardware"
-    ]
+    "tags": ["storage", "tiering", "hardware"]
   },
   {
     "title": "Even faster: Data at the speed of Presto ORC",
     "url": "https://engineering.fb.com/2015/03/17/core-infra/even-faster-data-at-the-speed-of-presto-orc/",
     "source": "Meta",
     "publishedAt": "2015-03-17",
-    "tags": [
-      "data",
-      "query-engine",
-      "presto",
-      "orc"
-    ]
+    "tags": ["data", "query-engine", "presto", "orc"]
   },
   {
     "title": "Solving the Mystery of Link Imbalance: A Metastable Failure State at Scale",
     "url": "https://engineering.fb.com/2014/11/14/production-engineering/solving-the-mystery-of-link-imbalance-a-metastable-failure-state-at-scale/",
     "source": "Meta",
     "publishedAt": "2014-11-14",
-    "tags": [
-      "reliability",
-      "postmortem",
-      "network"
-    ]
+    "tags": ["reliability", "postmortem", "network"]
   },
   {
     "title": "Introducing data center fabric, the next-generation Facebook data center network",
     "url": "https://engineering.fb.com/2014/11/14/production-engineering/introducing-data-center-fabric-the-next-generation-facebook-data-center-network/",
     "source": "Meta",
     "publishedAt": "2014-11-14",
-    "tags": [
-      "network",
-      "hardware"
-    ]
+    "tags": ["network", "hardware"]
   },
   {
     "title": "Introducing mcrouter: A memcached protocol router for scaling memcached deployments",
     "url": "https://engineering.fb.com/2014/09/15/web/introducing-mcrouter-a-memcached-protocol-router-for-scaling-memcached-deployments/",
     "source": "Meta",
     "publishedAt": "2014-09-15",
-    "tags": [
-      "database",
-      "caching",
-      "memcached"
-    ]
+    "tags": ["database", "caching", "memcached"]
   },
   {
     "title": "Scaling the Facebook data warehouse to 300 PB",
     "url": "https://engineering.fb.com/2014/04/10/core-infra/scaling-the-facebook-data-warehouse-to-300-pb/",
     "source": "Meta",
     "publishedAt": "2014-04-10",
-    "tags": [
-      "data",
-      "data-lake",
-      "hive",
-      "orc"
-    ]
+    "tags": ["data", "data-lake", "hive", "orc"]
   },
   {
     "title": "An analysis of Facebook photo caching",
     "url": "https://engineering.fb.com/2014/02/27/web/an-analysis-of-facebook-photo-caching-2/",
     "source": "Meta",
     "publishedAt": "2014-02-27",
-    "tags": [
-      "storage",
-      "network"
-    ]
+    "tags": ["storage", "network"]
   },
   {
     "title": "Scaling Mercurial at Facebook",
     "url": "https://engineering.fb.com/2014/01/07/core-infra/scaling-mercurial-at-facebook/",
     "source": "Meta",
     "publishedAt": "2014-01-07",
-    "tags": [
-      "architecture",
-      "monorepo",
-      "mercurial"
-    ]
+    "tags": ["architecture", "monorepo", "mercurial"]
   },
   {
     "title": "Presto: Interacting with petabytes of data at Facebook",
     "url": "https://engineering.fb.com/2013/11/06/core-infra/presto-interacting-with-petabytes-of-data-at-facebook/",
     "source": "Meta",
     "publishedAt": "2013-11-06",
-    "tags": [
-      "data",
-      "query-engine",
-      "presto"
-    ]
+    "tags": ["data", "query-engine", "presto"]
   },
   {
     "title": "TAO: The power of the graph",
     "url": "https://engineering.fb.com/2013/06/25/core-infra/tao-the-power-of-the-graph/",
     "source": "Meta",
     "publishedAt": "2013-06-25",
-    "tags": [
-      "database",
-      "caching",
-      "tao"
-    ]
+    "tags": ["database", "caching", "tao"]
   },
   {
     "title": "Wormhole pub/sub system: Moving data through space and time",
     "url": "https://engineering.fb.com/2013/06/13/core-infra/wormhole-pub-sub-system-moving-data-through-space-and-time/",
     "source": "Meta",
     "publishedAt": "2013-06-13",
-    "tags": [
-      "data",
-      "cdc",
-      "stream-processing"
-    ]
+    "tags": ["data", "cdc", "stream-processing"]
   },
   {
     "title": "Needle in a haystack: efficient storage of billions of photos",
     "url": "https://engineering.fb.com/2009/04/30/core-infra/needle-in-a-haystack-efficient-storage-of-billions-of-photos/",
     "source": "Meta",
     "publishedAt": "2009-04-30",
-    "tags": [
-      "storage",
-      "object-storage",
-      "haystack"
-    ]
+    "tags": ["storage", "object-storage", "haystack"]
   }
 ]
