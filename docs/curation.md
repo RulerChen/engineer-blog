@@ -1,28 +1,24 @@
 # Curation guideline
 
-How to scan a company engineering blog and decide what belongs in the list.
+This document is a guideline for curating blog posts. It is a guide for what to collect and what not to collect.
 
-Read the post, not only its length or title.
-
-After reading the post, ask yourself: Would an engineer who does not use this company's product still learn something they could apply?
-
-If yes, take it. If no, skip it. Everything below is that question in more detail.
+Unless user specifies otherwise, please read @docs/source.md for the url of the blog, and only fetch posts after the date defined in the that file.
 
 ## Do collect
 
-- A production system or domain with the problem, constraints and solution.
-- How to use a famous tool or component in a non-trivial way, with the reasoning behind the choices.
-- A cutting edge component or algorithm with the reasoning behind the choices.
-- A migration, rewrite or architectural change with the reasoning kept in: what broke, what was tried, why the final choice won, what it cost.
+- The evolution of a system, describe the current state, what did not work, where the limits are, and how it was improved. For example like how Discord scaled their chat system by migrating from MongoDB to Cassandra to ScyllaDB.
+- The decision-making process behind a system, what trade-offs were made, and why. For example like how Figma gave up on using CRDTs for their collaborative editing system or why Uber decided to migrate from PostgreSQL to MySQL.
+- The experience of building a system, what was learned, and what would be done differently. For example like how Uber run their software factory more efficiently.
+- The experience of optimizing a system, what was learned, and what would be done differently. For example like how Netflix optimized their video streaming system.
+- The specified domain for the company, for example like how Twitter built their timeline system and search recommendation system.
+- The experience of debugging a system, how the problem was identified, what was done to fix it, and what was learned. For example like how PostgresQL find the root cause of a data corruption issue.
 
 ## Don't collect
 
-- Product launches, feature announcements, changelogs, release notes.
-- Marketing under an engineering byline. Detection: the post never says what did not work, what it cost, or where the limits are. A closing CTA is a strong signal.
-- Company and people posts: culture, hiring, onboarding, events, awards.
-- Tutorials and getting-started material, own tools or public ones.
-- Opinion or prediction with no system behind it.
-- Roundups and recaps of other posts.
+- Don't collect posts about products announcements, marketing, hiring, culture sharing, management, awards, or any non-technical topics.
+- Don't collect posts written by non-engineers or intern.
+- Don't collect tutorials and getting-started material, own tools or public ones.
+- Don't collect the posts without any evolution, decision-making, or deep technical insights.
 
 ## Output
 
