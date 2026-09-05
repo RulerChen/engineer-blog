@@ -1,0 +1,177 @@
+[
+  {
+    "title": "Migration at Scale: Moving Marketing Cloud Caching from Memcached to Redis at 1.5M RPS Without Downtime",
+    "url": "https://engineering.salesforce.com/migration-at-scale-moving-marketing-cloud-caching-from-memcached-to-redis-at-1-5m-rps-without-downtime/",
+    "source": "Salesforce",
+    "publishedAt": "2026-01-07",
+    "tags": ["database", "caching", "migration", "redis", "memcached"]
+  },
+  {
+    "title": "Event Sourcing for an Inventory Availability Solution",
+    "url": "https://engineering.salesforce.com/event-sourcing-for-an-inventory-availability-solution-3cc0daf5a742/",
+    "source": "Salesforce",
+    "publishedAt": "2021-12-16",
+    "tags": ["architecture"]
+  },
+  {
+    "title": "CarbonJ: A high performance, high-scale, drop-in replacement for carbon-cache and carbon-relay",
+    "url": "https://engineering.salesforce.com/carbonj-a-high-performance-high-scale-drop-in-replacement-for-carbon-cache-and-carbon-relay-d9599371c51a/",
+    "source": "Salesforce",
+    "publishedAt": "2021-10-28",
+    "tags": ["observability", "metrics", "graphite"]
+  },
+  {
+    "title": "How to ETL at Petabyte-Scale with Trino",
+    "url": "https://engineering.salesforce.com/how-to-etl-at-petabyte-scale-with-trino-5fe8ac134e36/",
+    "source": "Salesforce",
+    "publishedAt": "2021-10-12",
+    "tags": ["data", "etl", "query-engine", "trino"]
+  },
+  {
+    "title": "Evolution of Region Assignment in the Apache HBase Architecture — Part 3",
+    "url": "https://engineering.salesforce.com/evolution-of-region-assignment-in-the-apache-hbase-architecture-part-3-e03b814ae92/",
+    "source": "Salesforce",
+    "publishedAt": "2021-10-07",
+    "series": "salesforce-hbase-region-assignment",
+    "tags": ["database", "sharding", "hbase"]
+  },
+  {
+    "title": "Evolution of Region Assignment in the Apache HBase Architecture — Part 2",
+    "url": "https://engineering.salesforce.com/evolution-of-region-assignment-in-the-apache-hbase-architecture-part-2-9568fb3790b/",
+    "source": "Salesforce",
+    "publishedAt": "2021-09-02",
+    "series": "salesforce-hbase-region-assignment",
+    "tags": ["database", "sharding", "hbase"]
+  },
+  {
+    "title": "Evolution of Region Assignment in the Apache HBase Architecture — Part 1",
+    "url": "https://engineering.salesforce.com/evolution-of-region-assignment-in-the-apache-hbase-architecture-part-1-c43b1becc522/",
+    "source": "Salesforce",
+    "publishedAt": "2021-09-01",
+    "series": "salesforce-hbase-region-assignment",
+    "tags": ["database", "sharding", "hbase"]
+  },
+  {
+    "title": "Coordinated Rate Limiting in Microservices",
+    "url": "https://engineering.salesforce.com/coordinated-rate-limiting-in-microservices-bb8861126beb/",
+    "source": "Salesforce",
+    "publishedAt": "2021-07-27",
+    "tags": ["reliability", "overload-control", "redis"]
+  },
+  {
+    "title": "The Design of Strongly Consistent Global Secondary Indexes in Apache Phoenix — Part 2",
+    "url": "https://engineering.salesforce.com/the-design-of-strongly-consistent-global-secondary-indexes-in-apache-phoenix-part-2-392c57ec6633/",
+    "source": "Salesforce",
+    "publishedAt": "2021-04-08",
+    "series": "salesforce-phoenix-secondary-indexes",
+    "tags": ["database", "apache-phoenix", "hbase"]
+  },
+  {
+    "title": "The Design of Strongly Consistent Global Secondary Indexes in Apache Phoenix — Part 1",
+    "url": "https://engineering.salesforce.com/the-design-of-strongly-consistent-global-secondary-indexes-in-apache-phoenix-part-1-90b90bda4210/",
+    "source": "Salesforce",
+    "publishedAt": "2021-04-06",
+    "series": "salesforce-phoenix-secondary-indexes",
+    "tags": ["database", "apache-phoenix", "hbase"]
+  },
+  {
+    "title": "Optimizing EKS networking for scale",
+    "url": "https://engineering.salesforce.com/optimizing-eks-networking-for-scale-1325706c8f6d/",
+    "source": "Salesforce",
+    "publishedAt": "2021-03-23",
+    "tags": ["container", "kubernetes", "network", "eks"]
+  },
+  {
+    "title": "Hadoop/HBase on Kubernetes and Public Cloud (Part II)",
+    "url": "https://engineering.salesforce.com/hadoop-hbase-on-kubernetes-and-public-cloud-part-ii-e465f346da63/",
+    "source": "Salesforce",
+    "publishedAt": "2021-03-18",
+    "series": "salesforce-hbase-on-kubernetes",
+    "tags": ["container", "kubernetes", "database", "hbase"]
+  },
+  {
+    "title": "Hadoop/HBase on Kubernetes and Public Cloud (Part I)",
+    "url": "https://engineering.salesforce.com/hadoop-hbase-on-kubernetes-and-public-cloud-part-i-1a85a77c64ec/",
+    "source": "Salesforce",
+    "publishedAt": "2021-03-17",
+    "series": "salesforce-hbase-on-kubernetes",
+    "tags": ["container", "kubernetes", "database", "hbase"]
+  },
+  {
+    "title": "Global Synchronousness and Ordering in Delta Lake",
+    "url": "https://engineering.salesforce.com/global-synchronousness-and-ordering-in-delta-lake-9b912d980ebf/",
+    "source": "Salesforce",
+    "publishedAt": "2020-10-14",
+    "tags": ["data", "data-lake", "delta-lake", "spark"]
+  },
+  {
+    "title": "Engagement Activity Delta Lake",
+    "url": "https://engineering.salesforce.com/engagement-activity-delta-lake-2e9b074a94af/",
+    "source": "Salesforce",
+    "publishedAt": "2020-09-23",
+    "tags": ["data", "data-lake", "delta-lake", "spark"]
+  },
+  {
+    "title": "Scaling Cardinality For Time Series Data",
+    "url": "https://engineering.salesforce.com/scaling-cardinality-for-time-series-data-978f52a60863/",
+    "source": "Salesforce",
+    "publishedAt": "2020-06-23",
+    "tags": ["observability", "metrics", "elasticsearch"]
+  },
+  {
+    "title": "MuleSoft’s Online Migration on DynamoDB",
+    "url": "https://engineering.salesforce.com/mulesofts-online-migration-on-dynamodb-25e438c146c/",
+    "source": "Salesforce",
+    "publishedAt": "2020-03-17",
+    "tags": ["database", "sharding", "migration", "dynamodb"]
+  },
+  {
+    "title": "Our Journey to Optimal Job Sizes for Apache Spark",
+    "url": "https://engineering.salesforce.com/our-journey-to-optimal-job-sizes-for-apache-spark-e787501e63ef/",
+    "source": "Salesforce",
+    "publishedAt": "2019-08-01",
+    "tags": ["data", "etl", "spark"]
+  },
+  {
+    "title": "Mapping Kubernetes Ceph Volumes the RBD-NBD Way",
+    "url": "https://engineering.salesforce.com/mapping-kubernetes-ceph-volumes-the-rbd-nbd-way-21f7c4161f04/",
+    "source": "Salesforce",
+    "publishedAt": "2018-04-03",
+    "tags": ["storage", "block-storage", "container", "kubernetes", "ceph"]
+  },
+  {
+    "title": "Deep Dive Into Ceph’s Kernel Client",
+    "url": "https://engineering.salesforce.com/deep-dive-into-cephs-kernel-client-edea75787528/",
+    "source": "Salesforce",
+    "publishedAt": "2018-02-15",
+    "tags": ["storage", "block-storage", "operating-system", "kernel", "ceph"]
+  },
+  {
+    "title": "How Apache Kafka Inspired Our Platform Events Architecture",
+    "url": "https://engineering.salesforce.com/how-apache-kafka-inspired-our-platform-events-architecture-2f351fe4cf63/",
+    "source": "Salesforce",
+    "publishedAt": "2018-02-01",
+    "tags": ["architecture", "kafka"]
+  },
+  {
+    "title": "Our Journey to a Near Perfect Log Pipeline",
+    "url": "https://engineering.salesforce.com/our-journey-to-a-near-perfect-log-pipeline-6ae2f80cf7a0/",
+    "source": "Salesforce",
+    "publishedAt": "2017-12-18",
+    "tags": ["observability", "logging", "kafka"]
+  },
+  {
+    "title": "Optimizing Performance with Web Workers",
+    "url": "https://engineering.salesforce.com/optimizing-performance-with-web-workers-612b48621d8d/",
+    "source": "Salesforce",
+    "publishedAt": "2017-09-19",
+    "tags": ["frontend", "web-workers"]
+  },
+  {
+    "title": "The Crystal Shard: How Salesforce Scales",
+    "url": "https://engineering.salesforce.com/the-architecture-files-ep-2-the-crystal-shard-a6025bd9f968/",
+    "source": "Salesforce",
+    "publishedAt": "2016-03-31",
+    "tags": ["database", "sharding", "architecture"]
+  }
+]
