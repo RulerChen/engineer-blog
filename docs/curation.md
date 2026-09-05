@@ -2,35 +2,38 @@
 
 How to scan a company engineering blog and decide what belongs in the list.
 
-Read the post, not its length.
+Read the post, not only its length or title.
 
-## The test
-
-**Would an engineer who does not use this company's product still learn something they could apply?**
+After reading the post, ask yourself: Would an engineer who does not use this company's product still learn something they could apply?
 
 If yes, take it. If no, skip it. Everything below is that question in more detail.
 
 ## Do collect
 
-- A specific system or domain under real production load, with the problem and constraints named.
-- A migration, rewrite, or architectural change with the reasoning kept in — what broke, what was tried, why the final choice won, what it cost.
-- A hard technical problem explained well enough that an outsider could act on it.
+- A production system or domain with the problem, constraints and numbers named (latency, throughput, cost, instance count, a specific failure).
+- A migration, rewrite or architectural change with the reasoning kept in: what broke, what was tried, why the final choice won, what it cost.
 
 ## Don't collect
 
-- Product launches, feature announcements, changelogs, release notes — even when written by engineers.
-- Marketing under an engineering byline: framed as how something was built, but really an argument for using it.
-- Company and people posts: culture, hiring, onboarding, events, awards, team retrospectives.
-- Tutorials and getting-started material, for their own tools or for well-known public ones.
-- Opinion or prediction pieces with no system behind them.
+- Product launches, feature announcements, changelogs, release notes.
+- Marketing under an engineering byline. Detection: the post never says what did not work, what it cost, or where the limits are. A closing CTA is a strong signal.
+- Company and people posts: culture, hiring, onboarding, events, awards.
+- Tutorials and getting-started material, own tools or public ones.
+- Opinion or prediction with no system behind it.
 - Roundups and recaps of other posts.
 
-## Output when scanning
+## Output 
 
-Three sections. Never drop a post from all three.
+After scanning a blog, respond with a list of picks and a list of unsure posts, and don't write to the company's `data/<source>.json` until the picks are confirmed.
 
-- **Collect** — one line each: the title linked to the post, publish date, one sentence on why it passes.
-- **Unsure** — same format, plus what makes it borderline and which way you lean. Anything you would have rejected with hesitation belongs here. The format of the output is: ```title(link) / publish date / one sentence on why it passes```
-- **Reject** — no output needed.
+```md
+## Collect
 
-Do not write to the company's `data/<source>.json` until the picks are confirmed.
+- [title](url) / YYYY-MM-DD / one sentence on why it passes
+- ...
+
+## Unsure
+
+- [title](url) / YYYY-MM-DD / what makes it borderline / lean: collect|reject
+- ...
+```
