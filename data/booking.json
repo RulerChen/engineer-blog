@@ -7,13 +7,6 @@
     "tags": ["search", "vector", "opensearch", "weaviate"]
   },
   {
-    "title": "Modernizing a Legacy Endpoint and Why It’s Worth It: a Step-by-Step Guide",
-    "url": "https://medium.com/booking-com-development/modernizing-a-legacy-endpoint-and-why-its-worth-it-a-step-by-step-guide-085d92b419a3",
-    "source": "Booking",
-    "publishedAt": "2024-12-03",
-    "tags": ["architecture", "monolith", "perl", "java"]
-  },
-  {
     "title": "Leverage graph technology for real-time Fraud Detection and Prevention",
     "url": "https://medium.com/booking-com-development/leverage-graph-technology-for-real-time-fraud-detection-and-prevention-438336076ea5",
     "source": "Booking",

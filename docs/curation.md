@@ -8,6 +8,7 @@ Unless user specifies otherwise, please read @docs/source.md for the url of the 
 
 - The evolution of a system, describe the current state, what did not work, where the limits are, and how it was improved. For example like how Discord scaled their chat system by migrating from MongoDB to Cassandra to ScyllaDB.
 - The decision-making process behind a system, what trade-offs were made, and why. For example like how Figma gave up on using CRDTs for their collaborative editing system or why Uber decided to migrate from PostgreSQL to MySQL.
+- The innovation of a system, what was done, and how it was implemented. For example like how Google built their Spanner database or how Meta designed and trained their ad recommendation ai model.
 - The experience of building a system, what was learned, and what would be done differently. For example like how Uber run their software factory more efficiently.
 - The experience of optimizing a system, what was learned, and what would be done differently. For example like how Netflix optimized their video streaming system.
 - The experience of debugging a system, how the problem was identified, what was done to fix it, and what was learned. For example like how PostgresQL find the root cause of a data corruption issue.
@@ -18,7 +19,7 @@ Unless user specifies otherwise, please read @docs/source.md for the url of the 
 - Don't collect posts about products announcements, marketing, hiring, culture sharing, management, awards, or any non-technical topics.
 - Don't collect posts written by non-engineers or intern.
 - Don't collect tutorials and getting-started material, own tools or public ones.
-- Don't collect the posts that are too short (< 1000 words) and don't provide enough technical details, for example like a post that only contains a few sentences or a post that only contains a link to a video or a slide deck.
+- Don't collect the posts that are too short (< 800 words) or don't provide enough technical details, for example like a post that only contains a few sentences or a post that only contains a link to a video or a slide deck.
 
 ## Output
 

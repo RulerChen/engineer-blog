@@ -63,13 +63,6 @@
     "tags": ["data", "stream-processing", "kafka"]
   },
   {
-    "title": "Liger-Kernel: Empowering an open source ecosystem of Triton Kernels for Efficient LLM Training",
-    "url": "https://www.linkedin.com/blog/engineering/open-source/liger-kernel-open-source-ecosystem-for-efficient-llm-training",
-    "source": "LinkedIn",
-    "publishedAt": "2024-12-05",
-    "tags": ["machine-learning", "training", "llm", "triton"]
-  },
-  {
     "title": "Stateful Workload Operator: Stateful Systems on Kubernetes at LinkedIn",
     "url": "https://www.linkedin.com/blog/engineering/infrastructure/stateful-workload-operator-stateful-systems-on-kubernetes-at-linkedin",
     "source": "LinkedIn",

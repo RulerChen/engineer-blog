@@ -112,20 +112,6 @@
     "tags": ["database", "migration", "mysql"]
   },
   {
-    "title": "Consolidating Facebook storage infrastructure with Tectonic file system",
-    "url": "https://engineering.fb.com/2021/06/21/data-infrastructure/tectonic-file-system/",
-    "source": "Meta",
-    "publishedAt": "2021-06-21",
-    "tags": ["storage", "object-storage", "tectonic"]
-  },
-  {
-    "title": "Mitigating the effects of silent data corruption at scale",
-    "url": "https://engineering.fb.com/2021/02/23/data-infrastructure/silent-data-corruption/",
-    "source": "Meta",
-    "publishedAt": "2021-02-23",
-    "tags": ["hardware", "reliability"]
-  },
-  {
     "title": "Scaling services with Shard Manager",
     "url": "https://engineering.fb.com/2020/08/24/production-engineering/scaling-services-with-shard-manager/",
     "source": "Meta",
@@ -145,13 +131,6 @@
     "source": "Meta",
     "publishedAt": "2018-06-26",
     "tags": ["database", "migration", "hbase", "myrocks"]
-  },
-  {
-    "title": "Open-sourcing Katran, a scalable network load balancer",
-    "url": "https://engineering.fb.com/2018/05/22/open-source/open-sourcing-katran-a-scalable-network-load-balancer/",
-    "source": "Meta",
-    "publishedAt": "2018-05-22",
-    "tags": ["network", "load-balance", "ebpf"]
   },
   {
     "title": "Migrating a database from InnoDB to MyRocks",
@@ -231,13 +210,6 @@
     "tags": ["network", "hardware"]
   },
   {
-    "title": "Introducing mcrouter: A memcached protocol router for scaling memcached deployments",
-    "url": "https://engineering.fb.com/2014/09/15/web/introducing-mcrouter-a-memcached-protocol-router-for-scaling-memcached-deployments/",
-    "source": "Meta",
-    "publishedAt": "2014-09-15",
-    "tags": ["database", "caching", "memcached"]
-  },
-  {
     "title": "Scaling the Facebook data warehouse to 300 PB",
     "url": "https://engineering.fb.com/2014/04/10/core-infra/scaling-the-facebook-data-warehouse-to-300-pb/",
     "source": "Meta",
@@ -271,13 +243,6 @@
     "source": "Meta",
     "publishedAt": "2013-06-25",
     "tags": ["database", "caching", "tao"]
-  },
-  {
-    "title": "Wormhole pub/sub system: Moving data through space and time",
-    "url": "https://engineering.fb.com/2013/06/13/core-infra/wormhole-pub-sub-system-moving-data-through-space-and-time/",
-    "source": "Meta",
-    "publishedAt": "2013-06-13",
-    "tags": ["data", "cdc", "stream-processing"]
   },
   {
     "title": "Needle in a haystack: efficient storage of billions of photos",

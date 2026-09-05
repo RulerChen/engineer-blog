@@ -40,12 +40,5 @@
     "source": "Google",
     "publishedAt": "2017-04-03",
     "tags": ["network", "load-balance"]
-  },
-  {
-    "title": "Pulling Back the Curtain on Google’s Network Infrastructure",
-    "url": "https://research.google/blog/pulling-back-the-curtain-on-googles-network-infrastructure/",
-    "source": "Google",
-    "publishedAt": "2015-08-18",
-    "tags": ["network", "hardware"]
   }
 ]

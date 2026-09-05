@@ -133,20 +133,6 @@
     "tags": ["hardware", "cloud", "nitro"]
   },
   {
-    "title": "How AWS's Firecracker virtual machines work",
-    "url": "https://www.amazon.science/blog/how-awss-firecracker-virtual-machines-work",
-    "source": "Amazon",
-    "publishedAt": "2020-03-04",
-    "tags": ["operating-system", "kernel", "firecracker", "rust"]
-  },
-  {
-    "title": "Amazon EBS addresses the challenge of the CAP Theorem at scale",
-    "url": "https://www.amazon.science/blog/amazon-ebs-addresses-the-challenge-of-the-cap-theorem-at-scale",
-    "source": "Amazon",
-    "publishedAt": "2020-02-14",
-    "tags": ["database", "replication", "reliability"]
-  },
-  {
     "title": "Amazon Aurora under the hood: indexing geospatial data using Z-order curves",
     "url": "https://aws.amazon.com/blogs/database/amazon-aurora-under-the-hood-indexing-geospatial-data-using-z-order-curves/",
     "source": "Amazon",

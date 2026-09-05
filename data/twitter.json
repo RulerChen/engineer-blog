@@ -7,13 +7,6 @@
     "tags": ["security", "hadoop", "kerberos"]
   },
   {
-    "title": "How we scaled Reads On the Twitter Users Database",
-    "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2023/how-we-scaled-reads-on-the-twitter-users-database",
-    "source": "Twitter",
-    "publishedAt": "2023-02-23",
-    "tags": ["database", "sharding", "vitess", "mysql"]
-  },
-  {
     "title": "Stability and scalability for search",
     "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2022/stability-and-scalability-for-search",
     "source": "Twitter",
@@ -54,13 +47,6 @@
     "source": "Twitter",
     "publishedAt": "2021-08-13",
     "tags": ["observability", "logging", "splunk"]
-  },
-  {
-    "title": "Sharing learnings about our image cropping algorithm",
-    "url": "https://blog.x.com/engineering/en_us/topics/insights/2021/sharing-learnings-about-our-image-cropping-algorithm",
-    "source": "Twitter",
-    "publishedAt": "2021-05-19",
-    "tags": ["machine-learning"]
   },
   {
     "title": "Fusing Elasticsearch with neural networks to identify data",
@@ -185,13 +171,6 @@
     "tags": ["machine-learning", "training"]
   },
   {
-    "title": "Productionizing ML with workflows at Twitter",
-    "url": "https://blog.x.com/engineering/en_us/topics/insights/2018/ml-workflows",
-    "source": "Twitter",
-    "publishedAt": "2018-06-22",
-    "tags": ["machine-learning", "training", "airflow"]
-  },
-  {
     "title": "The Infrastructure Behind Twitter: Scale",
     "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2017/the-infrastructure-behind-twitter-scale",
     "source": "Twitter",
@@ -269,19 +248,5 @@
     "source": "Twitter",
     "publishedAt": "2013-08-16",
     "tags": ["architecture", "monolith", "microservice"]
-  },
-  {
-    "title": "New Twitter search results",
-    "url": "https://blog.x.com/engineering/en_us/a/2013/new-twitter-search-results",
-    "source": "Twitter",
-    "publishedAt": "2013-02-06",
-    "tags": ["search", "ranking"]
-  },
-  {
-    "title": "Announcing Snowflake",
-    "url": "https://blog.x.com/engineering/en_us/a/2010/announcing-snowflake",
-    "source": "Twitter",
-    "publishedAt": "2010-06-01",
-    "tags": ["architecture"]
   }
 ]
