@@ -7,6 +7,34 @@
     "tags": ["search", "vector", "opensearch", "weaviate"]
   },
   {
+    "title": "Anomaly Detection in Time Series Using Statistical Analysis",
+    "url": "https://medium.com/booking-com-development/anomaly-detection-in-time-series-using-statistical-analysis-cc587b21d008",
+    "source": "Booking",
+    "publishedAt": "2025-04-15",
+    "tags": ["observability", "alerting", "metrics"]
+  },
+  {
+    "title": "Use Compression, Luke: Cut 20% of the Cloud Cost with a Single Code Change!",
+    "url": "https://medium.com/booking-com-development/use-compression-luke-cut-20-of-the-cloud-cost-with-a-single-code-change-510d14d96891",
+    "source": "Booking",
+    "publishedAt": "2025-02-05",
+    "tags": ["observability", "metrics", "grafana-mimir", "zstd"]
+  },
+  {
+    "title": "Predicting cancellations with survival modeling",
+    "url": "https://booking.ai/predicting-cancellations-with-survival-modeling-a299af54249b",
+    "source": "Booking",
+    "publishedAt": "2024-11-11",
+    "tags": ["machine-learning", "training"]
+  },
+  {
+    "title": "The Engineering Behind High-Performance Ranking Platform: A System Overview",
+    "url": "https://medium.com/booking-com-development/the-engineering-behind-booking-coms-ranking-platform-a-system-overview-2fb222003ca6",
+    "source": "Booking",
+    "publishedAt": "2024-07-26",
+    "tags": ["search", "ranking", "machine-learning"]
+  },
+  {
     "title": "Leverage graph technology for real-time Fraud Detection and Prevention",
     "url": "https://medium.com/booking-com-development/leverage-graph-technology-for-real-time-fraud-detection-and-prevention-438336076ea5",
     "source": "Booking",

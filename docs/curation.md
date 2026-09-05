@@ -13,13 +13,19 @@ Unless user specifies otherwise, please read @docs/source.md for the url of the 
 - The experience of optimizing a system, what was learned, and what would be done differently. For example like how Netflix optimized their video streaming system.
 - The experience of debugging a system, how the problem was identified, what was done to fix it, and what was learned. For example like how PostgresQL find the root cause of a data corruption issue.
 - Describe a specific technical problem, introduce the context, the problem, and how it was solved. For example like how to improve Go runtime performance by optimizing the garbage collector or how to improve I/O latency by using io_uring.
+- The model behind a product feature: what it predicts, the objective it optimizes, the features it reads, how it was evaluated offline and online, and what the model it replaced got wrong. For example like how Netflix moved recommendation away from click-through proxies toward long-term member satisfaction, or how Amazon used graph neural networks to capture asymmetric related-product relationships.
 
 ## Don't collect
 
 - Don't collect posts about products announcements, marketing, hiring, culture sharing, management, awards, or any non-technical topics.
-- Don't collect posts written by non-engineers or intern.
-- Don't collect tutorials and getting-started material, own tools or public ones.
-- Don't collect the posts that are too short (< 800 words) or don't provide enough technical details, for example like a post that only contains a few sentences or a post that only contains a link to a video or a slide deck.
+- Don't collect posts written by an intern, or posts where nobody who built the thing is speaking. A Q&A written up by a staff writer still counts as long as the engineer or engineering manager answering it is describing a system their team runs.
+- Don't collect tutorials and getting-started material, for a public tool or your own. Introducing your own system is fine, and most of the good posts do it — what is excluded is the how-to-use guide with no design rationale, the one that shows the API without saying what the alternatives were.
+- Don't collect theoretical results with no production system behind them. A summary of a conference paper proving a competitive ratio is not an engineering blog post, even when it is published on a company's blog and opens with a paragraph about their cluster scheduler.
+- Don't collect the posts that don't provide enough technical details, for example like a post that only contains a few sentences or a post that only contains a link to a video or a slide deck.
+
+## On length
+
+Under 800 words, a post is almost never carrying a mechanism, so treat that as a floor. Do not treat it as the test. Length is weakly correlated with what this list is for and reading the post is the only thing that settles it — a 1,100-word post that names the bottleneck, the fix and the number it moved belongs here, and a 3,000-word post that walks through a product's capabilities does not.
 
 ## Output
 

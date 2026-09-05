@@ -49,6 +49,20 @@
     "tags": ["machine-learning", "training"]
   },
   {
+    "title": "Indexing code at scale with Glean",
+    "url": "https://engineering.fb.com/2024/12/19/developer-tools/glean-open-source-code-indexing/",
+    "source": "Meta",
+    "publishedAt": "2024-12-19",
+    "tags": ["search", "indexing", "language", "static-analysis"]
+  },
+  {
+    "title": "Inside Facebook’s video delivery system",
+    "url": "https://engineering.fb.com/2024/12/10/video-engineering/inside-facebooks-video-delivery-system/",
+    "source": "Meta",
+    "publishedAt": "2024-12-10",
+    "tags": ["architecture", "mobile"]
+  },
+  {
     "title": "Meta Andromeda: Supercharging Advantage+ automation with the next-gen personalized ads retrieval engine",
     "url": "https://engineering.fb.com/2024/12/02/production-engineering/meta-andromeda-advantage-automation-next-gen-personalized-ads-retrieval-engine/",
     "source": "Meta",
@@ -63,11 +77,53 @@
     "tags": ["machine-learning", "training"]
   },
   {
+    "title": "How Meta animates AI-generated images at scale",
+    "url": "https://engineering.fb.com/2024/08/14/production-engineering/how-meta-animates-ai-generated-images-at-scale/",
+    "source": "Meta",
+    "publishedAt": "2024-08-14",
+    "tags": ["machine-learning", "inference", "pytorch"]
+  },
+  {
+    "title": "RoCE networks for distributed AI training at scale",
+    "url": "https://engineering.fb.com/2024/08/05/data-center-engineering/roce-network-distributed-ai-training-at-scale/",
+    "source": "Meta",
+    "publishedAt": "2024-08-05",
+    "tags": ["network", "machine-learning", "training"]
+  },
+  {
     "title": "Taming the tail utilization of ads inference at Meta scale",
     "url": "https://engineering.fb.com/2024/07/10/production-engineering/tail-utilization-ads-inference-meta/",
     "source": "Meta",
     "publishedAt": "2024-07-10",
     "tags": ["reliability", "overload-control", "machine-learning", "inference"]
+  },
+  {
+    "title": "How Meta trains large language models at scale",
+    "url": "https://engineering.fb.com/2024/06/12/data-infrastructure/training-large-language-models-at-scale-meta/",
+    "source": "Meta",
+    "publishedAt": "2024-06-12",
+    "tags": ["machine-learning", "training", "llm"]
+  },
+  {
+    "title": "Building Meta’s GenAI Infrastructure",
+    "url": "https://engineering.fb.com/2024/03/12/data-center-engineering/building-metas-genai-infrastructure/",
+    "source": "Meta",
+    "publishedAt": "2024-03-12",
+    "tags": ["machine-learning", "training", "hardware"]
+  },
+  {
+    "title": "How Meta built the infrastructure for Threads",
+    "url": "https://engineering.fb.com/2023/12/19/core-infra/how-meta-built-the-infrastructure-for-threads/",
+    "source": "Meta",
+    "publishedAt": "2023-12-19",
+    "tags": ["database", "zippydb", "architecture", "job-queue"]
+  },
+  {
+    "title": "Building end-to-end security for Messenger",
+    "url": "https://engineering.fb.com/2023/12/06/security/building-end-to-end-security-for-messenger/",
+    "source": "Meta",
+    "publishedAt": "2023-12-06",
+    "tags": ["security"]
   },
   {
     "title": "Scaling the Instagram Explore recommendations system",
@@ -91,11 +147,61 @@
     "tags": ["architecture", "job-queue"]
   },
   {
+    "title": "How Precision Time Protocol is being deployed at Meta",
+    "url": "https://engineering.fb.com/2022/11/21/production-engineering/precision-time-protocol-at-meta/",
+    "source": "Meta",
+    "publishedAt": "2022-11-21",
+    "tags": ["network", "hardware"]
+  },
+  {
     "title": "Reducing Instagram's basic video compute time by 94 percent",
     "url": "https://engineering.fb.com/2022/11/04/video-engineering/instagram-video-processing-encoding-reduction/",
     "source": "Meta",
     "publishedAt": "2022-11-04",
     "tags": ["storage", "encoding"]
+  },
+  {
+    "title": "Improving Instagram notification management with machine learning and causal inference",
+    "url": "https://engineering.fb.com/2022/10/31/ml-applications/instagram-notification-management-machine-learning/",
+    "source": "Meta",
+    "publishedAt": "2022-10-31",
+    "tags": ["machine-learning", "inference"]
+  },
+  {
+    "title": "Scaling data ingestion for machine learning training at Meta",
+    "url": "https://engineering.fb.com/2022/09/19/ml-applications/data-ingestion-machine-learning-training-meta/",
+    "source": "Meta",
+    "publishedAt": "2022-09-19",
+    "tags": ["machine-learning", "training", "data", "etl"]
+  },
+  {
+    "title": "Under the hood: Meta’s cloud gaming infrastructure",
+    "url": "https://engineering.fb.com/2022/06/09/web/cloud-gaming-infrastructure/",
+    "source": "Meta",
+    "publishedAt": "2022-06-09",
+    "tags": ["network", "webrtc", "hardware"]
+  },
+  {
+    "title": "Cache made consistent",
+    "url": "https://engineering.fb.com/2022/06/08/core-infra/cache-made-consistent/",
+    "source": "Meta",
+    "publishedAt": "2022-06-08",
+    "tags": ["database", "caching", "tao", "memcached"]
+  },
+  {
+    "title": "Delta: A highly available, strongly consistent storage service using chain replication",
+    "url": "https://engineering.fb.com/2022/05/04/data-infrastructure/delta/",
+    "source": "Meta",
+    "publishedAt": "2022-05-04",
+    "tags": ["database", "replication", "storage"]
+  },
+  {
+    "title": "FOQS: Making a distributed priority queue disaster-ready",
+    "url": "https://engineering.fb.com/2022/01/18/production-engineering/foqs-disaster-ready/",
+    "source": "Meta",
+    "publishedAt": "2022-01-18",
+    "series": "meta-foqs",
+    "tags": ["architecture", "job-queue", "reliability", "disaster-recovery"]
   },
   {
     "title": "How we built a general purpose key value store for Facebook with ZippyDB",
@@ -110,6 +216,49 @@
     "source": "Meta",
     "publishedAt": "2021-07-22",
     "tags": ["database", "migration", "mysql"]
+  },
+  {
+    "title": "Fully Sharded Data Parallel: faster AI training with fewer GPUs",
+    "url": "https://engineering.fb.com/2021/07/15/open-source/fsdp/",
+    "source": "Meta",
+    "publishedAt": "2021-07-15",
+    "tags": ["machine-learning", "training", "pytorch"]
+  },
+  {
+    "title": "How Facebook encodes your videos",
+    "url": "https://engineering.fb.com/2021/04/05/video-engineering/how-facebook-encodes-your-videos/",
+    "source": "Meta",
+    "publishedAt": "2021-04-05",
+    "tags": ["storage", "encoding", "machine-learning"]
+  },
+  {
+    "title": "FOQS: Scaling a distributed priority queue",
+    "url": "https://engineering.fb.com/2021/02/22/production-engineering/foqs-scaling-a-distributed-priority-queue/",
+    "source": "Meta",
+    "publishedAt": "2021-02-22",
+    "series": "meta-foqs",
+    "tags": ["architecture", "job-queue", "mysql"]
+  },
+  {
+    "title": "How machine learning powers Facebook’s News Feed ranking algorithm",
+    "url": "https://engineering.fb.com/2021/01/26/ml-applications/news-feed-ranking/",
+    "source": "Meta",
+    "publishedAt": "2021-01-26",
+    "tags": ["machine-learning", "inference"]
+  },
+  {
+    "title": "How Instagram suggests new content",
+    "url": "https://engineering.fb.com/2020/12/10/web/how-instagram-suggests-new-content/",
+    "source": "Meta",
+    "publishedAt": "2020-12-10",
+    "tags": ["machine-learning", "inference"]
+  },
+  {
+    "title": "How we scale Live streaming for millions of viewers simultaneously",
+    "url": "https://engineering.fb.com/2020/10/22/video-engineering/live-streaming/",
+    "source": "Meta",
+    "publishedAt": "2020-10-22",
+    "tags": ["network", "reliability", "overload-control"]
   },
   {
     "title": "Scaling services with Shard Manager",

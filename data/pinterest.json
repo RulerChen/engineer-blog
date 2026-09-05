@@ -11,6 +11,7 @@
     "url": "https://medium.com/pinterest-engineering/next-gen-data-processing-at-massive-scale-at-pinterest-with-moka-part-2-of-2-d0210ded34e0",
     "source": "Pinterest",
     "publishedAt": "2025-09-10",
+    "series": "pinterest-moka",
     "tags": ["data", "container", "kubernetes", "spark"]
   },
   {
@@ -18,6 +19,7 @@
     "url": "https://medium.com/pinterest-engineering/next-gen-data-processing-at-massive-scale-at-pinterest-with-moka-part-1-of-2-39a36d5e82c4",
     "source": "Pinterest",
     "publishedAt": "2025-07-11",
+    "series": "pinterest-moka",
     "tags": ["data", "container", "kubernetes", "spark"]
   },
   {
@@ -46,6 +48,7 @@
     "url": "https://medium.com/pinterest-engineering/redesigning-pinterests-ad-serving-systems-with-zero-downtime-part-2-3e607bbba9f0",
     "source": "Pinterest",
     "publishedAt": "2024-08-20",
+    "series": "pinterest-ad-serving-redesign",
     "tags": ["architecture", "microservice"]
   },
   {
@@ -67,6 +70,7 @@
     "url": "https://medium.com/pinterest-engineering/redesigning-pinterests-ad-serving-systems-with-zero-downtime-3253d2432a0c",
     "source": "Pinterest",
     "publishedAt": "2024-06-07",
+    "series": "pinterest-ad-serving-redesign",
     "tags": ["architecture", "microservice"]
   },
   {
@@ -131,6 +135,20 @@
     "source": "Pinterest",
     "publishedAt": "2021-11-16",
     "tags": ["data", "kafka", "s3"]
+  },
+  {
+    "title": "How we scaled the size of Pinterest’s ad corpus by 60x",
+    "url": "https://medium.com/pinterest-engineering/how-we-scaled-the-size-of-pinterests-ad-corpus-by-60x-d6d5bfa6bf16",
+    "source": "Pinterest",
+    "publishedAt": "2021-08-05",
+    "tags": ["search", "indexing"]
+  },
+  {
+    "title": "The machine learning behind delivering relevant ads",
+    "url": "https://medium.com/pinterest-engineering/the-machine-learning-behind-delivering-relevant-ads-8987fc5ba1c0",
+    "source": "Pinterest",
+    "publishedAt": "2021-07-20",
+    "tags": ["machine-learning", "training"]
   },
   {
     "title": "Using Kafka to throttle QPS on MySQL shards in bulk write APIs",

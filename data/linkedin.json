@@ -63,11 +63,81 @@
     "tags": ["data", "stream-processing", "kafka"]
   },
   {
+    "title": "Building a resilient DNS client for web-scale infrastructure",
+    "url": "https://www.linkedin.com/blog/engineering/infrastructure/building-a-resilient-dns-client-for-web-scale-infrastructure",
+    "source": "LinkedIn",
+    "publishedAt": "2025-04-16",
+    "tags": ["network", "dns"]
+  },
+  {
+    "title": "Journey of next generation control plane for data systems",
+    "url": "https://www.linkedin.com/blog/engineering/infrastructure/journey-of-next-generation-control-plane-for-data-systems",
+    "source": "LinkedIn",
+    "publishedAt": "2025-03-21",
+    "tags": ["architecture", "data", "kafka"]
+  },
+  {
+    "title": "Scalable federated learning at LinkedIn",
+    "url": "https://www.linkedin.com/blog/engineering/machine-learning/scalable-federated-learning-at-linkedin",
+    "source": "LinkedIn",
+    "publishedAt": "2025-03-05",
+    "tags": ["machine-learning", "training"]
+  },
+  {
+    "title": "Accelerating LinkedIn’s My Network tab by reducing latency and improving UX",
+    "url": "https://www.linkedin.com/blog/engineering/infrastructure/accelerating-linkedins-my-network-tab",
+    "source": "LinkedIn",
+    "publishedAt": "2024-12-20",
+    "tags": ["frontend", "architecture"]
+  },
+  {
     "title": "Stateful Workload Operator: Stateful Systems on Kubernetes at LinkedIn",
     "url": "https://www.linkedin.com/blog/engineering/infrastructure/stateful-workload-operator-stateful-systems-on-kubernetes-at-linkedin",
     "source": "LinkedIn",
     "publishedAt": "2024-11-12",
     "tags": ["container", "kubernetes"]
+  },
+  {
+    "title": "Java heap memory and garbage collection: tuning for high-performance services",
+    "url": "https://www.linkedin.com/blog/engineering/infrastructure/java-heap-memory-and-garbage-collection-tuning-for-high-performance-services",
+    "source": "LinkedIn",
+    "publishedAt": "2024-09-13",
+    "tags": ["language", "garbage-collection", "java"]
+  },
+  {
+    "title": "Candidate Generation in a Large Scale Graph Recommendation System: People You May Know",
+    "url": "https://www.linkedin.com/blog/engineering/recommendations/candidate-generation-in-a-large-scale-graph-recommendation-system-people-you-may-know",
+    "source": "LinkedIn",
+    "publishedAt": "2024-06-18",
+    "tags": ["machine-learning", "inference"]
+  },
+  {
+    "title": "How LinkedIn Is Using Embeddings to Up Its Match Game for Job Seekers",
+    "url": "https://www.linkedin.com/blog/engineering/platform-platformization/using-embeddings-to-up-its-match-game-for-job-seekers",
+    "source": "LinkedIn",
+    "publishedAt": "2023-10-05",
+    "tags": ["search", "vector", "machine-learning"]
+  },
+  {
+    "title": "Taking Charge of Tables: Introducing OpenHouse for Big Data Management",
+    "url": "https://www.linkedin.com/blog/engineering/data-management/taking-charge-of-tables--introducing-openhouse-for-big-data-mana",
+    "source": "LinkedIn",
+    "publishedAt": "2023-07-19",
+    "tags": ["data", "data-lake", "iceberg"]
+  },
+  {
+    "title": "From the Economic Graph to Economic Insights: Building the Infrastructure for Delivering Labor Market Insights from LinkedIn Data",
+    "url": "https://www.linkedin.com/blog/engineering/economic-graph/from-the-economic-graph-to-economic-insights-building-the-infra",
+    "source": "LinkedIn",
+    "publishedAt": "2023-06-02",
+    "tags": ["data", "etl"]
+  },
+  {
+    "title": "Upscaling LinkedIn's Profile Datastore While Reducing Costs",
+    "url": "https://www.linkedin.com/blog/engineering/data-management/upscaling-profile-datastore-while-reducing-costs",
+    "source": "LinkedIn",
+    "publishedAt": "2023-05-09",
+    "tags": ["database", "caching", "couchbase", "espresso"]
   },
   {
     "title": "Reducing Apache Spark Application Dependencies Upload by 99%",
@@ -77,6 +147,13 @@
     "tags": ["data", "spark", "hdfs"]
   },
   {
+    "title": "Unifying Messaging Experiences across LinkedIn",
+    "url": "https://www.linkedin.com/blog/engineering/messaging-notifications/unifying-messaging-experiences-across-linkedin",
+    "source": "LinkedIn",
+    "publishedAt": "2023-01-26",
+    "tags": ["architecture", "api-design"]
+  },
+  {
     "title": "Operating system upgrades at LinkedIn’s scale",
     "url": "https://www.linkedin.com/blog/engineering/scalability/operating-system-upgrades-at-linkedin-s-scale",
     "source": "LinkedIn",
@@ -84,11 +161,46 @@
     "tags": ["operating-system", "reliability"]
   },
   {
+    "title": "Opal: Building a mutable dataset in data lake",
+    "url": "https://www.linkedin.com/blog/engineering/data-management/opal-building-a-mutable-dataset-in-data-lake",
+    "source": "LinkedIn",
+    "publishedAt": "2022-03-16",
+    "tags": ["data", "data-lake", "spark"]
+  },
+  {
+    "title": "Evolving LinkedIn’s analytics tech stack",
+    "url": "https://www.linkedin.com/blog/engineering/analytics/evolving-linkedin-s-analytics-tech-stack",
+    "source": "LinkedIn",
+    "publishedAt": "2021-12-07",
+    "tags": ["data", "etl", "hadoop"]
+  },
+  {
+    "title": "Completing a member knowledge graph with Graph Neural Networks",
+    "url": "https://www.linkedin.com/blog/engineering/knowledge/completing-a-member-knowledge-graph-with-graph-neural-networks",
+    "source": "LinkedIn",
+    "publishedAt": "2021-12-01",
+    "tags": ["machine-learning", "training"]
+  },
+  {
     "title": "Scaling LinkedIn's Hadoop YARN cluster beyond 10,000 nodes",
     "url": "https://www.linkedin.com/blog/engineering/open-source/scaling-linkedin-s-hadoop-yarn-cluster-beyond-10-000-nodes",
     "source": "LinkedIn",
     "publishedAt": "2021-09-08",
     "tags": ["data", "hadoop", "yarn"]
+  },
+  {
+    "title": "Homepage feed multi-task learning using TensorFlow",
+    "url": "https://www.linkedin.com/blog/engineering/feed/homepage-feed-multi-task-learning-using-tensorflow",
+    "source": "LinkedIn",
+    "publishedAt": "2021-06-03",
+    "tags": ["machine-learning", "training", "tensorflow", "xgboost"]
+  },
+  {
+    "title": "Building a heterogeneous social network recommendation system",
+    "url": "https://www.linkedin.com/blog/engineering/optimization/building-a-heterogeneous-social-network-recommendation-system",
+    "source": "LinkedIn",
+    "publishedAt": "2020-10-06",
+    "tags": ["machine-learning", "inference"]
   },
   {
     "title": "Rebuilding messaging: How we bootstrapped our platform",

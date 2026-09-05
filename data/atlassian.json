@@ -119,6 +119,13 @@
     "tags": ["reliability", "postmortem", "disaster-recovery"]
   },
   {
+    "title": "Revamping Confluence Cloud Search",
+    "url": "https://www.atlassian.com/blog/how-we-build/revamping-confluence-cloud-search",
+    "source": "Atlassian",
+    "publishedAt": "2021-07-21",
+    "tags": ["search", "indexing", "elasticsearch"]
+  },
+  {
     "title": "Unlocking reliability with Splunk SmartStore",
     "url": "https://www.atlassian.com/blog/how-we-build/unlocking-reliability-with-splunk-smartstore",
     "source": "Atlassian",
@@ -166,6 +173,13 @@
     "source": "Atlassian",
     "publishedAt": "2019-11-05",
     "tags": ["architecture", "frontend", "kinesis"]
+  },
+  {
+    "title": "Our not-so-magic journey scaling low latency, multi-region services on AWS",
+    "url": "https://www.atlassian.com/blog/how-we-build/aws-scaling-multi-region-low-latency-service",
+    "source": "Atlassian",
+    "publishedAt": "2019-05-21",
+    "tags": ["architecture", "database", "caching", "dynamodb"]
   },
   {
     "title": "Sync failure handling",

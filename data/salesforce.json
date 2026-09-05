@@ -7,6 +7,27 @@
     "tags": ["database", "caching", "migration", "redis", "memcached"]
   },
   {
+    "title": "Scaling Real-Time Search to 30 Billion Queries with Sub-Second Latency and 0% Downtime",
+    "url": "https://engineering.salesforce.com/scaling-real-time-search-to-30-billion-queries-with-sub-second-latency-and-0-downtime/",
+    "source": "Salesforce",
+    "publishedAt": "2025-04-08",
+    "tags": ["search", "reliability", "capacity-planning"]
+  },
+  {
+    "title": "Scaling AI Systems: Secrets for Managing 100,000 Training and Metadata Requests Per Minute",
+    "url": "https://engineering.salesforce.com/scaling-ai-systems-secrets-for-managing-100000-training-and-metadata-requests-per-minute/",
+    "source": "Salesforce",
+    "publishedAt": "2024-12-17",
+    "tags": ["machine-learning", "training"]
+  },
+  {
+    "title": "The Unstructured Data Dilemma: How Data Cloud Handles 250 Trillion Transactions Weekly",
+    "url": "https://engineering.salesforce.com/the-unstructured-data-dilemma-how-data-cloud-handles-250-trillion-transactions-weekly/",
+    "source": "Salesforce",
+    "publishedAt": "2024-07-16",
+    "tags": ["data", "etl"]
+  },
+  {
     "title": "Event Sourcing for an Inventory Availability Solution",
     "url": "https://engineering.salesforce.com/event-sourcing-for-an-inventory-availability-solution-3cc0daf5a742/",
     "source": "Salesforce",

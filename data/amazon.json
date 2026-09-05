@@ -56,11 +56,25 @@
     "tags": ["security", "network", "tls"]
   },
   {
+    "title": "Ensuring that customers don’t miss out on trending products",
+    "url": "https://www.amazon.science/blog/ensuring-that-customers-dont-miss-out-on-trending-products",
+    "source": "Amazon",
+    "publishedAt": "2023-09-26",
+    "tags": ["machine-learning", "training"]
+  },
+  {
     "title": "How we built Cedar with automated reasoning and differential testing",
     "url": "https://www.amazon.science/blog/how-we-built-cedar-with-automated-reasoning-and-differential-testing",
     "source": "Amazon",
     "publishedAt": "2023-05-10",
     "tags": ["security", "testing", "rust", "dafny"]
+  },
+  {
+    "title": "From structured search to learning-to-rank-and-retrieve",
+    "url": "https://www.amazon.science/blog/from-structured-search-to-learning-to-rank-and-retrieve",
+    "source": "Amazon",
+    "publishedAt": "2023-03-07",
+    "tags": ["search", "ranking", "machine-learning"]
   },
   {
     "title": "Invalidating robotic ad clicks in real time",
@@ -75,6 +89,13 @@
     "source": "Amazon",
     "publishedAt": "2022-10-21",
     "tags": ["database", "reliability", "overload-control", "dynamodb"]
+  },
+  {
+    "title": "Using graph neural networks to recommend related products",
+    "url": "https://www.amazon.science/blog/using-graph-neural-networks-to-recommend-related-products",
+    "source": "Amazon",
+    "publishedAt": "2022-10-11",
+    "tags": ["machine-learning", "training"]
   },
   {
     "title": "A billion SMT queries a day",

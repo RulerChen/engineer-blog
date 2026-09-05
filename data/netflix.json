@@ -116,6 +116,20 @@
     "tags": ["architecture", "database", "caching"]
   },
   {
+    "title": "Foundation Model for Personalized Recommendation",
+    "url": "https://netflixtechblog.com/foundation-model-for-personalized-recommendation-1a0bd8e02d39",
+    "source": "Netflix",
+    "publishedAt": "2025-03-21",
+    "tags": ["machine-learning", "training", "llm"]
+  },
+  {
+    "title": "Introducing Impressions at Netflix",
+    "url": "https://netflixtechblog.com/introducing-impressions-at-netflix-e2b67c88c9fb",
+    "source": "Netflix",
+    "publishedAt": "2025-02-15",
+    "tags": ["data", "stream-processing", "kafka", "flink"]
+  },
+  {
     "title": "Netflix’s Distributed Counter Abstraction",
     "url": "https://netflixtechblog.com/netflixs-distributed-counter-abstraction-8d0c45eb66b2",
     "source": "Netflix",
@@ -137,11 +151,69 @@
     "tags": ["database", "api-design", "cassandra"]
   },
   {
+    "title": "Pushy to the Limit: Evolving Netflix’s WebSocket proxy for the future",
+    "url": "https://netflixtechblog.com/pushy-to-the-limit-evolving-netflixs-websocket-proxy-for-the-future-b468bc0ff658",
+    "source": "Netflix",
+    "publishedAt": "2024-09-10",
+    "tags": ["network", "proxy", "websocket"]
+  },
+  {
+    "title": "Recommending for Long-Term Member Satisfaction at Netflix",
+    "url": "https://netflixtechblog.com/recommending-for-long-term-member-satisfaction-at-netflix-ac15cada49ef",
+    "source": "Netflix",
+    "publishedAt": "2024-08-29",
+    "tags": ["machine-learning", "training"]
+  },
+  {
     "title": "Java 21 Virtual Threads - Dude, Where’s My Lock?",
     "url": "https://netflixtechblog.com/java-21-virtual-threads-dude-wheres-my-lock-3052540e231d",
     "source": "Netflix",
     "publishedAt": "2024-07-29",
     "tags": ["language", "java"]
+  },
+  {
+    "title": "Maestro: Data/ML Workflow Orchestrator at Netflix",
+    "url": "https://netflixtechblog.com/maestro-netflixs-workflow-orchestrator-ee13a06f9c78",
+    "source": "Netflix",
+    "publishedAt": "2024-07-22",
+    "tags": ["architecture", "job-queue", "data"]
+  },
+  {
+    "title": "Reverse Searching Netflix’s Federated Graph",
+    "url": "https://netflixtechblog.com/reverse-searching-netflixs-federated-graph-222ac5d23576",
+    "source": "Netflix",
+    "publishedAt": "2024-04-04",
+    "tags": ["search", "indexing", "elasticsearch"]
+  },
+  {
+    "title": "Supporting Diverse ML Systems at Netflix",
+    "url": "https://netflixtechblog.com/supporting-diverse-ml-systems-at-netflix-2d2e6b6d205d",
+    "source": "Netflix",
+    "publishedAt": "2024-03-07",
+    "tags": ["machine-learning", "metaflow"]
+  },
+  {
+    "title": "Rebuilding Netflix Video Processing Pipeline with Microservices",
+    "url": "https://netflixtechblog.com/rebuilding-netflix-video-processing-pipeline-with-microservices-4e5e6310e359",
+    "source": "Netflix",
+    "publishedAt": "2024-01-10",
+    "series": "netflix-cosmos",
+    "tags": ["architecture", "microservice"]
+  },
+  {
+    "title": "Building In-Video Search",
+    "url": "https://netflixtechblog.com/building-in-video-search-936766f0017c",
+    "source": "Netflix",
+    "publishedAt": "2023-11-06",
+    "tags": ["search", "vector", "machine-learning"]
+  },
+  {
+    "title": "Streaming SQL in Data Mesh",
+    "url": "https://netflixtechblog.com/streaming-sql-in-data-mesh-0d83f5a00d08",
+    "source": "Netflix",
+    "publishedAt": "2023-11-03",
+    "series": "netflix-data-mesh",
+    "tags": ["data", "stream-processing", "flink"]
   },
   {
     "title": "Kubernetes And Kernel Panics",
@@ -151,11 +223,39 @@
     "tags": ["container", "kubernetes", "operating-system"]
   },
   {
+    "title": "Migrating Netflix to GraphQL Safely",
+    "url": "https://netflixtechblog.com/migrating-netflix-to-graphql-safely-8e1e4d4f1e72",
+    "source": "Netflix",
+    "publishedAt": "2023-06-14",
+    "tags": ["api-design", "graphql", "testing"]
+  },
+  {
     "title": "Migrating Critical Traffic At Scale with No Downtime — Part 1",
     "url": "https://netflixtechblog.com/migrating-critical-traffic-at-scale-with-no-downtime-part-1-ba1c7a1c7835",
     "source": "Netflix",
     "publishedAt": "2023-05-04",
     "tags": ["testing", "reliability"]
+  },
+  {
+    "title": "Building a Media Understanding Platform for ML Innovations",
+    "url": "https://netflixtechblog.com/building-a-media-understanding-platform-for-ml-innovations-9bef9962dcb7",
+    "source": "Netflix",
+    "publishedAt": "2023-03-14",
+    "tags": ["machine-learning", "search", "vector"]
+  },
+  {
+    "title": "Scaling Media Machine Learning at Netflix",
+    "url": "https://netflixtechblog.com/scaling-media-machine-learning-at-netflix-f19b400243",
+    "source": "Netflix",
+    "publishedAt": "2023-02-13",
+    "tags": ["machine-learning", "training", "inference"]
+  },
+  {
+    "title": "Match Cutting: Finding Cuts with Smooth Visual Transitions Using Machine Learning",
+    "url": "https://netflixtechblog.com/match-cutting-at-netflix-finding-cuts-with-smooth-visual-transitions-31c3fc14ae59",
+    "source": "Netflix",
+    "publishedAt": "2022-11-17",
+    "tags": ["machine-learning", "inference"]
   },
   {
     "title": "Timestone: Netflix’s High-Throughput, Low-Latency Priority Queueing System with Built-in Support for Non-Parallelizable Workloads",
@@ -165,17 +265,33 @@
     "tags": ["architecture", "job-queue", "database"]
   },
   {
+    "title": "Machine Learning for Fraud Detection in Streaming Services",
+    "url": "https://netflixtechblog.com/machine-learning-for-fraud-detection-in-streaming-services-b0b4ef3be3f6",
+    "source": "Netflix",
+    "publishedAt": "2022-09-21",
+    "tags": ["machine-learning", "training", "security"]
+  },
+  {
     "title": "Data Mesh — A Data Movement and Processing Platform @ Netflix",
     "url": "https://netflixtechblog.com/data-mesh-a-data-movement-and-processing-platform-netflix-1288bcab2873",
     "source": "Netflix",
     "publishedAt": "2022-08-01",
+    "series": "netflix-data-mesh",
     "tags": ["data", "cdc", "stream-processing"]
+  },
+  {
+    "title": "Rapid Event Notification System at Netflix",
+    "url": "https://netflixtechblog.com/rapid-event-notification-system-at-netflix-6deb1d2b57d1",
+    "source": "Netflix",
+    "publishedAt": "2022-02-18",
+    "tags": ["architecture", "microservice"]
   },
   {
     "title": "The Netflix Cosmos Platform",
     "url": "https://netflixtechblog.com/the-netflix-cosmos-platform-35c14d9351ad",
     "source": "Netflix",
     "publishedAt": "2021-03-01",
+    "series": "netflix-cosmos",
     "tags": ["architecture", "microservice", "cloud"]
   },
   {

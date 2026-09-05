@@ -28,6 +28,13 @@
     "tags": ["overload-control", "reliability"]
   },
   {
+    "title": "Open Source and In-House: How Uber Optimizes LLM Training",
+    "url": "https://www.uber.com/blog/open-source-and-in-house-how-uber-optimizes-llm-training/",
+    "source": "Uber",
+    "publishedAt": "2026-04-14",
+    "tags": ["machine-learning", "training", "llm"]
+  },
+  {
     "title": "Uber's Rate Limiting System",
     "url": "https://www.uber.com/blog/ubers-rate-limiting-system/",
     "source": "Uber",
@@ -87,6 +94,28 @@
     "tags": ["container", "kubernetes"]
   },
   {
+    "title": "MySQL At Uber",
+    "url": "https://www.uber.com/blog/mysql-at-uber/",
+    "source": "Uber",
+    "publishedAt": "2025-01-30",
+    "series": "uber-mysql-cluster-uptime",
+    "tags": ["database", "mysql", "architecture"]
+  },
+  {
+    "title": "How Uber Uses Ray® to Optimize the Rides Business",
+    "url": "https://www.uber.com/blog/how-uber-uses-ray-to-optimize-the-rides-business/",
+    "source": "Uber",
+    "publishedAt": "2025-01-09",
+    "tags": ["data", "ray", "spark"]
+  },
+  {
+    "title": "Lucene: Uber’s Search Platform Version Upgrade",
+    "url": "https://www.uber.com/blog/lucene-version-upgrade/",
+    "source": "Uber",
+    "publishedAt": "2024-09-05",
+    "tags": ["search", "indexing", "lucene"]
+  },
+  {
     "title": "Continuous deployment for large monorepos",
     "url": "https://www.uber.com/blog/continuous-deployment/",
     "source": "Uber",
@@ -99,6 +128,20 @@
     "source": "Uber",
     "publishedAt": "2024-08-08",
     "tags": ["database", "migration", "mysql"]
+  },
+  {
+    "title": "Introduction to Kafka Tiered Storage at Uber",
+    "url": "https://www.uber.com/blog/kafka-tiered-storage/",
+    "source": "Uber",
+    "publishedAt": "2024-07-01",
+    "tags": ["storage", "tiering", "kafka"]
+  },
+  {
+    "title": "How Uber ensures Apache Cassandra’s tolerance for single-zone failure",
+    "url": "https://www.uber.com/blog/single-zone-failure-tolerance/",
+    "source": "Uber",
+    "publishedAt": "2024-06-20",
+    "tags": ["database", "cassandra", "reliability"]
   },
   {
     "title": "Migrating a Trillion Entries of Uber's Ledger Data from DynamoDB to LedgerStore",
@@ -115,6 +158,13 @@
     "publishedAt": "2024-04-04",
     "series": "uber-ledgerstore",
     "tags": ["database"]
+  },
+  {
+    "title": "Balancing HDFS DataNodes in the Uber DataLake",
+    "url": "https://www.uber.com/blog/balancing-hdfs-datanodes-in-the-uber-datalake/",
+    "source": "Uber",
+    "publishedAt": "2024-03-14",
+    "tags": ["data", "data-lake", "hdfs"]
   },
   {
     "title": "How Uber Serves Over 40 Million Reads Per Second from Online Storage Using an Integrated Cache",
@@ -154,11 +204,39 @@
     "tags": ["go", "observability", "profiling"]
   },
   {
+    "title": "How Uber Optimizes the Timing of Push Notifications using ML and Linear Programming",
+    "url": "https://www.uber.com/blog/how-uber-optimizes-push-notifications-using-ml/",
+    "source": "Uber",
+    "publishedAt": "2022-11-03",
+    "tags": ["machine-learning", "inference"]
+  },
+  {
+    "title": "Deduping and Storing Images at Uber Eats",
+    "url": "https://www.uber.com/blog/deduping-and-storing-images-at-uber-eats/",
+    "source": "Uber",
+    "publishedAt": "2022-09-08",
+    "tags": ["storage", "object-storage"]
+  },
+  {
     "title": "MySQL to MyRocks Migration in Uber's Distributed Datastores",
     "url": "https://www.uber.com/blog/mysql-to-myrocks-migration-in-uber-distributed-datastores/",
     "source": "Uber",
     "publishedAt": "2022-09-01",
     "tags": ["database", "migration", "mysql", "rocksdb"]
+  },
+  {
+    "title": "Uber’s Next Gen Push Platform on gRPC",
+    "url": "https://www.uber.com/blog/ubers-next-gen-push-platform-on-grpc/",
+    "source": "Uber",
+    "publishedAt": "2022-08-16",
+    "tags": ["api-design", "grpc", "mobile"]
+  },
+  {
+    "title": "Uber’s Highly Scalable and Distributed Shuffle as a Service",
+    "url": "https://www.uber.com/blog/ubers-highly-scalable-and-distributed-shuffle-as-a-service/",
+    "source": "Uber",
+    "publishedAt": "2022-07-07",
+    "tags": ["data", "spark"]
   },
   {
     "title": "Data Race Patterns in Go",
@@ -194,6 +272,13 @@
     "source": "Uber",
     "publishedAt": "2021-11-10",
     "tags": ["database", "dynamodb", "migration"]
+  },
+  {
+    "title": "Real-Time Exactly-Once Ad Event Processing with Apache Flink and Kafka",
+    "url": "https://www.uber.com/blog/real-time-exactly-once-ad-event-processing/",
+    "source": "Uber",
+    "publishedAt": "2021-09-23",
+    "tags": ["data", "stream-processing", "flink", "kafka"]
   },
   {
     "title": "Jellyfish: Cost-Effective Data Tiering for Uber's Largest Storage System",

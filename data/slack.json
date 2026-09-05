@@ -1,5 +1,26 @@
 [
   {
+    "title": "How we built enterprise search to be secure and private",
+    "url": "https://slack.engineering/how-we-built-enterprise-search-to-be-secure-and-private/",
+    "source": "Slack",
+    "publishedAt": "2025-03-07",
+    "tags": ["search", "security"]
+  },
+  {
+    "title": "Advancing Our Chef Infrastructure",
+    "url": "https://slack.engineering/advancing-our-chef-infrastructure/",
+    "source": "Slack",
+    "publishedAt": "2024-09-17",
+    "tags": ["architecture", "chef"]
+  },
+  {
+    "title": "Unified Grid: How We Re-Architected Slack for Our Largest Customers",
+    "url": "https://slack.engineering/unified-grid-how-we-re-architected-slack-for-our-largest-customers/",
+    "source": "Slack",
+    "publishedAt": "2024-07-31",
+    "tags": ["architecture", "api-design"]
+  },
+  {
     "title": "Unlocking Efficiency and Performance: Navigating the Spark 3 and EMR 6 Upgrade Journey at Slack",
     "url": "https://slack.engineering/unlocking-efficiency-and-performance-navigating-the-spark-3-and-emr-6-upgrade-journey-at-slack/",
     "source": "Slack",
@@ -14,6 +35,13 @@
     "tags": ["architecture", "job-queue"]
   },
   {
+    "title": "Traffic 101: Packets Mostly Flow",
+    "url": "https://slack.engineering/traffic-101-packets-mostly-flow/",
+    "source": "Slack",
+    "publishedAt": "2023-08-28",
+    "tags": ["network", "reliability", "disaster-recovery"]
+  },
+  {
     "title": "Slack’s Migration to a Cellular Architecture",
     "url": "https://slack.engineering/slacks-migration-to-a-cellular-architecture/",
     "source": "Slack",
@@ -21,11 +49,32 @@
     "tags": ["architecture", "envoy", "reliability"]
   },
   {
+    "title": "Real-time Messaging",
+    "url": "https://slack.engineering/real-time-messaging/",
+    "source": "Slack",
+    "publishedAt": "2023-04-11",
+    "tags": ["network", "websocket"]
+  },
+  {
+    "title": "Recommend API",
+    "url": "https://slack.engineering/recommend-api/",
+    "source": "Slack",
+    "publishedAt": "2022-09-06",
+    "tags": ["machine-learning", "inference"]
+  },
+  {
     "title": "Building Self-driving Kafka clusters using open source components",
     "url": "https://slack.engineering/building-self-driving-kafka-clusters-using-open-source-components/",
     "source": "Slack",
     "publishedAt": "2022-02-11",
     "tags": ["architecture", "kafka", "zookeeper"]
+  },
+  {
+    "title": "Email Classification",
+    "url": "https://slack.engineering/email-classification/",
+    "source": "Slack",
+    "publishedAt": "2021-07-28",
+    "tags": ["machine-learning", "inference"]
   },
   {
     "title": "Migrating Millions of Concurrent Websockets to Envoy",

@@ -7,6 +7,13 @@
     "tags": ["security", "hadoop", "kerberos"]
   },
   {
+    "title": "How we scaled Reads On the Twitter Users Database",
+    "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2023/how-we-scaled-reads-on-the-twitter-users-database",
+    "source": "Twitter",
+    "publishedAt": "2023-02-23",
+    "tags": ["database", "mysql", "vitess"]
+  },
+  {
     "title": "Stability and scalability for search",
     "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2022/stability-and-scalability-for-search",
     "source": "Twitter",
@@ -33,6 +40,13 @@
     "source": "Twitter",
     "publishedAt": "2022-02-28",
     "tags": ["database", "migration", "rocksdb"]
+  },
+  {
+    "title": "How we built Twitter’s highly reliable ads pacing service",
+    "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2021/how-we-built-twitter-s-highly-reliable-ads-pacing-service",
+    "source": "Twitter",
+    "publishedAt": "2021-12-16",
+    "tags": ["architecture", "microservice", "reliability", "zookeeper"]
   },
   {
     "title": "Processing billions of events in real time at Twitter",
@@ -68,6 +82,13 @@
     "source": "Twitter",
     "publishedAt": "2021-03-18",
     "tags": ["architecture", "microservice"]
+  },
+  {
+    "title": "Storing and retrieving millions of ad impressions per second",
+    "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2021/storing-and-retrieving-millions-of-ad-impressions-per-second",
+    "source": "Twitter",
+    "publishedAt": "2021-02-22",
+    "tags": ["database", "storage"]
   },
   {
     "title": "Kafka as a storage system",

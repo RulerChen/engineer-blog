@@ -16,7 +16,7 @@ Closed set; adding one is a deliberate change to this file, not a typing decisio
 | `operating-system` | `kernel`                                                                                   |
 | `database`         | `sharding` `replication` `migration` `caching` `schema` `backup`                           |
 | `data`             | `data-lake` `cdc` `etl` `stream-processing` `query-engine`                                 |
-| `machine-learning` | `agent` `training` `llm` `inference`                                                       |
+| `machine-learning` | `agent` `training` `llm` `inference` `recommendation`                                      |
 | `container`        | `kubernetes` `docker`                                                                      |
 | `reliability`      | `overload-control` `postmortem` `disaster-recovery` `capacity-planning`                    |
 | `architecture`     | `monorepo` `monolith` `microservice` `ci-cd` `api-gateway` `job-queue` `geospatial` `crdt` |

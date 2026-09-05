@@ -7,6 +7,13 @@
     "tags": ["security", "storage", "object-storage", "s3"]
   },
   {
+    "title": "The foundations of Canva's continuous data platform with Snowpipe Streaming",
+    "url": "https://www.canva.dev/blog/engineering/snowpipe-streaming/",
+    "source": "Canva",
+    "publishedAt": "2025-01-06",
+    "tags": ["data", "etl", "snowflake", "kinesis"]
+  },
+  {
     "title": "How to improve search without looking at queries or results",
     "url": "https://www.canva.dev/blog/engineering/how-to-improve-search-without-looking-at-queries-or-results/",
     "source": "Canva",
@@ -33,6 +40,13 @@
     "source": "Canva",
     "publishedAt": "2024-04-12",
     "tags": ["data", "etl", "database", "snowflake"]
+  },
+  {
+    "title": "Behind the draw - How Canva's drawing tool works",
+    "url": "https://www.canva.dev/blog/engineering/behind-the-draw/",
+    "source": "Canva",
+    "publishedAt": "2024-03-14",
+    "tags": ["frontend", "svg"]
   },
   {
     "title": "Ship Shape",

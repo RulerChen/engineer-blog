@@ -7,6 +7,27 @@
     "tags": ["network", "proxy", "envoy"]
   },
   {
+    "title": "Using LLM to transcribe restaurant menu photos",
+    "url": "https://careersatdoordash.com/blog/doordash-llm-transcribe-menu/",
+    "source": "DoorDash",
+    "publishedAt": "2025-03-19",
+    "tags": ["machine-learning", "llm"]
+  },
+  {
+    "title": "How DoorDash leverages LLMs for better search retrieval",
+    "url": "https://careersatdoordash.com/blog/how-doordash-leverages-llms-for-better-search-retrieval/",
+    "source": "DoorDash",
+    "publishedAt": "2024-11-19",
+    "tags": ["search", "machine-learning", "llm"]
+  },
+  {
+    "title": "Building DoorDash’s product knowledge graph with large language models",
+    "url": "https://careersatdoordash.com/blog/building-doordashs-product-knowledge-graph-with-large-language-models/",
+    "source": "DoorDash",
+    "publishedAt": "2024-04-23",
+    "tags": ["machine-learning", "llm"]
+  },
+  {
     "title": "Introducing DoorDash’s in-house search engine",
     "url": "https://careersatdoordash.com/blog/introducing-doordashs-in-house-search-engine/",
     "source": "DoorDash",
@@ -26,6 +47,13 @@
     "source": "DoorDash",
     "publishedAt": "2023-12-05",
     "tags": ["data", "kafka", "pulumi", "terraform"]
+  },
+  {
+    "title": "How DoorDash designed a successful write-heavy scalable and reliable inventory platform",
+    "url": "https://careersatdoordash.com/blog/how-doordash-designed-a-successful-write-heavy-scalable-and-reliable-inventory-platform/",
+    "source": "DoorDash",
+    "publishedAt": "2023-05-10",
+    "tags": ["database", "architecture", "cockroachdb"]
   },
   {
     "title": "Using CockroachDB to Reduce Feature Store Costs by 75%",
@@ -49,11 +77,39 @@
     "tags": ["data", "cdc", "cockroachdb", "kafka"]
   },
   {
+    "title": "Building scalable real time event processing with Kafka and Flink",
+    "url": "https://careersatdoordash.com/blog/building-scalable-real-time-event-processing-with-kafka-and-flink/",
+    "source": "DoorDash",
+    "publishedAt": "2022-10-21",
+    "tags": ["data", "stream-processing", "kafka", "flink"]
+  },
+  {
+    "title": "DoorDash’s Lessons on Improving Performance on High-Traffic Web Pages",
+    "url": "https://careersatdoordash.com/blog/doordashs-lessons-on-improving-performance-on-high-traffic-web-pages/",
+    "source": "DoorDash",
+    "publishedAt": "2022-08-30",
+    "tags": ["frontend", "webpack"]
+  },
+  {
     "title": "3 Changes to Expand DoorDash’s Product Search Beyond Delivery",
     "url": "https://careersatdoordash.com/blog/3-changes-to-expand-doordashs-product-search/",
     "source": "DoorDash",
     "publishedAt": "2022-05-10",
     "tags": ["search", "indexing", "ranking", "elasticsearch"]
+  },
+  {
+    "title": "How We Applied Client-Side Caching to Improve Feature Store Performance by 70%",
+    "url": "https://careersatdoordash.com/blog/how-we-applied-client-side-caching/",
+    "source": "DoorDash",
+    "publishedAt": "2022-05-03",
+    "tags": ["machine-learning", "database", "caching", "redis"]
+  },
+  {
+    "title": "Building a Unified Chat Experience at DoorDash",
+    "url": "https://careersatdoordash.com/blog/building-a-unified-chat-experience-at-doordash/",
+    "source": "DoorDash",
+    "publishedAt": "2022-02-08",
+    "tags": ["architecture", "mobile"]
   },
   {
     "title": "Building Faster Indexing with Apache Kafka and Elasticsearch",

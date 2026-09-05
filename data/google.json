@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Transformers in music recommendation",
+    "url": "https://research.google/blog/transformers-in-music-recommendation/",
+    "source": "Google",
+    "publishedAt": "2024-08-16",
+    "tags": ["machine-learning", "inference"]
+  },
+  {
+    "title": "Answering billions of reporting queries each day with low latency",
+    "url": "https://research.google/blog/answering-billions-of-reporting-queries-each-day-with-low-latency/",
+    "source": "Google",
+    "publishedAt": "2023-10-20",
+    "tags": ["data", "query-engine"]
+  },
+  {
+    "title": "World scale inverse reinforcement learning in Google Maps",
+    "url": "https://research.google/blog/world-scale-inverse-reinforcement-learning-in-google-maps/",
+    "source": "Google",
+    "publishedAt": "2023-09-12",
+    "tags": ["machine-learning", "training"]
+  }
+]

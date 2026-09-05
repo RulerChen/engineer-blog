@@ -104,6 +104,13 @@
     "tags": ["database", "postgresql", "sharding"]
   },
   {
+    "title": "Improving performance with incremental frame loading",
+    "url": "https://www.figma.com/blog/incremental-frame-loading/",
+    "source": "Figma",
+    "publishedAt": "2024-01-23",
+    "tags": ["frontend", "mobile"]
+  },
+  {
     "title": "The growing pains of database architecture",
     "url": "https://www.figma.com/blog/how-figma-scaled-to-multiple-databases/",
     "source": "Figma",
@@ -133,6 +140,20 @@
     "publishedAt": "2021-10-14",
     "series": "figma-livegraph",
     "tags": ["api-design", "graphql"]
+  },
+  {
+    "title": "Behind the feature: The hidden challenges of autosave",
+    "url": "https://www.figma.com/blog/behind-the-feature-autosave/",
+    "source": "Figma",
+    "publishedAt": "2020-10-27",
+    "tags": ["frontend", "offline"]
+  },
+  {
+    "title": "A deep dive on deep search",
+    "url": "https://www.figma.com/blog/deep-search/",
+    "source": "Figma",
+    "publishedAt": "2020-07-21",
+    "tags": ["search", "indexing", "elasticsearch"]
   },
   {
     "title": "How Figma's multiplayer technology works",

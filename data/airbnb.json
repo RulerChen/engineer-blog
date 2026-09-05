@@ -72,6 +72,20 @@
     "tags": ["container", "data", "flink", "kubernetes", "stream-processing"]
   },
   {
+    "title": "Riverbed: Optimizing data access at Airbnb’s scale",
+    "url": "https://medium.com/airbnb-engineering/riverbed-optimizing-data-access-at-airbnbs-scale-c37ecf6456d9",
+    "source": "Airbnb",
+    "publishedAt": "2023-07-25",
+    "tags": ["data", "cdc", "kafka", "spark"]
+  },
+  {
+    "title": "Improving Performance with HTTP Streaming",
+    "url": "https://medium.com/airbnb-engineering/improving-performance-with-http-streaming-ba9e72c66408",
+    "source": "Airbnb",
+    "publishedAt": "2023-05-17",
+    "tags": ["frontend", "network", "http"]
+  },
+  {
     "title": "Improving Istio Propagation Delay",
     "url": "https://medium.com/airbnb-engineering/improving-istio-propagation-delay-d4da9b5b9f90",
     "source": "Airbnb",

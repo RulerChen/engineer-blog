@@ -44,6 +44,20 @@
     ]
   },
   {
+    "title": "Using Machine Learning to Build a Delightful Notification Experience",
+    "url": "https://discord.com/blog/building-delightful-notifications-using-ml",
+    "source": "Discord",
+    "publishedAt": "2022-08-12",
+    "tags": ["machine-learning"]
+  },
+  {
+    "title": "How Discord Creates Insights from Trillions of Data Points",
+    "url": "https://discord.com/blog/how-discord-creates-insights-from-trillions-of-data-points",
+    "source": "Discord",
+    "publishedAt": "2021-11-18",
+    "tags": ["data", "etl", "bigquery", "airflow"]
+  },
+  {
     "title": "How Discord Handles Two and Half Million Concurrent Voice Users using WebRTC",
     "url": "https://discord.com/blog/how-discord-handles-two-and-half-million-concurrent-voice-users-using-webrtc",
     "source": "Discord",

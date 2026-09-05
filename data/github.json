@@ -14,11 +14,25 @@
     "tags": ["architecture", "job-queue", "kafka", "monolith"]
   },
   {
+    "title": "How GitHub uses merge queue to ship hundreds of changes every day",
+    "url": "https://github.blog/engineering/engineering-principles/how-github-uses-merge-queue-to-ship-hundreds-of-changes-every-day/",
+    "source": "GitHub",
+    "publishedAt": "2024-03-06",
+    "tags": ["architecture", "ci-cd"]
+  },
+  {
     "title": "Upgrading GitHub.com to MySQL 8.0",
     "url": "https://github.blog/engineering/infrastructure/upgrading-github-com-to-mysql-8-0/",
     "source": "GitHub",
     "publishedAt": "2023-12-07",
     "tags": ["database", "migration", "mysql", "replication"]
+  },
+  {
+    "title": "How GitHub Docs’ new search works",
+    "url": "https://github.blog/engineering/architecture-optimization/how-github-docs-new-search-works/",
+    "source": "GitHub",
+    "publishedAt": "2023-03-09",
+    "tags": ["search", "indexing", "elasticsearch"]
   },
   {
     "title": "The technology behind GitHub’s new code search",
@@ -34,6 +48,13 @@
     "source": "GitHub",
     "publishedAt": "2022-09-13",
     "tags": ["git", "storage"]
+  },
+  {
+    "title": "Improve Git monorepo performance with a file system monitor",
+    "url": "https://github.blog/engineering/infrastructure/improve-git-monorepo-performance-with-a-file-system-monitor/",
+    "source": "GitHub",
+    "publishedAt": "2022-06-29",
+    "tags": ["architecture", "monorepo", "git"]
   },
   {
     "title": "A brief history of code search at GitHub",

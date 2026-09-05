@@ -36,6 +36,13 @@
     "tags": ["machine-learning"]
   },
   {
+    "title": "How Shopify improved consumer search intent with real-time ML",
+    "url": "https://shopify.engineering/how-shopify-improved-consumer-search-intent-with-real-time-ml",
+    "source": "Shopify",
+    "publishedAt": "2024-10-18",
+    "tags": ["search", "machine-learning", "inference", "dataflow"]
+  },
+  {
     "title": "Improving Shopify App’s Performance",
     "url": "https://shopify.engineering/improving-shopify-app-s-performance",
     "source": "Shopify",

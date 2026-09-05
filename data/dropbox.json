@@ -15,6 +15,13 @@
     "tags": ["hardware"]
   },
   {
+    "title": "Evolving our infrastructure through the messaging system model in Dropbox",
+    "url": "https://dropbox.tech/infrastructure/infrastructure-messaging-system-model-async-platform-evolution",
+    "source": "Dropbox",
+    "publishedAt": "2025-01-21",
+    "tags": ["architecture", "job-queue"]
+  },
+  {
     "title": "Selecting a model for semantic search at Dropbox scale",
     "url": "https://dropbox.tech/machine-learning/selecting-model-semantic-search-dropbox-ai",
     "source": "Dropbox",
@@ -35,6 +42,13 @@
     "source": "Dropbox",
     "publishedAt": "2024-07-25",
     "tags": ["caching", "database"]
+  },
+  {
+    "title": "Putting everything in its right place with ML-powered file organization",
+    "url": "https://dropbox.tech/machine-learning/smart-move-ml-ai-file-organization-automation",
+    "source": "Dropbox",
+    "publishedAt": "2023-10-31",
+    "tags": ["machine-learning", "training"]
   },
   {
     "title": "After four years of SMR storage, here's what we love—and what comes next",
@@ -72,6 +86,13 @@
     "source": "Dropbox",
     "publishedAt": "2022-04-25",
     "tags": ["disaster-recovery", "reliability"]
+  },
+  {
+    "title": "Optimizing payments with machine learning",
+    "url": "https://dropbox.tech/machine-learning/optimizing-payments-with-machine-learning",
+    "source": "Dropbox",
+    "publishedAt": "2021-05-17",
+    "tags": ["machine-learning", "inference"]
   },
   {
     "title": "Atlas: Our journey from a Python monolith to a managed platform",
