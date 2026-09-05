@@ -15,10 +15,10 @@
 - [google](https://developers.googleblog.com) :
 - [google research](https://research.google/blog/) :
 - [linkedin](https://www.linkedin.com/blog/engineering) : 2026-09-05
-- [meta](https://engineering.fb.com) :
+- [meta](https://engineering.fb.com) : 2026-09-05
 - [netflix](https://netflixtechblog.com) : 2026-09-04
 - [notion](https://www.notion.com/blog/topic/tech) : 2026-08-30
-- [pinterest](https://medium.com/pinterest-engineering)
+- [pinterest](https://medium.com/pinterest-engineering) : 
 - [openai](https://openai.com/news/engineering) : 2026-08-30
 - [shopify](https://shopify.engineering) : 2026-08-30
 - [stripe](https://stripe.dev/blog) : 2026-08-30
