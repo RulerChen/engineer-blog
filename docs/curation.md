@@ -10,15 +10,15 @@ Unless user specifies otherwise, please read @docs/source.md for the url of the 
 - The decision-making process behind a system, what trade-offs were made, and why. For example like how Figma gave up on using CRDTs for their collaborative editing system or why Uber decided to migrate from PostgreSQL to MySQL.
 - The experience of building a system, what was learned, and what would be done differently. For example like how Uber run their software factory more efficiently.
 - The experience of optimizing a system, what was learned, and what would be done differently. For example like how Netflix optimized their video streaming system.
-- The specified domain for the company, for example like how Twitter built their timeline system and search recommendation system.
 - The experience of debugging a system, how the problem was identified, what was done to fix it, and what was learned. For example like how PostgresQL find the root cause of a data corruption issue.
+- Describe a specific technical problem, introduce the context, the problem, and how it was solved. For example like how to improve Go runtime performance by optimizing the garbage collector or how to improve I/O latency by using io_uring.
 
 ## Don't collect
 
 - Don't collect posts about products announcements, marketing, hiring, culture sharing, management, awards, or any non-technical topics.
 - Don't collect posts written by non-engineers or intern.
 - Don't collect tutorials and getting-started material, own tools or public ones.
-- Don't collect the posts without technical depth, for example, posts that only describe the architecture of a system without any technical details.
+- Don't collect the posts that are too short (< 500 words) and don't provide enough technical details, for example like a post that only contains a few sentences or a post that only contains a link to a video or a slide deck.
 
 ## Output
 
