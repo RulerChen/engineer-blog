@@ -18,7 +18,7 @@ Unless user specifies otherwise, please read @docs/source.md for the url of the 
 - Don't collect posts about products announcements, marketing, hiring, culture sharing, management, awards, or any non-technical topics.
 - Don't collect posts written by non-engineers or intern.
 - Don't collect tutorials and getting-started material, own tools or public ones.
-- Don't collect the posts without any evolution, decision-making, or deep technical insights.
+- Don't collect the posts without technical depth, for example, posts that only describe the architecture of a system without any technical details.
 
 ## Output
 
