@@ -23,5 +23,5 @@
 - [slack](https://slack.engineering) : 2026-08-31
 - [salesforce](https://engineering.salesforce.com) : 2026-09-05
 - [spotify](https://engineering.atspotify.com) : 2026-09-05
-- [twitter](https://blog.x.com/engineering) :
+- [twitter](https://blog.x.com/engineering) : 2026-09-05
 - [uber](https://eng.uber.com) : 2026-08-30
