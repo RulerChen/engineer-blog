@@ -10,7 +10,9 @@ If yes, take it. If no, skip it. Everything below is that question in more detai
 
 ## Do collect
 
-- A production system or domain with the problem, constraints and numbers named (latency, throughput, cost, instance count, a specific failure).
+- A production system or domain with the problem, constraints and solution.
+- How to use a famous tool or component in a non-trivial way, with the reasoning behind the choices.
+- A cutting edge component or algorithm with the reasoning behind the choices.
 - A migration, rewrite or architectural change with the reasoning kept in: what broke, what was tried, why the final choice won, what it cost.
 
 ## Don't collect
