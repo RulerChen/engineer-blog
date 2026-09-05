@@ -1,0 +1,37 @@
+[
+  {
+    "title": "How we selected the next vector database at Booking.com",
+    "url": "https://booking.ai/how-we-selected-the-next-vector-database-at-booking-com-1e738a5e3bb0",
+    "source": "Booking",
+    "publishedAt": "2026-08-11",
+    "tags": ["search", "vector", "opensearch", "weaviate"]
+  },
+  {
+    "title": "Modernizing a Legacy Endpoint and Why It’s Worth It: a Step-by-Step Guide",
+    "url": "https://medium.com/booking-com-development/modernizing-a-legacy-endpoint-and-why-its-worth-it-a-step-by-step-guide-085d92b419a3",
+    "source": "Booking",
+    "publishedAt": "2024-12-03",
+    "tags": ["architecture", "monolith", "perl", "java"]
+  },
+  {
+    "title": "Leverage graph technology for real-time Fraud Detection and Prevention",
+    "url": "https://medium.com/booking-com-development/leverage-graph-technology-for-real-time-fraud-detection-and-prevention-438336076ea5",
+    "source": "Booking",
+    "publishedAt": "2024-07-10",
+    "tags": ["security", "database", "janusgraph"]
+  },
+  {
+    "title": "Lessons in adopting Airflow on Google Cloud",
+    "url": "https://medium.com/booking-com-development/lessons-in-adopting-airflow-51821709cba4",
+    "source": "Booking",
+    "publishedAt": "2024-04-24",
+    "tags": ["data", "etl", "airflow"]
+  },
+  {
+    "title": "Scaling our customer review system for peak traffic",
+    "url": "https://medium.com/booking-com-development/scaling-our-customer-review-system-for-peak-traffic-cb19be434edf",
+    "source": "Booking",
+    "publishedAt": "2022-11-08",
+    "tags": ["database", "sharding"]
+  }
+]
