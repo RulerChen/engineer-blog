@@ -36,13 +36,6 @@
     "tags": ["machine-learning"]
   },
   {
-    "title": "Mitigating Deadlocks in high concurrency environments",
-    "url": "https://shopify.engineering/mitigating-deadlocks-in-high-concurrency-environments",
-    "source": "Shopify",
-    "publishedAt": "2024-08-14",
-    "tags": ["database", "mysql"]
-  },
-  {
     "title": "Improving Shopify App’s Performance",
     "url": "https://shopify.engineering/improving-shopify-app-s-performance",
     "source": "Shopify",

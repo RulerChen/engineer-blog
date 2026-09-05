@@ -63,7 +63,6 @@
     "url": "https://www.figma.com/blog/the-search-for-speed-in-figma-opensearch/",
     "source": "Figma",
     "publishedAt": "2024-10-10",
-    "series": "figma-search",
     "tags": ["opensearch", "search"]
   },
   {
@@ -134,14 +133,6 @@
     "publishedAt": "2021-10-14",
     "series": "figma-livegraph",
     "tags": ["api-design", "graphql"]
-  },
-  {
-    "title": "A deep dive on deep search",
-    "url": "https://www.figma.com/blog/deep-search/",
-    "source": "Figma",
-    "publishedAt": "2020-07-21",
-    "series": "figma-search",
-    "tags": ["elasticsearch", "search"]
   },
   {
     "title": "How Figma's multiplayer technology works",

@@ -28,32 +28,11 @@
     "tags": ["security", "ml-kem"]
   },
   {
-    "title": "How Global Payments Inc. improved their tail latency using request hedging with Amazon DynamoDB",
-    "url": "https://aws.amazon.com/blogs/database/how-global-payments-inc-improved-their-tail-latency-using-request-hedging-with-amazon-dynamodb/",
-    "source": "Amazon",
-    "publishedAt": "2025-08-26",
-    "tags": ["database", "dynamodb"]
-  },
-  {
-    "title": "Improve Amazon EMR HBase availability and tail latency using generational ZGC",
-    "url": "https://aws.amazon.com/blogs/big-data/improve-amazon-emr-hbase-availability-and-tail-latency-using-generational-zgc/",
-    "source": "Amazon",
-    "publishedAt": "2025-08-19",
-    "tags": ["language", "garbage-collection", "java", "hbase"]
-  },
-  {
     "title": "Under the hood: Amazon EKS ultra scale clusters",
     "url": "https://aws.amazon.com/blogs/containers/under-the-hood-amazon-eks-ultra-scale-clusters/",
     "source": "Amazon",
     "publishedAt": "2025-07-16",
     "tags": ["container", "kubernetes", "etcd"]
-  },
-  {
-    "title": "Handling billions of invocations – best practices from AWS Lambda",
-    "url": "https://aws.amazon.com/blogs/compute/handling-billions-of-invocations-best-practices-from-aws-lambda/",
-    "source": "Amazon",
-    "publishedAt": "2025-03-17",
-    "tags": ["architecture", "job-queue", "cloud", "serverless"]
   },
   {
     "title": "Formal verification makes RSA faster — and faster to deploy",

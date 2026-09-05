@@ -77,14 +77,6 @@
     "tags": ["data", "stream-processing", "kafka"]
   },
   {
-    "title": "Distributed training of sparse ML models — Part 3: Observed speedups",
-    "url": "https://blog.x.com/engineering/en_us/topics/insights/2020/distributed-training-of-sparse-machine-learning-models-3",
-    "source": "Twitter",
-    "publishedAt": "2020-09-23",
-    "series": "twitter-sparse-ml-training",
-    "tags": ["machine-learning", "training", "tensorflow"]
-  },
-  {
     "title": "Distributed training of sparse ML models — Part 2: Optimized strategies",
     "url": "https://blog.x.com/engineering/en_us/topics/insights/2020/distributed-training-of-sparse-machine-learning-models-2",
     "source": "Twitter",

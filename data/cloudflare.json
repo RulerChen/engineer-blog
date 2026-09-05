@@ -98,20 +98,6 @@
     "tags": ["observability", "logging", "clickhouse"]
   },
   {
-    "title": "Open sourcing our fork of PgBouncer",
-    "url": "https://blog.cloudflare.com/open-sourcing-our-fork-of-pgbouncer/",
-    "source": "Cloudflare",
-    "publishedAt": "2022-08-26",
-    "tags": ["database", "postgresql"]
-  },
-  {
-    "title": "Performance isolation in a multi-tenant database environment",
-    "url": "https://blog.cloudflare.com/performance-isolation-in-a-multi-tenant-database-environment/",
-    "source": "Cloudflare",
-    "publishedAt": "2022-08-26",
-    "tags": ["database", "reliability", "overload-control"]
-  },
-  {
     "title": "Missing Manuals - io_uring worker pool",
     "url": "https://blog.cloudflare.com/missing-manuals-io_uring-worker-pool/",
     "source": "Cloudflare",
@@ -131,13 +117,6 @@
     "source": "Cloudflare",
     "publishedAt": "2021-03-12",
     "tags": ["machine-learning", "architecture", "microservice"]
-  },
-  {
-    "title": "How to execute an object file: Part 1",
-    "url": "https://blog.cloudflare.com/how-to-execute-an-object-file-part-1/",
-    "source": "Cloudflare",
-    "publishedAt": "2021-03-02",
-    "tags": ["operating-system", "language"]
   },
   {
     "title": "The effect of switching to TCMalloc on RocksDB memory use",
@@ -189,13 +168,6 @@
     "source": "Cloudflare",
     "publishedAt": "2020-03-02",
     "tags": ["other"]
-  },
-  {
-    "title": "Dogfooding Magic Transit by DDoSing our Austin office",
-    "url": "https://blog.cloudflare.com/who-ddosd-austin/",
-    "source": "Cloudflare",
-    "publishedAt": "2019-10-24",
-    "tags": ["reliability", "overload-control", "network"]
   },
   {
     "title": "Details of the Cloudflare outage on July 2, 2019",

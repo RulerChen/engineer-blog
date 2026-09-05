@@ -161,13 +161,6 @@
     "tags": ["observability", "logging", "kafka"]
   },
   {
-    "title": "Optimizing Performance with Web Workers",
-    "url": "https://engineering.salesforce.com/optimizing-performance-with-web-workers-612b48621d8d/",
-    "source": "Salesforce",
-    "publishedAt": "2017-09-19",
-    "tags": ["frontend", "web-workers"]
-  },
-  {
     "title": "The Crystal Shard: How Salesforce Scales",
     "url": "https://engineering.salesforce.com/the-architecture-files-ep-2-the-crystal-shard-a6025bd9f968/",
     "source": "Salesforce",
