@@ -14,7 +14,7 @@
 - [github](https://github.blog/category/engineering) : 2026-08-30
 - [google](https://developers.googleblog.com) :
 - [google research](https://research.google/blog/) :
-- [linkedin](https://www.linkedin.com/blog/engineering) :
+- [linkedin](https://www.linkedin.com/blog/engineering) : 2026-09-05
 - [meta](https://engineering.fb.com) :
 - [netflix](https://netflixtechblog.com) : 2026-09-04
 - [notion](https://www.notion.com/blog/topic/tech) : 2026-08-30

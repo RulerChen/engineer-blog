@@ -1,0 +1,121 @@
+[
+  {
+    "title": "The training infrastructure behind AI-Powered Job Search: 8X faster multi-teacher distillation",
+    "url": "https://www.linkedin.com/blog/engineering/infrastructure/the-training-infrastructure-behind-ai-powered-job-search-eight-x-faster-multi-teacher-distillation",
+    "source": "LinkedIn",
+    "publishedAt": "2026-08-06",
+    "tags": ["machine-learning", "training", "ray"]
+  },
+  {
+    "title": "Faster than Light: Optimizing Generative Recommender Training Efficiency at LinkedIn",
+    "url": "https://www.linkedin.com/blog/engineering/infrastructure/faster-than-light-optimizing-generative-recommender-training-efficiency-at-linkedin",
+    "source": "LinkedIn",
+    "publishedAt": "2026-05-28",
+    "tags": ["machine-learning", "training"]
+  },
+  {
+    "title": "The 58-Million-Key Freeze: What a HashMap Resize Taught Us About Memory Allocation at Scale",
+    "url": "https://www.linkedin.com/blog/engineering/feed/the-58-million-key-freeze-what-a-hashmap-resize-taught-us-about-memory-allocation-at-scale",
+    "source": "LinkedIn",
+    "publishedAt": "2026-05-21",
+    "tags": ["language", "memory-management", "java", "operating-system", "kernel"]
+  },
+  {
+    "title": "Scaling LLM-Based ranking systems with SGLang at LinkedIn",
+    "url": "https://www.linkedin.com/blog/engineering/ai/scaling-llm-based-ranking-systems-with-sglang-at-linkedin",
+    "source": "LinkedIn",
+    "publishedAt": "2026-02-20",
+    "tags": ["machine-learning", "inference", "llm", "sglang"]
+  },
+  {
+    "title": "Scaling maintenance: Rethinking HDFS block placement for exabyte-scale clusters",
+    "url": "https://www.linkedin.com/blog/engineering/infrastructure/rethinking-hfds-block-placement-for-exabyte-scale-clusters",
+    "source": "LinkedIn",
+    "publishedAt": "2026-01-22",
+    "tags": ["storage", "hadoop", "hdfs"]
+  },
+  {
+    "title": "Reimagining LinkedIn’s search tech stack",
+    "url": "https://www.linkedin.com/blog/engineering/search/reimagining-linkedins-search-stack",
+    "source": "LinkedIn",
+    "publishedAt": "2026-01-21",
+    "tags": ["search", "ranking", "machine-learning", "llm"]
+  },
+  {
+    "title": "Turbocharging LinkedIn’s recommendation systems with SGLang",
+    "url": "https://www.linkedin.com/blog/engineering/ai/turbocharging-linkedins-recommendation-systems-with-sglang",
+    "source": "LinkedIn",
+    "publishedAt": "2025-12-09",
+    "tags": ["machine-learning", "inference", "sglang"]
+  },
+  {
+    "title": "Scalable, Multi-language Service Discovery at LinkedIn",
+    "url": "https://www.linkedin.com/blog/engineering/infrastructure/scalable-multi-language-service-discovery-at-linkedin",
+    "source": "LinkedIn",
+    "publishedAt": "2025-12-03",
+    "tags": ["architecture", "microservice", "zookeeper"]
+  },
+  {
+    "title": "Introducing Northguard and Xinfra: scalable log storage at LinkedIn",
+    "url": "https://www.linkedin.com/blog/engineering/infrastructure/introducing-northguard-and-xinfra",
+    "source": "LinkedIn",
+    "publishedAt": "2025-06-25",
+    "tags": ["data", "stream-processing", "kafka"]
+  },
+  {
+    "title": "Liger-Kernel: Empowering an open source ecosystem of Triton Kernels for Efficient LLM Training",
+    "url": "https://www.linkedin.com/blog/engineering/open-source/liger-kernel-open-source-ecosystem-for-efficient-llm-training",
+    "source": "LinkedIn",
+    "publishedAt": "2024-12-05",
+    "tags": ["machine-learning", "training", "llm", "triton"]
+  },
+  {
+    "title": "Stateful Workload Operator: Stateful Systems on Kubernetes at LinkedIn",
+    "url": "https://www.linkedin.com/blog/engineering/infrastructure/stateful-workload-operator-stateful-systems-on-kubernetes-at-linkedin",
+    "source": "LinkedIn",
+    "publishedAt": "2024-11-12",
+    "tags": ["container", "kubernetes"]
+  },
+  {
+    "title": "Reducing Apache Spark Application Dependencies Upload by 99%",
+    "url": "https://www.linkedin.com/blog/engineering/open-source/reducing-apache-spark-application-dependencies-upload-by-99-",
+    "source": "LinkedIn",
+    "publishedAt": "2023-03-09",
+    "tags": ["data", "spark", "hdfs"]
+  },
+  {
+    "title": "Operating system upgrades at LinkedIn’s scale",
+    "url": "https://www.linkedin.com/blog/engineering/scalability/operating-system-upgrades-at-linkedin-s-scale",
+    "source": "LinkedIn",
+    "publishedAt": "2022-08-31",
+    "tags": ["operating-system", "reliability"]
+  },
+  {
+    "title": "Scaling LinkedIn's Hadoop YARN cluster beyond 10,000 nodes",
+    "url": "https://www.linkedin.com/blog/engineering/open-source/scaling-linkedin-s-hadoop-yarn-cluster-beyond-10-000-nodes",
+    "source": "LinkedIn",
+    "publishedAt": "2021-09-08",
+    "tags": ["data", "hadoop", "yarn"]
+  },
+  {
+    "title": "Rebuilding messaging: How we bootstrapped our platform",
+    "url": "https://www.linkedin.com/blog/engineering/messaging-notifications/bootstrapping-our-new-messaging-platform",
+    "source": "LinkedIn",
+    "publishedAt": "2020-07-21",
+    "tags": ["database", "migration"]
+  },
+  {
+    "title": "How LinkedIn customizes Apache Kafka for 7 trillion messages per day",
+    "url": "https://www.linkedin.com/blog/engineering/open-source/apache-kafka-trillion-messages",
+    "source": "LinkedIn",
+    "publishedAt": "2019-10-08",
+    "tags": ["data", "stream-processing", "kafka"]
+  },
+  {
+    "title": "Did you mean \"Galene\"?",
+    "url": "https://www.linkedin.com/blog/engineering/search/did-you-mean-galene",
+    "source": "LinkedIn",
+    "publishedAt": "2014-06-05",
+    "tags": ["search", "indexing", "lucene"]
+  }
+]
