@@ -1,0 +1,195 @@
+[
+  {
+    "title": "Under the hood: how Amazon EKS Auto Mode detects, repairs, and diagnoses node failures",
+    "url": "https://aws.amazon.com/blogs/containers/under-the-hood-how-amazon-eks-auto-mode-detects-repairs-and-diagnoses-node-failures/",
+    "source": "Amazon",
+    "publishedAt": "2026-08-05",
+    "tags": ["container", "kubernetes", "reliability"]
+  },
+  {
+    "title": "EC2's formally verified \"isolation engine\" provides mathematical assurance of virtual-machine isolation",
+    "url": "https://www.amazon.science/blog/ec2s-formally-verified-isolation-engine-provides-mathematical-assurance-of-virtual-machine-isolation",
+    "source": "Amazon",
+    "publishedAt": "2026-06-10",
+    "tags": ["security", "operating-system", "kernel", "rust"]
+  },
+  {
+    "title": "How flat is replacing fat in AWS data center networks",
+    "url": "https://www.amazon.science/blog/how-flat-is-replacing-fat-in-aws-data-center-networks",
+    "source": "Amazon",
+    "publishedAt": "2026-05-28",
+    "tags": ["network", "hardware"]
+  },
+  {
+    "title": "Verifying and optimizing post-quantum cryptography at Amazon",
+    "url": "https://www.amazon.science/blog/verifying-and-optimizing-post-quantum-cryptography-at-amazon",
+    "source": "Amazon",
+    "publishedAt": "2026-04-07",
+    "tags": ["security", "ml-kem"]
+  },
+  {
+    "title": "How Global Payments Inc. improved their tail latency using request hedging with Amazon DynamoDB",
+    "url": "https://aws.amazon.com/blogs/database/how-global-payments-inc-improved-their-tail-latency-using-request-hedging-with-amazon-dynamodb/",
+    "source": "Amazon",
+    "publishedAt": "2025-08-26",
+    "tags": ["database", "dynamodb"]
+  },
+  {
+    "title": "Improve Amazon EMR HBase availability and tail latency using generational ZGC",
+    "url": "https://aws.amazon.com/blogs/big-data/improve-amazon-emr-hbase-availability-and-tail-latency-using-generational-zgc/",
+    "source": "Amazon",
+    "publishedAt": "2025-08-19",
+    "tags": ["language", "garbage-collection", "java", "hbase"]
+  },
+  {
+    "title": "Under the hood: Amazon EKS ultra scale clusters",
+    "url": "https://aws.amazon.com/blogs/containers/under-the-hood-amazon-eks-ultra-scale-clusters/",
+    "source": "Amazon",
+    "publishedAt": "2025-07-16",
+    "tags": ["container", "kubernetes", "etcd"]
+  },
+  {
+    "title": "Handling billions of invocations – best practices from AWS Lambda",
+    "url": "https://aws.amazon.com/blogs/compute/handling-billions-of-invocations-best-practices-from-aws-lambda/",
+    "source": "Amazon",
+    "publishedAt": "2025-03-17",
+    "tags": ["architecture", "job-queue", "cloud", "serverless"]
+  },
+  {
+    "title": "Formal verification makes RSA faster — and faster to deploy",
+    "url": "https://www.amazon.science/blog/formal-verification-makes-rsa-faster-and-faster-to-deploy",
+    "source": "Amazon",
+    "publishedAt": "2024-08-08",
+    "tags": ["security", "hardware", "graviton"]
+  },
+  {
+    "title": "Amazon OpenSearch Service Under the Hood: OpenSearch Optimized Instances (OR1)",
+    "url": "https://aws.amazon.com/blogs/big-data/amazon-opensearch-service-under-the-hood-opensearch-optimized-instancesor1/",
+    "source": "Amazon",
+    "publishedAt": "2024-04-17",
+    "tags": ["search", "indexing", "storage", "opensearch"]
+  },
+  {
+    "title": "Latency from post-quantum cryptography shrinks as data increases",
+    "url": "https://www.amazon.science/blog/delays-from-post-quantum-cryptography-may-not-be-so-bad",
+    "source": "Amazon",
+    "publishedAt": "2024-03-05",
+    "tags": ["security", "network", "tls"]
+  },
+  {
+    "title": "How we built Cedar with automated reasoning and differential testing",
+    "url": "https://www.amazon.science/blog/how-we-built-cedar-with-automated-reasoning-and-differential-testing",
+    "source": "Amazon",
+    "publishedAt": "2023-05-10",
+    "tags": ["security", "testing", "rust", "dafny"]
+  },
+  {
+    "title": "Invalidating robotic ad clicks in real time",
+    "url": "https://www.amazon.science/blog/invalidating-robotic-ad-clicks-in-real-time",
+    "source": "Amazon",
+    "publishedAt": "2023-03-02",
+    "tags": ["machine-learning", "inference", "redis"]
+  },
+  {
+    "title": "Lessons learned from 10 years of DynamoDB",
+    "url": "https://www.amazon.science/blog/lessons-learned-from-10-years-of-dynamodb",
+    "source": "Amazon",
+    "publishedAt": "2022-10-21",
+    "tags": ["database", "reliability", "overload-control", "dynamodb"]
+  },
+  {
+    "title": "A billion SMT queries a day",
+    "url": "https://www.amazon.science/blog/a-billion-smt-queries-a-day",
+    "source": "Amazon",
+    "publishedAt": "2022-08-18",
+    "tags": ["security", "z3", "cvc5"]
+  },
+  {
+    "title": "Near-linear scaling of gigantic-model training on AWS",
+    "url": "https://www.amazon.science/blog/near-linear-scaling-of-gigantic-model-training-on-aws",
+    "source": "Amazon",
+    "publishedAt": "2022-06-27",
+    "tags": ["machine-learning", "training", "pytorch"]
+  },
+  {
+    "title": "Speeding database queries by rewriting redundancies",
+    "url": "https://www.amazon.science/blog/speeding-database-queries-by-rewriting-redundancies",
+    "source": "Amazon",
+    "publishedAt": "2022-05-19",
+    "tags": ["data", "query-engine", "athena"]
+  },
+  {
+    "title": "How Prime Video updates its app for more than 8,000 device types",
+    "url": "https://www.amazon.science/blog/how-prime-video-updates-its-app-for-more-than-8-000-device-types",
+    "source": "Amazon",
+    "publishedAt": "2022-01-27",
+    "tags": ["frontend", "rust", "webassembly"]
+  },
+  {
+    "title": "Bare metal performance with the AWS Nitro System",
+    "url": "https://aws.amazon.com/blogs/hpc/bare-metal-performance-with-the-aws-nitro-system/",
+    "source": "Amazon",
+    "publishedAt": "2021-08-05",
+    "tags": ["hardware", "cloud", "nitro"]
+  },
+  {
+    "title": "How AWS's Firecracker virtual machines work",
+    "url": "https://www.amazon.science/blog/how-awss-firecracker-virtual-machines-work",
+    "source": "Amazon",
+    "publishedAt": "2020-03-04",
+    "tags": ["operating-system", "kernel", "firecracker", "rust"]
+  },
+  {
+    "title": "Amazon EBS addresses the challenge of the CAP Theorem at scale",
+    "url": "https://www.amazon.science/blog/amazon-ebs-addresses-the-challenge-of-the-cap-theorem-at-scale",
+    "source": "Amazon",
+    "publishedAt": "2020-02-14",
+    "tags": ["database", "replication", "reliability"]
+  },
+  {
+    "title": "Amazon Aurora under the hood: indexing geospatial data using Z-order curves",
+    "url": "https://aws.amazon.com/blogs/database/amazon-aurora-under-the-hood-indexing-geospatial-data-using-z-order-curves/",
+    "source": "Amazon",
+    "publishedAt": "2018-01-22",
+    "tags": ["database", "aurora", "mysql"]
+  },
+  {
+    "title": "Amazon Aurora Under the Hood: Quorum Membership",
+    "url": "https://aws.amazon.com/blogs/database/amazon-aurora-under-the-hood-quorum-membership/",
+    "source": "Amazon",
+    "publishedAt": "2017-08-23",
+    "series": "aurora-quorum",
+    "tags": ["database", "replication", "aurora"]
+  },
+  {
+    "title": "Amazon Aurora Under the Hood: Reducing Costs Using Quorum Sets",
+    "url": "https://aws.amazon.com/blogs/database/amazon-aurora-under-the-hood-reducing-costs-using-quorum-sets/",
+    "source": "Amazon",
+    "publishedAt": "2017-08-21",
+    "series": "aurora-quorum",
+    "tags": ["database", "replication", "aurora"]
+  },
+  {
+    "title": "Amazon Aurora Under the Hood: Quorum Reads and Mutating State",
+    "url": "https://aws.amazon.com/blogs/database/amazon-aurora-under-the-hood-quorum-reads-and-mutating-state/",
+    "source": "Amazon",
+    "publishedAt": "2017-08-16",
+    "series": "aurora-quorum",
+    "tags": ["database", "replication", "aurora"]
+  },
+  {
+    "title": "Amazon Aurora under the hood: quorums and correlated failure",
+    "url": "https://aws.amazon.com/blogs/database/amazon-aurora-under-the-hood-quorum-and-correlated-failure/",
+    "source": "Amazon",
+    "publishedAt": "2017-08-14",
+    "series": "aurora-quorum",
+    "tags": ["database", "replication", "aurora"]
+  },
+  {
+    "title": "Amazon Aurora Under the Hood: Fast DDL",
+    "url": "https://aws.amazon.com/blogs/database/amazon-aurora-under-the-hood-fast-ddl/",
+    "source": "Amazon",
+    "publishedAt": "2017-04-05",
+    "tags": ["database", "schema", "aurora", "mysql"]
+  }
+]
