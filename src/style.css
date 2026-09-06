@@ -119,7 +119,7 @@ input::placeholder {
 .header-spacer {
   flex: 1;
 }
-.theme-toggle {
+.header-button {
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -132,7 +132,7 @@ input::placeholder {
   place-items: center;
   flex-shrink: 0;
 }
-.theme-toggle:hover {
+.header-button:hover {
   border-color: var(--accent);
   color: var(--accent);
 }
