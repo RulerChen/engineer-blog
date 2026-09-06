@@ -45,4 +45,4 @@ A concept with no entries behind it yet is fine, and several above are there on 
 
 **Promote** a concept to a domain once it passes roughly ten entries and they have stopped sharing anything beyond the concept itself. **Absorb** one that ends up on a single entry after a full pass — that is a label, not a filter. This applies to concepts in use; one with no entries is a reservation and stays.
 
-**Never** split a domain because it is large: `database` is a quarter of the list, and the levels beneath it plus the topic filter's All mode narrow it. Size is not a defect, incoherence is. And do not let one company's output drive a domain — several are dominated by a single blog only because `docs/source.md` is still half-scanned.
+**Never** split a domain because it is large: `database` is a quarter of the list, and the levels beneath it plus the topic filter's All mode narrow it. Size is not a defect, incoherence is. And do not let one company's output drive a domain — several are dominated by a single blog only because the source table in the README is still half-scanned.

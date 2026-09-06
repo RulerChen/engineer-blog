@@ -6,14 +6,15 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "build-data": "tsx scripts/fetchIcons.ts && tsx scripts/buildEntries.ts",
+    "build-data": "tsx scripts/fetchIcons.ts && tsx scripts/buildEntries.ts && tsx scripts/buildSourceGrid.ts",
     "predev": "tsx scripts/fetchIcons.ts && tsx scripts/buildEntries.ts",
     "prebuild": "tsx scripts/fetchIcons.ts && tsx scripts/buildEntries.ts",
     "typecheck": "vue-tsc --noEmit",
     "lint": "oxlint .",
     "format": "oxfmt --check .",
     "format:fix": "oxfmt .",
-    "fetch-icons": "tsx scripts/fetchIcons.ts"
+    "fetch-icons": "tsx scripts/fetchIcons.ts",
+    "build-grid": "tsx scripts/buildSourceGrid.ts"
   },
   "dependencies": {
     "vue": "^3.5.39"

@@ -2,7 +2,7 @@
 
 This document is a guideline for curating blog posts. It is a guide for what to collect and what not to collect.
 
-Unless user specifies otherwise, please read @docs/source.md for the url of the blog, and only fetch posts after the date defined in the that file.
+Unless user specifies otherwise, read the source table in @README.md for the url of the blog, and only fetch posts after the date that table records for it. When a scan is done, move that date forward — the table is the only record of how far each blog has been read.
 
 ## Do collect
 
