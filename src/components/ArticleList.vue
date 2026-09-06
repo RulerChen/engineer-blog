@@ -10,6 +10,8 @@ const props = withDefaults(
     /** Series slug → its parts, built from the full dataset so part numbers survive filtering. */
     seriesIndex?: Map<string, Series>;
     bookmarkedIds?: string[];
+    /** Ignored ids — non-empty only while hidden entries are being reviewed. */
+    hiddenIds?: string[];
     /** Tags currently filtered on, forwarded to every card's tag chips. */
     activeTags?: string[];
     emptyTitle?: string;
@@ -19,6 +21,7 @@ const props = withDefaults(
   {
     seriesIndex: () => new Map(),
     bookmarkedIds: () => [],
+    hiddenIds: () => [],
     activeTags: () => [],
     emptyTitle: "No articles found",
     emptyText: "No articles match your filters.",
@@ -28,6 +31,7 @@ const props = withDefaults(
 
 const emit = defineEmits<{
   toggleBookmark: [id: string];
+  toggleHidden: [id: string];
   clearFilters: [];
   selectSeries: [id: string];
   selectTag: [tag: string];
@@ -47,6 +51,7 @@ watch(
 );
 
 const bookmarkedSet = computed(() => new Set(props.bookmarkedIds));
+const hiddenSet = computed(() => new Set(props.hiddenIds));
 const visible = computed(() => props.articles.slice(0, visibleCount.value));
 const hasMore = computed(() => visibleCount.value < props.articles.length);
 
@@ -103,9 +108,11 @@ onBeforeUnmount(() => observer?.disconnect());
           :key="article.id"
           :article="article"
           :bookmarked="bookmarkedSet.has(article.id)"
+          :hidden="hiddenSet.has(article.id)"
           :series="article.series ? seriesIndex.get(article.series) : undefined"
           :active-tags="activeTags"
           @toggle-bookmark="emit('toggleBookmark', $event)"
+          @toggle-hidden="emit('toggleHidden', $event)"
           @select-series="emit('selectSeries', $event)"
           @select-tag="emit('selectTag', $event)"
         />

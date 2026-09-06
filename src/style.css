@@ -591,6 +591,7 @@ input::placeholder {
 /* What the entry is — article, paper, book, video. Leads the meta row as an icon
    only: the silhouette is the label, and a word here would crowd the company. */
 .article-card .meta .entry-type {
+  display: inline-flex;
   flex-shrink: 0;
 }
 .article-card h2 {
@@ -655,7 +656,13 @@ input::placeholder {
   border-color: color-mix(in srgb, var(--accent) 45%, transparent);
   color: var(--accent);
 }
-.bookmark-button {
+.card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-shrink: 0;
+}
+.card-action {
   width: 34px;
   height: 34px;
   border-radius: 10px;
@@ -665,11 +672,40 @@ input::placeholder {
   display: grid;
   place-items: center;
   flex-shrink: 0;
-  color: var(--accent);
 }
-.bookmark-button:hover {
+.card-action:hover {
   border-color: var(--accent);
   background: var(--chip);
+}
+.bookmark-button {
+  color: var(--accent);
+}
+/* The negative half of the pair, so it sits back until the card is hovered —
+   an ignore is one click from removing the entry and should not invite one. */
+.ignore-button {
+  color: var(--muted);
+  opacity: 0;
+}
+.article-card:hover .ignore-button,
+.ignore-button:focus-visible,
+.ignore-button.active {
+  opacity: 1;
+}
+.ignore-button:hover,
+.ignore-button.active {
+  color: var(--accent);
+}
+/* Nothing to hover with: the button has to stand on its own or it is unreachable. */
+@media (hover: none) {
+  .ignore-button {
+    opacity: 1;
+  }
+}
+/* An ignored entry, which only ever renders in its own tab. Dashed rather than
+   faded: a whole list of dimmed cards is just a list that is harder to read, and
+   the border already says these are not in circulation. */
+.article-card.is-hidden {
+  border-style: dashed;
 }
 
 /* Load more */
@@ -838,4 +874,120 @@ input::placeholder {
 .series-active .series-x {
   font-size: 10px;
   opacity: 0.75;
+}
+
+/* Tooltips
+   The native `title` bubble is a black OS rectangle in a system font, which
+   lands on this warm paper palette like something from another program. These
+   are built from the same card, line and shadow as everything else, so a hint
+   reads as part of the page.
+
+   Attribute-driven, so any control can carry one: `data-tip` holds the text,
+   `data-tip-pos="bottom"` drops it below for controls with nothing above them
+   (the sticky header) or inside a clipped box (the filter menus), and
+   `data-tip-align="right"` pins the bubble's right edge to the control's, for
+   the ones close enough to the window edge that a centred bubble would push
+   the page wider. Position and reveal-offset ride on custom properties so the
+   variants stay one declaration each instead of a matrix of transforms. */
+[data-tip] {
+  --tip-x: -50%;
+  --tip-arrow-x: -50%;
+  --tip-arrow-rot: 45deg;
+  /* The 3px the bubble travels while fading in. Zeroed on hover; that is the
+     whole animation. */
+  --tip-y: 3px;
+  position: relative;
+}
+[data-tip]::before,
+[data-tip]::after {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 80;
+  transition:
+    opacity 0.14s ease,
+    transform 0.14s ease,
+    visibility 0s linear 0.14s;
+}
+[data-tip]::after {
+  content: attr(data-tip);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 9px);
+  transform: translate(var(--tip-x), var(--tip-y));
+  width: max-content;
+  max-width: 230px;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--card);
+  color: var(--ink);
+  box-shadow: var(--shadow-hover);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: center;
+  white-space: normal;
+  /* One tip carries a bare url, which has nowhere to break. */
+  overflow-wrap: anywhere;
+}
+/* A square corner of the bubble, rotated under it. Only the two outer borders
+   ever show — the bubble paints after this and covers the rest. */
+[data-tip]::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 4px);
+  width: 9px;
+  height: 9px;
+  background: var(--card);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  border-bottom-right-radius: 3px;
+  transform: translate(var(--tip-arrow-x), var(--tip-y)) rotate(var(--tip-arrow-rot));
+}
+[data-tip]:hover,
+[data-tip]:focus-visible {
+  --tip-y: 0px;
+}
+/* The delay is what keeps a tip from flashing at every control the pointer
+   crosses on its way somewhere else. Only on the way in: leaving is immediate. */
+[data-tip]:hover::before,
+[data-tip]:hover::after,
+[data-tip]:focus-visible::before,
+[data-tip]:focus-visible::after {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.35s;
+}
+[data-tip-pos="bottom"] {
+  --tip-y: -3px;
+  --tip-arrow-rot: 225deg;
+}
+[data-tip-pos="bottom"]::after {
+  top: calc(100% + 9px);
+  bottom: auto;
+}
+[data-tip-pos="bottom"]::before {
+  top: calc(100% + 4px);
+  bottom: auto;
+}
+[data-tip-align="right"] {
+  --tip-x: 0;
+  --tip-arrow-x: 0;
+}
+[data-tip-align="right"]::after {
+  left: auto;
+  right: 0;
+}
+[data-tip-align="right"]::before {
+  left: auto;
+  right: 11px;
+}
+/* Nothing to hover with, and a tap would leave the bubble stuck open. */
+@media (hover: none) {
+  [data-tip]::before,
+  [data-tip]::after {
+    display: none;
+  }
 }

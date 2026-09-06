@@ -4,7 +4,7 @@ import ArticleList from "./components/ArticleList.vue";
 import FilterPanel from "./components/FilterPanel.vue";
 import SearchBar from "./components/SearchBar.vue";
 import { useArticleFilter } from "./composables/useArticleFilter.js";
-import { useBookmarks } from "./composables/useBookmarks.js";
+import { useEntryState } from "./composables/useEntryState.js";
 import { useTheme } from "./composables/useTheme.js";
 import { buildSeriesIndex } from "./lib/series.js";
 import type { Article } from "./types.js";
@@ -12,7 +12,13 @@ import type { Article } from "./types.js";
 const articles = ref<Article[]>([]);
 const loading = ref(true);
 const loadError = ref(false);
-const viewSaved = ref(false);
+/**
+ * Which of the three lists is on screen. Ignored is a destination like the other
+ * two rather than an overlay on All: an ignored entry is never mixed back into
+ * the main list, and the tab is a standing way back to anything dismissed.
+ */
+type View = "all" | "saved" | "ignored";
+const view = ref<View>("all");
 
 /** Newest published first — the list's only ordering. */
 const all = computed(() =>
@@ -20,7 +26,7 @@ const all = computed(() =>
 );
 const { state, filtered, companies, tags } = useArticleFilter(all);
 const { theme, toggleTheme } = useTheme();
-const { bookmarks, toggleBookmark } = useBookmarks();
+const { savedIds, hiddenIds, toggleSaved, toggleHidden } = useEntryState();
 
 /**
  * Built from every entry, not the filtered view, so a card still says "Part 2 of
@@ -34,26 +40,31 @@ const earliestYear = computed(() => {
   return oldest ? Number(oldest.publishedAt.slice(0, 4)) : new Date().getFullYear();
 });
 
+const savedSet = computed(() => new Set(savedIds.value));
+const hiddenSet = computed(() => new Set(hiddenIds.value));
+
 const shown = computed(() => {
-  const list = viewSaved.value
-    ? filtered.value.filter((a) => bookmarks.value.includes(a.id))
-    : filtered.value;
+  const list = filtered.value.filter((a) => {
+    if (view.value === "saved") return savedSet.value.has(a.id);
+    if (view.value === "ignored") return hiddenSet.value.has(a.id);
+    return !hiddenSet.value.has(a.id);
+  });
   // Narrowed to one series, newest-first is backwards: it is a reading list now.
   return state.series ? list.toReversed() : list;
 });
 
-const savedTabLabel = computed(
-  () => `Saved${bookmarks.value.length ? ` · ${bookmarks.value.length}` : ""}`,
-);
-
 const emptyTitle = computed(() => {
-  if (viewSaved.value && bookmarks.value.length === 0) return "No saved entries yet";
+  if (view.value === "saved" && savedIds.value.length === 0) return "No saved entries yet";
+  if (view.value === "ignored" && hiddenIds.value.length === 0) return "Nothing ignored";
   if (all.value.length === 0) return "Nothing here yet";
   return "No entries found";
 });
 const emptyText = computed(() => {
-  if (viewSaved.value && bookmarks.value.length === 0) {
+  if (view.value === "saved" && savedIds.value.length === 0) {
     return "Tap the bookmark on any entry to keep it here for later.";
+  }
+  if (view.value === "ignored" && hiddenIds.value.length === 0) {
+    return "Dismiss an entry and it lands here, out of the main list until you put it back.";
   }
   if (all.value.length === 0) {
     return "The reading list is built from the files in data/ — none loaded.";
@@ -74,7 +85,7 @@ function clearFilters(): void {
 /** Reading one series start to finish — from a card's series row. */
 function selectSeries(id: string): void {
   state.series = id;
-  viewSaved.value = false;
+  view.value = "all";
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
@@ -114,12 +125,15 @@ onMounted(async () => {
         <div class="logo-mark heading-font">E</div>
         <h1 class="heading-font">Engineer Blog Aggregator</h1>
         <div class="header-spacer"></div>
-        <span v-if="all.length" class="header-count" title="Total entries"
+        <span v-if="all.length" class="header-count" data-tip="Total entries" data-tip-pos="bottom"
           >{{ all.length.toLocaleString("en-US") }} entries</span
         >
         <button
           class="theme-toggle"
-          :title="theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+          data-tip-pos="bottom"
+          data-tip-align="right"
+          :aria-label="theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+          :data-tip="theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
           @click="toggleTheme"
         >
           {{ theme === "dark" ? "☀" : "☾" }}
@@ -134,14 +148,42 @@ onMounted(async () => {
       <FilterPanel :state="state" :companies="companies" :tags="tags" :min-year="earliestYear">
         <template #end>
           <div class="tabs">
-            <button class="tab-button" :class="{ active: !viewSaved }" @click="viewSaved = false">
+            <button class="tab-button" :class="{ active: view === 'all' }" @click="view = 'all'">
               All
             </button>
-            <button class="tab-button" :class="{ active: viewSaved }" @click="viewSaved = true">
+            <button
+              class="tab-button"
+              :class="{ active: view === 'saved' }"
+              @click="view = 'saved'"
+            >
               <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor" stroke="none">
                 <path d="M6 3.5h12v17l-6-4.2-6 4.2z"></path>
               </svg>
-              <span>{{ savedTabLabel }}</span>
+              <span>Saved</span>
+            </button>
+            <button
+              class="tab-button"
+              :class="{ active: view === 'ignored' }"
+              @click="view = 'ignored'"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="12"
+                height="12"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M4 4l16 16"></path>
+                <path
+                  d="M9.9 5.7A9.6 9.6 0 0 1 12 5.5c6.5 0 10 6.5 10 6.5a17 17 0 0 1-3.3 4.1"
+                ></path>
+                <path d="M6.4 7.8A16.8 16.8 0 0 0 2 12s3.5 6.5 10 6.5a9.9 9.9 0 0 0 4-.8"></path>
+                <path d="M9.9 10.1a2.9 2.9 0 0 0 4 4"></path>
+              </svg>
+              <span>Ignored</span>
             </button>
           </div>
         </template>
@@ -150,12 +192,14 @@ onMounted(async () => {
       <ArticleList
         :articles="shown"
         :series-index="seriesIndex"
-        :bookmarked-ids="bookmarks"
+        :bookmarked-ids="savedIds"
+        :hidden-ids="hiddenIds"
         :active-tags="state.tags"
         :empty-title="emptyTitle"
         :empty-text="emptyText"
-        :show-clear-button="!viewSaved && all.length > 0"
-        @toggle-bookmark="toggleBookmark"
+        :show-clear-button="view === 'all' && all.length > 0"
+        @toggle-bookmark="toggleSaved"
+        @toggle-hidden="toggleHidden"
         @clear-filters="clearFilters"
         @select-series="selectSeries"
         @select-tag="selectTag"

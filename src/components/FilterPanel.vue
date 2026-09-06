@@ -299,7 +299,8 @@ function clearAll(): void {
             <button
               class="mode-option"
               :class="{ active: state.tagMode === 'any' }"
-              title="Show entries carrying at least one of the selected topics"
+              data-tip-pos="bottom"
+              data-tip="Show entries carrying at least one of the selected topics"
               @click="setTagMode('any')"
             >
               Any
@@ -307,7 +308,8 @@ function clearAll(): void {
             <button
               class="mode-option"
               :class="{ active: state.tagMode === 'all' }"
-              title="Show only entries carrying every selected topic"
+              data-tip-pos="bottom"
+              data-tip="Show only entries carrying every selected topic"
               @click="setTagMode('all')"
             >
               All
@@ -374,7 +376,7 @@ function clearAll(): void {
     <button
       v-if="activeSeries"
       class="series-active"
-      title="Stop showing only this series"
+      data-tip="Stop showing only this series"
       @click="state.series = null"
     >
       <span>{{ activeSeries }}</span>
