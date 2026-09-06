@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import type { FilterState, TagMode } from "../lib/filter.js";
+import { matches, parseQuery } from "../lib/search.js";
 import { seriesLabel } from "../lib/series.js";
 import { sourceName } from "../lib/sources.js";
 
@@ -47,8 +48,8 @@ function toggleTag(tag: string): void {
 }
 
 const filteredCompanies = computed(() => {
-  const q = companySearch.value.trim().toLowerCase();
-  const list = props.companies.filter((c) => !q || sourceName(c.id).toLowerCase().includes(q));
+  const q = parseQuery(companySearch.value);
+  const list = props.companies.filter((c) => matches(sourceName(c.id), q));
   const pinned = new Set(pinnedCompanies.value);
   if (pinned.size === 0) return list;
   return [...list.filter((c) => pinned.has(c.id)), ...list.filter((c) => !pinned.has(c.id))];
@@ -61,8 +62,8 @@ const pinnedCompaniesShown = computed(() => {
 });
 
 const filteredTags = computed(() => {
-  const q = tagSearch.value.trim().toLowerCase();
-  const list = props.tags.filter((t) => !q || t.tag.toLowerCase().includes(q));
+  const q = parseQuery(tagSearch.value);
+  const list = props.tags.filter((t) => matches(t.tag, q));
   const pinned = new Set(pinnedTags.value);
   if (pinned.size === 0) return list;
   return [...list.filter((t) => pinned.has(t.tag)), ...list.filter((t) => !pinned.has(t.tag))];

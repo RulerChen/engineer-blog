@@ -1,3 +1,4 @@
+import { matchScore, parseQuery } from "./search.js";
 import type { Article } from "../types.js";
 
 export type DatePreset = "all" | "week" | "month" | "year" | "custom";
@@ -56,12 +57,17 @@ function dateRange(state: FilterState, now: Date): { from: number; to: number } 
   }
 }
 
+/**
+ * Filter, and — once there is a query — rank by how well the title matched. The
+ * sort is stable, so entries that matched equally well stay newest-first.
+ */
 export function applyFilters(articles: Article[], state: FilterState, now = new Date()): Article[] {
   const { from, to } = dateRange(state, now);
   const companies = new Set(state.companies);
   const tags = new Set(state.tags);
-  const query = state.query.trim().toLowerCase();
-  return articles.filter((article) => {
+  const query = parseQuery(state.query);
+  const scores = query ? new Map<string, number>() : null;
+  const kept = articles.filter((article) => {
     if (companies.size > 0 && !companies.has(article.source)) return false;
     if (tags.size > 0) {
       const matched = article.tags.filter((tag) => tags.has(tag)).length;
@@ -70,9 +76,15 @@ export function applyFilters(articles: Article[], state: FilterState, now = new 
     if (state.series && article.series !== state.series) return false;
     const published = Date.parse(article.publishedAt);
     if (published < from || published >= to) return false;
-    if (query && !article.title.toLowerCase().includes(query)) return false;
+    if (query) {
+      const score = matchScore(article.title, query);
+      if (score === null) return false;
+      scores!.set(article.id, score);
+    }
     return true;
   });
+  if (!scores) return kept;
+  return kept.toSorted((a, b) => scores.get(b.id)! - scores.get(a.id)!);
 }
 
 function countBy(keys: string[]): Map<string, number> {
