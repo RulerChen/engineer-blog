@@ -15,11 +15,21 @@ const props = defineProps<{
 const openMenu = ref<"company" | "tag" | "date" | null>(null);
 const companySearch = ref("");
 const tagSearch = ref("");
+/**
+ * What was already selected when the menu opened. Those rows stay pinned to the
+ * top for the whole session of the menu, so unchecking one does not make it jump
+ * back down into the long list.
+ */
+const pinnedTags = ref<string[]>([]);
+const pinnedCompanies = ref<string[]>([]);
 
 function toggleMenu(menu: "company" | "tag" | "date"): void {
-  openMenu.value = openMenu.value === menu ? null : menu;
+  const opening = openMenu.value !== menu;
+  openMenu.value = opening ? menu : null;
   companySearch.value = "";
   tagSearch.value = "";
+  if (opening && menu === "tag") pinnedTags.value = [...props.state.tags];
+  if (opening && menu === "company") pinnedCompanies.value = [...props.state.companies];
 }
 
 function closeMenus(): void {
@@ -38,12 +48,30 @@ function toggleTag(tag: string): void {
 
 const filteredCompanies = computed(() => {
   const q = companySearch.value.trim().toLowerCase();
-  return props.companies.filter((c) => !q || sourceName(c.id).toLowerCase().includes(q));
+  const list = props.companies.filter((c) => !q || sourceName(c.id).toLowerCase().includes(q));
+  const pinned = new Set(pinnedCompanies.value);
+  if (pinned.size === 0) return list;
+  return [...list.filter((c) => pinned.has(c.id)), ...list.filter((c) => !pinned.has(c.id))];
+});
+
+/** How many of the visible rows are the pinned ones — the divider goes after them. */
+const pinnedCompaniesShown = computed(() => {
+  const pinned = new Set(pinnedCompanies.value);
+  return filteredCompanies.value.filter((c) => pinned.has(c.id)).length;
 });
 
 const filteredTags = computed(() => {
   const q = tagSearch.value.trim().toLowerCase();
-  return props.tags.filter((t) => !q || t.tag.toLowerCase().includes(q));
+  const list = props.tags.filter((t) => !q || t.tag.toLowerCase().includes(q));
+  const pinned = new Set(pinnedTags.value);
+  if (pinned.size === 0) return list;
+  return [...list.filter((t) => pinned.has(t.tag)), ...list.filter((t) => !pinned.has(t.tag))];
+});
+
+/** Same, for topics. */
+const pinnedShown = computed(() => {
+  const pinned = new Set(pinnedTags.value);
+  return filteredTags.value.filter((t) => pinned.has(t.tag)).length;
 });
 
 const companyLabel = computed(() =>
@@ -239,18 +267,19 @@ function clearAll(): void {
       <div v-if="openMenu === 'company'" class="filter-menu" style="z-index: 60">
         <input v-model="companySearch" type="text" placeholder="Find a company…" autofocus />
         <div class="filter-menu-list">
-          <button
-            v-for="c in filteredCompanies"
-            :key="c.id"
-            class="filter-option"
-            @click="toggleCompany(c.id)"
-          >
-            <span class="checkbox" :class="{ checked: state.companies.includes(c.id) }">
-              {{ state.companies.includes(c.id) ? "✓" : "" }}
-            </span>
-            <span class="option-name">{{ sourceName(c.id) }}</span>
-            <span class="option-count">{{ c.count }}</span>
-          </button>
+          <template v-for="(c, i) in filteredCompanies" :key="c.id">
+            <button class="filter-option" @click="toggleCompany(c.id)">
+              <span class="checkbox" :class="{ checked: state.companies.includes(c.id) }">
+                {{ state.companies.includes(c.id) ? "✓" : "" }}
+              </span>
+              <span class="option-name">{{ sourceName(c.id) }}</span>
+              <span class="option-count">{{ c.count }}</span>
+            </button>
+            <div
+              v-if="i === pinnedCompaniesShown - 1 && i < filteredCompanies.length - 1"
+              class="filter-menu-divider"
+            ></div>
+          </template>
           <div v-if="filteredCompanies.length === 0" class="filter-empty">No companies match</div>
         </div>
       </div>
@@ -285,18 +314,19 @@ function clearAll(): void {
           </div>
         </div>
         <div class="filter-menu-list">
-          <button
-            v-for="t in filteredTags"
-            :key="t.tag"
-            class="filter-option"
-            @click="toggleTag(t.tag)"
-          >
-            <span class="checkbox" :class="{ checked: state.tags.includes(t.tag) }">
-              {{ state.tags.includes(t.tag) ? "✓" : "" }}
-            </span>
-            <span class="option-name">{{ t.tag }}</span>
-            <span class="option-count">{{ t.count }}</span>
-          </button>
+          <template v-for="(t, i) in filteredTags" :key="t.tag">
+            <button class="filter-option" @click="toggleTag(t.tag)">
+              <span class="checkbox" :class="{ checked: state.tags.includes(t.tag) }">
+                {{ state.tags.includes(t.tag) ? "✓" : "" }}
+              </span>
+              <span class="option-name">{{ t.tag }}</span>
+              <span class="option-count">{{ t.count }}</span>
+            </button>
+            <div
+              v-if="i === pinnedShown - 1 && i < filteredTags.length - 1"
+              class="filter-menu-divider"
+            ></div>
+          </template>
           <div v-if="filteredTags.length === 0" class="filter-empty">No topics match</div>
         </div>
       </div>

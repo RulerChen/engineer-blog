@@ -331,6 +331,11 @@ input::placeholder {
   color: var(--muted);
   font-size: 12px;
 }
+.filter-menu-divider {
+  height: 1px;
+  background: var(--line);
+  margin: 6px 14px;
+}
 .filter-empty {
   padding: 12px 14px;
   color: var(--muted);
