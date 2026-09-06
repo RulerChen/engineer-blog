@@ -121,6 +121,7 @@ const avatarStyle = computed(() => {
           {{ article.title }}
         </a>
       </h2>
+      <p v-if="article.summary" class="summary">{{ article.summary }}</p>
       <div v-if="article.tags.length || article.commentary?.length" class="tags">
         <button
           v-for="tag in article.tags"

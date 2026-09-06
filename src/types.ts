@@ -32,6 +32,12 @@ export interface Article {
    */
   iconDark?: string;
   publishedAt: string; // ISO 8601
+  /**
+   * Hand-written, and absent on most entries — it is being backfilled. The card
+   * draws it when it is there and nothing when it is not, and search treats it
+   * as a second body of text rather than as something every entry has.
+   */
+  summary?: string;
   /** Series slug shared with the other parts, when the entry is one of several. */
   series?: string;
   tags: string[];

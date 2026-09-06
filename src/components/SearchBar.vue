@@ -38,7 +38,7 @@ onBeforeUnmount(() => clearTimeout(timer));
     <input
       v-model="draft"
       type="search"
-      placeholder="Search titles…"
+      placeholder="Search entries…"
       aria-label="Search articles"
       @input="onInput"
     />

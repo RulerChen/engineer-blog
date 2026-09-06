@@ -1,4 +1,4 @@
-import { matchScore, parseQuery } from "./search.js";
+import { parseQuery, scoreArticle } from "./search.js";
 import type { Article } from "../types.js";
 
 export type DatePreset = "all" | "week" | "month" | "year" | "custom";
@@ -58,7 +58,7 @@ function dateRange(state: FilterState, now: Date): { from: number; to: number } 
 }
 
 /**
- * Filter, and — once there is a query — rank by how well the title matched. The
+ * Filter, and — once there is a query — rank by how well the entry matched. The
  * sort is stable, so entries that matched equally well stay newest-first.
  */
 export function applyFilters(articles: Article[], state: FilterState, now = new Date()): Article[] {
@@ -77,7 +77,7 @@ export function applyFilters(articles: Article[], state: FilterState, now = new 
     const published = Date.parse(article.publishedAt);
     if (published < from || published >= to) return false;
     if (query) {
-      const score = matchScore(article.title, query);
+      const score = scoreArticle(article, query);
       if (score === null) return false;
       scores!.set(article.id, score);
     }

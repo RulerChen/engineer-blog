@@ -50,8 +50,11 @@ export function toArticle(input: EntryInput, icons?: Map<string, IconFiles>): Ar
     publishedAt: toIso(input.publishedAt),
     tags: input.tags ?? [],
   };
-  // Both left off entirely when absent — most entries are standalone and have no
-  // write-ups, and articles.json is shipped to every visitor.
+  // All three left off entirely when absent — most entries are standalone, have
+  // no write-ups and are not summarized yet, and articles.json is shipped to
+  // every visitor.
+  const summary = input.summary?.trim();
+  if (summary) article.summary = summary;
   if (input.series) article.series = input.series;
   if (input.commentary?.length) article.commentary = input.commentary;
   const key = iconKey(input.source);
