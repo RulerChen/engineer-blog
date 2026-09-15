@@ -1,5 +1,19 @@
 [
   {
+    "title": "Evolving Pinterest's Embedding Retrieval Platform",
+    "url": "https://medium.com/pinterest-engineering/evolving-pinterests-embedding-retrieval-platform-aede4e831e01",
+    "source": "Pinterest",
+    "publishedAt": "2026-09-11",
+    "tags": ["search", "vector", "indexing", "spann"]
+  },
+  {
+    "title": "Building Pinterest's VLM Serving Stack on NVIDIA Dynamo",
+    "url": "https://medium.com/pinterest-engineering/building-pinterests-vlm-serving-stack-on-nvidia-dynamo-0dce6e93d0f3",
+    "source": "Pinterest",
+    "publishedAt": "2026-09-10",
+    "tags": ["machine-learning", "inference", "llm", "vllm"]
+  },
+  {
     "title": "Achieving Near-Linear Training Scalability for Pinterest’s Foundation Models",
     "url": "https://medium.com/pinterest-engineering/achieving-near-linear-training-scalability-for-pinterests-foundation-models-14d4f59fe6f6",
     "source": "Pinterest",

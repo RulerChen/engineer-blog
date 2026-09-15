@@ -1,5 +1,28 @@
 [
   {
+    "title": "Migrating Shop app from React Native to native",
+    "url": "https://shopify.engineering/shop-app-migration",
+    "source": "Shopify",
+    "publishedAt": "2026-09-10",
+    "tags": ["mobile", "ios", "android", "react-native"],
+    "series": "shopify-native-mobile"
+  },
+  {
+    "title": "Native is now the future of mobile at Shopify",
+    "url": "https://shopify.engineering/back-to-native",
+    "source": "Shopify",
+    "publishedAt": "2026-09-10",
+    "tags": ["mobile", "react-native"],
+    "series": "shopify-native-mobile"
+  },
+  {
+    "title": "How River takes security work from a fix to merge",
+    "url": "https://shopify.engineering/river-vulnerability-remediation",
+    "source": "Shopify",
+    "publishedAt": "2026-09-02",
+    "tags": ["security", "machine-learning", "agent"]
+  },
+  {
     "title": "Under the River",
     "url": "https://shopify.engineering/under-the-river",
     "source": "Shopify",

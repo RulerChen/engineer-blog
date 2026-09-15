@@ -1,5 +1,19 @@
 [
   {
+    "title": "Halving the Time: How Uber Eats Rebuilt Its Search Pipeline",
+    "url": "https://www.uber.com/blog/uber-eats-search-pipeline/",
+    "source": "Uber",
+    "publishedAt": "2026-09-10",
+    "tags": ["search", "ranking"]
+  },
+  {
+    "title": "From One Horizontal Scaling Controller to Many: Evolving Uber's Compute Platform",
+    "url": "https://www.uber.com/blog/evolving-ubers-compute-platform/",
+    "source": "Uber",
+    "publishedAt": "2026-09-09",
+    "tags": ["container", "kubernetes"]
+  },
+  {
     "title": "Running a Software Factory Efficiently at Uber Scale",
     "url": "https://www.uber.com/blog/efficient-software-factory/",
     "source": "Uber",

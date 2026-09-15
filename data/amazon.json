@@ -1,5 +1,12 @@
 [
   {
+    "title": "Accelerating Spark queries with Iceberg materialized views",
+    "url": "https://aws.amazon.com/blogs/big-data/accelerating-spark-queries-with-iceberg-materialized-views/",
+    "source": "Amazon",
+    "publishedAt": "2026-09-10",
+    "tags": ["data", "query-engine", "spark", "iceberg"]
+  },
+  {
     "title": "Under the hood: how Amazon EKS Auto Mode detects, repairs, and diagnoses node failures",
     "url": "https://aws.amazon.com/blogs/containers/under-the-hood-how-amazon-eks-auto-mode-detects-repairs-and-diagnoses-node-failures/",
     "source": "Amazon",

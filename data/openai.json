@@ -1,5 +1,12 @@
 [
   {
+    "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part I)",
+    "url": "https://openai.com/index/scaling-storage-one-billion-users-part-one",
+    "source": "OpenAI",
+    "publishedAt": "2026-09-11",
+    "tags": ["database", "rust", "cosmos-db", "envoy"]
+  },
+  {
     "title": "Supercomputer networking to accelerate large scale AI training",
     "url": "https://openai.com/index/mrc-supercomputer-networking",
     "source": "OpenAI",
