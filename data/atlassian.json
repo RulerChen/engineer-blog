@@ -28,13 +28,6 @@
     "tags": ["search", "indexing", "opensearch"]
   },
   {
-    "title": "Optimisation Tools for Jira: Reducing Configuration Bloat and Enhancing Performance",
-    "url": "https://www.atlassian.com/blog/how-we-build/optimisation-tools-for-jira",
-    "source": "Atlassian",
-    "publishedAt": "2026-05-13",
-    "tags": ["database", "schema", "caching"]
-  },
-  {
     "title": "Engineering the Forge Billing Platform for Reliability and Scale",
     "url": "https://www.atlassian.com/blog/how-we-build/engineering-the-forge-billing-platform-for-reliability-and-scale",
     "source": "Atlassian",
@@ -61,13 +54,6 @@
     "source": "Atlassian",
     "publishedAt": "2025-11-04",
     "tags": ["hardware", "graviton", "java"]
-  },
-  {
-    "title": "Atlassian's Inference Engine, our self-hosted AI inference service",
-    "url": "https://www.atlassian.com/blog/how-we-build/inference-engine",
-    "source": "Atlassian",
-    "publishedAt": "2025-07-22",
-    "tags": ["machine-learning", "inference", "container", "kubernetes"]
   },
   {
     "title": "Migrating the Jira Database Platform to AWS Aurora",
@@ -126,20 +112,6 @@
     "tags": ["search", "indexing", "elasticsearch"]
   },
   {
-    "title": "Unlocking reliability with Splunk SmartStore",
-    "url": "https://www.atlassian.com/blog/how-we-build/unlocking-reliability-with-splunk-smartstore",
-    "source": "Atlassian",
-    "publishedAt": "2021-07-07",
-    "tags": ["observability", "logging", "splunk"]
-  },
-  {
-    "title": "Caching JQL search in Jira Cloud",
-    "url": "https://www.atlassian.com/blog/how-we-build/reducing-jql-database-load-with-caches",
-    "source": "Atlassian",
-    "publishedAt": "2021-02-02",
-    "tags": ["database", "caching", "redis"]
-  },
-  {
     "title": "Scaling, rearchitecting, and decomposing Confluence Cloud",
     "url": "https://www.atlassian.com/blog/how-we-build/scaling-rearchitecting-and-decomposing-confluence-cloud",
     "source": "Atlassian",
@@ -154,13 +126,6 @@
     "tags": ["database", "replication", "postgresql"]
   },
   {
-    "title": "Solving distributed consistency with Git: how we built Bitbucket Smart Mirror Farms",
-    "url": "https://www.atlassian.com/blog/how-we-build/solving-distributed-consistency-with-git",
-    "source": "Atlassian",
-    "publishedAt": "2020-06-10",
-    "tags": ["architecture", "git"]
-  },
-  {
     "title": "Scaling React server-side rendering in Jira Cloud",
     "url": "https://www.atlassian.com/blog/how-we-build/scaling-react-server-side-rendering-in-jira-cloud",
     "source": "Atlassian",
@@ -168,24 +133,10 @@
     "tags": ["frontend", "react", "redis"]
   },
   {
-    "title": "Using an event-driven architecture to improve Jira Software responsiveness",
-    "url": "https://www.atlassian.com/blog/how-we-build/using-an-event-driven-architecture-to-improve-jira-software-responsiveness",
-    "source": "Atlassian",
-    "publishedAt": "2019-11-05",
-    "tags": ["architecture", "frontend", "kinesis"]
-  },
-  {
     "title": "Our not-so-magic journey scaling low latency, multi-region services on AWS",
     "url": "https://www.atlassian.com/blog/how-we-build/aws-scaling-multi-region-low-latency-service",
     "source": "Atlassian",
     "publishedAt": "2019-05-21",
     "tags": ["architecture", "database", "caching", "dynamodb"]
-  },
-  {
-    "title": "Sync failure handling",
-    "url": "https://www.atlassian.com/blog/how-we-build/sync-failure-handling",
-    "source": "Atlassian",
-    "publishedAt": "2017-02-28",
-    "tags": ["mobile", "frontend", "offline"]
   }
 ]

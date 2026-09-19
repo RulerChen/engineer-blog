@@ -42,13 +42,6 @@
     "tags": ["network", "hardware"]
   },
   {
-    "title": "Meta's Generative Ads Model (GEM): The Central Brain Accelerating Ads Recommendation AI Innovation",
-    "url": "https://engineering.fb.com/2025/11/10/ml-applications/metas-generative-ads-model-gem-the-central-brain-accelerating-ads-recommendation-ai-innovation/",
-    "source": "Meta",
-    "publishedAt": "2025-11-10",
-    "tags": ["machine-learning", "training"]
-  },
-  {
     "title": "Indexing code at scale with Glean",
     "url": "https://engineering.fb.com/2024/12/19/developer-tools/glean-open-source-code-indexing/",
     "source": "Meta",
@@ -63,25 +56,11 @@
     "tags": ["architecture", "mobile"]
   },
   {
-    "title": "Meta Andromeda: Supercharging Advantage+ automation with the next-gen personalized ads retrieval engine",
-    "url": "https://engineering.fb.com/2024/12/02/production-engineering/meta-andromeda-advantage-automation-next-gen-personalized-ads-retrieval-engine/",
-    "source": "Meta",
-    "publishedAt": "2024-12-02",
-    "tags": ["machine-learning", "inference", "hardware"]
-  },
-  {
     "title": "Sequence learning: A paradigm shift for personalized ads recommendations",
     "url": "https://engineering.fb.com/2024/11/19/data-infrastructure/sequence-learning-personalized-ads-recommendations/",
     "source": "Meta",
     "publishedAt": "2024-11-19",
     "tags": ["machine-learning", "training"]
-  },
-  {
-    "title": "How Meta animates AI-generated images at scale",
-    "url": "https://engineering.fb.com/2024/08/14/production-engineering/how-meta-animates-ai-generated-images-at-scale/",
-    "source": "Meta",
-    "publishedAt": "2024-08-14",
-    "tags": ["machine-learning", "inference", "pytorch"]
   },
   {
     "title": "RoCE networks for distributed AI training at scale",
@@ -105,25 +84,11 @@
     "tags": ["machine-learning", "training", "llm"]
   },
   {
-    "title": "Building Meta’s GenAI Infrastructure",
-    "url": "https://engineering.fb.com/2024/03/12/data-center-engineering/building-metas-genai-infrastructure/",
-    "source": "Meta",
-    "publishedAt": "2024-03-12",
-    "tags": ["machine-learning", "training", "hardware"]
-  },
-  {
     "title": "How Meta built the infrastructure for Threads",
     "url": "https://engineering.fb.com/2023/12/19/core-infra/how-meta-built-the-infrastructure-for-threads/",
     "source": "Meta",
     "publishedAt": "2023-12-19",
     "tags": ["database", "zippydb", "architecture", "job-queue"]
-  },
-  {
-    "title": "Building end-to-end security for Messenger",
-    "url": "https://engineering.fb.com/2023/12/06/security/building-end-to-end-security-for-messenger/",
-    "source": "Meta",
-    "publishedAt": "2023-12-06",
-    "tags": ["security"]
   },
   {
     "title": "Scaling the Instagram Explore recommendations system",
@@ -152,20 +117,6 @@
     "source": "Meta",
     "publishedAt": "2022-11-21",
     "tags": ["network", "hardware"]
-  },
-  {
-    "title": "Reducing Instagram's basic video compute time by 94 percent",
-    "url": "https://engineering.fb.com/2022/11/04/video-engineering/instagram-video-processing-encoding-reduction/",
-    "source": "Meta",
-    "publishedAt": "2022-11-04",
-    "tags": ["storage", "encoding"]
-  },
-  {
-    "title": "Improving Instagram notification management with machine learning and causal inference",
-    "url": "https://engineering.fb.com/2022/10/31/ml-applications/instagram-notification-management-machine-learning/",
-    "source": "Meta",
-    "publishedAt": "2022-10-31",
-    "tags": ["machine-learning", "inference"]
   },
   {
     "title": "Scaling data ingestion for machine learning training at Meta",
@@ -240,20 +191,6 @@
     "tags": ["architecture", "job-queue", "mysql"]
   },
   {
-    "title": "How machine learning powers Facebook’s News Feed ranking algorithm",
-    "url": "https://engineering.fb.com/2021/01/26/ml-applications/news-feed-ranking/",
-    "source": "Meta",
-    "publishedAt": "2021-01-26",
-    "tags": ["machine-learning", "inference"]
-  },
-  {
-    "title": "How Instagram suggests new content",
-    "url": "https://engineering.fb.com/2020/12/10/web/how-instagram-suggests-new-content/",
-    "source": "Meta",
-    "publishedAt": "2020-12-10",
-    "tags": ["machine-learning", "inference"]
-  },
-  {
     "title": "How we scale Live streaming for millions of viewers simultaneously",
     "url": "https://engineering.fb.com/2020/10/22/video-engineering/live-streaming/",
     "source": "Meta",
@@ -289,13 +226,6 @@
     "tags": ["database", "migration", "mysql", "myrocks"]
   },
   {
-    "title": "Rapid release at massive scale",
-    "url": "https://engineering.fb.com/2017/08/31/web/rapid-release-at-massive-scale/",
-    "source": "Meta",
-    "publishedAt": "2017-08-31",
-    "tags": ["architecture", "ci-cd"]
-  },
-  {
     "title": "LogDevice: a distributed data store for logs",
     "url": "https://engineering.fb.com/2017/08/31/core-infra/logdevice-a-distributed-data-store-for-logs/",
     "source": "Meta",
@@ -324,13 +254,6 @@
     "tags": ["data", "etl", "spark"]
   },
   {
-    "title": "Dragon: A distributed graph query engine",
-    "url": "https://engineering.fb.com/2016/03/18/data-infrastructure/dragon-a-distributed-graph-query-engine/",
-    "source": "Meta",
-    "publishedAt": "2016-03-18",
-    "tags": ["data", "query-engine", "dragon"]
-  },
-  {
     "title": "Under the hood: Facebook's cold storage system",
     "url": "https://engineering.fb.com/2015/05/04/core-infra/under-the-hood-facebook-s-cold-storage-system/",
     "source": "Meta",
@@ -338,46 +261,11 @@
     "tags": ["storage", "tiering", "hardware"]
   },
   {
-    "title": "Even faster: Data at the speed of Presto ORC",
-    "url": "https://engineering.fb.com/2015/03/17/core-infra/even-faster-data-at-the-speed-of-presto-orc/",
-    "source": "Meta",
-    "publishedAt": "2015-03-17",
-    "tags": ["data", "query-engine", "presto", "orc"]
-  },
-  {
-    "title": "Solving the Mystery of Link Imbalance: A Metastable Failure State at Scale",
-    "url": "https://engineering.fb.com/2014/11/14/production-engineering/solving-the-mystery-of-link-imbalance-a-metastable-failure-state-at-scale/",
-    "source": "Meta",
-    "publishedAt": "2014-11-14",
-    "tags": ["reliability", "postmortem", "network"]
-  },
-  {
-    "title": "Introducing data center fabric, the next-generation Facebook data center network",
-    "url": "https://engineering.fb.com/2014/11/14/production-engineering/introducing-data-center-fabric-the-next-generation-facebook-data-center-network/",
-    "source": "Meta",
-    "publishedAt": "2014-11-14",
-    "tags": ["network", "hardware"]
-  },
-  {
     "title": "Scaling the Facebook data warehouse to 300 PB",
     "url": "https://engineering.fb.com/2014/04/10/core-infra/scaling-the-facebook-data-warehouse-to-300-pb/",
     "source": "Meta",
     "publishedAt": "2014-04-10",
-    "tags": ["data", "data-lake", "hive", "orc"]
-  },
-  {
-    "title": "An analysis of Facebook photo caching",
-    "url": "https://engineering.fb.com/2014/02/27/web/an-analysis-of-facebook-photo-caching-2/",
-    "source": "Meta",
-    "publishedAt": "2014-02-27",
-    "tags": ["storage", "network"]
-  },
-  {
-    "title": "Scaling Mercurial at Facebook",
-    "url": "https://engineering.fb.com/2014/01/07/core-infra/scaling-mercurial-at-facebook/",
-    "source": "Meta",
-    "publishedAt": "2014-01-07",
-    "tags": ["architecture", "monorepo", "mercurial"]
+    "tags": ["data", "data-lake", "hive"]
   },
   {
     "title": "Presto: Interacting with petabytes of data at Facebook",

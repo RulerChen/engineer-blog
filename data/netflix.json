@@ -123,13 +123,6 @@
     "tags": ["machine-learning", "training", "llm"]
   },
   {
-    "title": "Introducing Impressions at Netflix",
-    "url": "https://netflixtechblog.com/introducing-impressions-at-netflix-e2b67c88c9fb",
-    "source": "Netflix",
-    "publishedAt": "2025-02-15",
-    "tags": ["data", "stream-processing", "kafka", "flink"]
-  },
-  {
     "title": "Netflix’s Distributed Counter Abstraction",
     "url": "https://netflixtechblog.com/netflixs-distributed-counter-abstraction-8d0c45eb66b2",
     "source": "Netflix",
@@ -186,13 +179,6 @@
     "tags": ["search", "indexing", "elasticsearch"]
   },
   {
-    "title": "Supporting Diverse ML Systems at Netflix",
-    "url": "https://netflixtechblog.com/supporting-diverse-ml-systems-at-netflix-2d2e6b6d205d",
-    "source": "Netflix",
-    "publishedAt": "2024-03-07",
-    "tags": ["machine-learning", "metaflow"]
-  },
-  {
     "title": "Rebuilding Netflix Video Processing Pipeline with Microservices",
     "url": "https://netflixtechblog.com/rebuilding-netflix-video-processing-pipeline-with-microservices-4e5e6310e359",
     "source": "Netflix",
@@ -208,26 +194,11 @@
     "tags": ["search", "vector", "machine-learning"]
   },
   {
-    "title": "Streaming SQL in Data Mesh",
-    "url": "https://netflixtechblog.com/streaming-sql-in-data-mesh-0d83f5a00d08",
-    "source": "Netflix",
-    "publishedAt": "2023-11-03",
-    "series": "netflix-data-mesh",
-    "tags": ["data", "stream-processing", "flink"]
-  },
-  {
     "title": "Kubernetes And Kernel Panics",
     "url": "https://netflixtechblog.com/kubernetes-and-kernel-panics-ed620b9c6225",
     "source": "Netflix",
     "publishedAt": "2023-10-27",
     "tags": ["container", "kubernetes", "operating-system"]
-  },
-  {
-    "title": "Migrating Netflix to GraphQL Safely",
-    "url": "https://netflixtechblog.com/migrating-netflix-to-graphql-safely-8e1e4d4f1e72",
-    "source": "Netflix",
-    "publishedAt": "2023-06-14",
-    "tags": ["api-design", "graphql", "testing"]
   },
   {
     "title": "Migrating Critical Traffic At Scale with No Downtime — Part 1",
@@ -270,14 +241,6 @@
     "source": "Netflix",
     "publishedAt": "2022-09-21",
     "tags": ["machine-learning", "training", "security"]
-  },
-  {
-    "title": "Data Mesh — A Data Movement and Processing Platform @ Netflix",
-    "url": "https://netflixtechblog.com/data-mesh-a-data-movement-and-processing-platform-netflix-1288bcab2873",
-    "source": "Netflix",
-    "publishedAt": "2022-08-01",
-    "series": "netflix-data-mesh",
-    "tags": ["data", "cdc", "stream-processing"]
   },
   {
     "title": "Rapid Event Notification System at Netflix",
@@ -330,50 +293,5 @@
     "source": "Netflix",
     "publishedAt": "2017-12-07",
     "tags": ["machine-learning"]
-  },
-  {
-    "title": "Netflix and Fill",
-    "url": "https://netflixtechblog.com/netflix-and-fill-c43a32b490c0",
-    "source": "Netflix",
-    "publishedAt": "2016-08-11",
-    "tags": ["network", "storage"]
-  },
-  {
-    "title": "Netflix Billing Migration to AWS — Part III",
-    "url": "https://netflixtechblog.com/netflix-billing-migration-to-aws-part-iii-7d94ab9d1f59",
-    "source": "Netflix",
-    "publishedAt": "2016-08-01",
-    "series": "netflix-billing-migration",
-    "tags": ["database", "migration"]
-  },
-  {
-    "title": "Netflix Billing Migration to AWS — Part II",
-    "url": "https://netflixtechblog.com/netflix-billing-migration-to-aws-part-ii-834f6358126",
-    "source": "Netflix",
-    "publishedAt": "2016-07-20",
-    "series": "netflix-billing-migration",
-    "tags": ["database", "migration", "architecture"]
-  },
-  {
-    "title": "Netflix Billing Migration to AWS",
-    "url": "https://netflixtechblog.com/netflix-billing-migration-to-aws-451fba085a4",
-    "source": "Netflix",
-    "publishedAt": "2016-06-21",
-    "series": "netflix-billing-migration",
-    "tags": ["database", "migration", "architecture"]
-  },
-  {
-    "title": "Kafka Inside Keystone Pipeline",
-    "url": "https://netflixtechblog.com/kafka-inside-keystone-pipeline-dd5aeabaf6bb",
-    "source": "Netflix",
-    "publishedAt": "2016-04-27",
-    "tags": ["data", "stream-processing", "kafka"]
-  },
-  {
-    "title": "Fault Tolerance in a High Volume, Distributed System",
-    "url": "https://netflixtechblog.com/fault-tolerance-in-a-high-volume-distributed-system-91ab4faae74a",
-    "source": "Netflix",
-    "publishedAt": "2012-02-29",
-    "tags": ["reliability", "overload-control", "architecture"]
   }
 ]

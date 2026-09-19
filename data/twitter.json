@@ -1,12 +1,5 @@
 [
   {
-    "title": "Kerberizing Hadoop Clusters at Twitter",
-    "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2023/kerberizing-hadoop-clusters-at-twitter",
-    "source": "Twitter",
-    "publishedAt": "2023-02-23",
-    "tags": ["security", "hadoop", "kerberos"]
-  },
-  {
     "title": "How we scaled Reads On the Twitter Users Database",
     "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2023/how-we-scaled-reads-on-the-twitter-users-database",
     "source": "Twitter",
@@ -118,7 +111,7 @@
     "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2020/rebuild_twitter_public_api_2020",
     "source": "Twitter",
     "publishedAt": "2020-08-12",
-    "tags": ["api-design", "rest", "graphql"]
+    "tags": ["api-design", "restful", "graphql"]
   },
   {
     "title": "Reducing search indexing latency to one second",
@@ -205,13 +198,6 @@
     "tags": ["reliability", "capacity-planning", "hardware"]
   },
   {
-    "title": "Discovery and Consumption of Analytics Data at Twitter",
-    "url": "https://blog.x.com/engineering/en_us/topics/insights/2016/discovery-and-consumption-of-analytics-data-at-twitter",
-    "source": "Twitter",
-    "publishedAt": "2016-06-29",
-    "tags": ["data", "data-lake"]
-  },
-  {
     "title": "Observability at Twitter: technical overview, part II",
     "url": "https://blog.x.com/engineering/en_us/a/2016/observability-at-twitter-technical-overview-part-ii",
     "source": "Twitter",
@@ -247,13 +233,6 @@
     "source": "Twitter",
     "publishedAt": "2015-09-16",
     "tags": ["data", "stream-processing", "bookkeeper"]
-  },
-  {
-    "title": "Building a complete Tweet index",
-    "url": "https://blog.x.com/engineering/en_us/a/2014/building-a-complete-tweet-index",
-    "source": "Twitter",
-    "publishedAt": "2014-11-18",
-    "tags": ["search", "indexing", "earlybird"]
   },
   {
     "title": "New Tweets per second record, and how!",

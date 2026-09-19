@@ -93,27 +93,6 @@
     "tags": ["search", "architecture"]
   },
   {
-    "title": "Simple, Fast, and Scalable Reverse Image Search Using Perceptual Hashes and DynamoDB",
-    "url": "https://www.canva.dev/blog/engineering/simple-fast-and-scalable-reverse-image-search-using-perceptual-hashes-and-dynamodb/",
-    "source": "Canva",
-    "publishedAt": "2022-10-16",
-    "tags": ["search", "indexing", "dynamodb"]
-  },
-  {
-    "title": "Supporting GPU-accelerated Machine Learning with Kubernetes and Nix",
-    "url": "https://www.canva.dev/blog/engineering/supporting-gpu-accelerated-machine-learning-with-kubernetes-and-nix/",
-    "source": "Canva",
-    "publishedAt": "2022-07-05",
-    "tags": ["container", "kubernetes", "machine-learning", "nix"]
-  },
-  {
-    "title": "Migrating from Solr to Elasticsearch, and their differences",
-    "url": "https://www.canva.dev/blog/engineering/migrating-from-solr-to-elasticsearch-and-their-differences/",
-    "source": "Canva",
-    "publishedAt": "2022-02-14",
-    "tags": ["search", "indexing", "elasticsearch", "solr"]
-  },
-  {
     "title": "Machine learning hyperparameter optimization with Argo",
     "url": "https://www.canva.dev/blog/engineering/machine-learning-hyperparameter-optimization-with-argo/",
     "source": "Canva",

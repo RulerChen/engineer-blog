@@ -17,9 +17,9 @@ const openMenu = ref<"company" | "tag" | "date" | null>(null);
 const companySearch = ref("");
 const tagSearch = ref("");
 /**
- * What was already selected when the menu opened. Those rows stay pinned to the
- * top for the whole session of the menu, so unchecking one does not make it jump
- * back down into the long list.
+ * What is pinned to the top of the menu: seeded from the selection when the menu
+ * opens, so checking a row never makes it jump out from under the cursor, and
+ * dropped the moment a row is unchecked, so it falls straight back into the list.
  */
 const pinnedTags = ref<string[]>([]);
 const pinnedCompanies = ref<string[]>([]);
@@ -39,12 +39,22 @@ function closeMenus(): void {
 
 function toggleCompany(id: string): void {
   const cur = props.state.companies;
-  props.state.companies = cur.includes(id) ? cur.filter((x) => x !== id) : [...cur, id];
+  if (!cur.includes(id)) {
+    props.state.companies = [...cur, id];
+    return;
+  }
+  props.state.companies = cur.filter((x) => x !== id);
+  pinnedCompanies.value = pinnedCompanies.value.filter((x) => x !== id);
 }
 
 function toggleTag(tag: string): void {
   const cur = props.state.tags;
-  props.state.tags = cur.includes(tag) ? cur.filter((x) => x !== tag) : [...cur, tag];
+  if (!cur.includes(tag)) {
+    props.state.tags = [...cur, tag];
+    return;
+  }
+  props.state.tags = cur.filter((x) => x !== tag);
+  pinnedTags.value = pinnedTags.value.filter((x) => x !== tag);
 }
 
 const filteredCompanies = computed(() => {

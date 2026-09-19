@@ -88,7 +88,7 @@
     "url": "https://www.linkedin.com/blog/engineering/infrastructure/accelerating-linkedins-my-network-tab",
     "source": "LinkedIn",
     "publishedAt": "2024-12-20",
-    "tags": ["frontend", "architecture"]
+    "tags": ["frontend"]
   },
   {
     "title": "Stateful Workload Operator: Stateful Systems on Kubernetes at LinkedIn",
@@ -133,13 +133,6 @@
     "tags": ["data", "etl"]
   },
   {
-    "title": "Upscaling LinkedIn's Profile Datastore While Reducing Costs",
-    "url": "https://www.linkedin.com/blog/engineering/data-management/upscaling-profile-datastore-while-reducing-costs",
-    "source": "LinkedIn",
-    "publishedAt": "2023-05-09",
-    "tags": ["database", "caching", "couchbase", "espresso"]
-  },
-  {
     "title": "Reducing Apache Spark Application Dependencies Upload by 99%",
     "url": "https://www.linkedin.com/blog/engineering/open-source/reducing-apache-spark-application-dependencies-upload-by-99-",
     "source": "LinkedIn",
@@ -175,13 +168,6 @@
     "tags": ["data", "etl", "hadoop"]
   },
   {
-    "title": "Completing a member knowledge graph with Graph Neural Networks",
-    "url": "https://www.linkedin.com/blog/engineering/knowledge/completing-a-member-knowledge-graph-with-graph-neural-networks",
-    "source": "LinkedIn",
-    "publishedAt": "2021-12-01",
-    "tags": ["machine-learning", "training"]
-  },
-  {
     "title": "Scaling LinkedIn's Hadoop YARN cluster beyond 10,000 nodes",
     "url": "https://www.linkedin.com/blog/engineering/open-source/scaling-linkedin-s-hadoop-yarn-cluster-beyond-10-000-nodes",
     "source": "LinkedIn",
@@ -215,12 +201,5 @@
     "source": "LinkedIn",
     "publishedAt": "2019-10-08",
     "tags": ["data", "stream-processing", "kafka"]
-  },
-  {
-    "title": "Did you mean \"Galene\"?",
-    "url": "https://www.linkedin.com/blog/engineering/search/did-you-mean-galene",
-    "source": "LinkedIn",
-    "publishedAt": "2014-06-05",
-    "tags": ["search", "indexing", "lucene"]
   }
 ]

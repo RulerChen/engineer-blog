@@ -222,13 +222,6 @@
     "tags": ["hardware", "storage"]
   },
   {
-    "title": "Handling system failures during payment communication",
-    "url": "https://dropbox.tech/infrastructure/handling-system-failures-during-payment-communication",
-    "source": "Dropbox",
-    "publishedAt": "2017-09-29",
-    "tags": ["reliability"]
-  },
-  {
     "title": "Optimizing web servers for high throughput and low latency",
     "url": "https://dropbox.tech/infrastructure/optimizing-web-servers-for-high-throughput-and-low-latency",
     "source": "Dropbox",
@@ -258,12 +251,5 @@
     "publishedAt": "2016-05-06",
     "series": "dropbox-magic-pocket",
     "tags": ["object-storage", "storage"]
-  },
-  {
-    "title": "Streaming File Synchronization",
-    "url": "https://dropbox.tech/infrastructure/streaming-file-synchronization",
-    "source": "Dropbox",
-    "publishedAt": "2014-07-10",
-    "tags": ["storage"]
   }
 ]

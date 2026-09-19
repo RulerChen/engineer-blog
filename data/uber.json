@@ -42,13 +42,6 @@
     "tags": ["overload-control", "reliability"]
   },
   {
-    "title": "Open Source and In-House: How Uber Optimizes LLM Training",
-    "url": "https://www.uber.com/blog/open-source-and-in-house-how-uber-optimizes-llm-training/",
-    "source": "Uber",
-    "publishedAt": "2026-04-14",
-    "tags": ["machine-learning", "training", "llm"]
-  },
-  {
     "title": "Uber's Rate Limiting System",
     "url": "https://www.uber.com/blog/ubers-rate-limiting-system/",
     "source": "Uber",
@@ -225,13 +218,6 @@
     "tags": ["machine-learning", "inference"]
   },
   {
-    "title": "Deduping and Storing Images at Uber Eats",
-    "url": "https://www.uber.com/blog/deduping-and-storing-images-at-uber-eats/",
-    "source": "Uber",
-    "publishedAt": "2022-09-08",
-    "tags": ["storage", "object-storage"]
-  },
-  {
     "title": "MySQL to MyRocks Migration in Uber's Distributed Datastores",
     "url": "https://www.uber.com/blog/mysql-to-myrocks-migration-in-uber-distributed-datastores/",
     "source": "Uber",
@@ -383,33 +369,12 @@
     "tags": ["architecture", "geospatial"]
   },
   {
-    "title": "Introducing QALM, Uber's QoS Load Management Framework",
-    "url": "https://www.uber.com/blog/qalm-qos-load-management-framework/",
-    "source": "Uber",
-    "publishedAt": "2018-03-22",
-    "tags": ["overload-control", "reliability"]
-  },
-  {
     "title": "Code Migration in Production: Rewriting the Sharding Layer of Uber's Schemaless Datastore",
     "url": "https://www.uber.com/blog/schemaless-rewrite/",
     "source": "Uber",
     "publishedAt": "2018-02-22",
     "series": "uber-schemaless",
     "tags": ["database", "mysql", "sharding"]
-  },
-  {
-    "title": "Building Reliable Reprocessing and Dead Letter Queues with Apache Kafka",
-    "url": "https://www.uber.com/blog/reliable-reprocessing/",
-    "source": "Uber",
-    "publishedAt": "2018-02-16",
-    "tags": ["architecture", "job-queue", "kafka"]
-  },
-  {
-    "title": "Evolving Distributed Tracing at Uber Engineering",
-    "url": "https://www.uber.com/blog/distributed-tracing/",
-    "source": "Uber",
-    "publishedAt": "2017-02-02",
-    "tags": ["observability", "tracing"]
   },
   {
     "title": "Why Uber Engineering Switched from Postgres to MySQL",

@@ -21,13 +21,6 @@
     "tags": ["search", "machine-learning", "llm"]
   },
   {
-    "title": "Building DoorDash’s product knowledge graph with large language models",
-    "url": "https://careersatdoordash.com/blog/building-doordashs-product-knowledge-graph-with-large-language-models/",
-    "source": "DoorDash",
-    "publishedAt": "2024-04-23",
-    "tags": ["machine-learning", "llm"]
-  },
-  {
     "title": "Introducing DoorDash’s in-house search engine",
     "url": "https://careersatdoordash.com/blog/introducing-doordashs-in-house-search-engine/",
     "source": "DoorDash",
@@ -88,7 +81,7 @@
     "url": "https://careersatdoordash.com/blog/doordashs-lessons-on-improving-performance-on-high-traffic-web-pages/",
     "source": "DoorDash",
     "publishedAt": "2022-08-30",
-    "tags": ["frontend", "webpack"]
+    "tags": ["frontend"]
   },
   {
     "title": "3 Changes to Expand DoorDash’s Product Search Beyond Delivery",
@@ -103,13 +96,6 @@
     "source": "DoorDash",
     "publishedAt": "2022-05-03",
     "tags": ["machine-learning", "database", "caching", "redis"]
-  },
-  {
-    "title": "Building a Unified Chat Experience at DoorDash",
-    "url": "https://careersatdoordash.com/blog/building-a-unified-chat-experience-at-doordash/",
-    "source": "DoorDash",
-    "publishedAt": "2022-02-08",
-    "tags": ["architecture", "mobile"]
   },
   {
     "title": "Building Faster Indexing with Apache Kafka and Elasticsearch",

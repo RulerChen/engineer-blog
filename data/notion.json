@@ -18,7 +18,7 @@
     "url": "https://www.notion.com/blog/two-years-of-vector-search-at-notion",
     "source": "Notion",
     "publishedAt": "2026-02-19",
-    "tags": ["ray", "search", "vector"]
+    "tags": ["search", "ray"]
   },
   {
     "title": "Balancing cost and reliability for Spark on Kubernetes",
@@ -32,7 +32,7 @@
     "url": "https://www.notion.com/blog/how-we-made-notion-available-offline",
     "source": "Notion",
     "publishedAt": "2025-12-11",
-    "tags": ["frontend", "offline", "sqlite"]
+    "tags": ["frontend", "sqlite"]
   },
   {
     "title": "How we sped up Notion in the browser with WASM SQLite",
@@ -46,7 +46,7 @@
     "url": "https://www.notion.com/blog/building-and-scaling-notions-data-lake",
     "source": "Notion",
     "publishedAt": "2024-07-01",
-    "tags": ["cdc", "data", "data-lake", "s3", "spark"]
+    "tags": ["data", "data-lake", "hudi", "spark"]
   },
   {
     "title": "The Great Re-shard: adding Postgres capacity (again) with zero downtime",
