@@ -268,20 +268,6 @@
     "tags": ["data", "data-lake", "hive"]
   },
   {
-    "title": "Presto: Interacting with petabytes of data at Facebook",
-    "url": "https://engineering.fb.com/2013/11/06/core-infra/presto-interacting-with-petabytes-of-data-at-facebook/",
-    "source": "Meta",
-    "publishedAt": "2013-11-06",
-    "tags": ["data", "query-engine", "presto"]
-  },
-  {
-    "title": "TAO: The power of the graph",
-    "url": "https://engineering.fb.com/2013/06/25/core-infra/tao-the-power-of-the-graph/",
-    "source": "Meta",
-    "publishedAt": "2013-06-25",
-    "tags": ["database", "caching", "tao"]
-  },
-  {
     "title": "Needle in a haystack: efficient storage of billions of photos",
     "url": "https://engineering.fb.com/2009/04/30/core-infra/needle-in-a-haystack-efficient-storage-of-billions-of-photos/",
     "source": "Meta",

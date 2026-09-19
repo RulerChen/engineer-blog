@@ -28,13 +28,6 @@
     "tags": ["search", "indexing", "storage", "opensearch"]
   },
   {
-    "title": "Lessons learned from 10 years of DynamoDB",
-    "url": "https://www.amazon.science/blog/lessons-learned-from-10-years-of-dynamodb",
-    "source": "Amazon",
-    "publishedAt": "2022-10-21",
-    "tags": ["database", "reliability", "overload-control", "dynamodb"]
-  },
-  {
     "title": "How Prime Video updates its app for more than 8,000 device types",
     "url": "https://www.amazon.science/blog/how-prime-video-updates-its-app-for-more-than-8-000-device-types",
     "source": "Amazon",

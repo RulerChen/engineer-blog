@@ -245,6 +245,17 @@ async function fetchIcon(domain: string): Promise<Icon | null> {
   return best;
 }
 
+/**
+ * Whether that host is the source's own site. A paper's host is whoever
+ * published it — arxiv.org, usenix.org, a university course page — and its
+ * favicon is that publisher's mark, not the source's. Without this the entry
+ * for a Stanford paper hosted on usenix.org gets USENIX's logo, which is worse
+ * than the lettered avatar because it looks deliberate.
+ */
+function ownSite(host: string, key: string): boolean {
+  return host.split(".").some((label) => iconKey(label) === key);
+}
+
 /** Source keys that already have a file, whatever extension or theme it was saved under. */
 async function cached(): Promise<Set<string>> {
   const files = await readdir(ICON_DIR).catch(() => [] as string[]);
@@ -287,7 +298,7 @@ async function main(): Promise<void> {
     // chose, and four of ours came back at 32px, so the brand sets go first:
     // Iconify, which names the square mark outright, then svgl, which is the
     // one that ships a monochrome mark as a light/dark pair.
-    const own = await fetchIcon(host).catch(() => null);
+    const own = ownSite(host, key) ? await fetchIcon(host).catch(() => null) : null;
     let brand: Brand | null = null;
     let from = host;
     if (!(own && usableMark(own))) {
