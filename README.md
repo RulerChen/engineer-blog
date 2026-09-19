@@ -36,6 +36,7 @@
 | [Notion](https://www.notion.com/blog/topic/tech)           | 2026-09-15   |
 | [OpenAI](https://openai.com/news/engineering)              | 2026-09-15   |
 | [Pinterest](https://medium.com/pinterest-engineering)      | 2026-09-15   |
+| [PlanetScale](https://planetscale.com/blog)                | 2026-09-18   |
 | [Salesforce](https://engineering.salesforce.com)           | 2026-09-15   |
 | [Shopify](https://shopify.engineering)                     | 2026-09-15   |
 | [Slack](https://slack.engineering)                         | 2026-09-15   |
