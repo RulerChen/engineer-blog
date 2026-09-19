@@ -20,7 +20,7 @@ Closed set; adding one is a deliberate change to this file, not a typing decisio
 | `container`        | `kubernetes` `docker`                                                                      |
 | `reliability`      | `overload-control` `postmortem` `disaster-recovery` `capacity-planning`                    |
 | `architecture`     | `monorepo` `monolith` `microservice` `ci-cd` `api-gateway` `job-queue` `geospatial` `crdt` |
-| `api-design`       | `restful` `graphql` `grpc`                                                                    |
+| `api-design`       | `restful` `graphql` `grpc`                                                                 |
 | `storage`          | `object-storage` `block-storage` `tiering` `compression` `encoding`                        |
 | `search`           | `indexing` `vector` `ranking`                                                              |
 | `testing`          | `load-testing` `chaos-testing`                                                             |
