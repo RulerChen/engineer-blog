@@ -56,6 +56,7 @@ function toArticle(input: EntryInput, icons?: Map<string, IconFiles>): Article {
   const summary = input.summary?.trim();
   if (summary) article.summary = summary;
   if (input.series) article.series = input.series;
+  if (input.topic) article.topic = input.topic;
   if (input.commentary?.length) article.commentary = input.commentary;
   const key = iconKey(input.source);
   const icon = key ? icons?.get(key) : undefined;
@@ -80,14 +81,28 @@ export function buildArticles(inputs: EntryInput[], icons?: Map<string, IconFile
   );
 }
 
+/**
+ * The two files the two pages fetch. Papers are split out rather than filtered
+ * in the browser because neither page ever draws the other's entries: one
+ * combined file would send every visitor the seventh of the list they are not
+ * going to see, and make the papers page wait on the blog posts to parse.
+ */
+export function splitCorpora(entries: Article[]): { articles: Article[]; papers: Article[] } {
+  return {
+    articles: entries.filter((entry) => entry.type !== "paper"),
+    papers: entries.filter((entry) => entry.type === "paper"),
+  };
+}
+
 async function main(): Promise<void> {
   const outDir = fileURLToPath(new URL("../public/", import.meta.url));
   const inputs = await readEntries();
   const icons = await readIcons(join(outDir, "icons"));
-  const articles = buildArticles(inputs, icons);
+  const { articles, papers } = splitCorpora(buildArticles(inputs, icons));
   await mkdir(outDir, { recursive: true });
   await writeFile(join(outDir, "articles.json"), JSON.stringify(articles), "utf8");
-  console.log(`wrote ${articles.length} entries`);
+  await writeFile(join(outDir, "papers.json"), JSON.stringify(papers), "utf8");
+  console.log(`wrote ${articles.length} entries and ${papers.length} papers`);
 }
 
 if (

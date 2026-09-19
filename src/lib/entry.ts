@@ -22,6 +22,8 @@ export interface EntryInput {
   summary?: string;
   /** Slug grouping this entry with its other parts. Same slug = same series. */
   series?: string;
+  /** Paper topic id, from src/lib/paperTopics.ts. Papers carry one; blog entries carry none. */
+  topic?: string;
   tags?: string[];
   /** Other people's write-ups about this entry — `{ source, url, type? }` each. */
   commentary?: Commentary[];

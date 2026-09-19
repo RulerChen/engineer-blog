@@ -1,139 +1,158 @@
 [
   {
-    "title": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
+    "title": "DeepSeek-R1",
     "url": "https://arxiv.org/abs/2501.12948",
     "type": "paper",
     "source": "DeepSeek",
     "publishedAt": "2025-01-22",
-    "tags": ["machine-learning", "training", "llm"]
+    "topic": "ml-rl",
+    "summary": "Gets reasoning out of reinforcement learning against verifiable answers, with little or no supervised reasoning data first."
   },
   {
-    "title": "DeepSeek-V3 Technical Report",
+    "title": "DeepSeek-V3",
     "url": "https://arxiv.org/abs/2412.19437",
     "type": "paper",
     "source": "DeepSeek",
     "publishedAt": "2024-12-27",
-    "tags": ["machine-learning", "training", "llm"]
+    "topic": "ml-llm",
+    "summary": "A mixture-of-experts model trained for a fraction of the usual cost, with the parallelism and FP8 detail most reports omit."
   },
   {
-    "title": "Actions Speak Louder than Words: Trillion-Parameter Sequential Transducers for Generative Recommendations",
+    "title": "Actions Speak Louder than Words",
     "url": "https://arxiv.org/abs/2402.17152",
     "type": "paper",
     "source": "Meta",
     "publishedAt": "2024-02-27",
-    "tags": ["machine-learning", "recommendation", "transformer"]
+    "topic": "ml-classic",
+    "summary": "Recasts recommendation as sequential transduction, so one large sequence model replaces a feature-engineering stack."
   },
   {
-    "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+    "title": "vLLM",
     "url": "https://arxiv.org/abs/2309.06180",
     "type": "paper",
     "source": "UC Berkeley",
     "publishedAt": "2023-09-12",
-    "tags": ["machine-learning", "inference", "vllm"]
+    "topic": "ml-infra",
+    "summary": "Manages the KV cache in fixed-size pages like virtual memory, since fragmentation was what limited serving throughput."
   },
   {
-    "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+    "title": "Direct Preference Optimization",
     "url": "https://arxiv.org/abs/2305.18290",
     "type": "paper",
     "source": "Stanford",
     "publishedAt": "2023-05-29",
-    "tags": ["machine-learning", "training", "llm"]
+    "topic": "ml-rl",
+    "summary": "Shows the RLHF objective has a closed form optimizable on preference pairs, removing the reward model and the RL loop."
   },
   {
-    "title": "LLaMA: Open and Efficient Foundation Language Models",
+    "title": "LLaMA",
     "url": "https://arxiv.org/abs/2302.13971",
     "type": "paper",
     "source": "Meta",
     "publishedAt": "2023-02-27",
-    "tags": ["machine-learning", "llm", "training"]
+    "topic": "ml-llm",
+    "summary": "Trains smaller models on far more tokens than compute-optimal, because inference cost is what a deployed model charges you."
   },
   {
-    "title": "Robust Speech Recognition via Large-Scale Weak Supervision",
+    "title": "Whisper",
     "url": "https://arxiv.org/abs/2212.04356",
     "type": "paper",
     "source": "OpenAI",
     "publishedAt": "2022-12-06",
-    "tags": ["machine-learning", "training", "whisper"]
+    "topic": "ml-nlp",
+    "summary": "Trains on a very large weakly-labelled multilingual set, and gets robustness without per-dataset fine-tuning."
   },
   {
-    "title": "Amazon DynamoDB: A Scalable, Predictably Performant, and Fully Managed NoSQL Database Service",
+    "title": "DynamoDB",
     "url": "https://www.usenix.org/conference/atc22/presentation/elhemali",
     "type": "paper",
     "source": "Amazon",
     "publishedAt": "2022-07-11",
-    "tags": ["database", "dynamodb"]
+    "topic": "db-real-system",
+    "summary": "Fifteen years of running a managed key-value service, and what predictable performance actually costs to deliver."
   },
   {
-    "title": "Amazon Redshift Re-invented",
+    "title": "Redshift Re-invented",
     "url": "https://www.amazon.science/publications/amazon-redshift-re-invented",
     "type": "paper",
     "source": "Amazon",
     "publishedAt": "2022-06-12",
-    "tags": ["data", "query-engine", "redshift"]
+    "topic": "db-real-system",
+    "summary": "What a decade of customer workloads changed in the warehouse: automatic tuning, and compute separated from managed storage."
   },
   {
-    "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+    "title": "FlashAttention",
     "url": "https://arxiv.org/abs/2205.14135",
     "type": "paper",
     "source": "Stanford",
     "publishedAt": "2022-05-27",
-    "tags": ["machine-learning", "training", "hardware"]
+    "topic": "ml-infra",
+    "summary": "Computes exact attention without ever materializing the attention matrix, by tiling the work to fit in SRAM."
   },
   {
-    "title": "Training Compute-Optimal Large Language Models",
-    "url": "https://arxiv.org/abs/2203.15556",
-    "type": "paper",
-    "source": "DeepMind",
-    "publishedAt": "2022-03-29",
-    "tags": ["machine-learning", "training", "llm"]
-  },
-  {
-    "title": "Training language models to follow instructions with human feedback",
+    "title": "InstructGPT",
     "url": "https://arxiv.org/abs/2203.02155",
     "type": "paper",
     "source": "OpenAI",
     "publishedAt": "2022-03-04",
-    "tags": ["machine-learning", "llm", "training"]
+    "topic": "ml-rl",
+    "summary": "Fine-tunes on human demonstrations, then optimizes against a reward model learned from preference comparisons."
   },
   {
-    "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+    "title": "Chain-of-Thought Prompting",
     "url": "https://arxiv.org/abs/2201.11903",
     "type": "paper",
     "source": "Google",
     "publishedAt": "2022-01-28",
-    "tags": ["machine-learning", "llm"]
+    "topic": "ml-llm",
+    "summary": "Showing the model worked examples with intermediate steps makes it produce reasoning steps, and answers improve."
   },
   {
-    "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+    "title": "LoRA",
     "url": "https://arxiv.org/abs/2106.09685",
     "type": "paper",
     "source": "Microsoft",
     "publishedAt": "2021-06-17",
-    "tags": ["machine-learning", "training", "lora"]
+    "topic": "ml-llm",
+    "summary": "Freezes the pretrained weights and trains a low-rank update, which makes a fine-tune small and swappable."
   },
   {
-    "title": "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity",
+    "title": "Switch Transformers",
     "url": "https://arxiv.org/abs/2101.03961",
     "type": "paper",
     "source": "Google",
     "publishedAt": "2021-01-11",
-    "tags": ["machine-learning", "training", "llm"]
+    "topic": "ml-llm",
+    "summary": "Routes each token to a single expert instead of a dense layer, so parameter count grows without proportional compute."
   },
   {
-    "title": "TiDB: A Raft-based HTAP Database",
+    "title": "TiDB",
     "url": "https://www.vldb.org/pvldb/vol13/p3072-huang.pdf",
     "type": "paper",
     "source": "PingCAP",
     "publishedAt": "2020-08-31",
-    "tags": ["database", "replication", "tidb"]
+    "topic": "db-real-system",
+    "series": "spanner",
+    "summary": "Serves analytics off a columnar replica kept over Raft, so one system does OLTP and OLAP without a separate pipeline."
   },
   {
-    "title": "Language Models are Few-Shot Learners",
+    "title": "CockroachDB",
+    "url": "https://www.cockroachlabs.com/pdf/cockroachdb-the-resilient-geo-distributed-sql-database-sigmod-2020.pdf",
+    "type": "paper",
+    "source": "Cockroach Labs",
+    "publishedAt": "2020-06-14",
+    "topic": "db-real-system",
+    "series": "spanner",
+    "summary": "Serializable geo-distributed transactions without special clocks, using hybrid logical clocks and reads that refresh their timestamp."
+  },
+  {
+    "title": "GPT-3",
     "url": "https://arxiv.org/abs/2005.14165",
     "type": "paper",
     "source": "OpenAI",
     "publishedAt": "2020-05-28",
-    "tags": ["machine-learning", "llm", "training"]
+    "topic": "ml-llm",
+    "summary": "Shows scale alone gets a language model to do tasks from examples in the prompt, with no gradient updates."
   },
   {
     "title": "Scaling Laws for Neural Language Models",
@@ -141,103 +160,35 @@
     "type": "paper",
     "source": "OpenAI",
     "publishedAt": "2020-01-23",
-    "tags": ["machine-learning", "training", "llm"]
+    "topic": "ml-fundamentals",
+    "summary": "Finds loss follows smooth power laws in parameters, data and compute, which turned model sizing into extrapolation."
   },
   {
-    "title": "PyTorch: An Imperative Style, High-Performance Deep Learning Library",
-    "url": "https://arxiv.org/abs/1912.01703",
-    "type": "paper",
-    "source": "Meta",
-    "publishedAt": "2019-12-03",
-    "tags": ["machine-learning", "training", "pytorch"]
-  },
-  {
-    "title": "ZeRO: Memory Optimizations Toward Training Trillion Parameter Models",
-    "url": "https://arxiv.org/abs/1910.02054",
-    "type": "paper",
-    "source": "Microsoft",
-    "publishedAt": "2019-10-04",
-    "tags": ["machine-learning", "training", "deepspeed"]
-  },
-  {
-    "title": "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism",
-    "url": "https://arxiv.org/abs/1909.08053",
-    "type": "paper",
-    "source": "NVIDIA",
-    "publishedAt": "2019-09-17",
-    "tags": ["machine-learning", "training", "llm"]
-  },
-  {
-    "title": "Deep Learning Recommendation Model for Personalization and Recommendation Systems",
+    "title": "DLRM",
     "url": "https://arxiv.org/abs/1906.00091",
     "type": "paper",
     "source": "Meta",
     "publishedAt": "2019-05-31",
-    "tags": ["machine-learning", "recommendation", "pytorch"]
+    "topic": "ml-classic",
+    "summary": "An open reference architecture for recommendation, and the parallelism its embedding tables force on you."
   },
   {
-    "title": "Presto: SQL on Everything",
+    "title": "Presto",
     "url": "https://trino.io/Presto_SQL_on_Everything.pdf",
     "type": "paper",
     "source": "Meta",
     "publishedAt": "2019-04-08",
-    "tags": ["data", "query-engine", "presto"]
+    "topic": "db-real-system",
+    "summary": "A distributed SQL engine that queries data where it lives across many connectors rather than requiring a load."
   },
   {
-    "title": "The eXpress Data Path: Fast Programmable Packet Processing in the Operating System Kernel",
-    "url": "https://raw.githubusercontent.com/tohojo/xdp-paper/master/xdp-the-express-data-path.pdf",
-    "type": "paper",
-    "source": "Karlstad University",
-    "publishedAt": "2018-12-04",
-    "tags": ["network", "operating-system", "ebpf"]
-  },
-  {
-    "title": "Applying Deep Learning To Airbnb Search",
-    "url": "https://arxiv.org/abs/1810.09591",
-    "type": "paper",
-    "source": "Airbnb",
-    "publishedAt": "2018-10-22",
-    "tags": ["search", "ranking", "machine-learning"]
-  },
-  {
-    "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+    "title": "BERT",
     "url": "https://arxiv.org/abs/1810.04805",
     "type": "paper",
     "source": "Google",
     "publishedAt": "2018-10-11",
-    "tags": ["machine-learning", "training", "bert"]
-  },
-  {
-    "title": "Graph Convolutional Neural Networks for Web-Scale Recommender Systems",
-    "url": "https://arxiv.org/abs/1806.01973",
-    "type": "paper",
-    "source": "Pinterest",
-    "publishedAt": "2018-06-06",
-    "tags": ["machine-learning", "recommendation"]
-  },
-  {
-    "title": "The QUIC Transport Protocol: Design and Internet-Scale Deployment",
-    "url": "https://research.google/pubs/the-quic-transport-protocol-design-and-internet-scale-deployment/",
-    "type": "paper",
-    "source": "Google",
-    "publishedAt": "2017-08-21",
-    "tags": ["network", "http", "quic"]
-  },
-  {
-    "title": "Proximal Policy Optimization Algorithms",
-    "url": "https://arxiv.org/abs/1707.06347",
-    "type": "paper",
-    "source": "OpenAI",
-    "publishedAt": "2017-07-20",
-    "tags": ["machine-learning", "training", "ppo"]
-  },
-  {
-    "title": "In-Datacenter Performance Analysis of a Tensor Processing Unit",
-    "url": "https://research.google/pubs/in-datacenter-performance-analysis-of-a-tensor-processing-unit/",
-    "type": "paper",
-    "source": "Google",
-    "publishedAt": "2017-06-24",
-    "tags": ["hardware", "machine-learning", "tpu"]
+    "topic": "ml-nlp",
+    "summary": "Pre-trains a bidirectional transformer with masked language modelling, then fine-tunes it per task."
   },
   {
     "title": "Attention Is All You Need",
@@ -245,343 +196,236 @@
     "type": "paper",
     "source": "Google",
     "publishedAt": "2017-06-12",
-    "tags": ["machine-learning", "training", "transformer"]
+    "topic": "ml-fundamentals",
+    "summary": "Drops recurrence and convolution for self-attention, making sequence modelling parallel over positions."
   },
   {
-    "title": "Amazon Aurora: Design Considerations for High Throughput Cloud-Native Relational Databases",
+    "title": "Aurora",
     "url": "https://www.amazon.science/publications/amazon-aurora-design-considerations-for-high-throughput-cloud-native-relational-databases",
     "type": "paper",
     "source": "Amazon",
     "publishedAt": "2017-05-14",
-    "tags": ["database", "replication", "aurora"]
+    "topic": "db-real-system",
+    "summary": "Pushes redo log application into the storage layer, because the network, not the disk, was the bottleneck."
   },
   {
-    "title": "Billion-scale similarity search with GPUs",
-    "url": "https://arxiv.org/abs/1702.08734",
-    "type": "paper",
-    "source": "Meta",
-    "publishedAt": "2017-02-28",
-    "tags": ["search", "vector", "faiss"]
-  },
-  {
-    "title": "BBR: Congestion-Based Congestion Control",
+    "title": "BBR",
     "url": "https://research.google/pubs/bbr-congestion-based-congestion-control/",
     "type": "paper",
     "source": "Google",
     "publishedAt": "2016-10-01",
-    "tags": ["network", "bbr"]
+    "topic": "net-algorithm",
+    "summary": "Models the bottleneck bandwidth and round-trip time instead of treating loss as the congestion signal."
   },
   {
-    "title": "Deep Neural Networks for YouTube Recommendations",
+    "title": "YouTube Recommendations",
     "url": "https://research.google/pubs/deep-neural-networks-for-youtube-recommendations/",
     "type": "paper",
     "source": "Google",
     "publishedAt": "2016-09-15",
-    "tags": ["machine-learning", "recommendation"]
+    "topic": "ml-classic",
+    "summary": "Splits recommendation into candidate generation and ranking, and trains on watch time rather than clicks."
   },
   {
-    "title": "The Snowflake Elastic Data Warehouse",
+    "title": "Snowflake",
     "url": "https://info.snowflake.net/rs/252-RFO-227/images/Snowflake_SIGMOD.pdf",
     "type": "paper",
     "source": "Snowflake",
     "publishedAt": "2016-06-26",
-    "tags": ["data", "data-lake", "snowflake"]
+    "topic": "db-real-system",
+    "summary": "Separates storage from compute so each scales and is billed on its own, over shared object storage."
   },
   {
-    "title": "Efficient and Robust Approximate Nearest Neighbor Search Using Hierarchical Navigable Small World Graphs",
-    "url": "https://arxiv.org/abs/1603.09320",
-    "type": "paper",
-    "source": "Institute of Applied Physics RAS",
-    "publishedAt": "2016-03-30",
-    "tags": ["search", "vector", "hnsw"]
-  },
-  {
-    "title": "Maglev: A Fast and Reliable Software Network Load Balancer",
-    "url": "https://research.google/pubs/maglev-a-fast-and-reliable-software-network-load-balancer/",
-    "type": "paper",
-    "source": "Google",
-    "publishedAt": "2016-03-16",
-    "tags": ["network", "load-balance", "maglev"]
-  },
-  {
-    "title": "Deep Residual Learning for Image Recognition",
-    "url": "https://arxiv.org/abs/1512.03385",
-    "type": "paper",
-    "source": "Microsoft",
-    "publishedAt": "2015-12-10",
-    "tags": ["machine-learning", "training"]
-  },
-  {
-    "title": "Gorilla: A Fast, Scalable, In-Memory Time Series Database",
-    "url": "https://www.vldb.org/pvldb/vol8/p1816-teller.pdf",
-    "type": "paper",
-    "source": "Meta",
-    "publishedAt": "2015-08-31",
-    "tags": ["observability", "metrics", "gorilla"]
-  },
-  {
-    "title": "Jupiter Rising: A Decade of Clos Topologies and Centralized Control in Google's Datacenter Network",
-    "url": "https://research.google/pubs/jupiter-rising-a-decade-of-clos-topologies-and-centralized-control-in-googles-datacenter-network/",
-    "type": "paper",
-    "source": "Google",
-    "publishedAt": "2015-08-17",
-    "tags": ["network"]
-  },
-  {
-    "title": "Lightweight Asynchronous Snapshots for Distributed Dataflows",
-    "url": "https://arxiv.org/abs/1506.08603",
-    "type": "paper",
-    "source": "KTH",
-    "publishedAt": "2015-06-29",
-    "tags": ["data", "stream-processing", "flink"]
-  },
-  {
-    "title": "Scalability! But at what COST?",
-    "url": "https://www.usenix.org/conference/hotos15/workshop-program/presentation/mcsherry",
-    "type": "paper",
-    "source": "Microsoft",
-    "publishedAt": "2015-05-18",
-    "tags": ["data"]
-  },
-  {
-    "title": "Large-scale cluster management at Google with Borg",
+    "title": "Borg",
     "url": "https://research.google/pubs/large-scale-cluster-management-at-google-with-borg/",
     "type": "paper",
     "source": "Google",
     "publishedAt": "2015-04-21",
-    "tags": ["container", "borg"]
+    "topic": "ds-real-system",
+    "summary": "Mixes services and batch jobs on the same machines, overcommitting to batch and reclaiming when services need it."
   },
   {
-    "title": "f4: Facebook's Warm BLOB Storage System",
+    "title": "f4",
     "url": "https://www.usenix.org/conference/osdi14/technical-sessions/presentation/muralidhar",
     "type": "paper",
     "source": "Meta",
     "publishedAt": "2014-10-06",
-    "tags": ["storage", "encoding", "f4"]
+    "topic": "ds-real-system",
+    "summary": "Moves BLOBs that have stopped being read from full replication to erasure coding, splitting the tier by access pattern."
   },
   {
-    "title": "Practical Lessons from Predicting Clicks on Ads at Facebook",
+    "title": "Predicting Clicks on Ads at Facebook",
     "url": "https://quinonero.net/Publications/predicting-clicks-facebook.pdf",
     "type": "paper",
     "source": "Meta",
     "publishedAt": "2014-08-24",
-    "tags": ["machine-learning", "recommendation"]
+    "topic": "ml-classic",
+    "summary": "Decision-tree features feeding a linear online learner, and the finding that data freshness mattered more than the model class."
   },
   {
-    "title": "In Search of an Understandable Consensus Algorithm (Raft)",
+    "title": "Raft",
     "url": "https://www.usenix.org/conference/atc14/technical-sessions/presentation/ongaro",
     "type": "paper",
     "source": "Stanford",
     "publishedAt": "2014-06-19",
-    "tags": ["architecture", "raft"]
+    "topic": "ds-consensus",
+    "summary": "A consensus algorithm built for understandability, keeping leader election, log replication and safety separate."
   },
   {
-    "title": "Apache Hadoop YARN: Yet Another Resource Negotiator",
-    "url": "https://www.cse.ust.hk/~weiwa/teaching/Fall15-COMP6611B/reading_list/YARN.pdf",
-    "type": "paper",
-    "source": "Hortonworks",
-    "publishedAt": "2013-10-01",
-    "tags": ["container", "hadoop", "yarn"]
-  },
-  {
-    "title": "B4: Experience with a Globally Deployed Software Defined WAN",
+    "title": "B4",
     "url": "https://research.google/pubs/b4-experience-with-a-globally-deployed-software-defined-wan/",
     "type": "paper",
     "source": "Google",
     "publishedAt": "2013-08-12",
-    "tags": ["network", "b4"]
+    "topic": "net-sdn",
+    "summary": "Google's software-defined WAN, run near full utilization by treating inter-datacenter bandwidth as a global optimization."
   },
   {
-    "title": "TAO: Facebook's Distributed Data Store for the Social Graph",
+    "title": "TAO",
     "url": "https://www.usenix.org/conference/atc13/technical-sessions/presentation/bronson",
     "type": "paper",
     "source": "Meta",
     "publishedAt": "2013-06-26",
-    "tags": ["database", "caching", "tao"]
+    "topic": "db-data-model",
+    "summary": "A read-optimized store for the social graph that replaces per-object cache logic with an objects-and-associations API."
   },
   {
-    "title": "Scaling Memcache at Facebook",
-    "url": "https://www.usenix.org/conference/nsdi13/technical-sessions/presentation/nishtala",
-    "type": "paper",
-    "source": "Meta",
-    "publishedAt": "2013-04-02",
-    "tags": ["database", "caching", "memcached"]
-  },
-  {
-    "title": "The Tail at Scale",
-    "url": "https://research.google/pubs/the-tail-at-scale/",
-    "type": "paper",
-    "source": "Google",
-    "publishedAt": "2013-02-01",
-    "tags": ["reliability"]
-  },
-  {
-    "title": "Efficient Estimation of Word Representations in Vector Space",
+    "title": "word2vec",
     "url": "https://arxiv.org/abs/1301.3781",
     "type": "paper",
     "source": "Google",
     "publishedAt": "2013-01-16",
-    "tags": ["machine-learning", "training", "word2vec"]
+    "topic": "ml-nlp",
+    "summary": "Trains word vectors with a shallow model cheap enough for a billion words, and finds analogies as vector arithmetic."
   },
   {
-    "title": "Spanner: Google's Globally Distributed Database",
+    "title": "Spanner",
     "url": "https://research.google/pubs/spanner-googles-globally-distributed-database/",
     "type": "paper",
     "source": "Google",
     "publishedAt": "2012-10-08",
-    "tags": ["database", "replication", "spanner"]
+    "topic": "db-real-system",
+    "series": "spanner",
+    "summary": "Global transactions with external consistency, by waiting out the bounded clock uncertainty TrueTime reports."
   },
   {
-    "title": "Resilient Distributed Datasets: A Fault-Tolerant Abstraction for In-Memory Cluster Computing",
-    "url": "https://www.usenix.org/conference/nsdi12/technical-sessions/presentation/zaharia",
-    "type": "paper",
-    "source": "UC Berkeley",
-    "publishedAt": "2012-04-25",
-    "tags": ["data", "spark"]
-  },
-  {
-    "title": "A comprehensive study of Convergent and Commutative Replicated Data Types",
-    "url": "https://inria.hal.science/inria-00609399/document",
-    "type": "paper",
-    "source": "INRIA",
-    "publishedAt": "2011-07-01",
-    "tags": ["architecture", "crdt"]
-  },
-  {
-    "title": "Kafka: a Distributed Messaging System for Log Processing",
+    "title": "Kafka",
     "url": "https://pages.cs.wisc.edu/~akella/CS744/F17/838-CloudPapers/Kafka.pdf",
     "type": "paper",
     "source": "LinkedIn",
     "publishedAt": "2011-06-12",
-    "tags": ["data", "stream-processing", "kafka"]
+    "topic": "ds-real-system",
+    "summary": "A distributed log rather than a queue: messages persist, consumers track their own offsets, writes stay sequential."
   },
   {
-    "title": "Dremel: Interactive Analysis of Web-Scale Datasets",
-    "url": "https://research.google/pubs/dremel-interactive-analysis-of-web-scale-datasets/",
-    "type": "paper",
-    "source": "Google",
-    "publishedAt": "2010-09-13",
-    "tags": ["data", "query-engine", "dremel"]
-  },
-  {
-    "title": "Data Center TCP (DCTCP)",
-    "url": "https://www.microsoft.com/en-us/research/publication/data-center-tcp-dctcp/",
-    "type": "paper",
-    "source": "Microsoft",
-    "publishedAt": "2010-08-30",
-    "tags": ["network"]
-  },
-  {
-    "title": "ZooKeeper: Wait-free Coordination for Internet-scale Systems",
+    "title": "ZooKeeper",
     "url": "https://www.usenix.org/conference/usenix-atc-10/zookeeper-wait-free-coordination-internet-scale-systems",
     "type": "paper",
     "source": "Yahoo",
     "publishedAt": "2010-06-23",
-    "tags": ["architecture", "zookeeper"]
+    "topic": "ds-real-system",
+    "summary": "A coordination service with a wait-free, filesystem-like API, so applications build locks instead of embedding consensus."
   },
   {
-    "title": "The Hadoop Distributed File System",
+    "title": "The Origin of Quorum Systems",
+    "url": "https://vukolic.com/QuorumsOrigin.pdf",
+    "type": "paper",
+    "source": "EURECOM",
+    "publishedAt": "2010-06-01",
+    "topic": "ds-fundamentals",
+    "summary": "Traces quorum systems from plain majorities through Byzantine and probabilistic variants, and what each trades away."
+  },
+  {
+    "title": "HDFS",
     "url": "https://pages.cs.wisc.edu/~akella/CS838/F15/838-CloudPapers/hdfs.pdf",
     "type": "paper",
     "source": "Yahoo",
     "publishedAt": "2010-05-03",
-    "tags": ["storage", "hdfs"]
+    "topic": "ds-real-system",
+    "series": "gfs",
+    "summary": "The open reimplementation of GFS, written up with the operational consequences of its single namenode."
   },
   {
-    "title": "Dapper, a Large-Scale Distributed Systems Tracing Infrastructure",
+    "title": "Dapper",
     "url": "https://research.google/pubs/dapper-a-large-scale-distributed-systems-tracing-infrastructure/",
     "type": "paper",
     "source": "Google",
     "publishedAt": "2010-04-01",
-    "tags": ["observability", "tracing", "dapper"]
+    "topic": "ds-real-system",
+    "summary": "Distributed tracing by propagating a trace id through RPCs, on the finding that aggressive sampling still finds latency."
   },
   {
-    "title": "Cassandra: A Decentralized Structured Storage System",
+    "title": "Cassandra",
     "url": "https://www.cs.cornell.edu/projects/ladis2009/papers/lakshman-ladis2009.pdf",
     "type": "paper",
     "source": "Meta",
     "publishedAt": "2009-10-10",
-    "tags": ["database", "replication", "cassandra"]
+    "topic": "db-data-model",
+    "summary": "Dynamo's ring and replication with Bigtable's column-family data model, built for Facebook's inbox search."
   },
   {
-    "title": "A Scalable, Commodity Data Center Network Architecture",
-    "url": "https://cseweb.ucsd.edu/~vahdat/papers/sigcomm08.pdf",
-    "type": "paper",
-    "source": "UC San Diego",
-    "publishedAt": "2008-08-17",
-    "tags": ["network"]
-  },
-  {
-    "title": "Dynamo: Amazon's Highly Available Key-value Store",
+    "title": "Dynamo",
     "url": "https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf",
     "type": "paper",
     "source": "Amazon",
     "publishedAt": "2007-10-14",
-    "tags": ["database", "replication", "dynamo"]
+    "topic": "db-data-model",
+    "summary": "Chooses availability over consistency: consistent hashing, tunable quorums, and version conflicts the application resolves."
   },
   {
-    "title": "Paxos Made Live - An Engineering Perspective",
+    "title": "Paxos Made Live",
     "url": "https://research.google/pubs/paxos-made-live-an-engineering-perspective-2006-invited-talk/",
     "type": "paper",
     "source": "Google",
     "publishedAt": "2007-08-12",
-    "tags": ["architecture", "paxos", "chubby"]
+    "topic": "ds-consensus",
+    "series": "paxos",
+    "summary": "What it took to turn Paxos into Chubby's replicated log, where the algorithm was the small part."
   },
   {
-    "title": "Life beyond Distributed Transactions: an Apostate's Opinion",
-    "url": "https://www.cidrdb.org/cidr2007/papers/cidr07p15.pdf",
-    "type": "paper",
-    "source": "Amazon",
-    "publishedAt": "2007-01-07",
-    "tags": ["architecture", "microservice"]
-  },
-  {
-    "title": "Bigtable: A Distributed Storage System for Structured Data",
+    "title": "Bigtable",
     "url": "https://research.google/pubs/bigtable-a-distributed-storage-system-for-structured-data/",
     "type": "paper",
     "source": "Google",
     "publishedAt": "2006-11-06",
-    "tags": ["database", "sharding", "bigtable"]
+    "topic": "db-data-model",
+    "summary": "A sparse, sorted, distributed map over GFS, rows split into tablets, with no cross-row transactions."
   },
   {
-    "title": "The Chubby lock service for loosely-coupled distributed systems",
+    "title": "Chubby",
     "url": "https://research.google/pubs/the-chubby-lock-service-for-loosely-coupled-distributed-systems/",
     "type": "paper",
     "source": "Google",
     "publishedAt": "2006-11-06",
-    "tags": ["architecture", "chubby"]
+    "topic": "ds-real-system",
+    "summary": "A coarse-grained lock service that gives the rest of Google leader election, so other systems need not implement Paxos."
   },
   {
-    "title": "Ceph: A Scalable, High-Performance Distributed File System",
+    "title": "Ceph",
     "url": "https://www.usenix.org/conference/osdi-06/ceph-scalable-high-performance-distributed-file-system",
     "type": "paper",
     "source": "UC Santa Cruz",
     "publishedAt": "2006-11-06",
-    "tags": ["storage", "object-storage", "ceph"]
+    "topic": "ds-real-system",
+    "summary": "Takes the metadata server out of the data path by having clients compute placement with CRUSH."
   },
   {
-    "title": "MonetDB/X100: Hyper-Pipelining Query Execution",
-    "url": "https://www.cidrdb.org/cidr2005/papers/P19.pdf",
+    "title": "Gossip Based Membership",
+    "url": "https://www.cs.cornell.edu/people/egs/cornellonly/syslunch/spring05/andre.pdf",
     "type": "paper",
-    "source": "CWI",
-    "publishedAt": "2005-01-04",
-    "tags": ["data", "query-engine", "monetdb"]
+    "source": "Cornell",
+    "publishedAt": "2005-07-17",
+    "topic": "ds-fundamentals",
+    "summary": "Proves the overlay a gossip membership protocol maintains stays connected for a time exponential in the square of the view size."
   },
   {
-    "title": "MapReduce: Simplified Data Processing on Large Clusters",
+    "title": "MapReduce",
     "url": "https://research.google/pubs/mapreduce-simplified-data-processing-on-large-clusters/",
     "type": "paper",
     "source": "Google",
     "publishedAt": "2004-12-06",
-    "tags": ["data", "etl", "mapreduce"]
-  },
-  {
-    "title": "Chain Replication for Supporting High Throughput and Availability",
-    "url": "https://www.usenix.org/legacy/events/osdi04/tech/full_papers/renesse/renesse.pdf",
-    "type": "paper",
-    "source": "Cornell",
-    "publishedAt": "2004-12-06",
-    "tags": ["database", "replication"]
+    "topic": "ds-real-system",
+    "summary": "Reduces distributed batch computation to two user functions, leaving partitioning, scheduling and retries to the framework."
   },
   {
     "title": "The Google File System",
@@ -589,15 +433,9 @@
     "type": "paper",
     "source": "Google",
     "publishedAt": "2003-10-19",
-    "tags": ["storage", "gfs"]
-  },
-  {
-    "title": "Xen and the Art of Virtualization",
-    "url": "https://www.cl.cam.ac.uk/research/srg/netos/papers/2003-xensosp.pdf",
-    "type": "paper",
-    "source": "University of Cambridge",
-    "publishedAt": "2003-10-19",
-    "tags": ["operating-system", "xen"]
+    "topic": "ds-real-system",
+    "series": "gfs",
+    "summary": "Assumes hardware fails constantly and files are huge and append-mostly: one metadata master, replicated 64MB chunks."
   },
   {
     "title": "Paxos Made Simple",
@@ -605,86 +443,26 @@
     "type": "paper",
     "source": "Microsoft",
     "publishedAt": "2001-11-01",
-    "tags": ["architecture", "paxos"]
+    "topic": "ds-consensus",
+    "series": "paxos",
+    "summary": "Lamport's re-explanation of Paxos: majority quorums reach agreement with no synchronized clocks."
   },
   {
-    "title": "Practical Byzantine Fault Tolerance",
-    "url": "https://www.scs.stanford.edu/nyu/03sp/sched/bfs.pdf",
+    "title": "Sagas",
+    "url": "https://www.cs.cornell.edu/andru/cs711/2002fa/reading/sagas.pdf",
     "type": "paper",
-    "source": "MIT",
-    "publishedAt": "1999-02-22",
-    "tags": ["architecture", "pbft"]
+    "source": "Princeton",
+    "publishedAt": "1987-05-27",
+    "topic": "db-fundamentals",
+    "summary": "Splits a long-lived transaction into steps that commit as they go, each paired with a compensating transaction that undoes it."
   },
   {
-    "title": "Consistent Hashing and Random Trees",
-    "url": "https://www.cs.princeton.edu/courses/archive/fall09/cos518/papers/chash.pdf",
-    "type": "paper",
-    "source": "MIT",
-    "publishedAt": "1997-05-04",
-    "tags": ["database", "sharding"]
-  },
-  {
-    "title": "The Log-Structured Merge-Tree (LSM-Tree)",
-    "url": "https://www.cs.umb.edu/~poneil/lsmtree.pdf",
-    "type": "paper",
-    "source": "UMass Boston",
-    "publishedAt": "1996-06-01",
-    "tags": ["database", "lsm-tree"]
-  },
-  {
-    "title": "A Critique of ANSI SQL Isolation Levels",
-    "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/tr-95-51.pdf",
-    "type": "paper",
-    "source": "Microsoft",
-    "publishedAt": "1995-06-01",
-    "tags": ["database"]
-  },
-  {
-    "title": "ARIES: A Transaction Recovery Method Supporting Fine-Granularity Locking and Partial Rollbacks Using Write-Ahead Logging",
-    "url": "https://cs.stanford.edu/people/chrismre/cs345/rl/aries.pdf",
-    "type": "paper",
-    "source": "IBM",
-    "publishedAt": "1992-03-01",
-    "tags": ["database"]
-  },
-  {
-    "title": "A Case for Redundant Arrays of Inexpensive Disks (RAID)",
-    "url": "https://www.cs.cmu.edu/~garth/RAIDpaper/Patterson88.pdf",
-    "type": "paper",
-    "source": "UC Berkeley",
-    "publishedAt": "1988-06-01",
-    "tags": ["storage", "block-storage"]
-  },
-  {
-    "title": "Impossibility of Distributed Consensus with One Faulty Process",
-    "url": "https://groups.csail.mit.edu/tds/papers/Lynch/jacm85.pdf",
-    "type": "paper",
-    "source": "Yale",
-    "publishedAt": "1985-04-01",
-    "tags": ["architecture"]
-  },
-  {
-    "title": "End-to-End Arguments in System Design",
-    "url": "https://web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf",
-    "type": "paper",
-    "source": "MIT",
-    "publishedAt": "1984-11-01",
-    "tags": ["architecture"]
-  },
-  {
-    "title": "Time, Clocks, and the Ordering of Events in a Distributed System",
+    "title": "Time, Clocks, and the Ordering of Events",
     "url": "https://lamport.azurewebsites.net/pubs/time-clocks.pdf",
     "type": "paper",
     "source": "Massachusetts Computer Associates",
     "publishedAt": "1978-07-01",
-    "tags": ["architecture"]
-  },
-  {
-    "title": "Space/Time Trade-offs in Hash Coding with Allowable Errors",
-    "url": "https://www.cs.princeton.edu/courses/archive/spring05/cos598E/bib/p422-bloom.pdf",
-    "type": "paper",
-    "source": "Computer Usage Company",
-    "publishedAt": "1970-07-01",
-    "tags": ["search", "indexing"]
+    "topic": "ds-fundamentals",
+    "summary": "Defines happened-before as a partial order over events, and shows a logical clock can respect it without synchronized time."
   }
 ]

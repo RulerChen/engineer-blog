@@ -40,6 +40,12 @@ export interface Article {
   summary?: string;
   /** Series slug shared with the other parts, when the entry is one of several. */
   series?: string;
+  /**
+   * Which of the paper topics this entry sits under — papers only, and exactly
+   * one. Hand-assigned, because the thing a reader wants next is a judgement and
+   * not something a tag can be made to carry.
+   */
+  topic?: string;
   tags: string[];
   /** Other people's write-ups about this entry, in the order they should be read. */
   commentary?: Commentary[];

@@ -119,6 +119,34 @@ input::placeholder {
 .header-spacer {
   flex: 1;
 }
+/* The switch between the two lists. Shaped like the in-page tabs further down
+   because it does the same job. Links rather than buttons, though a left click
+   never navigates: the href is what makes middle-click and modifier-click open
+   the other list in a tab, and what a crawler follows. */
+.corpus-nav {
+  display: inline-flex;
+  gap: 2px;
+  background: var(--chip);
+  border-radius: 999px;
+  padding: 3px;
+  flex-shrink: 0;
+}
+.corpus-tab {
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.4;
+  color: var(--muted);
+}
+.corpus-tab:hover {
+  color: var(--accent);
+}
+.corpus-tab.active {
+  background: var(--card);
+  color: var(--accent);
+  box-shadow: var(--shadow);
+}
 .header-button {
   width: 36px;
   height: 36px;
@@ -510,7 +538,7 @@ input::placeholder {
   flex-direction: column;
   gap: 14px;
 }
-.article-card {
+.entry-card {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 18px;
@@ -526,7 +554,7 @@ input::placeholder {
     box-shadow 0.2s ease,
     transform 0.2s ease;
 }
-.article-card:hover {
+.entry-card:hover {
   box-shadow: var(--shadow-hover);
   transform: translateY(-1px);
 }
@@ -566,14 +594,14 @@ input::placeholder {
 [data-theme="dark"] .article-card .avatar img.dark-only {
   opacity: 1;
 }
-.article-card .body {
+.entry-card .body {
   flex: 1;
   min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 7px;
 }
-.article-card .meta {
+.entry-card .meta {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -581,11 +609,11 @@ input::placeholder {
   color: var(--muted);
   flex-wrap: wrap;
 }
-.article-card .meta .company {
+.entry-card .meta .company {
   font-weight: 800;
   color: var(--chip-ink);
 }
-.article-card .meta .dot {
+.entry-card .meta .dot {
   opacity: 0.5;
 }
 /* What the entry is — article, paper, book, video. Leads the meta row as an icon
@@ -594,11 +622,11 @@ input::placeholder {
   display: inline-flex;
   flex-shrink: 0;
 }
-.article-card h2 {
+.entry-card h2 {
   margin: 0;
   font-size: 18.5px;
 }
-.article-card h2 a.title-link {
+.entry-card h2 a.title-link {
   font-family: "Bricolage Grotesque", sans-serif;
   font-weight: 700;
   line-height: 1.3;
@@ -608,7 +636,7 @@ input::placeholder {
    place — no skeleton, no "not summarized yet" — because the card was a finished
    card before this line existed and has to stay one. Clamped so that one long
    summary cannot break the scanning rhythm of a list this long. */
-.article-card .summary {
+.entry-card .summary {
   margin: 0;
   font-size: 13.5px;
   line-height: 1.55;
@@ -620,13 +648,13 @@ input::placeholder {
   line-clamp: 3;
   overflow: hidden;
 }
-.article-card .tags {
+.entry-card .tags {
   display: flex;
   align-items: center;
   gap: 6px;
   flex-wrap: wrap;
 }
-.article-card .tag {
+.entry-card .tag {
   font-size: 11.5px;
   font-weight: 700;
   padding: 3px 10px;
@@ -637,16 +665,16 @@ input::placeholder {
 }
 /* A tag chip is a filter button. Same shape as it always was — only the cursor
    and the hover say so, so the row still reads as labels rather than controls. */
-.article-card .tag-filter {
+.entry-card .tag-filter {
   cursor: pointer;
 }
-.article-card .tag-filter:hover {
+.entry-card .tag-filter:hover {
   background: color-mix(in srgb, var(--accent) 16%, var(--chip));
   color: var(--accent);
 }
 /* Already filtering on this one: filled in, so the chip that is narrowing the
    list is visible from the card and clicking it again is the way back out. */
-.article-card .tag-filter.active {
+.entry-card .tag-filter.active {
   background: var(--accent);
   color: var(--bg);
 }
@@ -702,7 +730,7 @@ input::placeholder {
   color: var(--muted);
   opacity: 0;
 }
-.article-card:hover .ignore-button,
+.entry-card:hover .ignore-button,
 .ignore-button:focus-visible,
 .ignore-button.active {
   opacity: 1;
@@ -720,7 +748,7 @@ input::placeholder {
 /* An ignored entry, which only ever renders in its own tab. Dashed rather than
    faded: a whole list of dimmed cards is just a list that is harder to read, and
    the border already says these are not in circulation. */
-.article-card.is-hidden {
+.entry-card.is-hidden {
   border-style: dashed;
 }
 
@@ -780,10 +808,35 @@ input::placeholder {
     transform: translateY(-3px);
   }
 }
+/* Switching between the two lists. Out then in, so the incoming list is never
+   drawn over the outgoing one at a different height. */
+.corpus-enter-active {
+  transition:
+    opacity 0.16s ease,
+    transform 0.16s ease;
+}
+.corpus-leave-active {
+  transition: opacity 0.1s ease;
+}
+.corpus-enter-from {
+  opacity: 0;
+  transform: translateY(4px);
+}
+.corpus-leave-to {
+  opacity: 0;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .loading-dots i {
     animation: none;
     opacity: 0.5;
+  }
+  .corpus-enter-active,
+  .corpus-leave-active {
+    transition: none;
+  }
+  .corpus-enter-from {
+    transform: none;
   }
 }
 
@@ -823,7 +876,7 @@ input::placeholder {
 }
 
 @media (max-width: 560px) {
-  .article-card {
+  .entry-card {
     padding: 16px;
   }
   .filter-menu {
@@ -1002,4 +1055,168 @@ input::placeholder {
   [data-tip]::after {
     display: none;
   }
+}
+
+/* Papers */
+/* Two rows above the papers: which domain, then which shelf inside it. Neither
+   row assumes how many buttons it holds — they are natural-width pills that
+   wrap, so a fifth domain costs a little height and nothing else. The segmented
+   control this replaced divided the width between its tabs, which is fine at
+   four and illegible at ten.
+   Not sticky, for the same reason. Rows that can grow must not be rows that are
+   always on screen: switching domain is occasional, scrolling the papers is
+   constant, so the nav scrolls away and pays no rent. */
+.paper-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.domain-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.domain-tab {
+  padding: 8px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 11px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  color: var(--ink);
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.domain-tab:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.domain-tab.active {
+  border-color: transparent;
+  background: var(--accent);
+  color: #fff8f0;
+}
+/* The shelves of the domain above, and how many papers are on each. The count
+   is what decides whether narrowing to one is worth a click. Tinted rather than
+   filled when active, so the two rows do not read as one flat list of buttons. */
+.shelf-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.shelf-chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 5px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--muted);
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.shelf-chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.shelf-chip.active {
+  border-color: color-mix(in srgb, var(--accent) 35%, transparent);
+  background: color-mix(in srgb, var(--accent) 14%, var(--card));
+  color: var(--accent);
+}
+.shelf-count {
+  font-size: 11px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.65;
+}
+.shelves {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+/* The shelf name and nothing else. It used to carry a line of prose saying what
+   the shelf was for, which on a page of six shelves was six paragraphs nobody
+   was reading and one more thing between the reader and the papers. */
+.shelf-name {
+  margin: 0 0 12px;
+  font-size: 19px;
+  font-weight: 700;
+}
+/* Search results are flat: the order across shelves is relevance or nothing. */
+.paper-flat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.paper-topic-label {
+  font-weight: 700;
+}
+.paper-group-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+/* Papers that are one line of work share a card, connected down the left by a
+   line between dots. That connector is the page's only claim that one paper
+   follows another, which is why it is drawn inside a card and never between
+   two: cards that merely sit next to each other are not claiming anything. */
+.paper-card.chained {
+  flex-direction: column;
+  gap: 0;
+}
+.paper-step {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  padding-left: 24px;
+}
+.paper-step + .paper-step {
+  margin-top: 18px;
+}
+.paper-step::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  background: var(--card);
+}
+.paper-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 16px;
+  bottom: -20px;
+  width: 2px;
+  background: var(--line);
+}
+/* A company's mark rides in the meta row at text size rather than in a 42px
+   plate. Most papers here have no mark at all — the plate would be empty on
+   three cards in four, and an empty plate is worse than none. */
+.paper-card .meta .paper-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+.paper-card .meta .paper-mark img {
+  grid-area: 1 / 1;
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+  transition: opacity 0.25s ease;
+}
+.paper-card .meta .paper-mark img.dark-only,
+[data-theme="dark"] .paper-card .meta .paper-mark img.light-only {
+  opacity: 0;
+}
+[data-theme="dark"] .paper-card .meta .paper-mark img.dark-only {
+  opacity: 1;
 }

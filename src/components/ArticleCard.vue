@@ -85,7 +85,7 @@ const avatarStyle = computed(() => {
 </script>
 
 <template>
-  <article class="article-card" :class="{ 'is-hidden': hidden }">
+  <article class="entry-card article-card" :class="{ 'is-hidden': hidden }">
     <div class="avatar" :style="avatarStyle">
       <img
         v-if="iconSrc"
