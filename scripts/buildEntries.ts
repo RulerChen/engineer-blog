@@ -39,7 +39,7 @@ export async function readIcons(dir: string): Promise<Map<string, IconFiles>> {
   return new Map([...icons].filter(([, entry]) => entry.light));
 }
 
-export function toArticle(input: EntryInput, icons?: Map<string, IconFiles>): Article {
+function toArticle(input: EntryInput, icons?: Map<string, IconFiles>): Article {
   const article: Article = {
     id: articleId(input.url),
     title: input.title,

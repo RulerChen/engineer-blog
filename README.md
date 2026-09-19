@@ -45,5 +45,4 @@
 | [Twitter](https://blog.x.com/engineering)                  | 2026-09-05   |
 | [Uber](https://eng.uber.com)                               | 2026-09-15   |
 
-Curation rules are in [docs/curation.md](docs/curation.md); the tag vocabulary
-is in [docs/tags.md](docs/tags.md).
+The tag vocabulary is in [docs/tags.md](docs/tags.md).

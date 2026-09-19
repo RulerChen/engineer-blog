@@ -2,7 +2,7 @@ import { mkdir, readdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { iconHost, iconKey, parseIconFile } from "../src/lib/icon.js";
-import { readEntries } from "./readEntries.js";
+import { isBlogEntry, readEntries } from "./readEntries.js";
 
 const ICON_DIR = fileURLToPath(new URL("../public/icons/", import.meta.url));
 
@@ -263,7 +263,8 @@ async function cached(): Promise<Set<string>> {
 }
 
 async function main(): Promise<void> {
-  const inputs = await readEntries();
+  // Blogs only — nobody scrapes a favicon for MIT or Karlstad University.
+  const inputs = (await readEntries()).filter(isBlogEntry);
   // One company, one icon — plus the host it was first seen writing on, which is
   // where we look when svgl has never heard of it. A company that publishes on a
   // platform (Airbnb on medium.com) gets the platform's logo out of that, which

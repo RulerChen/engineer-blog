@@ -3,13 +3,16 @@ import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { iconKey } from "../src/lib/icon.js";
 import { readIcons } from "./buildEntries.js";
-import { readEntries } from "./readEntries.js";
+import { isBlogEntry, readEntries } from "./readEntries.js";
 
 /**
  * The logo strip at the top of the README, built from the same two directories
  * the site is built from — data/ says which companies are on the list, and
  * public/icons/ holds their marks. Hand-drawing it would mean a grid that
  * silently stops matching the list the first time a company is added.
+ *
+ * Papers are left out. The strip is the set of blogs being read, and an
+ * institution that only ever wrote a paper is not one of those.
  */
 
 const COLUMNS = 13;
@@ -77,7 +80,8 @@ async function main(): Promise<void> {
   const iconDir = join(root, "public/icons");
   const icons = await readIcons(iconDir);
 
-  const sources = [...new Set((await readEntries()).map((entry) => entry.source ?? ""))]
+  const entries = (await readEntries()).filter(isBlogEntry);
+  const sources = [...new Set(entries.map((entry) => entry.source ?? ""))]
     .filter(Boolean)
     .toSorted((a, b) => a.localeCompare(b));
 

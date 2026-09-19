@@ -156,7 +156,7 @@ function scoreIndexed(entry: Indexed, query: Query, fuzzy = true): number | null
 }
 
 /** Match a single piece of text — a company or tag name in the filter menus. */
-export function matchScore(text: string, query: Query): number | null {
+function matchScore(text: string, query: Query): number | null {
   return scoreIndexed(indexOf(text), query);
 }
 

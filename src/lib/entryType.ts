@@ -6,21 +6,21 @@
  */
 export type EntryType = "article" | "paper" | "book" | "video" | "course";
 
-export const DEFAULT_ENTRY_TYPE: EntryType = "article";
+const DEFAULT_ENTRY_TYPE: EntryType = "article";
 
 export interface EntryTypeMeta {
   id: EntryType;
-  /** Shown in the form and as the icon's tooltip on a card. */
+  /** The icon's tooltip on a card. */
   label: string;
   /** 24x24 stroke paths, drawn by EntryTypeIcon. */
   paths: string[];
 }
 
 /**
- * The whole set, in the order the form offers it — commonest first, so the
- * default is also the first button.
+ * The whole set, commonest first. Nothing reads that order any more — only the
+ * lookup below is built from it — but a new value still needs an icon with it.
  */
-export const ENTRY_TYPES: EntryTypeMeta[] = [
+const ENTRY_TYPES: EntryTypeMeta[] = [
   {
     id: "article",
     label: "Article",
