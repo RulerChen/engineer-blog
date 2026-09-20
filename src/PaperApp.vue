@@ -155,7 +155,7 @@ function openShelf(id: string | null): void {
 
 <template>
   <div class="container">
-    <SiteHeader title="Engineering Papers" :count="papers.length" />
+    <SiteHeader title="Awesome Engineering Papers" :count="papers.length" />
 
     <p v-if="loading" class="loading">Loading papers…</p>
     <p v-else-if="loadError" class="error">Could not load papers. Try refreshing.</p>

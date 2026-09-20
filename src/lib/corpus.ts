@@ -18,8 +18,8 @@ const PAPERS_PATH = `${BASE}paper/`;
 const PATHS: Record<Corpus, string> = { articles: BASE, papers: PAPERS_PATH };
 /** Kept in step with the <title> each entry document ships with. */
 const TITLES: Record<Corpus, string> = {
-  articles: "Engineer Blog Aggregator",
-  papers: "Engineering Papers",
+  articles: "Awesome Engineer Blogs",
+  papers: "Awesome Engineering Papers",
 };
 
 /** Trailing slash optional, because a typed URL usually is not. */

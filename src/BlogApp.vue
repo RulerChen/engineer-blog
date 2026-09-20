@@ -105,7 +105,7 @@ function selectTag(tag: string): void {
 
 <template>
   <div class="container">
-    <SiteHeader title="Engineer Blog Aggregator" :count="all.length" />
+    <SiteHeader title="Awesome Engineer Blogs" :count="all.length" />
 
     <p v-if="loading" class="loading">Loading entries…</p>
     <p v-else-if="loadError" class="error">Could not load entries. Try refreshing.</p>
