@@ -1,4 +1,4 @@
-<h1 align="center">Awesome Engineer Blogs & Papers</h1>
+<h1 align="center">Awesome Engineering Blogs & Papers</h1>
 
 <p align="center">
   A hand-curated reading list of engineering writing from many company blogs.

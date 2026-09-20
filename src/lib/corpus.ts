@@ -18,7 +18,7 @@ const PAPERS_PATH = `${BASE}paper/`;
 const PATHS: Record<Corpus, string> = { articles: BASE, papers: PAPERS_PATH };
 /** Kept in step with the <title> each entry document ships with. */
 const TITLES: Record<Corpus, string> = {
-  articles: "Awesome Engineer Blogs",
+  articles: "Awesome Engineering Blogs",
   papers: "Awesome Engineering Papers",
 };
 
