@@ -21,6 +21,13 @@
     "tags": ["language", "memory-management", "java", "operating-system", "kernel"]
   },
   {
+    "title": "Engineering the next generation of LinkedIn's Feed",
+    "url": "https://www.linkedin.com/blog/engineering/feed/engineering-the-next-generation-of-linkedins-feed",
+    "source": "LinkedIn",
+    "publishedAt": "2026-03-12",
+    "tags": ["machine-learning", "recommendation", "llm", "inference"]
+  },
+  {
     "title": "Scaling LLM-Based ranking systems with SGLang at LinkedIn",
     "url": "https://www.linkedin.com/blog/engineering/ai/scaling-llm-based-ranking-systems-with-sglang-at-linkedin",
     "source": "LinkedIn",
