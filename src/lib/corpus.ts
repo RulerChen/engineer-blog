@@ -1,30 +1,26 @@
 import { ref } from "vue";
 
-/**
- * Which of the two lists is on screen. It is state, not a page load: the switch
- * in the header is a tab, and a tab that costs a round trip and a fresh parse of
- * the other corpus is a tab in name only.
- *
- * The path still changes, and both paths are still real files in dist/. That is
- * the part worth keeping — /paper/ can be linked, bookmarked and crawled, and a
- * cold load of it answers 200 with the papers page rather than a 404 the app
- * patches up afterwards. What goes away is only the navigation between them.
- */
-export type Corpus = "articles" | "papers";
+/** Which page is on screen; a tab switch is state, not a page load, though both paths are real files. */
+export type Corpus = "articles" | "roadmaps";
 
 const BASE = import.meta.env.BASE_URL;
-const PAPERS_PATH = `${BASE}paper/`;
+const ROADMAPS_PATH = `${BASE}roadmap/`;
 
-const PATHS: Record<Corpus, string> = { articles: BASE, papers: PAPERS_PATH };
+const PATHS: Record<Corpus, string> = {
+  articles: BASE,
+  roadmaps: ROADMAPS_PATH,
+};
 /** Kept in step with the <title> each entry document ships with. */
 const TITLES: Record<Corpus, string> = {
   articles: "Awesome Engineering Blogs",
-  papers: "Awesome Engineering Papers",
+  roadmaps: "Awesome Engineering Roadmaps",
 };
 
 /** Trailing slash optional, because a typed URL usually is not. */
 function read(path: string): Corpus {
-  return path === PAPERS_PATH || path === PAPERS_PATH.slice(0, -1) ? "papers" : "articles";
+  const at = (dir: string): boolean => path === dir || path === dir.slice(0, -1);
+  if (at(ROADMAPS_PATH)) return "roadmaps";
+  return "articles";
 }
 
 export const corpus = ref<Corpus>(read(window.location.pathname));

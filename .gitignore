@@ -2,5 +2,5 @@ node_modules/
 dist/
 coverage/
 public/articles.json
-public/papers.json
+public/roadmaps.json
 *.log

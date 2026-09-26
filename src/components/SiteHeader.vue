@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { computed } from "vue";
 import { useTheme } from "../composables/useTheme.js";
 import { type Corpus, corpus, openCorpus } from "../lib/corpus.js";
 
@@ -17,9 +16,7 @@ defineProps<{
 
 const { theme, toggleTheme } = useTheme();
 const base = import.meta.env.BASE_URL;
-const countTip = computed(() =>
-  corpus.value === "papers" ? "Papers on the list" : "Blog entries on the list",
-);
+const countTip = "Blog entries on the list";
 
 /**
  * Still a real link to a real page, so the middle click, the modifier click and
@@ -41,6 +38,10 @@ function switchTo(event: MouseEvent, next: Corpus): void {
       <a class="logo-mark heading-font" :href="base" aria-label="Home">E</a>
       <h1 class="heading-font">{{ title }}</h1>
       <div class="header-spacer"></div>
+      <!-- Left of the tabs, so the tabs sit in the same place on every page. -->
+      <span v-if="count" class="header-count" :data-tip="countTip" data-tip-pos="bottom"
+        >{{ count.toLocaleString("en-US") }} entries</span
+      >
       <nav class="corpus-nav" aria-label="Which list">
         <a
           class="corpus-tab"
@@ -51,15 +52,12 @@ function switchTo(event: MouseEvent, next: Corpus): void {
         >
         <a
           class="corpus-tab"
-          :class="{ active: corpus === 'papers' }"
-          :href="`${base}paper/`"
-          @click="switchTo($event, 'papers')"
-          >Papers</a
+          :class="{ active: corpus === 'roadmaps' }"
+          :href="`${base}roadmap/`"
+          @click="switchTo($event, 'roadmaps')"
+          >Roadmaps</a
         >
       </nav>
-      <span v-if="count" class="header-count" :data-tip="countTip" data-tip-pos="bottom"
-        >{{ count.toLocaleString("en-US") }} entries</span
-      >
       <a
         class="header-button repo-link"
         href="https://github.com/RulerChen/engineer-blog"

@@ -4,9 +4,12 @@ import { fileURLToPath } from "node:url";
 import type { EntryInput } from "../src/lib/entry.js";
 import { normalizeEntryType } from "../src/lib/entryType.js";
 import { iconKey, parseIconFile } from "../src/lib/icon.js";
+import type { Roadmap, RoadmapInput, RoadmapItem, RoadmapItemInput } from "../src/lib/roadmap.js";
+import { topicLabel } from "../src/lib/topicMap.js";
+import { normalizeUrl } from "../src/lib/url.js";
 import type { Article } from "../src/types.js";
 import { articleId } from "./articleId.js";
-import { readEntries } from "./readEntries.js";
+import { readEntries, readRoadmaps } from "./readEntries.js";
 
 /** Bare YYYY-MM-DD is treated as UTC midnight; anything else is passed through. */
 function toIso(value: string): string {
@@ -81,28 +84,100 @@ export function buildArticles(inputs: EntryInput[], icons?: Map<string, IconFile
   );
 }
 
-/**
- * The two files the two pages fetch. Papers are split out rather than filtered
- * in the browser because neither page ever draws the other's entries: one
- * combined file would send every visitor the seventh of the list they are not
- * going to see, and make the papers page wait on the blog posts to parse.
- */
-export function splitCorpora(entries: Article[]): { articles: Article[]; papers: Article[] } {
-  return {
-    articles: entries.filter((entry) => entry.type !== "paper"),
-    papers: entries.filter((entry) => entry.type === "paper"),
-  };
+/** The blog entries the list shows; papers are only reached through roadmaps. */
+export function blogEntries(entries: Article[]): Article[] {
+  return entries.filter((entry) => entry.type !== "paper");
+}
+
+/** Fills an item from the list entry with its url; an unmatched url with no title is a typo and stops the build. */
+function resolveItem(
+  input: RoadmapItemInput,
+  byUrl: Map<string, Article>,
+  icons: Map<string, IconFiles> | undefined,
+  where: string,
+): RoadmapItem {
+  const entry = byUrl.get(normalizeUrl(input.url));
+  let item: RoadmapItem;
+  if (entry) {
+    item = {
+      url: entry.url,
+      type: entry.type,
+      title: entry.title,
+      source: entry.source,
+      year: entry.publishedAt.slice(0, 4),
+    };
+    if (entry.icon) item.icon = entry.icon;
+    if (entry.iconDark) item.iconDark = entry.iconDark;
+  } else {
+    if (!input.title) {
+      throw new Error(`${where}: ${input.url} is not on the list and has no title`);
+    }
+    item = { url: input.url, type: normalizeEntryType(input.type), title: input.title };
+    if (input.source) item.source = input.source;
+    if (input.year) item.year = input.year;
+    const key = iconKey(input.source);
+    const icon = key ? icons?.get(key) : undefined;
+    if (icon) item.icon = icon.light;
+    if (icon?.dark) item.iconDark = icon.dark;
+  }
+  if (input.scope) item.scope = input.scope;
+  if (input.why) item.why = input.why;
+  return item;
+}
+
+/** A relation that names no known topic would render as a blank chip. */
+function checkTopics(ids: string[], where: string): string[] {
+  for (const id of ids) {
+    if (!topicLabel(id)) throw new Error(`${where}: unknown topic "${id}"`);
+  }
+  return ids;
+}
+
+/** Roadmap files → the roadmaps.json the roadmap page fetches, every item resolved. */
+export function buildRoadmaps(
+  inputs: RoadmapInput[],
+  entries: Article[],
+  icons?: Map<string, IconFiles>,
+): Roadmap[] {
+  const byUrl = new Map(entries.map((entry) => [normalizeUrl(entry.url), entry]));
+  return inputs.map((road) => {
+    checkTopics([road.id], "roadmap id");
+    return {
+      id: road.id,
+      title: road.title,
+      blurb: road.blurb,
+      before: checkTopics(road.before, `${road.id}.before`),
+      next: checkTopics(road.next, `${road.id}.next`),
+      parts: road.parts.map((part) => ({
+        name: part.name,
+        goal: part.goal,
+        steps: part.steps.map((step, index) => {
+          const where = `${road.id} / ${part.name} step ${index + 1}`;
+          const resolve = (item: RoadmapItemInput): RoadmapItem =>
+            resolveItem(item, byUrl, icons, where);
+          return {
+            main: resolve(step.main),
+            background: (step.background ?? []).map(resolve),
+            alternative: (step.alternative ?? []).map(resolve),
+            further: (step.further ?? []).map(resolve),
+          };
+        }),
+      })),
+    };
+  });
 }
 
 async function main(): Promise<void> {
   const outDir = fileURLToPath(new URL("../public/", import.meta.url));
   const inputs = await readEntries();
   const icons = await readIcons(join(outDir, "icons"));
-  const { articles, papers } = splitCorpora(buildArticles(inputs, icons));
+  const all = buildArticles(inputs, icons);
+  const articles = blogEntries(all);
+  const roadmaps = buildRoadmaps(await readRoadmaps(), all, icons);
   await mkdir(outDir, { recursive: true });
   await writeFile(join(outDir, "articles.json"), JSON.stringify(articles), "utf8");
-  await writeFile(join(outDir, "papers.json"), JSON.stringify(papers), "utf8");
-  console.log(`wrote ${articles.length} entries and ${papers.length} papers`);
+  await writeFile(join(outDir, "roadmaps.json"), JSON.stringify(roadmaps), "utf8");
+  console.log(`wrote ${articles.length} entries and ${roadmaps.length} roadmaps`);
 }
 
 if (

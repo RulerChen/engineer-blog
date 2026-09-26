@@ -42,6 +42,10 @@
     border-color 0.25s ease,
     color 0.25s ease;
 }
+/* Keep the scrollbar's space reserved, so pages of different length do not shift sideways. */
+html {
+  scrollbar-gutter: stable;
+}
 html,
 body {
   margin: 0;
@@ -78,7 +82,7 @@ input::placeholder {
   border-bottom: 1px solid var(--line);
 }
 .site-header .header-inner {
-  max-width: 820px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 14px 24px;
   display: flex;
@@ -876,6 +880,18 @@ input::placeholder {
 }
 
 @media (max-width: 560px) {
+  /* Three tabs and two buttons fill a phone on their own, so the page name and count give way. */
+  .site-header .header-inner {
+    padding: 12px 16px;
+    gap: 8px;
+  }
+  .site-header h1,
+  .header-count {
+    display: none;
+  }
+  .corpus-tab {
+    padding: 5px 10px;
+  }
   .entry-card {
     padding: 16px;
   }
@@ -884,6 +900,26 @@ input::placeholder {
   }
   .date-menu {
     width: 260px;
+  }
+}
+@media (max-width: 400px) {
+  .site-header .header-inner {
+    padding-inline: 12px;
+    gap: 4px;
+  }
+  .logo-mark {
+    width: 30px;
+    height: 30px;
+    font-size: 17px;
+  }
+  .corpus-tab {
+    padding: 4px 7px;
+    font-size: 12px;
+  }
+  .header-button {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
   }
 }
 
@@ -1057,166 +1093,383 @@ input::placeholder {
   }
 }
 
-/* Papers */
-/* Two rows above the papers: which domain, then which shelf inside it. Neither
-   row assumes how many buttons it holds — they are natural-width pills that
-   wrap, so a fifth domain costs a little height and nothing else. The segmented
-   control this replaced divided the width between its tabs, which is fine at
-   four and illegible at ten.
-   Not sticky, for the same reason. Rows that can grow must not be rows that are
-   always on screen: switching domain is occasional, scrolling the papers is
-   constant, so the nav scrolls away and pays no rent. */
-.paper-nav {
+/* Roadmaps */
+/* The map and the two-column steps need more room than the 820px reading column. */
+.layout.wide {
+  max-width: 1200px;
+}
+.topic-map {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.topic-map-scroll {
+  overflow-x: auto;
+}
+.topic-map svg {
+  display: block;
+  width: 100%;
+  min-width: 760px;
+  height: auto;
+  color: var(--muted);
+}
+.tm-edge {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+.tm-node rect {
+  stroke-width: 1.5;
+}
+.tm-node.planned rect {
+  fill: none;
+  stroke: color-mix(in srgb, var(--accent) 30%, var(--line));
+  stroke-dasharray: 5 4;
+}
+.tm-node.built rect {
+  fill: color-mix(in srgb, var(--accent) 12%, var(--card));
+  stroke: var(--accent);
+}
+.tm-node.built {
+  cursor: pointer;
+  outline: none;
+}
+.tm-node.built:hover rect,
+.tm-node.built:focus-visible rect {
+  stroke-width: 2.5;
+}
+.tm-title {
+  fill: var(--chip-ink);
+  font:
+    700 16px "Nunito Sans",
+    sans-serif;
+}
+.tm-node.built .tm-title {
+  fill: var(--accent);
+}
+.rm-back {
+  align-self: flex-start;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--muted);
+}
+.rm-back:hover {
+  color: var(--accent);
+}
+.rm-view {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  scroll-margin-top: 80px;
+}
+.rm-top {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.domain-tabs {
+.rm-top h2 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.15;
+}
+.rm-blurb {
+  margin: 0;
+  max-width: 64ch;
+  font-size: 14.5px;
+  color: var(--muted);
+}
+.rm-rel-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  align-items: center;
+  gap: 6px 8px;
+  font-size: 12.5px;
+  color: var(--muted);
 }
-.domain-tab {
-  padding: 8px 14px;
-  border: 1.5px solid var(--line);
-  border-radius: 11px;
-  background: var(--card);
-  box-shadow: var(--shadow);
-  color: var(--ink);
-  font-size: 13.5px;
+.rm-rel-row b {
+  font-weight: 800;
+  color: var(--chip-ink);
+  margin-right: 2px;
+}
+.rm-rel {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 10px;
+  border: 1px dashed color-mix(in srgb, var(--accent) 30%, var(--line));
+  border-radius: 999px;
+  background: transparent;
+  color: var(--chip-ink);
+  font-size: 12px;
   font-weight: 700;
+  line-height: 1.6;
+}
+.rm-rel i {
+  font-style: normal;
+  font-size: 10.5px;
+  color: var(--muted);
+}
+.rm-rel.built {
+  border-style: solid;
+  border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+  background: color-mix(in srgb, var(--accent) 12%, var(--card));
+  color: var(--accent);
   cursor: pointer;
 }
-.domain-tab:hover {
-  border-color: var(--accent);
+.rm-part {
+  scroll-margin-top: 80px;
+}
+.rm-part + .rm-part .rm-part-head {
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+.rm-part-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  margin-bottom: 14px;
+}
+.rm-part-head h3 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--accent);
 }
-.domain-tab.active {
-  border-color: transparent;
+.rm-part-head p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+/* Spine, main card, side box; the side box drops under the card on narrower screens. */
+.rm-row {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 3fr) minmax(0, 2fr);
+  column-gap: 16px;
+  align-items: start;
+  padding-bottom: 20px;
+}
+.rm-spine {
+  position: relative;
+  align-self: stretch;
+}
+.rm-spine::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  margin-left: -1px;
+  background: color-mix(in srgb, var(--accent) 30%, var(--line));
+}
+.rm-part-head + .rm-row .rm-spine::before {
+  top: 16px;
+}
+.rm-row:last-child .rm-spine::before {
+  bottom: auto;
+  height: 16px;
+}
+.rm-num {
+  position: relative;
+  z-index: 1;
+  width: 32px;
+  height: 32px;
+  margin-inline: auto;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  background: var(--card);
+  color: var(--accent);
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+.rm-row.done .rm-num {
   background: var(--accent);
   color: #fff8f0;
 }
-/* The shelves of the domain above, and how many papers are on each. The count
-   is what decides whether narrowing to one is worth a click. Tinted rather than
-   filled when active, so the two rows do not read as one flat list of buttons. */
-.shelf-chips {
+.rm-item.main {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  padding: 12px 16px 14px;
+}
+.rm-item-body {
+  display: grid;
+  grid-template-columns: 18px 18px minmax(0, 1fr);
+  column-gap: 10px;
+  align-items: start;
+}
+.rm-type {
+  padding-top: 2px;
+  color: var(--muted);
+  display: flex;
+}
+.rm-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.35;
+  text-wrap: pretty;
+}
+.rm-item.main .rm-title {
+  font-weight: 700;
+  font-size: 16.5px;
+  line-height: 1.3;
+}
+.rm-item.done .rm-title {
+  color: var(--muted);
+}
+.rm-scope {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 0 7px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 12%, var(--card));
+  color: var(--accent);
+  font-size: 10.5px;
+  font-weight: 700;
+  line-height: 1.7;
+  max-width: 100%;
+  vertical-align: 1px;
+}
+.rm-why {
+  margin: 4px 0 0;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.rm-source {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  align-items: center;
+  gap: 5px;
+  margin-top: 3px;
+  font-size: 11.5px;
+  font-weight: 800;
+  color: var(--chip-ink);
 }
-.shelf-chip {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 6px;
-  padding: 5px 12px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--card);
+.rm-item.main .rm-source {
+  margin-top: 7px;
+  font-size: 12px;
+}
+.rm-year {
+  font-weight: 700;
   color: var(--muted);
-  font-size: 12.5px;
-  font-weight: 700;
-  cursor: pointer;
 }
-.shelf-chip:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-.shelf-chip.active {
-  border-color: color-mix(in srgb, var(--accent) 35%, transparent);
-  background: color-mix(in srgb, var(--accent) 14%, var(--card));
-  color: var(--accent);
-}
-.shelf-count {
-  font-size: 11px;
-  font-weight: 700;
-  font-variant-numeric: tabular-nums;
-  opacity: 0.65;
-}
-.shelves {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-}
-/* The shelf name and nothing else. It used to carry a line of prose saying what
-   the shelf was for, which on a page of six shelves was six paragraphs nobody
-   was reading and one more thing between the reader and the papers. */
-.shelf-name {
-  margin: 0 0 12px;
-  font-size: 19px;
-  font-weight: 700;
-}
-/* Search results are flat: the order across shelves is relevance or nothing. */
-.paper-flat-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.paper-topic-label {
-  font-weight: 700;
-}
-.paper-group-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-/* Papers that are one line of work share a card, connected down the left by a
-   line between dots. That connector is the page's only claim that one paper
-   follows another, which is why it is drawn inside a card and never between
-   two: cards that merely sit next to each other are not claiming anything. */
-.paper-card.chained {
-  flex-direction: column;
-  gap: 0;
-}
-.paper-step {
-  position: relative;
-  display: flex;
-  min-width: 0;
-  padding-left: 24px;
-}
-.paper-step + .paper-step {
-  margin-top: 18px;
-}
-.paper-step::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 4px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: 2px solid var(--accent);
-  background: var(--card);
-}
-.paper-step:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  left: 4px;
-  top: 16px;
-  bottom: -20px;
-  width: 2px;
-  background: var(--line);
-}
-/* A company's mark rides in the meta row at text size rather than in a 42px
-   plate. Most papers here have no mark at all — the plate would be empty on
-   three cards in four, and an empty plate is worse than none. */
-.paper-card .meta .paper-mark {
+.rm-mark {
   display: inline-grid;
-  place-items: center;
-  width: 15px;
-  height: 15px;
-  flex-shrink: 0;
+  width: 13px;
+  height: 13px;
 }
-.paper-card .meta .paper-mark img {
+.rm-mark img {
   grid-area: 1 / 1;
-  width: 15px;
-  height: 15px;
+  width: 13px;
+  height: 13px;
   object-fit: contain;
   transition: opacity 0.25s ease;
 }
-.paper-card .meta .paper-mark img.dark-only,
-[data-theme="dark"] .paper-card .meta .paper-mark img.light-only {
+.rm-mark img.dark-only,
+[data-theme="dark"] .rm-mark img.light-only {
   opacity: 0;
 }
-[data-theme="dark"] .paper-card .meta .paper-mark img.dark-only {
+[data-theme="dark"] .rm-mark img.dark-only {
   opacity: 1;
+}
+.rm-check {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  margin: 2px 0 0;
+  border: 1.5px solid color-mix(in srgb, var(--accent) 30%, var(--line));
+  border-radius: 4px;
+  background: var(--card);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.rm-item.main .rm-check {
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+}
+.rm-check:hover {
+  border-color: var(--accent);
+}
+.rm-check:checked {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.rm-check:checked::after {
+  content: "";
+  width: 3px;
+  height: 7px;
+  border: solid #fff8f0;
+  border-width: 0 2px 2px 0;
+  transform: translateY(-1px) rotate(45deg);
+}
+.rm-side {
+  position: relative;
+  min-width: 0;
+  border: 1px dashed color-mix(in srgb, var(--accent) 30%, var(--line));
+  border-radius: 14px;
+  padding: 6px 12px 4px;
+  opacity: 0.85;
+}
+.rm-side::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: -17px;
+  width: 16px;
+  height: 2px;
+  background: color-mix(in srgb, var(--accent) 30%, var(--line));
+}
+.rm-side-head {
+  padding: 3px 0;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.rm-side .rm-item {
+  padding: 6px 0;
+}
+.rm-side .rm-item + .rm-item {
+  border-top: 1px solid var(--line);
+}
+.rm-side .rm-item + .rm-side-head {
+  margin-top: 4px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--line);
+}
+@media (max-width: 900px) {
+  .rm-row {
+    grid-template-columns: 34px minmax(0, 1fr);
+    column-gap: 12px;
+    justify-content: stretch;
+  }
+  .rm-spine {
+    grid-row: 1 / span 2;
+  }
+  .rm-side {
+    grid-column: 2;
+    margin-top: 10px;
+  }
+  .rm-side::before {
+    display: none;
+  }
+  .rm-num {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
 }

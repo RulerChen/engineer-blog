@@ -1,0 +1,145 @@
+{
+  "id": "machine-learning",
+  "title": "Machine learning",
+  "blurb": "Linear models, margins, trees and boosting, and how teams run them in production.",
+  "before": ["linear-algebra", "probability"],
+  "next": ["deep-learning", "reinforcement-learning"],
+  "parts": [
+    {
+      "name": "Foundations",
+      "goal": "What learning from data means.",
+      "steps": [
+        {
+          "main": {
+            "type": "course",
+            "title": "Machine Learning Foundations",
+            "url": "https://www.youtube.com/playlist?list=PLXVfgk9fNX2I7tB6oIINGBmW50rrmFTqf",
+            "source": "NTU",
+            "why": "What learning is, linear models, and how to keep them from overfitting. In Mandarin.",
+            "year": "2015"
+          },
+          "background": [
+            {
+              "type": "book",
+              "title": "Mathematics for Machine Learning",
+              "url": "https://mml-book.github.io/",
+              "year": "2020"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Theory",
+      "goal": "The classic model families and why they generalize.",
+      "steps": [
+        {
+          "main": {
+            "type": "course",
+            "title": "Machine Learning Techniques",
+            "url": "https://www.youtube.com/playlist?list=PLXVfgk9fNX2IQOYPmqjqWsNUFl2kpk1U2",
+            "source": "NTU",
+            "why": "SVMs and kernels, then bagging, boosting, trees and random forests. In Mandarin.",
+            "year": "2016"
+          },
+          "further": [
+            {
+              "type": "book",
+              "title": "Pattern Recognition and Machine Learning",
+              "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf",
+              "year": "2006"
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "course",
+            "title": "Stanford CS229: Machine Learning",
+            "url": "https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU",
+            "source": "Stanford",
+            "year": "2018",
+            "why": "k-means, mixtures of Gaussians and EM, factor analysis, PCA and ICA. In English."
+          }
+        }
+      ]
+    },
+    {
+      "name": "In practice",
+      "goal": "Training, serving and keeping models running.",
+      "steps": [
+        {
+          "main": {
+            "url": "https://quinonero.net/Publications/predicting-clicks-facebook.pdf",
+            "why": "Decision-tree features feed a linear model. Fresh data beat model choice."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Leakage in Data Mining: Formulation, Detection, and Avoidance",
+            "url": "https://dl.acm.org/doi/pdf/10.1145/2382577.2382579",
+            "source": "Tel Aviv University",
+            "year": "2012",
+            "why": "Target information that sneaks into training data, and how to detect and avoid it."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Hidden Technical Debt in Machine Learning Systems",
+            "url": "https://proceedings.neurips.cc/paper_files/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf",
+            "source": "Google",
+            "year": "2015",
+            "why": "Why ML systems cost so much to keep running."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Evolution",
+      "goal": "How gradient boosting grew into the systems people use today.",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "XGBoost: A Scalable Tree Boosting System",
+            "url": "https://arxiv.org/abs/1603.02754",
+            "source": "University of Washington",
+            "year": "2016",
+            "why": "The systems work that made boosting scale past billions of rows."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "LightGBM: A Highly Efficient Gradient Boosting Decision Tree",
+            "url": "https://proceedings.neurips.cc/paper_files/paper/2017/file/6449f44a102fde848669bdd9eb6b76fa-Paper.pdf",
+            "source": "Microsoft",
+            "year": "2017",
+            "why": "Up to 20 times faster than conventional GBDT at almost the same accuracy."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "CatBoost: Unbiased Boosting with Categorical Features",
+            "url": "https://arxiv.org/abs/1706.09516",
+            "source": "Yandex",
+            "year": "2017",
+            "why": "Ordered boosting fixes the target leakage in earlier boosting code."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Explainable AI for Trees: From Local Explanations to Global Understanding",
+            "url": "https://arxiv.org/pdf/1905.04610",
+            "source": "University of Washington",
+            "year": "2019",
+            "why": "Exact Shapley explanations for tree models in polynomial time."
+          }
+        }
+      ]
+    }
+  ]
+}

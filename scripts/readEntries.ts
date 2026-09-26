@@ -3,6 +3,7 @@ import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import type { EntryInput } from "../src/lib/entry.js";
 import { normalizeEntryType } from "../src/lib/entryType.js";
+import type { RoadmapInput } from "../src/lib/roadmap.js";
 
 /** Where the per-company entry files live — one `data/<source>.json` each. */
 export const DATA_DIR = fileURLToPath(new URL("../data/", import.meta.url));
@@ -21,6 +22,19 @@ export async function readEntries(dir = DATA_DIR): Promise<EntryInput[]> {
     files.map(async (file) => JSON.parse(await readFile(join(dir, file), "utf8")) as EntryInput[]),
   );
   return groups.flat();
+}
+
+/** Where the roadmaps live — one `data/roadmaps/<topic>.json` each. */
+export const ROADMAP_DIR = join(DATA_DIR, "roadmaps");
+
+/** Every roadmap on disk, from a subdirectory because every top-level .json in data/ is read as entries. */
+export async function readRoadmaps(dir = ROADMAP_DIR): Promise<RoadmapInput[]> {
+  const files = (await readdir(dir).catch(() => [] as string[]))
+    .filter((file) => file.endsWith(".json"))
+    .toSorted();
+  return Promise.all(
+    files.map(async (file) => JSON.parse(await readFile(join(dir, file), "utf8")) as RoadmapInput),
+  );
 }
 
 /**

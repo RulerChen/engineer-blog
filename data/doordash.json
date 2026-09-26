@@ -1,5 +1,12 @@
 [
   {
+    "title": "DashCLIP: Leveraging multimodal models for generating semantic embeddings",
+    "url": "https://careersatdoordash.com/blog/doordash-dashclip-multimodal-models-for-generating-semantic-embeddings/",
+    "source": "DoorDash",
+    "publishedAt": "2026-02-11",
+    "tags": ["machine-learning", "training", "search", "vector"]
+  },
+  {
     "title": "Inside DoorDash’s Service Mesh Journey: Part 1 — Migration at Scale",
     "url": "https://careersatdoordash.com/blog/inside-doordashs-service-mesh-journey-part-1-migration-at-scale/",
     "source": "DoorDash",

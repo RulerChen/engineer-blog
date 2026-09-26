@@ -37,6 +37,13 @@
     "tags": ["data", "container", "kubernetes", "spark"]
   },
   {
+    "title": "Next-Level Personalization: How 16k+ Lifelong User Actions Supercharge Pinterest’s Recommendations",
+    "url": "https://medium.com/pinterest-engineering/next-level-personalization-how-16k-lifelong-user-actions-supercharge-pinterests-recommendations-bd5989f8f5d3",
+    "source": "Pinterest",
+    "publishedAt": "2025-06-06",
+    "tags": ["machine-learning", "recommendation", "inference"]
+  },
+  {
     "title": "Improving Pinterest Search Relevance Using Large Language Models",
     "url": "https://medium.com/pinterest-engineering/improving-pinterest-search-relevance-using-large-language-models-4cd938d4e892",
     "source": "Pinterest",
