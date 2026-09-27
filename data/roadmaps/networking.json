@@ -1,0 +1,254 @@
+{
+  "id": "networking",
+  "title": "Networking",
+  "blurb": "How the Internet is layered, routed and shared, the protocols that carry the web, and how large companies build datacenter, WAN and edge networks.",
+  "before": [],
+  "next": ["distributed-systems", "security"],
+  "parts": [
+    {
+      "name": "Foundations",
+      "steps": [
+        {
+          "main": {
+            "type": "course",
+            "title": "UC Berkeley CS 168: Introduction to the Internet",
+            "url": "https://sp25.cs168.io/",
+            "source": "UC Berkeley",
+            "year": "2025",
+            "why": "Layers, routing and BGP, TCP and congestion control, DNS and HTTP, then datacenters and SDN, with recordings for every lecture. In English."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Architecture",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "End-to-End Arguments in System Design",
+            "url": "https://web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf",
+            "source": "MIT",
+            "year": "1984",
+            "why": "Why reliability and correctness belong at the endpoints, the argument behind a simple network core."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "The Design Philosophy of the DARPA Internet Protocols",
+            "url": "https://groups.csail.mit.edu/ana/Publications/PubPDFs/The%20design%20philosophy%20of%20the%20DARPA%20internet%20protocols.pdf",
+            "source": "MIT",
+            "year": "1988",
+            "why": "The Internet's goals in priority order, and how that order produced datagrams, TCP/IP layering and weak accounting."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Application layer",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Development of the Domain Name System",
+            "url": "https://dl.acm.org/doi/10.1145/52325.52338",
+            "source": "USC",
+            "year": "1988",
+            "why": "Why DNS is a hierarchy of delegated zones with caching resolvers, and what surprised its designers once deployed."
+          }
+        },
+        {
+          "main": {
+            "type": "article",
+            "title": "A Detailed Look at RFC 8446 (a.k.a. TLS 1.3)",
+            "url": "https://blog.cloudflare.com/rfc-8446-aka-tls-1-3/",
+            "source": "Cloudflare",
+            "year": "2018",
+            "why": "The one-round-trip handshake, 0-RTT resumption and its replay risk, and the legacy crypto TLS 1.3 removed."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Transport layer",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Congestion Avoidance and Control",
+            "url": "https://ee.lbl.gov/papers/congavoid.pdf",
+            "source": "UC Berkeley",
+            "year": "1988",
+            "why": "After the 1986 congestion collapse, slow start, AIMD and RTT estimation made TCP back off when the network fills."
+          }
+        },
+        {
+          "main": {
+            "url": "https://research.google/pubs/bbr-congestion-based-congestion-control/",
+            "why": "Loss is a poor congestion signal on deep buffers, so BBR paces to measured bandwidth and RTT instead."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "The QUIC Transport Protocol: Design and Internet-Scale Deployment",
+            "url": "https://storage.googleapis.com/gweb-research2023-media/pubtools/4102.pdf",
+            "source": "Google",
+            "year": "2017",
+            "why": "Google's pre-IETF QUIC, transport and crypto over UDP in userspace, cutting handshake round trips and head-of-line blocking."
+          }
+        },
+        {
+          "main": {
+            "type": "article",
+            "title": "How Facebook is bringing QUIC to billions",
+            "url": "https://engineering.fb.com/2020/10/21/networking-traffic/how-facebook-is-bringing-quic-to-billions/",
+            "source": "Meta",
+            "year": "2020",
+            "why": "IETF QUIC on Meta's own stack. App heuristics tuned for TCP misfired, and tail latency still fell 20 percent."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Network layer",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Engineering Egress with Edge Fabric: Steering Oceans of Content to the World",
+            "url": "http://www.columbia.edu/~ebk2141/papers/edgefabric-sigcomm17.pdf",
+            "source": "Meta",
+            "year": "2017",
+            "why": "BGP picks routes without knowing capacity, so Facebook overrides it from a controller to keep peering links from congesting."
+          }
+        },
+        {
+          "main": {
+            "url": "https://blog.cloudflare.com/going-bgp-zombie-hunting/",
+            "why": "Withdrawn routes that linger in the Internet for minutes, and why withdrawing a more-specific prefix makes it worse."
+          }
+        },
+        {
+          "main": {
+            "type": "article",
+            "title": "More details about the October 4 outage",
+            "url": "https://engineering.fb.com/2021/10/05/networking-traffic/outage-details/",
+            "source": "Meta",
+            "year": "2021",
+            "why": "A backbone command cut every datacenter link, DNS servers withdrew their BGP routes, and Facebook vanished from the Internet."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Datacenter networks",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "A Scalable, Commodity Data Center Network Architecture",
+            "url": "http://ccr.sigcomm.org/online/files/p63-alfares.pdf",
+            "source": "UC San Diego",
+            "year": "2008",
+            "why": "A fat-tree of cheap identical switches gives full bisection bandwidth without big core routers."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Jupiter Evolving: Transforming Google's Datacenter Network via Optical Circuit Switches and Software-Defined Networking",
+            "url": "https://storage.googleapis.com/gweb-research2023-media/pubtools/6752.pdf",
+            "source": "Google",
+            "year": "2022",
+            "why": "Google dropped the Clos spine for optical circuit switches linking aggregation blocks directly, cutting capex 30 percent."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Data Center TCP (DCTCP)",
+            "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2017/01/dctcp-sigcomm2010.pdf",
+            "source": "Microsoft",
+            "year": "2010",
+            "why": "Switches mark ECN early and senders cut in proportion to the marks, keeping queues short for small flows."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Empowering Azure Storage with RDMA",
+            "url": "https://www.usenix.org/system/files/nsdi23-bai.pdf",
+            "source": "Microsoft",
+            "year": "2023",
+            "why": "RDMA across whole Azure regions, with PFC watchdogs, DCQCN tuned across mismatched NICs, and long-haul links."
+          }
+        },
+        {
+          "main": {
+            "url": "https://engineering.fb.com/2024/08/05/data-center-engineering/roce-network-distributed-ai-training-at-scale/",
+            "why": "RoCE for GPU training with PFC and no DCQCN, and why ECMP spread AI traffic badly until each flow used more queue pairs."
+          }
+        }
+      ]
+    },
+    {
+      "name": "SDN and WAN",
+      "steps": [
+        {
+          "main": {
+            "url": "https://research.google/pubs/b4-experience-with-a-globally-deployed-software-defined-wan/",
+            "why": "Centralized traffic engineering runs Google's inter-datacenter links near full utilization."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "B4 and After: Managing Hierarchy, Partitioning, and Asymmetry for Availability and Scale in Google's Software-Defined WAN",
+              "url": "https://dl.acm.org/doi/10.1145/3230543.3230545",
+              "source": "Google",
+              "year": "2018"
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Orion: Google's Software-Defined Networking Control Plane",
+            "url": "https://www.usenix.org/system/files/nsdi21-ferguson.pdf",
+            "source": "Google",
+            "year": "2021",
+            "why": "The control plane now running both Jupiter and B4, built as microservices around a pub-sub database."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Edge and load balancing",
+      "steps": [
+        {
+          "main": {
+            "url": "https://dropbox.tech/infrastructure/dropbox-traffic-infrastructure-edge-network",
+            "why": "PoP placement, and anycast against GeoDNS for steering users, with measurements of how slowly DNS drains traffic."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Maglev: A Fast and Reliable Software Network Load Balancer",
+            "url": "https://storage.googleapis.com/gweb-research2023-media/pubtools/2904.pdf",
+            "source": "Google",
+            "year": "2016",
+            "why": "Google's L4 load balancer on commodity servers, with consistent hashing so connections survive backend changes."
+          }
+        },
+        {
+          "main": {
+            "url": "https://blog.cloudflare.com/how-we-built-pingora-the-proxy-that-connects-cloudflare-to-the-internet/",
+            "why": "nginx's per-worker connection pools wasted handshakes. A shared pool cut new connections 160-fold for one customer."
+          }
+        }
+      ]
+    }
+  ]
+}
