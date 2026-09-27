@@ -1,0 +1,344 @@
+{
+  "id": "distributed-systems",
+  "title": "Distributed systems",
+  "blurb": "Consensus, consistency and transactions across many machines, how they fail in production, and how later systems redesigned the classics.",
+  "before": ["operating-systems", "networking"],
+  "next": ["data-systems", "ml-systems"],
+  "parts": [
+    {
+      "name": "Foundations",
+      "steps": [
+        {
+          "main": {
+            "type": "course",
+            "title": "MIT 6.5840: Distributed Systems",
+            "url": "https://pdos.csail.mit.edu/6.824/",
+            "source": "MIT",
+            "year": "2026",
+            "why": "Papers from MapReduce to PBFT, and labs that build MapReduce, Raft and a sharded key-value store on it. In English."
+          },
+          "alternative": [
+            {
+              "type": "course",
+              "title": "Distributed Systems lecture series",
+              "url": "https://www.youtube.com/playlist?list=PLeKd45zvjcDFUEv_ohr_HdUFe97RItdiB",
+              "source": "University of Cambridge",
+              "year": "2020"
+            },
+            {
+              "type": "course",
+              "title": "MIT 6.824 Distributed Systems (Spring 2020)",
+              "url": "https://www.youtube.com/playlist?list=PLrw6a1wE39_tb2fErI4-WkMbsvGQk9_UB",
+              "source": "MIT",
+              "year": "2020"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Consensus",
+      "steps": [
+        {
+          "main": {
+            "url": "https://lamport.azurewebsites.net/pubs/time-clocks.pdf",
+            "why": "Logical clocks give a total order in which every process runs the same state machine, until one crash halts them all."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "The Part-Time Parliament",
+            "url": "https://lamport.azurewebsites.net/pubs/lamport-paxos.pdf",
+            "source": "DEC",
+            "year": "1998",
+            "why": "The original Paxos, disguised as a Greek parliament that keeps one consistent record while legislators come and go."
+          },
+          "background": [
+            {
+              "url": "https://lamport.azurewebsites.net/pubs/paxos-simple.pdf"
+            }
+          ],
+          "further": [
+            {
+              "type": "paper",
+              "title": "Impossibility of Distributed Consensus with One Faulty Process",
+              "url": "https://groups.csail.mit.edu/tds/papers/Lynch/jacm85.pdf",
+              "source": "Yale",
+              "year": "1985"
+            },
+            {
+              "type": "paper",
+              "title": "Paxos vs Raft: Have we reached consensus on distributed consensus?",
+              "url": "https://arxiv.org/pdf/2004.05074",
+              "source": "University of Cambridge",
+              "year": "2020"
+            }
+          ]
+        },
+        {
+          "main": {
+            "url": "https://raft.github.io/raft.pdf",
+            "why": "Equivalent to Multi-Paxos but split into leader election, log replication and safety, so it is easier to learn and build."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "Viewstamped Replication Revisited",
+              "url": "https://dspace.mit.edu/handle/1721.1/71763",
+              "source": "MIT",
+              "year": "2012"
+            },
+            {
+              "type": "paper",
+              "title": "Vive La Différence: Paxos vs. Viewstamped Replication vs. Zab",
+              "url": "https://arxiv.org/pdf/1309.5671",
+              "source": "Cornell",
+              "year": "2013"
+            }
+          ]
+        },
+        {
+          "main": {
+            "url": "https://research.google.com/archive/paxos_made_live.pdf",
+            "why": "Turning Paxos into Chubby's log took leases, epochs, snapshots, disk-corruption recovery and fault-injection tests."
+          },
+          "further": [
+            {
+              "url": "https://engineering.fb.com/2023/05/16/data-infrastructure/mysql-raft-meta/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Coordination",
+      "steps": [
+        {
+          "main": {
+            "url": "https://research.google.com/archive/chubby-osdi06.pdf",
+            "why": "Coarse-grained locks and small files replicated with Paxos, which GFS and Bigtable use to elect their masters."
+          }
+        },
+        {
+          "main": {
+            "url": "https://www.usenix.org/legacy/event/atc10/tech/full_papers/Hunt.pdf",
+            "why": "A wait-free tree of znodes with watches, on which clients build their own locks, leader election and group membership."
+          }
+        },
+        {
+          "main": {
+            "url": "https://blog.cloudflare.com/a-byzantine-failure-in-the-real-world/",
+            "why": "A half-broken switch trapped etcd in leader elections, and the failovers that followed hurt the API for over six hours."
+          }
+        },
+        {
+          "main": {
+            "url": "https://www.linkedin.com/blog/engineering/infrastructure/scalable-multi-language-service-discovery-at-linkedin",
+            "why": "Endpoint lists only need to converge, so LinkedIn moved them off ZooKeeper and cut p99 propagation from 30 s to 5 s."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Replication and consistency",
+      "steps": [
+        {
+          "main": {
+            "url": "https://research.google.com/archive/gfs-sosp2003.pdf",
+            "why": "Failures are the norm, so one master tracks metadata while chunk replicas serve data under a relaxed consistency model."
+          },
+          "further": [
+            {
+              "url": "https://pages.cs.wisc.edu/~akella/CS838/F15/838-CloudPapers/hdfs.pdf"
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Linearizability: A Correctness Condition for Concurrent Objects",
+            "url": "https://cs.brown.edu/people/mph/HerlihyW90/p463-herlihy.pdf",
+            "source": "CMU",
+            "year": "1990",
+            "why": "Each operation appears to take effect instantly at some point between its invocation and its response."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Chain Replication for Supporting High Throughput and Availability",
+            "url": "https://www.usenix.org/legacy/event/osdi04/tech/full_papers/renesse/renesse.pdf",
+            "source": "Cornell",
+            "year": "2004",
+            "why": "Writes enter at the head and reads come from the tail, giving strong consistency with high throughput."
+          },
+          "further": [
+            {
+              "url": "https://engineering.fb.com/2022/05/04/data-infrastructure/delta/"
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Brewer's Conjecture and the Feasibility of Consistent, Available, Partition-Tolerant Web Services",
+            "url": "https://groups.csail.mit.edu/tds/papers/Gilbert/Brewer6.pdf",
+            "source": "MIT",
+            "year": "2002",
+            "why": "Proves Brewer's conjecture that during a network partition a web service cannot be both consistent and available."
+          }
+        },
+        {
+          "main": {
+            "url": "https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf",
+            "why": "Consistent hashing, sloppy quorums and vector clocks keep the store always writeable, with conflicts resolved on read."
+          },
+          "further": [
+            {
+              "url": "https://research.google.com/archive/bigtable-osdi06.pdf"
+            },
+            {
+              "url": "https://www.cs.cornell.edu/projects/ladis2009/papers/lakshman-ladis2009.pdf"
+            }
+          ]
+        },
+        {
+          "main": {
+            "url": "https://cdn.amazon.science/dc/2b/4ef2b89649f9a393d37d3e042f4e/amazon-aurora-design-considerations-for-high-throughput-cloud-native-relational-databases.pdf",
+            "why": "Only the redo log crosses the network, to six copies in three zones with a 4-of-6 write quorum, and storage builds the pages."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Scaling Memcache at Facebook",
+            "url": "https://www.usenix.org/system/files/conference/nsdi13/nsdi13-final170_update.pdf",
+            "source": "Meta",
+            "year": "2013",
+            "why": "Leases, regional pools and invalidations from the MySQL commit log let memcached serve billions of requests per second."
+          },
+          "further": [
+            {
+              "url": "https://engineering.fb.com/2022/06/08/core-infra/cache-made-consistent/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Transactions",
+      "steps": [
+        {
+          "main": {
+            "url": "https://www.usenix.org/system/files/conference/osdi12/osdi12-final-16.pdf",
+            "why": "TrueTime exposes clock uncertainty, which lets Spanner run externally consistent transactions across data centers."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Life beyond Distributed Transactions: an Apostate's Opinion",
+            "url": "https://www.cidrdb.org/cidr2007/papers/cidr07p15.pdf",
+            "source": "Amazon",
+            "year": "2007",
+            "why": "Large systems skip distributed transactions, updating one entity at a time and linking entities with idempotent messages."
+          },
+          "further": [
+            {
+              "url": "https://medium.com/airbnb-engineering/avoiding-double-payments-in-a-distributed-payments-system-2981f6b070bb"
+            }
+          ]
+        },
+        {
+          "main": {
+            "url": "https://dropbox.tech/infrastructure/cross-shard-transactions-at-10-million-requests-per-second",
+            "why": "Two-phase commit across MySQL shards, with an external transaction record deciding each commit."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Failures",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "The Tail at Scale",
+            "url": "https://www.barroso.org/publications/TheTailAtScale.pdf",
+            "source": "Google",
+            "year": "2013",
+            "why": "If each of 100 fanned-out servers is slow 1% of the time, 63% of requests are slow; hedged or tied requests cut that tail."
+          }
+        },
+        {
+          "main": {
+            "type": "article",
+            "title": "Timeouts, retries, and backoff with jitter",
+            "url": "https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/",
+            "source": "Amazon",
+            "year": "2019",
+            "why": "Five layers that each retry three times multiply database load 243x, so retries need jittered backoff and a budget."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Byzantine faults",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Practical Byzantine Fault Tolerance",
+            "url": "https://pdos.csail.mit.edu/6.824/papers/castro-practicalbft.pdf",
+            "source": "MIT",
+            "year": "1999",
+            "why": "Survives replicas that lie as long as fewer than a third are faulty, and its replicated NFS ran only 3% slower."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Bitcoin: A Peer-to-Peer Electronic Cash System",
+            "url": "https://bitcoin.org/bitcoin.pdf",
+            "year": "2008",
+            "why": "Proof-of-work chains let anonymous nodes agree on one transaction history while honest nodes hold most CPU power."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Redesigns",
+      "steps": [
+        {
+          "main": {
+            "url": "https://www.usenix.org/system/files/atc22-elhemali.pdf",
+            "why": "DynamoDB kept Dynamo's name but little of its design, running each partition as a Multi-Paxos group with a leased leader."
+          }
+        },
+        {
+          "main": {
+            "type": "article",
+            "title": "Diving Deep on S3 Consistency",
+            "url": "https://www.allthingsdistributed.com/2021/04/s3-strong-consistency.html",
+            "source": "Amazon",
+            "year": "2021",
+            "why": "S3 made every read after a write strongly consistent, using a cache coherence protocol checked with proofs and model checking."
+          }
+        },
+        {
+          "main": {
+            "url": "https://www.cockroachlabs.com/pdf/cockroachdb-the-resilient-geo-distributed-sql-database-sigmod-2020.pdf",
+            "why": "Hybrid logical clocks and an uncertainty window replace the special clock hardware that Spanner relies on."
+          }
+        },
+        {
+          "main": {
+            "url": "https://aws.amazon.com/blogs/containers/under-the-hood-amazon-eks-ultra-scale-clusters/",
+            "why": "EKS replaced etcd's Raft with AWS's internal journal, so etcd replicas scale without a quorum, up to 100,000-node clusters."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -51,6 +51,16 @@
         },
         {
           "main": {
+            "type": "paper",
+            "title": "Support-Vector Networks",
+            "url": "https://link.springer.com/content/pdf/10.1007/BF00994018.pdf",
+            "source": "AT&T Bell Labs",
+            "year": "1995",
+            "why": "Maps inputs to a high-dimensional space and fits a linear boundary there, even when classes overlap."
+          }
+        },
+        {
+          "main": {
             "type": "course",
             "title": "Stanford CS229: Machine Learning",
             "url": "https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU",
@@ -95,6 +105,16 @@
     {
       "name": "Evolution",
       "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Random Forests",
+            "url": "https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf",
+            "source": "UC Berkeley",
+            "year": "2001",
+            "why": "Averages trees split on random features, with an error set by tree strength and correlation."
+          }
+        },
         {
           "main": {
             "type": "paper",

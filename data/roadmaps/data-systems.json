@@ -1,0 +1,265 @@
+{
+  "id": "data-systems",
+  "title": "Data systems",
+  "blurb": "Batch and stream processing over many machines, the logs that carry data between systems, and the formats, engines and lakes that store and query it.",
+  "before": ["distributed-systems", "database-systems"],
+  "next": [],
+  "parts": [
+    {
+      "name": "Batch processing",
+      "steps": [
+        {
+          "main": {
+            "url": "https://research.google.com/archive/mapreduce-osdi04.pdf",
+            "why": "Users write map and reduce, and the runtime partitions the input, schedules tasks and reruns those lost with a machine."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Resilient Distributed Datasets: A Fault-Tolerant Abstraction for In-Memory Cluster Computing",
+            "url": "https://www.usenix.org/system/files/conference/nsdi12/nsdi12-final138.pdf",
+            "source": "UC Berkeley",
+            "year": "2012",
+            "why": "Spark keeps intermediate data in memory and rebuilds a lost partition from its lineage instead of replicating it."
+          }
+        },
+        {
+          "main": {
+            "url": "https://www.uber.com/blog/ubers-highly-scalable-and-distributed-shuffle-as-a-service/",
+            "why": "All mappers of a partition write to one shuffle server, which stretched YARN SSD life from about 3 months to 36."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Logs and change capture",
+      "steps": [
+        {
+          "main": {
+            "type": "article",
+            "title": "The Log: What every software engineer should know about real-time data's unifying abstraction",
+            "url": "https://www.linkedin.com/blog/engineering/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying",
+            "source": "LinkedIn",
+            "year": "2013",
+            "why": "One append-only, totally ordered log of changes can feed every database, cache and processing system in a company."
+          }
+        },
+        {
+          "main": {
+            "url": "https://pages.cs.wisc.edu/~akella/CS744/F17/838-CloudPapers/Kafka.pdf",
+            "why": "Brokers keep no consumer state: consumers pull and track their own offsets, and data flows through the page cache."
+          }
+        },
+        {
+          "main": {
+            "url": "https://www.linkedin.com/blog/engineering/infrastructure/introducing-northguard-and-xinfra",
+            "why": "At 32 trillion records a day a partition was too heavy to replicate, so Northguard stripes each log into segments."
+          }
+        },
+        {
+          "main": {
+            "url": "https://netflixtechblog.com/dblog-a-generic-change-data-capture-framework-69351fb9099b",
+            "why": "Watermarks interleave chunked table selects with transaction log events, so a full copy needs no locks and never stalls the log."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Stream processing",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "The Dataflow Model",
+            "url": "https://www.vldb.org/pvldb/vol8/p1792-Akidau.pdf",
+            "source": "Google",
+            "year": "2015",
+            "why": "Windows, watermarks and triggers separate what is computed, where in event time, when results emit and how they refine."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "Discretized Streams: Fault-Tolerant Streaming Computation at Scale",
+              "url": "https://people.csail.mit.edu/matei/papers/2013/sosp_spark_streaming.pdf",
+              "source": "UC Berkeley",
+              "year": "2013"
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Apache Flink: Stream and Batch Processing in a Single Engine",
+            "url": "https://asterios.katsifodimos.com/assets/publications/flink-deb.pdf",
+            "source": "KTH",
+            "year": "2015",
+            "why": "Streams, batch jobs and iterative algorithms all run as pipelined dataflows, with batch treated as a bounded stream."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "State Management in Apache Flink",
+            "url": "https://www.vldb.org/pvldb/vol10/p1718-carbone.pdf",
+            "source": "KTH",
+            "year": "2017",
+            "why": "Barriers flow through the dataflow and each operator snapshots its state as they pass, giving exactly-once state on recovery."
+          },
+          "background": [
+            {
+              "type": "paper",
+              "title": "Distributed Snapshots: Determining Global States of Distributed Systems",
+              "url": "https://lamport.azurewebsites.net/pubs/chandy.pdf",
+              "year": "1985"
+            }
+          ]
+        },
+        {
+          "main": {
+            "url": "https://www.uber.com/blog/real-time-exactly-once-ad-event-processing/",
+            "why": "Kafka transactions commit at each Flink checkpoint and a record UUID dedups downstream, at the cost of 2-minute latency."
+          }
+        }
+      ]
+    },
+    {
+      "name": "File formats",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Dremel: Interactive Analysis of Web-Scale Datasets",
+            "url": "https://research.google.com/pubs/archive/36632.pdf",
+            "source": "Google",
+            "year": "2010",
+            "why": "Repetition and definition levels store nested records by column, the encoding Parquet later adopted."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "Dremel: A Decade of Interactive SQL Analysis at Web Scale",
+              "url": "https://www.vldb.org/pvldb/vol13/p3461-melnik.pdf",
+              "source": "Google",
+              "year": "2020"
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Major Technical Advancements in Apache Hive",
+            "url": "https://web.eecs.umich.edu/~mosharaf/Readings/Hive.pdf",
+            "source": "Ohio State University",
+            "year": "2014",
+            "why": "ORC swaps RCFile's 4 MB row groups for 256 MB stripes with statistics every 10,000 values, so readers skip what a predicate rules out."
+          }
+        },
+        {
+          "main": {
+            "url": "https://www.uber.com/blog/cost-efficiency-big-data/",
+            "why": "Moving Parquet from Snappy to ZSTD cut storage 39%, and sorting rows by the right columns cut another table 32%."
+          }
+        },
+        {
+          "main": {
+            "url": "https://engineering.atspotify.com/2026/7/indexing-the-data-lake-for-online-point-queries",
+            "why": "An external index maps each key to a Parquet file and row, so a point query becomes one ranged read instead of a scan."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Table formats",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Delta Lake: High-Performance ACID Table Storage over Cloud Object Stores",
+            "url": "https://www.vldb.org/pvldb/vol13/p3411-armbrust.pdf",
+            "source": "Databricks",
+            "year": "2020",
+            "why": "A transaction log kept beside the Parquet files in object storage gives ACID tables and time travel without a server."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "Lakehouse: A New Generation of Open Platforms that Unify Data Warehousing and Advanced Analytics",
+              "url": "https://www.cidrdb.org/cidr2021/papers/cidr2021_paper17.pdf",
+              "source": "Databricks",
+              "year": "2021"
+            }
+          ]
+        },
+        {
+          "main": {
+            "url": "https://www.uber.com/blog/uber-big-data-platform/",
+            "why": "Rewriting a 100 TB snapshot on every ingestion left data a day old, so Uber built Hudi for incremental upserts and got it under an hour."
+          },
+          "further": [
+            {
+              "url": "https://www.uber.com/blog/apache-hudi-graduation/"
+            }
+          ]
+        },
+        {
+          "main": {
+            "url": "https://www.notion.com/blog/building-and-scaling-notions-data-lake",
+            "why": "90% of Notion's upserts are updates, which Hudi on S3 absorbs better than Snowflake, saving over a million dollars in 2022."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Query engines and warehouses",
+      "steps": [
+        {
+          "main": {
+            "url": "https://trino.io/Presto_SQL_on_Everything.pdf",
+            "why": "One SQL engine reads Hive, key-value stores and other sources through connectors, with compute apart from storage."
+          }
+        },
+        {
+          "main": {
+            "url": "https://info.snowflake.net/rs/252-RFO-227/images/Snowflake_SIGMOD.pdf",
+            "why": "Data in S3, compute in elastic virtual warehouses and a shared metadata service, each scaled on its own."
+          }
+        },
+        {
+          "main": {
+            "url": "https://cdn.amazon.science/4b/37/223ac61e450898244a31bed53734/amazon-redshift-re-invented.pdf",
+            "why": "Redshift kept its code-generating MPP engine but moved storage to S3 and added concurrency scaling and serverless."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Druid: A Real-time Analytical Data Store",
+            "url": "https://dl.acm.org/doi/pdf/10.1145/2588555.2595631",
+            "year": "2014",
+            "why": "Real-time nodes serve fresh events from memory and historical nodes serve immutable column segments, for sub-second queries on billions of rows."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "Pinot: Realtime OLAP for 530 Million Users",
+              "url": "https://dl.acm.org/doi/pdf/10.1145/3183713.3190661",
+              "source": "LinkedIn",
+              "year": "2018"
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "ClickHouse: Lightning Fast Analytics for Everyone",
+            "url": "https://www.vldb.org/pvldb/vol17/p3731-schulze.pdf",
+            "source": "ClickHouse",
+            "year": "2024",
+            "why": "MergeTree tables write sorted parts and merge them in the background, and queries run vectorized in the style of X100."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -64,7 +64,7 @@
   },
   {
     "title": "DynamoDB",
-    "url": "https://www.usenix.org/conference/atc22/presentation/elhemali",
+    "url": "https://www.usenix.org/system/files/atc22-elhemali.pdf",
     "type": "paper",
     "source": "Amazon",
     "publishedAt": "2022-07-11",
@@ -73,7 +73,7 @@
   },
   {
     "title": "Redshift Re-invented",
-    "url": "https://www.amazon.science/publications/amazon-redshift-re-invented",
+    "url": "https://cdn.amazon.science/4b/37/223ac61e450898244a31bed53734/amazon-redshift-re-invented.pdf",
     "type": "paper",
     "source": "Amazon",
     "publishedAt": "2022-06-12",
@@ -201,7 +201,7 @@
   },
   {
     "title": "Aurora",
-    "url": "https://www.amazon.science/publications/amazon-aurora-design-considerations-for-high-throughput-cloud-native-relational-databases",
+    "url": "https://cdn.amazon.science/dc/2b/4ef2b89649f9a393d37d3e042f4e/amazon-aurora-design-considerations-for-high-throughput-cloud-native-relational-databases.pdf",
     "type": "paper",
     "source": "Amazon",
     "publishedAt": "2017-05-14",
@@ -264,7 +264,7 @@
   },
   {
     "title": "Raft",
-    "url": "https://www.usenix.org/conference/atc14/technical-sessions/presentation/ongaro",
+    "url": "https://raft.github.io/raft.pdf",
     "type": "paper",
     "source": "Stanford",
     "publishedAt": "2014-06-19",
@@ -300,7 +300,7 @@
   },
   {
     "title": "Spanner",
-    "url": "https://www.usenix.org/conference/osdi12/technical-sessions/presentation/corbett",
+    "url": "https://www.usenix.org/system/files/conference/osdi12/osdi12-final-16.pdf",
     "type": "paper",
     "source": "Google",
     "publishedAt": "2012-10-08",
@@ -319,7 +319,7 @@
   },
   {
     "title": "ZooKeeper",
-    "url": "https://www.usenix.org/conference/usenix-atc-10/zookeeper-wait-free-coordination-internet-scale-systems",
+    "url": "https://www.usenix.org/legacy/event/atc10/tech/full_papers/Hunt.pdf",
     "type": "paper",
     "source": "Yahoo",
     "publishedAt": "2010-06-23",
@@ -374,7 +374,7 @@
   },
   {
     "title": "Paxos Made Live",
-    "url": "https://research.google/pubs/paxos-made-live-an-engineering-perspective-2006-invited-talk/",
+    "url": "https://research.google.com/archive/paxos_made_live.pdf",
     "type": "paper",
     "source": "Google",
     "publishedAt": "2007-08-12",
@@ -384,7 +384,7 @@
   },
   {
     "title": "Bigtable",
-    "url": "https://research.google/pubs/bigtable-a-distributed-storage-system-for-structured-data/",
+    "url": "https://research.google.com/archive/bigtable-osdi06.pdf",
     "type": "paper",
     "source": "Google",
     "publishedAt": "2006-11-06",
@@ -393,7 +393,7 @@
   },
   {
     "title": "Chubby",
-    "url": "https://research.google/pubs/the-chubby-lock-service-for-loosely-coupled-distributed-systems/",
+    "url": "https://research.google.com/archive/chubby-osdi06.pdf",
     "type": "paper",
     "source": "Google",
     "publishedAt": "2006-11-06",
@@ -420,7 +420,7 @@
   },
   {
     "title": "MapReduce",
-    "url": "https://research.google/pubs/mapreduce-simplified-data-processing-on-large-clusters/",
+    "url": "https://research.google.com/archive/mapreduce-osdi04.pdf",
     "type": "paper",
     "source": "Google",
     "publishedAt": "2004-12-06",
@@ -429,7 +429,7 @@
   },
   {
     "title": "The Google File System",
-    "url": "https://research.google/pubs/the-google-file-system/",
+    "url": "https://research.google.com/archive/gfs-sosp2003.pdf",
     "type": "paper",
     "source": "Google",
     "publishedAt": "2003-10-19",
@@ -460,7 +460,6 @@
     "title": "Time, Clocks, and the Ordering of Events",
     "url": "https://lamport.azurewebsites.net/pubs/time-clocks.pdf",
     "type": "paper",
-    "source": "Massachusetts Computer Associates",
     "publishedAt": "1978-07-01",
     "topic": "ds-fundamentals",
     "summary": "Defines happened-before as a partial order over events, and shows a logical clock can respect it without synchronized time."

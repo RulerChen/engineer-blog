@@ -35,13 +35,31 @@
             "source": "UC Berkeley",
             "year": "2007",
             "why": "System design choices that textbooks skip, such as process models and parallelism, compared across real systems."
-          }
+          },
+          "further": [
+            {
+              "type": "book",
+              "title": "The Internals of PostgreSQL",
+              "url": "https://www.interdb.jp/pg/index.html",
+              "year": "2026"
+            }
+          ]
         }
       ]
     },
     {
       "name": "Storage engines",
       "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Are You Sure You Want to Use MMAP in Your Database Management System?",
+            "url": "https://www.cidrdb.org/cidr2022/papers/p13-crotty.pdf",
+            "source": "CMU",
+            "year": "2022",
+            "why": "mmap hands paging to the OS, which breaks transactional safety and stalls threads, so several DBMSs moved off it."
+          }
+        },
         {
           "main": {
             "type": "paper",
@@ -88,6 +106,16 @@
     {
       "name": "Query optimization",
       "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "An Overview of Query Optimization in Relational Systems",
+            "url": "https://dl.acm.org/doi/pdf/10.1145/275487.275492",
+            "source": "Microsoft",
+            "year": "1998",
+            "why": "Search space, cost estimation and enumeration, starting from System R's dynamic programming and interesting orders."
+          }
+        },
         {
           "main": {
             "type": "paper",
@@ -191,6 +219,15 @@
             "url": "https://www.cidrdb.org/cidr2005/papers/P19.pdf",
             "year": "2005",
             "why": "Operators handle a vector of values per call instead of one row, keeping modern CPUs busy."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "DuckDB: an Embeddable Analytical Database",
+            "url": "https://ir.cwi.nl/pub/28800/28800.pdf",
+            "year": "2019",
+            "why": "SQLite's row engine on B-trees is slow at analytics, so DuckDB runs vectorized columnar queries inside the host process instead."
           }
         },
         {
