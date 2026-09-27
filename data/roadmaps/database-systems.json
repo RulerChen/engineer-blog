@@ -34,7 +34,7 @@
             "url": "https://dsf.berkeley.edu/papers/fntdb07-architecture.pdf",
             "source": "UC Berkeley",
             "year": "2007",
-            "why": "System design choices that textbooks skip, such as process models and parallelism, compared across real systems."
+            "why": "How real databases handle processes, memory and parallelism, which textbooks skip."
           },
           "further": [
             {
@@ -57,7 +57,7 @@
             "url": "https://www.cidrdb.org/cidr2022/papers/p13-crotty.pdf",
             "source": "CMU",
             "year": "2022",
-            "why": "mmap hands paging to the OS, which breaks transactional safety and stalls threads, so several DBMSs moved off it."
+            "why": "Letting the OS manage pages breaks transaction safety and stalls threads."
           }
         },
         {
@@ -67,13 +67,13 @@
             "url": "https://www.usenix.org/conference/fast21/presentation/dong",
             "source": "Meta",
             "year": "2021",
-            "why": "Eight years of RocksDB, as its target moved from write amplification to space, then to CPU."
+            "why": "Eight years of priorities moving from write amplification to space to CPU."
           }
         },
         {
           "main": {
             "url": "https://engineering.fb.com/2016/08/31/core-infra/myrocks-a-space-and-write-optimized-mysql-database/",
-            "why": "An LSM tree in place of InnoDB's B+tree halved storage for Facebook's user database."
+            "why": "Swapping InnoDB's B+tree for an LSM tree halved Facebook's storage."
           }
         },
         {
@@ -83,7 +83,7 @@
             "url": "https://www.cs.cmu.edu/~pavlo/blog/2023/04/the-part-of-postgresql-we-hate-the-most.html",
             "source": "CMU",
             "year": "2023",
-            "why": "Postgres copies the whole row on every update, which brings bloat, extra index writes and a hard-to-tune vacuum."
+            "why": "Postgres MVCC copies the whole row on each update, causing bloat and vacuum pain."
           },
           "further": [
             {
@@ -98,7 +98,7 @@
             "url": "https://www.cs.cmu.edu/~pavlo/blog/2023/06/yes-postgresql-has-problems-but-were-sticking-with-it.html",
             "source": "CMU",
             "year": "2023",
-            "why": "How to live with those problems: measure bloat, drop unused indexes and tune autovacuum."
+            "why": "Living with it. Measure bloat, drop unused indexes and tune autovacuum."
           }
         }
       ]
@@ -113,7 +113,7 @@
             "url": "https://dl.acm.org/doi/pdf/10.1145/275487.275492",
             "source": "Microsoft",
             "year": "1998",
-            "why": "Search space, cost estimation and enumeration, starting from System R's dynamic programming and interesting orders."
+            "why": "How plans are searched and costed, starting from System R."
           }
         },
         {
@@ -123,7 +123,7 @@
             "url": "https://www.vldb.org/pvldb/vol9/p204-leis.pdf",
             "source": "TU Munich",
             "year": "2015",
-            "why": "Cardinality estimates are routinely far off, and they matter more than the cost model."
+            "why": "Row count estimates are often far off, and matter more than the cost model."
           }
         }
       ]
@@ -138,7 +138,7 @@
             "url": "https://arxiv.org/abs/cs/0701157",
             "source": "Microsoft",
             "year": "1995",
-            "why": "The SQL standard's isolation levels are ambiguous, and snapshot isolation still allows write skew."
+            "why": "Snapshot isolation. SQL's isolation levels are vague, and snapshot isolation still allows write skew."
           }
         },
         {
@@ -148,13 +148,13 @@
             "url": "https://dl.acm.org/doi/pdf/10.1145/1376616.1376690",
             "source": "University of Sydney",
             "year": "2008",
-            "why": "Makes snapshot isolation serializable by detecting the read-write conflicts behind write skew. PostgreSQL's SERIALIZABLE uses it."
+            "why": "Detects write skew so snapshot isolation becomes serializable, as PostgreSQL does."
           }
         },
         {
           "main": {
             "url": "https://planetscale.com/blog/concurrency-vs-throughput-vitess-mysql",
-            "why": "More concurrent transactions made each one slower until throughput fell, and a smaller pool fixed it."
+            "why": "Too many concurrent transactions lowered throughput, and a smaller pool fixed it."
           }
         }
       ]
@@ -165,31 +165,31 @@
         {
           "main": {
             "url": "https://planetscale.com/blog/state-of-online-schema-migrations-in-mysql",
-            "why": "How to change a live table's schema without blocking writes or stalling replicas."
+            "why": "Changing a live table's schema without blocking writes."
           }
         },
         {
           "main": {
             "url": "https://github.blog/engineering/infrastructure/upgrading-github-com-to-mysql-8-0/",
-            "why": "Moving 1,200 MySQL hosts to 8.0 over a year: replicas first, with replication back to 5.7 as the way out."
+            "why": "Upgrading 1,200 MySQL hosts to 8.0 over a year, with a way back to 5.7."
           }
         },
         {
           "main": {
             "url": "https://www.figma.com/blog/pgkeeper-building-the-bouncer-we-needed-for-postgres/",
-            "why": "Postgres spends a process on every connection, so Figma built a pooler that rate-limits connections and sheds load."
+            "why": "Postgres uses one process per connection, so Figma built a pooler that sheds load."
           }
         },
         {
           "main": {
             "url": "https://github.blog/engineering/infrastructure/mysql-high-availability-at-github/",
-            "why": "Detecting a dead primary, promoting a replica and pointing clients at it in 10 to 13 seconds."
+            "why": "Replacing a dead primary with a replica in 10 to 13 seconds."
           }
         },
         {
           "main": {
             "url": "https://www.notion.com/blog/sharding-postgres-at-notion",
-            "why": "Splitting one Postgres into 480 logical shards by workspace, moved over with double writes and dark reads."
+            "why": "Splitting one Postgres into 480 shards, migrated with double writes."
           },
           "further": [
             {
@@ -209,7 +209,7 @@
             "url": "https://www.vldb.org/archives/website/2005/program/paper/thu/p553-stonebraker.pdf",
             "source": "MIT",
             "year": "2005",
-            "why": "Stores data by column, so an analytical query reads only the columns it needs."
+            "why": "Stores data by column, so a query reads only the columns it needs."
           }
         },
         {
@@ -218,7 +218,7 @@
             "title": "MonetDB/X100: Hyper-Pipelining Query Execution",
             "url": "https://www.cidrdb.org/cidr2005/papers/P19.pdf",
             "year": "2005",
-            "why": "Operators handle a vector of values per call instead of one row, keeping modern CPUs busy."
+            "why": "Vectorized execution. Operators process a batch of values per call instead of one row."
           }
         },
         {
@@ -227,7 +227,7 @@
             "title": "DuckDB: an Embeddable Analytical Database",
             "url": "https://ir.cwi.nl/pub/28800/28800.pdf",
             "year": "2019",
-            "why": "SQLite's row engine on B-trees is slow at analytics, so DuckDB runs vectorized columnar queries inside the host process instead."
+            "why": "An in-process database like SQLite, but columnar and built for analytics."
           }
         },
         {
@@ -237,7 +237,7 @@
             "url": "https://db.cs.cmu.edu/papers/2024/whatgoesaround-sigmodrec2024.pdf",
             "source": "MIT",
             "year": "2024",
-            "why": "Twenty years of attempts to replace SQL, and how SQL absorbed their best ideas instead."
+            "why": "Twenty years of SQL replacements, and how SQL absorbed their best ideas."
           }
         }
       ]

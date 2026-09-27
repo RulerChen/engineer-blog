@@ -56,7 +56,7 @@
             "url": "https://link.springer.com/content/pdf/10.1007/BF00994018.pdf",
             "source": "AT&T Bell Labs",
             "year": "1995",
-            "why": "Maps inputs to a high-dimensional space and fits a linear boundary there, even when classes overlap."
+            "why": "Fits a widest-margin linear boundary in a high-dimensional space, allowing some errors."
           }
         },
         {
@@ -77,7 +77,7 @@
         {
           "main": {
             "url": "https://quinonero.net/Publications/predicting-clicks-facebook.pdf",
-            "why": "Decision-tree features feed a linear model. Fresh data beat model choice."
+            "why": "Decision trees feed a logistic regression, and fresh data mattered more than the model."
           }
         },
         {
@@ -87,7 +87,7 @@
             "url": "https://dl.acm.org/doi/pdf/10.1145/2382577.2382579",
             "source": "Tel Aviv University",
             "year": "2012",
-            "why": "Target information that sneaks into training data, and how to detect and avoid it."
+            "why": "When the answer sneaks into training data, and how to catch it."
           }
         },
         {
@@ -97,7 +97,7 @@
             "url": "https://proceedings.neurips.cc/paper_files/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf",
             "source": "Google",
             "year": "2015",
-            "why": "Why ML systems cost so much to keep running."
+            "why": "The model is a small part, and the code around it costs the most."
           }
         }
       ]
@@ -112,7 +112,7 @@
             "url": "https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf",
             "source": "UC Berkeley",
             "year": "2001",
-            "why": "Averages trees split on random features, with an error set by tree strength and correlation."
+            "why": "Average many trees, each split on random features."
           }
         },
         {
@@ -122,7 +122,7 @@
             "url": "https://arxiv.org/abs/1603.02754",
             "source": "University of Washington",
             "year": "2016",
-            "why": "The systems work that made boosting scale past billions of rows."
+            "why": "The systems work that made gradient boosting scale past billions of rows."
           }
         },
         {
@@ -132,7 +132,7 @@
             "url": "https://proceedings.neurips.cc/paper_files/paper/2017/file/6449f44a102fde848669bdd9eb6b76fa-Paper.pdf",
             "source": "Microsoft",
             "year": "2017",
-            "why": "Up to 20 times faster than conventional GBDT at almost the same accuracy."
+            "why": "Up to 20 times faster than standard GBDT at almost the same accuracy."
           }
         },
         {
@@ -142,7 +142,7 @@
             "url": "https://arxiv.org/abs/1706.09516",
             "source": "Yandex",
             "year": "2017",
-            "why": "Ordered boosting fixes the target leakage in earlier boosting code."
+            "why": "Ordered boosting fixes target leakage in gradient boosting."
           }
         },
         {
@@ -152,7 +152,7 @@
             "url": "https://arxiv.org/pdf/1905.04610",
             "source": "University of Washington",
             "year": "2019",
-            "why": "Exact Shapley explanations for tree models in polynomial time."
+            "why": "TreeSHAP. Exact Shapley explanations for tree models in polynomial time."
           }
         }
       ]

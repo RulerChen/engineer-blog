@@ -34,7 +34,7 @@
             "url": "https://www.cs.utoronto.ca/~hinton/absps/naturebp.pdf",
             "source": "UC San Diego",
             "year": "1986",
-            "why": "Backpropagation. Hidden layers learn their own features."
+            "why": "Hidden layers learn their own features."
           }
         }
       ]
@@ -68,7 +68,7 @@
             "url": "https://jmlr.org/papers/volume15/srivastava14a/srivastava14a.pdf",
             "source": "University of Toronto",
             "year": "2014",
-            "why": "Dropout. Randomly drop units in training to curb overfitting."
+            "why": "Randomly drop units in training to curb overfitting."
           }
         },
         {
@@ -78,7 +78,7 @@
             "url": "https://arxiv.org/abs/1412.6980",
             "source": "University of Amsterdam",
             "year": "2014",
-            "why": "Adam. Per-parameter learning rates, still the default optimizer."
+            "why": "Per-parameter learning rates, still the default optimizer."
           },
           "further": [
             {
@@ -97,7 +97,7 @@
             "url": "https://arxiv.org/abs/1502.03167",
             "source": "Google",
             "year": "2015",
-            "why": "Batch normalization. Normalize layer inputs to train much faster."
+            "why": "Normalize layer inputs to train much faster."
           },
           "further": [
             {
@@ -194,7 +194,7 @@
             "url": "https://www.bioinf.jku.at/publications/older/2604.pdf",
             "source": "TU Munich",
             "year": "1997",
-            "why": "LSTM. Gates keep the error signal alive over long sequences."
+            "why": "Gates keep the error signal alive over long sequences."
           }
         },
         {
@@ -225,7 +225,7 @@
             "url": "https://arxiv.org/abs/1406.2661",
             "source": "University of Montreal",
             "year": "2014",
-            "why": "GAN. A generator learns by fooling a discriminator."
+            "why": "A generator learns by fooling a discriminator."
           }
         },
         {
@@ -235,7 +235,7 @@
             "url": "https://arxiv.org/abs/2006.11239",
             "source": "UC Berkeley",
             "year": "2020",
-            "why": "Diffusion model. Generate images by removing noise step by step."
+            "why": "Generate images by removing noise step by step."
           }
         }
       ]
