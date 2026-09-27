@@ -53,7 +53,6 @@ const relations = computed(() =>
       <section v-for="entry in numbered" :key="entry.part.name" class="rm-part">
         <div class="rm-part-head">
           <h3>{{ entry.part.name }}</h3>
-          <p class="heading-font">{{ entry.part.goal }}</p>
         </div>
         <div
           v-for="{ step, n } in entry.steps"

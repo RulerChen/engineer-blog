@@ -21,7 +21,7 @@ export const COLUMN_X = [12, 256, 500, 744, 988];
 export const MAP_WIDTH = 1172;
 export const MAP_HEIGHT = 776;
 
-// Each box shares a row only with a real source; the one crossing is OS to Security over Networking to DS.
+// Each box shares a row only with a real source; OS's edges to Security and Database systems cross Networking's.
 export const TOPIC_NODES: TopicNode[] = [
   { id: "discrete-math", label: "Discrete math", col: 0, y: 28 },
   { id: "operating-systems", label: "Operating systems", col: 0, y: 180 },
@@ -51,6 +51,7 @@ export const TOPIC_EDGES: TopicEdge[] = [
   { from: "networking", to: "distributed-systems", enter: 38 },
   { from: "operating-systems", to: "security", enter: 14 },
   { from: "networking", to: "security", enter: 26 },
+  { from: "operating-systems", to: "database-systems", enter: 14 },
   { from: "dsa", to: "database-systems", enter: 26 },
   { from: "linear-algebra", to: "machine-learning", enter: 14 },
   { from: "probability", to: "machine-learning", enter: 38 },

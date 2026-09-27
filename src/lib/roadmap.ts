@@ -26,7 +26,6 @@ export interface RoadmapStepInput {
 
 export interface RoadmapPartInput {
   name: string;
-  goal: string;
   steps: RoadmapStepInput[];
 }
 
@@ -62,7 +61,6 @@ export interface RoadmapStep {
 
 export interface RoadmapPart {
   name: string;
-  goal: string;
   steps: RoadmapStep[];
 }
 

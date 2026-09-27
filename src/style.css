@@ -1226,10 +1226,6 @@ input::placeholder {
   border-top: 1px solid var(--line);
 }
 .rm-part-head {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 4px 10px;
   margin-bottom: 14px;
 }
 .rm-part-head h3 {
@@ -1239,11 +1235,6 @@ input::placeholder {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--accent);
-}
-.rm-part-head p {
-  margin: 0;
-  font-size: 16px;
-  font-weight: 700;
 }
 /* Spine, main card, side box; the side box drops under the card on narrower screens. */
 .rm-row {

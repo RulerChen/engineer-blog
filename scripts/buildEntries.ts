@@ -150,7 +150,6 @@ export function buildRoadmaps(
       next: checkTopics(road.next, `${road.id}.next`),
       parts: road.parts.map((part) => ({
         name: part.name,
-        goal: part.goal,
         steps: part.steps.map((step, index) => {
           const where = `${road.id} / ${part.name} step ${index + 1}`;
           const resolve = (item: RoadmapItemInput): RoadmapItem =>

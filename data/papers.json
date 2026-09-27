@@ -300,7 +300,7 @@
   },
   {
     "title": "Spanner",
-    "url": "https://research.google/pubs/spanner-googles-globally-distributed-database/",
+    "url": "https://www.usenix.org/conference/osdi12/technical-sessions/presentation/corbett",
     "type": "paper",
     "source": "Google",
     "publishedAt": "2012-10-08",

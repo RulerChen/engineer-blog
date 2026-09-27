@@ -1,0 +1,209 @@
+{
+  "id": "database-systems",
+  "title": "Database systems",
+  "blurb": "Storage engines, query optimization and transactions inside one database, and how its engine evolved.",
+  "before": ["operating-systems", "dsa"],
+  "next": ["data-systems"],
+  "parts": [
+    {
+      "name": "Foundations",
+      "steps": [
+        {
+          "main": {
+            "type": "course",
+            "title": "CMU 15-445/645: Intro to Database Systems",
+            "url": "https://www.youtube.com/playlist?list=PLSE8ODhjZXjYMAgsGH-GtY5rJYZ6zjsd5",
+            "source": "CMU",
+            "year": "2025",
+            "why": "Storage, indexes, query execution and optimization, concurrency control and recovery. In English."
+          },
+          "further": [
+            {
+              "type": "course",
+              "title": "CMU 15-721: Advanced Database Systems",
+              "url": "https://www.youtube.com/playlist?list=PLSE8ODhjZXjYa_zX-KeMJui7pcN1rIaIJ",
+              "source": "CMU",
+              "year": "2024"
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Architecture of a Database System",
+            "url": "https://dsf.berkeley.edu/papers/fntdb07-architecture.pdf",
+            "source": "UC Berkeley",
+            "year": "2007",
+            "why": "System design choices that textbooks skip, such as process models and parallelism, compared across real systems."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Storage engines",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Evolution of Development Priorities in Key-value Stores Serving Large-scale Applications: The RocksDB Experience",
+            "url": "https://www.usenix.org/conference/fast21/presentation/dong",
+            "source": "Meta",
+            "year": "2021",
+            "why": "Eight years of RocksDB, as its target moved from write amplification to space, then to CPU."
+          }
+        },
+        {
+          "main": {
+            "url": "https://engineering.fb.com/2016/08/31/core-infra/myrocks-a-space-and-write-optimized-mysql-database/",
+            "why": "An LSM tree in place of InnoDB's B+tree halved storage for Facebook's user database."
+          }
+        },
+        {
+          "main": {
+            "type": "article",
+            "title": "The Part of PostgreSQL We Hate the Most",
+            "url": "https://www.cs.cmu.edu/~pavlo/blog/2023/04/the-part-of-postgresql-we-hate-the-most.html",
+            "source": "CMU",
+            "year": "2023",
+            "why": "Postgres copies the whole row on every update, which brings bloat, extra index writes and a hard-to-tune vacuum."
+          },
+          "further": [
+            {
+              "url": "https://www.uber.com/blog/postgres-to-mysql-migration/"
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "article",
+            "title": "Yes, PostgreSQL Has Problems. But We're Sticking With It!",
+            "url": "https://www.cs.cmu.edu/~pavlo/blog/2023/06/yes-postgresql-has-problems-but-were-sticking-with-it.html",
+            "source": "CMU",
+            "year": "2023",
+            "why": "How to live with those problems: measure bloat, drop unused indexes and tune autovacuum."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Query optimization",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "How Good Are Query Optimizers, Really?",
+            "url": "https://www.vldb.org/pvldb/vol9/p204-leis.pdf",
+            "source": "TU Munich",
+            "year": "2015",
+            "why": "Cardinality estimates are routinely far off, and they matter more than the cost model."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Transactions",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "A Critique of ANSI SQL Isolation Levels",
+            "url": "https://arxiv.org/abs/cs/0701157",
+            "source": "Microsoft",
+            "year": "1995",
+            "why": "The SQL standard's isolation levels are ambiguous, and snapshot isolation still allows write skew."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Serializable Isolation for Snapshot Databases",
+            "url": "https://dl.acm.org/doi/pdf/10.1145/1376616.1376690",
+            "source": "University of Sydney",
+            "year": "2008",
+            "why": "Makes snapshot isolation serializable by detecting the read-write conflicts behind write skew. PostgreSQL's SERIALIZABLE uses it."
+          }
+        },
+        {
+          "main": {
+            "url": "https://planetscale.com/blog/concurrency-vs-throughput-vitess-mysql",
+            "why": "More concurrent transactions made each one slower until throughput fell, and a smaller pool fixed it."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Operations",
+      "steps": [
+        {
+          "main": {
+            "url": "https://planetscale.com/blog/state-of-online-schema-migrations-in-mysql",
+            "why": "How to change a live table's schema without blocking writes or stalling replicas."
+          }
+        },
+        {
+          "main": {
+            "url": "https://github.blog/engineering/infrastructure/upgrading-github-com-to-mysql-8-0/",
+            "why": "Moving 1,200 MySQL hosts to 8.0 over a year: replicas first, with replication back to 5.7 as the way out."
+          }
+        },
+        {
+          "main": {
+            "url": "https://www.figma.com/blog/pgkeeper-building-the-bouncer-we-needed-for-postgres/",
+            "why": "Postgres spends a process on every connection, so Figma built a pooler that rate-limits connections and sheds load."
+          }
+        },
+        {
+          "main": {
+            "url": "https://github.blog/engineering/infrastructure/mysql-high-availability-at-github/",
+            "why": "Detecting a dead primary, promoting a replica and pointing clients at it in 10 to 13 seconds."
+          }
+        },
+        {
+          "main": {
+            "url": "https://www.notion.com/blog/sharding-postgres-at-notion",
+            "why": "Splitting one Postgres into 480 logical shards by workspace, moved over with double writes and dark reads."
+          },
+          "further": [
+            {
+              "url": "https://www.notion.com/blog/the-great-re-shard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Evolution",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "C-Store: A Column-oriented DBMS",
+            "url": "https://www.vldb.org/archives/website/2005/program/paper/thu/p553-stonebraker.pdf",
+            "source": "MIT",
+            "year": "2005",
+            "why": "Stores data by column, so an analytical query reads only the columns it needs."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "MonetDB/X100: Hyper-Pipelining Query Execution",
+            "url": "https://www.cidrdb.org/cidr2005/papers/P19.pdf",
+            "year": "2005",
+            "why": "Operators handle a vector of values per call instead of one row, keeping modern CPUs busy."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "What Goes Around Comes Around... And Around...",
+            "url": "https://db.cs.cmu.edu/papers/2024/whatgoesaround-sigmodrec2024.pdf",
+            "source": "MIT",
+            "year": "2024",
+            "why": "Twenty years of attempts to replace SQL, and how SQL absorbed their best ideas instead."
+          }
+        }
+      ]
+    }
+  ]
+}

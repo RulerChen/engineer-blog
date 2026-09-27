@@ -7,7 +7,6 @@
   "parts": [
     {
       "name": "Foundations",
-      "goal": "What learning from data means.",
       "steps": [
         {
           "main": {
@@ -31,7 +30,6 @@
     },
     {
       "name": "Theory",
-      "goal": "The classic model families and why they generalize.",
       "steps": [
         {
           "main": {
@@ -65,7 +63,6 @@
     },
     {
       "name": "In practice",
-      "goal": "Training, serving and keeping models running.",
       "steps": [
         {
           "main": {
@@ -97,7 +94,6 @@
     },
     {
       "name": "Evolution",
-      "goal": "How gradient boosting grew into the systems people use today.",
       "steps": [
         {
           "main": {
