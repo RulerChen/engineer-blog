@@ -1,0 +1,281 @@
+{
+  "id": "nlp",
+  "title": "Natural language processing",
+  "blurb": "From term weighting and n-gram models to word vectors, sequence-to-sequence models and pretraining, then retrieval and speech recognition.",
+  "before": ["deep-learning"],
+  "next": ["large-language-models"],
+  "parts": [
+    {
+      "name": "Foundations",
+      "steps": [
+        {
+          "main": {
+            "type": "course",
+            "title": "Stanford CS224N: Natural Language Processing with Deep Learning",
+            "url": "https://www.youtube.com/playlist?list=PLoROMvodv4rOaMFbaqxPDoLWjDaRAdP9D",
+            "source": "Stanford",
+            "year": "2024",
+            "why": "Word vectors, parsing, language models, translation, Transformers and pretraining. In English."
+          },
+          "alternative": [
+            {
+              "type": "course",
+              "title": "Applied Deep Learning",
+              "url": "https://www.csie.ntu.edu.tw/~miulab/f115-adl/",
+              "source": "NTU",
+              "year": "2026"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Statistical methods",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Term Weighting Approaches in Automatic Text Retrieval",
+            "url": "https://ecommons.cornell.edu/server/api/core/bitstreams/fc18789c-6a03-48e6-8226-7dba0ce94e32/content",
+            "source": "Cornell",
+            "year": "1987",
+            "why": "TF-IDF. Weight each term by its count in the document and its rarity in the collection, then normalize for length."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Simple, Proven Approaches to Text Retrieval",
+            "url": "https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-356.pdf",
+            "source": "University of Cambridge",
+            "year": "1994",
+            "why": "BM25. Combines IDF, term frequency and document length into the formula Elasticsearch still uses by default."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Two Decades of Statistical Language Modeling: Where Do We Go from Here?",
+            "url": "https://www.cs.cmu.edu/~roni/papers/survey-slm-IEEE-PROC-0004.pdf",
+            "source": "CMU",
+            "year": "2000",
+            "why": "N-gram language models. Perplexity, smoothing, and the extensions that tried to fix their weaknesses."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Word vectors",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "A Neural Probabilistic Language Model",
+            "url": "https://www.jmlr.org/papers/volume3/bengio03a/bengio03a.pdf",
+            "source": "University of Montreal",
+            "year": "2003",
+            "why": "Neural language model. Learned word vectors let it beat smoothed n-gram models."
+          }
+        },
+        {
+          "main": {
+            "url": "https://arxiv.org/abs/1301.3781",
+            "why": "word2vec. Skip-gram and CBOW, cheap enough to train on billions of words."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "GloVe: Global Vectors for Word Representation",
+              "url": "https://aclanthology.org/D14-1162.pdf",
+              "source": "Stanford",
+              "year": "2014"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sequence to sequence",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Sequence to Sequence Learning with Neural Networks",
+            "url": "https://proceedings.neurips.cc/paper_files/paper/2014/file/5a18e133cbf9f257297f410bb7eca942-Paper.pdf",
+            "source": "Google",
+            "year": "2014",
+            "why": "Seq2seq. One LSTM encodes the source sentence and another decodes the translation."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Neural Machine Translation by Jointly Learning to Align and Translate",
+            "url": "https://arxiv.org/abs/1409.0473",
+            "source": "University of Montreal",
+            "year": "2014",
+            "why": "Attention. The decoder searches the source sentence at every step instead of relying on one fixed vector."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Neural Machine Translation of Rare Words with Subword Units",
+            "url": "https://arxiv.org/abs/1508.07909",
+            "source": "University of Edinburgh",
+            "year": "2015",
+            "why": "BPE. Rare words become sequences of frequent subword units, so a fixed vocabulary can translate any word."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pretraining",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Improving Language Understanding by Generative Pre-Training",
+            "url": "https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf",
+            "source": "OpenAI",
+            "year": "2018",
+            "why": "GPT. Pretrain a Transformer decoder on unlabeled text, then fine-tune it for each task."
+          }
+        },
+        {
+          "main": {
+            "url": "https://arxiv.org/abs/1810.04805",
+            "why": "BERT. Predicting masked words pretrains an encoder that reads in both directions."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "RoBERTa: A Robustly Optimized BERT Pretraining Approach",
+              "url": "https://arxiv.org/abs/1907.11692",
+              "source": "Meta",
+              "year": "2019"
+            },
+            {
+              "type": "paper",
+              "title": "DistilBERT, a Distilled Version of BERT: Smaller, Faster, Cheaper and Lighter",
+              "url": "https://arxiv.org/abs/1910.01108",
+              "source": "Hugging Face",
+              "year": "2019"
+            },
+            {
+              "type": "paper",
+              "title": "Unsupervised Cross-lingual Representation Learning at Scale",
+              "url": "https://arxiv.org/abs/1911.02116",
+              "source": "Meta",
+              "year": "2019"
+            },
+            {
+              "type": "paper",
+              "title": "DeBERTa: Decoding-enhanced BERT with Disentangled Attention",
+              "url": "https://arxiv.org/abs/2006.03654",
+              "source": "Microsoft",
+              "year": "2020"
+            },
+            {
+              "type": "paper",
+              "title": "Smarter, Better, Faster, Longer: A Modern Bidirectional Encoder for Fast, Memory Efficient, and Long Context Finetuning and Inference",
+              "url": "https://arxiv.org/abs/2412.13663",
+              "year": "2024"
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Language Models are Unsupervised Multitask Learners",
+            "url": "https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf",
+            "source": "OpenAI",
+            "year": "2019",
+            "why": "GPT-2. A 1.5B-parameter language model trained on WebText handles many tasks zero-shot, with no fine-tuning."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer",
+            "url": "https://jmlr.org/papers/volume21/20-074/20-074.pdf",
+            "source": "Google",
+            "year": "2019",
+            "why": "T5. Every task becomes text in, text out, and pretraining choices are compared one at a time."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Retrieval",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+            "url": "https://aclanthology.org/D19-1410.pdf",
+            "source": "TU Darmstadt",
+            "year": "2019",
+            "why": "Sentence-BERT. Sentence embeddings compared by cosine turn a 65-hour similarity search into 5 seconds."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+            "url": "https://aclanthology.org/2020.emnlp-main.550.pdf",
+            "source": "Meta",
+            "year": "2020",
+            "why": "DPR. A dual encoder trained on question-passage pairs beats BM25 at retrieval."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+            "url": "https://arxiv.org/abs/2005.11401",
+            "source": "Meta",
+            "year": "2020",
+            "why": "RAG. BART writes answers from Wikipedia passages that DPR retrieves, so knowledge sits in a swappable index."
+          }
+        },
+        {
+          "main": {
+            "url": "https://engineering.atspotify.com/2022/3/introducing-natural-language-search-for-podcast-episodes",
+            "why": "Podcast search moves from term matching to a fine-tuned multilingual sentence encoder."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Speech",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Connectionist Temporal Classification: Labelling Unsegmented Sequence Data with Recurrent Neural Networks",
+            "url": "https://www.cs.toronto.edu/~graves/icml_2006.pdf",
+            "year": "2006",
+            "why": "CTC. Trains a recognizer on audio and transcripts with no frame-by-frame alignment."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "wav2vec 2.0: A Framework for Self-Supervised Learning of Speech Representations",
+            "url": "https://arxiv.org/abs/2006.11477",
+            "source": "Meta",
+            "year": "2020",
+            "why": "wav2vec 2.0. Pretrain on unlabeled audio, then fine-tune on as little as ten minutes of transcribed speech."
+          }
+        },
+        {
+          "main": {
+            "url": "https://arxiv.org/abs/2212.04356",
+            "why": "Whisper. 680,000 hours of web audio with transcripts give robust recognition with no fine-tuning."
+          }
+        }
+      ]
+    }
+  ]
+}

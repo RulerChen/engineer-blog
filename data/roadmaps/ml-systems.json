@@ -1,0 +1,310 @@
+{
+  "id": "ml-systems",
+  "title": "ML systems",
+  "blurb": "The frameworks and GPU kernels under deep learning, how large models are trained and served at low cost, and how recommendation and search systems evolved.",
+  "before": ["distributed-systems", "deep-learning"],
+  "next": [],
+  "parts": [
+    {
+      "name": "Foundations",
+      "steps": [
+        {
+          "main": {
+            "type": "course",
+            "title": "CMU 10-414/714: Deep Learning Systems",
+            "url": "https://dlsyscourse.org/lectures/",
+            "source": "CMU",
+            "year": "2022",
+            "why": "Automatic differentiation, layers, optimizers and GPU operations, each built from scratch into a small deep learning library. In English."
+          },
+          "background": [
+            {
+              "type": "book",
+              "title": "Introduction to Machine Learning Systems",
+              "url": "https://mlsysbook.ai/vol1/",
+              "source": "Harvard",
+              "year": "2026"
+            }
+          ],
+          "further": [
+            {
+              "type": "book",
+              "title": "Machine Learning Systems at Scale",
+              "url": "https://mlsysbook.ai/vol2/",
+              "source": "Harvard",
+              "year": "2026"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Frameworks and kernels",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "PyTorch 2: Faster Machine Learning Through Dynamic Python Bytecode Transformation and Graph Compilation",
+            "url": "https://docs.pytorch.org/assets/pytorch2-2.pdf",
+            "source": "Meta",
+            "year": "2024",
+            "why": "TorchDynamo pulls graphs out of ordinary Python by rewriting bytecode, and TorchInductor compiles them to Triton and C++."
+          },
+          "background": [
+            {
+              "type": "paper",
+              "title": "PyTorch: An Imperative Style, High-Performance Deep Learning Library",
+              "url": "https://arxiv.org/abs/1912.01703",
+              "source": "Meta",
+              "year": "2019"
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "article",
+            "title": "Introducing Triton: Open-source GPU programming for neural networks",
+            "url": "https://openai.com/index/triton/",
+            "source": "OpenAI",
+            "year": "2021",
+            "why": "Kernels are written in Python over blocks of data, and the compiler handles coalescing, shared memory and scheduling inside each SM."
+          }
+        },
+        {
+          "main": {
+            "url": "https://arxiv.org/abs/2205.14135",
+            "why": "Computes attention tile by tile in on-chip SRAM, cutting the reads and writes to GPU memory that dominated its runtime."
+          },
+          "background": [
+            {
+              "type": "article",
+              "title": "Making Deep Learning Go Brrrr From First Principles",
+              "url": "https://horace.io/brrr_intro.html",
+              "year": "2022"
+            }
+          ],
+          "further": [
+            {
+              "type": "paper",
+              "title": "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision",
+              "url": "https://arxiv.org/abs/2407.08608",
+              "source": "Princeton",
+              "year": "2024"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Distributed training",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "PyTorch Distributed: Experiences on Accelerating Data Parallel Training",
+            "url": "https://arxiv.org/abs/2006.15704",
+            "source": "Meta",
+            "year": "2020",
+            "why": "Every GPU holds a full replica, and gradients are all-reduced in buckets while the backward pass is still running."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "ZeRO: Memory Optimizations Toward Training Trillion Parameter Models",
+            "url": "https://arxiv.org/abs/1910.02054",
+            "source": "Microsoft",
+            "year": "2019",
+            "why": "Each data-parallel worker keeps only a slice of the optimizer state, gradients and weights instead of a full copy."
+          }
+        },
+        {
+          "main": {
+            "type": "article",
+            "title": "The Ultra-Scale Playbook: Training LLMs on GPU Clusters",
+            "url": "https://huggingface.co/spaces/nanotron/ultrascale-playbook",
+            "source": "Hugging Face",
+            "year": "2025",
+            "why": "Data, tensor, context, pipeline and expert parallelism, and how to combine them, tested in over 4,000 runs on up to 512 GPUs."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "MegaScale: Scaling Large Language Model Training to More Than 10,000 GPUs",
+            "url": "https://www.usenix.org/system/files/nsdi24-jiang-ziheng.pdf",
+            "source": "ByteDance",
+            "year": "2024",
+            "why": "Trains a 175B model on 12,288 GPUs at 55% MFU, evicting faulty machines and resuming from the latest checkpoint."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Serving",
+      "steps": [
+        {
+          "main": {
+            "url": "https://arxiv.org/abs/2309.06180",
+            "why": "Stores the KV cache in fixed-size blocks like OS pages, so fragmentation no longer caps the batch size."
+          },
+          "background": [
+            {
+              "type": "paper",
+              "title": "Orca: A Distributed Serving System for Transformer-Based Generative Models",
+              "url": "https://www.usenix.org/system/files/osdi22-yu.pdf",
+              "source": "Seoul National University",
+              "year": "2022"
+            }
+          ],
+          "further": [
+            {
+              "type": "paper",
+              "title": "SGLang: Efficient Execution of Structured Language Model Programs",
+              "url": "https://arxiv.org/abs/2312.07104",
+              "source": "UC Berkeley",
+              "year": "2023"
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Fast Inference from Transformers via Speculative Decoding",
+            "url": "https://arxiv.org/abs/2211.17192",
+            "source": "Google",
+            "year": "2022",
+            "why": "A small model drafts several tokens and the large model verifies them in one pass, leaving the output unchanged."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers",
+            "url": "https://arxiv.org/abs/2210.17323",
+            "source": "IST Austria",
+            "year": "2022",
+            "why": "Quantizes weights to 3 or 4 bits without retraining, enough to fit a 175B model on one GPU for generation."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving",
+            "url": "https://www.usenix.org/system/files/osdi24-zhong-yinmin.pdf",
+            "source": "Peking University",
+            "year": "2024",
+            "why": "Prefill and decoding run on separate GPUs, so they stop interfering and each phase gets its own parallelism."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve",
+              "url": "https://arxiv.org/abs/2403.02310",
+              "source": "Microsoft",
+              "year": "2024"
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "article",
+            "title": "DeepSeek-V3/R1 Inference System Overview",
+            "url": "https://github.com/deepseek-ai/open-infra-index/blob/main/202502OpenSourceWeek/day_6_one_more_thing_deepseekV3R1_inference_system_overview.md",
+            "source": "DeepSeek",
+            "year": "2025",
+            "why": "Experts spread across up to 144 GPUs to keep each expert's batch large, with prefill and decode on separate nodes."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Recommendation systems",
+      "steps": [
+        {
+          "main": {
+            "url": "https://research.google/pubs/deep-neural-networks-for-youtube-recommendations/",
+            "why": "One network narrows millions of videos to hundreds and a second ranks them, the two-stage funnel later systems extend."
+          }
+        },
+        {
+          "main": {
+            "url": "https://arxiv.org/abs/1906.00091",
+            "why": "Embedding tables are split across GPUs by model parallelism while the MLPs are replicated data parallel."
+          }
+        },
+        {
+          "main": {
+            "url": "https://engineering.fb.com/2023/08/09/ml-applications/scaling-instagram-explore-recommendations-system/",
+            "why": "Billions of items pass through two-tower retrieval over ANN, a distilled first-stage ranker, a multi-task heavy ranker and final reranking."
+          }
+        },
+        {
+          "main": {
+            "url": "https://engineering.fb.com/2024/11/19/data-infrastructure/sequence-learning-personalized-ads-recommendations/",
+            "why": "Hand-aggregated sparse features give way to raw event sequences read by attention, with 2 to 4% more conversions on some segments."
+          }
+        },
+        {
+          "main": {
+            "url": "https://arxiv.org/abs/2402.17152",
+            "why": "Recasts recommendation as sequence transduction, and quality then grows as a power law of compute, as with LLMs."
+          },
+          "further": [
+            {
+              "url": "https://engineering.fb.com/2026/08/03/ml-applications/training-gem-at-llm-scale-meta-ads-recommendation-foundation-model/"
+            }
+          ]
+        },
+        {
+          "main": {
+            "url": "https://www.linkedin.com/blog/engineering/feed/engineering-the-next-generation-of-linkedins-feed",
+            "why": "Many retrieval sources become one LLM dual encoder, and per-post CPU ranking becomes a sequence transformer served on GPUs."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Search systems",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Embedding-based Retrieval in Facebook Search",
+            "url": "https://arxiv.org/abs/2006.11632",
+            "source": "Meta",
+            "year": "2020",
+            "why": "Embedding retrieval added to a Boolean-matching search engine, with ANN served inside the existing inverted index."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "The Faiss library",
+            "url": "https://arxiv.org/abs/2401.08281",
+            "source": "Meta",
+            "year": "2024",
+            "why": "How vector search trades accuracy, speed and memory, through compression codecs, inverted-file indexes and graph indexes."
+          }
+        },
+        {
+          "main": {
+            "url": "https://medium.com/pinterest-engineering/evolving-pinterests-embedding-retrieval-platform-aede4e831e01",
+            "why": "Scalar and product quantization cut index memory by over half, and SPANN is moving the indexes from RAM to SSD."
+          },
+          "further": [
+            {
+              "url": "https://medium.com/airbnb-engineering/embedding-based-retrieval-for-airbnb-search-aabebfc85839"
+            }
+          ]
+        },
+        {
+          "main": {
+            "url": "https://www.linkedin.com/blog/engineering/search/reimagining-linkedins-search-stack",
+            "why": "An LLM parses each query, LLM embeddings retrieve by exact GPU kNN, and a distilled 0.6B language model ranks the results."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,243 @@
+{
+  "id": "computer-vision",
+  "title": "Computer vision",
+  "blurb": "How current vision models learn from images and text, find and segment objects, pair with LLMs, generate images and rebuild 3D scenes.",
+  "before": ["deep-learning"],
+  "next": [],
+  "parts": [
+    {
+      "name": "Foundations",
+      "steps": [
+        {
+          "main": {
+            "type": "course",
+            "title": "Stanford CS231n: Deep Learning for Computer Vision",
+            "url": "https://www.youtube.com/playlist?list=PLoROMvodv4rOmsNzYBMe0gJY2XS8AQg16",
+            "source": "Stanford",
+            "year": "2025",
+            "why": "Detection and segmentation, video, self-supervised learning, generative models, 3D and vision-language. In English."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+            "url": "https://arxiv.org/abs/2010.11929",
+            "source": "Google",
+            "year": "2020",
+            "why": "ViT. A plain Transformer on image patches rivals CNNs when pretrained on enough data."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Vision encoders",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Learning Transferable Visual Models From Natural Language Supervision",
+            "url": "https://arxiv.org/abs/2103.00020",
+            "source": "OpenAI",
+            "year": "2021",
+            "why": "CLIP. Matching 400M images to their captions gives zero-shot classification from text prompts."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "SigLIP 2: Multilingual Vision-Language Encoders with Improved Semantic Understanding, Localization, and Dense Features",
+              "url": "https://arxiv.org/abs/2502.14786",
+              "source": "Google",
+              "year": "2025"
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "DINOv3",
+            "url": "https://arxiv.org/abs/2508.10104",
+            "source": "Meta",
+            "year": "2025",
+            "why": "Self-supervised vision encoder whose frozen features beat specialized models, with Gram anchoring keeping dense features clean."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Detection and segmentation",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks",
+            "url": "https://arxiv.org/abs/1506.01497",
+            "source": "Microsoft",
+            "year": "2015",
+            "why": "A proposal network shares the detector's features, making region proposals nearly free."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "You Only Look Once: Unified, Real-Time Object Detection",
+            "url": "https://arxiv.org/abs/1506.02640",
+            "source": "University of Washington",
+            "year": "2015",
+            "why": "One network predicts all boxes and classes in a single pass, at 45 frames per second."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "End-to-End Object Detection with Transformers",
+            "url": "https://arxiv.org/abs/2005.12872",
+            "source": "Meta",
+            "year": "2020",
+            "why": "DETR. A Transformer outputs the set of objects directly, with no anchors or non-maximum suppression."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Ultralytics YOLO26: Unified Real-Time End-to-End Vision Models",
+            "url": "https://arxiv.org/abs/2606.03748",
+            "year": "2026",
+            "why": "The widely deployed YOLO family made NMS-free, with detection, segmentation and pose in one real-time pipeline."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Segment Anything",
+            "url": "https://arxiv.org/abs/2304.02643",
+            "source": "Meta",
+            "year": "2023",
+            "why": "A promptable model trained on 1 billion masks segments new images and tasks zero-shot."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "SAM 3: Segment Anything with Concepts",
+            "url": "https://arxiv.org/abs/2511.16719",
+            "source": "Meta",
+            "year": "2025",
+            "why": "A noun phrase or example image finds, segments and tracks every matching object in images and video."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Vision-language models",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Visual Instruction Tuning",
+            "url": "https://arxiv.org/abs/2304.08485",
+            "source": "University of Wisconsin-Madison",
+            "year": "2023",
+            "why": "LLaVA. A linear layer feeds CLIP image features into an LLM, tuned on GPT-4-written instructions."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Qwen3-VL Technical Report",
+            "url": "https://arxiv.org/abs/2511.21631",
+            "source": "Alibaba",
+            "year": "2025",
+            "why": "A SigLIP 2 encoder feeds images and video through an MLP into Qwen3 LLMs, with 256K-token context."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Image generation",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "High-Resolution Image Synthesis with Latent Diffusion Models",
+            "url": "https://arxiv.org/abs/2112.10752",
+            "source": "LMU Munich",
+            "year": "2021",
+            "why": "The basis of Stable Diffusion. Diffusion in an autoencoder's latent space, with cross-attention for text."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Scalable Diffusion Models with Transformers",
+            "url": "https://arxiv.org/abs/2212.09748",
+            "source": "UC Berkeley",
+            "year": "2022",
+            "why": "DiT. A Transformer replaces the U-Net, and image quality keeps rising with compute."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Scaling Rectified Flow Transformers for High-Resolution Image Synthesis",
+            "url": "https://arxiv.org/abs/2403.03206",
+            "year": "2024",
+            "why": "Stable Diffusion 3. Rectified flow training and MM-DiT, a Transformer with separate text and image weights."
+          }
+        }
+      ]
+    },
+    {
+      "name": "3D vision",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis",
+            "url": "https://arxiv.org/abs/2003.08934",
+            "source": "UC Berkeley",
+            "year": "2020",
+            "why": "An MLP maps a 3D point and view direction to color and density, rendered into new views."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "3D Gaussian Splatting for Real-Time Radiance Field Rendering",
+            "url": "https://arxiv.org/abs/2308.04079",
+            "source": "Université Côte d'Azur",
+            "year": "2023",
+            "why": "Optimized 3D Gaussians, splatted rather than ray-marched, render 1080p views in real time."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "VGGT: Visual Geometry Grounded Transformer",
+            "url": "https://arxiv.org/abs/2503.11651",
+            "source": "University of Oxford",
+            "year": "2025",
+            "why": "One forward pass predicts cameras, depth and point maps from many views, often beating optimization-based methods."
+          }
+        }
+      ]
+    },
+    {
+      "name": "In practice",
+      "steps": [
+        {
+          "main": {
+            "url": "https://careersatdoordash.com/blog/doordash-dashclip-multimodal-models-for-generating-semantic-embeddings/",
+            "why": "Off-the-shelf CLIP and BLIP failed on short product queries, so embeddings tuned on the catalog now rank ads."
+          }
+        },
+        {
+          "main": {
+            "url": "https://careersatdoordash.com/blog/doordash-llm-transcribe-menu/",
+            "why": "OCR plus an LLM transcribes menu photos, and a guardrail model sends the doubtful ones to humans."
+          }
+        }
+      ]
+    }
+  ]
+}

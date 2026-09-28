@@ -1,0 +1,332 @@
+{
+  "id": "reinforcement-learning",
+  "title": "Reinforcement learning",
+  "blurb": "How agents learn from reward, the value, policy and model-based methods of deep RL, learning from logs, bandits in production, and rewards learned from human feedback.",
+  "before": ["machine-learning"],
+  "next": ["large-language-models"],
+  "parts": [
+    {
+      "name": "Foundations",
+      "steps": [
+        {
+          "main": {
+            "type": "course",
+            "title": "Stanford CS234: Reinforcement Learning",
+            "url": "https://www.youtube.com/playlist?list=PLoROMvodv4rN4wG6Nk6sNpTEbuOSosZdX",
+            "source": "Stanford",
+            "year": "2024",
+            "why": "MDPs, TD and Q-learning up to DQN, policy gradients up to PPO, imitation, RLHF and DPO, offline RL, bandits and tree search. In English."
+          },
+          "alternative": [
+            {
+              "type": "course",
+              "title": "UCL COMPM050: Reinforcement Learning",
+              "url": "https://www.youtube.com/playlist?list=PLqYmG7hTraZDM-OYHWgPebj2MfCFzFObQ",
+              "source": "UCL",
+              "year": "2015"
+            }
+          ],
+          "further": [
+            {
+              "type": "course",
+              "title": "UC Berkeley CS 285: Deep Reinforcement Learning",
+              "url": "https://rail.eecs.berkeley.edu/deeprlcourse-fa23/",
+              "source": "UC Berkeley",
+              "year": "2023"
+            },
+            {
+              "type": "book",
+              "title": "Reinforcement Learning: An Introduction",
+              "url": "http://incompleteideas.net/book/the-book-2nd.html",
+              "year": "2018"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Value-based methods",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Learning to Predict by the Methods of Temporal Differences",
+            "url": "https://link.springer.com/content/pdf/10.1007/BF00115009.pdf",
+            "source": "GTE Laboratories",
+            "year": "1988",
+            "why": "Learn from the difference between successive predictions instead of waiting for the final outcome."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Q-learning",
+            "url": "https://link.springer.com/content/pdf/10.1007/BF00992698.pdf",
+            "source": "University of Edinburgh",
+            "year": "1992",
+            "why": "Q-learning. Learn optimal action values under any policy, converging as long as every action keeps being tried."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Human-Level Control through Deep Reinforcement Learning",
+            "url": "https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf",
+            "source": "DeepMind",
+            "year": "2015",
+            "why": "DQN. The same architecture and settings learn 49 Atari games from pixels, kept stable by experience replay and a target network."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "Rainbow: Combining Improvements in Deep Reinforcement Learning",
+              "url": "https://arxiv.org/abs/1710.02298",
+              "source": "DeepMind",
+              "year": "2017"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Policy optimization",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Simple Statistical Gradient-Following Algorithms for Connectionist Reinforcement Learning",
+            "url": "https://link.springer.com/content/pdf/10.1007/BF00992696.pdf",
+            "source": "Northeastern University",
+            "year": "1992",
+            "why": "REINFORCE. Adjust a stochastic policy along the gradient of expected reward, using only sampled actions and rewards."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Trust Region Policy Optimization",
+            "url": "https://arxiv.org/abs/1502.05477",
+            "source": "UC Berkeley",
+            "year": "2015",
+            "why": "Keep each update inside a KL-divergence trust region so large neural policies improve almost monotonically."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Proximal Policy Optimization Algorithms",
+            "url": "https://arxiv.org/abs/1707.06347",
+            "source": "OpenAI",
+            "year": "2017",
+            "why": "PPO. A clipped objective allows several epochs of minibatch updates per batch, with much simpler code than TRPO."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "Implementation Matters in Deep Policy Gradients: A Case Study on PPO and TRPO",
+              "url": "https://arxiv.org/abs/2005.12729",
+              "source": "MIT",
+              "year": "2020"
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor",
+            "url": "https://arxiv.org/abs/1801.01290",
+            "source": "UC Berkeley",
+            "year": "2018",
+            "why": "SAC. An off-policy actor-critic that maximizes reward plus entropy, stable across random seeds on continuous control."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Model-based RL",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Mastering the Game of Go with Deep Neural Networks and Tree Search",
+            "url": "https://storage.googleapis.com/deepmind-media/alphago/AlphaGoNaturePaper.pdf",
+            "source": "DeepMind",
+            "year": "2016",
+            "why": "AlphaGo. Policy and value networks, trained on human games then self-play, guide tree search to beat a professional 5-0."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Mastering the Game of Go without Human Knowledge",
+            "url": "https://discovery.ucl.ac.uk/id/eprint/10045895/1/agz_unformatted_nature.pdf",
+            "source": "DeepMind",
+            "year": "2017",
+            "why": "AlphaGo Zero. Self-play with tree search as the teacher, starting from random play, beat AlphaGo 100-0."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model",
+            "url": "https://arxiv.org/abs/1911.08265",
+            "source": "DeepMind",
+            "year": "2019",
+            "why": "MuZero. Plans with a learned model that predicts only reward, policy and value, so it needs no game rules."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Mastering Diverse Control Tasks through World Models",
+            "url": "https://www.nature.com/articles/s41586-025-08744-2.pdf",
+            "source": "DeepMind",
+            "year": "2025",
+            "why": "DreamerV3. Learns a world model and trains the policy in imagined rollouts, with one configuration across 150+ tasks."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Imitation and offline RL",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning",
+            "url": "https://proceedings.mlr.press/v15/ross11a/ross11a.pdf",
+            "source": "CMU",
+            "year": "2011",
+            "why": "DAgger. A cloned policy drifts into states the expert never showed, so the expert labels the states the learner visits."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Conservative Q-Learning for Offline Reinforcement Learning",
+            "url": "https://arxiv.org/abs/2006.04779",
+            "source": "UC Berkeley",
+            "year": "2020",
+            "why": "Train on a fixed dataset while pushing down Q-values of actions it lacks, so the policy cannot exploit overestimates."
+          },
+          "background": [
+            {
+              "type": "paper",
+              "title": "Offline Reinforcement Learning: Tutorial, Review, and Perspectives on Open Problems",
+              "url": "https://arxiv.org/abs/2005.01643",
+              "source": "UC Berkeley",
+              "year": "2020"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bandits",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "A Contextual-Bandit Approach to Personalized News Article Recommendation",
+            "url": "https://arxiv.org/abs/1003.0146",
+            "source": "Yahoo",
+            "year": "2010",
+            "why": "LinUCB. Pick Yahoo front-page news from user and article features, evaluated offline on logged random traffic."
+          },
+          "background": [
+            {
+              "type": "paper",
+              "title": "Finite-Time Analysis of the Multiarmed Bandit Problem",
+              "url": "https://link.springer.com/content/pdf/10.1023/A:1013689704352.pdf",
+              "source": "TU Graz",
+              "year": "2002"
+            }
+          ],
+          "further": [
+            {
+              "type": "paper",
+              "title": "An Empirical Evaluation of Thompson Sampling",
+              "url": "https://proceedings.neurips.cc/paper_files/paper/2011/file/e53a0a2978c28872a4505bdb51db06dc-Paper.pdf",
+              "source": "Yahoo",
+              "year": "2011"
+            }
+          ]
+        },
+        {
+          "main": {
+            "url": "https://medium.com/airbnb-engineering/transforming-location-retrieval-at-airbnb-a-journey-from-heuristics-to-reinforcement-learning-d33ffc4ddb8f",
+            "why": "Picks which map area to search as a contextual bandit, exploring with UCB on Monte Carlo dropout uncertainty."
+          }
+        }
+      ]
+    },
+    {
+      "name": "In practice",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Deep Reinforcement Learning at the Edge of the Statistical Precipice",
+            "url": "https://arxiv.org/abs/2108.13264",
+            "source": "Google",
+            "year": "2021",
+            "why": "Point estimates from a few runs per task mislead, so report bootstrap intervals, performance profiles and interquartile means."
+          },
+          "background": [
+            {
+              "type": "paper",
+              "title": "Deep Reinforcement Learning that Matters",
+              "url": "https://arxiv.org/abs/1709.06560",
+              "source": "McGill University",
+              "year": "2017"
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Top-K Off-Policy Correction for a REINFORCE Recommender System",
+            "url": "https://arxiv.org/abs/1812.02353",
+            "source": "Google",
+            "year": "2018",
+            "why": "REINFORCE over millions of YouTube videos, corrected for logs that older recommenders collected."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "A Better Match for Drivers and Riders: Reinforcement Learning at Lyft",
+            "url": "https://arxiv.org/abs/2310.13810",
+            "source": "Lyft",
+            "year": "2023",
+            "why": "Online RL estimates each driver's future earnings to make better matches, adding over $30 million a year."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Human feedback",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Deep Reinforcement Learning from Human Preferences",
+            "url": "https://arxiv.org/abs/1706.03741",
+            "source": "OpenAI",
+            "year": "2017",
+            "why": "A reward model fit to human comparisons of short clips trains Atari and robot agents without a reward function."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "Learning to Summarize from Human Feedback",
+              "url": "https://arxiv.org/abs/2009.01325",
+              "source": "OpenAI",
+              "year": "2020"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,249 @@
+{
+  "id": "large-language-models",
+  "title": "Large language models",
+  "blurb": "How LLMs evolved from scaled-up pretraining to open reasoning and agentic models, and what today's architectures change.",
+  "before": ["nlp", "reinforcement-learning"],
+  "next": [],
+  "parts": [
+    {
+      "name": "Foundations",
+      "steps": [
+        {
+          "main": {
+            "type": "course",
+            "title": "Machine Learning 2026",
+            "url": "https://speech.ee.ntu.edu.tw/~hylee/ml/2026-spring.php",
+            "source": "NTU",
+            "year": "2026",
+            "why": "Agents and harness engineering, fast inference, long context, self-correcting and self-improving models. In Mandarin."
+          },
+          "alternative": [
+            {
+              "type": "course",
+              "title": "CS336: Language Modeling from Scratch",
+              "url": "https://stanford-cs336.github.io/",
+              "source": "Stanford",
+              "year": "2026"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Origins",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Scaling Laws for Neural Language Models",
+            "url": "https://arxiv.org/abs/2001.08361",
+            "source": "OpenAI",
+            "year": "2020",
+            "why": "Loss falls as a power law in parameters, data and compute."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "Training Compute-Optimal Large Language Models",
+              "url": "https://arxiv.org/abs/2203.15556",
+              "source": "Google",
+              "year": "2022"
+            }
+          ]
+        },
+        {
+          "main": {
+            "url": "https://arxiv.org/abs/2005.14165",
+            "why": "At 175B parameters, examples in the prompt replace fine-tuning."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Training Language Models to Follow Instructions with Human Feedback",
+            "url": "https://arxiv.org/abs/2203.02155",
+            "source": "OpenAI",
+            "year": "2022",
+            "why": "InstructGPT. Supervised fine-tuning, a reward model, then RLHF."
+          },
+          "further": [{ "url": "https://arxiv.org/abs/2305.18290" }]
+        }
+      ]
+    },
+    {
+      "name": "Open models",
+      "steps": [
+        {
+          "main": {
+            "url": "https://arxiv.org/abs/2302.13971",
+            "why": "Small models trained on more public data match much larger ones."
+          }
+        },
+        {
+          "main": {
+            "url": "https://arxiv.org/abs/2412.19437",
+            "why": "Mixture of experts, latent attention and FP8 reach frontier quality at low cost."
+          },
+          "background": [
+            {
+              "type": "paper",
+              "title": "Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer",
+              "url": "https://arxiv.org/abs/1701.06538",
+              "source": "Google",
+              "year": "2017"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Reasoning",
+      "steps": [
+        {
+          "main": {
+            "type": "article",
+            "title": "Learning to Reason with LLMs",
+            "url": "https://openai.com/index/learning-to-reason-with-llms/",
+            "source": "OpenAI",
+            "year": "2024",
+            "why": "o1. Accuracy grows with RL compute in training and thinking time at inference."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
+            "url": "https://arxiv.org/abs/2501.12948",
+            "source": "DeepSeek",
+            "year": "2025",
+            "why": "RL on verifiable rewards alone teaches long chains of thought."
+          },
+          "background": [
+            {
+              "type": "paper",
+              "title": "DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models",
+              "url": "https://arxiv.org/abs/2402.03300",
+              "source": "DeepSeek",
+              "year": "2024"
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Qwen3 Technical Report",
+            "url": "https://arxiv.org/abs/2505.09388",
+            "source": "Alibaba",
+            "year": "2025",
+            "why": "Thinking and non-thinking modes in one model, with a budget for thinking tokens."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "OpenAI GPT-5 System Card",
+              "url": "https://arxiv.org/abs/2601.03267",
+              "source": "OpenAI",
+              "year": "2025"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Agents",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Kimi K2: Open Agentic Intelligence",
+            "url": "https://arxiv.org/abs/2507.20534",
+            "source": "Moonshot AI",
+            "year": "2025",
+            "why": "MuonClip pretraining with no loss spikes, then RL on synthesized agentic tasks."
+          },
+          "background": [
+            {
+              "type": "paper",
+              "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+              "url": "https://arxiv.org/abs/2210.03629",
+              "source": "Google",
+              "year": "2022"
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "GLM-5: from Vibe Coding to Agentic Engineering",
+            "url": "https://arxiv.org/abs/2602.15763",
+            "source": "Zhipu AI",
+            "year": "2026",
+            "why": "Asynchronous RL decouples rollouts from training for long-horizon agent tasks."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Architecture",
+      "steps": [
+        {
+          "main": {
+            "type": "article",
+            "title": "The Big LLM Architecture Comparison",
+            "url": "https://magazine.sebastianraschka.com/p/the-big-llm-architecture-comparison",
+            "year": "2026",
+            "why": "Open-weight architectures side by side, from DeepSeek V3 to Gemma 4."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence",
+            "url": "https://arxiv.org/abs/2606.19348",
+            "source": "DeepSeek",
+            "year": "2026",
+            "why": "Compressed sparse attention, hyper-connections and Muon for million-token context."
+          },
+          "background": [
+            {
+              "type": "paper",
+              "title": "DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models",
+              "url": "https://arxiv.org/abs/2512.02556",
+              "source": "DeepSeek",
+              "year": "2025"
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Kimi K3 Technical Report",
+            "url": "https://github.com/MoonshotAI/Kimi-K3/blob/main/k3_tech_report.pdf",
+            "source": "Moonshot AI",
+            "year": "2026",
+            "why": "Linear attention hybrid, attention residuals and an 896-expert MoE at 2.8T."
+          },
+          "background": [
+            {
+              "type": "paper",
+              "title": "Kimi Linear: An Expressive, Efficient Attention Architecture",
+              "url": "https://arxiv.org/abs/2510.26692",
+              "source": "Moonshot AI",
+              "year": "2025"
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "On the Design of Qwen3.8-Next Architecture: Evaluation, Efficiency, and Training Stability",
+            "url": "https://arxiv.org/abs/2608.30320",
+            "source": "Alibaba",
+            "year": "2026",
+            "why": "Linear-attention hybrid, sparse attention and n-gram embeddings, each judged on quality, cost and stability."
+          }
+        }
+      ]
+    }
+  ]
+}
