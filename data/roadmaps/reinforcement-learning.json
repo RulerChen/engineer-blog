@@ -3,6 +3,182 @@
   "title": "Reinforcement learning",
   "before": ["machine-learning"],
   "next": ["large-language-models"],
+  "evolution": {
+    "eras": [
+      {
+        "name": "Classic RL",
+        "text": "Tables and small problems",
+        "background": "Dynamic programming solved decision problems when the environment's model was known. Temporal-difference learning and Q-learning learned from experience instead, and policy gradients optimized policies directly, but only small problems fit in tables."
+      },
+      {
+        "name": "Deep RL",
+        "text": "Neural networks as value and policy",
+        "background": "Neural networks let agents learn from raw pixels and act in continuous spaces once training was stabilized. Combined with tree search and self-play, they beat the best human Go players."
+      },
+      {
+        "name": "Learning from feedback",
+        "text": "Rewards from people and checked answers",
+        "background": "Many real goals have no written reward. Rewards learned from human comparisons, and later from automatically checked answers, made RL the final stage of training language models."
+      }
+    ],
+    "lanes": ["Planning", "Value-based", "Policy gradient", "Human feedback"],
+    "nodes": [
+      {
+        "id": "dp",
+        "label": "Dynamic programming",
+        "era": "Classic RL",
+        "lane": "Planning",
+        "year": "1957",
+        "problem": "The effects of a decision play out over many later steps.",
+        "idea": "Bellman's equation defines a state's value recursively, solvable when the model is known.",
+        "impact": "The foundation that every RL method approximates."
+      },
+      {
+        "id": "td",
+        "label": "TD learning",
+        "era": "Classic RL",
+        "lane": "Value-based",
+        "year": "1988",
+        "idea": "Update predictions from the difference between successive estimates.",
+        "impact": "The core update of value-based RL; TD-Gammon used it to play backgammon near expert level.",
+        "from": [
+          {
+            "id": "dp",
+            "why": "Dynamic programming needs a model of the environment, and waiting for final outcomes is slow."
+          }
+        ]
+      },
+      {
+        "id": "q",
+        "label": "Q-learning",
+        "era": "Classic RL",
+        "lane": "Value-based",
+        "year": "1992",
+        "idea": "Learn action values that converge to optimal under any exploring policy.",
+        "impact": "The base algorithm that DQN later scaled up.",
+        "from": [
+          {
+            "id": "td",
+            "why": "TD learned how good states are, but choosing actions needs action values learned while exploring."
+          }
+        ]
+      },
+      {
+        "id": "reinforce",
+        "label": "REINFORCE",
+        "era": "Classic RL",
+        "lane": "Policy gradient",
+        "year": "1992",
+        "problem": "Neural policies needed a way to follow the reward gradient without a model.",
+        "idea": "Estimate the gradient of expected reward from sampled actions and the returns they earned.",
+        "impact": "The ancestor of policy-gradient methods, PPO included."
+      },
+      {
+        "id": "dqn",
+        "label": "DQN",
+        "era": "Deep RL",
+        "lane": "Value-based",
+        "year": "2015",
+        "idea": "Experience replay and a target network stabilize learning from pixels.",
+        "impact": "One network learned many Atari games, starting deep RL.",
+        "from": [
+          {
+            "id": "q",
+            "why": "Q-learning worked on small tables but diverged when paired with neural networks."
+          }
+        ]
+      },
+      {
+        "id": "alphago",
+        "label": "AlphaGo",
+        "era": "Deep RL",
+        "lane": "Planning",
+        "year": "2016",
+        "idea": "Guide tree search with policy and value networks trained on human games and self-play.",
+        "impact": "Beat Lee Sedol, years before experts expected a machine to.",
+        "from": [
+          {
+            "id": "dp",
+            "why": "Exhaustive search is impossible in Go's enormous game tree."
+          }
+        ]
+      },
+      {
+        "id": "ppo",
+        "label": "PPO",
+        "era": "Deep RL",
+        "lane": "Policy gradient",
+        "year": "2017",
+        "idea": "Clip the update so each step stays close to the old policy.",
+        "impact": "The default policy-gradient algorithm, and the RL step of RLHF.",
+        "from": [
+          {
+            "id": "reinforce",
+            "why": "Plain policy gradients are noisy, and a large step can collapse the policy; TRPO's fix was complex."
+          }
+        ]
+      },
+      {
+        "id": "muzero",
+        "label": "MuZero",
+        "era": "Deep RL",
+        "lane": "Planning",
+        "year": "2019",
+        "idea": "Learn a model that predicts only reward, policy and value, and plan with it.",
+        "impact": "Matched AlphaZero at board games and extended planning to Atari.",
+        "from": [
+          {
+            "id": "alphago",
+            "why": "Its search needed the game's rules to simulate moves."
+          }
+        ]
+      },
+      {
+        "id": "prefs",
+        "label": "Human preferences",
+        "era": "Learning from feedback",
+        "lane": "Human feedback",
+        "year": "2017",
+        "problem": "Many goals cannot be written down as a reward function.",
+        "idea": "Fit a reward model to people's comparisons of behavior, then optimize against it.",
+        "impact": "The method later used to align language models."
+      },
+      {
+        "id": "rlhf",
+        "label": "RLHF",
+        "era": "Learning from feedback",
+        "lane": "Human feedback",
+        "year": "2022",
+        "idea": "Optimize the language model with PPO against a reward model of human preferences.",
+        "impact": "Turned GPT-3 into InstructGPT and ChatGPT.",
+        "from": [
+          {
+            "id": "prefs",
+            "why": "Supplied a way to turn human comparisons into a reward."
+          },
+          {
+            "id": "ppo",
+            "why": "Supplied a stable algorithm for optimizing a large model against that reward."
+          }
+        ]
+      },
+      {
+        "id": "reason",
+        "label": "Reasoning RL",
+        "era": "Learning from feedback",
+        "lane": "Human feedback",
+        "year": "2025",
+        "idea": "Reward answers that can be verified automatically, such as math and code.",
+        "impact": "Taught models such as DeepSeek-R1 to reason at length.",
+        "from": [
+          {
+            "id": "rlhf",
+            "why": "Preference labels are costly and cannot check whether a hard answer is right."
+          }
+        ]
+      }
+    ]
+  },
   "parts": [
     {
       "name": "Foundations",

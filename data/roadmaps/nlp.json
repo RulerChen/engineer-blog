@@ -3,6 +3,235 @@
   "title": "Natural language processing",
   "before": ["deep-learning"],
   "next": ["large-language-models"],
+  "evolution": {
+    "eras": [
+      {
+        "name": "Rules",
+        "text": "Hand-written grammars",
+        "background": "Early translation and language programs were built from hand-written dictionaries and grammar rules. Demos looked promising, but the rules broke on real text, and a critical US report cut funding for machine translation."
+      },
+      {
+        "name": "Counting",
+        "text": "Statistics over word counts",
+        "background": "As more text went online, researchers replaced rules with statistics counted from data. Search ranked documents by weighted word counts, and speech recognition and translation estimated probabilities of word sequences. The counts treated words as unrelated symbols, which capped how far they could go."
+      },
+      {
+        "name": "Word vectors",
+        "text": "Dense vectors learned from text",
+        "background": "Neural networks learned a dense vector for each word, so words used alike ended up close together. Once training became cheap, pretrained word vectors replaced hand-built features as the input to NLP models."
+      },
+      {
+        "name": "Seq2seq",
+        "text": "End-to-end networks with attention",
+        "background": "Instead of pipelines of separately tuned parts, one network learned to map an input sequence to an output sequence. Attention let it look back at the input, and the Transformer then dropped recurrence altogether."
+      },
+      {
+        "name": "Pretraining",
+        "text": "Pretrain once, adapt to many tasks",
+        "background": "Labeled data stayed scarce, but raw text was plentiful. Models pretrained on huge corpora and then fine-tuned beat task-specific models almost everywhere, and bigger models kept doing better."
+      },
+      {
+        "name": "LLMs",
+        "text": "One model for every task",
+        "background": "Scaled-up pretrained models could handle new tasks from instructions alone. Chat assistants brought them to the public, and most NLP research moved to large language models."
+      }
+    ],
+    "lanes": ["Representing text", "Language models", "Translation"],
+    "nodes": [
+      {
+        "id": "rules",
+        "label": "Rule-based MT",
+        "era": "Rules",
+        "lane": "Translation",
+        "year": "1954",
+        "problem": "Translating Russian research by hand was slow.",
+        "idea": "The Georgetown–IBM demo translates Russian sentences with a small dictionary and a few grammar rules.",
+        "impact": "Hopes ran high, but rules never scaled and US funding was cut after the ALPAC report."
+      },
+      {
+        "id": "tfidf",
+        "label": "TF-IDF",
+        "era": "Counting",
+        "lane": "Representing text",
+        "year": "1972",
+        "problem": "Keyword search treated every word as equally important.",
+        "idea": "Spärck Jones weights a word by how rare it is across documents; multiplied by its frequency in a document, that is TF-IDF.",
+        "impact": "The standard way to score search results for decades, later refined into BM25."
+      },
+      {
+        "id": "ngram",
+        "label": "N-gram LM",
+        "era": "Counting",
+        "lane": "Language models",
+        "year": "1980",
+        "problem": "Speech recognizers needed to know which word sequences are likely.",
+        "idea": "Estimate the next word's probability from counts of the previous few words.",
+        "impact": "Powered speech recognition and translation for decades, but could not generalize to unseen phrases."
+      },
+      {
+        "id": "smt",
+        "label": "Statistical MT",
+        "era": "Counting",
+        "lane": "Translation",
+        "year": "1990",
+        "idea": "IBM learns translation probabilities from aligned English and French parliamentary text.",
+        "impact": "Data-driven translation replaced rules and led to phrase-based systems such as early Google Translate.",
+        "from": [
+          {
+            "id": "rules",
+            "why": "Hand-written rules could not cover real language, while large bilingual texts were becoming available."
+          }
+        ]
+      },
+      {
+        "id": "nlm",
+        "label": "Neural LM",
+        "era": "Word vectors",
+        "lane": "Language models",
+        "year": "2003",
+        "idea": "A neural network learns a vector per word and predicts the next word from those vectors.",
+        "impact": "Introduced learned word embeddings, though it was too slow to train on large corpora.",
+        "from": [
+          {
+            "id": "ngram",
+            "why": "Counts treat every word as unrelated, so a phrase never seen in training gets no probability."
+          }
+        ]
+      },
+      {
+        "id": "w2v",
+        "label": "word2vec",
+        "era": "Word vectors",
+        "lane": "Representing text",
+        "year": "2013",
+        "idea": "Shallow skip-gram and CBOW objectives learn word vectors quickly from billions of words.",
+        "impact": "Pretrained word vectors became the default input to NLP models.",
+        "from": [
+          {
+            "id": "tfidf",
+            "why": "Sparse word counts cannot tell that two different words mean similar things."
+          },
+          {
+            "id": "nlm",
+            "why": "Its word vectors were useful, but training it on web-scale text was far too slow."
+          }
+        ]
+      },
+      {
+        "id": "s2s",
+        "label": "Seq2seq",
+        "era": "Seq2seq",
+        "lane": "Translation",
+        "year": "2014",
+        "idea": "One LSTM encodes the source sentence into a vector and another decodes the translation.",
+        "impact": "Showed a single network could translate end to end.",
+        "from": [
+          {
+            "id": "smt",
+            "why": "Phrase-based systems stitched together many separately tuned parts."
+          }
+        ]
+      },
+      {
+        "id": "attn",
+        "label": "Attention",
+        "era": "Seq2seq",
+        "lane": "Translation",
+        "year": "2014",
+        "idea": "Let the decoder look back at every source word and weight them at each step.",
+        "impact": "Fixed long sentences and became the core operation of later models.",
+        "from": [
+          {
+            "id": "s2s",
+            "why": "Squeezing a whole sentence into one vector lost detail, so long sentences translated badly."
+          }
+        ]
+      },
+      {
+        "id": "trf",
+        "label": "Transformer",
+        "era": "Seq2seq",
+        "lane": "Translation",
+        "year": "2017",
+        "idea": "Use self-attention alone, so every position is processed in parallel.",
+        "impact": "Became the architecture of nearly every later language, vision and speech model.",
+        "from": [
+          {
+            "id": "attn",
+            "why": "Attention worked, but it still sat on top of recurrent networks that read one token at a time."
+          }
+        ]
+      },
+      {
+        "id": "gpt",
+        "label": "GPT",
+        "era": "Pretraining",
+        "lane": "Language models",
+        "year": "2018",
+        "idea": "Pretrain a Transformer decoder to predict the next word, then fine-tune it for each task.",
+        "impact": "Started the GPT line that scaled into today's LLMs.",
+        "from": [
+          {
+            "id": "nlm",
+            "why": "Predicting the next word needs no labels, so any text can train a model."
+          },
+          {
+            "id": "trf",
+            "why": "Supplied an architecture that trains efficiently on huge corpora."
+          }
+        ]
+      },
+      {
+        "id": "bert",
+        "label": "BERT",
+        "era": "Pretraining",
+        "lane": "Representing text",
+        "year": "2018",
+        "idea": "Pretrain a bidirectional Transformer encoder by predicting masked words.",
+        "impact": "Contextual embeddings became the default for classification and search.",
+        "from": [
+          {
+            "id": "w2v",
+            "why": "Each word had one vector, so a word like bank meant the same thing in every sentence."
+          },
+          {
+            "id": "trf",
+            "why": "Supplied an encoder that attends to the words on both sides at once."
+          }
+        ]
+      },
+      {
+        "id": "dpr",
+        "label": "Dense retrieval",
+        "era": "Pretraining",
+        "lane": "Representing text",
+        "year": "2020",
+        "idea": "Encode questions and passages with BERT and retrieve by vector similarity.",
+        "impact": "Embedding search became the retrieval half of RAG and LLM applications.",
+        "from": [
+          {
+            "id": "bert",
+            "why": "Its embeddings capture the meaning of whole passages, which keyword matching misses."
+          }
+        ]
+      },
+      {
+        "id": "chatgpt",
+        "label": "ChatGPT",
+        "era": "LLMs",
+        "lane": "Language models",
+        "year": "2022",
+        "idea": "Tune a GPT model on instructions and human preferences and serve it as a chat app.",
+        "impact": "Brought language models to a mass audience, and NLP research moved to LLMs.",
+        "from": [
+          {
+            "id": "gpt",
+            "why": "Larger GPTs knew a great deal but continued text instead of following requests."
+          }
+        ]
+      }
+    ]
+  },
   "parts": [
     {
       "name": "Foundations",

@@ -1,0 +1,296 @@
+{
+  "id": "compilers",
+  "title": "Compilers & languages",
+  "before": ["discrete-math", "computer-architecture"],
+  "next": [],
+  "parts": [
+    {
+      "name": "Foundations",
+      "steps": [
+        {
+          "main": {
+            "type": "course",
+            "title": "Stanford CS143: Compilers",
+            "url": "https://www.youtube.com/playlist?list=PLUznfNKscdcMzIV_9WtSgtmVemc0JoJhn",
+            "source": "Stanford",
+            "why": "Lexing, LL and LR parsing, semantic analysis and type checking, runtime organization, code generation, dataflow optimization, register allocation and garbage collection. In English."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Origins",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "The FORTRAN Automatic Coding System",
+            "url": "https://archive.computerhistory.org/resources/text/Fortran/102663113.05.01.acc.pdf",
+            "source": "IBM",
+            "year": "1957",
+            "why": "Hand-coding dominated the cost of scientific computing, so FORTRAN compiled math-like programs and used flow analysis to assign registers about as well as people."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Optimization",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Efficiently Computing Static Single Assignment Form and the Control Dependence Graph",
+            "url": "https://dl.acm.org/doi/10.1145/115372.115320",
+            "source": "IBM",
+            "year": "1991",
+            "why": "Optimizers kept tracing which assignment reaches each use, so SSA form gives every variable a single assignment and places merges at dominance frontiers."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Compiler infrastructure",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "LLVM: A Compilation Framework for Lifelong Program Analysis & Transformation",
+            "url": "https://llvm.org/pubs/2004-01-30-CGO-LLVM.pdf",
+            "source": "UIUC",
+            "year": "2004",
+            "why": "Compilers optimized once behind a private IR, so LLVM keeps a typed SSA representation that tools can optimize again at link time and run time."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "BOLT: A Practical Binary Optimizer for Data Centers and Beyond",
+              "url": "https://arxiv.org/abs/1807.06735",
+              "source": "Meta",
+              "year": "2019"
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "MLIR: A Compiler Infrastructure for the End of Moore's Law",
+            "url": "https://arxiv.org/abs/2002.11054",
+            "source": "Google",
+            "year": "2020",
+            "why": "Each domain-specific compiler rebuilt its own IR stack, so MLIR lets dialects at different levels of abstraction share one infrastructure and lower into each other."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Just-in-time compilation",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Optimizing Dynamically-Typed Object-Oriented Languages With Polymorphic Inline Caches",
+            "url": "https://bibliography.selflanguage.org/_static/pics.pdf",
+            "source": "Stanford",
+            "year": "1991",
+            "why": "Dynamic dispatch hides types from the compiler, so polymorphic inline caches record each call site's receiver types and hot code is recompiled for them."
+          }
+        },
+        {
+          "main": {
+            "type": "article",
+            "title": "Maglev - V8's Fastest Optimizing JIT",
+            "url": "https://v8.dev/blog/maglev",
+            "source": "Google",
+            "year": "2023",
+            "why": "TurboFan arrives too late for code that is only warm, so V8 added Maglev, a quick optimizing tier built from bytecode and type feedback."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Types",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "A Theory of Type Polymorphism in Programming",
+            "url": "https://www.sciencedirect.com/science/article/pii/0022000078900144",
+            "source": "University of Edinburgh",
+            "year": "1978",
+            "why": "Untyped programs fail at run time and typed ones need annotations, so Milner's algorithm W infers polymorphic types, and well-typed programs cannot go wrong."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Gradual Typing for Functional Languages",
+            "url": "https://jsiek.github.io/home/siek06gradual.pdf",
+            "source": "University of Colorado",
+            "year": "2006",
+            "why": "Static and dynamic typing each suit different tasks, so gradual typing lets typed and untyped code mix, checking at run time where they meet."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Memory management",
+      "steps": [
+        {
+          "main": {
+            "type": "article",
+            "title": "Getting to Go: The Journey of Go's Garbage Collector",
+            "url": "https://go.dev/blog/ismmkeynote",
+            "source": "Google",
+            "year": "2018",
+            "why": "Go wanted short pauses without moving objects, so its collector went concurrent and dropped generational designs whose always-on write barrier cost too much."
+          },
+          "further": [
+            {
+              "type": "article",
+              "title": "Why Discord is switching from Go to Rust",
+              "url": "https://discord.com/blog/why-discord-is-switching-from-go-to-rust",
+              "source": "Discord",
+              "year": "2020"
+            },
+            {
+              "url": "https://www.uber.com/blog/zero-growth-stack/"
+            }
+          ]
+        },
+        {
+          "main": {
+            "url": "https://www.linkedin.com/blog/engineering/infrastructure/java-heap-memory-and-garbage-collection-tuning-for-high-performance-services",
+            "why": "FollowFeed's huge heap stalled G1 and non-generational ZGC, so LinkedIn flattened cached objects to cut headers and allocations, then moved to generational ZGC."
+          },
+          "further": [
+            {
+              "type": "article",
+              "title": "Bending pause times to your will with Generational ZGC",
+              "url": "https://netflixtechblog.com/bending-pause-times-to-your-will-with-generational-zgc-256629c9386b",
+              "source": "Netflix",
+              "year": "2024"
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Safe Systems Programming in Rust",
+            "url": "https://dl.acm.org/doi/10.1145/3418295",
+            "year": "2021",
+            "why": "Systems code needs control without memory bugs, so Rust checks ownership and borrowing at compile time and confines unsafe code behind safe APIs."
+          },
+          "further": [
+            {
+              "type": "article",
+              "title": "Eliminating Memory Safety Vulnerabilities at the Source",
+              "url": "https://security.googleblog.com/2024/09/eliminating-memory-safety-vulnerabilities-Android.html",
+              "source": "Google",
+              "year": "2024"
+            },
+            {
+              "url": "https://dropbox.tech/infrastructure/rewriting-the-heart-of-our-sync-engine"
+            },
+            {
+              "url": "https://www.figma.com/blog/supporting-faster-file-load-times-with-memory-optimizations-in-rust/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Concurrency",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Threads Cannot Be Implemented as a Library",
+            "url": "https://dl.acm.org/doi/10.1145/1065010.1065042",
+            "source": "HP",
+            "year": "2005",
+            "why": "Compilers can break correct threaded code when threads come from a library, so Boehm argues C and C++ must define a memory model."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "Foundations of the C++ Concurrency Memory Model",
+              "url": "https://dl.acm.org/doi/10.1145/1375581.1375591",
+              "source": "HP",
+              "year": "2008"
+            },
+            {
+              "url": "https://www.uber.com/blog/data-race-patterns-in-go/"
+            },
+            {
+              "url": "https://netflixtechblog.com/java-21-virtual-threads-dude-wheres-my-lock-3052540e231d"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "WebAssembly",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Bringing the Web up to Speed with WebAssembly",
+            "url": "https://dl.acm.org/doi/10.1145/3062341.3062363",
+            "source": "Google",
+            "year": "2017",
+            "why": "JavaScript was a poor compilation target, so the browser vendors designed WebAssembly, a bytecode with formal semantics that validates fast and runs near native speed."
+          }
+        },
+        {
+          "main": {
+            "url": "https://www.amazon.science/blog/how-prime-video-updates-its-app-for-more-than-8-000-device-types",
+            "why": "Prime Video's JavaScript app ran slowly on many TVs, so Amazon moved its low-level systems to Rust compiled to WebAssembly, beside the JavaScript VM."
+          },
+          "further": [
+            {
+              "url": "https://blog.cloudflare.com/big-pineapple-intro/"
+            },
+            {
+              "url": "https://www.notion.com/blog/how-we-sped-up-notion-in-the-browser-with-wasm-sqlite"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Static analysis",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Scaling Static Analyses at Facebook",
+            "url": "https://dl.acm.org/doi/10.1145/3338112",
+            "source": "Meta",
+            "year": "2019",
+            "why": "To catch crashes and security bugs before code ships, Facebook runs compositional analyzers, Infer and Zoncolan, on every code change and comments during code review."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "Lessons from Building Static Analysis Tools at Google",
+              "url": "https://storage.googleapis.com/gweb-research2023-media/pubtools/4365.pdf",
+              "source": "Google",
+              "year": "2018"
+            }
+          ]
+        },
+        {
+          "main": {
+            "url": "https://www.uber.com/blog/nilaway-practical-nil-panic-detection-for-go/",
+            "why": "Go's nil checker found only obvious dereferences, so Uber's NilAway infers nilability across functions as constraints and reports contradictions on every build."
+          },
+          "further": [
+            {
+              "url": "https://engineering.fb.com/2024/12/19/developer-tools/glean-open-source-code-indexing/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

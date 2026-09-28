@@ -3,6 +3,156 @@
   "title": "Machine learning",
   "before": ["linear-algebra", "probability"],
   "next": ["deep-learning", "reinforcement-learning"],
+  "evolution": {
+    "eras": [
+      {
+        "name": "Classic learners",
+        "text": "Trees, margins and ensembles",
+        "background": "Statistical learning theory explained when models generalize, and practical learners followed: decision trees, maximum-margin classifiers and ensembles. Averaging or boosting many trees proved the most reliable way to handle tabular data."
+      },
+      {
+        "name": "Boosting at scale",
+        "text": "Fast boosted trees win tabular data",
+        "background": "As datasets grew, engineering made gradient-boosted trees fast on large, sparse data. They dominated competitions and production tabular models, and tools to explain them followed."
+      },
+      {
+        "name": "Pretrained models",
+        "text": "Tables learned in context",
+        "background": "Deep learning had long lagged boosted trees on tables. Pretraining a Transformer on synthetic datasets finally produced a model that predicts small tables in context, without training on them."
+      }
+    ],
+    "lanes": ["Margin methods", "Trees", "Boosting"],
+    "nodes": [
+      {
+        "id": "cart",
+        "label": "CART",
+        "era": "Classic learners",
+        "lane": "Trees",
+        "year": "1984",
+        "problem": "Classification rules were written by experts.",
+        "idea": "Grow a tree that splits the data on one feature at a time.",
+        "impact": "Readable models, and the building block of forests and boosting."
+      },
+      {
+        "id": "svm",
+        "label": "SVM",
+        "era": "Classic learners",
+        "lane": "Margin methods",
+        "year": "1995",
+        "problem": "Models that fit the training data well often generalized poorly.",
+        "idea": "Find the widest-margin boundary, with kernels for nonlinear shapes.",
+        "impact": "Led many benchmarks until deep learning and boosted trees took over."
+      },
+      {
+        "id": "ada",
+        "label": "AdaBoost",
+        "era": "Classic learners",
+        "lane": "Boosting",
+        "year": "1997",
+        "problem": "Simple models alone are only weak learners.",
+        "idea": "Train learners in sequence, reweighting the examples earlier ones got wrong.",
+        "impact": "Showed weak learners add up to a strong one, the basis of boosting."
+      },
+      {
+        "id": "rf",
+        "label": "Random forests",
+        "era": "Classic learners",
+        "lane": "Trees",
+        "year": "2001",
+        "idea": "Average many trees, each grown on a random sample with random features.",
+        "impact": "Accurate with little tuning, and a default baseline for tabular data.",
+        "from": [
+          {
+            "id": "cart",
+            "why": "Single trees overfit and change a lot with small changes in the data."
+          }
+        ]
+      },
+      {
+        "id": "gbdt",
+        "label": "Gradient boosting",
+        "era": "Classic learners",
+        "lane": "Boosting",
+        "year": "2001",
+        "idea": "Friedman fits each new tree to the gradient of any differentiable loss.",
+        "impact": "Gradient-boosted trees became the strongest method on tabular data.",
+        "from": [
+          {
+            "id": "ada",
+            "why": "AdaBoost was tied to one loss function."
+          },
+          {
+            "id": "cart",
+            "why": "Supplied the regression trees that each boosting step fits."
+          }
+        ]
+      },
+      {
+        "id": "xgb",
+        "label": "XGBoost",
+        "era": "Boosting at scale",
+        "lane": "Boosting",
+        "year": "2016",
+        "idea": "Sparsity-aware splits, quantile sketches and cache-aware computation.",
+        "impact": "Won most tabular competitions and spread through industry.",
+        "from": [
+          {
+            "id": "gbdt",
+            "why": "Gradient boosting was slow on large, sparse datasets."
+          }
+        ]
+      },
+      {
+        "id": "lgbm",
+        "label": "LightGBM",
+        "era": "Boosting at scale",
+        "lane": "Boosting",
+        "year": "2017",
+        "idea": "Sample rows by gradient and bundle sparse features that never overlap.",
+        "impact": "Much faster training on large data, alongside XGBoost and CatBoost.",
+        "from": [
+          {
+            "id": "xgb",
+            "why": "Finding splits still scanned every row and every feature."
+          }
+        ]
+      },
+      {
+        "id": "shap",
+        "label": "TreeSHAP",
+        "era": "Boosting at scale",
+        "lane": "Trees",
+        "year": "2019",
+        "idea": "Compute exact Shapley values for trees in polynomial time.",
+        "impact": "SHAP plots became the usual way to explain tree models.",
+        "from": [
+          {
+            "id": "rf",
+            "why": "Tree ensembles were accurate but hard to explain."
+          },
+          {
+            "id": "xgb",
+            "why": "Boosted models were now everywhere, and each prediction needed an explanation."
+          }
+        ]
+      },
+      {
+        "id": "tabpfn",
+        "label": "TabPFN",
+        "era": "Pretrained models",
+        "lane": "Boosting",
+        "year": "2025",
+        "idea": "Pretrain a Transformer on synthetic datasets so it predicts new tables in context.",
+        "impact": "Beats tuned boosted trees on small tables without training on them.",
+        "from": [
+          {
+            "id": "lgbm",
+            "why": "Boosted trees must be trained and tuned again for every new table."
+          }
+        ]
+      }
+    ]
+  },
   "parts": [
     {
       "name": "Foundations",

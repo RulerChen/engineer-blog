@@ -9,6 +9,11 @@
   --chip-ink: #6b5843;
   --shadow: 0 1px 2px rgba(80, 55, 30, 0.06), 0 6px 20px -8px rgba(80, 55, 30, 0.12);
   --shadow-hover: 0 2px 4px rgba(80, 55, 30, 0.08), 0 14px 34px -10px rgba(80, 55, 30, 0.2);
+  /* Evolution map categories, checked for color-blind separation on --card in both themes. */
+  --lane-1: #2a78d6;
+  --lane-2: #008300;
+  --lane-3: #e87ba4;
+  --lane-4: #eda100;
   font-family:
     "Nunito Sans",
     system-ui,
@@ -28,6 +33,9 @@
   --chip-ink: #cbb69e;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 6px 20px -8px rgba(0, 0, 0, 0.4);
   --shadow-hover: 0 2px 4px rgba(0, 0, 0, 0.3), 0 14px 34px -10px rgba(0, 0, 0, 0.55);
+  --lane-1: #3987e5;
+  --lane-3: #d55181;
+  --lane-4: #c98500;
   color-scheme: dark;
 }
 
@@ -1211,6 +1219,248 @@ input::placeholder {
   background: color-mix(in srgb, var(--accent) 12%, var(--card));
   color: var(--accent);
   cursor: pointer;
+}
+/* Folded to one line of era names until the reader opens it. */
+.rm-evo {
+  margin-top: 4px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--card);
+}
+.rm-evo summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 14px;
+  list-style: none;
+  cursor: pointer;
+}
+.rm-evo summary::-webkit-details-marker {
+  display: none;
+}
+.rm-evo summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.rm-evo[open] summary {
+  border-bottom: 1px solid var(--line);
+  border-radius: 14px 14px 0 0;
+}
+.rm-evo-label {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.rm-evo .chevron {
+  font-size: 15px;
+  line-height: 1;
+  color: var(--accent);
+  transform: rotate(-90deg);
+  transition: transform 0.2s ease;
+}
+.rm-evo[open] .chevron {
+  transform: none;
+}
+.rm-evo-scroll {
+  overflow-x: auto;
+  padding: 14px 16px 0;
+}
+.rm-evo svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.evo-era {
+  cursor: pointer;
+  outline: none;
+}
+.evo-era-band {
+  fill: color-mix(in srgb, var(--accent) 5%, transparent);
+  pointer-events: none;
+}
+.evo-era-hit {
+  fill: transparent;
+}
+.evo-era:hover .evo-era-name,
+.evo-era:focus-visible .evo-era-name,
+.evo-era.active .evo-era-name {
+  fill: var(--accent);
+}
+.evo-era.active .evo-era-hit {
+  fill: color-mix(in srgb, var(--accent) 10%, transparent);
+}
+.evo-era-name {
+  fill: var(--ink);
+  font:
+    700 14px "Bricolage Grotesque",
+    sans-serif;
+}
+.evo-era-span {
+  fill: var(--muted);
+  font:
+    800 11px "Nunito Sans",
+    sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+.evo-era-text {
+  fill: var(--muted);
+  font:
+    600 11.5px "Nunito Sans",
+    sans-serif;
+}
+.evo-lane-line {
+  stroke: var(--line);
+  stroke-dasharray: 3 5;
+}
+.evo-edge {
+  fill: none;
+  stroke: color-mix(in srgb, var(--muted) 65%, transparent);
+  stroke-width: 1.5;
+}
+.evo-edge.lit {
+  stroke: var(--accent);
+  stroke-width: 2;
+}
+.evo-arrow {
+  fill: color-mix(in srgb, var(--muted) 65%, transparent);
+}
+.evo-arrow-lit {
+  fill: var(--accent);
+}
+.evo-node {
+  cursor: pointer;
+  outline: none;
+}
+.evo-node rect:first-child {
+  fill: var(--card);
+  stroke: color-mix(in srgb, var(--accent) 30%, var(--line));
+  stroke-width: 1.5;
+}
+.evo-node:hover rect:first-child,
+.evo-node:focus-visible rect:first-child {
+  stroke: var(--accent);
+}
+.evo-node.active rect:first-child {
+  fill: color-mix(in srgb, var(--accent) 12%, var(--card));
+  stroke: var(--accent);
+  stroke-width: 2.5;
+}
+.evo-node-label {
+  fill: var(--ink);
+  font:
+    700 12.5px "Bricolage Grotesque",
+    sans-serif;
+  text-anchor: middle;
+}
+.evo-node-year {
+  fill: var(--muted);
+  font:
+    700 10.5px "Nunito Sans",
+    sans-serif;
+  text-anchor: middle;
+  font-variant-numeric: tabular-nums;
+}
+.rm-evo-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin: 0;
+  padding: 12px 16px 0;
+  list-style: none;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--chip-ink);
+}
+.rm-evo-legend li,
+.rm-evo-card-lane {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.rm-evo-legend i,
+.rm-evo-card-lane i {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+}
+.rm-evo-card {
+  margin: 10px 16px 16px;
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--bg);
+}
+.rm-evo-card-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+}
+.rm-evo-card-head b {
+  font-size: 16px;
+  font-weight: 700;
+}
+.rm-evo-card-year {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.rm-evo-card-lane {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--chip-ink);
+}
+.rm-evo-card dl {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 4px 14px;
+  margin: 8px 0 0;
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+.rm-evo-card dt {
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 2;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.rm-evo-card dd {
+  margin: 0;
+  color: var(--ink);
+}
+.rm-evo-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--chip-ink);
+  white-space: nowrap;
+}
+.rm-evo-source i {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+.rm-evo-background {
+  margin: 8px 0 0;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--ink);
+}
+.rm-evo-hint {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
 }
 .rm-part {
   scroll-margin-top: 80px;

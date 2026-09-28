@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from "vue";
+import RoadmapEvolution from "./RoadmapEvolution.vue";
 import RoadmapItemRow from "./RoadmapItem.vue";
 import type { Roadmap, RoadmapItem } from "../lib/roadmap.js";
 import { topicLabel } from "../lib/topicMap.js";
@@ -46,6 +47,7 @@ const relations = computed(() =>
           <span v-else class="rm-rel">{{ topicLabel(id) }}<i>planned</i></span>
         </template>
       </div>
+      <RoadmapEvolution v-if="roadmap.evolution" :evolution="roadmap.evolution" />
     </header>
 
     <div class="rm-parts">

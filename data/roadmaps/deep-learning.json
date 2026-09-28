@@ -3,6 +3,186 @@
   "title": "Deep learning",
   "before": ["machine-learning"],
   "next": ["ml-systems", "computer-vision", "nlp"],
+  "evolution": {
+    "eras": [
+      {
+        "name": "Early networks",
+        "text": "Learning weights from examples",
+        "background": "Networks that learn their weights from examples date back to the perceptron, and backpropagation made multi-layer networks trainable. With little data and compute they won only narrow tasks such as reading digits, and other methods dominated."
+      },
+      {
+        "name": "Deep learning",
+        "text": "GPUs, big data and deeper nets",
+        "background": "Large labeled datasets and GPUs made far bigger networks trainable. A string of fixes for initialization, normalization and depth let networks grow deep, and they overtook hand-built features in vision and speech."
+      },
+      {
+        "name": "Attention and diffusion",
+        "text": "New architectures for sequences and images",
+        "background": "Attention replaced recurrence as the way to model sequences, and one architecture came to serve language, vision and audio. In generation, diffusion replaced GANs as the way to produce images."
+      }
+    ],
+    "lanes": ["Training", "Vision", "Sequences", "Generation"],
+    "nodes": [
+      {
+        "id": "perc",
+        "label": "Perceptron",
+        "era": "Early networks",
+        "lane": "Training",
+        "year": "1958",
+        "problem": "Pattern recognition relied on hand-written rules.",
+        "idea": "A single artificial neuron learns its weights from labeled examples.",
+        "impact": "One layer cannot learn even XOR, and interest in neural networks faded."
+      },
+      {
+        "id": "bp",
+        "label": "Backprop",
+        "era": "Early networks",
+        "lane": "Training",
+        "year": "1986",
+        "idea": "Send error gradients backward through the layers with the chain rule.",
+        "impact": "Revived neural networks, and it is still how every network is trained.",
+        "from": [
+          {
+            "id": "perc",
+            "why": "One layer could not learn even XOR, and multi-layer networks had no practical training method."
+          }
+        ]
+      },
+      {
+        "id": "lstm",
+        "label": "LSTM",
+        "era": "Early networks",
+        "lane": "Sequences",
+        "year": "1997",
+        "idea": "Gated memory cells keep the error signal alive across many steps.",
+        "impact": "Ran speech recognition and translation until Transformers arrived.",
+        "from": [
+          {
+            "id": "bp",
+            "why": "Backpropagated through time, gradients vanish over long sequences, so recurrent networks forget."
+          }
+        ]
+      },
+      {
+        "id": "lenet",
+        "label": "LeNet-5",
+        "era": "Early networks",
+        "lane": "Vision",
+        "year": "1998",
+        "idea": "Convolution and pooling layers learn features from pixels, trained end to end.",
+        "impact": "Read bank checks commercially and became the template for later CNNs.",
+        "from": [
+          {
+            "id": "bp",
+            "why": "Backprop could train convolution filters in place of hand-designed features."
+          }
+        ]
+      },
+      {
+        "id": "alex",
+        "label": "AlexNet",
+        "era": "Deep learning",
+        "lane": "Vision",
+        "year": "2012",
+        "idea": "Train a large CNN on GPUs with ReLU and dropout on ImageNet.",
+        "impact": "Won ImageNet by a wide margin and started the deep learning boom.",
+        "from": [
+          {
+            "id": "lenet",
+            "why": "CNNs worked on digits but were too slow to train on large image datasets."
+          }
+        ]
+      },
+      {
+        "id": "vae",
+        "label": "VAE",
+        "era": "Deep learning",
+        "lane": "Generation",
+        "year": "2013",
+        "problem": "Deep latent-variable models were hard to train.",
+        "idea": "The reparameterization trick lets gradients flow through random sampling.",
+        "impact": "Made deep generative models trainable; VAEs later compress images for diffusion."
+      },
+      {
+        "id": "gan",
+        "label": "GAN",
+        "era": "Deep learning",
+        "lane": "Generation",
+        "year": "2014",
+        "problem": "Generative models needed probabilities that were intractable to compute.",
+        "idea": "Train a generator to fool a discriminator that tells real from fake.",
+        "impact": "Produced the sharpest generated images for years, though training was unstable."
+      },
+      {
+        "id": "bn",
+        "label": "Batch norm",
+        "era": "Deep learning",
+        "lane": "Training",
+        "year": "2015",
+        "idea": "Normalize each layer's inputs over the mini-batch.",
+        "impact": "Faster, more stable training; normalization layers became standard.",
+        "from": [
+          {
+            "id": "bp",
+            "why": "Deep networks trained slowly and needed careful initialization."
+          }
+        ]
+      },
+      {
+        "id": "resnet",
+        "label": "ResNet",
+        "era": "Deep learning",
+        "lane": "Vision",
+        "year": "2015",
+        "idea": "Skip connections let each block learn only a residual.",
+        "impact": "Networks went far deeper, and residual connections are now in almost every model.",
+        "from": [
+          {
+            "id": "alex",
+            "why": "Stacking more layers made plain networks train worse, not better."
+          },
+          {
+            "id": "bn",
+            "why": "Supplied the normalization that keeps each residual block stable."
+          }
+        ]
+      },
+      {
+        "id": "trf",
+        "label": "Transformer",
+        "era": "Attention and diffusion",
+        "lane": "Sequences",
+        "year": "2017",
+        "idea": "Self-attention relates all positions at once, in parallel.",
+        "impact": "Became the architecture of LLMs and much of vision.",
+        "from": [
+          {
+            "id": "lstm",
+            "why": "Recurrent models process tokens one at a time, which is slow to train on large data."
+          }
+        ]
+      },
+      {
+        "id": "ddpm",
+        "label": "DDPM",
+        "era": "Attention and diffusion",
+        "lane": "Generation",
+        "year": "2020",
+        "idea": "Learn to reverse a gradual noising process, one small step at a time.",
+        "impact": "Diffusion overtook GANs and now powers image and video generation.",
+        "from": [
+          {
+            "id": "vae",
+            "why": "Its samples were blurry, but its variational training objective carried over to diffusion."
+          },
+          {
+            "id": "gan",
+            "why": "GANs made sharp images but were unstable to train and could miss whole kinds of images."
+          }
+        ]
+      }
+    ]
+  },
   "parts": [
     {
       "name": "Foundations",

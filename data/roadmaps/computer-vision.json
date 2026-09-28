@@ -3,6 +3,213 @@
   "title": "Computer vision",
   "before": ["deep-learning"],
   "next": [],
+  "evolution": {
+    "eras": [
+      {
+        "name": "Hand-crafted",
+        "text": "Features designed by hand",
+        "background": "Engineers designed descriptors of edges, gradients and keypoints by hand, and learning was limited to a classifier on top. The approach was robust within limits but plateaued on hard recognition tasks."
+      },
+      {
+        "name": "Deep CNNs",
+        "text": "Features learned end to end",
+        "background": "Convolutional networks trained on large labeled datasets learned their own features and swept the recognition benchmarks. Detection split into accurate two-stage designs and fast single-pass ones."
+      },
+      {
+        "name": "Transformers and diffusion",
+        "text": "Attention, language and denoising",
+        "background": "Transformers spread from language to vision, and pretraining moved from fixed labels to image-text pairs. At the same time diffusion made high-quality image generation practical, and neural fields reshaped 3D."
+      },
+      {
+        "name": "Foundation models",
+        "text": "One model, prompted for any image",
+        "background": "Large pretrained models began to handle open-ended tasks from a prompt: a point or box for segmentation, a question for a vision-language model. 3D moved to representations that render in real time."
+      }
+    ],
+    "lanes": ["Recognition", "Detection", "Generation", "3D"],
+    "nodes": [
+      {
+        "id": "sift",
+        "label": "SIFT",
+        "era": "Hand-crafted",
+        "lane": "Recognition",
+        "year": "1999",
+        "problem": "Matching objects failed when scale, viewpoint or lighting changed.",
+        "idea": "Detect keypoints and describe them with gradient histograms that stay stable.",
+        "impact": "The workhorse of recognition and 3D reconstruction until CNNs."
+      },
+      {
+        "id": "alex",
+        "label": "AlexNet",
+        "era": "Deep CNNs",
+        "lane": "Recognition",
+        "year": "2012",
+        "idea": "Learn the features end to end with a large CNN trained on GPUs.",
+        "impact": "Learned features replaced hand-crafted ones across vision.",
+        "from": [
+          {
+            "id": "sift",
+            "why": "Hand-designed features like SIFT capped recognition accuracy."
+          }
+        ]
+      },
+      {
+        "id": "frcnn",
+        "label": "Faster R-CNN",
+        "era": "Deep CNNs",
+        "lane": "Detection",
+        "year": "2015",
+        "idea": "A region proposal network shares the detector's CNN features.",
+        "impact": "The accuracy baseline for detection, extended to segmentation by Mask R-CNN.",
+        "from": [
+          {
+            "id": "alex",
+            "why": "CNN features made detection accurate, but region proposals stayed slow and separate."
+          }
+        ]
+      },
+      {
+        "id": "yolo",
+        "label": "YOLO",
+        "era": "Deep CNNs",
+        "lane": "Detection",
+        "year": "2015",
+        "idea": "Predict every box and class in one pass over the image.",
+        "impact": "The YOLO line became the default for real-time detection.",
+        "from": [
+          {
+            "id": "frcnn",
+            "why": "Two-stage detectors were too slow for real time."
+          }
+        ]
+      },
+      {
+        "id": "nerf",
+        "label": "NeRF",
+        "era": "Transformers and diffusion",
+        "lane": "3D",
+        "year": "2020",
+        "problem": "Rendering a real scene from new viewpoints needed an explicit 3D model.",
+        "idea": "Fit a network from position and direction to color and density, then volume-render it.",
+        "impact": "Photoreal new views from photos alone, starting neural rendering."
+      },
+      {
+        "id": "vit",
+        "label": "ViT",
+        "era": "Transformers and diffusion",
+        "lane": "Recognition",
+        "year": "2020",
+        "idea": "Cut the image into patches and feed them to a plain Transformer.",
+        "impact": "Matched CNNs given enough data, so vision could share language's architecture.",
+        "from": [
+          {
+            "id": "alex",
+            "why": "Vision kept using CNNs while language had moved to Transformers."
+          }
+        ]
+      },
+      {
+        "id": "detr",
+        "label": "DETR",
+        "era": "Transformers and diffusion",
+        "lane": "Detection",
+        "year": "2020",
+        "idea": "A Transformer predicts the set of objects directly.",
+        "impact": "Showed detection could be end to end; later real-time detectors dropped NMS too.",
+        "from": [
+          {
+            "id": "yolo",
+            "why": "Detectors still relied on hand-designed anchors and duplicate removal with NMS."
+          }
+        ]
+      },
+      {
+        "id": "clip",
+        "label": "CLIP",
+        "era": "Transformers and diffusion",
+        "lane": "Recognition",
+        "year": "2021",
+        "idea": "Train image and text encoders together on web image-caption pairs.",
+        "impact": "Recognition from text prompts, and the encoder behind many later models.",
+        "from": [
+          {
+            "id": "vit",
+            "why": "Vision models, Transformers included, knew only the fixed classes they were labeled with."
+          }
+        ]
+      },
+      {
+        "id": "ldm",
+        "label": "Latent diffusion",
+        "era": "Transformers and diffusion",
+        "lane": "Generation",
+        "year": "2021",
+        "problem": "Diffusion in pixel space was too expensive for high-resolution images.",
+        "idea": "Run diffusion in a compressed latent space, conditioned on text.",
+        "impact": "Released openly as Stable Diffusion, putting text-to-image on consumer GPUs."
+      },
+      {
+        "id": "dit",
+        "label": "DiT",
+        "era": "Transformers and diffusion",
+        "lane": "Generation",
+        "year": "2022",
+        "idea": "Replace the U-Net with a Transformer over latent patches.",
+        "impact": "Quality improves steadily with compute, and later image and video models build on it.",
+        "from": [
+          {
+            "id": "ldm",
+            "why": "Its U-Net backbone was a different design from the Transformers scaling everywhere else."
+          }
+        ]
+      },
+      {
+        "id": "sam",
+        "label": "SAM",
+        "era": "Foundation models",
+        "lane": "Detection",
+        "year": "2023",
+        "idea": "A promptable model trained on a vast mask dataset segments from points or boxes.",
+        "impact": "Segments new images zero-shot and became a standard labeling tool.",
+        "from": [
+          {
+            "id": "detr",
+            "why": "Segmentation models were still trained per task and per dataset."
+          }
+        ]
+      },
+      {
+        "id": "llava",
+        "label": "LLaVA",
+        "era": "Foundation models",
+        "lane": "Recognition",
+        "year": "2023",
+        "idea": "Feed CLIP image features into an LLM and tune it on visual instructions.",
+        "impact": "The template for open vision-language models.",
+        "from": [
+          {
+            "id": "clip",
+            "why": "Its image features already lined up with language, ready to feed into an LLM that could not see."
+          }
+        ]
+      },
+      {
+        "id": "gs",
+        "label": "3D Gaussians",
+        "era": "Foundation models",
+        "lane": "3D",
+        "year": "2023",
+        "idea": "Represent the scene with 3D Gaussians and rasterize them.",
+        "impact": "Real-time rendering of captured scenes, and it largely displaced NeRF in practice.",
+        "from": [
+          {
+            "id": "nerf",
+            "why": "NeRF rendered too slowly for real-time use."
+          }
+        ]
+      }
+    ]
+  },
   "parts": [
     {
       "name": "Foundations",

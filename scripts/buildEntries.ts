@@ -4,7 +4,14 @@ import { fileURLToPath } from "node:url";
 import type { EntryInput } from "../src/lib/entry.js";
 import { normalizeEntryType } from "../src/lib/entryType.js";
 import { iconKey, parseIconFile } from "../src/lib/icon.js";
-import type { Roadmap, RoadmapInput, RoadmapItem, RoadmapItemInput } from "../src/lib/roadmap.js";
+import type {
+  Evolution,
+  EvolutionNode,
+  Roadmap,
+  RoadmapInput,
+  RoadmapItem,
+  RoadmapItemInput,
+} from "../src/lib/roadmap.js";
 import { topicLabel } from "../src/lib/topicMap.js";
 import { normalizeUrl } from "../src/lib/url.js";
 import type { Article } from "../src/types.js";
@@ -133,6 +140,48 @@ function checkTopics(ids: string[], where: string): string[] {
   return ids;
 }
 
+/** Resolves names to indices; anything that would draw a broken map stops the build. */
+function resolveEvolution(road: RoadmapInput): Evolution | undefined {
+  const evolution = road.evolution;
+  if (!evolution) return undefined;
+  const eras = evolution.eras.map((era) => era.name);
+  const ids = new Set<string>();
+  const nodes = evolution.nodes.map((node) => {
+    const where = `${road.id} evolution / ${node.id}`;
+    if (ids.has(node.id)) throw new Error(`${where}: duplicate id`);
+    ids.add(node.id);
+    const era = eras.indexOf(node.era);
+    const lane = evolution.lanes.indexOf(node.lane);
+    if (era < 0) throw new Error(`${where}: unknown era "${node.era}"`);
+    if (lane < 0) throw new Error(`${where}: unknown lane "${node.lane}"`);
+    const from = node.from ?? [];
+    if (!from.length && !node.problem)
+      throw new Error(`${where}: a box with no source needs a problem`);
+    if (from.length && node.problem)
+      throw new Error(`${where}: its sources' reasons replace the problem`);
+    const { id, label, year, idea, impact } = node;
+    const out: EvolutionNode = { id, label, era, lane, year, idea, impact, from };
+    if (node.problem) out.problem = node.problem;
+    return out;
+  });
+  evolution.eras.forEach((era, index) => {
+    if (!nodes.some((node) => node.era === index)) {
+      throw new Error(`${road.id} evolution: era "${era.name}" has no boxes`);
+    }
+  });
+  const byId = new Map(nodes.map((node) => [node.id, node]));
+  for (const node of nodes) {
+    for (const { id } of node.from) {
+      const where = `${road.id} evolution / ${node.id}`;
+      const source = byId.get(id);
+      if (!source) throw new Error(`${where}: unknown source "${id}"`);
+      if (source.era > node.era) throw new Error(`${where}: "${id}" is in a later era`);
+      if (source.year > node.year) throw new Error(`${where}: "${id}" is from a later year`);
+    }
+  }
+  return { eras: evolution.eras, lanes: evolution.lanes, nodes };
+}
+
 /** Roadmap files → the roadmaps.json the roadmap page fetches, every item resolved. */
 export function buildRoadmaps(
   inputs: RoadmapInput[],
@@ -142,26 +191,30 @@ export function buildRoadmaps(
   const byUrl = new Map(entries.map((entry) => [normalizeUrl(entry.url), entry]));
   return inputs.map((road) => {
     checkTopics([road.id], "roadmap id");
-    return {
+    const parts = road.parts.map((part) => ({
+      name: part.name,
+      steps: part.steps.map((step, index) => {
+        const where = `${road.id} / ${part.name} step ${index + 1}`;
+        const resolve = (item: RoadmapItemInput): RoadmapItem =>
+          resolveItem(item, byUrl, icons, where);
+        return {
+          main: resolve(step.main),
+          background: (step.background ?? []).map(resolve),
+          alternative: (step.alternative ?? []).map(resolve),
+          further: (step.further ?? []).map(resolve),
+        };
+      }),
+    }));
+    const roadmap: Roadmap = {
       id: road.id,
       title: road.title,
       before: checkTopics(road.before, `${road.id}.before`),
       next: checkTopics(road.next, `${road.id}.next`),
-      parts: road.parts.map((part) => ({
-        name: part.name,
-        steps: part.steps.map((step, index) => {
-          const where = `${road.id} / ${part.name} step ${index + 1}`;
-          const resolve = (item: RoadmapItemInput): RoadmapItem =>
-            resolveItem(item, byUrl, icons, where);
-          return {
-            main: resolve(step.main),
-            background: (step.background ?? []).map(resolve),
-            alternative: (step.alternative ?? []).map(resolve),
-            further: (step.further ?? []).map(resolve),
-          };
-        }),
-      })),
+      parts,
     };
+    const evolution = resolveEvolution(road);
+    if (evolution) roadmap.evolution = evolution;
+    return roadmap;
   });
 }
 

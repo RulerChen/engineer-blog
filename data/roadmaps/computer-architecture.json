@@ -1,0 +1,267 @@
+{
+  "id": "computer-architecture",
+  "title": "Computer architecture",
+  "before": ["operating-systems"],
+  "next": ["compilers"],
+  "parts": [
+    {
+      "name": "Foundations",
+      "steps": [
+        {
+          "main": {
+            "type": "course",
+            "title": "UC Berkeley CS 61C: Great Ideas in Computer Architecture",
+            "url": "https://cs61c.org/fa26/",
+            "source": "UC Berkeley",
+            "year": "2026",
+            "why": "C and number representation, RISC-V assembly, the datapath and five-stage pipeline, caches, SIMD and thread-level parallelism, and virtual memory. In English."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "A New Golden Age for Computer Architecture",
+            "url": "https://dl.acm.org/doi/10.1145/3282307",
+            "source": "Stanford",
+            "year": "2019",
+            "why": "How instruction sets went from microcode to RISC, why general-purpose speedups stalled, and why domain-specific chips and open ISAs come next."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Instruction sets",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "The Case for the Reduced Instruction Set Computer",
+            "url": "https://dl.acm.org/doi/10.1145/641914.641917",
+            "source": "UC Berkeley",
+            "year": "1980",
+            "why": "Compilers used little of ever larger instruction sets, whose complexity slowed single-chip designs, so RISC keeps a few simple instructions."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Instruction-level parallelism",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "An Efficient Algorithm for Exploiting Multiple Arithmetic Units",
+            "url": "https://www.cs.virginia.edu/~evans/greatworks/tomasulo.pdf",
+            "source": "IBM",
+            "year": "1967",
+            "why": "Execution units idled behind instructions waiting on results, so Tomasulo's algorithm renames registers with tags and starts each instruction when its operands arrive."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "A case for (partially) TAgged GEometric history length branch prediction",
+            "url": "https://jilp.org/vol8/v8paper1.pdf",
+            "year": "2006",
+            "why": "Each wrong branch guess flushes a deep pipeline, so TAGE matches branch histories of increasing length against tagged tables and uses the longest match."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Spectre Attacks: Exploiting Speculative Execution",
+            "url": "https://spectreattack.com/spectre.pdf",
+            "source": "TU Graz",
+            "year": "2019",
+            "why": "CPUs run ahead on predicted branches and discard wrong work, but Spectre shows that work leaves cache traces that leak another program's secrets."
+          },
+          "further": [
+            {
+              "type": "article",
+              "title": "Mitigating Spectre and Other Security Threats: The Cloudflare Workers Security Model",
+              "url": "https://blog.cloudflare.com/mitigating-spectre-and-other-security-threats-the-cloudflare-workers-security-model/",
+              "source": "Cloudflare",
+              "year": "2020"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Memory",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Flipping Bits in Memory Without Accessing Them: An Experimental Study of DRAM Disturbance Errors",
+            "url": "https://users.ece.cmu.edu/~yoonguk/papers/kim-isca14.pdf",
+            "source": "CMU",
+            "year": "2014",
+            "why": "As DRAM cells shrink they disturb their neighbors, and this RowHammer study shows repeatedly opening one row flips bits in nearby rows on most modules."
+          },
+          "further": [
+            {
+              "type": "article",
+              "title": "Introducing Half-Double: New hammering technique for DRAM Rowhammer bug",
+              "url": "https://security.googleblog.com/2021/05/introducing-half-double-new-hammering.html",
+              "source": "Google",
+              "year": "2021"
+            }
+          ]
+        },
+        {
+          "main": {
+            "url": "https://www.atlassian.com/blog/how-we-build/migrating-the-jira-and-confluence-applications-to-aws-graviton",
+            "why": "Hardware counters traced Jira's slowdown on Graviton to L3 misses and TLB walks, so Atlassian shrank the JIT code cache and enabled huge pages."
+          },
+          "further": [
+            {
+              "type": "article",
+              "title": "Adopting Arm at Scale: Transitioning to a Multi-Architecture Environment",
+              "url": "https://www.uber.com/blog/adopting-arm-at-scale-transitioning-to-a-multi-architecture-environment/",
+              "source": "Uber",
+              "year": "2025"
+            },
+            {
+              "url": "https://blog.cloudflare.com/getting-to-the-core/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Multicore",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "A Low-Overhead Coherence Solution for Multiprocessors with Private Cache Memories",
+            "url": "https://dl.acm.org/doi/10.1145/800015.808204",
+            "source": "UIUC",
+            "year": "1984",
+            "why": "Broadcasting every cache write saturated the shared bus, so the protocol later named MESI marks blocks exclusive or shared and invalidates only for shared ones."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Shared Memory Consistency Models: A Tutorial",
+            "url": "http://sadve.cs.illinois.edu/Publications/computer96.pdf",
+            "source": "Rice University",
+            "year": "1996",
+            "why": "Write buffers, caches and compilers reorder memory accesses, so this tutorial explains the relaxed consistency models and the fences that restore order."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "x86-TSO: A Rigorous and Usable Programmer's Model for x86 Multiprocessors",
+              "url": "https://www.cl.cam.ac.uk/~pes20/weakmemory/cacm.pdf",
+              "source": "University of Cambridge",
+              "year": "2010"
+            }
+          ]
+        },
+        {
+          "main": {
+            "url": "https://netflixtechblog.com/mount-mayhem-at-netflix-scaling-containers-on-modern-cpus-f3b09b68beac",
+            "why": "Container launches made every core fight over the kernel's mount lock, worst on dual-socket, hyperthreaded and mesh-interconnect CPUs, so Netflix cut the mounts per layer."
+          },
+          "further": [
+            {
+              "type": "article",
+              "title": "Seeing through hardware counters: a journey to threefold performance increase",
+              "url": "https://netflixtechblog.com/seeing-through-hardware-counters-a-journey-to-threefold-performance-increase-2721924a2822",
+              "source": "Netflix",
+              "year": "2022"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Accelerators",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Scalable Parallel Programming with CUDA",
+            "url": "https://queue.acm.org/detail.cfm?id=1365500",
+            "source": "NVIDIA",
+            "year": "2008",
+            "why": "GPUs had become many-core processors, so CUDA exposes them through thread blocks, shared memory and barriers that scale across any number of cores."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Roofline: An Insightful Visual Performance Model for Multicore Architectures",
+            "url": "https://dl.acm.org/doi/10.1145/1498765.1498785",
+            "source": "UC Berkeley",
+            "year": "2009",
+            "why": "Peak compute says little when memory bandwidth limits a kernel, so the Roofline model bounds performance by the operations done per byte moved."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "In-Datacenter Performance Analysis of a Tensor Processing Unit",
+            "url": "https://arxiv.org/abs/1704.04760",
+            "source": "Google",
+            "year": "2017",
+            "why": "Neural network inference was outgrowing Google's datacenters, so the TPU drops caches and speculation for a large matrix unit and software-managed memory."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "TPU v4: An Optically Reconfigurable Supercomputer for Machine Learning with Hardware Support for Embeddings",
+              "url": "https://arxiv.org/abs/2304.01433",
+              "source": "Google",
+              "year": "2023"
+            },
+            {
+              "type": "article",
+              "title": "Inside the hardware and co-design of MTIA",
+              "url": "https://engineering.fb.com/2024/08/22/ml-applications/meta-mtia-hardware-co-design/",
+              "source": "Meta",
+              "year": "2024"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "In practice",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Profiling a warehouse-scale computer",
+            "url": "https://dl.acm.org/doi/10.1145/2749469.2750392",
+            "source": "Google",
+            "year": "2015",
+            "why": "Benchmarks did not look like datacenter code, so Google profiled its live fleet and found instruction-fetch stalls and many cycles in shared low-level libraries."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Cores that don't count",
+            "url": "https://sigops.org/s/conferences/hotos/2021/papers/hotos21-s01-hochschild.pdf",
+            "source": "Google",
+            "year": "2021",
+            "why": "Some cores in a large fleet silently compute wrong results that factory tests missed, so Google argues software must detect and isolate them."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "Silent Data Corruptions at Scale",
+              "url": "https://arxiv.org/abs/2102.11245",
+              "source": "Meta",
+              "year": "2021"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -29,6 +29,46 @@ export interface RoadmapPartInput {
   steps: RoadmapStepInput[];
 }
 
+/** Why the field moved from one box to the next. */
+export interface EvolutionLink {
+  id: string;
+  /** What the earlier box lacked, or what it supplied. */
+  why: string;
+}
+
+/** A turning point in the field's history, whether or not the roadmap asks the reader to read it. */
+export interface EvolutionNodeInput {
+  id: string;
+  /** Short enough for a box, like "word2vec". */
+  label: string;
+  era: string;
+  lane: string;
+  year: string;
+  /** What the field could not do; only for a box that grew out of nothing on the map. */
+  problem?: string;
+  /** What it did about that. */
+  idea: string;
+  /** What it changed, or what came of it. */
+  impact: string;
+  /** The boxes it grew out of or replaced, each with the reason. */
+  from?: EvolutionLink[];
+}
+
+export interface EvolutionEra {
+  name: string;
+  /** A few words on the idea that defines the era, shown under its name. */
+  text: string;
+  /** Two or three sentences on where the field stood and what pushed it on, shown when the era is clicked. */
+  background: string;
+}
+
+/** Eras are the map's columns and lanes its rows, top to bottom, each lane one category. */
+export interface EvolutionInput {
+  eras: EvolutionEra[];
+  lanes: string[];
+  nodes: EvolutionNodeInput[];
+}
+
 export interface RoadmapInput {
   /** A topic id from the topic map. */
   id: string;
@@ -37,6 +77,7 @@ export interface RoadmapInput {
   before: string[];
   next: string[];
   parts: RoadmapPartInput[];
+  evolution?: EvolutionInput;
 }
 
 export interface RoadmapItem {
@@ -63,6 +104,26 @@ export interface RoadmapPart {
   steps: RoadmapStep[];
 }
 
+export interface EvolutionNode {
+  id: string;
+  label: string;
+  /** Index into the eras. */
+  era: number;
+  /** Index into the lanes. */
+  lane: number;
+  year: string;
+  problem?: string;
+  idea: string;
+  impact: string;
+  from: EvolutionLink[];
+}
+
+export interface Evolution {
+  eras: EvolutionEra[];
+  lanes: string[];
+  nodes: EvolutionNode[];
+}
+
 /** A roadmap as roadmaps.json ships it, every item resolved. */
 export interface Roadmap {
   id: string;
@@ -70,4 +131,5 @@ export interface Roadmap {
   before: string[];
   next: string[];
   parts: RoadmapPart[];
+  evolution?: Evolution;
 }

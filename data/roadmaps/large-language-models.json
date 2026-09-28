@@ -3,6 +3,187 @@
   "title": "Large language models",
   "before": ["nlp", "reinforcement-learning"],
   "next": [],
+  "evolution": {
+    "eras": [
+      {
+        "name": "Scaling",
+        "text": "Bigger models, predictably better",
+        "background": "Researchers found that language model loss falls smoothly as models, data and compute grow. That made scale a plan rather than a gamble, and models grew enormously in a few years."
+      },
+      {
+        "name": "Alignment",
+        "text": "Tuned to follow instructions",
+        "background": "Large pretrained models knew a lot but did not reliably follow instructions. Post-training on human demonstrations and preferences turned them into assistants, and ChatGPT made them a mass-market product."
+      },
+      {
+        "name": "Open weights",
+        "text": "Frontier quality in the open",
+        "background": "Frontier labs stopped publishing details, while open-weight models let anyone study, fine-tune and run an LLM. Efficiency techniques such as mixture of experts narrowed the gap to closed models."
+      },
+      {
+        "name": "Reasoning",
+        "text": "Think before answering",
+        "background": "Answering in one pass limited models on math and code. Reinforcement learning taught them to reason at length first, so accuracy grew with inference compute, first in closed and then in open models."
+      },
+      {
+        "name": "Agents",
+        "text": "Long tasks with tools",
+        "background": "Models moved from answering questions to carrying out long tasks: planning, calling tools and editing code. That put pressure on context length and inference cost, driving new attention designs."
+      }
+    ],
+    "lanes": ["Pretraining", "Post-training"],
+    "nodes": [
+      {
+        "id": "laws",
+        "label": "Scaling laws",
+        "era": "Scaling",
+        "lane": "Pretraining",
+        "year": "2020",
+        "problem": "It was unclear how to split a training budget between model size and data.",
+        "idea": "Measure how loss falls as a power law in parameters, data and compute.",
+        "impact": "Made model quality predictable and justified training far larger models."
+      },
+      {
+        "id": "gpt3",
+        "label": "GPT-3",
+        "era": "Scaling",
+        "lane": "Pretraining",
+        "year": "2020",
+        "idea": "Scale a language model far up and show it a few examples in the prompt.",
+        "impact": "Prompting became the main way to use a language model.",
+        "from": [
+          {
+            "id": "laws",
+            "why": "Loss kept falling predictably with size, so a far larger model was worth training."
+          }
+        ]
+      },
+      {
+        "id": "igpt",
+        "label": "InstructGPT",
+        "era": "Alignment",
+        "lane": "Post-training",
+        "year": "2022",
+        "idea": "Fine-tune on demonstrations, train a reward model on human rankings, then optimize with RL.",
+        "impact": "RLHF became the standard post-training recipe.",
+        "from": [
+          {
+            "id": "gpt3",
+            "why": "GPT-3 often ignored instructions or produced untruthful and toxic text."
+          }
+        ]
+      },
+      {
+        "id": "chatgpt",
+        "label": "ChatGPT",
+        "era": "Alignment",
+        "lane": "Post-training",
+        "year": "2022",
+        "idea": "Serve an RLHF-tuned model as a free chat interface.",
+        "impact": "Reached a mass audience and set off the race to build assistants.",
+        "from": [
+          {
+            "id": "igpt",
+            "why": "Instruction-tuned models were only available to developers through an API."
+          }
+        ]
+      },
+      {
+        "id": "llama",
+        "label": "LLaMA",
+        "era": "Open weights",
+        "lane": "Pretraining",
+        "year": "2023",
+        "idea": "Train smaller models on more public data and release the weights to researchers.",
+        "impact": "The weights spread widely and seeded open fine-tunes and local inference.",
+        "from": [
+          {
+            "id": "gpt3",
+            "why": "The strongest models were closed, so few could study or adapt them."
+          }
+        ]
+      },
+      {
+        "id": "dsv3",
+        "label": "DeepSeek-V3",
+        "era": "Open weights",
+        "lane": "Pretraining",
+        "year": "2024",
+        "idea": "Mixture of experts, latent attention and FP8 training cut the cost of a frontier-scale model.",
+        "impact": "An open model matched closed ones, and mixture of experts became the default.",
+        "from": [
+          {
+            "id": "llama",
+            "why": "Open models trailed closed ones, and frontier-quality training looked too costly."
+          }
+        ]
+      },
+      {
+        "id": "o1",
+        "label": "o1",
+        "era": "Reasoning",
+        "lane": "Post-training",
+        "year": "2024",
+        "idea": "Train with RL to reason at length before answering.",
+        "impact": "Thinking time became a second way, besides model size, to buy accuracy.",
+        "from": [
+          {
+            "id": "chatgpt",
+            "why": "Chat models answered at once and failed on multi-step math and code."
+          }
+        ]
+      },
+      {
+        "id": "r1",
+        "label": "DeepSeek-R1",
+        "era": "Reasoning",
+        "lane": "Post-training",
+        "year": "2025",
+        "idea": "Apply RL on automatically checkable answers to DeepSeek-V3 and publish the recipe.",
+        "impact": "An open recipe for reasoning that other labs quickly adopted.",
+        "from": [
+          {
+            "id": "o1",
+            "why": "o1 showed that RL for reasoning works but kept its method secret."
+          },
+          {
+            "id": "dsv3",
+            "why": "Supplied a strong open base model to train with RL."
+          }
+        ]
+      },
+      {
+        "id": "k2",
+        "label": "Kimi K2",
+        "era": "Agents",
+        "lane": "Post-training",
+        "year": "2025",
+        "idea": "Train on synthesized tool-use tasks, then refine with RL.",
+        "impact": "Open models became practical as coding and tool-using agents.",
+        "from": [
+          {
+            "id": "r1",
+            "why": "Reasoning models could solve problems but not carry out long tasks with tools."
+          }
+        ]
+      },
+      {
+        "id": "v4",
+        "label": "DeepSeek-V4",
+        "era": "Agents",
+        "lane": "Pretraining",
+        "year": "2026",
+        "idea": "Compress and sparsify attention to handle million-token contexts.",
+        "impact": "Long context became affordable in open models.",
+        "from": [
+          {
+            "id": "dsv3",
+            "why": "Attention cost grows with context length, which limits long agent sessions."
+          }
+        ]
+      }
+    ]
+  },
   "parts": [
     {
       "name": "Foundations",
