@@ -1,7 +1,6 @@
 {
   "id": "reinforcement-learning",
   "title": "Reinforcement learning",
-  "blurb": "How agents learn from reward, the value, policy and model-based methods of deep RL, learning from logs, bandits in production, and rewards learned from human feedback.",
   "before": ["machine-learning"],
   "next": ["large-language-models"],
   "parts": [
@@ -54,7 +53,7 @@
             "url": "https://link.springer.com/content/pdf/10.1007/BF00115009.pdf",
             "source": "GTE Laboratories",
             "year": "1988",
-            "why": "Learn from the difference between successive predictions instead of waiting for the final outcome."
+            "why": "Waiting for final outcomes makes learning slow, so temporal-difference methods learn from the difference between successive predictions."
           }
         },
         {
@@ -64,7 +63,7 @@
             "url": "https://link.springer.com/content/pdf/10.1007/BF00992698.pdf",
             "source": "University of Edinburgh",
             "year": "1992",
-            "why": "Q-learning. Learn optimal action values under any policy, converging as long as every action keeps being tried."
+            "why": "Q-learning learns optimal action values while following any exploring policy, converging as long as every action keeps being tried."
           }
         },
         {
@@ -74,7 +73,7 @@
             "url": "https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf",
             "source": "DeepMind",
             "year": "2015",
-            "why": "DQN. The same architecture and settings learn 49 Atari games from pixels, kept stable by experience replay and a target network."
+            "why": "Q-learning with neural networks was unstable, so DQN adds experience replay and a target network to learn Atari games from pixels."
           },
           "further": [
             {
@@ -98,7 +97,7 @@
             "url": "https://link.springer.com/content/pdf/10.1007/BF00992696.pdf",
             "source": "Northeastern University",
             "year": "1992",
-            "why": "REINFORCE. Adjust a stochastic policy along the gradient of expected reward, using only sampled actions and rewards."
+            "why": "Without a model of the environment, REINFORCE follows the gradient of expected reward estimated from sampled actions and rewards."
           }
         },
         {
@@ -108,7 +107,7 @@
             "url": "https://arxiv.org/abs/1502.05477",
             "source": "UC Berkeley",
             "year": "2015",
-            "why": "Keep each update inside a KL-divergence trust region so large neural policies improve almost monotonically."
+            "why": "Large policy-gradient steps can collapse a policy, so TRPO keeps each update inside a KL-divergence trust region."
           }
         },
         {
@@ -118,7 +117,7 @@
             "url": "https://arxiv.org/abs/1707.06347",
             "source": "OpenAI",
             "year": "2017",
-            "why": "PPO. A clipped objective allows several epochs of minibatch updates per batch, with much simpler code than TRPO."
+            "why": "TRPO is complex to implement, so PPO clips its objective to get similarly safe steps from plain minibatch updates."
           },
           "further": [
             {
@@ -137,7 +136,7 @@
             "url": "https://arxiv.org/abs/1801.01290",
             "source": "UC Berkeley",
             "year": "2018",
-            "why": "SAC. An off-policy actor-critic that maximizes reward plus entropy, stable across random seeds on continuous control."
+            "why": "Deep RL for continuous control was sample-hungry and brittle, so SAC learns off-policy while maximizing reward plus entropy."
           }
         }
       ]
@@ -152,7 +151,7 @@
             "url": "https://storage.googleapis.com/deepmind-media/alphago/AlphaGoNaturePaper.pdf",
             "source": "DeepMind",
             "year": "2016",
-            "why": "AlphaGo. Policy and value networks, trained on human games then self-play, guide tree search to beat a professional 5-0."
+            "why": "Go is too large for brute-force search, so AlphaGo guides tree search with policy and value networks trained on human games and self-play."
           }
         },
         {
@@ -162,7 +161,7 @@
             "url": "https://discovery.ucl.ac.uk/id/eprint/10045895/1/agz_unformatted_nature.pdf",
             "source": "DeepMind",
             "year": "2017",
-            "why": "AlphaGo Zero. Self-play with tree search as the teacher, starting from random play, beat AlphaGo 100-0."
+            "why": "AlphaGo Zero drops human games and learns from self-play alone, with tree search as the teacher for its network."
           }
         },
         {
@@ -172,7 +171,7 @@
             "url": "https://arxiv.org/abs/1911.08265",
             "source": "DeepMind",
             "year": "2019",
-            "why": "MuZero. Plans with a learned model that predicts only reward, policy and value, so it needs no game rules."
+            "why": "Planning usually needs the game's rules, so MuZero plans with a learned model that predicts only reward, policy and value."
           }
         },
         {
@@ -182,7 +181,7 @@
             "url": "https://www.nature.com/articles/s41586-025-08744-2.pdf",
             "source": "DeepMind",
             "year": "2025",
-            "why": "DreamerV3. Learns a world model and trains the policy in imagined rollouts, with one configuration across 150+ tasks."
+            "why": "RL algorithms usually need retuning for each domain, so DreamerV3 learns a world model and trains in imagined rollouts with one fixed configuration."
           }
         }
       ]
@@ -197,7 +196,7 @@
             "url": "https://proceedings.mlr.press/v15/ross11a/ross11a.pdf",
             "source": "CMU",
             "year": "2011",
-            "why": "DAgger. A cloned policy drifts into states the expert never showed, so the expert labels the states the learner visits."
+            "why": "A cloned policy drifts into states the expert never showed, so DAgger has the expert label the states the learner visits."
           }
         },
         {
@@ -207,7 +206,7 @@
             "url": "https://arxiv.org/abs/2006.04779",
             "source": "UC Berkeley",
             "year": "2020",
-            "why": "Train on a fixed dataset while pushing down Q-values of actions it lacks, so the policy cannot exploit overestimates."
+            "why": "Offline RL overestimates actions missing from the data, so CQL pushes their Q-values down while training on a fixed dataset."
           },
           "background": [
             {
@@ -215,6 +214,30 @@
               "title": "Offline Reinforcement Learning: Tutorial, Review, and Perspectives on Open Problems",
               "url": "https://arxiv.org/abs/2005.01643",
               "source": "UC Berkeley",
+              "year": "2020"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Human feedback",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Deep Reinforcement Learning from Human Preferences",
+            "url": "https://arxiv.org/abs/1706.03741",
+            "source": "OpenAI",
+            "year": "2017",
+            "why": "Many tasks lack a reward function, so a reward model fit to human comparisons of short clips trains the agent instead."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "Learning to Summarize from Human Feedback",
+              "url": "https://arxiv.org/abs/2009.01325",
+              "source": "OpenAI",
               "year": "2020"
             }
           ]
@@ -231,7 +254,7 @@
             "url": "https://arxiv.org/abs/1003.0146",
             "source": "Yahoo",
             "year": "2010",
-            "why": "LinUCB. Pick Yahoo front-page news from user and article features, evaluated offline on logged random traffic."
+            "why": "New articles need exploration, so LinUCB picks Yahoo front-page news by upper confidence bounds over user and article features."
           },
           "background": [
             {
@@ -255,7 +278,7 @@
         {
           "main": {
             "url": "https://medium.com/airbnb-engineering/transforming-location-retrieval-at-airbnb-a-journey-from-heuristics-to-reinforcement-learning-d33ffc4ddb8f",
-            "why": "Picks which map area to search as a contextual bandit, exploring with UCB on Monte Carlo dropout uncertainty."
+            "why": "Heuristics decided which map area to search, so Airbnb frames it as a contextual bandit that explores with UCB on dropout-based uncertainty."
           }
         }
       ]
@@ -289,7 +312,7 @@
             "url": "https://arxiv.org/abs/1812.02353",
             "source": "Google",
             "year": "2018",
-            "why": "REINFORCE over millions of YouTube videos, corrected for logs that older recommenders collected."
+            "why": "Logs from older recommenders bias policy learning, so YouTube trains a REINFORCE recommender with off-policy correction."
           }
         },
         {
@@ -299,32 +322,8 @@
             "url": "https://arxiv.org/abs/2310.13810",
             "source": "Lyft",
             "year": "2023",
-            "why": "Online RL estimates each driver's future earnings to make better matches, adding over $30 million a year."
+            "why": "To find more efficient matches, Lyft estimates each driver's future earnings in real time with online RL and matches on them."
           }
-        }
-      ]
-    },
-    {
-      "name": "Human feedback",
-      "steps": [
-        {
-          "main": {
-            "type": "paper",
-            "title": "Deep Reinforcement Learning from Human Preferences",
-            "url": "https://arxiv.org/abs/1706.03741",
-            "source": "OpenAI",
-            "year": "2017",
-            "why": "A reward model fit to human comparisons of short clips trains Atari and robot agents without a reward function."
-          },
-          "further": [
-            {
-              "type": "paper",
-              "title": "Learning to Summarize from Human Feedback",
-              "url": "https://arxiv.org/abs/2009.01325",
-              "source": "OpenAI",
-              "year": "2020"
-            }
-          ]
         }
       ]
     }

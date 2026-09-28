@@ -33,7 +33,6 @@ export interface RoadmapInput {
   /** A topic id from the topic map. */
   id: string;
   title: string;
-  blurb: string;
   /** Topic ids; built roadmaps link, the rest show as planned. */
   before: string[];
   next: string[];
@@ -68,7 +67,6 @@ export interface RoadmapPart {
 export interface Roadmap {
   id: string;
   title: string;
-  blurb: string;
   before: string[];
   next: string[];
   parts: RoadmapPart[];

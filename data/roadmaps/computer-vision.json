@@ -1,7 +1,6 @@
 {
   "id": "computer-vision",
   "title": "Computer vision",
-  "blurb": "How current vision models learn from images and text, find and segment objects, pair with LLMs, generate images and rebuild 3D scenes.",
   "before": ["deep-learning"],
   "next": [],
   "parts": [
@@ -17,16 +16,6 @@
             "year": "2025",
             "why": "Detection and segmentation, video, self-supervised learning, generative models, 3D and vision-language. In English."
           }
-        },
-        {
-          "main": {
-            "type": "paper",
-            "title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
-            "url": "https://arxiv.org/abs/2010.11929",
-            "source": "Google",
-            "year": "2020",
-            "why": "ViT. A plain Transformer on image patches rivals CNNs when pretrained on enough data."
-          }
         }
       ]
     },
@@ -36,11 +25,21 @@
         {
           "main": {
             "type": "paper",
+            "title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+            "url": "https://arxiv.org/abs/2010.11929",
+            "source": "Google",
+            "year": "2020",
+            "why": "ViT drops convolutions and runs a plain Transformer on image patches, which rivals CNNs when pretrained on enough data."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
             "title": "Learning Transferable Visual Models From Natural Language Supervision",
             "url": "https://arxiv.org/abs/2103.00020",
             "source": "OpenAI",
             "year": "2021",
-            "why": "CLIP. Matching 400M images to their captions gives zero-shot classification from text prompts."
+            "why": "Labeled datasets limit what vision models learn, so CLIP trains on web image-caption pairs and classifies zero-shot from text prompts."
           },
           "further": [
             {
@@ -59,7 +58,7 @@
             "url": "https://arxiv.org/abs/2508.10104",
             "source": "Meta",
             "year": "2025",
-            "why": "Self-supervised vision encoder whose frozen features beat specialized models, with Gram anchoring keeping dense features clean."
+            "why": "Labels limit how far vision encoders scale, so DINOv3 trains self-supervised and uses Gram anchoring to keep dense features clean."
           }
         }
       ]
@@ -74,7 +73,7 @@
             "url": "https://arxiv.org/abs/1506.01497",
             "source": "Microsoft",
             "year": "2015",
-            "why": "A proposal network shares the detector's features, making region proposals nearly free."
+            "why": "Region proposals were the bottleneck of detection, so Faster R-CNN adds a region proposal network that shares the detector's features."
           }
         },
         {
@@ -84,7 +83,7 @@
             "url": "https://arxiv.org/abs/1506.02640",
             "source": "University of Washington",
             "year": "2015",
-            "why": "One network predicts all boxes and classes in a single pass, at 45 frames per second."
+            "why": "Two-stage detectors were too slow for real time, so YOLO predicts all boxes and classes in a single pass."
           }
         },
         {
@@ -94,7 +93,7 @@
             "url": "https://arxiv.org/abs/2005.12872",
             "source": "Meta",
             "year": "2020",
-            "why": "DETR. A Transformer outputs the set of objects directly, with no anchors or non-maximum suppression."
+            "why": "Detectors relied on hand-designed anchors and non-maximum suppression, so DETR predicts the set of objects directly with a Transformer."
           }
         },
         {
@@ -103,7 +102,7 @@
             "title": "Ultralytics YOLO26: Unified Real-Time End-to-End Vision Models",
             "url": "https://arxiv.org/abs/2606.03748",
             "year": "2026",
-            "why": "The widely deployed YOLO family made NMS-free, with detection, segmentation and pose in one real-time pipeline."
+            "why": "NMS adds latency to real-time detection, so YOLO26 removes it and handles detection, segmentation and pose in one pipeline."
           }
         },
         {
@@ -113,7 +112,7 @@
             "url": "https://arxiv.org/abs/2304.02643",
             "source": "Meta",
             "year": "2023",
-            "why": "A promptable model trained on 1 billion masks segments new images and tasks zero-shot."
+            "why": "Segmentation models were trained per task, so SAM is a promptable model trained on a huge mask dataset that segments new images zero-shot."
           }
         },
         {
@@ -123,7 +122,7 @@
             "url": "https://arxiv.org/abs/2511.16719",
             "source": "Meta",
             "year": "2025",
-            "why": "A noun phrase or example image finds, segments and tracks every matching object in images and video."
+            "why": "SAM segments one object per prompt, so SAM 3 finds, segments and tracks every object matching a noun phrase or example image."
           }
         }
       ]
@@ -138,7 +137,7 @@
             "url": "https://arxiv.org/abs/2304.08485",
             "source": "University of Wisconsin-Madison",
             "year": "2023",
-            "why": "LLaVA. A linear layer feeds CLIP image features into an LLM, tuned on GPT-4-written instructions."
+            "why": "LLMs could not see images, so LLaVA feeds CLIP image features through a linear layer into an LLM tuned on GPT-4-written instructions."
           }
         },
         {
@@ -148,13 +147,13 @@
             "url": "https://arxiv.org/abs/2511.21631",
             "source": "Alibaba",
             "year": "2025",
-            "why": "A SigLIP 2 encoder feeds images and video through an MLP into Qwen3 LLMs, with 256K-token context."
+            "why": "For long documents and video, Qwen3-VL feeds a SigLIP 2 encoder's features through an MLP into Qwen3 LLMs with long context."
           }
         }
       ]
     },
     {
-      "name": "Image generation",
+      "name": "Image and video generation",
       "steps": [
         {
           "main": {
@@ -163,7 +162,7 @@
             "url": "https://arxiv.org/abs/2112.10752",
             "source": "LMU Munich",
             "year": "2021",
-            "why": "The basis of Stable Diffusion. Diffusion in an autoencoder's latent space, with cross-attention for text."
+            "why": "Pixel-space diffusion is expensive, so latent diffusion, the basis of Stable Diffusion, runs in an autoencoder's latent space with cross-attention for text."
           }
         },
         {
@@ -173,7 +172,7 @@
             "url": "https://arxiv.org/abs/2212.09748",
             "source": "UC Berkeley",
             "year": "2022",
-            "why": "DiT. A Transformer replaces the U-Net, and image quality keeps rising with compute."
+            "why": "DiT shows diffusion does not need a U-Net, and its Transformer backbone keeps improving as compute grows."
           }
         },
         {
@@ -182,7 +181,17 @@
             "title": "Scaling Rectified Flow Transformers for High-Resolution Image Synthesis",
             "url": "https://arxiv.org/abs/2403.03206",
             "year": "2024",
-            "why": "Stable Diffusion 3. Rectified flow training and MM-DiT, a Transformer with separate text and image weights."
+            "why": "Stable Diffusion 3 trains with rectified flow for straighter sampling paths and uses MM-DiT, a Transformer with separate text and image weights."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Wan: Open and Advanced Large-Scale Video Generative Models",
+            "url": "https://arxiv.org/abs/2503.20314",
+            "source": "Alibaba",
+            "year": "2025",
+            "why": "Wan brings the diffusion transformer to video with its own video VAE, released as open models for text-to-video, image-to-video and editing."
           }
         }
       ]
@@ -197,7 +206,7 @@
             "url": "https://arxiv.org/abs/2003.08934",
             "source": "UC Berkeley",
             "year": "2020",
-            "why": "An MLP maps a 3D point and view direction to color and density, rendered into new views."
+            "why": "To render a scene from new viewpoints, NeRF fits an MLP from 3D position and view direction to color and density and volume-renders it."
           }
         },
         {
@@ -207,7 +216,7 @@
             "url": "https://arxiv.org/abs/2308.04079",
             "source": "Université Côte d'Azur",
             "year": "2023",
-            "why": "Optimized 3D Gaussians, splatted rather than ray-marched, render 1080p views in real time."
+            "why": "NeRF renders slowly, so 3D Gaussian Splatting optimizes a set of 3D Gaussians and rasterizes them in real time."
           }
         },
         {
@@ -217,7 +226,7 @@
             "url": "https://arxiv.org/abs/2503.11651",
             "source": "University of Oxford",
             "year": "2025",
-            "why": "One forward pass predicts cameras, depth and point maps from many views, often beating optimization-based methods."
+            "why": "3D reconstruction usually needs slow optimization, so VGGT predicts cameras, depth and point maps from many views in one forward pass."
           }
         }
       ]
@@ -234,7 +243,7 @@
         {
           "main": {
             "url": "https://careersatdoordash.com/blog/doordash-llm-transcribe-menu/",
-            "why": "OCR plus an LLM transcribes menu photos, and a guardrail model sends the doubtful ones to humans."
+            "why": "Transcribing menu photos by hand was costly and slow, so DoorDash uses OCR plus an LLM, with a guardrail model that sends doubtful results to people."
           }
         }
       ]

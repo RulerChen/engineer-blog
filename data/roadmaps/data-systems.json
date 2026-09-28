@@ -1,7 +1,6 @@
 {
   "id": "data-systems",
   "title": "Data systems",
-  "blurb": "Batch and stream processing over many machines, the logs that carry data between systems, and the formats, engines and lakes that store and query it.",
   "before": ["distributed-systems", "database-systems"],
   "next": [],
   "parts": [
@@ -11,7 +10,7 @@
         {
           "main": {
             "url": "https://research.google.com/archive/mapreduce-osdi04.pdf",
-            "why": "You write map and reduce, and the framework handles distribution and failures."
+            "why": "Every batch job re-solved distribution and failures, so MapReduce lets programmers write map and reduce and leaves the rest to the framework."
           }
         },
         {
@@ -21,13 +20,13 @@
             "url": "https://www.usenix.org/system/files/conference/nsdi12/nsdi12-final138.pdf",
             "source": "UC Berkeley",
             "year": "2012",
-            "why": "Spark. Keeps data in memory and rebuilds lost pieces from lineage instead of copies."
+            "why": "MapReduce rereads data from disk between iterations, so Spark keeps it in memory as RDDs and rebuilds lost pieces from lineage."
           }
         },
         {
           "main": {
             "url": "https://www.uber.com/blog/ubers-highly-scalable-and-distributed-shuffle-as-a-service/",
-            "why": "Moving shuffle data to dedicated servers made local SSDs last 36 months instead of 3."
+            "why": "Spark shuffle writes wore out the SSDs on compute hosts, so Uber moved shuffle data to a dedicated remote shuffle service."
           }
         }
       ]
@@ -42,25 +41,25 @@
             "url": "https://www.linkedin.com/blog/engineering/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying",
             "source": "LinkedIn",
             "year": "2013",
-            "why": "One ordered log of changes can feed every database, cache and data system."
+            "why": "Point-to-point pipelines between data systems multiply, so one ordered log of changes can feed every database, cache and data system instead."
           }
         },
         {
           "main": {
             "url": "https://pages.cs.wisc.edu/~akella/CS744/F17/838-CloudPapers/Kafka.pdf",
-            "why": "Brokers store the log, and consumers pull and track their own position."
+            "why": "LinkedIn needed one pipeline for huge volumes of activity data, so Kafka brokers store it as a log that consumers pull at their own pace."
           }
         },
         {
           "main": {
             "url": "https://www.linkedin.com/blog/engineering/infrastructure/introducing-northguard-and-xinfra",
-            "why": "Splits each log into small segments, since whole partitions got too heavy at LinkedIn scale."
+            "why": "Whole Kafka partitions grew too heavy to manage at LinkedIn's scale, so Northguard splits each log into small segments."
           }
         },
         {
           "main": {
             "url": "https://netflixtechblog.com/dblog-a-generic-change-data-capture-framework-69351fb9099b",
-            "why": "Copies a full table while streaming its changes, without locking it."
+            "why": "Change capture needs a table's full state and its ongoing changes, so DBLog interleaves chunked dumps with the change stream without locking the table."
           }
         }
       ]
@@ -75,7 +74,7 @@
             "url": "https://www.vldb.org/pvldb/vol8/p1792-Akidau.pdf",
             "source": "Google",
             "year": "2015",
-            "why": "Windows, watermarks and triggers for late and out-of-order events."
+            "why": "Events arrive late and out of order, so the Dataflow model handles them with windows, watermarks and triggers."
           },
           "further": [
             {
@@ -94,7 +93,7 @@
             "url": "https://asterios.katsifodimos.com/assets/publications/flink-deb.pdf",
             "source": "KTH",
             "year": "2015",
-            "why": "One engine for streams and batch, with batch treated as a bounded stream."
+            "why": "Separate batch and streaming engines duplicate work, so Flink runs both in one engine, treating batch as a bounded stream."
           }
         },
         {
@@ -104,7 +103,7 @@
             "url": "https://www.vldb.org/pvldb/vol10/p1718-carbone.pdf",
             "source": "KTH",
             "year": "2017",
-            "why": "Barriers in the stream trigger checkpoints of operator state, for exactly-once recovery."
+            "why": "Stream jobs hold state that must survive failures, so Flink injects barriers that trigger consistent checkpoints for exactly-once recovery."
           },
           "background": [
             {
@@ -118,7 +117,7 @@
         {
           "main": {
             "url": "https://www.uber.com/blog/real-time-exactly-once-ad-event-processing/",
-            "why": "Exactly-once ad counting with Kafka transactions and Flink checkpoints, at 2 minutes of latency."
+            "why": "Ad events must be counted exactly once in near real time, so Uber pairs Flink checkpoints with Kafka transactions."
           }
         }
       ]
@@ -133,7 +132,7 @@
             "url": "https://research.google.com/pubs/archive/36632.pdf",
             "source": "Google",
             "year": "2010",
-            "why": "Stores nested records by column, the encoding Parquet adopted."
+            "why": "Interactive queries over nested web data needed columnar storage, so Dremel encodes nested records by column, the scheme Parquet adopted."
           },
           "further": [
             {
@@ -152,19 +151,19 @@
             "url": "https://web.eecs.umich.edu/~mosharaf/Readings/Hive.pdf",
             "source": "Ohio State University",
             "year": "2014",
-            "why": "ORC. Built-in statistics let Hive skip the data a filter rules out."
+            "why": "Hive scanned whole files, so the ORC format stores column statistics that let a query skip data its filter rules out."
           }
         },
         {
           "main": {
             "url": "https://www.uber.com/blog/cost-efficiency-big-data/",
-            "why": "Switching Parquet to ZSTD cut storage 39%, and sorting rows cut another table 32%."
+            "why": "Data lake storage kept growing, so Uber recompressed Parquet with ZSTD and sorted rows so they compress better."
           }
         },
         {
           "main": {
             "url": "https://engineering.atspotify.com/2026/7/indexing-the-data-lake-for-online-point-queries",
-            "why": "An external index turns a key lookup in Parquet into one small read instead of a scan."
+            "why": "Point lookups on a Parquet data lake meant full scans, so Spotify builds an external index that turns each lookup into one small read."
           }
         }
       ]
@@ -179,7 +178,7 @@
             "url": "https://www.vldb.org/pvldb/vol13/p3411-armbrust.pdf",
             "source": "Databricks",
             "year": "2020",
-            "why": "A transaction log next to Parquet files gives ACID tables on object storage."
+            "why": "Object stores cannot update many files atomically, so Delta Lake keeps a transaction log next to Parquet files for ACID tables."
           },
           "further": [
             {
@@ -193,8 +192,14 @@
         },
         {
           "main": {
+            "url": "https://medium.com/airbnb-engineering/upgrading-data-warehouse-infrastructure-at-airbnb-a4e18f09b6d5",
+            "why": "Hive tables overloaded the metastore and depended on S3 listings, so Airbnb moved ingestion to Iceberg tables and Spark 3."
+          }
+        },
+        {
+          "main": {
             "url": "https://www.uber.com/blog/uber-big-data-platform/",
-            "why": "Hudi. Uber built it for incremental upserts, cutting data delay from a day to under an hour."
+            "why": "Rewriting whole partitions kept Uber's lake data stale, so it built Hudi to apply incremental upserts."
           },
           "further": [
             {
@@ -205,7 +210,7 @@
         {
           "main": {
             "url": "https://www.notion.com/blog/building-and-scaling-notions-data-lake",
-            "why": "Notion's writes are mostly updates, which Hudi on S3 handles cheaper than Snowflake."
+            "why": "Notion's data is mostly updated rather than appended, which made Snowflake costly, so it built a lake on S3 with Hudi."
           }
         }
       ]
@@ -216,19 +221,19 @@
         {
           "main": {
             "url": "https://trino.io/Presto_SQL_on_Everything.pdf",
-            "why": "One SQL engine queries many data sources through connectors."
+            "why": "Each data store needed its own query tool, so Presto runs SQL across many sources through connectors."
           }
         },
         {
           "main": {
             "url": "https://info.snowflake.net/rs/252-RFO-227/images/Snowflake_SIGMOD.pdf",
-            "why": "Storage in S3 and compute in separate clusters, each scaled on its own."
+            "why": "Shared-nothing warehouses tie storage to compute, so Snowflake keeps data in S3 and runs queries on separate clusters that scale on their own."
           }
         },
         {
           "main": {
             "url": "https://cdn.amazon.science/4b/37/223ac61e450898244a31bed53734/amazon-redshift-re-invented.pdf",
-            "why": "Kept its MPP engine but moved storage to S3 and added serverless."
+            "why": "Redshift kept its MPP engine but moved storage to S3 and added serverless, so compute scales apart from data."
           }
         },
         {
@@ -237,7 +242,7 @@
             "title": "Druid: A Real-time Analytical Data Store",
             "url": "https://dl.acm.org/doi/pdf/10.1145/2588555.2595631",
             "year": "2014",
-            "why": "Fresh data in memory plus immutable column segments give sub-second queries."
+            "why": "Dashboards need fast queries on just-arrived events, so Druid serves fresh data from memory and older data from immutable column segments."
           },
           "further": [
             {
@@ -256,7 +261,7 @@
             "url": "https://www.vldb.org/pvldb/vol17/p3731-schulze.pdf",
             "source": "ClickHouse",
             "year": "2024",
-            "why": "Writes sorted parts, merges them in the background and runs queries vectorized."
+            "why": "Real-time analytics needs fast inserts and fast scans, so ClickHouse writes sorted parts, merges them in the background and runs vectorized queries."
           }
         }
       ]

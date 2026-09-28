@@ -1,7 +1,6 @@
 {
   "id": "machine-learning",
   "title": "Machine learning",
-  "blurb": "Linear models, margins, trees and boosting, and how teams run them in production.",
   "before": ["linear-algebra", "probability"],
   "next": ["deep-learning", "reinforcement-learning"],
   "parts": [
@@ -56,7 +55,17 @@
             "url": "https://link.springer.com/content/pdf/10.1007/BF00994018.pdf",
             "source": "AT&T Bell Labs",
             "year": "1995",
-            "why": "Fits a widest-margin linear boundary in a high-dimensional space, allowing some errors."
+            "why": "For good generalization, SVM fits the widest-margin boundary in a high-dimensional feature space, with a soft margin that allows some errors."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Random Forests",
+            "url": "https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf",
+            "source": "UC Berkeley",
+            "year": "2001",
+            "why": "Single decision trees overfit, so random forests average many trees, each grown on a random sample with random features."
           }
         },
         {
@@ -66,38 +75,8 @@
             "url": "https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU",
             "source": "Stanford",
             "year": "2018",
+            "scope": "Lectures 13-16",
             "why": "k-means, mixtures of Gaussians and EM, factor analysis, PCA and ICA. In English."
-          }
-        }
-      ]
-    },
-    {
-      "name": "In practice",
-      "steps": [
-        {
-          "main": {
-            "url": "https://quinonero.net/Publications/predicting-clicks-facebook.pdf",
-            "why": "Decision trees feed a logistic regression, and fresh data mattered more than the model."
-          }
-        },
-        {
-          "main": {
-            "type": "paper",
-            "title": "Leakage in Data Mining: Formulation, Detection, and Avoidance",
-            "url": "https://dl.acm.org/doi/pdf/10.1145/2382577.2382579",
-            "source": "Tel Aviv University",
-            "year": "2012",
-            "why": "When the answer sneaks into training data, and how to catch it."
-          }
-        },
-        {
-          "main": {
-            "type": "paper",
-            "title": "Hidden Technical Debt in Machine Learning Systems",
-            "url": "https://proceedings.neurips.cc/paper_files/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf",
-            "source": "Google",
-            "year": "2015",
-            "why": "The model is a small part, and the code around it costs the most."
           }
         }
       ]
@@ -108,21 +87,11 @@
         {
           "main": {
             "type": "paper",
-            "title": "Random Forests",
-            "url": "https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf",
-            "source": "UC Berkeley",
-            "year": "2001",
-            "why": "Average many trees, each split on random features."
-          }
-        },
-        {
-          "main": {
-            "type": "paper",
             "title": "XGBoost: A Scalable Tree Boosting System",
             "url": "https://arxiv.org/abs/1603.02754",
             "source": "University of Washington",
             "year": "2016",
-            "why": "The systems work that made gradient boosting scale past billions of rows."
+            "why": "Gradient boosting was slow on large, sparse data, so XGBoost adds sparsity-aware splits, a weighted quantile sketch and cache-aware, out-of-core computation."
           }
         },
         {
@@ -132,7 +101,7 @@
             "url": "https://proceedings.neurips.cc/paper_files/paper/2017/file/6449f44a102fde848669bdd9eb6b76fa-Paper.pdf",
             "source": "Microsoft",
             "year": "2017",
-            "why": "Up to 20 times faster than standard GBDT at almost the same accuracy."
+            "why": "GBDT scans every row and feature to find splits, so LightGBM samples rows by gradient and bundles mutually exclusive features."
           }
         },
         {
@@ -142,7 +111,7 @@
             "url": "https://arxiv.org/abs/1706.09516",
             "source": "Yandex",
             "year": "2017",
-            "why": "Ordered boosting fixes target leakage in gradient boosting."
+            "why": "Target statistics for categorical features leak the label into training, so CatBoost uses ordered boosting to remove the bias."
           }
         },
         {
@@ -152,7 +121,48 @@
             "url": "https://arxiv.org/pdf/1905.04610",
             "source": "University of Washington",
             "year": "2019",
-            "why": "TreeSHAP. Exact Shapley explanations for tree models in polynomial time."
+            "why": "Exact Shapley values take exponential time, but TreeSHAP computes them for tree models in polynomial time."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Accurate predictions on small data with a tabular foundation model",
+            "url": "https://www.nature.com/articles/s41586-024-08328-6.pdf",
+            "source": "University of Freiburg",
+            "year": "2025",
+            "why": "Boosted trees must be trained and tuned for each table, so TabPFN pretrains a Transformer on synthetic datasets to predict new small tables in context."
+          }
+        }
+      ]
+    },
+    {
+      "name": "In practice",
+      "steps": [
+        {
+          "main": {
+            "url": "https://quinonero.net/Publications/predicting-clicks-facebook.pdf",
+            "why": "Ad click prediction needs calibrated probabilities at scale, so Facebook feeds boosted-tree features into a logistic regression and retrains often."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Leakage in Data Mining: Formulation, Detection, and Avoidance",
+            "url": "https://dl.acm.org/doi/pdf/10.1145/2382577.2382579",
+            "source": "Tel Aviv University",
+            "year": "2012",
+            "why": "Models can look accurate because training data leaks the answer, and this paper defines leakage and how to detect and avoid it."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Hidden Technical Debt in Machine Learning Systems",
+            "url": "https://proceedings.neurips.cc/paper_files/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf",
+            "source": "Google",
+            "year": "2015",
+            "why": "In production ML the model is a small part, while glue code, data dependencies and feedback loops pile up maintenance debt."
           }
         }
       ]

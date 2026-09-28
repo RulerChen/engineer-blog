@@ -1,7 +1,6 @@
 {
   "id": "database-systems",
   "title": "Database systems",
-  "blurb": "Storage engines, query optimization and transactions inside one database, and how its engine evolved.",
   "before": ["operating-systems", "dsa"],
   "next": ["data-systems"],
   "parts": [
@@ -57,7 +56,7 @@
             "url": "https://www.cidrdb.org/cidr2022/papers/p13-crotty.pdf",
             "source": "CMU",
             "year": "2022",
-            "why": "Letting the OS manage pages breaks transaction safety and stalls threads."
+            "why": "mmap looks like a free buffer pool, but letting the OS manage pages breaks transaction safety and stalls threads."
           }
         },
         {
@@ -67,13 +66,13 @@
             "url": "https://www.usenix.org/conference/fast21/presentation/dong",
             "source": "Meta",
             "year": "2021",
-            "why": "Eight years of priorities moving from write amplification to space to CPU."
+            "why": "RocksDB's priorities shifted from write amplification to space to CPU as its hardware and workloads changed."
           }
         },
         {
           "main": {
             "url": "https://engineering.fb.com/2016/08/31/core-infra/myrocks-a-space-and-write-optimized-mysql-database/",
-            "why": "Swapping InnoDB's B+tree for an LSM tree halved Facebook's storage."
+            "why": "InnoDB's B+tree wasted space and flash writes, so Facebook swapped it for RocksDB's LSM tree under MySQL."
           }
         },
         {
@@ -87,19 +86,16 @@
           },
           "further": [
             {
+              "type": "article",
+              "title": "Yes, PostgreSQL Has Problems. But We're Sticking With It!",
+              "url": "https://www.cs.cmu.edu/~pavlo/blog/2023/06/yes-postgresql-has-problems-but-were-sticking-with-it.html",
+              "source": "CMU",
+              "year": "2023"
+            },
+            {
               "url": "https://www.uber.com/blog/postgres-to-mysql-migration/"
             }
           ]
-        },
-        {
-          "main": {
-            "type": "article",
-            "title": "Yes, PostgreSQL Has Problems. But We're Sticking With It!",
-            "url": "https://www.cs.cmu.edu/~pavlo/blog/2023/06/yes-postgresql-has-problems-but-were-sticking-with-it.html",
-            "source": "CMU",
-            "year": "2023",
-            "why": "Living with it. Measure bloat, drop unused indexes and tune autovacuum."
-          }
         }
       ]
     },
@@ -113,7 +109,7 @@
             "url": "https://dl.acm.org/doi/pdf/10.1145/275487.275492",
             "source": "Microsoft",
             "year": "1998",
-            "why": "How plans are searched and costed, starting from System R."
+            "why": "SQL leaves the plan to the system, and this survey explains how optimizers search and cost plans, starting from System R."
           }
         },
         {
@@ -123,7 +119,7 @@
             "url": "https://www.vldb.org/pvldb/vol9/p204-leis.pdf",
             "source": "TU Munich",
             "year": "2015",
-            "why": "Row count estimates are often far off, and matter more than the cost model."
+            "why": "Cardinality estimates are often far off and matter more than the cost model, as the Join Order Benchmark shows."
           }
         }
       ]
@@ -138,7 +134,7 @@
             "url": "https://arxiv.org/abs/cs/0701157",
             "source": "Microsoft",
             "year": "1995",
-            "why": "Snapshot isolation. SQL's isolation levels are vague, and snapshot isolation still allows write skew."
+            "why": "The ANSI isolation levels are defined too vaguely, and the paper adds snapshot isolation, which still allows write skew."
           }
         },
         {
@@ -148,60 +144,14 @@
             "url": "https://dl.acm.org/doi/pdf/10.1145/1376616.1376690",
             "source": "University of Sydney",
             "year": "2008",
-            "why": "Detects write skew so snapshot isolation becomes serializable, as PostgreSQL does."
+            "why": "Snapshot isolation still allows write skew, so SSI detects dangerous patterns at runtime and aborts a transaction, as PostgreSQL does."
           }
         },
         {
           "main": {
             "url": "https://planetscale.com/blog/concurrency-vs-throughput-vitess-mysql",
-            "why": "Too many concurrent transactions lowered throughput, and a smaller pool fixed it."
+            "why": "Too many concurrent transactions lowered throughput, and a smaller connection pool fixed it."
           }
-        }
-      ]
-    },
-    {
-      "name": "Operations",
-      "steps": [
-        {
-          "main": {
-            "url": "https://planetscale.com/blog/state-of-online-schema-migrations-in-mysql",
-            "why": "Changing a live table's schema without blocking writes."
-          }
-        },
-        {
-          "main": {
-            "url": "https://github.blog/engineering/infrastructure/upgrading-github-com-to-mysql-8-0/",
-            "why": "Upgrading 1,200 MySQL hosts to 8.0 over a year, with a way back to 5.7."
-          }
-        },
-        {
-          "main": {
-            "url": "https://www.figma.com/blog/pgkeeper-building-the-bouncer-we-needed-for-postgres/",
-            "why": "Postgres uses one process per connection, so Figma built a pooler that sheds load."
-          }
-        },
-        {
-          "main": {
-            "url": "https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/",
-            "why": "A proxy tier that cuts connections to Meta's ZippyDB hosts by 97%."
-          }
-        },
-        {
-          "main": {
-            "url": "https://github.blog/engineering/infrastructure/mysql-high-availability-at-github/",
-            "why": "Replacing a dead primary with a replica in 10 to 13 seconds."
-          }
-        },
-        {
-          "main": {
-            "url": "https://www.notion.com/blog/sharding-postgres-at-notion",
-            "why": "Splitting one Postgres into 480 shards, migrated with double writes."
-          },
-          "further": [
-            {
-              "url": "https://www.notion.com/blog/the-great-re-shard"
-            }
-          ]
         }
       ]
     },
@@ -215,7 +165,7 @@
             "url": "https://www.vldb.org/archives/website/2005/program/paper/thu/p553-stonebraker.pdf",
             "source": "MIT",
             "year": "2005",
-            "why": "Stores data by column, so a query reads only the columns it needs."
+            "why": "Analytic queries read a few columns of many rows, so C-Store stores data by column and reads only what a query needs."
           }
         },
         {
@@ -224,7 +174,7 @@
             "title": "MonetDB/X100: Hyper-Pipelining Query Execution",
             "url": "https://www.cidrdb.org/cidr2005/papers/P19.pdf",
             "year": "2005",
-            "why": "Vectorized execution. Operators process a batch of values per call instead of one row."
+            "why": "Row-at-a-time execution wastes CPU on interpretation, so X100's vectorized operators process a batch of values per call."
           }
         },
         {
@@ -233,7 +183,7 @@
             "title": "DuckDB: an Embeddable Analytical Database",
             "url": "https://ir.cwi.nl/pub/28800/28800.pdf",
             "year": "2019",
-            "why": "An in-process database like SQLite, but columnar and built for analytics."
+            "why": "Analysts needed fast analytics inside their own process, so DuckDB is embedded like SQLite but columnar and vectorized."
           }
         },
         {
@@ -243,8 +193,54 @@
             "url": "https://db.cs.cmu.edu/papers/2024/whatgoesaround-sigmodrec2024.pdf",
             "source": "MIT",
             "year": "2024",
-            "why": "Twenty years of SQL replacements, and how SQL absorbed their best ideas."
+            "why": "Many data models tried to replace SQL, and this retrospective shows how SQL and the relational model absorbed their best ideas."
           }
+        }
+      ]
+    },
+    {
+      "name": "Operations",
+      "steps": [
+        {
+          "main": {
+            "url": "https://planetscale.com/blog/state-of-online-schema-migrations-in-mysql",
+            "why": "Altering a busy MySQL table can block writes, so online migration tools copy it to a shadow table in the background and swap it in."
+          }
+        },
+        {
+          "main": {
+            "url": "https://github.blog/engineering/infrastructure/upgrading-github-com-to-mysql-8-0/",
+            "why": "GitHub upgraded its whole MySQL fleet in stages, replicas first, while replicating back to the old version so it could roll back."
+          }
+        },
+        {
+          "main": {
+            "url": "https://www.figma.com/blog/pgkeeper-building-the-bouncer-we-needed-for-postgres/",
+            "why": "Postgres uses one process per connection, so Figma built a pooler that sheds load."
+          }
+        },
+        {
+          "main": {
+            "url": "https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/",
+            "why": "Clients connecting straight to ZippyDB hosts formed a fragile many-to-many mesh, so a proxy tier now bounds connections and batches requests across clients."
+          }
+        },
+        {
+          "main": {
+            "url": "https://github.blog/engineering/infrastructure/mysql-high-availability-at-github/",
+            "why": "VIP and DNS based failover was slow and fragile, so GitHub uses orchestrator to promote a replica and Consul with GLB to route clients to it."
+          }
+        },
+        {
+          "main": {
+            "url": "https://www.notion.com/blog/sharding-postgres-at-notion",
+            "why": "Notion's single Postgres was nearing its limits, so it split the data into logical shards by workspace and migrated with double writes."
+          },
+          "further": [
+            {
+              "url": "https://www.notion.com/blog/the-great-re-shard"
+            }
+          ]
         }
       ]
     }

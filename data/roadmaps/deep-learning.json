@@ -1,7 +1,6 @@
 {
   "id": "deep-learning",
   "title": "Deep learning",
-  "blurb": "How deep networks are trained, the architectures that made them work, generative models, and where they replaced classic ML in production.",
   "before": ["machine-learning"],
   "next": ["ml-systems", "computer-vision", "nlp"],
   "parts": [
@@ -34,7 +33,7 @@
             "url": "https://www.cs.utoronto.ca/~hinton/absps/naturebp.pdf",
             "source": "UC San Diego",
             "year": "1986",
-            "why": "Hidden layers learn their own features."
+            "why": "Perceptrons could not learn hidden features, so backpropagation sends error gradients back through the layers to train them."
           }
         }
       ]
@@ -49,7 +48,7 @@
             "url": "https://proceedings.mlr.press/v9/glorot10a/glorot10a.pdf",
             "source": "University of Montreal",
             "year": "2010",
-            "why": "Xavier initialization. Keeps gradients from vanishing in deep nets."
+            "why": "Deep nets trained poorly because activations and gradients shrank layer by layer, so Xavier initialization scales weights to keep their variance steady."
           },
           "further": [
             {
@@ -68,7 +67,7 @@
             "url": "https://jmlr.org/papers/volume15/srivastava14a/srivastava14a.pdf",
             "source": "University of Toronto",
             "year": "2014",
-            "why": "Randomly drop units in training to curb overfitting."
+            "why": "Large networks overfit, so dropout randomly removes units during training, like averaging many thinned networks."
           }
         },
         {
@@ -78,7 +77,7 @@
             "url": "https://arxiv.org/abs/1412.6980",
             "source": "University of Amsterdam",
             "year": "2014",
-            "why": "Per-parameter learning rates, still the default optimizer."
+            "why": "One global learning rate fits parameters poorly, so Adam adapts each parameter's step from running averages of its gradients."
           },
           "further": [
             {
@@ -97,7 +96,7 @@
             "url": "https://arxiv.org/abs/1502.03167",
             "source": "Google",
             "year": "2015",
-            "why": "Normalize layer inputs to train much faster."
+            "why": "Shifting layer input distributions slow training, so batch normalization normalizes them over each mini-batch."
           },
           "further": [
             {
@@ -140,7 +139,7 @@
             "url": "http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf",
             "source": "AT&T Labs",
             "year": "1998",
-            "why": "LeNet-5. Convolution and pooling, trained end to end."
+            "why": "Hand-designed features limited recognition, so LeNet-5 learns convolution and pooling layers end to end from pixels."
           }
         },
         {
@@ -150,7 +149,7 @@
             "url": "https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf",
             "source": "University of Toronto",
             "year": "2012",
-            "why": "AlexNet. A GPU-trained CNN won ImageNet 2012 and started the boom."
+            "why": "AlexNet trained a large CNN on GPUs with ReLU and dropout, won the ImageNet challenge and started the deep learning boom."
           }
         },
         {
@@ -160,7 +159,7 @@
             "url": "https://arxiv.org/abs/1409.1556",
             "source": "University of Oxford",
             "year": "2014",
-            "why": "VGG. Deep stacks of 3x3 convolutions show depth alone buys accuracy."
+            "why": "VGG stacks many small convolutions instead of large filters and shows that depth alone buys accuracy."
           },
           "further": [
             {
@@ -179,7 +178,7 @@
             "url": "https://arxiv.org/abs/1512.03385",
             "source": "Microsoft",
             "year": "2015",
-            "why": "ResNet. Skip connections make 100+ layer networks trainable."
+            "why": "Deeper plain networks trained worse, so ResNet adds skip connections that let layers learn residuals."
           }
         }
       ]
@@ -194,13 +193,13 @@
             "url": "https://www.bioinf.jku.at/publications/older/2604.pdf",
             "source": "TU Munich",
             "year": "1997",
-            "why": "Gates keep the error signal alive over long sequences."
+            "why": "RNN gradients vanish over long sequences, so LSTM adds gated memory cells that keep the error signal alive."
           }
         },
         {
           "main": {
             "url": "https://arxiv.org/abs/1706.03762",
-            "why": "Transformer. Self-attention replaces recurrence and trains in parallel."
+            "why": "Recurrent models process tokens one at a time, so the Transformer replaces recurrence with self-attention that trains in parallel."
           }
         }
       ]
@@ -215,7 +214,7 @@
             "url": "https://arxiv.org/abs/1312.6114",
             "source": "University of Amsterdam",
             "year": "2013",
-            "why": "VAE. The reparameterization trick makes latent models trainable by gradients."
+            "why": "Latent-variable models were hard to train, so the VAE uses the reparameterization trick to train them by gradient descent."
           }
         },
         {
@@ -225,7 +224,7 @@
             "url": "https://arxiv.org/abs/1406.2661",
             "source": "University of Montreal",
             "year": "2014",
-            "why": "A generator learns by fooling a discriminator."
+            "why": "Instead of modeling densities directly, a GAN trains a generator to fool a discriminator."
           }
         },
         {
@@ -235,13 +234,13 @@
             "url": "https://arxiv.org/abs/2006.11239",
             "source": "UC Berkeley",
             "year": "2020",
-            "why": "Generate images by removing noise step by step."
+            "why": "DDPM learns to reverse a gradual noising process and generates images by removing noise step by step."
           }
         }
       ]
     },
     {
-      "name": "Evolution",
+      "name": "In practice",
       "steps": [
         {
           "main": {
@@ -250,25 +249,25 @@
             "url": "https://arxiv.org/abs/1810.09591",
             "source": "Airbnb",
             "year": "2018",
-            "why": "Search ranking moves from gradient boosted trees to neural networks."
+            "why": "Gradient boosted trees plateaued for Airbnb's search ranking, so it moved to neural networks and shares what failed along the way."
           }
         },
         {
           "main": {
             "url": "https://www.linkedin.com/blog/engineering/feed/homepage-feed-multi-task-learning-using-tensorflow",
-            "why": "One logistic regression per objective becomes one multi-task network."
+            "why": "LinkedIn's feed used one logistic regression per objective, which it replaced with one multi-task network in TensorFlow."
           }
         },
         {
           "main": {
             "url": "https://www.uber.com/blog/deepeta-how-uber-predicts-arrival-times/",
-            "why": "XGBoost gives way to a linear transformer for ETA prediction."
+            "why": "Uber corrects routing-engine ETAs with a learned model, which moved from XGBoost to a low-latency linear transformer."
           }
         },
         {
           "main": {
             "url": "https://shopify.engineering/evolution-product-classification",
-            "why": "TF-IDF with logistic regression, then image and text models, then a VLM."
+            "why": "Shopify's product classification grew from TF-IDF with logistic regression to image and text models, and then a VLM."
           },
           "further": [
             {

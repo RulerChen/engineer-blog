@@ -145,7 +145,6 @@ export function buildRoadmaps(
     return {
       id: road.id,
       title: road.title,
-      blurb: road.blurb,
       before: checkTopics(road.before, `${road.id}.before`),
       next: checkTopics(road.next, `${road.id}.next`),
       parts: road.parts.map((part) => ({

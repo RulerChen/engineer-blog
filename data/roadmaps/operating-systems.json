@@ -1,7 +1,6 @@
 {
   "id": "operating-systems",
   "title": "Operating systems",
-  "blurb": "How programs run on the machine, the core ideas of operating systems, and how today's Linux schedules, manages memory, does I/O and isolates workloads.",
   "before": [],
   "next": ["computer-architecture", "distributed-systems", "security", "database-systems"],
   "parts": [
@@ -55,23 +54,16 @@
             "source": "NCKU",
             "year": "2026",
             "why": "From LinuxThreads to NPTL, then task_struct, the process lifecycle, fork and context switches. In Mandarin."
-          }
-        },
-        {
-          "main": {
-            "type": "paper",
-            "title": "A fork() in the road",
-            "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2019/04/fork-hotos19.pdf",
-            "source": "Microsoft",
-            "year": "2019",
-            "why": "Argues fork is a 1970s hack that now hurts thread safety, security and scalability, and proposes alternatives."
-          }
-        },
-        {
-          "main": {
-            "url": "https://blog.cloudflare.com/the-problem-with-event-loops/",
-            "why": "One blocking task stalls a whole event loop, so some work belongs back on threads."
-          }
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "A fork() in the road",
+              "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2019/04/fork-hotos19.pdf",
+              "source": "Microsoft",
+              "year": "2019"
+            }
+          ]
         }
       ]
     },
@@ -85,16 +77,7 @@
             "url": "https://hackmd.io/@sysprog/linux-scheduler",
             "source": "NCKU",
             "year": "2026",
-            "why": "From the 2.4 and O(1) schedulers through CFS to EEVDF and sched_ext, plus load balancing and PREEMPT_RT. In Mandarin."
-          }
-        },
-        {
-          "main": {
-            "type": "article",
-            "title": "An EEVDF CPU scheduler for Linux",
-            "url": "https://lwn.net/Articles/925371/",
-            "year": "2023",
-            "why": "EEVDF replaced CFS in 6.6, adding virtual deadlines so latency-sensitive tasks run sooner."
+            "why": "From the O(n) and O(1) schedulers through CFS to EEVDF and sched_ext, plus load balancing and PREEMPT_RT. In Mandarin."
           }
         },
         {
@@ -104,17 +87,7 @@
             "url": "https://www.uber.com/blog/avoiding-cpu-throttling-in-a-containerized-environment/",
             "source": "Uber",
             "year": "2022",
-            "why": "CFS quotas throttled multi-threaded services past 100 ms. Pinning cores with cpusets halved P99 and saved 11% of cores."
-          }
-        },
-        {
-          "main": {
-            "type": "paper",
-            "title": "ghOSt: Fast & Flexible User-Space Delegation of Linux Scheduling",
-            "url": "https://cs.stanford.edu/~jhumphri/documents/ghost.pdf",
-            "source": "Google",
-            "year": "2021",
-            "why": "Scheduling decisions delegated to userspace agents, so new policies ship without changing the kernel."
+            "why": "CFS bandwidth quotas throttled multi-threaded services in containers, so Uber pinned them to dedicated cores with cpusets."
           }
         },
         {
@@ -125,7 +98,16 @@
             "source": "Meta",
             "year": "2026",
             "why": "EEVDF regressed ads latency, so Meta wrote a sched_ext policy that splits CPUs into latency-critical and background pools."
-          }
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "ghOSt: Fast & Flexible User-Space Delegation of Linux Scheduling",
+              "url": "https://cs.stanford.edu/~jhumphri/documents/ghost.pdf",
+              "source": "Google",
+              "year": "2021"
+            }
+          ]
         }
       ]
     },
@@ -141,25 +123,6 @@
             "year": "2018",
             "why": "Spinlocks, semaphores, rwlocks, MCS locks and seqlocks, and why locks limit scalability. In Mandarin."
           }
-        },
-        {
-          "main": {
-            "type": "article",
-            "title": "MCS locks and qspinlocks",
-            "url": "https://lwn.net/Articles/590243/",
-            "year": "2014",
-            "why": "Contended spinlocks bounce one cache line across CPUs. MCS queues let each waiter spin on its own, the basis of qspinlock."
-          }
-        },
-        {
-          "main": {
-            "type": "article",
-            "title": "What is RCU, Fundamentally?",
-            "url": "https://lwn.net/Articles/262464/",
-            "source": "IBM",
-            "year": "2007",
-            "why": "Readers run alongside an updater without locks, and old versions are freed only after existing readers finish."
-          }
         }
       ]
     },
@@ -172,7 +135,7 @@
             "title": "Multi-generational LRU: the next generation",
             "url": "https://lwn.net/Articles/856931/",
             "year": "2021",
-            "why": "Replaces the active and inactive page lists with generations and reclaims from the oldest, merged in 6.1."
+            "why": "The active and inactive page lists often evicted the wrong pages, so MGLRU sorts pages into generations and reclaims from the oldest."
           }
         },
         {
@@ -182,23 +145,22 @@
             "url": "https://www.cs.cmu.edu/~dskarlat/publications/tmo_asplos22.pdf",
             "source": "Meta",
             "year": "2022",
-            "why": "PSI measures work lost to memory shortage, which decides how much cold memory to move to compressed RAM or SSD."
-          }
-        },
-        {
-          "main": {
-            "type": "paper",
-            "title": "TPP: Transparent Page Placement for CXL-Enabled Tiered-Memory",
-            "url": "https://arxiv.org/abs/2206.02878",
-            "source": "Meta",
-            "year": "2023",
-            "why": "Keeps hot pages in local DRAM and demotes cold ones to slower CXL memory, mostly merged in 5.18."
-          }
+            "why": "Much of datacenter memory sits cold, so TMO offloads it to compressed RAM or SSD and uses PSI to stop before applications slow down."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "TPP: Transparent Page Placement for CXL-Enabled Tiered-Memory",
+              "url": "https://arxiv.org/abs/2206.02878",
+              "source": "Meta",
+              "year": "2023"
+            }
+          ]
         },
         {
           "main": {
             "url": "https://www.linkedin.com/blog/engineering/feed/the-58-million-key-freeze-what-a-hashmap-resize-taught-us-about-memory-allocation-at-scale",
-            "why": "One HashMap resize held the mmap_lock for writing and stalled every thread's page faults for 15 seconds."
+            "why": "LinkedIn traced silent freezes to a HashMap resize whose large mmap held the mmap_lock and stalled every thread's page faults, and fixed it by preallocating."
           }
         }
       ]
@@ -209,30 +171,20 @@
         {
           "main": {
             "type": "article",
-            "title": "The multiqueue block layer",
-            "url": "https://lwn.net/Articles/552904/",
-            "year": "2013",
-            "why": "One request queue could not keep up with SSDs, so blk-mq splits submission into per-CPU and per-hardware queues."
-          }
-        },
-        {
-          "main": {
-            "type": "article",
             "title": "Ringing in a new asynchronous I/O API",
             "url": "https://lwn.net/Articles/776703/",
             "year": "2019",
-            "why": "Why AIO fell short, and how io_uring passes requests and results through rings shared with the kernel."
-          }
-        },
-        {
-          "main": {
-            "type": "paper",
-            "title": "I/O Passthru: Upstreaming a flexible and efficient I/O Path in Linux",
-            "url": "https://www.usenix.org/system/files/fast24-joshi.pdf",
-            "source": "Samsung",
-            "year": "2024",
-            "why": "NVMe commands go through io_uring and a char device instead of the block layer, now in mainline."
-          }
+            "why": "Linux AIO worked well only for direct I/O and could still block, so io_uring passes requests and completions through rings shared with the kernel."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "I/O Passthru: Upstreaming a flexible and efficient I/O Path in Linux",
+              "url": "https://www.usenix.org/system/files/fast24-joshi.pdf",
+              "source": "Samsung",
+              "year": "2024"
+            }
+          ]
         }
       ]
     },
@@ -252,8 +204,13 @@
         {
           "main": {
             "url": "https://blog.cloudflare.com/how-we-scaled-nginx-and-saved-the-world-54-years-every-day/",
-            "why": "Disk reads and open() block an event loop even with O_NONBLOCK, so they moved to a thread pool."
-          }
+            "why": "Disk reads and open() block nginx's event loop even with O_NONBLOCK, so Cloudflare moved them to thread pools."
+          },
+          "further": [
+            {
+              "url": "https://blog.cloudflare.com/the-problem-with-event-loops/"
+            }
+          ]
         },
         {
           "main": {
@@ -261,7 +218,7 @@
             "title": "PostgreSQL's fsync() surprise",
             "url": "https://lwn.net/Articles/752063/",
             "year": "2018",
-            "why": "When writeback fails, the kernel can drop the dirty pages and fsync may never report the error."
+            "why": "PostgreSQL trusted fsync to report failed writes, but after a writeback error the kernel can drop the dirty pages and never report it."
           }
         },
         {
@@ -286,7 +243,7 @@
             "url": "https://hackmd.io/@sysprog/linux-kvm",
             "source": "NCKU",
             "year": "2026",
-            "why": "How KVM and virtio work, read through a minimal KVM host, and what KVM gained since 6.6. In Mandarin."
+            "why": "How KVM and virtio work, read through a minimal KVM host, and what KVM gained in recent kernels. In Mandarin."
           }
         },
         {
@@ -296,7 +253,7 @@
             "url": "https://www.usenix.org/system/files/nsdi20-paper-agache.pdf",
             "source": "Amazon",
             "year": "2020",
-            "why": "A minimal virtual machine monitor that gives serverless workloads VM isolation with container-like overhead."
+            "why": "Serverless needs isolation stronger than containers without the weight of full VMs, so Firecracker is a minimal virtual machine monitor on KVM."
           }
         },
         {
@@ -317,13 +274,13 @@
             "url": "https://www.cs.cornell.edu/~ragarwal/pubs/network-stack.pdf",
             "source": "Cornell",
             "year": "2021",
-            "why": "At 100 Gbps one core can no longer keep up, and copying data to the application becomes the main cost."
+            "why": "Link speeds have outgrown what one core can process, and this study finds that copying data to the application now dominates the Linux stack's cost."
           }
         },
         {
           "main": {
             "url": "https://dropbox.tech/infrastructure/optimizing-web-servers-for-high-throughput-and-low-latency",
-            "why": "Tuning from the NIC, CPU affinity and NUMA up through TCP pacing, congestion control and sysctls."
+            "why": "A guide to tuning Linux web servers layer by layer, from the NIC, CPU affinity and NUMA up to TCP pacing and congestion control."
           }
         },
         {
@@ -333,17 +290,7 @@
             "url": "https://www.diva-portal.org/smash/get/diva2:1256181/FULLTEXT01.pdf",
             "source": "Karlstad University",
             "year": "2018",
-            "why": "XDP. Verified BPF programs run in the network driver and handle packets before the kernel network stack."
-          }
-        },
-        {
-          "main": {
-            "type": "article",
-            "title": "Open-sourcing Katran, a scalable network load balancer",
-            "url": "https://engineering.fb.com/2018/05/22/open-source/open-sourcing-katran-a-scalable-network-load-balancer/",
-            "source": "Meta",
-            "year": "2018",
-            "why": "The load balancer moved from the IPVS kernel module to XDP and BPF, handling packets right after the NIC."
+            "why": "Kernel bypass is fast but gives up the kernel's safety and tools, so XDP runs verified BPF programs in the network driver before the stack."
           }
         }
       ]
@@ -358,27 +305,7 @@
             "url": "https://arxiv.org/abs/2410.00026",
             "source": "Karlstad University",
             "year": "2024",
-            "why": "How programs are verified, compiled and attached to kernel hooks, and what eBPF is used for today."
-          }
-        },
-        {
-          "main": {
-            "type": "article",
-            "title": "Strobelight: A profiling service built on open source technology",
-            "url": "https://engineering.fb.com/2025/01/21/production-engineering/strobelight-a-profiling-service-built-on-open-source-technology/",
-            "source": "Meta",
-            "year": "2025",
-            "why": "Fleet-wide profilers built on eBPF. One fix they surfaced saved an estimated 15,000 servers a year."
-          }
-        },
-        {
-          "main": {
-            "type": "article",
-            "title": "drgn: How the Linux Kernel Team at Meta Debugs the Kernel at Scale",
-            "url": "https://developers.facebook.com/blog/post/2021/12/09/drgn-how-linux-kernel-team-meta-debugs-kernel-scale/",
-            "source": "Meta",
-            "year": "2021",
-            "why": "A debugger scripted in Python that inspects a running kernel or a core dump."
+            "why": "eBPF extends the kernel without modules, and this survey covers how programs are verified, compiled and attached to kernel hooks."
           }
         }
       ]

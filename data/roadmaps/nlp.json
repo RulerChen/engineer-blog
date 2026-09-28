@@ -1,7 +1,6 @@
 {
   "id": "nlp",
   "title": "Natural language processing",
-  "blurb": "From term weighting and n-gram models to word vectors, sequence-to-sequence models and pretraining, then retrieval and speech recognition.",
   "before": ["deep-learning"],
   "next": ["large-language-models"],
   "parts": [
@@ -39,7 +38,7 @@
             "url": "https://ecommons.cornell.edu/server/api/core/bitstreams/fc18789c-6a03-48e6-8226-7dba0ce94e32/content",
             "source": "Cornell",
             "year": "1987",
-            "why": "TF-IDF. Weight each term by its count in the document and its rarity in the collection, then normalize for length."
+            "why": "Not every word matters equally for retrieval, so TF-IDF weights each term by its frequency in the document and its rarity in the collection."
           }
         },
         {
@@ -49,7 +48,7 @@
             "url": "https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-356.pdf",
             "source": "University of Cambridge",
             "year": "1994",
-            "why": "BM25. Combines IDF, term frequency and document length into the formula Elasticsearch still uses by default."
+            "why": "Raw term counts favor long documents, so BM25 combines IDF with saturating term frequency and length normalization, still Elasticsearch's default."
           }
         },
         {
@@ -59,7 +58,7 @@
             "url": "https://www.cs.cmu.edu/~roni/papers/survey-slm-IEEE-PROC-0004.pdf",
             "source": "CMU",
             "year": "2000",
-            "why": "N-gram language models. Perplexity, smoothing, and the extensions that tried to fix their weaknesses."
+            "why": "N-gram language models were the workhorse of speech recognition and translation, and this survey covers perplexity, smoothing and the fixes tried for their weaknesses."
           }
         }
       ]
@@ -74,13 +73,13 @@
             "url": "https://www.jmlr.org/papers/volume3/bengio03a/bengio03a.pdf",
             "source": "University of Montreal",
             "year": "2003",
-            "why": "Neural language model. Learned word vectors let it beat smoothed n-gram models."
+            "why": "N-gram models cannot generalize to unseen word sequences, so this neural language model learns word vectors that share statistics across similar words."
           }
         },
         {
           "main": {
             "url": "https://arxiv.org/abs/1301.3781",
-            "why": "word2vec. Skip-gram and CBOW, cheap enough to train on billions of words."
+            "why": "Neural language models were too slow to train on large corpora, so word2vec learns word vectors with the simple skip-gram and CBOW objectives."
           },
           "further": [
             {
@@ -104,7 +103,7 @@
             "url": "https://proceedings.neurips.cc/paper_files/paper/2014/file/5a18e133cbf9f257297f410bb7eca942-Paper.pdf",
             "source": "Google",
             "year": "2014",
-            "why": "Seq2seq. One LSTM encodes the source sentence and another decodes the translation."
+            "why": "Neural networks needed fixed-size inputs and outputs, so seq2seq uses one LSTM to encode the source sentence and another to decode the translation."
           }
         },
         {
@@ -114,7 +113,7 @@
             "url": "https://arxiv.org/abs/1409.0473",
             "source": "University of Montreal",
             "year": "2014",
-            "why": "Attention. The decoder searches the source sentence at every step instead of relying on one fixed vector."
+            "why": "Squeezing a sentence into one fixed vector hurt long translations, so attention lets the decoder search the source at every step."
           }
         },
         {
@@ -124,7 +123,7 @@
             "url": "https://arxiv.org/abs/1508.07909",
             "source": "University of Edinburgh",
             "year": "2015",
-            "why": "BPE. Rare words become sequences of frequent subword units, so a fixed vocabulary can translate any word."
+            "why": "A fixed word vocabulary cannot cover rare words, so BPE splits them into frequent subword units."
           }
         }
       ]
@@ -139,13 +138,13 @@
             "url": "https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf",
             "source": "OpenAI",
             "year": "2018",
-            "why": "GPT. Pretrain a Transformer decoder on unlabeled text, then fine-tune it for each task."
+            "why": "Labeled data is scarce, so GPT pretrains a Transformer decoder on unlabeled text and fine-tunes it for each task."
           }
         },
         {
           "main": {
             "url": "https://arxiv.org/abs/1810.04805",
-            "why": "BERT. Predicting masked words pretrains an encoder that reads in both directions."
+            "why": "Left-to-right pretraining sees only the left context, so BERT pretrains an encoder that reads both directions by predicting masked words."
           },
           "further": [
             {
@@ -191,7 +190,7 @@
             "url": "https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf",
             "source": "OpenAI",
             "year": "2019",
-            "why": "GPT-2. A 1.5B-parameter language model trained on WebText handles many tasks zero-shot, with no fine-tuning."
+            "why": "GPT-2 shows that a large language model trained on web text handles many tasks zero-shot, without task-specific fine-tuning."
           }
         },
         {
@@ -201,7 +200,37 @@
             "url": "https://jmlr.org/papers/volume21/20-074/20-074.pdf",
             "source": "Google",
             "year": "2019",
-            "why": "T5. Every task becomes text in, text out, and pretraining choices are compared one at a time."
+            "why": "Transfer learning methods were hard to compare, so T5 casts every task as text in, text out and tests pretraining choices one at a time."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Speech",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Connectionist Temporal Classification: Labelling Unsegmented Sequence Data with Recurrent Neural Networks",
+            "url": "https://www.cs.toronto.edu/~graves/icml_2006.pdf",
+            "year": "2006",
+            "why": "Speech data rarely has frame-level alignments, so CTC trains a recognizer directly on audio and its transcript."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "wav2vec 2.0: A Framework for Self-Supervised Learning of Speech Representations",
+            "url": "https://arxiv.org/abs/2006.11477",
+            "source": "Meta",
+            "year": "2020",
+            "why": "Transcribed speech is scarce, so wav2vec 2.0 pretrains on unlabeled audio and fine-tunes on a small labeled set."
+          }
+        },
+        {
+          "main": {
+            "url": "https://arxiv.org/abs/2212.04356",
+            "why": "Speech models trained on clean benchmarks broke on real audio, so Whisper trains on a vast amount of weakly labeled web audio and works without fine-tuning."
           }
         }
       ]
@@ -216,7 +245,7 @@
             "url": "https://aclanthology.org/D19-1410.pdf",
             "source": "TU Darmstadt",
             "year": "2019",
-            "why": "Sentence-BERT. Sentence embeddings compared by cosine turn a 65-hour similarity search into 5 seconds."
+            "why": "Comparing sentence pairs with BERT is too slow for search, so Sentence-BERT embeds each sentence once and compares embeddings by cosine."
           }
         },
         {
@@ -226,7 +255,7 @@
             "url": "https://aclanthology.org/2020.emnlp-main.550.pdf",
             "source": "Meta",
             "year": "2020",
-            "why": "DPR. A dual encoder trained on question-passage pairs beats BM25 at retrieval."
+            "why": "Term matching misses paraphrases, so DPR trains a dual encoder on question-passage pairs and retrieves by embedding similarity."
           }
         },
         {
@@ -236,43 +265,13 @@
             "url": "https://arxiv.org/abs/2005.11401",
             "source": "Meta",
             "year": "2020",
-            "why": "RAG. BART writes answers from Wikipedia passages that DPR retrieves, so knowledge sits in a swappable index."
+            "why": "Knowledge stored in model weights is hard to update, so RAG retrieves passages with DPR and has BART write answers from them."
           }
         },
         {
           "main": {
             "url": "https://engineering.atspotify.com/2022/3/introducing-natural-language-search-for-podcast-episodes",
-            "why": "Podcast search moves from term matching to a fine-tuned multilingual sentence encoder."
-          }
-        }
-      ]
-    },
-    {
-      "name": "Speech",
-      "steps": [
-        {
-          "main": {
-            "type": "paper",
-            "title": "Connectionist Temporal Classification: Labelling Unsegmented Sequence Data with Recurrent Neural Networks",
-            "url": "https://www.cs.toronto.edu/~graves/icml_2006.pdf",
-            "year": "2006",
-            "why": "CTC. Trains a recognizer on audio and transcripts with no frame-by-frame alignment."
-          }
-        },
-        {
-          "main": {
-            "type": "paper",
-            "title": "wav2vec 2.0: A Framework for Self-Supervised Learning of Speech Representations",
-            "url": "https://arxiv.org/abs/2006.11477",
-            "source": "Meta",
-            "year": "2020",
-            "why": "wav2vec 2.0. Pretrain on unlabeled audio, then fine-tune on as little as ten minutes of transcribed speech."
-          }
-        },
-        {
-          "main": {
-            "url": "https://arxiv.org/abs/2212.04356",
-            "why": "Whisper. 680,000 hours of web audio with transcripts give robust recognition with no fine-tuning."
+            "why": "Term matching failed on natural-language podcast queries, so Spotify retrieves episodes with a fine-tuned multilingual sentence encoder."
           }
         }
       ]

@@ -37,7 +37,6 @@ const relations = computed(() =>
   <article class="rm-view">
     <header class="rm-top">
       <h2 class="heading-font">{{ roadmap.title }}</h2>
-      <p class="rm-blurb">{{ roadmap.blurb }}</p>
       <div v-for="row in relations" :key="row.label" class="rm-rel-row">
         <b>{{ row.label }}</b>
         <template v-for="id in row.ids" :key="id">

@@ -1,7 +1,6 @@
 {
   "id": "distributed-systems",
   "title": "Distributed systems",
-  "blurb": "Consensus, consistency and transactions across many machines, how they fail in production, and how later systems redesigned the classics.",
   "before": ["operating-systems", "networking"],
   "next": ["data-systems", "ml-systems"],
   "parts": [
@@ -42,7 +41,7 @@
         {
           "main": {
             "url": "https://lamport.azurewebsites.net/pubs/time-clocks.pdf",
-            "why": "Lamport clocks. Order events across machines without a shared clock."
+            "why": "Machines share no clock, so Lamport clocks order events by the messages between them."
           }
         },
         {
@@ -52,7 +51,7 @@
             "url": "https://lamport.azurewebsites.net/pubs/lamport-paxos.pdf",
             "source": "DEC",
             "year": "1998",
-            "why": "Paxos. The original paper, told as a Greek parliament."
+            "why": "The original Paxos paper, reaching consensus despite crashed and slow nodes, told as the story of a Greek parliament."
           },
           "background": [
             {
@@ -79,7 +78,7 @@
         {
           "main": {
             "url": "https://raft.github.io/raft.pdf",
-            "why": "Consensus like Paxos, split into leader election and log replication so it is easier to build."
+            "why": "Paxos is hard to understand and build, so Raft splits consensus into leader election and log replication."
           },
           "further": [
             {
@@ -117,25 +116,25 @@
         {
           "main": {
             "url": "https://research.google.com/archive/chubby-osdi06.pdf",
-            "why": "Google's lock service, which GFS and Bigtable use to elect their masters."
+            "why": "Rather than a Paxos library in every system, Google offers consensus as a lock service that GFS and Bigtable use to elect masters."
           }
         },
         {
           "main": {
             "url": "https://www.usenix.org/legacy/event/atc10/tech/full_papers/Hunt.pdf",
-            "why": "A small tree of files with watches, used to build locks and leader election."
+            "why": "Instead of fixed lock primitives, ZooKeeper offers a small tree of files with watches, from which clients build locks and leader election."
           }
         },
         {
           "main": {
             "url": "https://blog.cloudflare.com/a-byzantine-failure-in-the-real-world/",
-            "why": "A half-broken switch kept etcd re-electing leaders and hurt the API for over six hours."
+            "why": "A partially failed switch left etcd's Raft cluster re-electing leaders over and over, taking Cloudflare's API down with it."
           }
         },
         {
           "main": {
             "url": "https://www.linkedin.com/blog/engineering/infrastructure/scalable-multi-language-service-discovery-at-linkedin",
-            "why": "Service discovery moved off ZooKeeper, cutting update delay from 30 s to 5 s."
+            "why": "ZooKeeper buckled under read storms and spoke only LinkedIn's Java schema, so writes now flow through Kafka and observers push updates over xDS."
           }
         }
       ]
@@ -146,7 +145,7 @@
         {
           "main": {
             "url": "https://research.google.com/archive/gfs-sosp2003.pdf",
-            "why": "One master for metadata and replicated chunks for data, built for constant failures."
+            "why": "Commodity disks fail constantly and files are huge, so GFS keeps metadata on one master and replicates large chunks across servers."
           },
           "further": [
             {
@@ -161,7 +160,7 @@
             "url": "https://cs.brown.edu/people/mph/HerlihyW90/p463-herlihy.pdf",
             "source": "CMU",
             "year": "1990",
-            "why": "Each operation seems to happen instantly, between its call and its return."
+            "why": "To define correctness for concurrent objects, linearizability requires each operation to appear to take effect instantly between its call and return."
           }
         },
         {
@@ -171,7 +170,7 @@
             "url": "https://www.usenix.org/legacy/event/osdi04/tech/full_papers/renesse/renesse.pdf",
             "source": "Cornell",
             "year": "2004",
-            "why": "Writes go in at the head and reads come from the tail."
+            "why": "For strong consistency with high throughput, chain replication sends writes in at the head and serves reads from the tail."
           },
           "further": [
             {
@@ -186,13 +185,13 @@
             "url": "https://groups.csail.mit.edu/tds/papers/Gilbert/Brewer6.pdf",
             "source": "MIT",
             "year": "2002",
-            "why": "CAP theorem. During a network partition, a system cannot be both consistent and available."
+            "why": "The CAP theorem proves that during a network partition a system cannot be both consistent and available."
           }
         },
         {
           "main": {
             "url": "https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf",
-            "why": "Always accepts writes and resolves conflicts on read."
+            "why": "Amazon's cart must always accept writes, so Dynamo replicates with sloppy quorums and resolves conflicting versions on read."
           },
           "further": [
             {
@@ -206,7 +205,7 @@
         {
           "main": {
             "url": "https://cdn.amazon.science/dc/2b/4ef2b89649f9a393d37d3e042f4e/amazon-aurora-design-considerations-for-high-throughput-cloud-native-relational-databases.pdf",
-            "why": "Only the redo log goes over the network, and storage builds the pages."
+            "why": "In the cloud the network is the bottleneck, so Aurora ships only the redo log and lets the storage tier build pages."
           }
         },
         {
@@ -216,7 +215,7 @@
             "url": "https://www.usenix.org/system/files/conference/nsdi13/nsdi13-final170_update.pdf",
             "source": "Meta",
             "year": "2013",
-            "why": "Leases and invalidations let memcached serve billions of requests per second."
+            "why": "Caching Facebook's reads in memcached brought stale sets and thundering herds, which leases and invalidations fix."
           },
           "further": [
             {
@@ -242,7 +241,7 @@
             "url": "https://www.cidrdb.org/cidr2007/papers/cidr07p15.pdf",
             "source": "Amazon",
             "year": "2007",
-            "why": "Big systems skip distributed transactions, updating one entity at a time and messaging the rest."
+            "why": "Distributed transactions do not scale, so large systems update one entity at a time and coordinate the rest with messages."
           },
           "further": [
             {
@@ -253,7 +252,7 @@
         {
           "main": {
             "url": "https://dropbox.tech/infrastructure/cross-shard-transactions-at-10-million-requests-per-second",
-            "why": "Two-phase commit across MySQL shards at 10 million requests per second."
+            "why": "Some Edgestore writes span MySQL shards, so Dropbox runs two-phase commit across them."
           }
         }
       ]
@@ -268,7 +267,7 @@
             "url": "https://www.barroso.org/publications/TheTailAtScale.pdf",
             "source": "Google",
             "year": "2013",
-            "why": "With wide fan-out, a few slow servers slow most requests, and hedged requests help."
+            "why": "With wide fan-out a few slow servers delay most requests, so services hedge requests and tolerate the tail."
           }
         },
         {
@@ -293,7 +292,7 @@
             "url": "https://pdos.csail.mit.edu/6.824/papers/castro-practicalbft.pdf",
             "source": "MIT",
             "year": "1999",
-            "why": "Consensus that survives lying replicas, as long as fewer than a third are faulty."
+            "why": "Earlier Byzantine protocols were too slow to use, so PBFT tolerates lying replicas with practical overhead."
           }
         },
         {
@@ -302,7 +301,7 @@
             "title": "Bitcoin: A Peer-to-Peer Electronic Cash System",
             "url": "https://bitcoin.org/bitcoin.pdf",
             "year": "2008",
-            "why": "Proof of work lets strangers agree on one transaction history."
+            "why": "To stop double spending without a trusted party, Bitcoin uses proof of work so strangers agree on one transaction history."
           }
         }
       ]
@@ -313,7 +312,7 @@
         {
           "main": {
             "url": "https://www.usenix.org/system/files/atc22-elhemali.pdf",
-            "why": "Shares Dynamo's name but runs each partition as a Multi-Paxos group."
+            "why": "DynamoDB shares Dynamo's name but not its design, running each partition as a Multi-Paxos group for predictable performance."
           }
         },
         {
@@ -323,19 +322,19 @@
             "url": "https://www.allthingsdistributed.com/2021/04/s3-strong-consistency.html",
             "source": "Amazon",
             "year": "2021",
-            "why": "How S3 became strongly consistent, checked with proofs and model checking."
+            "why": "S3 was eventually consistent, and making it strongly consistent without losing performance relied on proofs and model checking."
           }
         },
         {
           "main": {
             "url": "https://www.cockroachlabs.com/pdf/cockroachdb-the-resilient-geo-distributed-sql-database-sigmod-2020.pdf",
-            "why": "Spanner-style transactions with hybrid logical clocks instead of special clock hardware."
+            "why": "Without special clock hardware, CockroachDB gets Spanner-style transactions from hybrid logical clocks."
           }
         },
         {
           "main": {
             "url": "https://aws.amazon.com/blogs/containers/under-the-hood-amazon-eks-ultra-scale-clusters/",
-            "why": "EKS replaced etcd's Raft with an internal AWS journal to reach 100,000-node clusters."
+            "why": "etcd's Raft capped Kubernetes cluster size, so EKS replaced it with an internal AWS journal service."
           }
         }
       ]

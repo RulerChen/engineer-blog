@@ -1174,12 +1174,6 @@ input::placeholder {
   font-weight: 800;
   line-height: 1.15;
 }
-.rm-blurb {
-  margin: 0;
-  max-width: 64ch;
-  font-size: 14.5px;
-  color: var(--muted);
-}
 .rm-rel-row {
   display: flex;
   flex-wrap: wrap;

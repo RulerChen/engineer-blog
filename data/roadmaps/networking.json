@@ -1,7 +1,6 @@
 {
   "id": "networking",
   "title": "Networking",
-  "blurb": "How the Internet is layered, routed and shared, the protocols that carry the web, and how large companies build datacenter, WAN and edge networks.",
   "before": [],
   "next": ["distributed-systems", "security"],
   "parts": [
@@ -15,7 +14,7 @@
             "url": "https://sp25.cs168.io/",
             "source": "UC Berkeley",
             "year": "2025",
-            "why": "Layers, routing and BGP, TCP and congestion control, DNS and HTTP, then datacenters and SDN, with recordings for every lecture. In English."
+            "why": "Layers, routing and BGP, TCP and congestion control, DNS and HTTP, then datacenters and SDN. In English."
           }
         }
       ]
@@ -55,7 +54,7 @@
             "url": "https://dl.acm.org/doi/10.1145/52325.52338",
             "source": "USC",
             "year": "1988",
-            "why": "Why DNS is a hierarchy of delegated zones with caching resolvers, and what surprised its designers once deployed."
+            "why": "A single hosts file could not keep up with the growing Internet, so DNS delegates names to a hierarchy of zones served with caching resolvers."
           }
         },
         {
@@ -65,7 +64,7 @@
             "url": "https://blog.cloudflare.com/rfc-8446-aka-tls-1-3/",
             "source": "Cloudflare",
             "year": "2018",
-            "why": "The one-round-trip handshake, 0-RTT resumption and its replay risk, and the legacy crypto TLS 1.3 removed."
+            "why": "TLS 1.3 shortens the handshake, adds 0-RTT resumption with its replay risk, and removes the legacy crypto behind past attacks."
           }
         }
       ]
@@ -80,7 +79,7 @@
             "url": "https://ee.lbl.gov/papers/congavoid.pdf",
             "source": "UC Berkeley",
             "year": "1988",
-            "why": "After the 1986 congestion collapse, slow start, AIMD and RTT estimation made TCP back off when the network fills."
+            "why": "After the Internet's congestion collapse, slow start, AIMD and RTT estimation made TCP back off when the network fills."
           }
         },
         {
@@ -96,7 +95,7 @@
             "url": "https://storage.googleapis.com/gweb-research2023-media/pubtools/4102.pdf",
             "source": "Google",
             "year": "2017",
-            "why": "Google's pre-IETF QUIC, transport and crypto over UDP in userspace, cutting handshake round trips and head-of-line blocking."
+            "why": "TCP and TLS cost extra round trips and stall every stream on a loss, so Google's pre-IETF QUIC runs transport and crypto over UDP in userspace."
           }
         },
         {
@@ -106,7 +105,7 @@
             "url": "https://engineering.fb.com/2020/10/21/networking-traffic/how-facebook-is-bringing-quic-to-billions/",
             "source": "Meta",
             "year": "2020",
-            "why": "IETF QUIC on Meta's own stack. App heuristics tuned for TCP misfired, and tail latency still fell 20 percent."
+            "why": "Meta moved its apps to IETF QUIC on its own implementation, and had to retune app heuristics that assumed TCP."
           }
         }
       ]
@@ -127,7 +126,7 @@
         {
           "main": {
             "url": "https://blog.cloudflare.com/going-bgp-zombie-hunting/",
-            "why": "Withdrawn routes that linger in the Internet for minutes, and why withdrawing a more-specific prefix makes it worse."
+            "why": "Why withdrawn BGP routes linger as zombies during path hunting, and why withdrawing a more-specific prefix makes it worse."
           }
         },
         {
@@ -152,7 +151,7 @@
             "url": "http://ccr.sigcomm.org/online/files/p63-alfares.pdf",
             "source": "UC San Diego",
             "year": "2008",
-            "why": "A fat-tree of cheap identical switches gives full bisection bandwidth without big core routers."
+            "why": "Datacenter networks relied on expensive core routers and still ran oversubscribed, so a fat-tree of cheap identical switches gives full bisection bandwidth."
           }
         },
         {
@@ -162,7 +161,7 @@
             "url": "https://storage.googleapis.com/gweb-research2023-media/pubtools/6752.pdf",
             "source": "Google",
             "year": "2022",
-            "why": "Google dropped the Clos spine for optical circuit switches linking aggregation blocks directly, cutting capex 30 percent."
+            "why": "Growing and refreshing the Clos spine was costly, so Google replaced it with optical circuit switches that link aggregation blocks directly."
           }
         },
         {
@@ -172,7 +171,7 @@
             "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2017/01/dctcp-sigcomm2010.pdf",
             "source": "Microsoft",
             "year": "2010",
-            "why": "Switches mark ECN early and senders cut in proportion to the marks, keeping queues short for small flows."
+            "why": "TCP fills switch buffers and delays short flows, so DCTCP marks ECN early and senders slow down in proportion to the marks."
           }
         },
         {
@@ -182,13 +181,13 @@
             "url": "https://www.usenix.org/system/files/nsdi23-bai.pdf",
             "source": "Microsoft",
             "year": "2023",
-            "why": "RDMA across whole Azure regions, with PFC watchdogs, DCQCN tuned across mismatched NICs, and long-haul links."
+            "why": "Azure runs storage traffic over RDMA across whole regions to save CPU, which took PFC watchdogs, DCQCN tuning across different NICs and long-haul support."
           }
         },
         {
           "main": {
             "url": "https://engineering.fb.com/2024/08/05/data-center-engineering/roce-network-distributed-ai-training-at-scale/",
-            "why": "RoCE for GPU training with PFC and no DCQCN, and why ECMP spread AI traffic badly until each flow used more queue pairs."
+            "why": "AI training sends few, huge flows that ECMP spreads badly, so Meta's RoCE fabric splits each flow over more queue pairs and uses PFC without DCQCN."
           }
         }
       ]
@@ -199,7 +198,7 @@
         {
           "main": {
             "url": "https://research.google/pubs/b4-experience-with-a-globally-deployed-software-defined-wan/",
-            "why": "Centralized traffic engineering runs Google's inter-datacenter links near full utilization."
+            "why": "WAN links were overprovisioned for peaks and failures, so B4's centralized traffic engineering runs them near full utilization."
           },
           "further": [
             {
@@ -218,7 +217,7 @@
             "url": "https://www.usenix.org/system/files/nsdi21-ferguson.pdf",
             "source": "Google",
             "year": "2021",
-            "why": "The control plane now running both Jupiter and B4, built as microservices around a pub-sub database."
+            "why": "To run Google's datacenter and WAN networks from software reliably, Orion splits the control plane into microservices that share state through a pub-sub database."
           }
         }
       ]
@@ -229,7 +228,7 @@
         {
           "main": {
             "url": "https://dropbox.tech/infrastructure/dropbox-traffic-infrastructure-edge-network",
-            "why": "PoP placement, and anycast against GeoDNS for steering users, with measurements of how slowly DNS drains traffic."
+            "why": "Users far from Dropbox's datacenters had slow connections, so it built edge PoPs and compared anycast with GeoDNS for steering users to them."
           }
         },
         {
@@ -239,13 +238,13 @@
             "url": "https://storage.googleapis.com/gweb-research2023-media/pubtools/2904.pdf",
             "source": "Google",
             "year": "2016",
-            "why": "Google's L4 load balancer on commodity servers, with consistent hashing so connections survive backend changes."
+            "why": "Hardware load balancers were costly and hard to scale, so Maglev runs on commodity servers with consistent hashing that keeps connections across backend changes."
           }
         },
         {
           "main": {
             "url": "https://blog.cloudflare.com/how-we-built-pingora-the-proxy-that-connects-cloudflare-to-the-internet/",
-            "why": "nginx's per-worker connection pools wasted handshakes. A shared pool cut new connections 160-fold for one customer."
+            "why": "nginx's per-worker connection pools forced extra handshakes to origins, so Cloudflare wrote Pingora with one pool shared across threads."
           }
         }
       ]

@@ -1,7 +1,6 @@
 {
   "id": "large-language-models",
   "title": "Large language models",
-  "blurb": "How LLMs evolved from scaled-up pretraining to open reasoning and agentic models, and what today's architectures change.",
   "before": ["nlp", "reinforcement-learning"],
   "next": [],
   "parts": [
@@ -17,7 +16,7 @@
             "year": "2026",
             "why": "Agents and harness engineering, fast inference, long context, self-correcting and self-improving models. In Mandarin."
           },
-          "alternative": [
+          "further": [
             {
               "type": "course",
               "title": "CS336: Language Modeling from Scratch",
@@ -39,22 +38,23 @@
             "url": "https://arxiv.org/abs/2001.08361",
             "source": "OpenAI",
             "year": "2020",
-            "why": "Loss falls as a power law in parameters, data and compute."
-          },
-          "further": [
-            {
-              "type": "paper",
-              "title": "Training Compute-Optimal Large Language Models",
-              "url": "https://arxiv.org/abs/2203.15556",
-              "source": "Google",
-              "year": "2022"
-            }
-          ]
+            "why": "Language model loss falls as a smooth power law in parameters, data and compute, which predicts how to spend a training budget."
+          }
         },
         {
           "main": {
             "url": "https://arxiv.org/abs/2005.14165",
-            "why": "At 175B parameters, examples in the prompt replace fine-tuning."
+            "why": "Fine-tuning needs labeled data for every task, and GPT-3 shows a large enough model learns tasks from examples in the prompt."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Training Compute-Optimal Large Language Models",
+            "url": "https://arxiv.org/abs/2203.15556",
+            "source": "Google",
+            "year": "2022",
+            "why": "Large models of the time were undertrained, so Chinchilla scales parameters and training tokens equally for a given compute budget."
           }
         },
         {
@@ -64,9 +64,13 @@
             "url": "https://arxiv.org/abs/2203.02155",
             "source": "OpenAI",
             "year": "2022",
-            "why": "InstructGPT. Supervised fine-tuning, a reward model, then RLHF."
+            "why": "Pretrained models follow instructions poorly, so InstructGPT adds supervised fine-tuning, a reward model and RLHF."
           },
-          "further": [{ "url": "https://arxiv.org/abs/2305.18290" }]
+          "further": [
+            {
+              "url": "https://arxiv.org/abs/2305.18290"
+            }
+          ]
         }
       ]
     },
@@ -76,13 +80,13 @@
         {
           "main": {
             "url": "https://arxiv.org/abs/2302.13971",
-            "why": "Small models trained on more public data match much larger ones."
+            "why": "Inference cost favors smaller models, so LLaMA trains them on more public data than compute-optimal to match much larger ones."
           }
         },
         {
           "main": {
             "url": "https://arxiv.org/abs/2412.19437",
-            "why": "Mixture of experts, latent attention and FP8 reach frontier quality at low cost."
+            "why": "Frontier-scale training was prohibitively expensive, and DeepSeek-V3 reaches that quality cheaply with mixture of experts, latent attention and FP8 training."
           },
           "background": [
             {
@@ -106,7 +110,7 @@
             "url": "https://openai.com/index/learning-to-reason-with-llms/",
             "source": "OpenAI",
             "year": "2024",
-            "why": "o1. Accuracy grows with RL compute in training and thinking time at inference."
+            "why": "OpenAI's o1 is trained with RL to think before answering, and its accuracy grows with both training compute and thinking time."
           }
         },
         {
@@ -116,7 +120,7 @@
             "url": "https://arxiv.org/abs/2501.12948",
             "source": "DeepSeek",
             "year": "2025",
-            "why": "RL on verifiable rewards alone teaches long chains of thought."
+            "why": "Human-written reasoning data is costly, so DeepSeek-R1 learns long chains of thought from RL on verifiable rewards."
           },
           "background": [
             {
@@ -135,7 +139,7 @@
             "url": "https://arxiv.org/abs/2505.09388",
             "source": "Alibaba",
             "year": "2025",
-            "why": "Thinking and non-thinking modes in one model, with a budget for thinking tokens."
+            "why": "Thinking is wasted on simple questions, so Qwen3 puts thinking and non-thinking modes in one model with a budget for thinking tokens."
           },
           "further": [
             {
@@ -159,7 +163,7 @@
             "url": "https://arxiv.org/abs/2507.20534",
             "source": "Moonshot AI",
             "year": "2025",
-            "why": "MuonClip pretraining with no loss spikes, then RL on synthesized agentic tasks."
+            "why": "Muon trains efficiently but grew unstable at scale, so Kimi K2 adds QK-clip in MuonClip, then learns agentic skills from synthesized tasks and RL."
           },
           "background": [
             {
@@ -178,7 +182,7 @@
             "url": "https://arxiv.org/abs/2602.15763",
             "source": "Zhipu AI",
             "year": "2026",
-            "why": "Asynchronous RL decouples rollouts from training for long-horizon agent tasks."
+            "why": "Long agent tasks make RL rollouts slow, so GLM-5 runs asynchronous RL that decouples rollouts from training."
           }
         }
       ]
@@ -192,7 +196,7 @@
             "title": "The Big LLM Architecture Comparison",
             "url": "https://magazine.sebastianraschka.com/p/the-big-llm-architecture-comparison",
             "year": "2026",
-            "why": "Open-weight architectures side by side, from DeepSeek V3 to Gemma 4."
+            "why": "Open-weight LLMs differ in small but telling design details, and this article compares their architectures side by side, from DeepSeek V3 to Gemma 4."
           }
         },
         {
@@ -202,7 +206,7 @@
             "url": "https://arxiv.org/abs/2606.19348",
             "source": "DeepSeek",
             "year": "2026",
-            "why": "Compressed sparse attention, hyper-connections and Muon for million-token context."
+            "why": "Attention cost grows with context length, so DeepSeek-V4 compresses and sparsifies attention, and adds hyper-connections and the Muon optimizer."
           },
           "background": [
             {
@@ -221,7 +225,7 @@
             "url": "https://github.com/MoonshotAI/Kimi-K3/blob/main/k3_tech_report.pdf",
             "source": "Moonshot AI",
             "year": "2026",
-            "why": "Linear attention hybrid, attention residuals and an 896-expert MoE at 2.8T."
+            "why": "To add capacity at lower cost, Kimi K3 combines linear and full attention, attention residuals and a mixture of experts with many more experts."
           },
           "background": [
             {
@@ -240,7 +244,24 @@
             "url": "https://arxiv.org/abs/2608.30320",
             "source": "Alibaba",
             "year": "2026",
-            "why": "Linear-attention hybrid, sparse attention and n-gram embeddings, each judged on quality, cost and stability."
+            "why": "Architecture changes trade quality against cost and stability, so this paper judges a linear-attention hybrid, sparse attention and n-gram embeddings on each."
+          }
+        }
+      ]
+    },
+    {
+      "name": "In practice",
+      "steps": [
+        {
+          "main": {
+            "url": "https://netflixtechblog.com/scaling-llm-post-training-at-netflix-0046f8790194",
+            "why": "Post-training open models at scale is mostly an engineering problem, so Netflix built a framework covering loss masking, sequence packing and RL orchestration."
+          }
+        },
+        {
+          "main": {
+            "url": "https://engineering.atspotify.com/2025/11/spotifys-background-coding-agent-part-1",
+            "why": "Scripted code migrations could handle only simple changes, so Spotify's background coding agent takes a prompt and opens pull requests across the codebase."
           }
         }
       ]

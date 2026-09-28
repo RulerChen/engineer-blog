@@ -1,7 +1,6 @@
 {
   "id": "ml-systems",
   "title": "ML systems",
-  "blurb": "The frameworks and GPU kernels under deep learning, how large models are trained and served at low cost, and how recommendation and search systems evolved.",
   "before": ["distributed-systems", "deep-learning"],
   "next": [],
   "parts": [
@@ -48,7 +47,7 @@
             "url": "https://docs.pytorch.org/assets/pytorch2-2.pdf",
             "source": "Meta",
             "year": "2024",
-            "why": "TorchDynamo pulls graphs out of ordinary Python by rewriting bytecode, and TorchInductor compiles them to Triton and C++."
+            "why": "Eager PyTorch is flexible but hard to compile, so TorchDynamo captures graphs from ordinary Python bytecode and TorchInductor compiles them to Triton and C++."
           },
           "background": [
             {
@@ -67,13 +66,13 @@
             "url": "https://openai.com/index/triton/",
             "source": "OpenAI",
             "year": "2021",
-            "why": "Kernels are written in Python over blocks of data, and the compiler handles coalescing, shared memory and scheduling inside each SM."
+            "why": "Fast CUDA kernels need expert tuning, so Triton lets you write them in Python over blocks while the compiler handles memory and scheduling."
           }
         },
         {
           "main": {
             "url": "https://arxiv.org/abs/2205.14135",
-            "why": "Computes attention tile by tile in on-chip SRAM, cutting the reads and writes to GPU memory that dominated its runtime."
+            "why": "Attention is bound by GPU memory traffic, so FlashAttention computes it tile by tile in on-chip SRAM."
           },
           "background": [
             {
@@ -105,7 +104,7 @@
             "url": "https://arxiv.org/abs/2006.15704",
             "source": "Meta",
             "year": "2020",
-            "why": "Every GPU holds a full replica, and gradients are all-reduced in buckets while the backward pass is still running."
+            "why": "Data-parallel training waits on gradient sync, so PyTorch DDP all-reduces gradients in buckets while the backward pass is still running."
           }
         },
         {
@@ -115,7 +114,7 @@
             "url": "https://arxiv.org/abs/1910.02054",
             "source": "Microsoft",
             "year": "2019",
-            "why": "Each data-parallel worker keeps only a slice of the optimizer state, gradients and weights instead of a full copy."
+            "why": "Data parallelism copies all model state to every GPU, so ZeRO shards optimizer state, gradients and weights across workers."
           }
         },
         {
@@ -125,7 +124,7 @@
             "url": "https://huggingface.co/spaces/nanotron/ultrascale-playbook",
             "source": "Hugging Face",
             "year": "2025",
-            "why": "Data, tensor, context, pipeline and expert parallelism, and how to combine them, tested in over 4,000 runs on up to 512 GPUs."
+            "why": "Large models need more than data parallelism, and this playbook explains tensor, context, pipeline and expert parallelism and how to combine them."
           }
         },
         {
@@ -135,7 +134,7 @@
             "url": "https://www.usenix.org/system/files/nsdi24-jiang-ziheng.pdf",
             "source": "ByteDance",
             "year": "2024",
-            "why": "Trains a 175B model on 12,288 GPUs at 55% MFU, evicting faulty machines and resuming from the latest checkpoint."
+            "why": "At huge GPU counts efficiency and failures dominate, so MegaScale co-designs the training stack and evicts faulty machines to resume from checkpoints."
           }
         }
       ]
@@ -146,7 +145,7 @@
         {
           "main": {
             "url": "https://arxiv.org/abs/2309.06180",
-            "why": "Stores the KV cache in fixed-size blocks like OS pages, so fragmentation no longer caps the batch size."
+            "why": "KV cache fragmentation capped serving batch sizes, so vLLM's PagedAttention stores the cache in fixed-size blocks like OS pages."
           },
           "background": [
             {
@@ -174,7 +173,7 @@
             "url": "https://arxiv.org/abs/2211.17192",
             "source": "Google",
             "year": "2022",
-            "why": "A small model drafts several tokens and the large model verifies them in one pass, leaving the output unchanged."
+            "why": "Each generated token needs a full pass of the large model, so a small model drafts tokens and the large model verifies them together, with unchanged output."
           }
         },
         {
@@ -184,7 +183,7 @@
             "url": "https://arxiv.org/abs/2210.17323",
             "source": "IST Austria",
             "year": "2022",
-            "why": "Quantizes weights to 3 or 4 bits without retraining, enough to fit a 175B model on one GPU for generation."
+            "why": "Large models are too big to serve cheaply, so GPTQ quantizes their weights to a few bits after training using second-order error correction."
           }
         },
         {
@@ -194,7 +193,7 @@
             "url": "https://www.usenix.org/system/files/osdi24-zhong-yinmin.pdf",
             "source": "Peking University",
             "year": "2024",
-            "why": "Prefill and decoding run on separate GPUs, so they stop interfering and each phase gets its own parallelism."
+            "why": "Prefill and decoding interfere when batched together, so DistServe runs them on separate GPUs, each with its own parallelism."
           },
           "further": [
             {
@@ -213,7 +212,7 @@
             "url": "https://github.com/deepseek-ai/open-infra-index/blob/main/202502OpenSourceWeek/day_6_one_more_thing_deepseekV3R1_inference_system_overview.md",
             "source": "DeepSeek",
             "year": "2025",
-            "why": "Experts spread across up to 144 GPUs to keep each expert's batch large, with prefill and decode on separate nodes."
+            "why": "Sparse experts leave each GPU's batch small, so DeepSeek spreads experts across many GPUs and serves prefill and decode on separate nodes."
           }
         }
       ]
@@ -224,31 +223,31 @@
         {
           "main": {
             "url": "https://research.google/pubs/deep-neural-networks-for-youtube-recommendations/",
-            "why": "One network narrows millions of videos to hundreds and a second ranks them, the two-stage funnel later systems extend."
+            "why": "Scoring every video per request is impossible, so YouTube splits recommendation into a candidate generation network and a ranking network."
           }
         },
         {
           "main": {
             "url": "https://arxiv.org/abs/1906.00091",
-            "why": "Embedding tables are split across GPUs by model parallelism while the MLPs are replicated data parallel."
+            "why": "Recommendation models are dominated by huge embedding tables, so DLRM shards them with model parallelism and replicates the MLPs with data parallelism."
           }
         },
         {
           "main": {
             "url": "https://engineering.fb.com/2023/08/09/ml-applications/scaling-instagram-explore-recommendations-system/",
-            "why": "Billions of items pass through two-tower retrieval over ANN, a distilled first-stage ranker, a multi-task heavy ranker and final reranking."
+            "why": "Explore picks from a vast catalog per request, so items flow through two-tower retrieval, a distilled first-stage ranker, a multi-task heavy ranker and reranking."
           }
         },
         {
           "main": {
             "url": "https://engineering.fb.com/2024/11/19/data-infrastructure/sequence-learning-personalized-ads-recommendations/",
-            "why": "Hand-aggregated sparse features give way to raw event sequences read by attention, with 2 to 4% more conversions on some segments."
+            "why": "Hand-aggregated sparse features lose the order of user activity, so Meta's ads models read raw event sequences with attention."
           }
         },
         {
           "main": {
             "url": "https://arxiv.org/abs/2402.17152",
-            "why": "Recasts recommendation as sequence transduction, and quality then grows as a power law of compute, as with LLMs."
+            "why": "Feature-heavy recommenders stop improving with more compute, so HSTU recasts recommendation as generative sequence transduction that scales like an LLM."
           },
           "further": [
             {
@@ -259,7 +258,7 @@
         {
           "main": {
             "url": "https://www.linkedin.com/blog/engineering/feed/engineering-the-next-generation-of-linkedins-feed",
-            "why": "Many retrieval sources become one LLM dual encoder, and per-post CPU ranking becomes a sequence transformer served on GPUs."
+            "why": "LinkedIn replaced its many retrieval sources with one LLM dual encoder, and its per-post CPU ranking with a sequence transformer on GPUs."
           }
         }
       ]
@@ -274,7 +273,7 @@
             "url": "https://arxiv.org/abs/2006.11632",
             "source": "Meta",
             "year": "2020",
-            "why": "Embedding retrieval added to a Boolean-matching search engine, with ANN served inside the existing inverted index."
+            "why": "Term matching misses semantically related results, so Facebook Search adds embedding retrieval and serves ANN inside its existing inverted index."
           }
         },
         {
@@ -284,13 +283,13 @@
             "url": "https://arxiv.org/abs/2401.08281",
             "source": "Meta",
             "year": "2024",
-            "why": "How vector search trades accuracy, speed and memory, through compression codecs, inverted-file indexes and graph indexes."
+            "why": "Vector search trades accuracy, speed and memory, and the Faiss paper maps that space through compression codecs, inverted-file indexes and graph indexes."
           }
         },
         {
           "main": {
             "url": "https://medium.com/pinterest-engineering/evolving-pinterests-embedding-retrieval-platform-aede4e831e01",
-            "why": "Scalar and product quantization cut index memory by over half, and SPANN is moving the indexes from RAM to SSD."
+            "why": "Embedding indexes are costly to keep in RAM, so Pinterest compresses them with scalar and product quantization and is moving them to SSD with SPANN."
           },
           "further": [
             {
@@ -301,7 +300,7 @@
         {
           "main": {
             "url": "https://www.linkedin.com/blog/engineering/search/reimagining-linkedins-search-stack",
-            "why": "An LLM parses each query, LLM embeddings retrieve by exact GPU kNN, and a distilled 0.6B language model ranks the results."
+            "why": "LinkedIn rebuilt search around LLMs, which parse each query, retrieve by exact kNN over embeddings on GPUs and rank with a small distilled model."
           }
         }
       ]
