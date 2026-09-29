@@ -1,5 +1,12 @@
 [
   {
+    "title": "How Notion handles concurrent editing with CRDTs",
+    "url": "https://www.notion.com/blog/how-notion-handles-concurrent-editing-with-crdts",
+    "source": "Notion",
+    "publishedAt": "2026-09-18",
+    "tags": ["architecture", "crdt"]
+  },
+  {
     "title": "Rebuilding Notion's lexical search reindexer",
     "url": "https://www.notion.com/blog/rebuilding-notions-lexical-search-reindexer",
     "source": "Notion",
