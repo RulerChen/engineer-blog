@@ -36,21 +36,6 @@
     "tags": ["language", "memory-management", "rust"]
   },
   {
-    "title": "From multi-day latency to near real-time insights: Figma's data pipeline upgrade",
-    "url": "https://www.figma.com/blog/figmas-data-pipeline-upgrade/",
-    "source": "Figma",
-    "publishedAt": "2025-05-29",
-    "tags": ["cdc", "data", "kafka", "s3", "snowflake"]
-  },
-  {
-    "title": "How we built AI search in Figma",
-    "url": "https://www.figma.com/blog/how-we-built-ai-search-in-figma/",
-    "source": "Figma",
-    "publishedAt": "2024-10-25",
-    "series": "figma-ai-search",
-    "tags": ["machine-learning", "ranking", "search"]
-  },
-  {
     "title": "The infrastructure behind AI search in Figma",
     "url": "https://www.figma.com/blog/the-infrastructure-behind-ai-search-in-figma/",
     "source": "Figma",
@@ -64,13 +49,6 @@
     "source": "Figma",
     "publishedAt": "2024-10-10",
     "tags": ["opensearch", "search"]
-  },
-  {
-    "title": "How we migrated onto K8s in less than 12 months",
-    "url": "https://www.figma.com/blog/migrating-onto-kubernetes/",
-    "source": "Figma",
-    "publishedAt": "2024-08-08",
-    "tags": ["container", "kubernetes"]
   },
   {
     "title": "Speeding up file load times, one page at a time",
@@ -147,13 +125,6 @@
     "source": "Figma",
     "publishedAt": "2020-10-27",
     "tags": ["frontend", "offline"]
-  },
-  {
-    "title": "A deep dive on deep search",
-    "url": "https://www.figma.com/blog/deep-search/",
-    "source": "Figma",
-    "publishedAt": "2020-07-21",
-    "tags": ["search", "indexing", "elasticsearch"]
   },
   {
     "title": "How Figma's multiplayer technology works",

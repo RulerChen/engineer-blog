@@ -151,13 +151,6 @@
     "tags": ["network", "proxy", "websocket"]
   },
   {
-    "title": "Recommending for Long-Term Member Satisfaction at Netflix",
-    "url": "https://netflixtechblog.com/recommending-for-long-term-member-satisfaction-at-netflix-ac15cada49ef",
-    "source": "Netflix",
-    "publishedAt": "2024-08-29",
-    "tags": ["machine-learning", "training"]
-  },
-  {
     "title": "Java 21 Virtual Threads - Dude, Where’s My Lock?",
     "url": "https://netflixtechblog.com/java-21-virtual-threads-dude-wheres-my-lock-3052540e231d",
     "source": "Netflix",
@@ -179,21 +172,6 @@
     "tags": ["search", "indexing", "elasticsearch"]
   },
   {
-    "title": "Rebuilding Netflix Video Processing Pipeline with Microservices",
-    "url": "https://netflixtechblog.com/rebuilding-netflix-video-processing-pipeline-with-microservices-4e5e6310e359",
-    "source": "Netflix",
-    "publishedAt": "2024-01-10",
-    "series": "netflix-cosmos",
-    "tags": ["architecture", "microservice"]
-  },
-  {
-    "title": "Building In-Video Search",
-    "url": "https://netflixtechblog.com/building-in-video-search-936766f0017c",
-    "source": "Netflix",
-    "publishedAt": "2023-11-06",
-    "tags": ["search", "vector", "machine-learning"]
-  },
-  {
     "title": "Kubernetes And Kernel Panics",
     "url": "https://netflixtechblog.com/kubernetes-and-kernel-panics-ed620b9c6225",
     "source": "Netflix",
@@ -208,54 +186,11 @@
     "tags": ["testing", "reliability"]
   },
   {
-    "title": "Building a Media Understanding Platform for ML Innovations",
-    "url": "https://netflixtechblog.com/building-a-media-understanding-platform-for-ml-innovations-9bef9962dcb7",
-    "source": "Netflix",
-    "publishedAt": "2023-03-14",
-    "tags": ["machine-learning", "search", "vector"]
-  },
-  {
-    "title": "Scaling Media Machine Learning at Netflix",
-    "url": "https://netflixtechblog.com/scaling-media-machine-learning-at-netflix-f19b400243",
-    "source": "Netflix",
-    "publishedAt": "2023-02-13",
-    "tags": ["machine-learning", "training", "inference"]
-  },
-  {
-    "title": "Match Cutting: Finding Cuts with Smooth Visual Transitions Using Machine Learning",
-    "url": "https://netflixtechblog.com/match-cutting-at-netflix-finding-cuts-with-smooth-visual-transitions-31c3fc14ae59",
-    "source": "Netflix",
-    "publishedAt": "2022-11-17",
-    "tags": ["machine-learning", "inference"]
-  },
-  {
     "title": "Timestone: Netflix’s High-Throughput, Low-Latency Priority Queueing System with Built-in Support for Non-Parallelizable Workloads",
     "url": "https://netflixtechblog.com/timestone-netflixs-high-throughput-low-latency-priority-queueing-system-with-built-in-support-1abf249ba95f",
     "source": "Netflix",
     "publishedAt": "2022-09-28",
     "tags": ["architecture", "job-queue", "database"]
-  },
-  {
-    "title": "Machine Learning for Fraud Detection in Streaming Services",
-    "url": "https://netflixtechblog.com/machine-learning-for-fraud-detection-in-streaming-services-b0b4ef3be3f6",
-    "source": "Netflix",
-    "publishedAt": "2022-09-21",
-    "tags": ["machine-learning", "training", "security"]
-  },
-  {
-    "title": "Rapid Event Notification System at Netflix",
-    "url": "https://netflixtechblog.com/rapid-event-notification-system-at-netflix-6deb1d2b57d1",
-    "source": "Netflix",
-    "publishedAt": "2022-02-18",
-    "tags": ["architecture", "microservice"]
-  },
-  {
-    "title": "The Netflix Cosmos Platform",
-    "url": "https://netflixtechblog.com/the-netflix-cosmos-platform-35c14d9351ad",
-    "source": "Netflix",
-    "publishedAt": "2021-03-01",
-    "series": "netflix-cosmos",
-    "tags": ["architecture", "microservice", "cloud"]
   },
   {
     "title": "Building Netflix’s Distributed Tracing Infrastructure",

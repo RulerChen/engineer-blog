@@ -1,19 +1,5 @@
 [
   {
-    "title": "Migration at Scale: Moving Marketing Cloud Caching from Memcached to Redis at 1.5M RPS Without Downtime",
-    "url": "https://engineering.salesforce.com/migration-at-scale-moving-marketing-cloud-caching-from-memcached-to-redis-at-1-5m-rps-without-downtime/",
-    "source": "Salesforce",
-    "publishedAt": "2026-01-07",
-    "tags": ["database", "migration", "redis", "memcached"]
-  },
-  {
-    "title": "Scaling Real-Time Search to 30 Billion Queries with Sub-Second Latency and 0% Downtime",
-    "url": "https://engineering.salesforce.com/scaling-real-time-search-to-30-billion-queries-with-sub-second-latency-and-0-downtime/",
-    "source": "Salesforce",
-    "publishedAt": "2025-04-08",
-    "tags": ["search", "reliability", "capacity-planning"]
-  },
-  {
     "title": "Event Sourcing for an Inventory Availability Solution",
     "url": "https://engineering.salesforce.com/event-sourcing-for-an-inventory-availability-solution-3cc0daf5a742/",
     "source": "Salesforce",
@@ -117,12 +103,5 @@
     "source": "Salesforce",
     "publishedAt": "2020-09-23",
     "tags": ["data", "data-lake", "delta-lake", "spark"]
-  },
-  {
-    "title": "Our Journey to Optimal Job Sizes for Apache Spark",
-    "url": "https://engineering.salesforce.com/our-journey-to-optimal-job-sizes-for-apache-spark-e787501e63ef/",
-    "source": "Salesforce",
-    "publishedAt": "2019-08-01",
-    "tags": ["data", "etl", "spark"]
   }
 ]

@@ -14,13 +14,6 @@
     "tags": ["data", "etl", "snowflake", "kinesis"]
   },
   {
-    "title": "How to improve search without looking at queries or results",
-    "url": "https://www.canva.dev/blog/engineering/how-to-improve-search-without-looking-at-queries-or-results/",
-    "source": "Canva",
-    "publishedAt": "2024-11-25",
-    "tags": ["search", "machine-learning", "llm"]
-  },
-  {
     "title": "Real-time mouse pointers",
     "url": "https://www.canva.dev/blog/engineering/realtime-mouse-pointers/",
     "source": "Canva",
@@ -35,39 +28,11 @@
     "tags": ["data", "stream-processing", "kinesis"]
   },
   {
-    "title": "Scaling to Count Billions",
-    "url": "https://www.canva.dev/blog/engineering/scaling-to-count-billions/",
-    "source": "Canva",
-    "publishedAt": "2024-04-12",
-    "tags": ["data", "etl", "database", "snowflake"]
-  },
-  {
     "title": "Behind the draw - How Canva's drawing tool works",
     "url": "https://www.canva.dev/blog/engineering/behind-the-draw/",
     "source": "Canva",
     "publishedAt": "2024-03-14",
     "tags": ["frontend", "svg"]
-  },
-  {
-    "title": "Ship Shape",
-    "url": "https://www.canva.dev/blog/engineering/ship-shape/",
-    "source": "Canva",
-    "publishedAt": "2023-11-10",
-    "tags": ["machine-learning", "inference", "frontend"]
-  },
-  {
-    "title": "How Canva saves millions annually in Amazon S3 costs",
-    "url": "https://www.canva.dev/blog/engineering/optimising-s3-savings/",
-    "source": "Canva",
-    "publishedAt": "2023-05-04",
-    "tags": ["storage", "tiering", "s3"]
-  },
-  {
-    "title": "Deep Learning for Infinite (Multi-Lingual) Keywords",
-    "url": "https://www.canva.dev/blog/engineering/deep-learning-for-infinite-multi-lingual-keywords/",
-    "source": "Canva",
-    "publishedAt": "2023-01-24",
-    "tags": ["machine-learning", "training", "pytorch"]
   },
   {
     "title": "From Zero to 50 Million Uploads per Day: Scaling Media at Canva",
@@ -83,14 +48,6 @@
     "publishedAt": "2022-11-17",
     "series": "canva-search-pipeline",
     "tags": ["search", "ranking", "architecture"]
-  },
-  {
-    "title": "Search Pipeline: Part I",
-    "url": "https://www.canva.dev/blog/engineering/search-pipeline-part-i/",
-    "source": "Canva",
-    "publishedAt": "2022-11-02",
-    "series": "canva-search-pipeline",
-    "tags": ["search", "architecture"]
   },
   {
     "title": "Machine learning hyperparameter optimization with Argo",

@@ -7,46 +7,11 @@
     "tags": ["architecture"]
   },
   {
-    "title": "Unified Grid: How We Re-Architected Slack for Our Largest Customers",
-    "url": "https://slack.engineering/unified-grid-how-we-re-architected-slack-for-our-largest-customers/",
-    "source": "Slack",
-    "publishedAt": "2024-07-31",
-    "tags": ["architecture", "database", "sharding"]
-  },
-  {
-    "title": "Unlocking Efficiency and Performance: Navigating the Spark 3 and EMR 6 Upgrade Journey at Slack",
-    "url": "https://slack.engineering/unlocking-efficiency-and-performance-navigating-the-spark-3-and-emr-6-upgrade-journey-at-slack/",
-    "source": "Slack",
-    "publishedAt": "2024-07-02",
-    "tags": ["data", "emr", "etl", "hive", "spark"]
-  },
-  {
     "title": "Executing Cron Scripts Reliably At Scale",
     "url": "https://slack.engineering/executing-cron-scripts-reliably-at-scale/",
     "source": "Slack",
     "publishedAt": "2023-09-28",
     "tags": ["architecture", "job-queue"]
-  },
-  {
-    "title": "Traffic 101: Packets Mostly Flow",
-    "url": "https://slack.engineering/traffic-101-packets-mostly-flow/",
-    "source": "Slack",
-    "publishedAt": "2023-08-28",
-    "tags": ["network", "reliability", "disaster-recovery"]
-  },
-  {
-    "title": "Real-time Messaging",
-    "url": "https://slack.engineering/real-time-messaging/",
-    "source": "Slack",
-    "publishedAt": "2023-04-11",
-    "tags": ["network", "websocket"]
-  },
-  {
-    "title": "Recommend API",
-    "url": "https://slack.engineering/recommend-api/",
-    "source": "Slack",
-    "publishedAt": "2022-09-06",
-    "tags": ["machine-learning", "inference"]
   },
   {
     "title": "Email Classification",
@@ -56,32 +21,11 @@
     "tags": ["machine-learning", "inference"]
   },
   {
-    "title": "Migrating Millions of Concurrent Websockets to Envoy",
-    "url": "https://slack.engineering/migrating-millions-of-concurrent-websockets-to-envoy/",
-    "source": "Slack",
-    "publishedAt": "2021-03-15",
-    "tags": ["envoy", "haproxy", "load-balance", "network", "websocket"]
-  },
-  {
-    "title": "Scaling Datastores at Slack with Vitess",
-    "url": "https://slack.engineering/scaling-datastores-at-slack-with-vitess/",
-    "source": "Slack",
-    "publishedAt": "2020-12-01",
-    "tags": ["database", "mysql", "sharding", "vitess"]
-  },
-  {
     "title": "A Terrible, Horrible, No-Good, Very Bad Day at Slack",
     "url": "https://slack.engineering/a-terrible-horrible-no-good-very-bad-day-at-slack/",
     "source": "Slack",
     "publishedAt": "2020-06-29",
     "tags": ["postmortem", "consul", "haproxy"]
-  },
-  {
-    "title": "Evolving the Slack API",
-    "url": "https://slack.engineering/evolving-the-slack-api/",
-    "source": "Slack",
-    "publishedAt": "2018-01-25",
-    "tags": ["api-design", "restful"]
   },
   {
     "title": "Scaling Slack’s Job Queue",

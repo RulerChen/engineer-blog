@@ -1,33 +1,5 @@
 [
   {
-    "title": "How we scaled Reads On the Twitter Users Database",
-    "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2023/how-we-scaled-reads-on-the-twitter-users-database",
-    "source": "Twitter",
-    "publishedAt": "2023-02-23",
-    "tags": ["database", "mysql", "vitess"]
-  },
-  {
-    "title": "Stability and scalability for search",
-    "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2022/stability-and-scalability-for-search",
-    "source": "Twitter",
-    "publishedAt": "2022-10-14",
-    "tags": ["search", "reliability", "elasticsearch"]
-  },
-  {
-    "title": "Scaling data access by moving an exabyte of data to Google Cloud",
-    "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2022/scaling-data-access-by-moving-an-exabyte-of-data-to-google-cloud",
-    "source": "Twitter",
-    "publishedAt": "2022-05-17",
-    "tags": ["data", "data-lake", "google-cloud", "bigquery"]
-  },
-  {
-    "title": "Powering real-time data analytics with Druid at Twitter",
-    "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2022/powering-real-time-data-analytics-with-druid-at-twitter",
-    "source": "Twitter",
-    "publishedAt": "2022-05-13",
-    "tags": ["data", "query-engine", "druid"]
-  },
-  {
     "title": "Data transfer in Manhattan using RocksDB",
     "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2022/data-transfer-in-manhattan-using-rocksdb",
     "source": "Twitter",
@@ -42,27 +14,6 @@
     "tags": ["architecture", "microservice", "reliability", "zookeeper"]
   },
   {
-    "title": "Processing billions of events in real time at Twitter",
-    "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2021/processing-billions-of-events-in-real-time-at-twitter-",
-    "source": "Twitter",
-    "publishedAt": "2021-10-22",
-    "tags": ["data", "stream-processing", "kafka", "dataflow"]
-  },
-  {
-    "title": "Logging at Twitter: Updated",
-    "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2021/logging-at-twitter-updated",
-    "source": "Twitter",
-    "publishedAt": "2021-08-13",
-    "tags": ["observability", "logging", "splunk"]
-  },
-  {
-    "title": "Fusing Elasticsearch with neural networks to identify data",
-    "url": "https://blog.x.com/engineering/en_us/topics/insights/2021/fusing-elasticsearch-with-neural-networks-to-identify-data",
-    "source": "Twitter",
-    "publishedAt": "2021-04-30",
-    "tags": ["machine-learning", "elasticsearch"]
-  },
-  {
     "title": "Adopting RocksDB within Manhattan",
     "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2021/adopting-rocksdb-within-manhattan",
     "source": "Twitter",
@@ -75,13 +26,6 @@
     "source": "Twitter",
     "publishedAt": "2021-03-18",
     "tags": ["architecture", "microservice"]
-  },
-  {
-    "title": "Storing and retrieving millions of ad impressions per second",
-    "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2021/storing-and-retrieving-millions-of-ad-impressions-per-second",
-    "source": "Twitter",
-    "publishedAt": "2021-02-22",
-    "tags": ["database", "storage"]
   },
   {
     "title": "Kafka as a storage system",
@@ -107,13 +51,6 @@
     "tags": ["machine-learning", "training", "tensorflow"]
   },
   {
-    "title": "Rebuilding Twitter’s public API",
-    "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2020/rebuild_twitter_public_api_2020",
-    "source": "Twitter",
-    "publishedAt": "2020-08-12",
-    "tags": ["api-design", "restful", "graphql"]
-  },
-  {
     "title": "Reducing search indexing latency to one second",
     "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2020/reducing-search-indexing-latency-to-one-second",
     "source": "Twitter",
@@ -121,25 +58,11 @@
     "tags": ["search", "indexing", "earlybird"]
   },
   {
-    "title": "Interactive Analytics at MoPub: Querying Terabytes of Data in Seconds",
-    "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2019/interactive-analytics-at-mopub",
-    "source": "Twitter",
-    "publishedAt": "2019-07-03",
-    "tags": ["data", "query-engine", "druid"]
-  },
-  {
     "title": "MetricsDB: TimeSeries Database for storing metrics at Twitter",
     "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2019/metricsdb",
     "source": "Twitter",
     "publishedAt": "2019-05-13",
     "tags": ["observability", "metrics"]
-  },
-  {
-    "title": "Partly Cloudy: Architecture",
-    "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2019/partly-cloudy-architecture",
-    "source": "Twitter",
-    "publishedAt": "2019-05-09",
-    "tags": ["cloud", "hadoop", "google-cloud"]
   },
   {
     "title": "Improving key expiration in Redis",
@@ -156,13 +79,6 @@
     "tags": ["database", "manhattan"]
   },
   {
-    "title": "Twitter’s Kafka adoption story",
-    "url": "https://blog.x.com/engineering/en_us/topics/insights/2018/twitters-kafka-adoption-story",
-    "source": "Twitter",
-    "publishedAt": "2018-11-28",
-    "tags": ["data", "stream-processing", "kafka"]
-  },
-  {
     "title": "ZooKeeper at Twitter",
     "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2018/zookeeper-at-twitter",
     "source": "Twitter",
@@ -170,48 +86,11 @@
     "tags": ["architecture", "zookeeper"]
   },
   {
-    "title": "Embeddings@Twitter",
-    "url": "https://blog.x.com/engineering/en_us/topics/insights/2018/embeddingsattwitter",
-    "source": "Twitter",
-    "publishedAt": "2018-09-13",
-    "tags": ["machine-learning", "training"]
-  },
-  {
-    "title": "The Infrastructure Behind Twitter: Scale",
-    "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2017/the-infrastructure-behind-twitter-scale",
-    "source": "Twitter",
-    "publishedAt": "2017-01-19",
-    "tags": ["network", "architecture", "mesos"]
-  },
-  {
     "title": "Omnisearch index formats",
     "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2016/omnisearch-index-formats",
     "source": "Twitter",
     "publishedAt": "2016-11-04",
     "tags": ["search", "indexing", "earlybird"]
-  },
-  {
-    "title": "The infrastructure behind Twitter: efficiency and optimization",
-    "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2016/the-infrastructure-behind-twitter-efficiency-and-optimization",
-    "source": "Twitter",
-    "publishedAt": "2016-08-23",
-    "tags": ["reliability", "capacity-planning", "hardware"]
-  },
-  {
-    "title": "Observability at Twitter: technical overview, part II",
-    "url": "https://blog.x.com/engineering/en_us/a/2016/observability-at-twitter-technical-overview-part-ii",
-    "source": "Twitter",
-    "publishedAt": "2016-03-22",
-    "series": "twitter-observability",
-    "tags": ["observability", "metrics", "cassandra"]
-  },
-  {
-    "title": "Observability at Twitter: technical overview, part I",
-    "url": "https://blog.x.com/engineering/en_us/a/2016/observability-at-twitter-technical-overview-part-i",
-    "source": "Twitter",
-    "publishedAt": "2016-03-18",
-    "series": "twitter-observability",
-    "tags": ["observability", "metrics", "cassandra"]
   },
   {
     "title": "Strong consistency in Manhattan",

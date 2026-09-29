@@ -8,27 +8,6 @@
     "tags": ["encoding", "object-storage", "storage"]
   },
   {
-    "title": "Seventh-generation server hardware at Dropbox: our most efficient and capable architecture yet",
-    "url": "https://dropbox.tech/infrastructure/seventh-generation-server-hardware",
-    "source": "Dropbox",
-    "publishedAt": "2025-07-02",
-    "tags": ["hardware"]
-  },
-  {
-    "title": "Evolving our infrastructure through the messaging system model in Dropbox",
-    "url": "https://dropbox.tech/infrastructure/infrastructure-messaging-system-model-async-platform-evolution",
-    "source": "Dropbox",
-    "publishedAt": "2025-01-21",
-    "tags": ["architecture", "job-queue"]
-  },
-  {
-    "title": "Selecting a model for semantic search at Dropbox scale",
-    "url": "https://dropbox.tech/machine-learning/selecting-model-semantic-search-dropbox-ai",
-    "source": "Dropbox",
-    "publishedAt": "2024-12-11",
-    "tags": ["machine-learning", "search"]
-  },
-  {
     "title": "What’s new with Robinhood, our in-house load balancing service",
     "url": "https://dropbox.tech/infrastructure/robinhood-in-house-load-balancing-service",
     "source": "Dropbox",
@@ -42,21 +21,6 @@
     "source": "Dropbox",
     "publishedAt": "2024-07-25",
     "tags": ["caching", "database"]
-  },
-  {
-    "title": "Putting everything in its right place with ML-powered file organization",
-    "url": "https://dropbox.tech/machine-learning/smart-move-ml-ai-file-organization-automation",
-    "source": "Dropbox",
-    "publishedAt": "2023-10-31",
-    "tags": ["machine-learning", "training"]
-  },
-  {
-    "title": "After four years of SMR storage, here's what we love—and what comes next",
-    "url": "https://dropbox.tech/infrastructure/four-years-of-smr-storage-what-we-love-and-whats-next",
-    "source": "Dropbox",
-    "publishedAt": "2023-03-08",
-    "series": "dropbox-smr-storage",
-    "tags": ["hardware", "storage"]
   },
   {
     "title": "Increasing Magic Pocket write throughput by removing our SSD cache disks",
@@ -86,13 +50,6 @@
     "source": "Dropbox",
     "publishedAt": "2022-04-25",
     "tags": ["disaster-recovery", "reliability"]
-  },
-  {
-    "title": "Optimizing payments with machine learning",
-    "url": "https://dropbox.tech/machine-learning/optimizing-payments-with-machine-learning",
-    "source": "Dropbox",
-    "publishedAt": "2021-05-17",
-    "tags": ["machine-learning", "inference"]
   },
   {
     "title": "Atlas: Our journey from a Python monolith to a managed platform",
@@ -131,13 +88,6 @@
     "tags": ["envoy", "network", "nginx", "proxy"]
   },
   {
-    "title": "Speeding up a Git monorepo at Dropbox with <200 lines of code",
-    "url": "https://dropbox.tech/application/speeding-up-a-git-monorepo-at-dropbox-with--200-lines-of-code",
-    "source": "Dropbox",
-    "publishedAt": "2020-06-10",
-    "tags": ["architecture", "git", "monorepo"]
-  },
-  {
     "title": "Testing sync at Dropbox",
     "url": "https://dropbox.tech/infrastructure/-testing-our-new-sync-engine",
     "source": "Dropbox",
@@ -160,14 +110,6 @@
     "publishedAt": "2019-09-18",
     "series": "dropbox-load-balancing",
     "tags": ["load-balance", "network"]
-  },
-  {
-    "title": "SMR: What we learned in our first year",
-    "url": "https://dropbox.tech/infrastructure/smr-what-we-learned-in-our-first-year",
-    "source": "Dropbox",
-    "publishedAt": "2019-07-30",
-    "series": "dropbox-smr-storage",
-    "tags": ["hardware", "storage"]
   },
   {
     "title": "How we optimized Magic Pocket for cold storage",
@@ -207,13 +149,6 @@
     "tags": ["network", "proxy"]
   },
   {
-    "title": "Architecture of Nautilus, the new Dropbox search engine",
-    "url": "https://dropbox.tech/machine-learning/architecture-of-nautilus-the-new-dropbox-search-engine",
-    "source": "Dropbox",
-    "publishedAt": "2018-09-27",
-    "tags": ["indexing", "search"]
-  },
-  {
     "title": "Extending Magic Pocket Innovation with the first petabyte scale SMR drive deployment",
     "url": "https://dropbox.tech/infrastructure/extending-magic-pocket-innovation-with-the-first-petabyte-scale-smr-drive-deployment",
     "source": "Dropbox",
@@ -227,14 +162,6 @@
     "source": "Dropbox",
     "publishedAt": "2017-09-06",
     "tags": ["http", "network", "nginx"]
-  },
-  {
-    "title": "Evolution of Dropbox’s Edge Network",
-    "url": "https://dropbox.tech/infrastructure/evolution-of-dropboxs-edge-network",
-    "source": "Dropbox",
-    "publishedAt": "2017-06-19",
-    "series": "dropbox-edge-network",
-    "tags": ["network", "proxy"]
   },
   {
     "title": "Pocket watch: Verifying exabytes of data",

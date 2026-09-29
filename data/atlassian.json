@@ -1,12 +1,5 @@
 [
   {
-    "title": "Budget Allocation at Scale: Building an ML Optimization System for Paid Marketing",
-    "url": "https://www.atlassian.com/blog/how-we-build/budget-allocation-at-scale-building-ml-optimization-system",
-    "source": "Atlassian",
-    "publishedAt": "2026-07-29",
-    "tags": ["machine-learning", "lightgbm"]
-  },
-  {
     "title": "Scaling StreamHub: Transitioning from Kinesis to Kafka for 145 Billion Daily Events",
     "url": "https://www.atlassian.com/blog/how-we-build/scaling-streamhub-transitioning-from-kinesis-to-kafka-for-145-billion-daily-events",
     "source": "Atlassian",
@@ -56,20 +49,6 @@
     "tags": ["hardware", "graviton", "java"]
   },
   {
-    "title": "Migrating the Jira Database Platform to AWS Aurora",
-    "url": "https://www.atlassian.com/blog/how-we-build/migrating-jira-database-platform-to-aws-aurora",
-    "source": "Atlassian",
-    "publishedAt": "2025-07-01",
-    "tags": ["database", "migration", "postgresql", "aurora"]
-  },
-  {
-    "title": "Enhancing resiliency in opensearch clusters: An in-depth technical exploration of Admission Control",
-    "url": "https://www.atlassian.com/blog/how-we-build/opensearch-admission-control-resiliency",
-    "source": "Atlassian",
-    "publishedAt": "2025-06-11",
-    "tags": ["reliability", "overload-control", "opensearch"]
-  },
-  {
     "title": "Boosting Performance: How We Scaled and Enhanced Throughput in the Jira Export Service",
     "url": "https://www.atlassian.com/blog/how-we-build/boosting-performance-how-we-scaled-and-enhanced-throughput-in-the-jira-export-service",
     "source": "Atlassian",
@@ -103,20 +82,6 @@
     "source": "Atlassian",
     "publishedAt": "2022-04-29",
     "tags": ["reliability", "postmortem", "disaster-recovery"]
-  },
-  {
-    "title": "Revamping Confluence Cloud Search",
-    "url": "https://www.atlassian.com/blog/how-we-build/revamping-confluence-cloud-search",
-    "source": "Atlassian",
-    "publishedAt": "2021-07-21",
-    "tags": ["search", "indexing", "elasticsearch"]
-  },
-  {
-    "title": "Scaling, rearchitecting, and decomposing Confluence Cloud",
-    "url": "https://www.atlassian.com/blog/how-we-build/scaling-rearchitecting-and-decomposing-confluence-cloud",
-    "source": "Atlassian",
-    "publishedAt": "2020-10-21",
-    "tags": ["architecture", "microservice", "dynamodb"]
   },
   {
     "title": "Scaling Bitbucket's Database",

@@ -7,14 +7,6 @@
     "tags": ["data", "data-lake", "parquet"]
   },
   {
-    "title": "Background Coding Agents: Supercharging Downstream Consumer Dataset Migrations (Honk, Part 4)",
-    "url": "https://engineering.atspotify.com/2026/4/background-coding-agents-dataset-migrations-honk-part-4",
-    "source": "Spotify",
-    "publishedAt": "2026-04-22",
-    "series": "spotify-honk",
-    "tags": ["machine-learning", "agent", "data", "etl"]
-  },
-  {
     "title": "Background Coding Agents: Predictable Results Through Strong Feedback Loops (Honk, Part 3)",
     "url": "https://engineering.atspotify.com/2025/12/feedback-loops-background-coding-agents-part-3",
     "source": "Spotify",
@@ -39,39 +31,11 @@
     "tags": ["machine-learning", "agent"]
   },
   {
-    "title": "How We Generated Millions of Content Annotations",
-    "url": "https://engineering.atspotify.com/2024/10/how-we-generated-millions-of-content-annotations",
-    "source": "Spotify",
-    "publishedAt": "2024-10-21",
-    "tags": ["machine-learning", "training"]
-  },
-  {
-    "title": "Data Platform Explained Part II",
-    "url": "https://engineering.atspotify.com/2024/5/data-platform-explained-part-ii",
-    "source": "Spotify",
-    "publishedAt": "2024-05-28",
-    "tags": ["data", "etl"]
-  },
-  {
-    "title": "The What, Why, and How of Mastering App Size",
-    "url": "https://engineering.atspotify.com/2023/11/the-what-why-and-how-of-mastering-app-size",
-    "source": "Spotify",
-    "publishedAt": "2023-11-14",
-    "tags": ["mobile"]
-  },
-  {
     "title": "Large-Scale Generation of ML Podcast Previews at Spotify with Google Dataflow",
     "url": "https://engineering.atspotify.com/2023/4/large-scale-generation-of-ml-podcast-previews-at-spotify-with-google-dataflow",
     "source": "Spotify",
     "publishedAt": "2023-04-13",
     "tags": ["machine-learning", "inference", "dataflow"]
-  },
-  {
-    "title": "How We Built Infrastructure to Run User Forecasts at Spotify",
-    "url": "https://engineering.atspotify.com/2022/6/how-we-built-infrastructure-to-run-user-forecasts-at-spotify",
-    "source": "Spotify",
-    "publishedAt": "2022-06-16",
-    "tags": ["machine-learning", "training"]
   },
   {
     "title": "Introducing Natural Language Search for Podcast Episodes",
@@ -81,41 +45,11 @@
     "tags": ["search", "vector", "vespa"]
   },
   {
-    "title": "Why We Switched Our Data Orchestration Service",
-    "url": "https://engineering.atspotify.com/2022/3/why-we-switched-our-data-orchestration-service",
-    "source": "Spotify",
-    "publishedAt": "2022-03-14",
-    "tags": ["data", "etl", "flyte"]
-  },
-  {
-    "title": "Changing the Wheels on a Moving Bus — Spotify’s Event Delivery Migration",
-    "url": "https://engineering.atspotify.com/2021/10/changing-the-wheels-on-a-moving-bus-spotify-event-delivery-migration",
-    "source": "Spotify",
-    "publishedAt": "2021-10-20",
-    "series": "spotify-event-delivery",
-    "tags": ["data", "stream-processing"]
-  },
-  {
     "title": "How Spotify Optimized the Largest Dataflow Job Ever for Wrapped 2020",
     "url": "https://engineering.atspotify.com/2021/2/how-spotify-optimized-the-largest-dataflow-job-ever-for-wrapped-2020",
     "source": "Spotify",
     "publishedAt": "2021-02-11",
     "tags": ["data", "etl", "dataflow", "scio"]
-  },
-  {
-    "title": "Spotify’s Event Delivery – Life in the Cloud",
-    "url": "https://engineering.atspotify.com/2019/11/spotifys-event-delivery-life-in-the-cloud",
-    "source": "Spotify",
-    "publishedAt": "2019-11-12",
-    "series": "spotify-event-delivery",
-    "tags": ["data", "stream-processing", "pubsub"]
-  },
-  {
-    "title": "Big Data Processing at Spotify: The Road to Scio (Part 1)",
-    "url": "https://engineering.atspotify.com/2017/10/big-data-processing-at-spotify-the-road-to-scio-part-1",
-    "source": "Spotify",
-    "publishedAt": "2017-10-16",
-    "tags": ["data", "etl", "scio", "dataflow"]
   },
   {
     "title": "Spotify’s Love/Hate Relationship with DNS",

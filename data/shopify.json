@@ -8,26 +8,11 @@
     "series": "shopify-native-mobile"
   },
   {
-    "title": "Native is now the future of mobile at Shopify",
-    "url": "https://shopify.engineering/back-to-native",
-    "source": "Shopify",
-    "publishedAt": "2026-09-10",
-    "tags": ["mobile", "react-native"],
-    "series": "shopify-native-mobile"
-  },
-  {
     "title": "How River takes security work from a fix to merge",
     "url": "https://shopify.engineering/river-vulnerability-remediation",
     "source": "Shopify",
     "publishedAt": "2026-09-02",
     "tags": ["security", "machine-learning", "agent"]
-  },
-  {
-    "title": "Under the River",
-    "url": "https://shopify.engineering/under-the-river",
-    "source": "Shopify",
-    "publishedAt": "2026-05-28",
-    "tags": ["agent", "machine-learning"]
   },
   {
     "title": "We replaced Redis with MySQL for inventory reservations—and it scaled",
@@ -52,14 +37,6 @@
     "tags": ["search", "machine-learning", "inference", "dataflow"]
   },
   {
-    "title": "Improving Shopify App’s Performance",
-    "url": "https://shopify.engineering/improving-shopify-app-s-performance",
-    "source": "Shopify",
-    "publishedAt": "2024-03-05",
-    "series": "shopify-native-mobile",
-    "tags": ["mobile", "react-native"]
-  },
-  {
     "title": "Horizontally scaling the Rails backend of Shop app with Vitess",
     "url": "https://shopify.engineering/horizontally-scaling-the-rails-backend-of-shop-app-with-vitess",
     "source": "Shopify",
@@ -75,26 +52,11 @@
     "tags": ["load-testing", "testing"]
   },
   {
-    "title": "Migrating our Largest Mobile App to React Native",
-    "url": "https://shopify.engineering/migrating-our-largest-mobile-app-to-react-native",
-    "source": "Shopify",
-    "publishedAt": "2022-12-27",
-    "series": "shopify-mobile-architecture",
-    "tags": ["mobile", "react-native"]
-  },
-  {
     "title": "Safely Adding NOT NULL Columns to Your Database Tables",
     "url": "https://shopify.engineering/add-not-null-colums-to-database",
     "source": "Shopify",
     "publishedAt": "2022-10-04",
     "tags": ["database", "mysql", "schema"]
-  },
-  {
-    "title": "Leveraging Go Worker Pools to Scale Server-side Data Sharing",
-    "url": "https://shopify.engineering/leveraging-go-worker-pools",
-    "source": "Shopify",
-    "publishedAt": "2022-09-09",
-    "tags": ["architecture", "go", "job-queue"]
   },
   {
     "title": "Spin Infrastructure Adventures: Containers, Systemd, and CGroups",
@@ -104,33 +66,11 @@
     "tags": ["container", "kubernetes", "operating-system"]
   },
   {
-    "title": "Lessons Learned From Running Apache Airflow at Scale",
-    "url": "https://shopify.engineering/lessons-learned-apache-airflow-scale",
-    "source": "Shopify",
-    "publishedAt": "2022-05-23",
-    "tags": ["airflow", "data", "etl"]
-  },
-  {
-    "title": "Scaling Shopify's BFCM Live Map: An Apache Flink Redesign",
-    "url": "https://shopify.engineering/bfcm-live-map-2021-apache-flink-redesign",
-    "source": "Shopify",
-    "publishedAt": "2021-12-10",
-    "tags": ["data", "flink", "redis", "stream-processing"]
-  },
-  {
     "title": "Upgrading MySQL at Shopify",
     "url": "https://shopify.engineering/upgrading-mysql-shopify",
     "source": "Shopify",
     "publishedAt": "2021-12-02",
     "tags": ["database", "migration", "mysql"]
-  },
-  {
-    "title": "Shopify's Path to a Faster Trino Query Execution: Custom Verification, Benchmarking, and Profiling Tooling",
-    "url": "https://shopify.engineering/faster-trino-query-execution-verification-benchmarking-profiling",
-    "source": "Shopify",
-    "publishedAt": "2021-10-27",
-    "series": "shopify-trino-performance",
-    "tags": ["data", "query-engine", "trino"]
   },
   {
     "title": "Debugging Systems in the Cloud: MySQL, Kubernetes, and Cgroups",

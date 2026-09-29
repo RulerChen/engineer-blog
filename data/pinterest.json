@@ -7,13 +7,6 @@
     "tags": ["search", "vector", "indexing", "spann"]
   },
   {
-    "title": "Building Pinterest's VLM Serving Stack on NVIDIA Dynamo",
-    "url": "https://medium.com/pinterest-engineering/building-pinterests-vlm-serving-stack-on-nvidia-dynamo-0dce6e93d0f3",
-    "source": "Pinterest",
-    "publishedAt": "2026-09-10",
-    "tags": ["machine-learning", "inference", "llm", "vllm"]
-  },
-  {
     "title": "Achieving Near-Linear Training Scalability for Pinterest’s Foundation Models",
     "url": "https://medium.com/pinterest-engineering/achieving-near-linear-training-scalability-for-pinterests-foundation-models-14d4f59fe6f6",
     "source": "Pinterest",
@@ -21,34 +14,11 @@
     "tags": ["machine-learning", "training", "pytorch"]
   },
   {
-    "title": "Next Gen Data Processing at Massive Scale At Pinterest With Moka (Part 2 of 2)",
-    "url": "https://medium.com/pinterest-engineering/next-gen-data-processing-at-massive-scale-at-pinterest-with-moka-part-2-of-2-d0210ded34e0",
-    "source": "Pinterest",
-    "publishedAt": "2025-09-10",
-    "series": "pinterest-moka",
-    "tags": ["data", "container", "kubernetes", "spark"]
-  },
-  {
-    "title": "Next Gen Data Processing at Massive Scale At Pinterest With Moka (Part 1 of 2)",
-    "url": "https://medium.com/pinterest-engineering/next-gen-data-processing-at-massive-scale-at-pinterest-with-moka-part-1-of-2-39a36d5e82c4",
-    "source": "Pinterest",
-    "publishedAt": "2025-07-11",
-    "series": "pinterest-moka",
-    "tags": ["data", "container", "kubernetes", "spark"]
-  },
-  {
     "title": "Next-Level Personalization: How 16k+ Lifelong User Actions Supercharge Pinterest’s Recommendations",
     "url": "https://medium.com/pinterest-engineering/next-level-personalization-how-16k-lifelong-user-actions-supercharge-pinterests-recommendations-bd5989f8f5d3",
     "source": "Pinterest",
     "publishedAt": "2025-06-06",
     "tags": ["machine-learning", "recommendation", "inference"]
-  },
-  {
-    "title": "Improving Pinterest Search Relevance Using Large Language Models",
-    "url": "https://medium.com/pinterest-engineering/improving-pinterest-search-relevance-using-large-language-models-4cd938d4e892",
-    "source": "Pinterest",
-    "publishedAt": "2025-04-04",
-    "tags": ["machine-learning", "search", "ranking", "llm"]
   },
   {
     "title": "Change Data Capture at Pinterest",
@@ -80,40 +50,11 @@
     "tags": ["database", "tidb"]
   },
   {
-    "title": "Ray Infrastructure at Pinterest",
-    "url": "https://medium.com/pinterest-engineering/ray-infrastructure-at-pinterest-0248efe4fd52",
-    "source": "Pinterest",
-    "publishedAt": "2024-06-17",
-    "tags": ["machine-learning", "container", "kubernetes", "ray"]
-  },
-  {
-    "title": "Redesigning Pinterest’s Ad Serving Systems with Zero Downtime",
-    "url": "https://medium.com/pinterest-engineering/redesigning-pinterests-ad-serving-systems-with-zero-downtime-3253d2432a0c",
-    "source": "Pinterest",
-    "publishedAt": "2024-06-07",
-    "series": "pinterest-ad-serving-redesign",
-    "tags": ["architecture", "microservice"]
-  },
-  {
-    "title": "HBase Deprecation at Pinterest",
-    "url": "https://medium.com/pinterest-engineering/hbase-deprecation-at-pinterest-8a99e6c8e6b7",
-    "source": "Pinterest",
-    "publishedAt": "2024-05-13",
-    "tags": ["database", "migration", "hbase"]
-  },
-  {
     "title": "Building Pinterest’s new wide column database using RocksDB",
     "url": "https://medium.com/pinterest-engineering/building-pinterests-new-wide-column-database-using-rocksdb-f5277ee4e3d2",
     "source": "Pinterest",
     "publishedAt": "2024-01-04",
     "tags": ["database", "rocksdb"]
-  },
-  {
-    "title": "PinCompute: A Kubernetes Backed General Purpose Compute Platform for Pinterest",
-    "url": "https://medium.com/pinterest-engineering/pincompute-a-kubernetes-backed-general-purpose-compute-platform-for-pinterest-8ad408df2d6f",
-    "source": "Pinterest",
-    "publishedAt": "2023-10-31",
-    "tags": ["container", "kubernetes"]
   },
   {
     "title": "Online Data Migration from HBase to TiDB with Zero Downtime",
@@ -130,25 +71,11 @@
     "tags": ["database", "caching", "memcached"]
   },
   {
-    "title": "Large Scale Hadoop Upgrade At Pinterest",
-    "url": "https://medium.com/pinterest-engineering/large-scale-hadoop-upgrade-at-pinterest-a23a112deb73",
-    "source": "Pinterest",
-    "publishedAt": "2022-03-30",
-    "tags": ["data", "hadoop"]
-  },
-  {
     "title": "99% to 99.9% SLO: High Performance Kubernetes Control Plane at Pinterest",
     "url": "https://medium.com/pinterest-engineering/99-to-99-9-slo-high-performance-kubernetes-control-plane-at-pinterest-894bc8a964f9",
     "source": "Pinterest",
     "publishedAt": "2022-03-22",
     "tags": ["container", "kubernetes", "reliability"]
-  },
-  {
-    "title": "Spinner: The Mass Migration to Pinterest’s New Workflow Platform",
-    "url": "https://medium.com/pinterest-engineering/spinner-the-mass-migration-to-pinterests-new-workflow-platform-997d9243f56a",
-    "source": "Pinterest",
-    "publishedAt": "2022-02-22",
-    "tags": ["data", "container", "kubernetes", "airflow"]
   },
   {
     "title": "MemQ: An efficient, scalable cloud native PubSub system",
@@ -163,13 +90,6 @@
     "source": "Pinterest",
     "publishedAt": "2021-08-05",
     "tags": ["search", "indexing"]
-  },
-  {
-    "title": "The machine learning behind delivering relevant ads",
-    "url": "https://medium.com/pinterest-engineering/the-machine-learning-behind-delivering-relevant-ads-8987fc5ba1c0",
-    "source": "Pinterest",
-    "publishedAt": "2021-07-20",
-    "tags": ["machine-learning", "training"]
   },
   {
     "title": "Using Kafka to throttle QPS on MySQL shards in bulk write APIs",

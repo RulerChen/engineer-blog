@@ -42,13 +42,6 @@
     "tags": ["reliability", "architecture", "network", "load-balance"]
   },
   {
-    "title": "Making Cloudflare Pages the fastest way to serve your sites",
-    "url": "https://blog.cloudflare.com/how-we-decreased-pages-latency/",
-    "source": "Cloudflare",
-    "publishedAt": "2023-06-23",
-    "tags": ["architecture", "cloud"]
-  },
-  {
     "title": "Upgrading one of the oldest components in Cloudflare's software stack",
     "url": "https://blog.cloudflare.com/upgrading-one-of-the-oldest-components-in-cloudflare-software-stack/",
     "source": "Cloudflare",
@@ -75,13 +68,6 @@
     "source": "Cloudflare",
     "publishedAt": "2022-09-14",
     "tags": ["network", "proxy", "rust"]
-  },
-  {
-    "title": "Log analytics using ClickHouse",
-    "url": "https://blog.cloudflare.com/log-analytics-using-clickhouse/",
-    "source": "Cloudflare",
-    "publishedAt": "2022-09-02",
-    "tags": ["observability", "logging", "clickhouse"]
   },
   {
     "title": "Missing Manuals - io_uring worker pool",

@@ -7,13 +7,6 @@
     "tags": ["architecture", "job-queue"]
   },
   {
-    "title": "Building a fault-tolerant metrics storage system at Airbnb",
-    "url": "https://medium.com/airbnb-engineering/building-a-fault-tolerant-metrics-storage-system-at-airbnb-26a01a6e7017",
-    "source": "Airbnb",
-    "publishedAt": "2026-04-21",
-    "tags": ["metrics", "observability", "victoriametrics"]
-  },
-  {
     "title": "From Static Rate Limiting to Adaptive Traffic Management in Airbnb’s Key-Value Store",
     "url": "https://medium.com/airbnb-engineering/from-static-rate-limiting-to-adaptive-traffic-management-in-airbnbs-key-value-store-29362764e5c2",
     "source": "Airbnb",
@@ -51,25 +44,11 @@
     "tags": ["machine-learning", "search", "vector"]
   },
   {
-    "title": "Improving Search Ranking for Maps",
-    "url": "https://medium.com/airbnb-engineering/improving-search-ranking-for-maps-13b03f2c2cca",
-    "source": "Airbnb",
-    "publishedAt": "2024-12-18",
-    "tags": ["machine-learning", "ranking", "search"]
-  },
-  {
     "title": "Transforming Location Retrieval at Airbnb: A Journey from Heuristics to Reinforcement Learning",
     "url": "https://medium.com/airbnb-engineering/transforming-location-retrieval-at-airbnb-a-journey-from-heuristics-to-reinforcement-learning-d33ffc4ddb8f",
     "source": "Airbnb",
     "publishedAt": "2024-11-11",
     "tags": ["machine-learning", "ranking", "search"]
-  },
-  {
-    "title": "Apache Flink on Kubernetes",
-    "url": "https://medium.com/airbnb-engineering/apache-flink-on-kubernetes-84425d66ee11",
-    "source": "Airbnb",
-    "publishedAt": "2024-07-31",
-    "tags": ["container", "data", "flink", "kubernetes", "stream-processing"]
   },
   {
     "title": "Riverbed: Optimizing data access at Airbnb’s scale",
@@ -108,35 +87,12 @@
     "tags": ["data", "data-lake", "iceberg", "spark"]
   },
   {
-    "title": "Continuous Delivery at Airbnb",
-    "url": "https://medium.com/airbnb-engineering/continuous-delivery-at-airbnb-6ac042bc7876",
-    "source": "Airbnb",
-    "publishedAt": "2022-04-22",
-    "tags": ["architecture", "ci-cd", "spinnaker"]
-  },
-  {
-    "title": "How Airbnb enables consistent data consumption at scale",
-    "url": "https://medium.com/airbnb-engineering/how-airbnb-enables-consistent-data-consumption-at-scale-1c0b6a8b9206",
-    "source": "Airbnb",
-    "publishedAt": "2021-09-21",
-    "series": "airbnb-minerva",
-    "tags": ["data"]
-  },
-  {
     "title": "How Airbnb standardized metric computation at scale",
     "url": "https://medium.com/airbnb-engineering/airbnb-metric-computation-with-minerva-part-2-9afe6695b486",
     "source": "Airbnb",
     "publishedAt": "2021-06-01",
     "series": "airbnb-minerva",
     "tags": ["data", "etl", "spark"]
-  },
-  {
-    "title": "How Airbnb achieved metric consistency at scale",
-    "url": "https://medium.com/airbnb-engineering/how-airbnb-achieved-metric-consistency-at-scale-f23cc53dea70",
-    "source": "Airbnb",
-    "publishedAt": "2021-04-30",
-    "series": "airbnb-minerva",
-    "tags": ["data", "etl"]
   },
   {
     "title": "Himeji: A Scalable Centralized System for Authorization at Airbnb",
@@ -151,14 +107,6 @@
     "source": "Airbnb",
     "publishedAt": "2020-10-27",
     "tags": ["architecture"]
-  },
-  {
-    "title": "Building Services at Airbnb, Part 4",
-    "url": "https://medium.com/airbnb-engineering/building-services-at-airbnb-part-4-23c95e428064",
-    "source": "Airbnb",
-    "publishedAt": "2020-09-30",
-    "series": "airbnb-building-services",
-    "tags": ["architecture", "testing", "thrift"]
   },
   {
     "title": "Avoiding double payments in a distributed payments system",

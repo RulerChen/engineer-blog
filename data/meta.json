@@ -28,32 +28,11 @@
     "tags": ["machine-learning", "inference", "search", "vector"]
   },
   {
-    "title": "Meta Adaptive Ranking Model: Bending the Inference Scaling Curve to Serve LLM-Scale Models for Ads",
-    "url": "https://engineering.fb.com/2026/03/31/ml-applications/meta-adaptive-ranking-model-bending-the-inference-scaling-curve-to-serve-llm-scale-models-for-ads/",
-    "source": "Meta",
-    "publishedAt": "2026-03-31",
-    "tags": ["machine-learning", "inference"]
-  },
-  {
-    "title": "Building Prometheus: How Backend Aggregation Enables Gigawatt-Scale AI Clusters",
-    "url": "https://engineering.fb.com/2026/02/09/data-center-engineering/building-prometheus-how-backend-aggregation-enables-gigawatt-scale-ai-clusters/",
-    "source": "Meta",
-    "publishedAt": "2026-02-09",
-    "tags": ["network", "hardware"]
-  },
-  {
     "title": "Indexing code at scale with Glean",
     "url": "https://engineering.fb.com/2024/12/19/developer-tools/glean-open-source-code-indexing/",
     "source": "Meta",
     "publishedAt": "2024-12-19",
     "tags": ["search", "indexing", "language", "static-analysis"]
-  },
-  {
-    "title": "Inside Facebook’s video delivery system",
-    "url": "https://engineering.fb.com/2024/12/10/video-engineering/inside-facebooks-video-delivery-system/",
-    "source": "Meta",
-    "publishedAt": "2024-12-10",
-    "tags": ["architecture", "mobile"]
   },
   {
     "title": "Sequence learning: A paradigm shift for personalized ads recommendations",
@@ -75,20 +54,6 @@
     "source": "Meta",
     "publishedAt": "2024-07-10",
     "tags": ["reliability", "overload-control", "machine-learning", "inference"]
-  },
-  {
-    "title": "How Meta trains large language models at scale",
-    "url": "https://engineering.fb.com/2024/06/12/data-infrastructure/training-large-language-models-at-scale-meta/",
-    "source": "Meta",
-    "publishedAt": "2024-06-12",
-    "tags": ["machine-learning", "training", "llm"]
-  },
-  {
-    "title": "How Meta built the infrastructure for Threads",
-    "url": "https://engineering.fb.com/2023/12/19/core-infra/how-meta-built-the-infrastructure-for-threads/",
-    "source": "Meta",
-    "publishedAt": "2023-12-19",
-    "tags": ["database", "zippydb", "architecture", "job-queue"]
   },
   {
     "title": "Scaling the Instagram Explore recommendations system",
@@ -124,13 +89,6 @@
     "source": "Meta",
     "publishedAt": "2022-09-19",
     "tags": ["machine-learning", "training", "data", "etl"]
-  },
-  {
-    "title": "Under the hood: Meta’s cloud gaming infrastructure",
-    "url": "https://engineering.fb.com/2022/06/09/web/cloud-gaming-infrastructure/",
-    "source": "Meta",
-    "publishedAt": "2022-06-09",
-    "tags": ["network", "webrtc", "hardware"]
   },
   {
     "title": "Cache made consistent",
@@ -191,13 +149,6 @@
     "tags": ["architecture", "job-queue", "mysql"]
   },
   {
-    "title": "How we scale Live streaming for millions of viewers simultaneously",
-    "url": "https://engineering.fb.com/2020/10/22/video-engineering/live-streaming/",
-    "source": "Meta",
-    "publishedAt": "2020-10-22",
-    "tags": ["network", "reliability", "overload-control"]
-  },
-  {
     "title": "Scaling services with Shard Manager",
     "url": "https://engineering.fb.com/2020/08/24/production-engineering/scaling-services-with-shard-manager/",
     "source": "Meta",
@@ -231,13 +182,6 @@
     "source": "Meta",
     "publishedAt": "2017-08-31",
     "tags": ["storage", "logdevice", "rocksdb"]
-  },
-  {
-    "title": "Beringei: A high-performance time series storage engine",
-    "url": "https://engineering.fb.com/2017/02/03/core-infra/beringei-a-high-performance-time-series-storage-engine/",
-    "source": "Meta",
-    "publishedAt": "2017-02-03",
-    "tags": ["database", "observability", "metrics", "beringei"]
   },
   {
     "title": "MyRocks: A space- and write-optimized MySQL database",

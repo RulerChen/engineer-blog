@@ -1,12 +1,5 @@
 [
   {
-    "title": "How we selected the next vector database at Booking.com",
-    "url": "https://booking.ai/how-we-selected-the-next-vector-database-at-booking-com-1e738a5e3bb0",
-    "source": "Booking",
-    "publishedAt": "2026-08-11",
-    "tags": ["database", "vector", "opensearch", "weaviate"]
-  },
-  {
     "title": "Anomaly Detection in Time Series Using Statistical Analysis",
     "url": "https://medium.com/booking-com-development/anomaly-detection-in-time-series-using-statistical-analysis-cc587b21d008",
     "source": "Booking",
@@ -26,20 +19,6 @@
     "source": "Booking",
     "publishedAt": "2024-11-11",
     "tags": ["machine-learning", "training"]
-  },
-  {
-    "title": "The Engineering Behind High-Performance Ranking Platform: A System Overview",
-    "url": "https://medium.com/booking-com-development/the-engineering-behind-booking-coms-ranking-platform-a-system-overview-2fb222003ca6",
-    "source": "Booking",
-    "publishedAt": "2024-07-26",
-    "tags": ["search", "ranking", "machine-learning"]
-  },
-  {
-    "title": "Leverage graph technology for real-time Fraud Detection and Prevention",
-    "url": "https://medium.com/booking-com-development/leverage-graph-technology-for-real-time-fraud-detection-and-prevention-438336076ea5",
-    "source": "Booking",
-    "publishedAt": "2024-07-10",
-    "tags": ["database"]
   },
   {
     "title": "Scaling our customer review system for peak traffic",

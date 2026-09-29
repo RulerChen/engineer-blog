@@ -1,23 +1,9 @@
 [
   {
-    "title": "The architecture of Neki",
-    "url": "https://planetscale.com/blog/the-architecture-of-neki",
-    "source": "PlanetScale",
-    "publishedAt": "2026-09-18",
-    "tags": ["database", "postgresql", "sharding"]
-  },
-  {
     "title": "The lifecycle of a sharded Postgres query",
     "url": "https://planetscale.com/blog/the-lifecycle-of-a-sharded-postgres-query",
     "source": "PlanetScale",
     "publishedAt": "2026-09-10",
-    "tags": ["database", "postgresql", "sharding"]
-  },
-  {
-    "title": "The history of Postgres sharding",
-    "url": "https://planetscale.com/blog/the-history-of-postgres-sharding",
-    "source": "PlanetScale",
-    "publishedAt": "2026-08-24",
     "tags": ["database", "postgresql", "sharding"]
   },
   {
@@ -61,14 +47,6 @@
     "source": "PlanetScale",
     "publishedAt": "2023-03-27",
     "tags": ["database", "mysql", "vitess"]
-  },
-  {
-    "title": "Consensus algorithms at scale: Part 8 - Closing thoughts",
-    "url": "https://planetscale.com/blog/consensus-algorithms-at-scale-part-8",
-    "source": "PlanetScale",
-    "publishedAt": "2022-07-07",
-    "series": "planetscale-consensus-algorithms",
-    "tags": ["database", "replication"]
   },
   {
     "title": "Consensus algorithms at scale: Part 7 - Propagating requests",

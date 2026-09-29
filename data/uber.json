@@ -72,33 +72,12 @@
     "tags": ["database", "mysql", "replication"]
   },
   {
-    "title": "Uber's Strategy to Upgrading 2M+ Spark Jobs",
-    "url": "https://www.uber.com/blog/ubers-strategy-to-upgrading-2m-spark-jobs/",
-    "source": "Uber",
-    "publishedAt": "2025-09-25",
-    "tags": ["data", "spark"]
-  },
-  {
     "title": "How Uber Serves over 150 Million Reads per Second from Integrated Cache with Stronger Consistency Guarantees",
     "url": "https://www.uber.com/blog/how-uber-serves-over-150-million-reads/",
     "source": "Uber",
     "publishedAt": "2025-08-26",
     "series": "uber-integrated-cache",
     "tags": ["caching", "database", "mysql", "redis"]
-  },
-  {
-    "title": "Robust Database Backup Recovery at Uber",
-    "url": "https://www.uber.com/blog/robust-database-backup-recovery-at-uber/",
-    "source": "Uber",
-    "publishedAt": "2025-05-22",
-    "tags": ["backup", "database"]
-  },
-  {
-    "title": "Migrating Uber's Compute Platform to Kubernetes: A Technical Journey",
-    "url": "https://www.uber.com/blog/migrating-ubers-compute-platform-to-kubernetes-a-technical-journey/",
-    "source": "Uber",
-    "publishedAt": "2025-04-24",
-    "tags": ["container", "kubernetes"]
   },
   {
     "title": "MySQL At Uber",
@@ -128,13 +107,6 @@
     "source": "Uber",
     "publishedAt": "2024-08-26",
     "tags": ["architecture", "ci-cd", "monorepo"]
-  },
-  {
-    "title": "Upgrading Uber's MySQL Fleet to version 8.0",
-    "url": "https://www.uber.com/blog/upgrading-ubers-mysql-fleet/",
-    "source": "Uber",
-    "publishedAt": "2024-08-08",
-    "tags": ["database", "migration", "mysql"]
   },
   {
     "title": "Introduction to Kafka Tiered Storage at Uber",
@@ -196,33 +168,11 @@
     "tags": ["cassandra", "database"]
   },
   {
-    "title": "Setting Uber's Transactional Data Lake in Motion with Incremental ETL Using Apache Hudi",
-    "url": "https://www.uber.com/blog/ubers-lakehouse-architecture/",
-    "source": "Uber",
-    "publishedAt": "2023-03-16",
-    "series": "uber-hudi",
-    "tags": ["data", "data-lake", "etl", "hudi"]
-  },
-  {
     "title": "LeakProf: Featherlight In-Production Goroutine Leak Detection",
     "url": "https://www.uber.com/blog/leakprof-featherlight-in-production-goroutine-leak-detection/",
     "source": "Uber",
     "publishedAt": "2022-11-10",
     "tags": ["go", "observability", "profiling"]
-  },
-  {
-    "title": "How Uber Optimizes the Timing of Push Notifications using ML and Linear Programming",
-    "url": "https://www.uber.com/blog/how-uber-optimizes-push-notifications-using-ml/",
-    "source": "Uber",
-    "publishedAt": "2022-11-03",
-    "tags": ["machine-learning", "inference"]
-  },
-  {
-    "title": "MySQL to MyRocks Migration in Uber's Distributed Datastores",
-    "url": "https://www.uber.com/blog/mysql-to-myrocks-migration-in-uber-distributed-datastores/",
-    "source": "Uber",
-    "publishedAt": "2022-09-01",
-    "tags": ["database", "migration", "mysql", "rocksdb"]
   },
   {
     "title": "Uber’s Next Gen Push Platform on gRPC",
@@ -292,14 +242,6 @@
     "url": "https://www.uber.com/blog/scaling-api-gateway/",
     "source": "Uber",
     "publishedAt": "2021-06-08",
-    "series": "uber-api-gateway",
-    "tags": ["api-gateway", "architecture"]
-  },
-  {
-    "title": "The Architecture of Uber's API gateway",
-    "url": "https://www.uber.com/blog/architecture-api-gateway/",
-    "source": "Uber",
-    "publishedAt": "2021-05-19",
     "series": "uber-api-gateway",
     "tags": ["api-gateway", "architecture"]
   },

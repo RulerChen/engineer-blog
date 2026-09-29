@@ -14,20 +14,6 @@
     "tags": ["elasticsearch", "indexing", "search", "spark"]
   },
   {
-    "title": "Enabling Multi-Region Data Systems at Notion",
-    "url": "https://www.notion.com/blog/enabling-multi-region-data-systems-at-notion",
-    "source": "Notion",
-    "publishedAt": "2026-04-09",
-    "tags": ["data", "data-lake"]
-  },
-  {
-    "title": "Two years of vector search at Notion: 10x scale, 1/10th cost",
-    "url": "https://www.notion.com/blog/two-years-of-vector-search-at-notion",
-    "source": "Notion",
-    "publishedAt": "2026-02-19",
-    "tags": ["search", "ray"]
-  },
-  {
     "title": "Balancing cost and reliability for Spark on Kubernetes",
     "url": "https://www.notion.com/blog/balancing-cost-and-reliability-for-spark-on-kubernetes",
     "source": "Notion",
