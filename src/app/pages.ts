@@ -1,13 +1,13 @@
 import { ref } from "vue";
+import { PAGE_TITLES, ROADMAP_PATH } from "../shared/site.js";
 
 export type Page = "blog" | "roadmap";
 
 const BASE = import.meta.env.BASE_URL;
 
-/** Both paths are real files because GitHub Pages serves static files only; titles match each index.html. */
 export const PAGES: Record<Page, { path: string; title: string }> = {
-  blog: { path: BASE, title: "Awesome Engineering Blogs" },
-  roadmap: { path: `${BASE}roadmap/`, title: "Awesome Engineering Roadmaps" },
+  blog: { path: BASE, title: PAGE_TITLES.blog },
+  roadmap: { path: `${BASE}${ROADMAP_PATH}`, title: PAGE_TITLES.roadmap },
 };
 
 /** Trailing slash optional, because a typed URL usually lacks it. */
@@ -17,6 +17,8 @@ function pageAt(pathname: string): Page {
 }
 
 export const currentPage = ref<Page>(pageAt(window.location.pathname));
+// The dev server answers every path with index.html, whose title is the blog's.
+document.title = PAGES[currentPage.value].title;
 
 function show(page: Page): void {
   currentPage.value = page;

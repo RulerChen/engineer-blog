@@ -1,5 +1,4 @@
 import type { ServerResponse } from "node:http";
-import { fileURLToPath } from "node:url";
 import vue from "@vitejs/plugin-vue";
 import { type HtmlTagDescriptor, type Plugin, defineConfig } from "vite";
 import { DATA_DIR } from "./scripts/lib/paths.js";
@@ -7,6 +6,8 @@ import { readEntries } from "./scripts/lib/read.js";
 import { siteFiles } from "./scripts/lib/site.js";
 import { entryProblems } from "./scripts/lib/validate.js";
 import { STORAGE_KEYS } from "./src/app/storage.js";
+import { ROADMAP_INDEX_FILE } from "./src/shared/roadmap.js";
+import { PAGE_TITLES, ROADMAP_PATH } from "./src/shared/site.js";
 
 /** The latin halves of the two faces in base.css; every page draws text in both. */
 const FONTS = ["bricolage-grotesque-latin.woff2", "nunito-sans-latin.woff2"];
@@ -19,7 +20,24 @@ const THEME_SCRIPT = `try {
   document.documentElement.dataset.theme = theme;
 } catch {}`;
 
-/** The head both index.html files share, written once here instead of twice there. */
+/** The page's data, fetched alongside the bundle instead of after it; the roadmap file path matches roadmapFile. */
+function dataPreloadScript(base: string): string {
+  return `{
+  const base = ${JSON.stringify(base)};
+  const roadmap = ${JSON.stringify(base + ROADMAP_PATH)};
+  const onRoadmap = location.pathname === roadmap || location.pathname === roadmap.slice(0, -1);
+  const topic = new URLSearchParams(location.search).get("topic");
+  const files = !onRoadmap
+    ? ["articles.json"]
+    : [${JSON.stringify(ROADMAP_INDEX_FILE)}, ...(topic ? [\`roadmaps/\${encodeURIComponent(topic)}.json\`] : [])];
+  for (const file of files) {
+    const link = Object.assign(document.createElement("link"), { rel: "preload", as: "fetch", crossOrigin: "anonymous", href: base + file });
+    document.head.append(link);
+  }
+}`;
+}
+
+/** The head every page gets, written once here instead of in each HTML file. */
 function sharedHead(): Plugin {
   let base = "/";
   return {
@@ -30,6 +48,7 @@ function sharedHead(): Plugin {
     transformIndexHtml(): HtmlTagDescriptor[] {
       return [
         { tag: "script", children: THEME_SCRIPT, injectTo: "head" },
+        { tag: "script", children: dataPreloadScript(base), injectTo: "head" },
         ...FONTS.map(
           (font): HtmlTagDescriptor => ({
             tag: "link",
@@ -44,6 +63,29 @@ function sharedHead(): Plugin {
           }),
         ),
       ];
+    },
+  };
+}
+
+/** Build only: the roadmap page is index.html under its own title; in dev, Vite's SPA fallback serves index.html there. */
+function roadmapPage(): Plugin {
+  return {
+    name: "roadmap-page",
+    apply: "build",
+    generateBundle: {
+      // After vite:build-html, which is what puts index.html in the bundle.
+      order: "post",
+      handler(_options, bundle) {
+        const index = bundle["index.html"];
+        if (index?.type !== "asset") throw new Error("roadmap-page: no index.html in the bundle");
+        const source = String(index.source).replace(
+          `<title>${PAGE_TITLES.blog}</title>`,
+          `<title>${PAGE_TITLES.roadmap}</title>`,
+        );
+        if (!source.includes(PAGE_TITLES.roadmap))
+          throw new Error("roadmap-page: index.html title not found");
+        this.emitFile({ type: "asset", fileName: `${ROADMAP_PATH}index.html`, source });
+      },
     },
   };
 }
@@ -99,14 +141,5 @@ function liveData(): Plugin {
 
 export default defineConfig({
   base: "/engineer-blog/",
-  plugins: [vue(), sharedHead(), liveData()],
-  build: {
-    // Every path the app answers is a real file, because GitHub Pages serves static files only.
-    rollupOptions: {
-      input: {
-        main: fileURLToPath(new URL("./index.html", import.meta.url)),
-        roadmap: fileURLToPath(new URL("./roadmap/index.html", import.meta.url)),
-      },
-    },
-  },
+  plugins: [vue(), sharedHead(), roadmapPage(), liveData()],
 });
