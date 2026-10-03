@@ -3,11 +3,7 @@ name: CI
 on:
   push:
     branches: [main]
-    paths-ignore:
-      - "data/**"
   pull_request:
-    paths-ignore:
-      - "data/**"
 
 jobs:
   checks:
@@ -25,3 +21,5 @@ jobs:
         run: npm run format
       - name: Typecheck
         run: npm run typecheck
+      - name: Build
+        run: npm run build

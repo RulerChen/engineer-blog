@@ -1,35 +1,20 @@
+// Draws the README's logo strip from data/ and public/icons/, so it cannot drift from the list; blogs only.
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
-import { fileURLToPath } from "node:url";
-import { iconKey } from "../src/lib/icon.js";
-import { readIcons } from "./buildEntries.js";
-import { isBlogEntry, readEntries } from "./readEntries.js";
-
-/**
- * The logo strip at the top of the README, built from the same two directories
- * the site is built from — data/ says which companies are on the list, and
- * public/icons/ holds their marks. Hand-drawing it would mean a grid that
- * silently stops matching the list the first time a company is added.
- *
- * Papers are left out. The strip is the set of blogs being read, and an
- * institution that only ever wrote a paper is not one of those.
- */
+import { iconKey } from "../src/shared/icon.js";
+import { isBlogEntry } from "./lib/articles.js";
+import { ICON_DIR, ROOT_DIR } from "./lib/paths.js";
+import { readEntries, readIcons } from "./lib/read.js";
 
 const COLUMNS = 13;
 const CELL = 62;
 const ICON = 34;
 const PAD = 14;
-/* The site's own light palette. The strip carries a background rather than
-   sitting transparent because several marks are near-black — GitHub's is
-   #1b1f23 — and would disappear against a dark README. */
+// The site's light palette, opaque because near-black marks like GitHub's would vanish on a dark README.
 const BG = "#faf4ea";
 const LINE = "#ebdfcc";
 
-/**
- * Every id in an icon lands in the same document once the icons are inlined,
- * and `clip0` is not a name two files can be trusted not to share. Rewritten
- * per cell, along with the references that point at them.
- */
+/** Inlined icons share one document, so ids like `clip0` are prefixed per cell along with their references. */
 function namespaceIds(markup: string, prefix: string): string {
   const ids = [...markup.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
   let out = markup;
@@ -43,14 +28,9 @@ function namespaceIds(markup: string, prefix: string): string {
   return out;
 }
 
-/**
- * One icon placed in its cell. An SVG is inlined as a nested `<svg>`, which
- * keeps it as vector markup — a `data:` URI would be an external reference as
- * far as the sandbox GitHub serves raw files under is concerned. A PNG has no
- * such option and goes in as one.
- */
-async function cell(dir: string, file: string, index: number, x: number, y: number) {
-  const path = join(dir, file);
+/** An SVG is nested inline, since GitHub's sandbox treats a data: URI as external; a PNG has no other option. */
+async function cell(file: string, index: number, x: number, y: number): Promise<string> {
+  const path = join(ICON_DIR, file);
   const box = `x="${x}" y="${y}" width="${ICON}" height="${ICON}"`;
   if (file.endsWith(".png")) {
     const data = (await readFile(path)).toString("base64");
@@ -76,9 +56,7 @@ function guessViewBox(open: string, file: string): string {
 }
 
 async function main(): Promise<void> {
-  const root = fileURLToPath(new URL("../", import.meta.url));
-  const iconDir = join(root, "public/icons");
-  const icons = await readIcons(iconDir);
+  const icons = await readIcons();
 
   const entries = (await readEntries()).filter(isBlogEntry);
   const sources = [...new Set(entries.map((entry) => entry.source ?? ""))]
@@ -98,7 +76,7 @@ async function main(): Promise<void> {
     const row = Math.floor(cells.length / COLUMNS);
     const x = PAD + column * CELL + (CELL - ICON) / 2;
     const y = PAD + row * CELL + (CELL - ICON) / 2;
-    cells.push(await cell(iconDir, icon.light, index, x, y));
+    cells.push(await cell(icon.light, index, x, y));
   }
 
   const rows = Math.ceil(cells.length / COLUMNS);
@@ -111,8 +89,8 @@ async function main(): Promise<void> {
     `</svg>`,
   ].join("\n");
 
-  await mkdir(join(root, "assets"), { recursive: true });
-  await writeFile(join(root, "assets/sources.svg"), `${svg}\n`, "utf8");
+  await mkdir(join(ROOT_DIR, "assets"), { recursive: true });
+  await writeFile(join(ROOT_DIR, "assets/sources.svg"), `${svg}\n`, "utf8");
   console.log(`sources grid: ${cells.length} icons in ${rows} rows`);
   if (missing.length > 0) console.log(`  no icon for: ${missing.join(", ")}`);
 }

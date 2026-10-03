@@ -1,0 +1,100 @@
+/* Tooltips in the page's own palette: `data-tip` holds the text, `data-tip-pos="bottom"` drops it below, `data-tip-align="right"` pins its right edge. */
+[data-tip] {
+  --tip-x: -50%;
+  --tip-arrow-x: -50%;
+  --tip-arrow-rot: 45deg;
+  /* The 3px the bubble travels while fading in, zeroed on hover. */
+  --tip-y: 3px;
+  position: relative;
+}
+[data-tip]::before,
+[data-tip]::after {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 80;
+  transition:
+    opacity 0.14s ease,
+    transform 0.14s ease,
+    visibility 0s linear 0.14s;
+}
+[data-tip]::after {
+  content: attr(data-tip);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 9px);
+  transform: translate(var(--tip-x), var(--tip-y));
+  width: max-content;
+  max-width: 230px;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--card);
+  color: var(--ink);
+  box-shadow: var(--shadow-hover);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: center;
+  white-space: normal;
+  /* One tip carries a bare url, which has nowhere to break. */
+  overflow-wrap: anywhere;
+}
+/* A square corner of the bubble, rotated under it; the bubble paints over all but its two outer borders. */
+[data-tip]::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 4px);
+  width: 9px;
+  height: 9px;
+  background: var(--card);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  border-bottom-right-radius: 3px;
+  transform: translate(var(--tip-arrow-x), var(--tip-y)) rotate(var(--tip-arrow-rot));
+}
+[data-tip]:hover,
+[data-tip]:focus-visible {
+  --tip-y: 0px;
+}
+/* Delayed on the way in only, so tips do not flash at every control the pointer crosses. */
+[data-tip]:hover::before,
+[data-tip]:hover::after,
+[data-tip]:focus-visible::before,
+[data-tip]:focus-visible::after {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.35s;
+}
+[data-tip-pos="bottom"] {
+  --tip-y: -3px;
+  --tip-arrow-rot: 225deg;
+}
+[data-tip-pos="bottom"]::after {
+  top: calc(100% + 9px);
+  bottom: auto;
+}
+[data-tip-pos="bottom"]::before {
+  top: calc(100% + 4px);
+  bottom: auto;
+}
+[data-tip-align="right"] {
+  --tip-x: 0;
+  --tip-arrow-x: 0;
+}
+[data-tip-align="right"]::after {
+  left: auto;
+  right: 0;
+}
+[data-tip-align="right"]::before {
+  left: auto;
+  right: 11px;
+}
+/* Nothing to hover with, and a tap would leave the bubble stuck open. */
+@media (hover: none) {
+  [data-tip]::before,
+  [data-tip]::after {
+    display: none;
+  }
+}

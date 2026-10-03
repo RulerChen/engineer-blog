@@ -1,8 +1,9 @@
 // Prints the numbers docs/tags.md decides vocabulary changes by; it only reports and never fails.
-import type { EntryInput } from "../src/lib/entry.js";
-import { sourceName } from "../src/lib/sources.js";
-import { CROSS_DOMAIN, DOMAINS, TECHNOLOGIES, facetOf } from "../src/lib/tags.js";
-import { isBlogEntry, readEntries } from "./readEntries.js";
+import type { EntryInput } from "../src/shared/entry.js";
+import { sourceName } from "../src/shared/sources.js";
+import { CROSS_DOMAIN, DOMAINS, TECHNOLOGIES, facetOf } from "../src/shared/tags.js";
+import { isBlogEntry } from "./lib/articles.js";
+import { readEntries } from "./lib/read.js";
 
 const entries = (await readEntries()).filter(isBlogEntry);
 const tagsOf = (entry: EntryInput): string[] => entry.tags ?? [];

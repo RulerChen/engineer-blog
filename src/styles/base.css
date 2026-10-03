@@ -1,0 +1,209 @@
+/* Self-hosted copies of the Google Fonts latin and latin-ext subsets; the data uses nothing outside them. */
+@font-face {
+  font-family: "Bricolage Grotesque";
+  font-weight: 400 800;
+  font-display: swap;
+  src: url(/fonts/bricolage-grotesque-latin-ext.woff2) format("woff2");
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329,
+    U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F,
+    U+A720-A7FF;
+}
+@font-face {
+  font-family: "Bricolage Grotesque";
+  font-weight: 400 800;
+  font-display: swap;
+  src: url(/fonts/bricolage-grotesque-latin.woff2) format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Nunito Sans";
+  font-weight: 400 800;
+  font-display: swap;
+  src: url(/fonts/nunito-sans-latin-ext.woff2) format("woff2");
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329,
+    U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F,
+    U+A720-A7FF;
+}
+@font-face {
+  font-family: "Nunito Sans";
+  font-weight: 400 800;
+  font-display: swap;
+  src: url(/fonts/nunito-sans-latin.woff2) format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  --accent: #c4633a;
+  --bg: #faf4ea;
+  --card: #fffdf8;
+  --ink: #33251a;
+  --muted: #8f7a64;
+  --line: #ebdfcc;
+  --chip: #f4ebdc;
+  --chip-ink: #6b5843;
+  --shadow: 0 1px 2px rgba(80, 55, 30, 0.06), 0 6px 20px -8px rgba(80, 55, 30, 0.12);
+  --shadow-hover: 0 2px 4px rgba(80, 55, 30, 0.08), 0 14px 34px -10px rgba(80, 55, 30, 0.2);
+  /* Evolution map categories, checked for color-blind separation on --card in both themes. */
+  --lane-1: #2a78d6;
+  --lane-2: #008300;
+  --lane-3: #e87ba4;
+  --lane-4: #eda100;
+  font-family:
+    "Nunito Sans",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+  color: var(--ink);
+}
+
+[data-theme="dark"] {
+  --bg: #1e1813;
+  --card: #28211a;
+  --ink: #f4eadc;
+  --muted: #a8937c;
+  --line: #3b3227;
+  --chip: #342b21;
+  --chip-ink: #cbb69e;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 6px 20px -8px rgba(0, 0, 0, 0.4);
+  --shadow-hover: 0 2px 4px rgba(0, 0, 0, 0.3), 0 14px 34px -10px rgba(0, 0, 0, 0.55);
+  --lane-1: #3987e5;
+  --lane-3: #d55181;
+  --lane-4: #c98500;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+/* Keep the scrollbar's space reserved, so pages of different length do not shift sideways. */
+html {
+  scrollbar-gutter: stable;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+}
+a {
+  color: var(--ink);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--accent);
+}
+button {
+  font: inherit;
+}
+input::placeholder {
+  color: var(--muted);
+  opacity: 0.8;
+}
+
+.heading-font {
+  font-family: "Bricolage Grotesque", "Nunito Sans", sans-serif;
+}
+
+/* A monochrome logo ships as a light/dark pair, stacked and cross-faded with the theme on the colours' own curve. */
+.source-icon img {
+  grid-area: 1 / 1;
+  transition: opacity 0.25s ease;
+}
+.source-icon img.dark-only,
+[data-theme="dark"] .source-icon img.light-only {
+  opacity: 0;
+}
+[data-theme="dark"] .source-icon img.dark-only {
+  opacity: 1;
+}
+
+/* Layout */
+.container {
+  min-height: 100vh;
+}
+.layout {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 26px 24px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Switching pages: out then in, so the incoming page is never drawn over the outgoing one. */
+.page-enter-active {
+  transition:
+    opacity 0.16s ease,
+    transform 0.16s ease;
+}
+.page-leave-active {
+  transition: opacity 0.1s ease;
+}
+.page-enter-from {
+  opacity: 0;
+  transform: translateY(4px);
+}
+.page-leave-to {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-enter-active,
+  .page-leave-active {
+    transition: none;
+  }
+  .page-enter-from {
+    transform: none;
+  }
+}
+
+/* Empty / loading / error states */
+.empty,
+.loading,
+.error {
+  text-align: center;
+  padding: 56px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+.empty .empty-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--ink);
+}
+.empty .empty-clear {
+  margin-top: 6px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: none;
+  background: var(--accent);
+  color: #fff8f0;
+  font-weight: 800;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: inherit;
+}
+.empty .empty-clear:hover {
+  filter: brightness(1.08);
+}

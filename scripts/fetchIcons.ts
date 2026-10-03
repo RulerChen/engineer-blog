@@ -1,10 +1,10 @@
+// Fetches a mark for every blog source that has no file in public/icons/ yet; a hand-placed file always wins.
 import { mkdir, readdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
-import { fileURLToPath } from "node:url";
-import { iconHost, iconKey, parseIconFile } from "../src/lib/icon.js";
-import { isBlogEntry, readEntries } from "./readEntries.js";
-
-const ICON_DIR = fileURLToPath(new URL("../public/icons/", import.meta.url));
+import { iconKey, parseIconFile } from "../src/shared/icon.js";
+import { isBlogEntry } from "./lib/articles.js";
+import { ICON_DIR } from "./lib/paths.js";
+import { readEntries } from "./lib/read.js";
 
 /** Sites serve favicons to browsers; a bare fetch gets a 403 from more than a few. */
 const UA =
@@ -28,13 +28,16 @@ function get(url: string): Promise<Response> {
   });
 }
 
-/**
- * How good a declared icon looks before we spend a request on it. Bigger is
- * better and vector is effectively unbounded; `.ico` loses to anything else,
- * being either the 16px legacy file or a multi-resolution bundle far heavier
- * than a 42px avatar has any use for. Only the extension is trusted for that —
- * sites routinely declare `type="image/x-icon"` on a PNG.
- */
+/** The entry's hostname without `www.`, which is where a source with no brand-set mark is looked up. */
+function iconHost(url: string): string | null {
+  try {
+    return new URL(url).hostname.toLowerCase().replace(/^www\./, "") || null;
+  } catch {
+    return null;
+  }
+}
+
+/** Ranks a declared icon before spending a request on it; only the extension is trusted, since sites mislabel types. */
 function score(rel: string, href: string, sizes: string, type: string): number {
   if (/\.svg($|\?)/i.test(href) || type === "image/svg+xml") return 1000;
   const declared = /(\d+)x\d+/i.exec(sizes);
@@ -76,17 +79,13 @@ interface Icon {
   width: number | null;
 }
 
-/** Width off a PNG's IHDR header — the one format worth decoding here, and the common one. */
+/** Width off a PNG's IHDR header, the one format worth decoding here. */
 function pngWidth(bytes: Uint8Array): number | null {
   if (bytes.byteLength < 24 || bytes[0] !== 0x89 || bytes[1] !== 0x50) return null;
   return new DataView(bytes.buffer, bytes.byteOffset).getUint32(16);
 }
 
-/**
- * How much an icon is worth as a 42px avatar. Vector wins outright, a known
- * width speaks for itself, `.ico` is assumed to be the 16px legacy file, and an
- * undecoded raster gets the benefit of the doubt without beating a measured one.
- */
+/** Worth as a 42px avatar: vector wins, `.ico` is assumed 16px, an undecoded raster gets the benefit of the doubt. */
 function quality(icon: Icon): number {
   if (icon.ext === ".svg") return 1024;
   return icon.width ?? (icon.ext === ".ico" ? 16 : 48);
@@ -119,7 +118,7 @@ interface Brand {
   dark?: Icon;
 }
 
-/** Width over height of the viewBox — the only shape an SVG commits to. */
+/** Width over height of the viewBox, the only shape an SVG commits to. */
 function aspect(svg: string): number | null {
   const box = /viewBox\s*=\s*"([^"]+)"/i
     .exec(svg)?.[1]
@@ -130,13 +129,7 @@ function aspect(svg: string): number | null {
   return box[2] / box[3];
 }
 
-/**
- * Whether the mark carries a colour that reads on both a near-white and a
- * near-black card. A logo drawn only in white (svgl ships Notion that way) or
- * only in black is a one-theme file wearing a neutral name; taking it would
- * make it vanish on the other theme, where the site's own favicon — which
- * comes with its own plate — still shows.
- */
+/** A mark drawn only in white or only in black is a one-theme file and would vanish on the other theme. */
 function readsOnEitherTheme(svg: string): boolean {
   for (const [, hex] of svg.matchAll(/#([0-9a-f]{3}|[0-9a-f]{6})\b/gi)) {
     const full = hex.length === 3 ? [...hex].map((c) => c + c).join("") : hex;
@@ -147,36 +140,23 @@ function readsOnEitherTheme(svg: string): boolean {
   return false;
 }
 
-/**
- * Whether the mark is close enough to square to survive a 34px box. Wordmarks
- * are the thing this turns away: Uber's is 2.9 times as wide as it is tall and
- * would land on the card as a smear.
- */
+/** Turns away wordmarks, which land in a 34px box as a smear. */
 function fitsTheBox(svg: string): boolean {
   const ratio = aspect(svg);
   return ratio === null || (ratio >= 0.55 && ratio <= 1.8);
 }
 
-/**
- * Whether a vector file can go on the card as it is: the right shape, and ink
- * that reads against either theme's card.
- */
 function usableMark(icon: Icon): boolean {
   if (icon.ext !== ".svg") return false;
   const svg = new TextDecoder().decode(icon.bytes);
   return fitsTheBox(svg) && readsOnEitherTheme(svg);
 }
 
-/**
- * Iconify's `logos` set — around 1800 hand-drawn brand marks, and the first
- * place to ask because its names carry the distinction we need: `x-icon` is the
- * square mark, plain `x` is usually the wordmark. Names are looked up directly
- * rather than searched, so a company it has never heard of is a 404 rather than
- * a confident wrong answer.
- */
+/** Iconify's `logos` set, looked up by name so an unknown company is a 404, not a confident wrong answer. */
 async function iconifyIcon(source: string): Promise<Brand | null> {
   const slug = iconKey(source);
   if (!slug) return null;
+  // `x-icon` is the square mark; plain `x` is usually the wordmark.
   for (const name of [`${slug}-icon`, slug]) {
     const light = await download(`${ICONIFY}/${name}.svg`).catch(() => null);
     if (light && usableMark(light)) return { light };
@@ -184,14 +164,7 @@ async function iconifyIcon(source: string): Promise<Brand | null> {
   return null;
 }
 
-/**
- * svgl, asked second because it is the only one of the two that ships a
- * monochrome mark as a light/dark pair — which is the whole of what GitHub,
- * OpenAI and Cursor have to offer.
- *
- * Matched on the source name exactly: svgl's search is a substring match that
- * answers "Uber" with Kubernetes first.
- */
+/** svgl, the only source that ships a monochrome mark as a light/dark pair; matched exactly, since its search is a substring match. */
 async function svglIcon(source: string): Promise<Brand | null> {
   const res = await get(`${SVGL}?search=${encodeURIComponent(source)}`).catch(() => null);
   if (!res?.ok) return null;
@@ -216,15 +189,7 @@ async function svglIcon(source: string): Promise<Brand | null> {
   return readsOnEitherTheme(svg) ? { light } : null;
 }
 
-/**
- * The best icon a domain will give us: what its home page declares, then the
- * two conventional paths, then Google's favicon service as a last resort. The
- * service is only ever called here at build time, so no visitor is exposed to it.
- *
- * Candidates are tried in order but not taken on sight: plenty of sites declare
- * only a 32px favicon, which is half of what a 26px avatar needs on a retina
- * screen, so a small one is held as a fallback while the rest are tried.
- */
+/** The site's declared icons, the two conventional paths, then Google's service; a small one is held while the rest are tried. */
 async function fetchIcon(domain: string): Promise<Icon | null> {
   const origin = `https://${domain}/`;
   const page = await get(origin).catch(() => null);
@@ -245,13 +210,7 @@ async function fetchIcon(domain: string): Promise<Icon | null> {
   return best;
 }
 
-/**
- * Whether that host is the source's own site. A paper's host is whoever
- * published it — arxiv.org, usenix.org, a university course page — and its
- * favicon is that publisher's mark, not the source's. Without this the entry
- * for a Stanford paper hosted on usenix.org gets USENIX's logo, which is worse
- * than the lettered avatar because it looks deliberate.
- */
+/** Whether the host is the source's own site, not a publisher like usenix.org whose logo would look deliberate. */
 function ownSite(host: string, key: string): boolean {
   return host.split(".").some((label) => iconKey(label) === key);
 }
@@ -263,13 +222,8 @@ async function cached(): Promise<Set<string>> {
 }
 
 async function main(): Promise<void> {
-  // Blogs only — nobody scrapes a favicon for MIT or Karlstad University.
   const inputs = (await readEntries()).filter(isBlogEntry);
-  // One company, one icon — plus the host it was first seen writing on, which is
-  // where we look when svgl has never heard of it. A company that publishes on a
-  // platform (Airbnb on medium.com) gets the platform's logo out of that, which
-  // is wrong but visible: drop the right file in public/icons/ under the source
-  // key and it is never fetched again.
+  // One company, one icon, looked up on the first host it was seen on; a platform host gives a wrong but visible logo.
   const sources = new Map<string, { name: string; host: string }>();
   for (const input of inputs) {
     const key = iconKey(input.source);
@@ -289,16 +243,7 @@ async function main(): Promise<void> {
 
   let written = 0;
   for (const [key, { name, host }] of missing) {
-    // The site's own SVG wins outright: it is the brand's own answer to exactly
-    // this question, plate and all. A brand set holds the bare mark, which for
-    // some companies means nothing without the plate around it — Stripe's is a
-    // solid parallelogram that reads as a purple smudge on its own, which is why
-    // its file here is hand-placed: stripe.dev stopped serving the vector.
-    //
-    // A raster favicon gets no such deference. It is whatever size the site
-    // chose, and four of ours came back at 32px, so the brand sets go first:
-    // Iconify, which names the square mark outright, then svgl, which is the
-    // one that ships a monochrome mark as a light/dark pair.
+    // The site's own usable SVG wins outright; otherwise the brand sets beat a raster favicon of whatever size.
     const own = ownSite(host, key) ? await fetchIcon(host).catch(() => null) : null;
     let brand: Brand | null = null;
     let from = host;
@@ -316,13 +261,12 @@ async function main(): Promise<void> {
     }
     const icon = brand?.light ?? own;
     if (!icon) {
-      // Not fatal: the card falls back to the lettered avatar, and a hand-placed
-      // file in public/icons/ overrides this script for good on the next run.
+      // Not fatal: the card letters the avatar instead.
       console.warn(`icons: no icon found for ${key} (${host})`);
       continue;
     }
     await writeFile(join(ICON_DIR, `${key}${icon.ext}`), icon.bytes);
-    // A monochrome mark needs its second copy; `.dark` is the suffix readIcons pairs on.
+    // `.dark` is the suffix readIcons pairs on.
     if (brand?.dark)
       await writeFile(join(ICON_DIR, `${key}.dark${brand.dark.ext}`), brand.dark.bytes);
     console.log(`icons: ${key} <- ${from}`);
@@ -333,5 +277,5 @@ async function main(): Promise<void> {
 
 main().catch((error: unknown) => {
   // An offline or flaky run must not stop a build; the cards fall back on their own.
-  console.warn("icons: skipped —", error instanceof Error ? error.message : error);
+  console.warn("icons: skipped:", error instanceof Error ? error.message : error);
 });

@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import BlogApp from "./BlogApp.vue";
-import RoadmapApp from "./RoadmapApp.vue";
-import { corpus } from "./lib/corpus.js";
+import { currentPage } from "./app/pages.js";
+import BlogPage from "./blog/BlogPage.vue";
+import RoadmapPage from "./roadmap/RoadmapPage.vue";
 </script>
 
 <template>
   <!-- Out then in, so the incoming page is never drawn over the outgoing one. -->
-  <Transition name="corpus" mode="out-in">
-    <RoadmapApp v-if="corpus === 'roadmaps'" />
-    <BlogApp v-else />
+  <Transition name="page" mode="out-in">
+    <RoadmapPage v-if="currentPage === 'roadmap'" />
+    <BlogPage v-else />
   </Transition>
 </template>

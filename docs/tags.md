@@ -1,6 +1,6 @@
 # Tag vocabulary
 
-Every blog entry carries one `domain` and up to five `tags`. The vocabulary itself is [src/lib/tags.ts](../src/lib/tags.ts), and the build rejects any id outside it. This file says how to choose. Papers are filed by `topic` instead; see AGENTS.md.
+Every blog entry carries one `domain` and up to five `tags`. The vocabulary itself is [src/shared/tags.ts](../src/shared/tags.ts), and the build rejects any id outside it. This file says how to choose. Papers are filed by `topic` instead; see AGENTS.md.
 
 ```json
 {
