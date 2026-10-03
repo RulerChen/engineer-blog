@@ -1,19 +1,16 @@
 import { parseQuery, scoreArticle } from "./search.js";
+import { filterGroup } from "./tags.js";
 import type { Article } from "../types.js";
 
 export type DatePreset = "all" | "week" | "month" | "year" | "custom";
 
-/**
- * How several selected tags combine. "any" is the default and widens as you
- * click; "all" narrows, which is the only way to ask a two-axis question like
- * mysql + sharding — the tag that says what it is built with, and the tag that
- * says what the post is about.
- */
+/** Any widens inside a group of the topic menu and narrows across groups, so mysql + sharding is both; all narrows on every pick. */
 export type TagMode = "any" | "all";
 
 export interface FilterState {
   query: string;
   companies: string[];
+  /** Domains, concepts and technologies alike; an entry matches one only when its card shows it. */
   tags: string[];
   tagMode: TagMode;
   /** Series slug to narrow to, or null for every entry. Set by clicking a card's series row. */
@@ -64,14 +61,17 @@ function dateRange(state: FilterState, now: Date): { from: number; to: number } 
 export function applyFilters(articles: Article[], state: FilterState, now = new Date()): Article[] {
   const { from, to } = dateRange(state, now);
   const companies = new Set(state.companies);
-  const tags = new Set(state.tags);
+  const groups = [...groupBy(state.tags, filterGroup).values()];
   const query = parseQuery(state.query);
   const scores = query ? new Map<string, number>() : null;
   const kept = articles.filter((article) => {
     if (companies.size > 0 && !companies.has(article.source)) return false;
-    if (tags.size > 0) {
-      const matched = article.tags.filter((tag) => tags.has(tag)).length;
-      if (state.tagMode === "all" ? matched < tags.size : matched === 0) return false;
+    if (groups.length > 0) {
+      const carries = (tag: string): boolean =>
+        article.domain === tag || article.tags.includes(tag);
+      const fits = (group: string[]): boolean =>
+        state.tagMode === "all" ? group.every(carries) : group.some(carries);
+      if (!groups.every(fits)) return false;
     }
     if (state.series && article.series !== state.series) return false;
     const published = Date.parse(article.publishedAt);
@@ -93,6 +93,12 @@ function countBy(keys: string[]): Map<string, number> {
   return counts;
 }
 
+function groupBy(items: string[], key: (item: string) => string): Map<string, string[]> {
+  const groups = new Map<string, string[]>();
+  for (const item of items) groups.set(key(item), [...(groups.get(key(item)) ?? []), item]);
+  return groups;
+}
+
 export function companyCounts(articles: Article[]): { id: string; count: number }[] {
   return [...countBy(articles.map((a) => a.source).filter(Boolean))]
     .map(([id, count]) => ({ id, count }))
@@ -105,7 +111,7 @@ export function companyCounts(articles: Article[]): { id: string; count: number 
  * unreachable by any tag the panel would show.
  */
 export function tagCounts(articles: Article[]): { tag: string; count: number }[] {
-  return [...countBy(articles.flatMap((a) => a.tags))]
+  return [...countBy(articles.flatMap((a) => [a.domain, ...a.tags]))]
     .map(([tag, count]) => ({ tag, count }))
     .toSorted((a, b) => b.count - a.count || a.tag.localeCompare(b.tag));
 }

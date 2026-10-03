@@ -16,14 +16,17 @@ export interface EntryInput {
   /**
    * One or two sentences on what the entry actually works on — the judgement
    * already made when it was picked, written down. Optional and backfilled by
-   * hand: an entry without one is a normal entry, not an unfinished one. Keep it
-   * under roughly 200 characters; the card clamps at three lines.
+   * hand: an entry without one is a normal entry, not an unfinished one. At most
+   * SUMMARY_MAX characters (scripts/buildEntries.ts); the card clamps at three lines.
    */
   summary?: string;
   /** Slug grouping this entry with its other parts. Same slug = same series. */
   series?: string;
   /** Paper topic id, from src/lib/paperTopics.ts. Papers carry one; blog entries carry none. */
   topic?: string;
+  /** The domain from src/lib/tags.ts the entry is mainly about; blog entries carry exactly one, papers none. */
+  domain?: string;
+  /** Concepts, cross-domain concepts, technologies and at most one second domain, all from src/lib/tags.ts. */
   tags?: string[];
   /** Other people's write-ups about this entry — `{ source, url, type? }` each. */
   commentary?: Commentary[];

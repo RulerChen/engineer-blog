@@ -14,7 +14,8 @@
     "format": "oxfmt --check .",
     "format:fix": "oxfmt .",
     "fetch-icons": "tsx scripts/fetchIcons.ts",
-    "build-grid": "tsx scripts/buildSourceGrid.ts"
+    "build-grid": "tsx scripts/buildSourceGrid.ts",
+    "tag-stats": "tsx scripts/tagStats.ts"
   },
   "dependencies": {
     "vue": "^3.5.39"

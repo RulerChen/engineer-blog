@@ -12,6 +12,7 @@ import type {
   RoadmapItem,
   RoadmapItemInput,
 } from "../src/lib/roadmap.js";
+import { ALIASES, facetOf, sortTags } from "../src/lib/tags.js";
 import { topicLabel } from "../src/lib/topicMap.js";
 import { normalizeUrl } from "../src/lib/url.js";
 import type { Article } from "../src/types.js";
@@ -49,7 +50,46 @@ export async function readIcons(dir: string): Promise<Map<string, IconFiles>> {
   return new Map([...icons].filter(([, entry]) => entry.light));
 }
 
+/** Everything in one entry that breaks the vocabulary in src/lib/tags.ts, each message naming the entry. */
+export function tagProblems(input: EntryInput): string[] {
+  const tags = input.tags ?? [];
+  const problems: string[] = [];
+  const say = (message: string): void => {
+    problems.push(`${input.url}: ${message}`);
+  };
+  if (normalizeEntryType(input.type) === "paper") {
+    if (input.domain || tags.length) say("a paper carries a topic, not a domain or tags");
+    return problems;
+  }
+  const domain = input.domain;
+  if (!domain) say('no domain; "other" when nothing fits');
+  else if (ALIASES.has(domain)) say(`domain "${domain}" was renamed to "${ALIASES.get(domain)}"`);
+  else if (facetOf(domain) !== "domain") say(`"${domain}" is not a domain`);
+  for (const id of tags) {
+    if (ALIASES.has(id)) say(`"${id}" was renamed to "${ALIASES.get(id)}"`);
+    else if (!facetOf(id)) say(`unknown tag "${id}"; a new technology goes in TECHNOLOGIES`);
+  }
+  if (tags.length > 5) say(`${tags.length} tags, at most 5`);
+  if (new Set(tags).size < tags.length) say("a tag is listed twice");
+  const second = tags.filter((id) => facetOf(id) === "domain");
+  if (second.length > 1) say(`second domains ${second.join(", ")}; at most one`);
+  if (domain && second.includes(domain)) say(`"${domain}" is already the domain`);
+  return problems;
+}
+
+/** About what a phone fits in the card's three clamped lines. */
+const SUMMARY_MAX = 120;
+
+/** A summary past SUMMARY_MAX, papers included, with the message naming the entry. */
+function summaryProblems(input: EntryInput): string[] {
+  const length = input.summary?.trim().length ?? 0;
+  if (length <= SUMMARY_MAX) return [];
+  return [`${input.url}: summary is ${length} characters, at most ${SUMMARY_MAX}`];
+}
+
 function toArticle(input: EntryInput, icons?: Map<string, IconFiles>): Article {
+  const domain = input.domain ?? "";
+  const tags = input.tags ?? [];
   const article: Article = {
     id: articleId(input.url),
     title: input.title,
@@ -58,7 +98,8 @@ function toArticle(input: EntryInput, icons?: Map<string, IconFiles>): Article {
     type: normalizeEntryType(input.type),
     source: input.source ?? "",
     publishedAt: toIso(input.publishedAt),
-    tags: input.tags ?? [],
+    domain,
+    tags: sortTags(domain, tags),
   };
   // All three left off entirely when absent — most entries are standalone, have
   // no write-ups and are not summarized yet, and articles.json is shipped to
@@ -221,6 +262,10 @@ export function buildRoadmaps(
 async function main(): Promise<void> {
   const outDir = fileURLToPath(new URL("../public/", import.meta.url));
   const inputs = await readEntries();
+  // All at once rather than the first: a vocabulary change usually breaks many entries together.
+  const problems = [...inputs.flatMap(tagProblems), ...inputs.flatMap(summaryProblems)];
+  if (problems.length)
+    throw new Error(`${problems.length} entry problems:\n${problems.join("\n")}`);
   const icons = await readIcons(join(outDir, "icons"));
   const all = buildArticles(inputs, icons);
   const articles = blogEntries(all);

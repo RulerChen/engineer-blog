@@ -4,105 +4,135 @@
     "url": "https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/",
     "source": "Meta",
     "publishedAt": "2026-09-03",
-    "tags": ["network", "proxy", "database", "zippydb"]
+    "domain": "network",
+    "tags": ["database", "proxy"],
+    "summary": "Replaces ZippyDB's connection mesh, where fan-in grew with clients and reconnect storms crashed hosts, with ZGateway."
   },
   {
     "title": "GEM Training: How Meta Doubled the Efficiency of Its LLM-Scale Ads Foundation Model",
     "url": "https://engineering.fb.com/2026/08/03/ml-applications/training-gem-at-llm-scale-meta-ads-recommendation-foundation-model/",
     "source": "Meta",
     "publishedAt": "2026-08-03",
-    "tags": ["machine-learning", "training", "llm"]
+    "domain": "machine-learning",
+    "tags": ["training", "recommendation", "llm"],
+    "summary": "Cuts padding waste and exposed communication in GEM training with jagged attention and topology-aware parallelism."
   },
   {
     "title": "Meta's AI Storage Blueprint at Scale",
     "url": "https://engineering.fb.com/2026/07/01/data-infrastructure/metas-ai-storage-blueprint-at-scale/",
     "source": "Meta",
     "publishedAt": "2026-07-01",
-    "tags": ["storage", "tiering", "machine-learning"]
+    "domain": "database",
+    "tags": ["tiering", "training"],
+    "summary": "Ends GPU stalls from stacked BLOB metadata lookups with one flat ZippyDB schema and direct reads from Tectonic."
   },
   {
     "title": "SilverTorch: Index as Model — A New Retrieval Paradigm for Recommendation Systems",
     "url": "https://engineering.fb.com/2026/05/26/ml-applications/silvertorch-index-as-model-new-retrieval-paradigm-recommendation-systems/",
     "source": "Meta",
     "publishedAt": "2026-05-26",
-    "tags": ["machine-learning", "inference", "search", "vector"]
+    "domain": "machine-learning",
+    "tags": ["inference", "recommendation", "vector"],
+    "summary": "Folds the retrieval service mesh, whose hops capped model complexity and candidate count, into one PyTorch model."
   },
   {
     "title": "Indexing code at scale with Glean",
     "url": "https://engineering.fb.com/2024/12/19/developer-tools/glean-open-source-code-indexing/",
     "source": "Meta",
     "publishedAt": "2024-12-19",
-    "tags": ["search", "indexing", "language", "static-analysis"]
+    "domain": "search",
+    "tags": ["indexing", "static-analysis"],
+    "summary": "Avoids a lowest-common-denominator schema in Glean by storing per-language facts and deriving language-neutral views."
   },
   {
     "title": "Sequence learning: A paradigm shift for personalized ads recommendations",
     "url": "https://engineering.fb.com/2024/11/19/data-infrastructure/sequence-learning-personalized-ads-recommendations/",
     "source": "Meta",
     "publishedAt": "2024-11-19",
-    "tags": ["machine-learning", "training"]
+    "domain": "machine-learning",
+    "tags": ["training", "recommendation"],
+    "summary": "Replaces aggregated features, which lose event order and detail, with event embeddings pooled by attention per ad."
   },
   {
     "title": "RoCE networks for distributed AI training at scale",
     "url": "https://engineering.fb.com/2024/08/05/data-center-engineering/roce-network-distributed-ai-training-at-scale/",
     "source": "Meta",
     "publishedAt": "2024-08-05",
-    "tags": ["network", "machine-learning", "training"]
+    "domain": "network",
+    "tags": ["rdma", "training"],
+    "summary": "Fixes poor ECMP spread of training's low-entropy elephant flows by adding queue pairs and hashing on the QP field."
   },
   {
     "title": "Taming the tail utilization of ads inference at Meta scale",
     "url": "https://engineering.fb.com/2024/07/10/production-engineering/tail-utilization-ads-inference-meta/",
     "source": "Meta",
     "publishedAt": "2024-07-10",
-    "tags": ["reliability", "overload-control", "machine-learning", "inference"]
+    "domain": "reliability",
+    "tags": ["overload-control", "inference"],
+    "summary": "Cuts timeouts on overloaded ads inference hosts by trading stale, host-wide load data for polled, per-model counters."
   },
   {
     "title": "Scaling the Instagram Explore recommendations system",
     "url": "https://engineering.fb.com/2023/08/09/ml-applications/scaling-instagram-explore-recommendations-system/",
     "source": "Meta",
     "publishedAt": "2023-08-09",
-    "tags": ["machine-learning", "architecture"]
+    "domain": "machine-learning",
+    "tags": ["recommendation"],
+    "summary": "Avoids running heavy models on every Explore candidate by caching user and item tower embeddings for early stages."
   },
   {
     "title": "Building and deploying MySQL Raft at Meta",
     "url": "https://engineering.fb.com/2023/05/16/data-infrastructure/mysql-raft-meta/",
     "source": "Meta",
     "publishedAt": "2023-05-16",
-    "tags": ["database", "replication", "mysql"]
+    "domain": "database",
+    "tags": ["replication", "consensus", "mysql"],
+    "summary": "Replaces failover scripts, whose locking and fencing were hard to make atomic, with Raft over the MySQL binlog."
   },
   {
     "title": "Asynchronous computing at Meta: Overview and learnings",
     "url": "https://engineering.fb.com/2023/01/31/production-engineering/meta-asynchronous-computing/",
     "source": "Meta",
     "publishedAt": "2023-01-31",
-    "tags": ["architecture", "job-queue"]
+    "domain": "distributed-systems",
+    "tags": ["job-queue"],
+    "summary": "Stops copying stream and warehouse data into FOQS by having per-source tailers push to a source-agnostic scheduler."
   },
   {
     "title": "How Precision Time Protocol is being deployed at Meta",
     "url": "https://engineering.fb.com/2022/11/21/production-engineering/precision-time-protocol-at-meta/",
     "source": "Meta",
     "publishedAt": "2022-11-21",
-    "tags": ["network", "hardware"]
+    "domain": "network",
+    "tags": ["ptp", "hardware"],
+    "summary": "Replaces NTP, too imprecise to swap quorum reads for timestamp waits, with PTP and fbclock's window of uncertainty."
   },
   {
     "title": "Scaling data ingestion for machine learning training at Meta",
     "url": "https://engineering.fb.com/2022/09/19/ml-applications/data-ingestion-machine-learning-training-meta/",
     "source": "Meta",
     "publishedAt": "2022-09-19",
-    "tags": ["machine-learning", "training", "data", "etl"]
+    "domain": "machine-learning",
+    "tags": ["training", "ingestion"],
+    "summary": "Stops DPP readers decoding whole feature maps by giving each feature its own stream, leaving more power for GPUs."
   },
   {
     "title": "Cache made consistent",
     "url": "https://engineering.fb.com/2022/06/08/core-infra/cache-made-consistent/",
     "source": "Meta",
     "publishedAt": "2022-06-08",
-    "tags": ["database", "caching", "tao", "memcached"]
+    "domain": "database",
+    "tags": ["caching", "consistency", "memcached"],
+    "summary": "Catches stale TAO entries from fills racing invalidations with Polaris, tracing only the race window to debug them."
   },
   {
     "title": "Delta: A highly available, strongly consistent storage service using chain replication",
     "url": "https://engineering.fb.com/2022/05/04/data-infrastructure/delta/",
     "source": "Meta",
     "publishedAt": "2022-05-04",
-    "tags": ["database", "replication", "storage"]
+    "domain": "database",
+    "tags": ["replication", "consistency"],
+    "summary": "Ends the tail read hotspot in Delta, a chain-replicated bootstrap store, by letting any node serve clean versions."
   },
   {
     "title": "FOQS: Making a distributed priority queue disaster-ready",
@@ -110,35 +140,44 @@
     "source": "Meta",
     "publishedAt": "2022-01-18",
     "series": "meta-foqs",
-    "tags": ["architecture", "job-queue", "reliability", "disaster-recovery"]
+    "domain": "distributed-systems",
+    "tags": ["job-queue", "disaster-recovery"],
+    "summary": "Stops items getting stuck after MySQL failover by handing each shard to a queue node in its primary's new region."
   },
   {
     "title": "How we built a general purpose key value store for Facebook with ZippyDB",
     "url": "https://engineering.fb.com/2021/08/06/core-infra/zippydb/",
     "source": "Meta",
     "publishedAt": "2021-08-06",
-    "tags": ["database", "sharding", "replication", "zippydb"]
+    "domain": "database",
+    "tags": ["sharding", "replication", "key-value"],
+    "summary": "Replaces each team's own replication on raw RocksDB with ZippyDB, a Multi-Paxos store with per-request consistency."
   },
   {
     "title": "Migrating Facebook to MySQL 8.0",
     "url": "https://engineering.fb.com/2021/07/22/data-infrastructure/mysql/",
     "source": "Meta",
     "publishedAt": "2021-07-22",
-    "tags": ["database", "migration", "mysql"]
+    "domain": "database",
+    "tags": ["migration", "mysql"],
+    "summary": "Jumps from 5.6 to 8.0, where skipping 5.7 rules out in-place upgrades, by promoting logically copied 8.0 secondaries."
   },
   {
     "title": "Fully Sharded Data Parallel: faster AI training with fewer GPUs",
     "url": "https://engineering.fb.com/2021/07/15/open-source/fsdp/",
     "source": "Meta",
     "publishedAt": "2021-07-15",
-    "tags": ["machine-learning", "training", "pytorch"]
+    "domain": "machine-learning",
+    "tags": ["training", "pytorch"],
+    "summary": "Drops DDP's full model copy per GPU by splitting all-reduce so GPUs keep shards and gather a layer only to run it."
   },
   {
     "title": "How Facebook encodes your videos",
     "url": "https://engineering.fb.com/2021/04/05/video-engineering/how-facebook-encodes-your-videos/",
     "source": "Meta",
     "publishedAt": "2021-04-05",
-    "tags": ["storage", "encoding", "machine-learning"]
+    "domain": "machine-learning",
+    "summary": "Swaps coarse hard-coded encoding priorities for compression gain times predicted watch time over remaining compute."
   },
   {
     "title": "FOQS: Scaling a distributed priority queue",
@@ -146,76 +185,98 @@
     "source": "Meta",
     "publishedAt": "2021-02-22",
     "series": "meta-foqs",
-    "tags": ["architecture", "job-queue", "mysql"]
+    "domain": "distributed-systems",
+    "tags": ["job-queue", "mysql"],
+    "summary": "Spares each dequeue a reduce across MySQL shards with a prefetch buffer that k-way merges per-shard ready indexes."
   },
   {
     "title": "Scaling services with Shard Manager",
     "url": "https://engineering.fb.com/2020/08/24/production-engineering/scaling-services-with-shard-manager/",
     "source": "Meta",
     "publishedAt": "2020-08-24",
-    "tags": ["architecture", "microservice"]
+    "domain": "distributed-systems",
+    "tags": ["coordination"],
+    "summary": "Moves teams off partial home-grown sharding onto Shard Manager, where apps implement add_shard and drop_shard."
   },
   {
     "title": "Managing data store locality at scale with Akkio",
     "url": "https://engineering.fb.com/2018/10/08/core-infra/akkio/",
     "source": "Meta",
     "publishedAt": "2018-10-08",
-    "tags": ["database", "sharding", "zippydb"]
+    "domain": "database",
+    "tags": ["sharding", "multi-region"],
+    "summary": "Trades full data copies in every region, which stopped scaling, for Akkio moving microshards to where they are used."
   },
   {
     "title": "Migrating Messenger storage to optimize performance",
     "url": "https://engineering.fb.com/2018/06/26/core-infra/migrating-messenger-storage-to-optimize-performance/",
     "source": "Meta",
     "publishedAt": "2018-06-26",
-    "tags": ["database", "migration", "hbase", "myrocks"]
+    "domain": "database",
+    "tags": ["migration", "hbase", "myrocks"],
+    "summary": "Avoids lost writes when copying live accounts from HBase to MyRocks by retrying any whose log position moved."
   },
   {
     "title": "Migrating a database from InnoDB to MyRocks",
     "url": "https://engineering.fb.com/2017/09/25/core-infra/migrating-a-database-from-innodb-to-myrocks/",
     "source": "Meta",
     "publishedAt": "2017-09-25",
-    "tags": ["database", "migration", "mysql", "myrocks"]
+    "domain": "database",
+    "tags": ["storage-engine", "migration", "myrocks", "mysql"],
+    "summary": "Migrates space-bound UDB from InnoDB to MyRocks via cross-engine replication, which keeps InnoDB as a fallback."
   },
   {
     "title": "LogDevice: a distributed data store for logs",
     "url": "https://engineering.fb.com/2017/08/31/core-infra/logdevice-a-distributed-data-store-for-logs/",
     "source": "Meta",
     "publishedAt": "2017-08-31",
-    "tags": ["storage", "logdevice", "rocksdb"]
+    "domain": "data",
+    "tags": ["pub-sub", "logdevice", "rocksdb"],
+    "summary": "Keeps appends flowing when nodes fail or logs spike by decoupling sequencing from storage so copies land on any node."
   },
   {
     "title": "MyRocks: A space- and write-optimized MySQL database",
     "url": "https://engineering.fb.com/2016/08/31/core-infra/myrocks-a-space-and-write-optimized-mysql-database/",
     "source": "Meta",
     "publishedAt": "2016-08-31",
-    "tags": ["database", "mysql", "myrocks"]
+    "domain": "database",
+    "tags": ["storage-engine", "myrocks", "mysql"],
+    "summary": "Replaces InnoDB, whose fixed-size compressed pages waste space and random writes wear flash, with RocksDB under MySQL."
   },
   {
     "title": "Apache Spark @Scale: A 60 TB+ production use case",
     "url": "https://engineering.fb.com/2016/08/31/core-infra/apache-spark-scale-a-60-tb-production-use-case/",
     "source": "Meta",
     "publishedAt": "2016-08-31",
-    "tags": ["data", "etl", "spark"]
+    "domain": "data",
+    "tags": ["etl", "spark"],
+    "summary": "Merges a slow, hard-to-monitor pipeline of sharded Hive jobs into one Spark job, fixing the Spark bugs it exposed."
   },
   {
     "title": "Under the hood: Facebook's cold storage system",
     "url": "https://engineering.fb.com/2015/05/04/core-infra/under-the-hood-facebook-s-cold-storage-system/",
     "source": "Meta",
     "publishedAt": "2015-05-04",
-    "tags": ["storage", "tiering", "hardware"]
+    "domain": "database",
+    "tags": ["tiering", "hardware"],
+    "summary": "Cuts power and space spent on old photos with cold storage that powers one drive per tray, enforced in firmware."
   },
   {
     "title": "Scaling the Facebook data warehouse to 300 PB",
     "url": "https://engineering.fb.com/2014/04/10/core-infra/scaling-the-facebook-data-warehouse-to-300-pb/",
     "source": "Meta",
     "publishedAt": "2014-04-10",
-    "tags": ["data", "data-lake", "hive"]
+    "domain": "data",
+    "tags": ["data-lake", "hive"],
+    "summary": "Fixes ORCFile bloating high-entropy columns by dictionary-encoding a stripe only when it has few distinct values."
   },
   {
     "title": "Needle in a haystack: efficient storage of billions of photos",
     "url": "https://engineering.fb.com/2009/04/30/core-infra/needle-in-a-haystack-efficient-storage-of-billions-of-photos/",
     "source": "Meta",
     "publishedAt": "2009-04-30",
-    "tags": ["storage", "object-storage", "haystack"]
+    "domain": "database",
+    "tags": ["object-storage"],
+    "summary": "Replaces per-photo NFS files, whose metadata cost several I/Os a read, with Haystack's large files indexed in memory."
   }
 ]

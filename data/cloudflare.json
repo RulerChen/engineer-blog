@@ -4,105 +4,126 @@
     "url": "https://blog.cloudflare.com/rollbacks-for-workflows/",
     "source": "Cloudflare",
     "publishedAt": "2026-06-25",
-    "tags": ["architecture", "reliability"]
+    "domain": "distributed-systems",
+    "tags": ["transactions", "workflow"],
+    "summary": "Turns hand-written catch-block undo into per-step rollbacks unwound in reverse start order from durable history."
   },
   {
     "title": "Our billing pipeline was suddenly slow. The culprit was a hidden bottleneck in ClickHouse",
     "url": "https://blog.cloudflare.com/clickhouse-query-plan-contention/",
     "source": "Cloudflare",
     "publishedAt": "2026-05-14",
-    "tags": ["database", "observability", "architecture"]
+    "domain": "database",
+    "tags": ["debugging", "clickhouse"],
+    "summary": "Traces slow billing jobs to ClickHouse planners copying the parts list under an exclusive mutex, then makes it shared."
   },
   {
     "title": "BGP zombies and excessive path hunting",
     "url": "https://blog.cloudflare.com/going-bgp-zombie-hunting/",
     "source": "Cloudflare",
     "publishedAt": "2025-10-31",
-    "tags": ["network", "reliability", "bgp"]
+    "domain": "network",
+    "tags": ["bgp"],
+    "summary": "Ties stuck routes to path hunting after a more-specific withdrawal, then drains by pre-announcing a same-length prefix."
   },
   {
     "title": "R2 SQL: a deep dive into our new distributed query engine",
     "url": "https://blog.cloudflare.com/r2-sql-deep-dive/",
     "source": "Cloudflare",
     "publishedAt": "2025-09-25",
-    "tags": ["database", "query-engine", "architecture"]
+    "domain": "data",
+    "tags": ["query-engine"],
+    "summary": "Avoids full-plan delays on huge Iceberg tables by streaming pruned row groups in ORDER BY order so top-K ends early."
   },
   {
     "title": "How TimescaleDB helped us scale analytics and reporting",
     "url": "https://blog.cloudflare.com/timescaledb-art/",
     "source": "Cloudflare",
     "publishedAt": "2025-07-08",
-    "tags": ["database", "migration", "timescaledb"]
+    "domain": "database",
+    "tags": ["time-series", "migration", "timescaledb"],
+    "summary": "Tackles slow raw device-log queries in Postgres with TimescaleDB's columnstore, as ClickHouse needs batched inserts."
   },
   {
     "title": "How Cloudflare's systems dynamically route traffic across the globe",
     "url": "https://blog.cloudflare.com/meet-traffic-manager/",
     "source": "Cloudflare",
     "publishedAt": "2023-09-25",
-    "tags": ["reliability", "architecture", "network", "load-balance"]
+    "domain": "network",
+    "tags": ["reliability", "load-balancing", "edge"],
+    "summary": "Replaces prefix withdrawals that moved too much traffic with Traffic Manager forwarding CPU-time shares via Plurimog."
   },
   {
     "title": "Upgrading one of the oldest components in Cloudflare's software stack",
     "url": "https://blog.cloudflare.com/upgrading-one-of-the-oldest-components-in-cloudflare-software-stack/",
     "source": "Cloudflare",
     "publishedAt": "2023-03-31",
-    "tags": ["network", "proxy"]
+    "domain": "network",
+    "tags": ["proxy", "nginx"],
+    "summary": "Ends FL releases stalling for memory, as NGINX upgrades ran both instances at once, by swapping workers one by one."
   },
   {
     "title": "How Cloudflare runs Prometheus at scale",
     "url": "https://blog.cloudflare.com/how-cloudflare-runs-prometheus-at-scale/",
     "source": "Cloudflare",
     "publishedAt": "2023-03-03",
-    "tags": ["observability", "metrics", "prometheus"]
+    "domain": "reliability",
+    "tags": ["metrics", "prometheus"],
+    "summary": "Stops cardinality spikes from crashing Prometheus or failing scrapes by patching it to skip only new series at a cap."
   },
   {
     "title": "How Rust and Wasm power Cloudflare's 1.1.1.1",
     "url": "https://blog.cloudflare.com/big-pineapple-intro/",
     "source": "Cloudflare",
     "publishedAt": "2023-02-28",
-    "tags": ["network", "dns", "rust"]
+    "domain": "network",
+    "tags": ["dns", "rust"],
+    "summary": "Replaces Knot Resolver, whose blocking Lua plugins and synced cache wipes spiked latency, with BigPineapple in Rust."
   },
   {
     "title": "How we built Pingora, the proxy that connects Cloudflare to the Internet",
     "url": "https://blog.cloudflare.com/how-we-built-pingora-the-proxy-that-connects-cloudflare-to-the-internet/",
     "source": "Cloudflare",
     "publishedAt": "2022-09-14",
-    "tags": ["network", "proxy", "rust"]
+    "domain": "network",
+    "tags": ["proxy", "rust"],
+    "summary": "Fixes low origin connection reuse from NGINX's per-worker pools with Pingora, a Rust proxy whose threads share one pool."
   },
   {
     "title": "Missing Manuals - io_uring worker pool",
     "url": "https://blog.cloudflare.com/missing-manuals-io_uring-worker-pool/",
     "source": "Cloudflare",
     "publishedAt": "2022-02-04",
-    "tags": ["operating-system", "kernel"]
-  },
-  {
-    "title": "Understanding how Facebook disappeared from the Internet",
-    "url": "https://blog.cloudflare.com/october-2021-facebook-outage/",
-    "source": "Cloudflare",
-    "publishedAt": "2021-10-04",
-    "tags": ["reliability", "network", "postmortem"]
+    "domain": "infrastructure",
+    "tags": ["async-io"],
+    "summary": "Bounds io_uring's worker-per-request growth with IORING_REGISTER_IOWQ_MAX_WORKERS, as RLIMIT_NPROC can make it spin."
   },
   {
     "title": "Lessons Learned from Scaling Up Cloudflare's Anomaly Detection Platform",
     "url": "https://blog.cloudflare.com/lessons-learned-from-scaling-up-cloudflare-anomaly-detection-platform/",
     "source": "Cloudflare",
     "publishedAt": "2021-03-12",
-    "tags": ["machine-learning", "architecture", "microservice"]
+    "domain": "machine-learning",
+    "tags": ["microservice"],
+    "summary": "Removes a bot-scoring bottleneck in linear-time Redis PFMERGE by capping how often each site-visitor pair is rescored."
   },
   {
     "title": "The effect of switching to TCMalloc on RocksDB memory use",
     "url": "https://blog.cloudflare.com/the-effect-of-switching-to-tcmalloc-on-rocksdb-memory-use/",
     "source": "Cloudflare",
     "publishedAt": "2021-02-03",
-    "tags": ["language", "memory-management", "database"]
+    "domain": "programming",
+    "tags": ["database", "memory-management", "rocksdb", "tcmalloc"],
+    "summary": "Traces Quicksilver's RSS far above its heap to glibc arenas that can't share freed memory, then moves to TCMalloc."
   },
   {
     "title": "A Byzantine failure in the real world",
     "url": "https://blog.cloudflare.com/a-byzantine-failure-in-the-real-world/",
     "source": "Cloudflare",
     "publishedAt": "2020-11-27",
-    "tags": ["reliability", "network"]
+    "domain": "distributed-systems",
+    "tags": ["consensus", "incident", "etcd"],
+    "summary": "Traces API outages to a partial switch failure that tied etcd elections and forced a failover, overloading the auth DB."
   },
   {
     "title": "Moving Quicksilver into production",
@@ -110,14 +131,18 @@
     "source": "Cloudflare",
     "publishedAt": "2020-11-25",
     "series": "cloudflare-quicksilver",
-    "tags": ["database", "storage", "architecture"]
+    "domain": "database",
+    "tags": ["key-value"],
+    "summary": "Retires Kyoto Tycoon without downtime via a bridge, then traces replication lag to SSDs worn by LMDB copy-on-write."
   },
   {
     "title": "Getting to the Core: Benchmarking Cloudflare's Latest Server Hardware",
     "url": "https://blog.cloudflare.com/getting-to-the-core/",
     "source": "Cloudflare",
     "publishedAt": "2020-11-20",
-    "tags": ["hardware", "database"]
+    "domain": "infrastructure",
+    "tags": ["hardware"],
+    "summary": "Avoids slow cross-socket memory access on dual-socket Core servers by refreshing them with single-socket CPUs."
   },
   {
     "title": "Introducing Quicksilver: Configuration Distribution at Internet Scale",
@@ -125,48 +150,61 @@
     "source": "Cloudflare",
     "publishedAt": "2020-03-30",
     "series": "cloudflare-quicksilver",
-    "tags": ["database", "replication"]
+    "domain": "database",
+    "tags": ["replication", "key-value"],
+    "summary": "Replaces Kyoto Tycoon, whose flush lock stalled reads and whose replication lost entries, with Quicksilver on LMDB."
   },
   {
     "title": "The problem with thread^W event loops",
     "url": "https://blog.cloudflare.com/the-problem-with-event-loops/",
     "source": "Cloudflare",
     "publishedAt": "2020-03-18",
-    "tags": ["operating-system", "network"]
+    "domain": "infrastructure",
+    "tags": ["network", "async-io"],
+    "summary": "Keeps slow WAF requests from stalling every connection on an NGINX worker by moving the WAF to NGINX thread pools."
   },
   {
     "title": "When Bloom filters don't bloom",
     "url": "https://blog.cloudflare.com/when-bloom-filters-dont-bloom/",
     "source": "Cloudflare",
     "publishedAt": "2020-03-02",
-    "tags": ["other"]
+    "domain": "other",
+    "summary": "Traces slow dedup to cache misses from probing a Bloom filter larger than L3, then uses a linear-probing hash table."
   },
   {
     "title": "io_submit: The epoll alternative you've never heard about",
     "url": "https://blog.cloudflare.com/io_submit-the-epoll-alternative-youve-never-heard-about/",
     "source": "Cloudflare",
     "publishedAt": "2019-01-04",
-    "tags": ["operating-system", "kernel", "network"]
+    "domain": "infrastructure",
+    "tags": ["network", "async-io"],
+    "summary": "Avoids a syscall per socket read or write by batching them in io_submit, and drops epoll_ctl churn via IOCB_CMD_POLL."
   },
   {
     "title": "L4Drop: XDP DDoS Mitigations",
     "url": "https://blog.cloudflare.com/l4drop-xdp-ebpf-based-ddos-mitigations/",
     "source": "Cloudflare",
     "publishedAt": "2018-11-28",
-    "tags": ["security", "network", "ebpf"]
+    "domain": "security",
+    "tags": ["network", "ddos", "ebpf"],
+    "summary": "Replaces Floodgate, whose Solarflare bypass fails on new NICs, with L4Drop compiling Gatebot rules into XDP eBPF."
   },
   {
     "title": "How we scaled nginx and saved the world 54 years every day",
     "url": "https://blog.cloudflare.com/how-we-scaled-nginx-and-saved-the-world-54-years-every-day/",
     "source": "Cloudflare",
     "publishedAt": "2018-07-31",
-    "tags": ["network", "operating-system", "kernel"]
+    "domain": "network",
+    "tags": ["async-io", "nginx"],
+    "summary": "Traces tail latency to SSD stalls blocking NGINX event loops, then offloads cache-file open() to the thread pool."
   },
   {
     "title": "HTTP Analytics for 6M requests per second using ClickHouse",
     "url": "https://blog.cloudflare.com/http-analytics-for-6m-requests-per-second-using-clickhouse/",
     "source": "Cloudflare",
     "publishedAt": "2018-03-06",
-    "tags": ["database", "migration", "clickhouse"]
+    "domain": "database",
+    "tags": ["migration", "clickhouse"],
+    "summary": "Replaces Postgres and Citus rollups, each a single point of failure, with ClickHouse SummingMergeTree views."
   }
 ]

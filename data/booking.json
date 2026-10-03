@@ -4,27 +4,34 @@
     "url": "https://medium.com/booking-com-development/anomaly-detection-in-time-series-using-statistical-analysis-cc587b21d008",
     "source": "Booking",
     "publishedAt": "2025-04-15",
-    "tags": ["observability", "alerting"]
+    "domain": "reliability",
+    "tags": ["alerting"],
+    "summary": "Stops past incidents from skewing alert baselines with Granomaly percentile bands that exclude z-score outliers."
   },
   {
     "title": "Use Compression, Luke: Cut 20% of the Cloud Cost with a Single Code Change!",
     "url": "https://medium.com/booking-com-development/use-compression-luke-cut-20-of-the-cloud-cost-with-a-single-code-change-510d14d96891",
     "source": "Booking",
     "publishedAt": "2025-02-05",
-    "tags": ["observability", "mimir", "zstd"]
+    "domain": "reliability",
+    "tags": ["cost", "mimir", "zstd"],
+    "summary": "Cuts the cross-AZ bill of Mimir's replicated gRPC writes with S2 compression, since zstd blew up ingester memory."
   },
   {
     "title": "Predicting cancellations with survival modeling",
     "url": "https://booking.ai/predicting-cancellations-with-survival-modeling-a299af54249b",
     "source": "Booking",
     "publishedAt": "2024-11-11",
-    "tags": ["machine-learning", "training"]
+    "domain": "machine-learning",
+    "summary": "Stops delayed cancellation labels from pinning models to pre-pandemic data with a survival net that uses open bookings."
   },
   {
     "title": "Scaling our customer review system for peak traffic",
     "url": "https://medium.com/booking-com-development/scaling-our-customer-review-system-for-peak-traffic-cb19be434edf",
     "source": "Booking",
     "publishedAt": "2022-11-08",
-    "tags": ["database", "sharding"]
+    "domain": "database",
+    "tags": ["sharding"],
+    "summary": "Adds review shards without shutting down a zone, since Jump hash only moves keys to new shards that preload first."
   }
 ]

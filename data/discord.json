@@ -4,7 +4,9 @@
     "url": "https://discord.com/blog/how-discord-automates-scylladb-clusters-at-scale",
     "source": "Discord",
     "publishedAt": "2026-05-08",
-    "tags": ["database", "scylladb"]
+    "domain": "database",
+    "tags": ["scylladb"],
+    "summary": "Replaces unchecked scripts that restarted from scratch on failure with the Scylla Control Plane's resumable jobs."
   },
   {
     "title": "How Discord Indexes Trillions of Messages",
@@ -12,14 +14,18 @@
     "source": "Discord",
     "publishedAt": "2025-04-24",
     "series": "discord-message-search",
-    "tags": ["elasticsearch", "indexing", "search"]
+    "domain": "search",
+    "tags": ["indexing", "elasticsearch"],
+    "summary": "Trades a lossy Redis queue for PubSub and breaks giant Elasticsearch clusters with OOMing masters into small clusters."
   },
   {
     "title": "How Discord Reduced Websocket Traffic by 40%",
     "url": "https://discord.com/blog/how-discord-reduced-websocket-traffic-by-40-percent",
     "source": "Discord",
     "publishedAt": "2024-09-20",
-    "tags": ["network", "websocket"]
+    "domain": "network",
+    "tags": ["websocket", "real-time"],
+    "summary": "Trims gateway traffic bloated by redundant passive-session snapshots with deltas, and swaps zlib for streaming zstd."
   },
   {
     "title": "Maxjourney: Pushing Discord's Limits with a Million+ Online Users in a Single Server",
@@ -27,7 +33,9 @@
     "source": "Discord",
     "publishedAt": "2023-10-25",
     "series": "discord-elixir-scaling",
-    "tags": ["architecture", "elixir"]
+    "domain": "programming",
+    "tags": ["concurrency", "real-time", "elixir"],
+    "summary": "Tames quadratic fanout in a huge guild's process by skipping passive sessions and splitting work across relays."
   },
   {
     "title": "How Discord Stores Trillions of Messages",
@@ -35,7 +43,9 @@
     "source": "Discord",
     "publishedAt": "2023-03-06",
     "series": "discord-message-storage",
-    "tags": ["cassandra", "database", "migration", "rust", "scylladb"],
+    "domain": "database",
+    "tags": ["migration", "cassandra", "rust", "scylladb"],
+    "summary": "Escapes Cassandra's hot partitions and GC pauses by moving to ScyllaDB behind Rust services that coalesce reads.",
     "commentary": [
       {
         "source": "Hello Interview",
@@ -44,18 +54,13 @@
     ]
   },
   {
-    "title": "How Discord Creates Insights from Trillions of Data Points",
-    "url": "https://discord.com/blog/how-discord-creates-insights-from-trillions-of-data-points",
-    "source": "Discord",
-    "publishedAt": "2021-11-18",
-    "tags": ["data", "etl", "bigquery", "airflow"]
-  },
-  {
     "title": "How Discord Handles Two and Half Million Concurrent Voice Users using WebRTC",
     "url": "https://discord.com/blog/how-discord-handles-two-and-half-million-concurrent-voice-users-using-webrtc",
     "source": "Discord",
     "publishedAt": "2018-09-10",
-    "tags": ["network", "webrtc"]
+    "domain": "network",
+    "tags": ["webrtc"],
+    "summary": "Avoids costly peer-to-peer calls and leaked IPs by routing all voice through a homegrown C++ SFU."
   },
   {
     "title": "How Discord Scaled Elixir to 5,000,000 Concurrent Users",
@@ -63,7 +68,9 @@
     "source": "Discord",
     "publishedAt": "2017-07-06",
     "series": "discord-elixir-scaling",
-    "tags": ["architecture", "elixir"]
+    "domain": "programming",
+    "tags": ["concurrency", "real-time", "elixir"],
+    "summary": "Fixes big guild processes stalling on costly per-session sends by having Manifold send once per remote node."
   },
   {
     "title": "How Discord Indexes Billions of Messages",
@@ -71,7 +78,9 @@
     "source": "Discord",
     "publishedAt": "2017-03-16",
     "series": "discord-message-search",
-    "tags": ["elasticsearch", "indexing", "search"]
+    "domain": "search",
+    "tags": ["indexing", "elasticsearch"],
+    "summary": "Traces CPU and disk churn to Elasticsearch's default refreshes, then refreshes only indexes a search finds dirty."
   },
   {
     "title": "How Discord Stores Billions of Messages",
@@ -79,6 +88,8 @@
     "source": "Discord",
     "publishedAt": "2017-01-13",
     "series": "discord-message-storage",
-    "tags": ["cassandra", "database"]
+    "domain": "database",
+    "tags": ["cassandra"],
+    "summary": "Swaps MongoDB, whose data and index outgrew RAM, for time-bucketed Cassandra partitions and fixes tombstone stalls."
   }
 ]

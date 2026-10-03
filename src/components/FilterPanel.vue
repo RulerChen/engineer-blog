@@ -4,6 +4,7 @@ import type { FilterState, TagMode } from "../lib/filter.js";
 import { matches, parseQuery } from "../lib/search.js";
 import { seriesLabel } from "../lib/series.js";
 import { sourceName } from "../lib/sources.js";
+import { domainLabel, filterGroup } from "../lib/tags.js";
 
 const props = defineProps<{
   state: FilterState;
@@ -71,18 +72,33 @@ const pinnedCompaniesShown = computed(() => {
   return filteredCompanies.value.filter((c) => pinned.has(c.id)).length;
 });
 
-const filteredTags = computed(() => {
-  const q = parseQuery(tagSearch.value);
-  const list = props.tags.filter((t) => matches(t.tag, q));
-  const pinned = new Set(pinnedTags.value);
-  if (pinned.size === 0) return list;
-  return [...list.filter((t) => pinned.has(t.tag)), ...list.filter((t) => !pinned.has(t.tag))];
-});
+/** What a row says: a domain's name, the id itself for everything else. */
+function rowName(id: string): string {
+  return domainLabel(id) ?? id;
+}
 
-/** Same, for topics. */
-const pinnedShown = computed(() => {
+function groupName(key: string): string {
+  if (key === "pinned") return "Selected";
+  if (key === "domain") return "Domains";
+  if (key === "cross-domain") return "Across domains";
+  if (key === "technology") return "Technologies";
+  return rowName(key);
+}
+
+/** Sections in the order picks combine: what was picked before opening, domains, each domain's concepts, cross-domain, technologies. */
+const topicSections = computed(() => {
+  const q = parseQuery(tagSearch.value);
   const pinned = new Set(pinnedTags.value);
-  return filteredTags.value.filter((t) => pinned.has(t.tag)).length;
+  const domains = props.tags.filter((t) => filterGroup(t.tag) === "domain").map((t) => t.tag);
+  const keys = ["pinned", "domain", ...domains, "cross-domain", "technology"];
+  const sections = new Map(keys.map((key) => [key, [] as { tag: string; count: number }[]]));
+  for (const t of props.tags) {
+    const key = pinned.has(t.tag) ? "pinned" : filterGroup(t.tag);
+    // A section's own name matches too, so "database" in the box lists the database concepts.
+    const named = matches(rowName(t.tag), q) || matches(t.tag, q);
+    if (named || (key !== "pinned" && matches(groupName(key), q))) sections.get(key)?.push(t);
+  }
+  return [...sections].filter(([, rows]) => rows.length > 0).map(([key, rows]) => ({ key, rows }));
 });
 
 const companyLabel = computed(() =>
@@ -310,7 +326,7 @@ function clearAll(): void {
               class="mode-option"
               :class="{ active: state.tagMode === 'any' }"
               data-tip-pos="bottom"
-              data-tip="Show entries carrying at least one of the selected topics"
+              data-tip="Show entries carrying a selected topic from each group"
               @click="setTagMode('any')"
             >
               Any
@@ -327,20 +343,22 @@ function clearAll(): void {
           </div>
         </div>
         <div class="filter-menu-list">
-          <template v-for="(t, i) in filteredTags" :key="t.tag">
-            <button class="filter-option" @click="toggleTag(t.tag)">
+          <template v-for="section in topicSections" :key="section.key">
+            <div class="filter-menu-group">{{ groupName(section.key) }}</div>
+            <button
+              v-for="t in section.rows"
+              :key="t.tag"
+              class="filter-option"
+              @click="toggleTag(t.tag)"
+            >
               <span class="checkbox" :class="{ checked: state.tags.includes(t.tag) }">
                 {{ state.tags.includes(t.tag) ? "✓" : "" }}
               </span>
-              <span class="option-name">{{ t.tag }}</span>
+              <span class="option-name">{{ rowName(t.tag) }}</span>
               <span class="option-count">{{ t.count }}</span>
             </button>
-            <div
-              v-if="i === pinnedShown - 1 && i < filteredTags.length - 1"
-              class="filter-menu-divider"
-            ></div>
           </template>
-          <div v-if="filteredTags.length === 0" class="filter-empty">No topics match</div>
+          <div v-if="topicSections.length === 0" class="filter-empty">No topics match</div>
         </div>
       </div>
     </div>

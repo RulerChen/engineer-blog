@@ -4,7 +4,9 @@
     "url": "https://medium.com/airbnb-engineering/skipper-building-airbnbs-embedded-workflow-engine-f6c34552146f",
     "source": "Airbnb",
     "publishedAt": "2026-04-28",
-    "tags": ["architecture", "job-queue"]
+    "domain": "distributed-systems",
+    "tags": ["workflow"],
+    "summary": "Survives workflow crashes without an orchestrator by embedding Skipper, replaying over checkpoints in the service DB."
   },
   {
     "title": "From Static Rate Limiting to Adaptive Traffic Management in Airbnb’s Key-Value Store",
@@ -12,7 +14,9 @@
     "source": "Airbnb",
     "publishedAt": "2025-10-09",
     "series": "airbnb-key-value-store",
-    "tags": ["database", "overload-control", "reliability"]
+    "domain": "reliability",
+    "tags": ["overload-control", "key-value"],
+    "summary": "Replaces static QPS quotas, blind to request cost, with load shedding and request units priced by bytes and latency."
   },
   {
     "title": "Building a Next-Generation Key-Value Store at Airbnb",
@@ -20,56 +24,72 @@
     "source": "Airbnb",
     "publishedAt": "2025-09-24",
     "series": "airbnb-key-value-store",
-    "tags": ["database", "migration"]
+    "domain": "database",
+    "tags": ["key-value", "migration"],
+    "summary": "Moves Mussel off hotspot-prone hash sharding to range-sharded NewSQL, seeding presplit tables from backups and Kafka."
   },
   {
     "title": "Seamless Istio Upgrades at Scale",
     "url": "https://medium.com/airbnb-engineering/seamless-istio-upgrades-at-scale-bcb0e49c5cf8",
     "source": "Airbnb",
     "publishedAt": "2025-08-07",
-    "tags": ["istio", "network", "proxy"]
+    "domain": "network",
+    "tags": ["service-mesh", "migration", "istio"],
+    "summary": "Stops Istio upgrades from waiting on team deploys by having Krispr inject the revision label at CI and pod admission."
   },
   {
     "title": "Achieving High Availability with distributed database on Kubernetes at Airbnb",
     "url": "https://medium.com/airbnb-engineering/achieving-high-availability-with-distributed-database-on-kubernetes-at-airbnb-58cc2e9856f4",
     "source": "Airbnb",
     "publishedAt": "2025-07-28",
-    "tags": ["container", "database", "kubernetes"]
+    "domain": "database",
+    "tags": ["stateful-workload", "kubernetes"],
+    "summary": "Keeps quorum through node replacements by handing pod evictions to the DB's Kubernetes operator across per-AZ clusters."
   },
   {
     "title": "Embedding-Based Retrieval for Airbnb Search",
     "url": "https://medium.com/airbnb-engineering/embedding-based-retrieval-for-airbnb-search-aabebfc85839",
     "source": "Airbnb",
     "publishedAt": "2025-03-19",
-    "tags": ["machine-learning", "search", "vector"]
+    "domain": "search",
+    "tags": ["vector", "training"],
+    "summary": "Trims huge candidate sets for broad searches with two-tower embeddings, served by IVF as frequent updates bloated HNSW."
   },
   {
     "title": "Transforming Location Retrieval at Airbnb: A Journey from Heuristics to Reinforcement Learning",
     "url": "https://medium.com/airbnb-engineering/transforming-location-retrieval-at-airbnb-a-journey-from-heuristics-to-reinforcement-learning-d33ffc4ddb8f",
     "source": "Airbnb",
     "publishedAt": "2024-11-11",
-    "tags": ["machine-learning", "ranking", "search"]
+    "domain": "search",
+    "tags": ["machine-learning", "ranking"],
+    "summary": "Replaces fixed map-area heuristics blind to group size with a model that predicts the area and widens it when unsure."
   },
   {
     "title": "Riverbed: Optimizing data access at Airbnb’s scale",
     "url": "https://medium.com/airbnb-engineering/riverbed-optimizing-data-access-at-airbnbs-scale-c37ecf6456d9",
     "source": "Airbnb",
     "publishedAt": "2023-07-25",
-    "tags": ["data", "cdc", "kafka", "spark"]
+    "domain": "data",
+    "tags": ["cdc", "kafka", "spark"],
+    "summary": "Speeds slow cross-service reads with Riverbed views, rebuilt from source on each CDC event so order does not matter."
   },
   {
     "title": "Improving Performance with HTTP Streaming",
     "url": "https://medium.com/airbnb-engineering/improving-performance-with-http-streaming-ba9e72c66408",
     "source": "Airbnb",
     "publishedAt": "2023-05-17",
-    "tags": ["frontend", "network", "http"]
+    "domain": "frontend",
+    "tags": ["http"],
+    "summary": "Cuts asset and data-fetch waterfalls in SSR by flushing the head early and streaming fetched data as a final chunk."
   },
   {
     "title": "Improving Istio Propagation Delay",
     "url": "https://medium.com/airbnb-engineering/improving-istio-propagation-delay-d4da9b5b9f90",
     "source": "Airbnb",
     "publishedAt": "2023-03-23",
-    "tags": ["istio", "network", "proxy"]
+    "domain": "network",
+    "tags": ["service-mesh", "istio"],
+    "summary": "Traces rising Istio push delay to a read-locking LRU xDS cache and reflection deep copies in debounce, then cuts both."
   },
   {
     "title": "Mussel — Airbnb’s Key-Value Store for Derived Data",
@@ -77,14 +97,18 @@
     "source": "Airbnb",
     "publishedAt": "2022-10-10",
     "series": "airbnb-key-value-store",
-    "tags": ["database", "kafka"]
+    "domain": "database",
+    "tags": ["key-value", "kafka"],
+    "summary": "Replaces Nebula's DynamoDB and HFile stores, slow to merge, with Mussel's leaderless HRegion replicas fed from Kafka."
   },
   {
     "title": "Upgrading Data Warehouse Infrastructure at Airbnb",
     "url": "https://medium.com/airbnb-engineering/upgrading-data-warehouse-infrastructure-at-airbnb-a4e18f09b6d5",
     "source": "Airbnb",
     "publishedAt": "2022-09-26",
-    "tags": ["data", "data-lake", "iceberg", "spark"]
+    "domain": "data",
+    "tags": ["data-lake", "migration", "iceberg", "spark"],
+    "summary": "Ends per-job shuffle tuning and separate hourly and daily Hive tables with Spark AQE ingestion into one Iceberg table."
   },
   {
     "title": "How Airbnb standardized metric computation at scale",
@@ -92,28 +116,35 @@
     "source": "Airbnb",
     "publishedAt": "2021-06-01",
     "series": "airbnb-minerva",
-    "tags": ["data", "etl", "spark"]
+    "domain": "data",
+    "tags": ["etl", "spark"],
+    "summary": "Stops metric drift and data downtime by hashing Minerva configs into data versions whose backfills batch in staging."
   },
   {
     "title": "Himeji: A Scalable Centralized System for Authorization at Airbnb",
     "url": "https://medium.com/airbnb-engineering/himeji-a-scalable-centralized-system-for-authorization-at-airbnb-341664924574",
     "source": "Airbnb",
     "publishedAt": "2021-04-20",
-    "tags": ["architecture", "security"]
+    "domain": "security",
+    "tags": ["access-control"],
+    "summary": "Ends duplicated permission checks that fan out on reads with Himeji, a Zanzibar-style tuple store written on mutation."
   },
   {
     "title": "Building Airbnb’s Internationalization Platform",
     "url": "https://medium.com/airbnb-engineering/building-airbnbs-internationalization-platform-45cf0104b63c",
     "source": "Airbnb",
     "publishedAt": "2020-10-27",
-    "tags": ["architecture"]
+    "domain": "frontend",
+    "summary": "Keeps translate calls fast through server outages by serving them from an on-disk store per node, synced by an agent."
   },
   {
     "title": "Avoiding double payments in a distributed payments system",
     "url": "https://medium.com/airbnb-engineering/avoiding-double-payments-in-a-distributed-payments-system-2981f6b070bb",
     "source": "Airbnb",
     "publishedAt": "2019-04-16",
-    "tags": ["architecture", "microservice"]
+    "domain": "distributed-systems",
+    "tags": ["transactions"],
+    "summary": "Prevents duplicate payments on retries with Orpheus, an idempotency library that keeps RPCs out of its DB transactions."
   },
   {
     "title": "Building Services at Airbnb, Part 3",
@@ -121,14 +152,18 @@
     "source": "Airbnb",
     "publishedAt": "2018-12-11",
     "series": "airbnb-building-services",
-    "tags": ["architecture", "overload-control", "reliability"]
+    "domain": "reliability",
+    "tags": ["overload-control", "microservice"],
+    "summary": "Curbs cascading overload and retry storms with a built-in CoDel queue whose back pressure errors clients never retry."
   },
   {
     "title": "Operationalizing Node.js for Server Side Rendering",
     "url": "https://medium.com/airbnb-engineering/operationalizing-node-js-for-server-side-rendering-c5ba718acfc9",
     "source": "Airbnb",
     "publishedAt": "2018-07-18",
-    "tags": ["frontend", "nodejs"]
+    "domain": "frontend",
+    "tags": ["ssr", "nodejs"],
+    "summary": "Traces SSR deploy timeouts to renders interleaving in one Node process, then has HAProxy queue requests one per worker."
   },
   {
     "title": "Building Services at Airbnb, Part 2",
@@ -136,14 +171,18 @@
     "source": "Airbnb",
     "publishedAt": "2018-05-15",
     "series": "airbnb-building-services",
-    "tags": ["architecture", "metrics", "observability"]
+    "domain": "reliability",
+    "tags": ["metrics", "microservice"],
+    "summary": "Fixes alert gaps and ad hoc metrics with uniform metrics and per-method alerts generated from Thrift IDL annotations."
   },
   {
     "title": "Listing Embeddings in Search Ranking",
     "url": "https://medium.com/airbnb-engineering/listing-embeddings-for-similar-listing-recommendations-and-real-time-personalization-in-search-601172f7603e",
     "source": "Airbnb",
     "publishedAt": "2018-03-13",
-    "tags": ["machine-learning", "ranking", "search"]
+    "domain": "machine-learning",
+    "tags": ["training", "ranking"],
+    "summary": "Captures style that listing metadata misses with click-session embeddings, using bookings as global context."
   },
   {
     "title": "Building Services at Airbnb, Part 1",
@@ -151,13 +190,17 @@
     "source": "Airbnb",
     "publishedAt": "2017-12-12",
     "series": "airbnb-building-services",
-    "tags": ["architecture", "microservice", "thrift"]
+    "domain": "distributed-systems",
+    "tags": ["microservice", "thrift"],
+    "summary": "Replaces untyped JSON APIs and hand-written clients with Thrift IDL codegen inside Dropwizard, keeping the HTTP stack."
   },
   {
     "title": "Nebula as a Storage Platform to Build Airbnb’s Search Backends",
     "url": "https://medium.com/airbnb-engineering/nebula-as-a-storage-platform-to-build-airbnbs-search-backends-ecc577b05f06",
     "source": "Airbnb",
     "publishedAt": "2016-12-15",
-    "tags": ["dynamodb", "storage"]
+    "domain": "database",
+    "tags": ["dynamodb"],
+    "summary": "Moves search data that outgrew a single machine to Nebula, which merges DynamoDB deltas with HFile snapshots on read."
   }
 ]

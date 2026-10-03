@@ -4,21 +4,27 @@
     "url": "https://engineering.salesforce.com/event-sourcing-for-an-inventory-availability-solution-3cc0daf5a742/",
     "source": "Salesforce",
     "publishedAt": "2021-12-16",
-    "tags": ["architecture"]
+    "domain": "distributed-systems",
+    "tags": ["event-driven"],
+    "summary": "Avoids flash-sale row-lock contention by appending reservation events under a unique SKU-location sequence number."
   },
   {
     "title": "CarbonJ: A high performance, high-scale, drop-in replacement for carbon-cache and carbon-relay",
     "url": "https://engineering.salesforce.com/carbonj-a-high-performance-high-scale-drop-in-replacement-for-carbon-cache-and-carbon-relay-d9599371c51a/",
     "source": "Salesforce",
     "publishedAt": "2021-10-28",
-    "tags": ["observability", "metrics", "graphite"]
+    "domain": "reliability",
+    "tags": ["metrics", "graphite"],
+    "summary": "Replaces Graphite's whisper files, whose random per-metric writes maxed out SSD I/O, with CarbonJ on embedded RocksDB."
   },
   {
     "title": "How to ETL at Petabyte-Scale with Trino",
     "url": "https://engineering.salesforce.com/how-to-etl-at-petabyte-scale-with-trino-5fe8ac134e36/",
     "source": "Salesforce",
     "publishedAt": "2021-10-12",
-    "tags": ["data", "etl", "query-engine", "trino"]
+    "domain": "data",
+    "tags": ["etl", "query-engine", "trino"],
+    "summary": "Works around Trino's lack of mid-query fault tolerance by running Huron's ETL as short INSERTs, cheap to retry."
   },
   {
     "title": "Evolution of Region Assignment in the Apache HBase Architecture — Part 3",
@@ -26,7 +32,9 @@
     "source": "Salesforce",
     "publishedAt": "2021-10-07",
     "series": "salesforce-hbase-region-assignment",
-    "tags": ["database", "sharding", "hbase"]
+    "domain": "database",
+    "tags": ["sharding", "hbase"],
+    "summary": "Stops duplicate region transitions after server crashes by letting one TransitRegionStateProcedure own each region."
   },
   {
     "title": "Evolution of Region Assignment in the Apache HBase Architecture — Part 2",
@@ -34,7 +42,9 @@
     "source": "Salesforce",
     "publishedAt": "2021-09-02",
     "series": "salesforce-hbase-region-assignment",
-    "tags": ["database", "sharding", "hbase"]
+    "domain": "database",
+    "tags": ["sharding", "hbase"],
+    "summary": "Makes region transitions survive crashes and avoid collisions with logged ProcedureV2 steps under hierarchical locks."
   },
   {
     "title": "Evolution of Region Assignment in the Apache HBase Architecture — Part 1",
@@ -42,14 +52,18 @@
     "source": "Salesforce",
     "publishedAt": "2021-09-01",
     "series": "salesforce-hbase-region-assignment",
-    "tags": ["database", "sharding", "hbase"]
+    "domain": "database",
+    "tags": ["sharding", "hbase"],
+    "summary": "Traces stuck HBase 1 assignments to multi-writer region state synced via ZooKeeper, which AMv2 gives a single writer."
   },
   {
     "title": "Coordinated Rate Limiting in Microservices",
     "url": "https://engineering.salesforce.com/coordinated-rate-limiting-in-microservices-bb8861126beb/",
     "source": "Salesforce",
     "publishedAt": "2021-07-27",
-    "tags": ["reliability", "overload-control", "redis"]
+    "domain": "reliability",
+    "tags": ["overload-control", "redis"],
+    "summary": "Holds per-tenant API limits steady as instances scale by counting locally in Caffeine and syncing deltas to Redis."
   },
   {
     "title": "The Design of Strongly Consistent Global Secondary Indexes in Apache Phoenix — Part 2",
@@ -57,7 +71,9 @@
     "source": "Salesforce",
     "publishedAt": "2021-04-08",
     "series": "salesforce-phoenix-secondary-indexes",
-    "tags": ["database", "apache-phoenix", "hbase"]
+    "domain": "database",
+    "tags": ["secondary-index", "consistency", "hbase", "phoenix"],
+    "summary": "Stops racing updates from duplicating index rows without deadlock by freeing locks before index RPCs and caching state."
   },
   {
     "title": "The Design of Strongly Consistent Global Secondary Indexes in Apache Phoenix — Part 1",
@@ -65,14 +81,18 @@
     "source": "Salesforce",
     "publishedAt": "2021-04-06",
     "series": "salesforce-phoenix-secondary-indexes",
-    "tags": ["database", "apache-phoenix", "hbase"]
+    "domain": "database",
+    "tags": ["secondary-index", "consistency", "hbase", "phoenix"],
+    "summary": "Keeps index tables on other servers consistent with data by writing index rows unverified first and repairing on read."
   },
   {
     "title": "Optimizing EKS networking for scale",
     "url": "https://engineering.salesforce.com/optimizing-eks-networking-for-scale-1325706c8f6d/",
     "source": "Salesforce",
     "publishedAt": "2021-03-23",
-    "tags": ["kubernetes", "network", "eks"]
+    "domain": "network",
+    "tags": ["infrastructure", "eks", "kubernetes"],
+    "summary": "Avoids VPC subnet exhaustion from idle warm-pool IPs on EKS nodes by lowering WARM_IP_TARGET and WARM_ENI_TARGET."
   },
   {
     "title": "Hadoop/HBase on Kubernetes and Public Cloud (Part II)",
@@ -80,7 +100,9 @@
     "source": "Salesforce",
     "publishedAt": "2021-03-18",
     "series": "salesforce-hbase-on-kubernetes",
-    "tags": ["container", "kubernetes", "database", "hbase"]
+    "domain": "infrastructure",
+    "tags": ["stateful-workload", "hbase", "kubernetes"],
+    "summary": "Fixes PDB-blocked StatefulSet upgrades with a custom controller and Hadoop IP caching with a Service per metadata pod."
   },
   {
     "title": "Hadoop/HBase on Kubernetes and Public Cloud (Part I)",
@@ -88,20 +110,26 @@
     "source": "Salesforce",
     "publishedAt": "2021-03-17",
     "series": "salesforce-hbase-on-kubernetes",
-    "tags": ["container", "kubernetes", "database", "hbase"]
+    "domain": "infrastructure",
+    "tags": ["stateful-workload", "hbase", "kubernetes"],
+    "summary": "Limits an upgrade or AZ outage to one HDFS replica with a DataNode StatefulSet per AZ and an AZ topology script."
   },
   {
     "title": "Global Synchronousness and Ordering in Delta Lake",
     "url": "https://engineering.salesforce.com/global-synchronousness-and-ordering-in-delta-lake-9b912d980ebf/",
     "source": "Salesforce",
     "publishedAt": "2020-10-14",
-    "tags": ["data", "data-lake", "delta-lake", "spark"]
+    "domain": "data",
+    "tags": ["data-lake", "delta-lake", "spark"],
+    "summary": "Ends Conflicting Commits errors among Spark streams on a Delta table with a ZooKeeper lock and predecessor check."
   },
   {
     "title": "Engagement Activity Delta Lake",
     "url": "https://engineering.salesforce.com/engagement-activity-delta-lake-2e9b074a94af/",
     "source": "Salesforce",
     "publishedAt": "2020-09-23",
-    "tags": ["data", "data-lake", "delta-lake", "spark"]
+    "domain": "data",
+    "tags": ["data-lake", "delta-lake", "spark"],
+    "summary": "Fixes slow mutations that hit many date partitions by partitioning engagement data by org alone, Z-ordered by date."
   }
 ]

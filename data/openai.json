@@ -4,27 +4,35 @@
     "url": "https://openai.com/index/scaling-storage-one-billion-users-part-one",
     "source": "OpenAI",
     "publishedAt": "2026-09-11",
-    "tags": ["database", "rust", "cosmos-db", "envoy"]
+    "domain": "database",
+    "tags": ["cosmos-db", "envoy", "rust"],
+    "summary": "Traces Habitat's tail stalls to asyncio scheduling delay and LIFO pool reuse, then caps per-process load and uses FIFO."
   },
   {
     "title": "Supercomputer networking to accelerate large scale AI training",
     "url": "https://openai.com/index/mrc-supercomputer-networking",
     "source": "OpenAI",
     "publishedAt": "2026-05-05",
-    "tags": ["machine-learning", "network", "training"]
+    "domain": "network",
+    "tags": ["rdma", "training"],
+    "summary": "Stops link failures from crashing training with MRC, which sprays packets over many SRv6 paths and drops lossy ones."
   },
   {
     "title": "How OpenAI delivers low-latency voice AI at scale",
     "url": "https://openai.com/index/delivering-low-latency-voice-ai-at-scale",
     "source": "OpenAI",
     "publishedAt": "2026-05-04",
-    "tags": ["network", "webrtc"]
+    "domain": "network",
+    "tags": ["webrtc"],
+    "summary": "Avoids per-session UDP ports, a poor fit for Kubernetes, with a stateless relay routing WebRTC by the ICE ufrag."
   },
   {
     "title": "Scaling PostgreSQL to power 800 million ChatGPT users",
     "url": "https://openai.com/index/scaling-postgresql",
     "source": "OpenAI",
     "publishedAt": "2026-01-22",
-    "tags": ["database", "postgresql", "replication"]
+    "domain": "database",
+    "tags": ["replication", "postgresql"],
+    "summary": "Shields a single Postgres primary from MVCC-amplified write spikes by moving write-heavy workloads to Cosmos DB."
   }
 ]

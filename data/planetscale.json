@@ -4,49 +4,63 @@
     "url": "https://planetscale.com/blog/the-lifecycle-of-a-sharded-postgres-query",
     "source": "PlanetScale",
     "publishedAt": "2026-09-10",
-    "tags": ["database", "postgresql", "sharding"]
+    "domain": "database",
+    "tags": ["sharding", "postgresql"],
+    "summary": "Joins rows split across Postgres shards in Neki's router, whose planner picks hash or nested-loop joins by cost."
   },
   {
     "title": "Concurrency vs. Throughput: why more parallelism can make databases slower",
     "url": "https://planetscale.com/blog/concurrency-vs-throughput-vitess-mysql",
     "source": "PlanetScale",
     "publishedAt": "2026-08-07",
-    "tags": ["database", "mysql", "overload-control", "reliability"]
+    "domain": "database",
+    "tags": ["overload-control", "mysql"],
+    "summary": "Traces a MySQL meltdown to too many admitted reads walking MVCC chains, then caps the Vitess pool and queues the rest."
   },
   {
     "title": "The feedback loops behind Kubernetes",
     "url": "https://planetscale.com/blog/the-feedback-loops-behind-kubernetes",
     "source": "PlanetScale",
     "publishedAt": "2026-06-16",
-    "tags": ["container", "kubernetes"]
+    "domain": "infrastructure",
+    "tags": ["control-plane", "kubernetes"],
+    "summary": "Stops missed or duplicate events from derailing an operator by letting them only wake a level-triggered reconcile."
   },
   {
     "title": "Zero downtime migrations at petabyte scale",
     "url": "https://planetscale.com/blog/zero-downtime-migrations-at-petabyte-scale",
     "source": "PlanetScale",
     "publishedAt": "2024-08-13",
-    "tags": ["database", "migration", "mysql", "vitess"]
+    "domain": "database",
+    "tags": ["migration", "mysql", "vitess"],
+    "summary": "Avoids the write freeze and one-way cutover of dump-and-restore migrations with Vitess MoveTables and query buffering."
   },
   {
     "title": "The State of Online Schema Migrations in MySQL",
     "url": "https://planetscale.com/blog/state-of-online-schema-migrations-in-mysql",
     "source": "PlanetScale",
     "publishedAt": "2024-07-23",
-    "tags": ["database", "migration", "mysql", "schema"]
+    "domain": "database",
+    "tags": ["schema-change", "mysql"],
+    "summary": "Picks shadow-table tools for non-blocking MySQL ALTERs, as INPLACE stalls replicas and INSTANT covers few changes."
   },
   {
     "title": "Storing time series data in sharded MySQL to power Query Insights",
     "url": "https://planetscale.com/blog/storing-time-series-data-in-sharded-mysql",
     "source": "PlanetScale",
     "publishedAt": "2023-08-10",
-    "tags": ["database", "kafka", "mysql", "sharding"]
+    "domain": "database",
+    "tags": ["sharding", "time-series", "kafka", "mysql"],
+    "summary": "Stores high-cardinality query-pattern stats, too costly for Prometheus, in sharded MySQL with mergeable DDSketches."
   },
   {
     "title": "Connection pooling in Vitess",
     "url": "https://planetscale.com/blog/connection-pooling",
     "source": "PlanetScale",
     "publishedAt": "2023-03-27",
-    "tags": ["database", "mysql", "vitess"]
+    "domain": "database",
+    "tags": ["connection-pooling", "mysql", "vitess"],
+    "summary": "Stops ORM SET statements from forcing reserved connections that can exhaust MySQL, with a settings-aware Vitess pool."
   },
   {
     "title": "Consensus algorithms at scale: Part 7 - Propagating requests",
@@ -54,7 +68,9 @@
     "source": "PlanetScale",
     "publishedAt": "2022-07-01",
     "series": "planetscale-consensus-algorithms",
-    "tags": ["database", "replication"]
+    "domain": "distributed-systems",
+    "tags": ["consensus"],
+    "summary": "Resolves conflicting in-flight requests in elections by re-proposing each under a new version and keeping the newest."
   },
   {
     "title": "Consensus algorithms at scale: Part 6 - Completing requests",
@@ -62,7 +78,9 @@
     "source": "PlanetScale",
     "publishedAt": "2022-06-21",
     "series": "planetscale-consensus-algorithms",
-    "tags": ["database", "replication"]
+    "domain": "distributed-systems",
+    "tags": ["consensus"],
+    "summary": "Guarantees acked requests survive and failed ones stay cancelable via a two-phase tentative step MySQL semi-sync lacks."
   },
   {
     "title": "Consensus algorithms at scale: Part 5 - Handling races",
@@ -70,7 +88,9 @@
     "source": "PlanetScale",
     "publishedAt": "2022-04-28",
     "series": "planetscale-consensus-algorithms",
-    "tags": ["database", "replication"]
+    "domain": "distributed-systems",
+    "tags": ["consensus"],
+    "summary": "Settles races between electors with lock-based elections, as a leased leader serves consistent reads with no quorum."
   },
   {
     "title": "Consensus algorithms at scale: Part 4 - Establishment and revocation",
@@ -78,7 +98,9 @@
     "source": "PlanetScale",
     "publishedAt": "2022-04-06",
     "series": "planetscale-consensus-algorithms",
-    "tags": ["database", "replication"]
+    "domain": "distributed-systems",
+    "tags": ["consensus"],
+    "summary": "Avoids errors during rollouts by making revocation its own step, so Vitess PRS demotes the primary as vtgate buffers."
   },
   {
     "title": "Consensus algorithms at scale: Part 3 - Use cases",
@@ -86,7 +108,9 @@
     "source": "PlanetScale",
     "publishedAt": "2020-09-26",
     "series": "planetscale-consensus-algorithms",
-    "tags": ["database", "replication"]
+    "domain": "distributed-systems",
+    "tags": ["consensus"],
+    "summary": "Fits zone and region layouts that majority quorums handle badly by sizing elections to intersect the durability rule."
   },
   {
     "title": "Consensus algorithms at scale: Part 2 - Rules of consensus",
@@ -94,7 +118,9 @@
     "source": "PlanetScale",
     "publishedAt": "2020-09-09",
     "series": "planetscale-consensus-algorithms",
-    "tags": ["database", "replication"]
+    "domain": "distributed-systems",
+    "tags": ["consensus"],
+    "summary": "Escapes majority quorums too big for YouTube's Vitess with single-leader rules that treat durability as abstract."
   },
   {
     "title": "Consensus algorithms at scale: Part 1 - Introduction",
@@ -102,6 +128,8 @@
     "source": "PlanetScale",
     "publishedAt": "2020-08-28",
     "series": "planetscale-consensus-algorithms",
-    "tags": ["database", "replication"]
+    "domain": "distributed-systems",
+    "tags": ["consensus"],
+    "summary": "Argues Paxos and Raft are too rigid for cloud zones and regions, so the series splits consensus into its concerns."
   }
 ]

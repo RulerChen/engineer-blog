@@ -4,6 +4,7 @@ import { avatarHue } from "../lib/avatar.js";
 import { entryTypeMeta } from "../lib/entryType.js";
 import type { Series } from "../lib/series.js";
 import { sourceName } from "../lib/sources.js";
+import { domainLabel } from "../lib/tags.js";
 import type { Article } from "../types.js";
 import EntryTypeIcon from "./EntryTypeIcon.vue";
 
@@ -43,6 +44,14 @@ const seriesPart = computed(() => {
   if (index === -1) return null;
   return { number: index + 1, total: series.parts.length };
 });
+
+/** The domain first and named as the topic menu names it, then the tags in the order the build sorted them. */
+const chips = computed(() =>
+  [props.article.domain, ...props.article.tags].filter(Boolean).map((id) => {
+    const label = domainLabel(id);
+    return { id, name: label ?? id, domain: label !== undefined };
+  }),
+);
 
 /** Tooltip for the meta-row icon — the icon itself carries no words. */
 const typeLabel = computed(() => entryTypeMeta(props.article.type).label);
@@ -122,16 +131,20 @@ const avatarStyle = computed(() => {
         </a>
       </h2>
       <p v-if="article.summary" class="summary">{{ article.summary }}</p>
-      <div v-if="article.tags.length || article.commentary?.length" class="tags">
+      <div v-if="chips.length || article.commentary?.length" class="tags">
         <button
-          v-for="tag in article.tags"
-          :key="tag"
+          v-for="chip in chips"
+          :key="chip.id"
           class="tag tag-filter"
-          :class="{ active: activeTags.includes(tag) }"
-          :data-tip="activeTags.includes(tag) ? `Stop filtering by ${tag}` : `Show only ${tag}`"
-          @click="emit('selectTag', tag)"
+          :class="{ active: activeTags.includes(chip.id), 'tag-domain': chip.domain }"
+          :data-tip="
+            activeTags.includes(chip.id)
+              ? `Stop filtering by ${chip.name}`
+              : `Show only ${chip.name}`
+          "
+          @click="emit('selectTag', chip.id)"
         >
-          {{ tag }}
+          {{ chip.name }}
         </button>
         <a
           v-for="link in article.commentary"

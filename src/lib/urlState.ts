@@ -1,4 +1,5 @@
 import { type DatePreset, type FilterState, type TagMode, emptyFilter } from "./filter.js";
+import { ALIASES } from "./tags.js";
 
 const PRESETS: DatePreset[] = ["all", "week", "month", "year", "custom"];
 
@@ -29,7 +30,8 @@ export function queryToState(search: string): FilterState {
     ...emptyFilter(),
     query: params.get("q") ?? "",
     companies: list("companies"),
-    tags: list("tags"),
+    // A retired id reads as its replacement; two retired ids can share one.
+    tags: [...new Set(list("tags").map((id) => ALIASES.get(id) ?? id))],
     tagMode: params.get("tagMode") === "all" ? ("all" as TagMode) : ("any" as TagMode),
     series: params.get("series") || null,
     datePreset,

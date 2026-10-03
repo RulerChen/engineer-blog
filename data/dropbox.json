@@ -5,7 +5,9 @@
     "source": "Dropbox",
     "publishedAt": "2026-04-02",
     "series": "dropbox-magic-pocket",
-    "tags": ["encoding", "object-storage", "storage"]
+    "domain": "database",
+    "tags": ["object-storage", "erasure-coding"],
+    "summary": "Reclaims sparse volumes that host-and-donor compaction drained too slowly via DP packing and Live Coder re-encoding."
   },
   {
     "title": "What’s new with Robinhood, our in-house load balancing service",
@@ -13,14 +15,18 @@
     "source": "Dropbox",
     "publishedAt": "2024-10-23",
     "series": "dropbox-load-balancing",
-    "tags": ["envoy", "load-balance", "network"]
+    "domain": "network",
+    "tags": ["load-balancing", "envoy"],
+    "summary": "Stops uneven load that forced over-provisioning with Robinhood, whose per-node PID controllers set endpoint weights."
   },
   {
     "title": "Meet Chrono, our scalable, consistent, metadata caching solution",
     "url": "https://dropbox.tech/infrastructure/meet-chrono-our-scalable-consistent-metadata-caching-solution",
     "source": "Dropbox",
     "publishedAt": "2024-07-25",
-    "tags": ["caching", "database"]
+    "domain": "database",
+    "tags": ["caching", "consistency"],
+    "summary": "Offloads reads Panda could not sustain to Memcache, keeping read-after-write by checking Chrono's write-attempt times."
   },
   {
     "title": "Increasing Magic Pocket write throughput by removing our SSD cache disks",
@@ -28,49 +34,63 @@
     "source": "Dropbox",
     "publishedAt": "2022-12-08",
     "series": "dropbox-magic-pocket",
-    "tags": ["block-storage", "storage"]
+    "domain": "database",
+    "tags": ["object-storage", "hardware"],
+    "summary": "Lifts the write throughput cap of a per-host SSD cache by writing straight to SMR disks with inline block metadata."
   },
   {
     "title": "Future-proofing our metadata stack with Panda, a scalable key-value store",
     "url": "https://dropbox.tech/infrastructure/panda-metadata-stack-petabyte-scale-transactional-key-value-store",
     "source": "Dropbox",
     "publishedAt": "2022-11-03",
-    "tags": ["database", "mysql"]
+    "domain": "database",
+    "tags": ["key-value", "mysql"],
+    "summary": "Avoids costly fleet-wide MySQL splits with Panda, a transactional KV layer that grows capacity by range transfer."
   },
   {
     "title": "Everything in its write place: Cloud storage abstraction with Object Store",
     "url": "https://dropbox.tech/infrastructure/abstracting-cloud-storage-backends-with-object-store",
     "source": "Dropbox",
     "publishedAt": "2022-10-11",
-    "tags": ["object-storage", "s3", "storage"]
+    "domain": "database",
+    "tags": ["object-storage", "s3"],
+    "summary": "Cuts S3 per-request bills from small PUTs by batching them into shared blobs indexed by offsets in MySQL."
   },
   {
     "title": "That time we unplugged a data center to test our disaster readiness",
     "url": "https://dropbox.tech/infrastructure/disaster-readiness-test-failover-blackhole-sjc",
     "source": "Dropbox",
     "publishedAt": "2022-04-25",
-    "tags": ["disaster-recovery", "reliability"]
+    "domain": "reliability",
+    "tags": ["disaster-recovery"],
+    "summary": "Replaces an outage-causing failover script with a runbook DAG, then unplugs San Jose to prove nothing depends on it."
   },
   {
     "title": "Atlas: Our journey from a Python monolith to a managed platform",
     "url": "https://dropbox.tech/infrastructure/atlas--our-journey-from-a-python-monolith-to-a-managed-platform",
     "source": "Dropbox",
     "publishedAt": "2021-03-04",
-    "tags": ["architecture", "microservice", "monolith", "python"]
+    "domain": "distributed-systems",
+    "tags": ["microservice", "monolith", "migration", "python"],
+    "summary": "Splits Metaserver, where any critical bug forced a full rollback, into Atlasservlet clusters the Atlas team runs."
   },
   {
     "title": "Alki, or how we learned to stop worrying and love cold metadata",
     "url": "https://dropbox.tech/infrastructure/alki--or-how-we-learned-to-stop-worrying-and-love-cold-metadata",
     "source": "Dropbox",
     "publishedAt": "2020-12-17",
-    "tags": ["s3", "storage", "tiering"]
+    "domain": "database",
+    "tags": ["tiering", "cost", "s3"],
+    "summary": "Eases Edgestore's capacity crunch by moving cold audit logs into Alki, an LSM tree with DynamoDB and S3 tiers."
   },
   {
     "title": "How we designed Dropbox ATF: an async task framework",
     "url": "https://dropbox.tech/infrastructure/asynchronous-task-scheduling-at-dropbox",
     "source": "Dropbox",
     "publishedAt": "2020-11-11",
-    "tags": ["architecture", "job-queue"]
+    "domain": "distributed-systems",
+    "tags": ["job-queue"],
+    "summary": "Recovers ATF tasks dropped by RPC or SQS failures with per-state deadlines after which a poller re-enqueues them."
   },
   {
     "title": "Broccoli: Syncing faster by syncing less",
@@ -78,14 +98,18 @@
     "source": "Dropbox",
     "publishedAt": "2020-08-04",
     "series": "dropbox-sync-engine",
-    "tags": ["compression", "storage"]
+    "domain": "database",
+    "tags": ["compression", "file-sync"],
+    "summary": "Trims sync bytes zlib left on the wire with Broccoli, a Rust Brotli whose chunks concatenate for multicore encoding."
   },
   {
     "title": "How we migrated Dropbox from Nginx to Envoy",
     "url": "https://dropbox.tech/infrastructure/how-we-migrated-dropbox-from-nginx-to-envoy",
     "source": "Dropbox",
     "publishedAt": "2020-07-30",
-    "tags": ["envoy", "network", "nginx", "proxy"]
+    "domain": "network",
+    "tags": ["proxy", "migration", "envoy", "nginx"],
+    "summary": "Moves the edge off Nginx, weak on gRPC and fed by tangled templated configs, to Envoy with protobuf-typed config."
   },
   {
     "title": "Testing sync at Dropbox",
@@ -93,7 +117,9 @@
     "source": "Dropbox",
     "publishedAt": "2020-04-20",
     "series": "dropbox-sync-engine",
-    "tags": ["testing"]
+    "domain": "programming",
+    "tags": ["testing", "file-sync"],
+    "summary": "Fixes flaky, unreproducible randomized tests by making Nucleus deterministic per seed for CanopyCheck and Trinity."
   },
   {
     "title": "Rewriting the heart of our sync engine",
@@ -101,7 +127,9 @@
     "source": "Dropbox",
     "publishedAt": "2020-03-09",
     "series": "dropbox-sync-engine",
-    "tags": ["rust", "storage"]
+    "domain": "database",
+    "tags": ["file-sync", "rust"],
+    "summary": "Escapes a data model with no stable file IDs, which refactoring could not fix, by rewriting sync as Nucleus in Rust."
   },
   {
     "title": "Enhancing Bandaid load balancing at Dropbox by leveraging real-time backend server load information",
@@ -109,7 +137,9 @@
     "source": "Dropbox",
     "publishedAt": "2019-09-18",
     "series": "dropbox-load-balancing",
-    "tags": ["load-balance", "network"]
+    "domain": "network",
+    "tags": ["load-balancing"],
+    "summary": "Evens out backend load that Bandaid's local request counts misjudged by piggybacking server utilization on responses."
   },
   {
     "title": "How we optimized Magic Pocket for cold storage",
@@ -117,28 +147,36 @@
     "source": "Dropbox",
     "publishedAt": "2019-05-06",
     "series": "dropbox-magic-pocket",
-    "tags": ["storage", "tiering"]
+    "domain": "database",
+    "tags": ["object-storage", "tiering"],
+    "summary": "Drops the full per-region copy of cold data by striping block fragments and an XOR parity across independent regions."
   },
   {
     "title": "Courier: Dropbox migration to gRPC",
     "url": "https://dropbox.tech/infrastructure/courier-dropbox-migration-to-grpc",
     "source": "Dropbox",
     "publishedAt": "2019-01-08",
-    "tags": ["api-design", "grpc"]
+    "domain": "distributed-systems",
+    "tags": ["rpc", "migration", "grpc"],
+    "summary": "Curbs cascading overload, once left to custom client backoff, with Courier's mandatory deadlines and LIFO queue."
   },
   {
     "title": "Cape Technical Deep Dive",
     "url": "https://dropbox.tech/infrastructure/cape-technical-deep-dive",
     "source": "Dropbox",
     "publishedAt": "2018-12-21",
-    "tags": ["cdc", "data", "kafka"]
+    "domain": "data",
+    "tags": ["cdc", "kafka"],
+    "summary": "Rejects queues, where a failing subject blocks others, for a dispatcher that schedules from source pings and cursors."
   },
   {
     "title": "Cross shard transactions at 10 million requests per second",
     "url": "https://dropbox.tech/infrastructure/cross-shard-transactions-at-10-million-requests-per-second",
     "source": "Dropbox",
     "publishedAt": "2018-11-09",
-    "tags": ["database", "mysql", "sharding"]
+    "domain": "database",
+    "tags": ["sharding", "transactions", "mysql"],
+    "summary": "Ends app-level workarounds for cross-shard writes in Edgestore with two-phase commit on an external transaction record."
   },
   {
     "title": "Dropbox traffic infrastructure: Edge network",
@@ -146,7 +184,9 @@
     "source": "Dropbox",
     "publishedAt": "2018-10-10",
     "series": "dropbox-edge-network",
-    "tags": ["network", "proxy"]
+    "domain": "network",
+    "tags": ["proxy", "edge"],
+    "summary": "Tackles PoP misrouting by anycast hop counts and GeoIP guesses with a prototype DNS map from client-measured latency."
   },
   {
     "title": "Extending Magic Pocket Innovation with the first petabyte scale SMR drive deployment",
@@ -154,14 +194,18 @@
     "source": "Dropbox",
     "publishedAt": "2018-06-12",
     "series": "dropbox-smr-storage",
-    "tags": ["hardware", "storage"]
+    "domain": "infrastructure",
+    "tags": ["hardware", "object-storage"],
+    "summary": "Adapts Magic Pocket to sequential-only SMR by keeping metadata in the conventional area and staging live writes on SSD."
   },
   {
     "title": "Optimizing web servers for high throughput and low latency",
     "url": "https://dropbox.tech/infrastructure/optimizing-web-servers-for-high-throughput-and-low-latency",
     "source": "Dropbox",
     "publishedAt": "2017-09-06",
-    "tags": ["http", "network", "nginx"]
+    "domain": "network",
+    "tags": ["http", "nginx"],
+    "summary": "Weighs latency against throughput for nginx edge knobs from NIC to event loop, verifying them with perf and bcc."
   },
   {
     "title": "Pocket watch: Verifying exabytes of data",
@@ -169,7 +213,9 @@
     "source": "Dropbox",
     "publishedAt": "2016-07-06",
     "series": "dropbox-magic-pocket",
-    "tags": ["object-storage", "storage"]
+    "domain": "database",
+    "tags": ["object-storage"],
+    "summary": "Catches silent disk corruption and bad deletes that replication misses with a stack of Magic Pocket verifiers."
   },
   {
     "title": "Inside the Magic Pocket",
@@ -177,6 +223,8 @@
     "source": "Dropbox",
     "publishedAt": "2016-05-06",
     "series": "dropbox-magic-pocket",
-    "tags": ["object-storage", "storage"]
+    "domain": "database",
+    "tags": ["object-storage"],
+    "summary": "Avoids quorum complexity in Magic Pocket by writing each block to every OSD in a volume and retrying elsewhere."
   }
 ]

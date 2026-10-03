@@ -4,35 +4,45 @@
     "url": "https://medium.com/pinterest-engineering/evolving-pinterests-embedding-retrieval-platform-aede4e831e01",
     "source": "Pinterest",
     "publishedAt": "2026-09-11",
-    "tags": ["search", "vector", "indexing", "spann"]
+    "domain": "search",
+    "tags": ["indexing", "vector", "spann"],
+    "summary": "Frees Manas from HNSW's need to hold whole indexes in RAM by quantizing vectors and serving SPANN from SSD."
   },
   {
     "title": "Achieving Near-Linear Training Scalability for Pinterest’s Foundation Models",
     "url": "https://medium.com/pinterest-engineering/achieving-near-linear-training-scalability-for-pinterests-foundation-models-14d4f59fe6f6",
     "source": "Pinterest",
     "publishedAt": "2026-06-25",
-    "tags": ["machine-learning", "training", "pytorch"]
+    "domain": "machine-learning",
+    "tags": ["training", "pytorch"],
+    "summary": "Fixes poor multi-node scaling from cross-node embedding all-to-all with 2D parallelism that keeps it in each node."
   },
   {
     "title": "Next-Level Personalization: How 16k+ Lifelong User Actions Supercharge Pinterest’s Recommendations",
     "url": "https://medium.com/pinterest-engineering/next-level-personalization-how-16k-lifelong-user-actions-supercharge-pinterests-recommendations-bd5989f8f5d3",
     "source": "Pinterest",
     "publishedAt": "2025-06-06",
-    "tags": ["machine-learning", "recommendation", "inference"]
+    "domain": "machine-learning",
+    "tags": ["inference", "recommendation"],
+    "summary": "Extends ranking past recent actions with TransActV2, selecting each candidate's nearest lifelong actions on GPU."
   },
   {
     "title": "Change Data Capture at Pinterest",
     "url": "https://medium.com/pinterest-engineering/change-data-capture-at-pinterest-7e4c357ac527",
     "source": "Pinterest",
     "publishedAt": "2024-11-18",
-    "tags": ["data", "cdc", "debezium", "kafka"]
+    "domain": "data",
+    "tags": ["cdc", "debezium", "kafka"],
+    "summary": "Fits single-shard Debezium to sharded databases without a fork by reconciling per-shard connectors to ZooKeeper."
   },
   {
     "title": "Structured DataStore (SDS): Multi-model Data Management With a Unified Serving Stack",
     "url": "https://medium.com/pinterest-engineering/structured-datastore-sds-multi-model-data-management-with-a-unified-serving-stack-e628f8081971",
     "source": "Pinterest",
     "publishedAt": "2024-10-02",
-    "tags": ["database", "architecture", "thrift"]
+    "domain": "database",
+    "tags": ["thrift"],
+    "summary": "Merges services that each rebuilt caching and routing into SDS, where every API compiles to a Thrift query language."
   },
   {
     "title": "Redesigning Pinterest’s Ad Serving Systems with Zero Downtime (part 2)",
@@ -40,76 +50,98 @@
     "source": "Pinterest",
     "publishedAt": "2024-08-20",
     "series": "pinterest-ad-serving-redesign",
-    "tags": ["architecture", "microservice"]
+    "domain": "distributed-systems",
+    "tags": ["microservice", "migration"],
+    "summary": "Rebuilds Mohawk, whose mutable Thrift data invited races, as AdMixer with a typed DAG and a write-once data model."
   },
   {
     "title": "TiDB Adoption at Pinterest",
     "url": "https://medium.com/pinterest-engineering/tidb-adoption-at-pinterest-1130ab787a10",
     "source": "Pinterest",
     "publishedAt": "2024-07-19",
-    "tags": ["database", "tidb"]
+    "domain": "database",
+    "tags": ["migration", "hbase", "tidb"],
+    "summary": "Breaks a benchmark tie among NewSQL stores to replace HBase by shadowing Ixia traffic, which only TiDB sustained."
   },
   {
     "title": "Building Pinterest’s new wide column database using RocksDB",
     "url": "https://medium.com/pinterest-engineering/building-pinterests-new-wide-column-database-using-rocksdb-f5277ee4e3d2",
     "source": "Pinterest",
     "publishedAt": "2024-01-04",
-    "tags": ["database", "rocksdb"]
+    "domain": "database",
+    "tags": ["storage-engine", "rocksdb"],
+    "summary": "Builds Rockstorewidecolumn to move UserMetaStore off HBase by keying RocksDB on row, column and timestamp."
   },
   {
     "title": "Online Data Migration from HBase to TiDB with Zero Downtime",
     "url": "https://medium.com/pinterest-engineering/online-data-migration-from-hbase-to-tidb-with-zero-downtime-43f0fb474b84",
     "source": "Pinterest",
     "publishedAt": "2022-08-18",
-    "tags": ["database", "migration", "hbase", "tidb"]
+    "domain": "database",
+    "tags": ["migration", "hbase", "tidb"],
+    "summary": "Repairs drift in a live HBase-to-TiDB move, as failed dual writes never roll back, with repeated MapReduce diffs."
   },
   {
     "title": "Improving Distributed Caching Performance and Efficiency at Pinterest",
     "url": "https://medium.com/pinterest-engineering/improving-distributed-caching-performance-and-efficiency-at-pinterest-92484b5fe39b",
     "source": "Pinterest",
     "publishedAt": "2022-05-12",
-    "tags": ["database", "caching", "memcached"]
+    "domain": "database",
+    "tags": ["caching", "memcached"],
+    "summary": "Cuts memcached tail latency spikes from scheduler waits behind other host processes by running it under SCHED_FIFO."
   },
   {
     "title": "99% to 99.9% SLO: High Performance Kubernetes Control Plane at Pinterest",
     "url": "https://medium.com/pinterest-engineering/99-to-99-9-slo-high-performance-kubernetes-control-plane-at-pinterest-894bc8a964f9",
     "source": "Pinterest",
     "publishedAt": "2022-03-22",
-    "tags": ["container", "kubernetes", "reliability"]
+    "domain": "infrastructure",
+    "tags": ["reliability", "control-plane", "kubernetes"],
+    "summary": "Ends head-of-line blocking in controller workqueues by delaying informer-init Creates and resync Updates."
   },
   {
     "title": "MemQ: An efficient, scalable cloud native PubSub system",
     "url": "https://medium.com/pinterest-engineering/memq-an-efficient-scalable-cloud-native-pubsub-system-4402695dd4e7",
     "source": "Pinterest",
     "publishedAt": "2021-11-16",
-    "tags": ["data", "kafka", "s3"]
+    "domain": "data",
+    "tags": ["pub-sub", "s3"],
+    "summary": "Avoids Kafka's costly rebalancing and replication for latency-tolerant data with MemQ, which batches writes to S3."
   },
   {
     "title": "How we scaled the size of Pinterest’s ad corpus by 60x",
     "url": "https://medium.com/pinterest-engineering/how-we-scaled-the-size-of-pinterests-ad-corpus-by-60x-d6d5bfa6bf16",
     "source": "Pinterest",
     "publishedAt": "2021-08-05",
-    "tags": ["search", "indexing"]
+    "domain": "search",
+    "tags": ["indexing"],
+    "summary": "Moves the ads index, which outgrew funnel memory, to a KV store read in parallel with ranking to hide the RPC."
   },
   {
     "title": "Using Kafka to throttle QPS on MySQL shards in bulk write APIs",
     "url": "https://medium.com/pinterest-engineering/using-kafka-to-throttle-qps-on-mysql-shards-in-bulk-write-apis-a326ae0f1ac1",
     "source": "Pinterest",
     "publishedAt": "2019-11-25",
-    "tags": ["database", "sharding", "kafka", "mysql"]
+    "domain": "database",
+    "tags": ["sharding", "overload-control", "kafka", "mysql"],
+    "summary": "Shifts bulk writes off APIs whose rate limits let hot MySQL shards through onto a paced Kafka partition per shard."
   },
   {
     "title": "Sharding Pinterest: How we scaled our MySQL fleet",
     "url": "https://medium.com/pinterest-engineering/sharding-pinterest-how-we-scaled-our-mysql-fleet-3f341e96ca6f",
     "source": "Pinterest",
     "publishedAt": "2015-08-17",
-    "tags": ["database", "sharding", "mysql"]
+    "domain": "database",
+    "tags": ["sharding", "mysql"],
+    "summary": "Swaps crashing NoSQL stores for MySQL shards that are named in every object ID and move between hosts whole."
   },
   {
     "title": "Serving configuration data at scale with high availability",
     "url": "https://medium.com/pinterest-engineering/serving-configuration-data-at-scale-with-high-availability-8612521c1108",
     "source": "Pinterest",
     "publishedAt": "2015-03-06",
-    "tags": ["architecture", "zookeeper", "s3"]
+    "domain": "distributed-systems",
+    "tags": ["coordination", "s3", "zookeeper"],
+    "summary": "Stops fleetwide reloads from saturating one Redis master by putting config in S3 and its version in ZooKeeper."
   }
 ]

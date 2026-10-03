@@ -4,42 +4,54 @@
     "url": "https://aws.amazon.com/blogs/big-data/accelerating-spark-queries-with-iceberg-materialized-views/",
     "source": "Amazon",
     "publishedAt": "2026-09-10",
-    "tags": ["data", "query-engine", "spark", "iceberg"]
+    "domain": "data",
+    "tags": ["query-engine", "iceberg", "spark"],
+    "summary": "Speeds Spark queries whose SQL can't change by swapping matching plan subtrees for fresh Iceberg materialized views."
   },
   {
     "title": "Under the hood: how Amazon EKS Auto Mode detects, repairs, and diagnoses node failures",
     "url": "https://aws.amazon.com/blogs/containers/under-the-hood-how-amazon-eks-auto-mode-detects-repairs-and-diagnoses-node-failures/",
     "source": "Amazon",
     "publishedAt": "2026-08-05",
-    "tags": ["container", "kubernetes", "reliability"]
+    "domain": "infrastructure",
+    "tags": ["failover", "kubernetes"],
+    "summary": "Ends manual repair of nodes with dead GPUs or wedged runtimes via agent-set node conditions that Karpenter acts on."
   },
   {
     "title": "Under the hood: Amazon EKS ultra scale clusters",
     "url": "https://aws.amazon.com/blogs/containers/under-the-hood-amazon-eks-ultra-scale-clusters/",
     "source": "Amazon",
     "publishedAt": "2025-07-16",
-    "tags": ["container", "kubernetes", "etcd"]
+    "domain": "infrastructure",
+    "tags": ["control-plane", "eks", "etcd", "kubernetes"],
+    "summary": "Lifts etcd's write ceiling for huge AI clusters by moving raft consensus to AWS's journal and BoltDB onto tmpfs."
   },
   {
     "title": "Amazon OpenSearch Service Under the Hood: OpenSearch Optimized Instances (OR1)",
     "url": "https://aws.amazon.com/blogs/big-data/amazon-opensearch-service-under-the-hood-opensearch-optimized-instancesor1/",
     "source": "Amazon",
     "publishedAt": "2024-04-17",
-    "tags": ["search", "indexing", "storage", "opensearch"]
+    "domain": "search",
+    "tags": ["database", "indexing", "opensearch"],
+    "summary": "Stops replicas from costing indexing throughput by indexing only on the primary and copying segments through S3."
   },
   {
     "title": "How Prime Video updates its app for more than 8,000 device types",
     "url": "https://www.amazon.science/blog/how-prime-video-updates-its-app-for-more-than-8-000-device-types",
     "source": "Amazon",
     "publishedAt": "2022-01-27",
-    "tags": ["frontend", "rust", "webassembly"]
+    "domain": "frontend",
+    "tags": ["rust", "webassembly"],
+    "summary": "Eases the trade-off between fast C++ and easy-to-ship JavaScript by porting downloaded render code to Rust on Wasm."
   },
   {
     "title": "Amazon Aurora under the hood: indexing geospatial data using Z-order curves",
     "url": "https://aws.amazon.com/blogs/database/amazon-aurora-under-the-hood-indexing-geospatial-data-using-z-order-curves/",
     "source": "Amazon",
     "publishedAt": "2018-01-22",
-    "tags": ["database", "aurora", "mysql"]
+    "domain": "database",
+    "tags": ["secondary-index", "geospatial", "aurora", "mysql"],
+    "summary": "Replaces R-trees, which degrade with insertion order under OLTP, with a B-tree over bit-interleaved z-order keys."
   },
   {
     "title": "Amazon Aurora Under the Hood: Quorum Membership",
@@ -47,7 +59,9 @@
     "source": "Amazon",
     "publishedAt": "2017-08-23",
     "series": "aurora-quorum",
-    "tags": ["database", "replication", "aurora"]
+    "domain": "database",
+    "tags": ["replication", "aurora"],
+    "summary": "Avoids Paxos stalls when replacing a suspect segment by requiring both old and new quorums under a new epoch."
   },
   {
     "title": "Amazon Aurora Under the Hood: Reducing Costs Using Quorum Sets",
@@ -55,7 +69,9 @@
     "source": "Amazon",
     "publishedAt": "2017-08-21",
     "series": "aurora-quorum",
-    "tags": ["database", "replication", "aurora"]
+    "domain": "database",
+    "tags": ["replication", "cost", "aurora"],
+    "summary": "Cuts the cost of storing every copy in full by mixing full and log-only tail segments under Boolean quorum rules."
   },
   {
     "title": "Amazon Aurora Under the Hood: Quorum Reads and Mutating State",
@@ -63,7 +79,9 @@
     "source": "Amazon",
     "publishedAt": "2017-08-16",
     "series": "aurora-quorum",
-    "tags": ["database", "replication", "aurora"]
+    "domain": "database",
+    "tags": ["replication", "aurora"],
+    "summary": "Avoids slow quorum reads by reading from one storage node that write acks show is complete up to the read LSN."
   },
   {
     "title": "Amazon Aurora under the hood: quorums and correlated failure",
@@ -71,6 +89,8 @@
     "source": "Amazon",
     "publishedAt": "2017-08-14",
     "series": "aurora-quorum",
-    "tags": ["database", "replication", "aurora"]
+    "domain": "database",
+    "tags": ["replication", "aurora"],
+    "summary": "Survives an AZ outage plus another failure by spreading copies across AZs and sizing write and read quorums to match."
   }
 ]

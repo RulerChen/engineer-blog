@@ -6,7 +6,7 @@
     "source": "DeepSeek",
     "publishedAt": "2025-01-22",
     "topic": "ml-rl",
-    "summary": "Gets reasoning out of reinforcement learning against verifiable answers, with little or no supervised reasoning data first."
+    "summary": "Gets reasoning out of reinforcement learning on verifiable answers, with little or no supervised reasoning data first."
   },
   {
     "title": "DeepSeek-V3",
@@ -15,7 +15,7 @@
     "source": "DeepSeek",
     "publishedAt": "2024-12-27",
     "topic": "ml-llm",
-    "summary": "A mixture-of-experts model trained for a fraction of the usual cost, with the parallelism and FP8 detail most reports omit."
+    "summary": "A mixture-of-experts model trained for a fraction of the usual cost, with the parallelism and FP8 detail others omit."
   },
   {
     "title": "Actions Speak Louder than Words",
@@ -51,7 +51,7 @@
     "source": "Meta",
     "publishedAt": "2023-02-27",
     "topic": "ml-llm",
-    "summary": "Trains smaller models on far more tokens than compute-optimal, because inference cost is what a deployed model charges you."
+    "summary": "Trains smaller models on far more tokens than compute-optimal, as inference cost is what a deployed model charges you."
   },
   {
     "title": "Whisper",
@@ -78,7 +78,7 @@
     "source": "Amazon",
     "publishedAt": "2022-06-12",
     "topic": "db-real-system",
-    "summary": "What a decade of customer workloads changed in the warehouse: automatic tuning, and compute separated from managed storage."
+    "summary": "What a decade of customer workloads changed in the warehouse: automatic tuning, and compute split from managed storage."
   },
   {
     "title": "FlashAttention",
@@ -143,7 +143,7 @@
     "publishedAt": "2020-06-14",
     "topic": "db-real-system",
     "series": "spanner",
-    "summary": "Serializable geo-distributed transactions without special clocks, using hybrid logical clocks and reads that refresh their timestamp."
+    "summary": "Serializable geo-distributed transactions without special clocks, using hybrid logical clocks and read refreshes."
   },
   {
     "title": "GPT-3",
@@ -260,7 +260,7 @@
     "source": "Meta",
     "publishedAt": "2014-08-24",
     "topic": "ml-classic",
-    "summary": "Decision-tree features feeding a linear online learner, and the finding that data freshness mattered more than the model class."
+    "summary": "Decision-tree features feeding a linear online learner, and the finding that data freshness outweighed the model class."
   },
   {
     "title": "Raft",
@@ -278,7 +278,7 @@
     "source": "Google",
     "publishedAt": "2013-08-12",
     "topic": "net-sdn",
-    "summary": "Google's software-defined WAN, run near full utilization by treating inter-datacenter bandwidth as a global optimization."
+    "summary": "A software-defined WAN run near full utilization by treating inter-datacenter bandwidth as a global optimization."
   },
   {
     "title": "TAO",
@@ -324,7 +324,7 @@
     "source": "Yahoo",
     "publishedAt": "2010-06-23",
     "topic": "ds-real-system",
-    "summary": "A coordination service with a wait-free, filesystem-like API, so applications build locks instead of embedding consensus."
+    "summary": "A coordination service with a wait-free, filesystem-like API, so clients build locks instead of embedding consensus."
   },
   {
     "title": "The Origin of Quorum Systems",
@@ -370,7 +370,7 @@
     "source": "Amazon",
     "publishedAt": "2007-10-14",
     "topic": "db-data-model",
-    "summary": "Chooses availability over consistency: consistent hashing, tunable quorums, and version conflicts the application resolves."
+    "summary": "Chooses availability over consistency: consistent hashing, tunable quorums, and version conflicts the client resolves."
   },
   {
     "title": "Paxos Made Live",
@@ -416,7 +416,7 @@
     "source": "Cornell",
     "publishedAt": "2005-07-17",
     "topic": "ds-fundamentals",
-    "summary": "Proves the overlay a gossip membership protocol maintains stays connected for a time exponential in the square of the view size."
+    "summary": "Proves a gossip membership overlay stays connected for a time exponential in the square of the view size."
   },
   {
     "title": "MapReduce",
@@ -425,7 +425,7 @@
     "source": "Google",
     "publishedAt": "2004-12-06",
     "topic": "ds-real-system",
-    "summary": "Reduces distributed batch computation to two user functions, leaving partitioning, scheduling and retries to the framework."
+    "summary": "Reduces distributed batch jobs to two user functions, leaving partitioning, scheduling and retries to the framework."
   },
   {
     "title": "The Google File System",
@@ -454,7 +454,7 @@
     "source": "Princeton",
     "publishedAt": "1987-05-27",
     "topic": "db-fundamentals",
-    "summary": "Splits a long-lived transaction into steps that commit as they go, each paired with a compensating transaction that undoes it."
+    "summary": "Splits a long-lived transaction into steps that commit as they go, each with a compensating transaction to undo it."
   },
   {
     "title": "Time, Clocks, and the Ordering of Events",
@@ -462,6 +462,6 @@
     "type": "paper",
     "publishedAt": "1978-07-01",
     "topic": "ds-fundamentals",
-    "summary": "Defines happened-before as a partial order over events, and shows a logical clock can respect it without synchronized time."
+    "summary": "Defines happened-before as a partial order on events, and shows logical clocks can respect it without synchronized time."
   }
 ]

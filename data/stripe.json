@@ -4,20 +4,26 @@
     "url": "https://stripe.dev/blog/building-a-data-plane-from-scratch-stripes-own-high-performance-distributed-proxy",
     "source": "Stripe",
     "publishedAt": "2026-08-26",
-    "tags": ["go", "load-balance", "network", "proxy"]
+    "domain": "network",
+    "tags": ["load-balancing", "proxy", "go"],
+    "summary": "Fixes connection floods from Envoy's per-core workers with mesh-proxy, a Go proxy that shares one connection per host."
   },
   {
     "title": "How Stripe’s document databases supported 99.999% uptime with zero-downtime data migrations",
     "url": "https://stripe.dev/blog/how-stripes-document-databases-supported-99.999-uptime-with-zero-downtime-data-migrations",
     "source": "Stripe",
     "publishedAt": "2024-06-06",
-    "tags": ["database", "migration", "mongodb"]
+    "domain": "database",
+    "tags": ["sharding", "migration", "mongodb"],
+    "summary": "Scales DocDB past MongoDB's vertical limits by moving live chunks between shards, cutting over with version tokens."
   },
   {
     "title": "Stripe’s payments APIs: The first 10 years",
     "url": "https://stripe.dev/blog/payment-api-design",
     "source": "Stripe",
     "publishedAt": "2020-12-15",
-    "tags": ["api-design", "restful"]
+    "domain": "distributed-systems",
+    "tags": ["api-design"],
+    "summary": "Swaps card-shaped Charges and Sources, which broke on async and redirect methods, for one PaymentIntents state machine."
   }
 ]

@@ -4,42 +4,54 @@
     "url": "https://www.canva.dev/blog/engineering/session-revocations-at-scale/",
     "source": "Canva",
     "publishedAt": "2026-07-22",
-    "tags": ["security", "storage", "object-storage", "s3"]
+    "domain": "security",
+    "tags": ["access-control", "object-storage", "s3"],
+    "summary": "Keeps deploys from stampeding MySQL for revocations by seeding gateway caches from sorted binary chunks in S3."
   },
   {
     "title": "The foundations of Canva's continuous data platform with Snowpipe Streaming",
     "url": "https://www.canva.dev/blog/engineering/snowpipe-streaming/",
     "source": "Canva",
     "publishedAt": "2025-01-06",
-    "tags": ["data", "etl", "snowflake", "kinesis"]
+    "domain": "data",
+    "tags": ["ingestion", "kinesis", "snowflake"],
+    "summary": "Swaps Firehose, whose per-record billing floor inflated costs, for Snowpipe Streaming with one client per KCL shard."
   },
   {
     "title": "Real-time mouse pointers",
     "url": "https://www.canva.dev/blog/engineering/realtime-mouse-pointers/",
     "source": "Canva",
     "publishedAt": "2024-08-15",
-    "tags": ["network", "webrtc", "redis"]
+    "domain": "network",
+    "tags": ["webrtc", "real-time", "redis"],
+    "summary": "Moves pointer traffic from single-node Redis PubSub, too small for faster updates, to a WebRTC data channel mesh."
   },
   {
     "title": "How Canva collects 25 billion events per day",
     "url": "https://www.canva.dev/blog/engineering/product-analytics-event-collection/",
     "source": "Canva",
     "publishedAt": "2024-07-10",
-    "tags": ["data", "stream-processing", "kinesis"]
+    "domain": "data",
+    "tags": ["ingestion", "kinesis"],
+    "summary": "Replaces SQS and SNS, which dominated the bill, with Kinesis streams that overflow to SQS on throttling or stalls."
   },
   {
     "title": "Behind the draw - How Canva's drawing tool works",
     "url": "https://www.canva.dev/blog/engineering/behind-the-draw/",
     "source": "Canva",
     "publishedAt": "2024-03-14",
-    "tags": ["frontend", "svg"]
+    "domain": "frontend",
+    "tags": ["rendering", "svg"],
+    "summary": "Shrinks strokes that hit the design size limit with coordinate rounding, Ramer-Douglas-Peucker and polygon union."
   },
   {
     "title": "From Zero to 50 Million Uploads per Day: Scaling Media at Canva",
     "url": "https://www.canva.dev/blog/engineering/from-zero-to-50-million-uploads-per-day-scaling-media-at-canva/",
     "source": "Canva",
     "publishedAt": "2022-11-29",
-    "tags": ["database", "migration", "dynamodb", "mysql"]
+    "domain": "database",
+    "tags": ["migration", "dynamodb", "mysql"],
+    "summary": "Escapes MySQL's schema-change and replication limits by moving media live to DynamoDB through ID-only SQS messages."
   },
   {
     "title": "Search Pipeline: Part II",
@@ -47,27 +59,26 @@
     "source": "Canva",
     "publishedAt": "2022-11-17",
     "series": "canva-search-pipeline",
-    "tags": ["search", "ranking", "architecture"]
+    "domain": "search",
+    "tags": ["ranking"],
+    "summary": "Lets Canva's search systems share components via ordered pipeline steps that read but never mutate earlier output."
   },
   {
     "title": "Machine learning hyperparameter optimization with Argo",
     "url": "https://www.canva.dev/blog/engineering/machine-learning-hyperparameter-optimization-with-argo/",
     "source": "Canva",
     "publishedAt": "2021-09-16",
-    "tags": ["machine-learning", "training", "argo-workflows"]
+    "domain": "machine-learning",
+    "tags": ["training", "argo-workflows"],
+    "summary": "Ends sequential tuning on vertically scaled trainers with Optuna map-reduce rounds of parallel trainers on Argo."
   },
   {
     "title": "Enabling real-time collaboration with RSocket",
     "url": "https://www.canva.dev/blog/engineering/enabling-real-time-collaboration-with-rsocket/",
     "source": "Canva",
     "publishedAt": "2021-05-27",
-    "tags": ["network", "load-balance", "rsocket", "websocket"]
-  },
-  {
-    "title": "Lessons learnt from building reactive microservices for Canva Live",
-    "url": "https://www.canva.dev/blog/engineering/lessons-learnt-from-building-reactive-microservices-for-canva-live/",
-    "source": "Canva",
-    "publishedAt": "2020-10-12",
-    "tags": ["architecture", "microservice", "redis"]
+    "domain": "network",
+    "tags": ["load-balancing", "websocket", "real-time", "rsocket"],
+    "summary": "Avoids a WebSocket per service with a gateway multiplexing RSocket channels whose backpressure isolates failures."
   }
 ]

@@ -4,42 +4,54 @@
     "url": "https://www.notion.com/blog/how-notion-handles-concurrent-editing-with-crdts",
     "source": "Notion",
     "publishedAt": "2026-09-18",
-    "tags": ["architecture", "crdt"]
+    "domain": "distributed-systems",
+    "tags": ["crdt"],
+    "summary": "Stops last-write-wins from losing concurrent block edits with an RGA text CRDT that tracks text across block splits."
   },
   {
     "title": "Rebuilding Notion's lexical search reindexer",
     "url": "https://www.notion.com/blog/rebuilding-notions-lexical-search-reindexer",
     "source": "Notion",
     "publishedAt": "2026-08-10",
-    "tags": ["elasticsearch", "indexing", "search", "spark"]
+    "domain": "search",
+    "tags": ["indexing", "elasticsearch", "spark"],
+    "summary": "Replaces a slow, gap-prone reindexer on the live Elasticsearch API with Spark jobs that write restorable snapshots."
   },
   {
     "title": "Balancing cost and reliability for Spark on Kubernetes",
     "url": "https://www.notion.com/blog/balancing-cost-and-reliability-for-spark-on-kubernetes",
     "source": "Notion",
     "publishedAt": "2026-02-12",
-    "tags": ["data", "kubernetes", "spark"]
+    "domain": "data",
+    "tags": ["infrastructure", "cost", "kubernetes", "spark"],
+    "summary": "Stops a spot interruption from killing many of a Spark job's executors at once with Spot Balancer's per-job spot cap."
   },
   {
     "title": "How we made Notion available offline",
     "url": "https://www.notion.com/blog/how-we-made-notion-available-offline",
     "source": "Notion",
     "publishedAt": "2025-12-11",
-    "tags": ["frontend", "sqlite"]
+    "domain": "frontend",
+    "tags": ["offline", "sqlite"],
+    "summary": "Prevents pages kept offline for several reasons from losing access when one is cleared by storing a row per reason."
   },
   {
     "title": "How we sped up Notion in the browser with WASM SQLite",
     "url": "https://www.notion.com/blog/how-we-sped-up-notion-in-the-browser-with-wasm-sqlite",
     "source": "Notion",
     "publishedAt": "2024-07-10",
-    "tags": ["frontend", "sqlite", "wasm"]
+    "domain": "frontend",
+    "tags": ["sqlite", "webassembly"],
+    "summary": "Ends SQLite corruption from concurrent OPFS writers by routing all tabs' queries via a SharedWorker to one active tab."
   },
   {
     "title": "Building and scaling Notion's data lake",
     "url": "https://www.notion.com/blog/building-and-scaling-notions-data-lake",
     "source": "Notion",
     "publishedAt": "2024-07-01",
-    "tags": ["data", "data-lake", "hudi", "spark"]
+    "domain": "data",
+    "tags": ["data-lake", "hudi", "spark"],
+    "summary": "Replaces Snowflake ingestion, slow and costly for update-heavy blocks, with Debezium CDC via Kafka into Hudi on S3."
   },
   {
     "title": "The Great Re-shard: adding Postgres capacity (again) with zero downtime",
@@ -47,7 +59,9 @@
     "source": "Notion",
     "publishedAt": "2023-07-17",
     "series": "notion-postgresql-sharding",
-    "tags": ["database", "postgresql", "sharding"]
+    "domain": "database",
+    "tags": ["sharding", "postgresql"],
+    "summary": "Relieves Postgres shards near CPU and IOPS limits by moving logical schemas to more hosts behind a sharded PgBouncer."
   },
   {
     "title": "Herding elephants: Lessons learned from sharding Postgres at Notion",
@@ -55,6 +69,8 @@
     "source": "Notion",
     "publishedAt": "2021-10-06",
     "series": "notion-postgresql-sharding",
-    "tags": ["database", "postgresql", "sharding"]
+    "domain": "database",
+    "tags": ["sharding", "postgresql"],
+    "summary": "Heads off TXID wraparound as VACUUM stalled by sharding the Postgres monolith by workspace ID into logical schemas."
   }
 ]

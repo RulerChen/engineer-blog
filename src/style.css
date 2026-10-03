@@ -376,6 +376,15 @@ input::placeholder {
   background: var(--line);
   margin: 6px 14px;
 }
+/* A section heading in the topic menu, quieter than a row so the rows still read as the list. */
+.filter-menu-group {
+  padding: 10px 14px 4px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
 .filter-empty {
   padding: 12px 14px;
   color: var(--muted);
@@ -674,6 +683,10 @@ input::placeholder {
   background: var(--chip);
   color: var(--chip-ink);
   border: 0;
+}
+/* A domain chip names the shelf, so it sits a shade warmer than the topics beside it. */
+.entry-card .tag-domain {
+  background: color-mix(in srgb, var(--accent) 10%, var(--chip));
 }
 /* A tag chip is a filter button. Same shape as it always was — only the cursor
    and the hover say so, so the row still reads as labels rather than controls. */

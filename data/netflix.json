@@ -4,56 +4,72 @@
     "url": "https://netflixtechblog.com/a-tale-of-two-flink-autoscalers-e9f6a1b1492b",
     "source": "Netflix",
     "publishedAt": "2026-08-21",
-    "tags": ["data", "stream-processing", "flink"]
+    "domain": "data",
+    "tags": ["stream-processing", "autoscaling", "flink"],
+    "summary": "Replaces an autoscaler that resized whole jobs from coarse container metrics with Flink's per-operator autoscaler."
   },
   {
     "title": "In-House LLM Serving at Netflix",
     "url": "https://netflixtechblog.com/in-house-llm-serving-at-netflix-a5a8e799ea2c",
     "source": "Netflix",
     "publishedAt": "2026-07-17",
-    "tags": ["machine-learning", "inference", "llm"]
+    "domain": "machine-learning",
+    "tags": ["inference", "llm"],
+    "summary": "Fixes CPU-bound decoding from per-request Python logits processors serialized on the GIL with batch-level C++ ones."
   },
   {
     "title": "Building Service Topology at Scale: Architecture, Challenges, and Lessons Learned",
     "url": "https://netflixtechblog.com/building-service-topology-at-scale-architecture-challenges-and-lessons-learned-f4b792f3f0d8",
     "source": "Netflix",
     "publishedAt": "2026-07-13",
-    "tags": ["observability", "architecture", "microservice"]
+    "domain": "reliability",
+    "tags": ["microservice"],
+    "summary": "Ends hot nodes from destination-keyed hashing of eBPF flows by pre-aggregating locally and rehashing by intermediary."
   },
   {
     "title": "Dynamic Repartitioning for Time Series Workloads",
     "url": "https://netflixtechblog.com/dynamically-splitting-wide-partitions-in-cassandra-for-time-series-workloads-0eded064f456",
     "source": "Netflix",
     "publishedAt": "2026-06-03",
-    "tags": ["database", "sharding", "cassandra"]
+    "domain": "database",
+    "tags": ["sharding", "time-series", "cassandra"],
+    "summary": "Cuts timeouts on wide Cassandra partitions of heavy IDs by splitting them and routing reads through a Bloom filter."
   },
   {
     "title": "The Evolution of Cassandra Data Movement at Netflix",
     "url": "https://netflixtechblog.com/the-evolution-of-cassandra-data-movement-at-netflix-6e13329c80a1",
     "source": "Netflix",
     "publishedAt": "2026-05-18",
-    "tags": ["database", "migration", "cassandra"]
+    "domain": "database",
+    "tags": ["migration", "cassandra"],
+    "summary": "Replaces Casspactor, which read drifting metadata and crashed on wide partitions, with a Spark engine reading only S3."
   },
   {
     "title": "Scaling LLM Post-Training at Netflix",
     "url": "https://netflixtechblog.com/scaling-llm-post-training-at-netflix-0046f8790194",
     "source": "Netflix",
     "publishedAt": "2026-02-13",
-    "tags": ["machine-learning", "training", "llm"]
+    "domain": "machine-learning",
+    "tags": ["training", "llm"],
+    "summary": "Turns a thin Ray driver that could not coordinate on-policy RL stages into a single controller over SPMD workers."
   },
   {
     "title": "Automating RDS Postgres to Aurora Postgres Migration",
     "url": "https://netflixtechblog.com/automating-rds-postgres-to-aurora-postgres-migration-261ca045447f",
     "source": "Netflix",
     "publishedAt": "2026-02-12",
-    "tags": ["database", "migration", "postgresql"]
+    "domain": "database",
+    "tags": ["migration", "aurora", "postgresql"],
+    "summary": "Quiesces RDS for Aurora cutover without credentials or trusting clients by detaching security groups and rebooting."
   },
   {
     "title": "High-Throughput Graph Abstraction at Netflix: Part I",
     "url": "https://netflixtechblog.com/high-throughput-graph-abstraction-at-netflix-part-i-e88063e6f6d5",
     "source": "Netflix",
     "publishedAt": "2026-02-09",
-    "tags": ["database", "architecture"]
+    "domain": "database",
+    "tags": ["graph"],
+    "summary": "Prevents wide rows on highly connected nodes by storing edge links apart from edge properties in the KV Abstraction."
   },
   {
     "title": "Netflix Live Origin",
@@ -61,21 +77,27 @@
     "source": "Netflix",
     "publishedAt": "2025-12-15",
     "series": "netflix-live",
-    "tags": ["network", "architecture"]
+    "domain": "network",
+    "tags": ["edge"],
+    "summary": "Shields non-autoscaling storage from request storms, using the segment template to cache early 404s and shed DVR first."
   },
   {
     "title": "How Temporal Powers Reliable Cloud Operations at Netflix",
     "url": "https://netflixtechblog.com/how-temporal-powers-reliable-cloud-operations-at-netflix-73c69ccb5953",
     "source": "Netflix",
     "publishedAt": "2025-12-15",
-    "tags": ["architecture", "job-queue", "reliability"]
+    "domain": "distributed-systems",
+    "tags": ["workflow", "temporal"],
+    "summary": "Stops deploys failing on transient faults by moving Clouddriver cloud operations off instance-local state to Temporal."
   },
   {
     "title": "Mount Mayhem at Netflix: Scaling Containers on Modern CPUs",
     "url": "https://netflixtechblog.com/mount-mayhem-at-netflix-scaling-containers-on-modern-cpus-f3b09b68beac",
     "source": "Netflix",
     "publishedAt": "2025-11-07",
-    "tags": ["container", "operating-system", "kernel"]
+    "domain": "infrastructure",
+    "tags": ["hardware", "isolation", "debugging"],
+    "summary": "Traces launch stalls to per-layer idmap mounts contending on the VFS mount lock, then idmaps the layers' common parent."
   },
   {
     "title": "Behind the Streams: Real-Time Recommendations for Live Events Part 3",
@@ -83,14 +105,18 @@
     "source": "Netflix",
     "publishedAt": "2025-10-20",
     "series": "netflix-live",
-    "tags": ["reliability", "overload-control", "machine-learning"]
+    "domain": "machine-learning",
+    "tags": ["recommendation", "overload-control"],
+    "summary": "Avoids a thundering herd when a live event starts by prefetching into device caches, then broadcasting a state key."
   },
   {
     "title": "Scaling Muse: How Netflix Powers Data-Driven Creative Insights at Trillion-Row Scale",
     "url": "https://netflixtechblog.com/scaling-muse-how-netflix-powers-data-driven-creative-insights-at-trillion-row-scale-aa9ad326fd77",
     "source": "Netflix",
     "publishedAt": "2025-09-22",
-    "tags": ["data", "query-engine", "druid"]
+    "domain": "data",
+    "tags": ["query-engine", "druid"],
+    "summary": "Swaps costly exact distinct counts over long date ranges for HLL sketches built at Druid ingest and merged in Spark."
   },
   {
     "title": "Behind the Streams: Building a Reliable Cloud Live Streaming Pipeline for Netflix. Part 2.",
@@ -98,7 +124,8 @@
     "source": "Netflix",
     "publishedAt": "2025-09-15",
     "series": "netflix-live",
-    "tags": ["reliability", "architecture"]
+    "domain": "reliability",
+    "summary": "Lets the origin pick between regional encoders that never talk by mapping SEI frame timecodes to the same segments."
   },
   {
     "title": "Behind the Streams: Three Years Of Live at Netflix. Part 1.",
@@ -106,105 +133,125 @@
     "source": "Netflix",
     "publishedAt": "2025-07-15",
     "series": "netflix-live",
-    "tags": ["architecture", "network"]
+    "domain": "network",
+    "summary": "Builds what Live needed beyond on-demand streaming, from broadcast centers to Open Connect, and tames retry storms."
   },
   {
     "title": "Netflix Tudum Architecture: from CQRS with Kafka to CQRS with RAW Hollow",
     "url": "https://netflixtechblog.com/netflix-tudum-architecture-from-cqrs-with-kafka-to-cqrs-with-raw-hollow-86d141b72e52",
     "source": "Netflix",
     "publishedAt": "2025-07-10",
-    "tags": ["architecture", "database", "caching"]
+    "domain": "distributed-systems",
+    "tags": ["event-driven", "caching", "migration"],
+    "summary": "Traces slow previews to a near cache refreshing key by key, then swaps Kafka and the cache for in-process RAW Hollow."
   },
   {
     "title": "Foundation Model for Personalized Recommendation",
     "url": "https://netflixtechblog.com/foundation-model-for-personalized-recommendation-1a0bd8e02d39",
     "source": "Netflix",
     "publishedAt": "2025-03-21",
-    "tags": ["machine-learning", "training", "llm"]
+    "domain": "machine-learning",
+    "tags": ["training", "recommendation", "llm"],
+    "summary": "Centralizes preference learning, once spread over siloed models that saw only recent history, in a GPT-style model."
   },
   {
     "title": "Netflix’s Distributed Counter Abstraction",
     "url": "https://netflixtechblog.com/netflixs-distributed-counter-abstraction-8d0c45eb66b2",
     "source": "Netflix",
     "publishedAt": "2024-11-12",
-    "tags": ["database", "architecture", "cassandra"]
+    "domain": "database",
+    "tags": ["cassandra"],
+    "summary": "Counts without lock contention or unsafe retries by logging idempotent increments, rolled up over a lagging window."
   },
   {
     "title": "Introducing Netflix’s TimeSeries Data Abstraction Layer",
     "url": "https://netflixtechblog.com/introducing-netflix-timeseries-data-abstraction-layer-31552f6326f8",
     "source": "Netflix",
     "publishedAt": "2024-10-08",
-    "tags": ["database", "sharding", "cassandra"]
+    "domain": "database",
+    "tags": ["sharding", "time-series", "cassandra"],
+    "summary": "Avoids row-TTL tombstones that slow Cassandra scans by writing events to time-slice tables dropped whole on expiry."
   },
   {
     "title": "Introducing Netflix’s Key-Value Data Abstraction Layer",
     "url": "https://netflixtechblog.com/introducing-netflixs-key-value-data-abstraction-layer-1ea8a0a11b30",
     "source": "Netflix",
     "publishedAt": "2024-09-18",
-    "tags": ["database", "api-design", "cassandra"]
+    "domain": "database",
+    "tags": ["key-value", "cassandra"],
+    "summary": "Shields teams from each store's pitfalls and breaking APIs by hiding Cassandra and others behind a two-level map."
   },
   {
     "title": "Pushy to the Limit: Evolving Netflix’s WebSocket proxy for the future",
     "url": "https://netflixtechblog.com/pushy-to-the-limit-evolving-netflixs-websocket-proxy-for-the-future-b468bc0ff658",
     "source": "Netflix",
     "publishedAt": "2024-09-10",
-    "tags": ["network", "proxy", "websocket"]
+    "domain": "network",
+    "tags": ["proxy", "websocket", "real-time"],
+    "summary": "Shrinks a costly Pushy fleet near NLB limits by packing more connections per node, weighed against reconnect herds."
   },
   {
     "title": "Java 21 Virtual Threads - Dude, Where’s My Lock?",
     "url": "https://netflixtechblog.com/java-21-virtual-threads-dude-wheres-my-lock-3052540e231d",
     "source": "Netflix",
     "publishedAt": "2024-07-29",
-    "tags": ["language", "java"]
-  },
-  {
-    "title": "Maestro: Data/ML Workflow Orchestrator at Netflix",
-    "url": "https://netflixtechblog.com/maestro-netflixs-workflow-orchestrator-ee13a06f9c78",
-    "source": "Netflix",
-    "publishedAt": "2024-07-22",
-    "tags": ["architecture", "job-queue", "data"]
+    "domain": "programming",
+    "tags": ["concurrency", "debugging", "java"],
+    "summary": "Traces Tomcat hangs to virtual threads pinned in synchronized blocks on every carrier, starving the next lock owner."
   },
   {
     "title": "Reverse Searching Netflix’s Federated Graph",
     "url": "https://netflixtechblog.com/reverse-searching-netflixs-federated-graph-222ac5d23576",
     "source": "Netflix",
     "publishedAt": "2024-04-04",
-    "tags": ["search", "indexing", "elasticsearch"]
+    "domain": "search",
+    "tags": ["indexing", "elasticsearch"],
+    "summary": "Avoids re-running every saved search on each change by indexing the searches as Elasticsearch percolator queries."
   },
   {
     "title": "Kubernetes And Kernel Panics",
     "url": "https://netflixtechblog.com/kubernetes-and-kernel-panics-ed620b9c6225",
     "source": "Netflix",
     "publishedAt": "2023-10-27",
-    "tags": ["container", "kubernetes", "operating-system"]
+    "domain": "infrastructure",
+    "tags": ["debugging", "kubernetes"],
+    "summary": "Gives pods orphaned by kernel panics their missing exit reason by catching netconsole last-gasp UDP and annotating them."
   },
   {
     "title": "Migrating Critical Traffic At Scale with No Downtime — Part 1",
     "url": "https://netflixtechblog.com/migrating-critical-traffic-at-scale-with-no-downtime-part-1-ba1c7a1c7835",
     "source": "Netflix",
     "publishedAt": "2023-05-04",
-    "tags": ["testing", "reliability"]
+    "domain": "reliability",
+    "tags": ["testing", "migration"],
+    "summary": "Catches migration bugs on rare inputs before cutover by replaying cloned traffic and diffing old and new responses."
   },
   {
     "title": "Timestone: Netflix’s High-Throughput, Low-Latency Priority Queueing System with Built-in Support for Non-Parallelizable Workloads",
     "url": "https://netflixtechblog.com/timestone-netflixs-high-throughput-low-latency-priority-queueing-system-with-built-in-support-1abf249ba95f",
     "source": "Netflix",
     "publishedAt": "2022-09-28",
-    "tags": ["architecture", "job-queue", "database"]
+    "domain": "distributed-systems",
+    "tags": ["job-queue"],
+    "summary": "Stops replica lag from re-leasing a message to another worker by building Timestone on durable Redis with atomic Lua."
   },
   {
     "title": "Building Netflix’s Distributed Tracing Infrastructure",
     "url": "https://netflixtechblog.com/building-netflixs-distributed-tracing-infrastructure-bb856c319304",
     "source": "Netflix",
     "publishedAt": "2020-10-19",
-    "tags": ["observability", "tracing", "storage"]
+    "domain": "reliability",
+    "tags": ["database", "tracing"],
+    "summary": "Fixes samples missing the failing request by fully tracing chosen requests, and Elasticsearch overload via Cassandra."
   },
   {
     "title": "DBLog: A Generic Change-Data-Capture Framework",
     "url": "https://netflixtechblog.com/dblog-a-generic-change-data-capture-framework-69351fb9099b",
     "source": "Netflix",
     "publishedAt": "2019-12-17",
-    "tags": ["data", "cdc", "database"]
+    "domain": "data",
+    "tags": ["database", "cdc"],
+    "summary": "Replaces CDC tools that stall log events or lock tables in dumps with DBLog, bracketing chunk SELECTs in watermarks."
   },
   {
     "title": "Scaling Time Series Data Storage — Part II",
@@ -212,7 +259,9 @@
     "source": "Netflix",
     "publishedAt": "2018-11-05",
     "series": "netflix-time-series-storage",
-    "tags": ["database", "sharding", "cassandra"]
+    "domain": "database",
+    "tags": ["sharding", "time-series", "cassandra"],
+    "summary": "Relieves a viewing-data Cassandra cluster near its size limit as previews surged by sharding it by data type and age."
   },
   {
     "title": "Scaling Time Series Data Storage — Part I",
@@ -220,13 +269,17 @@
     "source": "Netflix",
     "publishedAt": "2018-01-23",
     "series": "netflix-time-series-storage",
-    "tags": ["database", "sharding", "cassandra"]
+    "domain": "database",
+    "tags": ["sharding", "time-series", "cassandra"],
+    "summary": "Fixes slow reads of wide per-member Cassandra rows by splitting viewing history into live and compressed tables."
   },
   {
     "title": "Artwork Personalization at Netflix",
     "url": "https://netflixtechblog.com/artwork-personalization-c589f074ad76",
     "source": "Netflix",
     "publishedAt": "2017-12-07",
-    "tags": ["machine-learning"]
+    "domain": "machine-learning",
+    "tags": ["recommendation"],
+    "summary": "Learns which image drives plays when each title shows only one, via contextual bandits that log exploration for replay."
   }
 ]

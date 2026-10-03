@@ -4,6 +4,8 @@
     "url": "https://cursor.com/blog/git-at-any-scale",
     "source": "Cursor",
     "publishedAt": "2026-08-18",
-    "tags": ["git", "storage", "s3"]
+    "domain": "programming",
+    "tags": ["version-control", "replication", "git", "s3"],
+    "summary": "Drops Spokes-style 3PC, which slows pushes as replicas are added, for Continuity's CAS-committed push WAL in S3."
   }
 ]

@@ -4,35 +4,45 @@
     "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2022/data-transfer-in-manhattan-using-rocksdb",
     "source": "Twitter",
     "publishedAt": "2022-02-28",
-    "tags": ["database", "migration", "rocksdb"]
+    "domain": "database",
+    "tags": ["storage-engine", "rocksdb"],
+    "summary": "Stops RocksDB write stalls from throttling node streaming by disabling them on a destination that serves no reads yet."
   },
   {
     "title": "How we built Twitter’s highly reliable ads pacing service",
     "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2021/how-we-built-twitter-s-highly-reliable-ads-pacing-service",
     "source": "Twitter",
     "publishedAt": "2021-12-16",
-    "tags": ["architecture", "microservice", "reliability", "zookeeper"]
+    "domain": "distributed-systems",
+    "tags": ["microservice", "zookeeper"],
+    "summary": "Keeps uncacheable pacing always on via shards whose replicas all compute but only the ZooKeeper leader writes."
   },
   {
     "title": "Adopting RocksDB within Manhattan",
     "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2021/adopting-rocksdb-within-manhattan",
     "source": "Twitter",
     "publishedAt": "2021-04-22",
-    "tags": ["database", "rocksdb", "manhattan"]
+    "domain": "database",
+    "tags": ["storage-engine", "migration", "rocksdb"],
+    "summary": "Migrates off MhBtree, a hard-to-change MySQL plugin with poor compression, to RocksDB via Merge and compaction hooks."
   },
   {
     "title": "Sharding, simplification, and Twitter’s ads serving platform",
     "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2021/sharding-simplification-and-twitters-ads-serving-platform",
     "source": "Twitter",
     "publishedAt": "2021-03-18",
-    "tags": ["architecture", "microservice"]
+    "domain": "distributed-systems",
+    "tags": ["microservice"],
+    "summary": "Replaces per-shard announcements, which made resharding a group deploy, with ShardLib's single path for all shards."
   },
   {
     "title": "Kafka as a storage system",
     "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2020/kafka-as-a-storage-system",
     "source": "Twitter",
     "publishedAt": "2020-12-16",
-    "tags": ["data", "stream-processing", "kafka"]
+    "domain": "data",
+    "tags": ["pub-sub", "kafka"],
+    "summary": "Replays webhook events missed in outages from a Kafka topic keyed by webhook ID, since Hadoop jobs were too slow."
   },
   {
     "title": "Distributed training of sparse ML models — Part 2: Optimized strategies",
@@ -40,7 +50,9 @@
     "source": "Twitter",
     "publishedAt": "2020-09-23",
     "series": "twitter-sparse-ml-training",
-    "tags": ["machine-learning", "training", "tensorflow"]
+    "domain": "machine-learning",
+    "tags": ["training", "tensorflow"],
+    "summary": "Avoids sending FullSparse weights over capped egress by sharding them by feature rows, fed by many input pipelines."
   },
   {
     "title": "Distributed training of sparse ML models — Part 1: Network bottlenecks",
@@ -48,76 +60,98 @@
     "source": "Twitter",
     "publishedAt": "2020-09-23",
     "series": "twitter-sparse-ml-training",
-    "tags": ["machine-learning", "training", "tensorflow"]
+    "domain": "machine-learning",
+    "tags": ["training", "tensorflow"],
+    "summary": "Shows parameter-server training crawls on big sparse models, since each step ships the model through capped egress."
   },
   {
     "title": "Reducing search indexing latency to one second",
     "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2020/reducing-search-indexing-latency-to-one-second",
     "source": "Twitter",
     "publishedAt": "2020-06-05",
-    "tags": ["search", "indexing", "earlybird"]
+    "domain": "search",
+    "tags": ["indexing"],
+    "summary": "Removes the indexing delay of sorting out-of-order Tweets by replacing prepend-only posting lists with skip lists."
   },
   {
     "title": "MetricsDB: TimeSeries Database for storing metrics at Twitter",
     "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2019/metricsdb",
     "source": "Twitter",
     "publishedAt": "2019-05-13",
-    "tags": ["observability", "metrics"]
+    "domain": "reliability",
+    "tags": ["metrics", "time-series"],
+    "summary": "Replaces Manhattan, strained by per-metric writes, with a Gorilla-compressed MetricsDB that batches writes by source."
   },
   {
     "title": "Improving key expiration in Redis",
     "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2019/improving-key-expiration-in-redis",
     "source": "Twitter",
     "publishedAt": "2019-04-12",
-    "tags": ["database", "caching", "redis"]
+    "domain": "database",
+    "tags": ["caching", "redis"],
+    "summary": "Traces evictions after a Redis 3.2 upgrade to expired keys piling up, then makes the expiry sample size configurable."
   },
   {
     "title": "Native secondary indexing in Manhattan",
     "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2018/native-secondary-indexing-in-manhattan",
     "source": "Twitter",
     "publishedAt": "2018-12-20",
-    "tags": ["database", "manhattan"]
+    "domain": "database",
+    "tags": ["secondary-index"],
+    "summary": "Replaces app-side index datasets, hard to keep correct without transactions, with index-first writes checked on read."
   },
   {
     "title": "ZooKeeper at Twitter",
     "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2018/zookeeper-at-twitter",
     "source": "Twitter",
     "publishedAt": "2018-10-11",
-    "tags": ["architecture", "zookeeper"]
+    "domain": "distributed-systems",
+    "tags": ["coordination", "zookeeper"],
+    "summary": "Keeps session-setup writes and client connections off the quorum with local sessions and Observers serving clients."
   },
   {
     "title": "Omnisearch index formats",
     "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2016/omnisearch-index-formats",
     "source": "Twitter",
     "publishedAt": "2016-11-04",
-    "tags": ["search", "indexing", "earlybird"]
+    "domain": "search",
+    "tags": ["indexing"],
+    "summary": "Lifts Earlybird's caps on positions per document and index size by storing postings, positions and metadata apart."
   },
   {
     "title": "Strong consistency in Manhattan",
     "url": "https://blog.x.com/engineering/en_us/a/2016/strong-consistency-in-manhattan",
     "source": "Twitter",
     "publishedAt": "2016-03-17",
-    "tags": ["database", "replication", "manhattan"]
+    "domain": "database",
+    "tags": ["replication", "consistency"],
+    "summary": "Fixes check-and-set races in eventually consistent Manhattan by having replicas replay a per-shard DistributedLog log."
   },
   {
     "title": "Hadoop filesystem at Twitter",
     "url": "https://blog.x.com/engineering/en_us/a/2015/hadoop-filesystem-at-twitter",
     "source": "Twitter",
     "publishedAt": "2015-09-29",
-    "tags": ["storage", "hdfs", "hadoop"]
+    "domain": "database",
+    "tags": ["file-system", "hdfs"],
+    "summary": "Hides long per-namespace HDFS URIs behind a /DC/cluster/path view whose mount tables TwitterViewFs builds at startup."
   },
   {
     "title": "Building DistributedLog: High-performance replicated log service",
     "url": "https://blog.x.com/engineering/en_us/topics/infrastructure/2015/building-distributedlog-twitter-s-high-performance-replicated-log-servic",
     "source": "Twitter",
     "publishedAt": "2015-09-16",
-    "tags": ["data", "stream-processing", "bookkeeper"]
+    "domain": "data",
+    "tags": ["pub-sub", "bookkeeper"],
+    "summary": "Stops Manhattan replicas diverging on compare-and-set with DistributedLog, built on BookKeeper for its I/O isolation."
   },
   {
     "title": "New Tweets per second record, and how!",
     "url": "https://blog.x.com/engineering/en_us/a/2013/new-tweets-per-second-record-and-how",
     "source": "Twitter",
     "publishedAt": "2013-08-16",
-    "tags": ["architecture", "monolith", "microservice"]
+    "domain": "distributed-systems",
+    "tags": ["microservice", "monolith", "migration"],
+    "summary": "Replaces a Rails monolith and time-sharded MySQL, which buckled in Tweet spikes, with JVM services and hash sharding."
   }
 ]

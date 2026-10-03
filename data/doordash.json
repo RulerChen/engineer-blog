@@ -4,62 +4,80 @@
     "url": "https://careersatdoordash.com/blog/doordash-dashclip-multimodal-models-for-generating-semantic-embeddings/",
     "source": "DoorDash",
     "publishedAt": "2026-02-11",
-    "tags": ["machine-learning", "training", "search", "vector"]
+    "domain": "machine-learning",
+    "tags": ["training", "computer-vision", "vector"],
+    "summary": "Fills the product-semantics gap in handcrafted ad features with DashCLIP, a catalog-tuned BLIP plus query encoder."
   },
   {
     "title": "Inside DoorDash’s Service Mesh Journey: Part 1 — Migration at Scale",
     "url": "https://careersatdoordash.com/blog/inside-doordashs-service-mesh-journey-part-1-migration-at-scale/",
     "source": "DoorDash",
     "publishedAt": "2025-06-18",
-    "tags": ["network", "proxy", "envoy"]
+    "domain": "network",
+    "tags": ["service-mesh", "migration", "envoy"],
+    "summary": "Stops retry-storm cascades with load-shedding Envoy sidecars, then fixes the hidden behaviors injection exposed."
   },
   {
     "title": "Using LLM to transcribe restaurant menu photos",
     "url": "https://careersatdoordash.com/blog/doordash-llm-transcribe-menu/",
     "source": "DoorDash",
     "publishedAt": "2025-03-19",
-    "tags": ["machine-learning", "llm"]
+    "domain": "machine-learning",
+    "tags": ["llm", "computer-vision"],
+    "summary": "Catches LLM errors on messy menu photos with a guardrail model that predicts accuracy, sending failures to humans."
   },
   {
     "title": "Introducing DoorDash’s in-house search engine",
     "url": "https://careersatdoordash.com/blog/introducing-doordashs-in-house-search-engine/",
     "source": "DoorDash",
     "publishedAt": "2024-02-27",
-    "tags": ["search", "indexing", "lucene", "elasticsearch"]
+    "domain": "search",
+    "tags": ["indexing", "migration", "elasticsearch", "lucene"],
+    "summary": "Replaces Elasticsearch, bottlenecked by document replication, with a Lucene engine that ships segments via S3."
   },
   {
     "title": "How DoorDash designed a successful write-heavy scalable and reliable inventory platform",
     "url": "https://careersatdoordash.com/blog/how-doordash-designed-a-successful-write-heavy-scalable-and-reliable-inventory-platform/",
     "source": "DoorDash",
     "publishedAt": "2023-05-10",
-    "tags": ["database", "architecture", "cockroachdb"]
+    "domain": "database",
+    "tags": ["cockroachdb"],
+    "summary": "Fixes heavy CockroachDB load from per-item writes by batching each layer and merging JDBI batches into one UPSERT."
   },
   {
     "title": "Using CockroachDB to Reduce Feature Store Costs by 75%",
     "url": "https://careersatdoordash.com/blog/using-cockroachdb-to-reduce-feature-store-costs-by-75/",
     "source": "DoorDash",
     "publishedAt": "2023-03-21",
-    "tags": ["database", "cockroachdb", "redis"]
+    "domain": "database",
+    "tags": ["feature-store", "migration", "cost", "cockroachdb", "redis"],
+    "summary": "Offloads features from costly, slow-to-resize Redis to CockroachDB, packed as JSON rows that touch fewer ranges."
   },
   {
     "title": "Building scalable real time event processing with Kafka and Flink",
     "url": "https://careersatdoordash.com/blog/building-scalable-real-time-event-processing-with-kafka-and-flink/",
     "source": "DoorDash",
     "publishedAt": "2022-10-21",
-    "tags": ["data", "stream-processing", "kafka", "flink"]
+    "domain": "data",
+    "tags": ["stream-processing", "flink", "kafka"],
+    "summary": "Fixes high latency and cost from bespoke multi-hop pipelines with Iguazu, a shared Kafka and Flink event platform."
   },
   {
     "title": "How We Applied Client-Side Caching to Improve Feature Store Performance by 70%",
     "url": "https://careersatdoordash.com/blog/how-we-applied-client-side-caching/",
     "source": "DoorDash",
     "publishedAt": "2022-05-03",
-    "tags": ["machine-learning", "database", "caching", "redis"]
+    "domain": "machine-learning",
+    "tags": ["feature-store", "caching", "redis"],
+    "summary": "Shifts repeated feature reads off costly Redis to a pod-local Caffeine cache, its hit rate forecast by traffic replay."
   },
   {
     "title": "Building Faster Indexing with Apache Kafka and Elasticsearch",
     "url": "https://careersatdoordash.com/blog/open-source-search-indexing/",
     "source": "DoorDash",
     "publishedAt": "2021-07-14",
-    "tags": ["search", "indexing", "kafka", "elasticsearch", "flink"]
+    "domain": "search",
+    "tags": ["indexing", "elasticsearch", "flink", "kafka"],
+    "summary": "Swaps a slow, unreliable indexer for incremental Kafka and Flink indexing that re-reads changed IDs over REST."
   }
 ]

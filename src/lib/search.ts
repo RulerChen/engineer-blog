@@ -186,7 +186,7 @@ interface Fields {
   title: Indexed;
   /** Absent until someone writes one — most entries have no summary yet. */
   summary: Indexed | null;
-  /** Company and tags, which is all an un-summarized entry has beyond its title. */
+  /** Company, domain and tags, which is all an un-summarized entry has beyond its title. */
   meta: Indexed;
   combined: Indexed;
 }
@@ -200,7 +200,7 @@ const fields = new WeakMap<Article, Fields>();
 function fieldsOf(article: Article): Fields {
   let entry = fields.get(article);
   if (!entry) {
-    const meta = [article.source, ...article.tags].filter(Boolean).join(" · ");
+    const meta = [article.source, article.domain, ...article.tags].filter(Boolean).join(" · ");
     entry = {
       title: indexOf(article.title),
       summary: article.summary ? indexOf(article.summary) : null,

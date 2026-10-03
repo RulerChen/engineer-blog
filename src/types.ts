@@ -46,6 +46,9 @@ export interface Article {
    * not something a tag can be made to carry.
    */
   topic?: string;
+  /** The domain the entry is mainly about; empty on a paper. */
+  domain: string;
+  /** In reading order, without the domain: a second domain, concepts, cross-domain, technologies. */
   tags: string[];
   /** Other people's write-ups about this entry, in the order they should be read. */
   commentary?: Commentary[];

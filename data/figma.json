@@ -4,28 +4,35 @@
     "url": "https://www.figma.com/blog/improving-performance-in-the-layers-panel/",
     "source": "Figma",
     "publishedAt": "2026-06-11",
-    "tags": ["frontend"]
+    "domain": "frontend",
+    "summary": "Speeds up a layers panel that rebuilt all expanded rows on any change via windowed data and cached derived properties."
   },
   {
     "title": "PGKeeper: Building the bouncer we needed for Postgres",
     "url": "https://www.figma.com/blog/pgkeeper-building-the-bouncer-we-needed-for-postgres/",
     "source": "Figma",
     "publishedAt": "2026-05-04",
-    "tags": ["database", "postgresql"]
+    "domain": "database",
+    "tags": ["connection-pooling", "postgresql"],
+    "summary": "Replaces PgBouncer, which could not prioritize traffic or limit connection churn, with the Go gRPC pooler PGKeeper."
   },
   {
     "title": "Figma's next-generation data caching platform",
     "url": "https://www.figma.com/blog/figmas-next-generation-data-caching-platform/",
     "source": "Figma",
     "publishedAt": "2026-03-25",
-    "tags": ["caching", "database", "redis"]
+    "domain": "database",
+    "tags": ["caching", "redis"],
+    "summary": "Stops thundering herds of Redis connections on client scale-ups by pooling them in FigCache, a stateless RESP proxy."
   },
   {
     "title": "Figma rendering: Powered by WebGPU",
     "url": "https://www.figma.com/blog/figma-rendering-powered-by-webgpu/",
     "source": "Figma",
     "publishedAt": "2025-09-18",
-    "tags": ["frontend", "webgpu"]
+    "domain": "frontend",
+    "tags": ["rendering", "webgpu"],
+    "summary": "Prevents per-uniform buffer uploads from slowing a WebGPU port by reworking the graphics API to batch them per submit."
   },
   {
     "title": "Supporting faster file load times with memory optimizations in Rust",
@@ -33,7 +40,9 @@
     "source": "Figma",
     "publishedAt": "2025-06-18",
     "series": "figma-file-load-perf",
-    "tags": ["language", "memory-management", "rust"]
+    "domain": "programming",
+    "tags": ["memory-management", "rust"],
+    "summary": "Shrinks node property maps, the bulk of a file's memory on the server, by swapping BTreeMap for a flat sorted Vec."
   },
   {
     "title": "The infrastructure behind AI search in Figma",
@@ -41,14 +50,18 @@
     "source": "Figma",
     "publishedAt": "2024-10-15",
     "series": "figma-ai-search",
-    "tags": ["dynamodb", "opensearch", "search", "vector"]
+    "domain": "search",
+    "tags": ["vector", "dynamodb", "opensearch"],
+    "summary": "Lowers the cost of indexing every frame for CLIP search, mostly thumbnailing, with C++ and llvmpipe CPU rendering."
   },
   {
     "title": "The search for speed in Figma",
     "url": "https://www.figma.com/blog/the-search-for-speed-in-figma-opensearch/",
     "source": "Figma",
     "publishedAt": "2024-10-10",
-    "tags": ["opensearch", "search"]
+    "domain": "search",
+    "tags": ["opensearch"],
+    "summary": "Traces slow search hidden by a per-shard OpenSearch metric to permission checks, then trims the index and shard count."
   },
   {
     "title": "Speeding up file load times, one page at a time",
@@ -56,7 +69,8 @@
     "source": "Figma",
     "publishedAt": "2024-05-22",
     "series": "figma-file-load-perf",
-    "tags": ["frontend"]
+    "domain": "frontend",
+    "summary": "Spares editors slow full-file loads by loading one page plus its read and write dependencies from QueryGraph."
   },
   {
     "title": "Keeping it 100(x) with real-time data at scale",
@@ -64,14 +78,18 @@
     "source": "Figma",
     "publishedAt": "2024-05-17",
     "series": "figma-livegraph",
-    "tags": ["api-design", "graphql", "postgresql"]
+    "domain": "distributed-systems",
+    "tags": ["real-time", "graphql", "postgresql"],
+    "summary": "Ends LiveGraph's fan-out of all database updates to all servers with an invalidation cache and stateless invalidators."
   },
   {
     "title": "Speeding up C++ build times",
     "url": "https://www.figma.com/blog/speeding-up-build-times/",
     "source": "Figma",
     "publishedAt": "2024-04-25",
-    "tags": ["cpp", "language"]
+    "domain": "programming",
+    "tags": ["build-system", "cpp"],
+    "summary": "Ties build times outpacing code growth to unneeded includes bloating preprocessed bytes, then flags them with DIWYDU."
   },
   {
     "title": "How Figma's databases team lived to tell the scale",
@@ -79,14 +97,18 @@
     "source": "Figma",
     "publishedAt": "2024-03-14",
     "series": "figma-postgresql-scaling",
-    "tags": ["database", "postgresql", "sharding"]
+    "domain": "database",
+    "tags": ["sharding", "postgresql"],
+    "summary": "Shards tables too big for one RDS Postgres behind DBProxy, rolling shards out as views before any physical split."
   },
   {
     "title": "Improving performance with incremental frame loading",
     "url": "https://www.figma.com/blog/incremental-frame-loading/",
     "source": "Figma",
     "publishedAt": "2024-01-23",
-    "tags": ["frontend", "mobile"]
+    "domain": "frontend",
+    "tags": ["mobile"],
+    "summary": "Fixes slow loads and mobile crashes in large prototypes by subscribing to only the current and adjacent screens."
   },
   {
     "title": "The growing pains of database architecture",
@@ -94,7 +116,9 @@
     "source": "Figma",
     "publishedAt": "2023-04-04",
     "series": "figma-postgresql-scaling",
-    "tags": ["database", "postgresql", "sharding"]
+    "domain": "database",
+    "tags": ["sharding", "postgresql"],
+    "summary": "Moves table groups off a CPU-strained RDS Postgres via logical replication, cutting over with a PgBouncer pause."
   },
   {
     "title": "Making multiplayer more reliable",
@@ -102,14 +126,18 @@
     "source": "Figma",
     "publishedAt": "2022-10-20",
     "series": "figma-multiplayer",
-    "tags": ["dynamodb", "reliability"]
+    "domain": "reliability",
+    "tags": ["dynamodb"],
+    "summary": "Stops crashes from losing edits made since the last S3 checkpoint by journaling sequenced changes to DynamoDB."
   },
   {
     "title": "Postmortem: Service disruptions on June 6 & 7 2022",
     "url": "https://www.figma.com/blog/postmortem-service-disruptions-on-june-6-and-7-2022/",
     "source": "Figma",
     "publishedAt": "2022-06-15",
-    "tags": ["postmortem", "redis", "reliability"]
+    "domain": "reliability",
+    "tags": ["incident", "redis"],
+    "summary": "Traces pegged Redis CPU to pub/sub memmoves on a growing Cluster Bus buffer, then moves pub/sub off cluster mode."
   },
   {
     "title": "GraphQL, meet LiveGraph: a real-time data system at scale",
@@ -117,14 +145,18 @@
     "source": "Figma",
     "publishedAt": "2021-10-14",
     "series": "figma-livegraph",
-    "tags": ["api-design", "graphql"]
+    "domain": "distributed-systems",
+    "tags": ["real-time", "graphql"],
+    "summary": "Replaces ad hoc update events, which caused consistency bugs, with LiveGraph routing Postgres WAL rows to subqueries."
   },
   {
     "title": "Behind the feature: The hidden challenges of autosave",
     "url": "https://www.figma.com/blog/behind-the-feature-autosave/",
     "source": "Figma",
     "publishedAt": "2020-10-27",
-    "tags": ["frontend", "offline"]
+    "domain": "frontend",
+    "tags": ["offline"],
+    "summary": "Preserves offline edits across tab closes by storing per-node changes in IndexedDB, as full-file saves stall the UI."
   },
   {
     "title": "How Figma's multiplayer technology works",
@@ -132,14 +164,18 @@
     "source": "Figma",
     "publishedAt": "2019-10-16",
     "series": "figma-multiplayer",
-    "tags": ["architecture", "crdt", "websocket"]
+    "domain": "distributed-systems",
+    "tags": ["crdt", "websocket", "real-time"],
+    "summary": "Skips OT's complexity and CRDT overhead with per-property last-writer-wins values ordered by a central server."
   },
   {
     "title": "An alternative approach to rate limiting",
     "url": "https://www.figma.com/blog/an-alternative-approach-to-rate-limiting/",
     "source": "Figma",
     "publishedAt": "2017-04-12",
-    "tags": ["overload-control", "redis", "reliability"]
+    "domain": "reliability",
+    "tags": ["overload-control", "redis"],
+    "summary": "Avoids token bucket races, fixed-window bursts and sliding-log memory by summing short-window counters in a Redis hash."
   },
   {
     "title": "Realtime editing of ordered sequences",
@@ -147,6 +183,8 @@
     "source": "Figma",
     "publishedAt": "2017-03-06",
     "series": "figma-multiplayer",
-    "tags": ["architecture", "crdt"]
+    "domain": "distributed-systems",
+    "tags": ["crdt"],
+    "summary": "Sidesteps OT's complexity for concurrent reordering by sorting children on fractional indices, so moves edit one value."
   }
 ]

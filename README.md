@@ -44,5 +44,3 @@
 | [Stripe](https://stripe.dev/blog)                          | 2026-09-29   |
 | [Twitter](https://blog.x.com/engineering)                  | 2026-09-21   |
 | [Uber](https://eng.uber.com)                               | 2026-09-29   |
-
-The tag vocabulary is in [docs/tags.md](docs/tags.md).

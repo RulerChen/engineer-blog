@@ -1,25 +1,21 @@
 [
   {
-    "title": "Migrating Shop app from React Native to native",
-    "url": "https://shopify.engineering/shop-app-migration",
-    "source": "Shopify",
-    "publishedAt": "2026-09-10",
-    "tags": ["mobile", "ios", "android", "react-native"],
-    "series": "shopify-native-mobile"
-  },
-  {
     "title": "How River takes security work from a fix to merge",
     "url": "https://shopify.engineering/river-vulnerability-remediation",
     "source": "Shopify",
     "publishedAt": "2026-09-02",
-    "tags": ["security", "machine-learning", "agent"]
+    "domain": "security",
+    "tags": ["agent"],
+    "summary": "Stops patching stale findings and closing on green but unmerged PRs by having River recheck each finding at repo head."
   },
   {
     "title": "We replaced Redis with MySQL for inventory reservations—and it scaled",
     "url": "https://shopify.engineering/scaling-inventory-reservations",
     "source": "Shopify",
     "publishedAt": "2026-05-12",
-    "tags": ["database", "mysql", "redis"]
+    "domain": "database",
+    "tags": ["migration", "mysql", "redis"],
+    "summary": "Ends non-atomic claims between Redis reservations and the MySQL ledger with a MySQL row per unit under SKIP LOCKED."
   },
   {
     "title": "Evolution of Product Classification at Shopify: From Categories to Comprehensive Product Understanding",
@@ -27,21 +23,27 @@
     "source": "Shopify",
     "publishedAt": "2025-05-08",
     "series": "shopify-product-classification",
-    "tags": ["machine-learning"]
+    "domain": "machine-learning",
+    "tags": ["inference", "llm", "computer-vision"],
+    "summary": "Goes beyond category-only classification by asking a vision LM for a taxonomy category, then for its attributes."
   },
   {
     "title": "How Shopify improved consumer search intent with real-time ML",
     "url": "https://shopify.engineering/how-shopify-improved-consumer-search-intent-with-real-time-ml",
     "source": "Shopify",
     "publishedAt": "2024-10-18",
-    "tags": ["search", "machine-learning", "inference", "dataflow"]
+    "domain": "search",
+    "tags": ["inference", "google-dataflow"],
+    "summary": "Fixes OOMs on GPU Dataflow embedding workers, where each harness thread held an image, by cutting the thread count."
   },
   {
     "title": "Horizontally scaling the Rails backend of Shop app with Vitess",
     "url": "https://shopify.engineering/horizontally-scaling-the-rails-backend-of-shop-app-with-vitess",
     "source": "Shopify",
     "publishedAt": "2024-01-17",
-    "tags": ["database", "mysql", "rails", "sharding", "vitess"]
+    "domain": "database",
+    "tags": ["sharding", "mysql", "rails", "vitess"],
+    "summary": "Relieves a maxed-out MySQL with slow schema migrations by sharding on user_id in Vitess, gated by query verifiers."
   },
   {
     "title": "Performance Testing At Scale-for BFCM and Beyond",
@@ -49,42 +51,54 @@
     "source": "Shopify",
     "publishedAt": "2023-01-27",
     "series": "shopify-bfcm-perf-testing",
-    "tags": ["load-testing", "testing"]
+    "domain": "reliability",
+    "tags": ["load-testing"],
+    "summary": "Picks full-scale BFCM load tests over a scaled model because added connections alone overloaded upstreams at idle."
   },
   {
     "title": "Safely Adding NOT NULL Columns to Your Database Tables",
     "url": "https://shopify.engineering/add-not-null-colums-to-database",
     "source": "Shopify",
     "publishedAt": "2022-10-04",
-    "tags": ["database", "mysql", "schema"]
+    "domain": "database",
+    "tags": ["schema-change", "mysql"],
+    "summary": "Avoids broken writes and lost rows in LHM's NOT NULL adds by requiring a DEFAULT and a duplicate check before UNIQUE."
   },
   {
     "title": "Spin Infrastructure Adventures: Containers, Systemd, and CGroups",
     "url": "https://shopify.engineering/spin-infrastructure-adventures-containers-systemd-cgroups",
     "source": "Shopify",
     "publishedAt": "2022-07-15",
-    "tags": ["container", "kubernetes", "operating-system"]
+    "domain": "infrastructure",
+    "tags": ["isolation", "kubernetes", "systemd"],
+    "summary": "Traces Spin pods exceeding memory limits to in-container systemd escaping the pod cgroup under the cgroupfs driver."
   },
   {
     "title": "Upgrading MySQL at Shopify",
     "url": "https://shopify.engineering/upgrading-mysql-shopify",
     "source": "Shopify",
     "publishedAt": "2021-12-02",
-    "tags": ["database", "migration", "mysql"]
+    "domain": "database",
+    "tags": ["migration", "mysql"],
+    "summary": "Traces post-downgrade table rebuilds on metadata-only ALTERs to mismatched pack-key flags, then patches Percona."
   },
   {
     "title": "Debugging Systems in the Cloud: MySQL, Kubernetes, and Cgroups",
     "url": "https://shopify.engineering/debugging-systems-cloud-mysql-kubernetes-cgroups",
     "source": "Shopify",
     "publishedAt": "2021-10-21",
-    "tags": ["container", "database", "kubernetes", "mysql"]
+    "domain": "infrastructure",
+    "tags": ["isolation", "debugging", "kubernetes", "mysql"],
+    "summary": "Ties slow MySQL starts on aged KateSQL nodes to leaked memory cgroups slowing page charging, fixed in newer kernels."
   },
   {
     "title": "Shard Balancing: Moving Shops Confidently with Zero-Downtime at Terabyte-scale",
     "url": "https://shopify.engineering/mysql-database-shard-balancing-terabyte-scale",
     "source": "Shopify",
     "publishedAt": "2021-09-24",
-    "tags": ["database", "mysql", "sharding"]
+    "domain": "database",
+    "tags": ["sharding", "mysql"],
+    "summary": "Evens out shards crowded with busy shops by moving shops online with Ghostferry, cutting over behind a Redis lock."
   },
   {
     "title": "Using Rich Image and Text Data to Categorize Products at Scale",
@@ -92,7 +106,9 @@
     "source": "Shopify",
     "publishedAt": "2021-09-08",
     "series": "shopify-product-classification",
-    "tags": ["machine-learning"]
+    "domain": "machine-learning",
+    "tags": ["computer-vision"],
+    "summary": "Swaps a text-only, English-only categorizer for image and multilingual embeddings feeding chained per-level heads."
   },
   {
     "title": "Shopify's Path to a Faster Trino Query Execution: Infrastructure",
@@ -100,35 +116,45 @@
     "source": "Shopify",
     "publishedAt": "2021-07-09",
     "series": "shopify-trino-performance",
-    "tags": ["data", "query-engine", "trino"]
+    "domain": "data",
+    "tags": ["query-engine", "trino"],
+    "summary": "Traces Trino stalls that bigger workers did not fix to coordinator lock contention, then caps concurrent queries."
   },
   {
     "title": "Capturing Every Change From Shopify’s Sharded Monolith",
     "url": "https://shopify.engineering/capturing-every-change-shopify-sharded-monolith",
     "source": "Shopify",
     "publishedAt": "2021-03-12",
-    "tags": ["cdc", "data", "kafka", "mysql"]
+    "domain": "data",
+    "tags": ["cdc", "kafka", "mysql"],
+    "summary": "Replaces updated_at polling, which missed hard deletes, with Debezium per shard merged into per-table Kafka topics."
   },
   {
     "title": "Read Consistency with Database Replicas",
     "url": "https://shopify.engineering/read-consistency-database-replicas",
     "source": "Shopify",
     "publishedAt": "2021-02-22",
-    "tags": ["database", "mysql", "replication"]
+    "domain": "database",
+    "tags": ["replication", "consistency", "mysql"],
+    "summary": "Stops related reads from seeing rows vanish across lagging replicas by hashing a query-comment ID to one replica."
   },
   {
     "title": "Using DNS Traffic Management to Add Resiliency to Shopify’s Services",
     "url": "https://shopify.engineering/using-dns-traffic-management-add-resiliency-shopify-services",
     "source": "Shopify",
     "publishedAt": "2020-08-05",
-    "tags": ["dns", "network"]
+    "domain": "network",
+    "tags": ["dns", "failover"],
+    "summary": "Moves teams off manual DNS failover to Terraform-managed answers narrowed by region, health, priority and weight."
   },
   {
     "title": "How Shopify Manages Petabyte Scale MySQL Backup and Restore",
     "url": "https://shopify.engineering/shopify-manages-petabyte-scale-mysql-backup-restore",
     "source": "Shopify",
     "publishedAt": "2019-10-01",
-    "tags": ["backup", "database", "mysql"]
+    "domain": "database",
+    "tags": ["backup", "mysql"],
+    "summary": "Replaces Xtrabackup, whose restores were too slow for the recovery target, with Persistent Disk snapshots."
   },
   {
     "title": "Surviving Flashes of High-Write Traffic Using Scriptable Load Balancers (Part II)",
@@ -136,7 +162,9 @@
     "source": "Shopify",
     "publishedAt": "2017-02-05",
     "series": "shopify-flash-write-traffic",
-    "tags": ["load-balance", "network", "nginx"]
+    "domain": "network",
+    "tags": ["load-balancing", "overload-control", "nginx"],
+    "summary": "Ends the random-polling queue lottery with an arrival-time cutoff each load balancer moves by proportional control."
   },
   {
     "title": "Surviving Flashes of High-Write Traffic Using Scriptable Load Balancers (Part I)",
@@ -144,6 +172,8 @@
     "source": "Shopify",
     "publishedAt": "2017-02-03",
     "series": "shopify-flash-write-traffic",
-    "tags": ["load-balance", "network", "nginx"]
+    "domain": "network",
+    "tags": ["load-balancing", "overload-control", "nginx"],
+    "summary": "Shields MySQL shards from flash-sale checkout writes with an Nginx leaky bucket, whose polled queue proved a lottery."
   }
 ]
