@@ -1,8 +1,215 @@
 {
   "id": "ml-systems",
   "title": "ML systems",
-  "before": ["distributed-systems", "deep-learning"],
+  "before": ["parallel-computing", "distributed-systems", "deep-learning"],
   "next": [],
+  "evolution": {
+    "eras": [
+      {
+        "name": "Open frameworks",
+        "text": "Deep learning on GPUs for everyone",
+        "background": "Google trained its early deep networks on DistBelief, which used parameter servers on large clusters of CPU machines. Open-source frameworks then gave everyone automatic differentiation on GPUs. Deep models soon powered products such as YouTube's recommendations."
+      },
+      {
+        "name": "Beyond one GPU",
+        "text": "Models split across devices",
+        "background": "Language models and recommenders both outgrew the memory of a single GPU. Language models split their layers across GPUs or sharded their training state. Recommenders sharded embedding tables too big for any one device."
+      },
+      {
+        "name": "Memory-bound",
+        "text": "GPU memory traffic sets the pace",
+        "background": "Transformers became the most widely used architecture, and chat assistants made serving them a major cost. On GPUs, moving data through memory took longer than the arithmetic in most of their operations. Fused kernels, compilers and paged caches all attacked that memory traffic."
+      },
+      {
+        "name": "Cluster scale",
+        "text": "Whole clusters for one model",
+        "background": "A single training job came to fill a whole GPU cluster, where failures were routine. Serving split each request across pools of GPUs. Recommenders adopted the sequence models and scaling behavior of LLMs."
+      }
+    ],
+    "lanes": ["Frameworks and kernels", "Training", "Serving", "Recommendation and search"],
+    "nodes": [
+      {
+        "id": "tf",
+        "label": "TensorFlow",
+        "era": "Open frameworks",
+        "lane": "Frameworks and kernels",
+        "year": "2015",
+        "problem": "In Google's DistBelief, new layers meant C++ code and new optimizers meant changing its parameter servers.",
+        "idea": "Express the model and its parameter updates as one dataflow graph, run anywhere from phones to GPU clusters.",
+        "impact": "Google open-sourced it, and it became one of the most widely used deep learning frameworks."
+      },
+      {
+        "id": "ytdnn",
+        "label": "YouTube DNN",
+        "era": "Open frameworks",
+        "lane": "Recommendation and search",
+        "year": "2016",
+        "problem": "Factorization models used few signals, and scoring a huge video corpus for every request had to stay fast.",
+        "idea": "A candidate network retrieves a short list by nearest-neighbor search, then a ranking network orders it.",
+        "impact": "Deep models at every stage of the funnel became the norm in feeds, ads and search."
+      },
+      {
+        "id": "pytorch",
+        "label": "PyTorch",
+        "era": "Open frameworks",
+        "lane": "Frameworks and kernels",
+        "year": "2017",
+        "idea": "Run each operation immediately as ordinary Python, recording it on the fly for automatic differentiation on GPUs.",
+        "impact": "Researchers overwhelmingly preferred eager code, and graph frameworks, TensorFlow included, added eager modes.",
+        "from": [
+          {
+            "id": "tf",
+            "why": "Static graphs were built first and run later, which made models hard to write and debug."
+          }
+        ]
+      },
+      {
+        "id": "allreduce",
+        "label": "Ring all-reduce",
+        "era": "Open frameworks",
+        "lane": "Training",
+        "year": "2017",
+        "idea": "GPUs average gradients by passing chunks to their neighbors in a ring, with no parameter server.",
+        "impact": "Uber's Horovod and NVIDIA's NCCL spread it, and PyTorch's data-parallel training is built on it.",
+        "from": [
+          {
+            "id": "tf",
+            "why": "Its parameter servers clogged the network, and spreading a job over GPUs took heavy code changes."
+          }
+        ]
+      },
+      {
+        "id": "zero",
+        "label": "ZeRO",
+        "era": "Beyond one GPU",
+        "lane": "Training",
+        "year": "2019",
+        "idea": "Shard optimizer state, gradients and weights across the data-parallel GPUs, fetching each piece only when needed.",
+        "impact": "Microsoft shipped it in DeepSpeed, and PyTorch's fully sharded data parallelism grew from the same idea.",
+        "from": [
+          {
+            "id": "allreduce",
+            "why": "Every GPU held a full copy of weights and optimizer state, so big models ran out of memory."
+          }
+        ]
+      },
+      {
+        "id": "dlrm",
+        "label": "DLRM",
+        "era": "Beyond one GPU",
+        "lane": "Recommendation and search",
+        "year": "2019",
+        "idea": "Facebook shards embedding tables across devices with model parallelism and replicates the small dense layers.",
+        "impact": "It became MLPerf's recommendation benchmark, a shared target for hardware and systems work.",
+        "from": [
+          {
+            "id": "ytdnn",
+            "why": "Deep recommenders grew embedding tables far larger than one device, which frameworks could not shard."
+          }
+        ]
+      },
+      {
+        "id": "flash",
+        "label": "Flash Attention",
+        "era": "Memory-bound",
+        "lane": "Frameworks and kernels",
+        "year": "2022",
+        "idea": "FlashAttention computes attention tile by tile in fast on-chip memory, fused into a single kernel.",
+        "impact": "Long contexts became affordable, and PyTorch later shipped it as its built-in attention kernel.",
+        "from": [
+          {
+            "id": "pytorch",
+            "why": "Frameworks ran attention as separate operations, each writing a huge matrix out to slow GPU memory."
+          }
+        ]
+      },
+      {
+        "id": "vllm",
+        "label": "vLLM",
+        "era": "Memory-bound",
+        "lane": "Serving",
+        "year": "2023",
+        "problem": "Serving engines reserved each request's KV cache for its longest possible answer, leaving most memory unused.",
+        "idea": "PagedAttention stores the cache in small fixed-size blocks, like an operating system's memory pages.",
+        "impact": "Larger batches cut serving cost, and vLLM became a leading open engine used by Meta and LinkedIn."
+      },
+      {
+        "id": "pt2",
+        "label": "PyTorch 2",
+        "era": "Memory-bound",
+        "lane": "Frameworks and kernels",
+        "year": "2023",
+        "idea": "TorchDynamo captures graphs from ordinary Python code, and TorchInductor compiles them into fused Triton kernels.",
+        "impact": "Eager models could be compiled by adding one call, without rewriting them as graphs.",
+        "from": [
+          {
+            "id": "flash",
+            "why": "Each fused kernel like it was hand-written CUDA, and its authors called for compiling such kernels from PyTorch."
+          }
+        ]
+      },
+      {
+        "id": "megascale",
+        "label": "MegaScale",
+        "era": "Cluster scale",
+        "lane": "Training",
+        "year": "2024",
+        "idea": "ByteDance co-designs the model, parallelism and network, and automatically finds and evicts faulty machines.",
+        "impact": "Made the case that fault tolerance and deep monitoring matter as much as parallelism at this scale.",
+        "from": [
+          {
+            "id": "zero",
+            "why": "Parallelism let one job span a whole cluster, where failures and slow nodes became constant."
+          }
+        ]
+      },
+      {
+        "id": "distserve",
+        "label": "DistServe",
+        "era": "Cluster scale",
+        "lane": "Serving",
+        "year": "2024",
+        "idea": "DistServe runs the prompt (prefill) and decoding phases on separate GPUs, each with its own parallelism.",
+        "impact": "Splitting the phases spread to DeepSeek's service and to open frameworks such as NVIDIA Dynamo and llm-d.",
+        "from": [
+          {
+            "id": "vllm",
+            "why": "Prompt processing and token generation still shared GPUs, where each slowed the other down."
+          }
+        ]
+      },
+      {
+        "id": "hstu",
+        "label": "HSTU",
+        "era": "Cluster scale",
+        "lane": "Recommendation and search",
+        "year": "2024",
+        "idea": "Meta treats a user's actions as a sequence and trains a generative model to predict what comes next.",
+        "impact": "Quality scaled with compute like an LLM's, and LinkedIn later rebuilt its feed ranking the same way.",
+        "from": [
+          {
+            "id": "dlrm",
+            "why": "Feature-heavy DLRMs stopped improving with more compute, unlike language models."
+          }
+        ]
+      },
+      {
+        "id": "widep",
+        "label": "Wide EP",
+        "era": "Cluster scale",
+        "lane": "Serving",
+        "year": "2025",
+        "idea": "With wide expert parallelism, DeepSeek spreads each layer's experts over many nodes so each sees a large batch.",
+        "impact": "SGLang and vLLM rebuilt it in the open for serving large mixture-of-experts models.",
+        "from": [
+          {
+            "id": "distserve",
+            "why": "Mixture-of-experts models gave each expert too few tokens per GPU, even with the phases split."
+          }
+        ]
+      }
+    ]
+  },
   "parts": [
     {
       "name": "Foundations",
@@ -11,9 +218,9 @@
           "main": {
             "type": "course",
             "title": "CMU 10-414/714: Deep Learning Systems",
-            "url": "https://dlsyscourse.org/lectures/",
+            "url": "https://dlsyscourse.org/",
             "source": "CMU",
-            "year": "2022",
+            "year": "2026",
             "why": "Automatic differentiation, layers, optimizers and GPU operations, each built from scratch into a small deep learning library. In English."
           },
           "background": [
@@ -125,17 +332,16 @@
             "source": "Hugging Face",
             "year": "2025",
             "why": "Large models need more than data parallelism, and this playbook explains tensor, context, pipeline and expert parallelism and how to combine them."
-          }
-        },
-        {
-          "main": {
-            "type": "paper",
-            "title": "MegaScale: Scaling Large Language Model Training to More Than 10,000 GPUs",
-            "url": "https://www.usenix.org/system/files/nsdi24-jiang-ziheng.pdf",
-            "source": "ByteDance",
-            "year": "2024",
-            "why": "At huge GPU counts efficiency and failures dominate, so MegaScale co-designs the training stack and evicts faulty machines to resume from checkpoints."
-          }
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "MegaScale: Scaling Large Language Model Training to More Than 10,000 GPUs",
+              "url": "https://www.usenix.org/system/files/nsdi24-jiang-ziheng.pdf",
+              "source": "ByteDance",
+              "year": "2024"
+            }
+          ]
         }
       ]
     },
@@ -202,29 +408,31 @@
               "url": "https://arxiv.org/abs/2403.02310",
               "source": "Microsoft",
               "year": "2024"
+            },
+            {
+              "type": "article",
+              "title": "DeepSeek-V3/R1 Inference System Overview",
+              "url": "https://github.com/deepseek-ai/open-infra-index/blob/main/202502OpenSourceWeek/day_6_one_more_thing_deepseekV3R1_inference_system_overview.md",
+              "source": "DeepSeek",
+              "year": "2025"
             }
           ]
-        },
-        {
-          "main": {
-            "type": "article",
-            "title": "DeepSeek-V3/R1 Inference System Overview",
-            "url": "https://github.com/deepseek-ai/open-infra-index/blob/main/202502OpenSourceWeek/day_6_one_more_thing_deepseekV3R1_inference_system_overview.md",
-            "source": "DeepSeek",
-            "year": "2025",
-            "why": "Sparse experts leave each GPU's batch small, so DeepSeek spreads experts across many GPUs and serves prefill and decode on separate nodes."
-          }
         }
       ]
     },
     {
-      "name": "Recommendation systems",
+      "name": "Case study: recommendation",
       "steps": [
         {
           "main": {
             "url": "https://research.google/pubs/deep-neural-networks-for-youtube-recommendations/",
             "why": "Scoring every video per request is impossible, so YouTube splits recommendation into a candidate generation network and a ranking network."
-          }
+          },
+          "further": [
+            {
+              "url": "https://engineering.fb.com/2023/08/09/ml-applications/scaling-instagram-explore-recommendations-system/"
+            }
+          ]
         },
         {
           "main": {
@@ -234,14 +442,8 @@
         },
         {
           "main": {
-            "url": "https://engineering.fb.com/2023/08/09/ml-applications/scaling-instagram-explore-recommendations-system/",
-            "why": "Explore picks from a vast catalog per request, so items flow through two-tower retrieval, a distilled first-stage ranker, a multi-task heavy ranker and reranking."
-          }
-        },
-        {
-          "main": {
             "url": "https://engineering.fb.com/2024/11/19/data-infrastructure/sequence-learning-personalized-ads-recommendations/",
-            "why": "Hand-aggregated sparse features lose the order of user activity, so Meta's ads models read raw event sequences with attention."
+            "why": "Aggregated features lose the order and detail of user events, so Meta's ads models embed each event and pool the sequence with attention."
           }
         },
         {
@@ -251,20 +453,21 @@
           },
           "further": [
             {
-              "url": "https://engineering.fb.com/2026/08/03/ml-applications/training-gem-at-llm-scale-meta-ads-recommendation-foundation-model/"
+              "url": "https://www.linkedin.com/blog/engineering/feed/engineering-the-next-generation-of-linkedins-feed",
+              "why": "LinkedIn replaced its many retrieval sources with one LLM dual encoder, and its per-post CPU ranking with a sequence transformer on GPUs."
             }
           ]
         },
         {
           "main": {
-            "url": "https://www.linkedin.com/blog/engineering/feed/engineering-the-next-generation-of-linkedins-feed",
-            "why": "LinkedIn replaced its many retrieval sources with one LLM dual encoder, and its per-post CPU ranking with a sequence transformer on GPUs."
+            "url": "https://engineering.fb.com/2026/08/03/ml-applications/training-gem-at-llm-scale-meta-ads-recommendation-foundation-model/",
+            "why": "Sequence recommenders at LLM scale waste GPUs on padding and exposed communication, so GEM training uses jagged attention and topology-aware parallelism."
           }
         }
       ]
     },
     {
-      "name": "Search systems",
+      "name": "Case study: search",
       "steps": [
         {
           "main": {
@@ -274,7 +477,13 @@
             "source": "Meta",
             "year": "2020",
             "why": "Term matching misses semantically related results, so Facebook Search adds embedding retrieval and serves ANN inside its existing inverted index."
-          }
+          },
+          "further": [
+            {
+              "url": "https://www.linkedin.com/blog/engineering/search/reimagining-linkedins-search-stack",
+              "why": "LinkedIn rebuilt search around LLMs, which parse each query, retrieve by exact kNN over embeddings on GPUs and rank with a small distilled model."
+            }
+          ]
         },
         {
           "main": {
@@ -284,24 +493,15 @@
             "source": "Meta",
             "year": "2024",
             "why": "Vector search trades accuracy, speed and memory, and the Faiss paper maps that space through compression codecs, inverted-file indexes and graph indexes."
-          }
-        },
-        {
-          "main": {
-            "url": "https://medium.com/pinterest-engineering/evolving-pinterests-embedding-retrieval-platform-aede4e831e01",
-            "why": "Embedding indexes are costly to keep in RAM, so Pinterest compresses them with scalar and product quantization and is moving them to SSD with SPANN."
           },
           "further": [
+            {
+              "url": "https://medium.com/pinterest-engineering/evolving-pinterests-embedding-retrieval-platform-aede4e831e01"
+            },
             {
               "url": "https://medium.com/airbnb-engineering/embedding-based-retrieval-for-airbnb-search-aabebfc85839"
             }
           ]
-        },
-        {
-          "main": {
-            "url": "https://www.linkedin.com/blog/engineering/search/reimagining-linkedins-search-stack",
-            "why": "LinkedIn rebuilt search around LLMs, which parse each query, retrieve by exact kNN over embeddings on GPUs and rank with a small distilled model."
-          }
         }
       ]
     }

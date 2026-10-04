@@ -3,6 +3,216 @@
   "title": "Compilers & languages",
   "before": ["discrete-math", "computer-architecture"],
   "next": [],
+  "evolution": {
+    "eras": [
+      {
+        "name": "First compilers",
+        "text": "High-level languages made practical",
+        "background": "Programs were written in machine code, and few believed a compiler could match a skilled programmer. FORTRAN proved one could, and Lisp showed that memory could be reclaimed automatically."
+      },
+      {
+        "name": "Compiler theory",
+        "text": "Optimization and types made systematic",
+        "background": "Optimizations had grown as a collection of separate techniques. Researchers recast programs as graphs, so one general analysis could serve many optimizations. Milner gave typing a formal theory in which types are inferred rather than declared."
+      },
+      {
+        "name": "Managed runtimes",
+        "text": "Compiling and collecting at run time",
+        "background": "Object-oriented, garbage-collected languages were flexible, but they ran slowly. Generational collectors and SSA-based optimizers cut the cost, and Self compiled hot code for the types it saw. Java's HotSpot VM, still the core of OpenJDK, brought these ideas together."
+      },
+      {
+        "name": "Reuse and safety",
+        "text": "Shared toolchains, safer languages",
+        "background": "Compilers were monolithic, so every new language rebuilt the same optimizer and code generator. LLVM made those parts reusable, and MLIR later extended them to machine-learning hardware. C and C++ memory bugs caused most security flaws, so Rust and WebAssembly made safety the default."
+      }
+    ],
+    "lanes": ["Compilers", "Runtimes", "Memory management", "Types"],
+    "nodes": [
+      {
+        "id": "fortran",
+        "label": "FORTRAN",
+        "era": "First compilers",
+        "lane": "Compilers",
+        "year": "1957",
+        "problem": "Programs were hand-coded in machine language, and few believed a compiler could match a skilled coder.",
+        "idea": "Backus's IBM team compiles math-like formulas and optimizes loops and registers to rival hand-written code.",
+        "impact": "Soon produced most code at IBM 704 sites, and programs could move to any machine with a compiler."
+      },
+      {
+        "id": "lispgc",
+        "label": "Lisp GC",
+        "era": "First compilers",
+        "lane": "Memory management",
+        "year": "1960",
+        "problem": "List programs in languages like IPL had to erase every unused cell explicitly.",
+        "idea": "McCarthy's Lisp marks every cell still reachable and returns the rest to free storage automatically.",
+        "impact": "Freed programmers from manual erasure, and Smalltalk, Java and JavaScript later made collection standard."
+      },
+      {
+        "id": "flow",
+        "label": "Flow analysis",
+        "era": "Compiler theory",
+        "lane": "Compilers",
+        "year": "1970",
+        "idea": "Frances Allen at IBM represents a program as a graph and computes facts along its edges.",
+        "impact": "Kildall soon unified such analyses into one algorithm, the basis of modern optimizing compilers.",
+        "from": [
+          {
+            "id": "fortran",
+            "why": "Its flow analysis existed only to assign index registers within that one compiler."
+          }
+        ]
+      },
+      {
+        "id": "hm",
+        "label": "Type inference",
+        "era": "Compiler theory",
+        "lane": "Types",
+        "year": "1978",
+        "problem": "Untyped Lisp hid type errors until run time, while strict type systems ruled out generic code.",
+        "idea": "Milner's algorithm infers polymorphic types for ML at compile time, and well-typed programs cannot go wrong.",
+        "impact": "Haskell and Rust base their type inference on it, so many type annotations become optional."
+      },
+      {
+        "id": "gengc",
+        "label": "Generational GC",
+        "era": "Managed runtimes",
+        "lane": "Memory management",
+        "year": "1984",
+        "idea": "Most objects die young, so Ungar's Smalltalk collector scavenges a small young area often.",
+        "impact": "Pauses became unnoticeable, and generational collectors became the default in Java's HotSpot and V8.",
+        "from": [
+          {
+            "id": "lispgc",
+            "why": "Each collection traced the whole heap and stopped the program, which ruined interactive use."
+          }
+        ]
+      },
+      {
+        "id": "ssa",
+        "label": "SSA",
+        "era": "Managed runtimes",
+        "lane": "Compilers",
+        "year": "1991",
+        "idea": "Give each variable a single assignment, merging values at joins, and build it fast with dominance frontiers.",
+        "impact": "SSA became the usual form for optimizers, used in HotSpot, LLVM, GCC and Go.",
+        "from": [
+          {
+            "id": "flow",
+            "why": "Tracking which assignments reach each use took large tables that were costly to update."
+          }
+        ]
+      },
+      {
+        "id": "self",
+        "label": "Self",
+        "era": "Managed runtimes",
+        "lane": "Runtimes",
+        "year": "1991",
+        "problem": "Dynamically typed object-oriented languages ran far slower than C, since compilers could not see types.",
+        "idea": "Self's inline caches record the receiver types at each call site, and hot code is recompiled for them.",
+        "impact": "Type feedback still drives optimizing compilers such as V8's for JavaScript."
+      },
+      {
+        "id": "hotspot",
+        "label": "HotSpot",
+        "era": "Managed runtimes",
+        "lane": "Runtimes",
+        "year": "1999",
+        "idea": "Sun's Java VM interprets code first, then compiles the hot methods using profiles of observed types.",
+        "impact": "Adaptive JIT compilation reached everyday programming, and HotSpot still runs Java inside OpenJDK.",
+        "from": [
+          {
+            "id": "self",
+            "why": "Supplied adaptive optimization, which compiles only the hot code using types seen at run time."
+          },
+          {
+            "id": "ssa",
+            "why": "Supplied the form of the server compiler's intermediate representation."
+          }
+        ]
+      },
+      {
+        "id": "llvm",
+        "label": "LLVM",
+        "era": "Reuse and safety",
+        "lane": "Compilers",
+        "year": "2004",
+        "idea": "Lattner and Adve define a typed SSA code representation, with the compiler built as reusable libraries.",
+        "impact": "Clang, Rust and many other languages and tools now share its optimizer and code generators.",
+        "from": [
+          {
+            "id": "ssa",
+            "why": "SSA optimizers sat inside monolithic compilers whose parts no other tool could reuse."
+          }
+        ]
+      },
+      {
+        "id": "gradual",
+        "label": "Gradual typing",
+        "era": "Reuse and safety",
+        "lane": "Types",
+        "year": "2006",
+        "idea": "Siek and Taha let typed and untyped code mix, inserting run-time checks where they meet.",
+        "impact": "Python's type hints build on its theory, and adding types piece by piece, as TypeScript does, went mainstream.",
+        "from": [
+          {
+            "id": "hm",
+            "why": "Static typing was all or nothing, so dynamic code could not adopt types piece by piece."
+          }
+        ]
+      },
+      {
+        "id": "rust",
+        "label": "Rust",
+        "era": "Reuse and safety",
+        "lane": "Memory management",
+        "year": "2015",
+        "idea": "Mozilla-backed Rust checks ownership and borrowing in its type system, ruling out memory errors without a collector.",
+        "impact": "Linux and Android adopted it, and Android's memory-safety bugs fell as new code used safe languages.",
+        "from": [
+          {
+            "id": "gengc",
+            "why": "Collectors cost control over memory layout, so browsers and operating systems stayed in C and C++."
+          },
+          {
+            "id": "llvm",
+            "why": "Supplied a mature optimizer and code generator, so Rust did not need its own."
+          }
+        ]
+      },
+      {
+        "id": "wasm",
+        "label": "WebAssembly",
+        "era": "Reuse and safety",
+        "lane": "Runtimes",
+        "year": "2017",
+        "idea": "Browser vendors jointly design a compact bytecode with formal semantics that validates fast and runs safely.",
+        "impact": "All major browsers shipped it together, and C, C++ and Rust programs now run on the web.",
+        "from": [
+          {
+            "id": "llvm",
+            "why": "Emscripten compiled C and C++ through LLVM into asm.js, a JavaScript subset that fell short as a target."
+          }
+        ]
+      },
+      {
+        "id": "mlir",
+        "label": "MLIR",
+        "era": "Reuse and safety",
+        "lane": "Compilers",
+        "year": "2020",
+        "idea": "Google's MLIR lets compilers define dialects at many levels of abstraction and lower between them in one framework.",
+        "impact": "Triton, OpenXLA, IREE and the Mojo language build on it, as do chip design tools.",
+        "from": [
+          {
+            "id": "llvm",
+            "why": "Its single low-level IR suited C-like code, so ML frameworks and languages built private IRs above it."
+          }
+        ]
+      }
+    ]
+  },
   "parts": [
     {
       "name": "Foundations",
@@ -13,23 +223,24 @@
             "title": "Stanford CS143: Compilers",
             "url": "https://www.youtube.com/playlist?list=PLUznfNKscdcMzIV_9WtSgtmVemc0JoJhn",
             "source": "Stanford",
-            "why": "Lexing, LL and LR parsing, semantic analysis and type checking, runtime organization, code generation, dataflow optimization, register allocation and garbage collection. In English."
-          }
-        }
-      ]
-    },
-    {
-      "name": "Origins",
-      "steps": [
-        {
-          "main": {
-            "type": "paper",
-            "title": "The FORTRAN Automatic Coding System",
-            "url": "https://archive.computerhistory.org/resources/text/Fortran/102663113.05.01.acc.pdf",
-            "source": "IBM",
-            "year": "1957",
-            "why": "Hand-coding dominated the cost of scientific computing, so FORTRAN compiled math-like programs and used flow analysis to assign registers about as well as people."
-          }
+            "why": "Lexing, LL and LR parsing, semantic analysis and type checking, runtime organization, code generation, dataflow optimization, register allocation and garbage collection. In English.",
+            "links": [
+              {
+                "label": "Website",
+                "url": "https://web.stanford.edu/class/cs143/"
+              }
+            ]
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "The FORTRAN Automatic Coding System",
+              "url": "https://archive.computerhistory.org/resources/text/Fortran/102663113.05.01.acc.pdf",
+              "source": "IBM",
+              "year": "1957",
+              "why": "Hand-coding dominated the cost of scientific computing, so FORTRAN compiled math-like programs and used flow analysis to assign registers about as well as people."
+            }
+          ]
         }
       ]
     },
@@ -58,7 +269,7 @@
             "url": "https://llvm.org/pubs/2004-01-30-CGO-LLVM.pdf",
             "source": "UIUC",
             "year": "2004",
-            "why": "Compilers optimized once behind a private IR, so LLVM keeps a typed SSA representation that tools can optimize again at link time and run time."
+            "why": "Compilers optimized once behind a private IR, so LLVM keeps an SSA representation that tools can optimize again at link time and run time; its typed pointers have since become opaque."
           },
           "further": [
             {
@@ -112,13 +323,23 @@
       "steps": [
         {
           "main": {
-            "type": "paper",
-            "title": "A Theory of Type Polymorphism in Programming",
-            "url": "https://www.sciencedirect.com/science/article/pii/0022000078900144",
-            "source": "University of Edinburgh",
-            "year": "1978",
-            "why": "Untyped programs fail at run time and typed ones need annotations, so Milner's algorithm W infers polymorphic types, and well-typed programs cannot go wrong."
-          }
+            "type": "book",
+            "title": "OCaml Programming: Correct + Efficient + Beautiful",
+            "url": "https://cs3110.github.io/textbook/chapters/interp/inference.html",
+            "source": "Cornell",
+            "scope": "Section 10.6",
+            "why": "Untyped programs fail at run time and typed ones need annotations, so Hindley-Milner turns a program into type equations and solves them by unification."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "A Theory of Type Polymorphism in Programming",
+              "url": "https://www.sciencedirect.com/science/article/pii/0022000078900144",
+              "source": "University of Edinburgh",
+              "year": "1978",
+              "why": "Untyped programs fail at run time and typed ones need annotations, so Milner's algorithm W infers polymorphic types, and well-typed programs cannot go wrong."
+            }
+          ]
         },
         {
           "main": {
@@ -147,6 +368,13 @@
           "further": [
             {
               "type": "article",
+              "title": "The Green Tea Garbage Collector",
+              "url": "https://go.dev/blog/greenteagc",
+              "source": "Google",
+              "year": "2025"
+            },
+            {
+              "type": "article",
               "title": "Why Discord is switching from Go to Rust",
               "url": "https://discord.com/blog/why-discord-is-switching-from-go-to-rust",
               "source": "Discord",
@@ -154,21 +382,10 @@
             },
             {
               "url": "https://www.uber.com/blog/zero-growth-stack/"
-            }
-          ]
-        },
-        {
-          "main": {
-            "url": "https://www.linkedin.com/blog/engineering/infrastructure/java-heap-memory-and-garbage-collection-tuning-for-high-performance-services",
-            "why": "FollowFeed's huge heap stalled G1 and non-generational ZGC, so LinkedIn flattened cached objects to cut headers and allocations, then moved to generational ZGC."
-          },
-          "further": [
+            },
             {
-              "type": "article",
-              "title": "Bending pause times to your will with Generational ZGC",
-              "url": "https://netflixtechblog.com/bending-pause-times-to-your-will-with-generational-zgc-256629c9386b",
-              "source": "Netflix",
-              "year": "2024"
+              "url": "https://www.linkedin.com/blog/engineering/infrastructure/java-heap-memory-and-garbage-collection-tuning-for-high-performance-services",
+              "why": "FollowFeed's huge heap stalled G1 and non-generational ZGC, so LinkedIn flattened cached objects to cut headers and allocations, then moved to generational ZGC."
             }
           ]
         },
@@ -187,12 +404,6 @@
               "url": "https://security.googleblog.com/2024/09/eliminating-memory-safety-vulnerabilities-Android.html",
               "source": "Google",
               "year": "2024"
-            },
-            {
-              "url": "https://dropbox.tech/infrastructure/rewriting-the-heart-of-our-sync-engine"
-            },
-            {
-              "url": "https://www.figma.com/blog/supporting-faster-file-load-times-with-memory-optimizations-in-rust/"
             }
           ]
         }
@@ -220,9 +431,6 @@
             },
             {
               "url": "https://www.uber.com/blog/data-race-patterns-in-go/"
-            },
-            {
-              "url": "https://netflixtechblog.com/java-21-virtual-threads-dude-wheres-my-lock-3052540e231d"
             }
           ]
         }
@@ -239,14 +447,19 @@
             "source": "Google",
             "year": "2017",
             "why": "JavaScript was a poor compilation target, so the browser vendors designed WebAssembly, a bytecode with formal semantics that validates fast and runs near native speed."
-          }
-        },
-        {
-          "main": {
-            "url": "https://www.amazon.science/blog/how-prime-video-updates-its-app-for-more-than-8-000-device-types",
-            "why": "Prime Video's JavaScript app ran slowly on many TVs, so Amazon moved its low-level systems to Rust compiled to WebAssembly, beside the JavaScript VM."
           },
           "further": [
+            {
+              "type": "article",
+              "title": "A new way to bring garbage collected programming languages efficiently to WebAssembly",
+              "url": "https://v8.dev/blog/wasm-gc-porting",
+              "source": "Google",
+              "year": "2023"
+            },
+            {
+              "url": "https://www.amazon.science/blog/how-prime-video-updates-its-app-for-more-than-8-000-device-types",
+              "why": "Prime Video's JavaScript app ran slowly on many TVs, so Amazon moved its low-level systems to Rust compiled to WebAssembly, beside the JavaScript VM."
+            },
             {
               "url": "https://blog.cloudflare.com/big-pineapple-intro/"
             },
@@ -276,17 +489,10 @@
               "url": "https://storage.googleapis.com/gweb-research2023-media/pubtools/4365.pdf",
               "source": "Google",
               "year": "2018"
-            }
-          ]
-        },
-        {
-          "main": {
-            "url": "https://www.uber.com/blog/nilaway-practical-nil-panic-detection-for-go/",
-            "why": "Go's nil checker found only obvious dereferences, so Uber's NilAway infers nilability across functions as constraints and reports contradictions on every build."
-          },
-          "further": [
+            },
             {
-              "url": "https://engineering.fb.com/2024/12/19/developer-tools/glean-open-source-code-indexing/"
+              "url": "https://www.uber.com/blog/nilaway-practical-nil-panic-detection-for-go/",
+              "why": "Go's nil checker found only obvious dereferences, so Uber's NilAway infers nilability across functions as constraints and reports contradictions on every build."
             }
           ]
         }

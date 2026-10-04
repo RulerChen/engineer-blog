@@ -1,7 +1,7 @@
 {
   "id": "machine-learning",
   "title": "Machine learning",
-  "before": ["linear-algebra", "probability"],
+  "before": ["probability", "linear-algebra", "calculus"],
   "next": ["deep-learning", "reinforcement-learning"],
   "evolution": {
     "eras": [
@@ -160,18 +160,88 @@
         {
           "main": {
             "type": "course",
-            "title": "Machine Learning Foundations",
-            "url": "https://www.youtube.com/playlist?list=PLXVfgk9fNX2I7tB6oIINGBmW50rrmFTqf",
-            "source": "NTU",
-            "why": "What learning is, linear models, and how to keep them from overfitting. In Mandarin.",
-            "year": "2015"
+            "title": "UC Berkeley CS 188: Introduction to Artificial Intelligence",
+            "url": "https://inst.eecs.berkeley.edu/~cs188/sp26/",
+            "source": "UC Berkeley",
+            "year": "2026",
+            "why": "Search, games, MDPs and reinforcement learning, Bayes nets and HMMs, then decision trees, naive Bayes and neural networks, with Pacman projects. In English.",
+            "links": [
+              {
+                "label": "Videos",
+                "url": "https://www.youtube.com/playlist?list=PLp8QV47qJEg5tSxKiwcZt4LVwN_ek2Kxy"
+              },
+              {
+                "label": "Textbook",
+                "url": "https://inst.eecs.berkeley.edu/~cs188/textbook/"
+              }
+            ]
+          }
+        },
+        {
+          "main": {
+            "type": "course",
+            "title": "Stanford CS229: Machine Learning",
+            "url": "https://www.youtube.com/playlist?list=PLoROMvodv4rNyWOpJg_Yh4NSqI4Z4vOYy",
+            "source": "Stanford",
+            "year": "2022",
+            "scope": "Lectures 1-15",
+            "why": "Linear models and GLMs, generative models, kernels, neural networks, bias-variance and regularization, then k-means, EM, factor analysis, PCA and ICA. In English.",
+            "links": [
+              {
+                "label": "Website",
+                "url": "https://cs229.stanford.edu/syllabus-spring2022.html"
+              },
+              {
+                "label": "Notes",
+                "url": "https://cs229.stanford.edu/lectures-spring2022/main_notes.pdf"
+              }
+            ]
           },
-          "background": [
+          "further": [
             {
-              "type": "book",
-              "title": "Mathematics for Machine Learning",
-              "url": "https://mml-book.github.io/",
-              "year": "2020"
+              "type": "course",
+              "title": "Machine Learning Foundations",
+              "url": "https://www.youtube.com/playlist?list=PLXVfgk9fNX2I7tB6oIINGBmW50rrmFTqf",
+              "source": "NTU",
+              "year": "2015",
+              "links": [
+                {
+                  "label": "Website",
+                  "url": "https://www.csie.ntu.edu.tw/~htlin/mooc/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "course",
+            "title": "Cornell CS4780: Machine Learning for Intelligent Systems",
+            "url": "https://www.cs.cornell.edu/courses/cs4780/2018fa/",
+            "source": "Cornell",
+            "year": "2018",
+            "scope": "Lectures 28-34",
+            "why": "Decision and regression trees, bagging, random forests and boosting. In English.",
+            "links": [
+              {
+                "label": "Videos",
+                "url": "https://www.youtube.com/playlist?list=PLl8OlHZGYOQ7bkVbuRthEsaLr7bONzbXS"
+              }
+            ]
+          },
+          "alternative": [
+            {
+              "type": "course",
+              "title": "Machine Learning Techniques",
+              "url": "https://www.youtube.com/playlist?list=PLXVfgk9fNX2IQOYPmqjqWsNUFl2kpk1U2",
+              "source": "NTU",
+              "year": "2016",
+              "links": [
+                {
+                  "label": "Website",
+                  "url": "https://www.csie.ntu.edu.tw/~htlin/mooc/"
+                }
+              ]
             }
           ]
         }
@@ -180,24 +250,6 @@
     {
       "name": "Theory",
       "steps": [
-        {
-          "main": {
-            "type": "course",
-            "title": "Machine Learning Techniques",
-            "url": "https://www.youtube.com/playlist?list=PLXVfgk9fNX2IQOYPmqjqWsNUFl2kpk1U2",
-            "source": "NTU",
-            "why": "SVMs and kernels, then bagging, boosting, trees and random forests. In Mandarin.",
-            "year": "2016"
-          },
-          "further": [
-            {
-              "type": "book",
-              "title": "Pattern Recognition and Machine Learning",
-              "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf",
-              "year": "2006"
-            }
-          ]
-        },
         {
           "main": {
             "type": "paper",
@@ -216,17 +268,6 @@
             "source": "UC Berkeley",
             "year": "2001",
             "why": "Single decision trees overfit, so random forests average many trees, each grown on a random sample with random features."
-          }
-        },
-        {
-          "main": {
-            "type": "course",
-            "title": "Stanford CS229: Machine Learning",
-            "url": "https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU",
-            "source": "Stanford",
-            "year": "2018",
-            "scope": "Lectures 13-16",
-            "why": "k-means, mixtures of Gaussians and EM, factor analysis, PCA and ICA. In English."
           }
         }
       ]

@@ -6,6 +6,7 @@ import type {
   RoadmapInput,
   RoadmapItem,
   RoadmapItemInput,
+  RoadmapLink,
 } from "../../src/shared/roadmap.js";
 import { topicLabel } from "../../src/shared/topicMap.js";
 import { iconFields, normalizeUrl } from "./articles.js";
@@ -40,7 +41,19 @@ function resolveItem(
       };
   if (input.scope) item.scope = input.scope;
   if (input.why) item.why = input.why;
+  if (input.links?.length) item.links = checkLinks(input.links, item.url, where);
   return item;
+}
+
+/** A link with no label draws an empty chip, and one repeating another url adds nothing. */
+function checkLinks(links: RoadmapLink[], url: string, where: string): RoadmapLink[] {
+  const seen = new Set([normalizeUrl(url)]);
+  for (const link of links) {
+    if (!link.label || !link.url) throw new Error(`${where}: a link needs a label and a url`);
+    if (seen.has(normalizeUrl(link.url))) throw new Error(`${where}: ${link.url} is linked twice`);
+    seen.add(normalizeUrl(link.url));
+  }
+  return links;
 }
 
 /** A relation that names no known topic would render as a blank chip. */

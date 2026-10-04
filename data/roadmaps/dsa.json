@@ -1,0 +1,121 @@
+{
+  "id": "dsa",
+  "title": "Data structures & algorithms",
+  "before": [],
+  "next": ["database-systems"],
+  "parts": [
+    {
+      "name": "Foundations",
+      "steps": [
+        {
+          "main": {
+            "type": "course",
+            "title": "UC Berkeley CS 61B: Data Structures",
+            "url": "https://sp26.datastructur.es/",
+            "source": "UC Berkeley",
+            "year": "2026",
+            "why": "Lists, disjoint sets, balanced search trees, heaps, hashing, tries, graphs and sorting, each implemented in Java. In English."
+          }
+        },
+        {
+          "main": {
+            "type": "course",
+            "title": "MIT 6.006: Introduction to Algorithms",
+            "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/",
+            "source": "MIT",
+            "year": "2020",
+            "why": "Asymptotic analysis, arrays and hashing, sorting, binary trees and heaps, graph search, shortest paths and dynamic programming. In English."
+          }
+        },
+        {
+          "main": {
+            "type": "course",
+            "title": "MIT 6.046J: Design and Analysis of Algorithms",
+            "url": "https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/",
+            "source": "MIT",
+            "year": "2015",
+            "why": "Divide and conquer, amortized and randomized analysis, skip lists and universal hashing, dynamic programming, greedy algorithms, network flow, NP-completeness and cache-oblivious algorithms. In English."
+          },
+          "further": [
+            {
+              "type": "course",
+              "title": "MIT 6.854: Advanced Algorithms",
+              "url": "https://courses.csail.mit.edu/6.854/20/",
+              "source": "MIT",
+              "year": "2020"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "In production",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "HyperLogLog in Practice: Algorithmic Engineering of a State of The Art Cardinality Estimation Algorithm",
+            "url": "https://research.google.com/pubs/archive/40671.pdf",
+            "source": "Google",
+            "year": "2013",
+            "why": "Some PowerDrill distinct-count queries exceeded memory, so Google's HyperLogLog++ adds a wider hash, empirical bias correction and a sparse representation."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Customizable Route Planning in Road Networks",
+            "url": "https://www.microsoft.com/en-us/research/publication/customizable-route-planning-in-road-networks/",
+            "source": "Microsoft",
+            "year": "2017",
+            "why": "Dijkstra is too slow on continental road graphs, so Bing Maps' CRP partitions the graph once and rebuilds small overlays when traffic changes."
+          },
+          "further": [
+            {
+              "url": "https://www.uber.com/blog/h3/"
+            }
+          ]
+        },
+        {
+          "main": {
+            "url": "https://github.blog/engineering/architecture-optimization/the-technology-behind-githubs-new-code-search/",
+            "why": "Grepping all of GitHub's code was far too slow, so Blackbird turns regex queries into n-gram lookups and intersects their posting lists."
+          },
+          "further": [
+            {
+              "type": "article",
+              "title": "Regular Expression Matching with a Trigram Index",
+              "url": "https://swtch.com/~rsc/regexp/regexp4.html",
+              "year": "2012"
+            }
+          ]
+        },
+        {
+          "main": {
+            "url": "https://blog.cloudflare.com/when-bloom-filters-dont-bloom/",
+            "why": "Deduplicating huge IP logs with a Bloom filter stalled on a cache miss per hash, so Cloudflare switched to a linear-probing hash table."
+          }
+        },
+        {
+          "main": {
+            "type": "article",
+            "title": "Faster Go maps with Swiss Tables",
+            "url": "https://go.dev/blog/swisstable",
+            "source": "Google",
+            "year": "2025",
+            "why": "Go wanted Swiss Tables' fast group probing without all-at-once growth, so each map splits into small tables that grow independently."
+          },
+          "further": [
+            {
+              "type": "video",
+              "title": "Designing a Fast, Efficient, Cache-friendly Hash Table, Step by Step",
+              "url": "https://www.youtube.com/watch?v=ncHmEUmJZf4",
+              "source": "Google",
+              "year": "2017"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

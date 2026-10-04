@@ -1,0 +1,60 @@
+{
+  "id": "discrete-math",
+  "title": "Discrete math",
+  "before": [],
+  "next": ["compilers"],
+  "parts": [
+    {
+      "name": "Discrete mathematics",
+      "steps": [
+        {
+          "main": {
+            "type": "course",
+            "title": "CS 70: Discrete Mathematics and Probability Theory",
+            "url": "https://sp26.eecs70.org/",
+            "source": "UC Berkeley",
+            "year": "2026",
+            "why": "Logic and proofs, induction, stable matching, graphs, modular arithmetic and RSA, polynomials, secret sharing and error-correcting codes, counting, countability and computability. In English.",
+            "links": [
+              {
+                "label": "2015 Video",
+                "url": "https://www.youtube.com/playlist?list=PLzAv_uHZw7dTI2e0F8-lxxOWV9zXMzwNE"
+              }
+            ]
+          },
+          "background": [
+            {
+              "type": "book",
+              "title": "數學導論",
+              "url": "https://math.ntnu.edu.tw/~li/IntroMath/intromath.pdf",
+              "year": "2023"
+            }
+          ],
+          "alternative": [
+            {
+              "type": "course",
+              "title": "MIT 6.1200J: Mathematics for Computer Science",
+              "url": "https://ocw.mit.edu/courses/6-1200j-mathematics-for-computer-science-spring-2024/",
+              "source": "MIT",
+              "year": "2024",
+              "links": [
+                {
+                  "label": "Book",
+                  "url": "https://courses.csail.mit.edu/6.042/spring18/mcs.pdf"
+                }
+              ]
+            }
+          ],
+          "further": [
+            {
+              "type": "book",
+              "title": "基礎數論",
+              "url": "https://math.ntnu.edu.tw/~li/ENT/Full.pdf",
+              "year": "2013"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

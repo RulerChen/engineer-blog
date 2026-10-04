@@ -2,7 +2,247 @@
   "id": "operating-systems",
   "title": "Operating systems",
   "before": [],
-  "next": ["computer-architecture", "distributed-systems", "security", "database-systems"],
+  "next": [
+    "computer-architecture",
+    "parallel-computing",
+    "distributed-systems",
+    "security",
+    "database-systems"
+  ],
+  "evolution": {
+    "eras": [
+      {
+        "name": "Time-sharing",
+        "text": "Many users share one computer",
+        "background": "Computers ran one job at a time in batches, so programmers waited hours or days for results. Time-sharing let many users at terminals share one machine. Paging stretched its small memory, and virtual machines gave each user a computer of their own."
+      },
+      {
+        "name": "Unix",
+        "text": "A small, portable kernel",
+        "background": "Multics showed what a large time-sharing system could do, but it took years to deliver. A few Bell Labs programmers built the far smaller Unix and rewrote it in C. Its source spread to universities, which kept extending it until researchers asked how much really had to run inside the kernel."
+      },
+      {
+        "name": "Commodity PCs",
+        "text": "Free Unix and VMs on the PC",
+        "background": "Cheap PCs spread, but Unix source still came with a costly AT&T license. Linux gave the PC a free Unix-like kernel, built in the open. PCs became internet servers holding thousands of connections, and VMware made virtual machines run on a processor never designed for them."
+      },
+      {
+        "name": "Cloud",
+        "text": "Many tenants per server",
+        "background": "Cloud providers rented slices of large server fleets to many customers, so isolating them cheaply became essential. CPUs gained virtualization support, and Linux gained namespaces and cgroups. Linux also learned to run verified programs inside the kernel, so operators could change it without patching it."
+      }
+    ],
+    "lanes": ["Kernels", "Memory", "Files and I/O", "Virtualization"],
+    "nodes": [
+      {
+        "id": "timesharing",
+        "label": "Time-sharing",
+        "era": "Time-sharing",
+        "lane": "Kernels",
+        "year": "1961",
+        "problem": "Batch jobs came back hours or days later, which made debugging slow and frustrating.",
+        "idea": "MIT's CTSS switches the CPU among users at terminals on timer interrupts, and a multilevel feedback queue favors short interactive jobs.",
+        "impact": "Interactive computing proved practical, and MIT built Multics as its successor."
+      },
+      {
+        "id": "vm",
+        "label": "Virtual memory",
+        "era": "Time-sharing",
+        "lane": "Memory",
+        "year": "1962",
+        "problem": "Programmers had to shuttle program pieces between small core memory and a drum by hand.",
+        "idea": "Manchester's Atlas splits memory into pages and moves them to and from the drum automatically.",
+        "impact": "Paging became standard in general-purpose computers, and gave each process an address space of its own."
+      },
+      {
+        "id": "hierfs",
+        "label": "Hierarchical file system",
+        "era": "Time-sharing",
+        "lane": "Files and I/O",
+        "year": "1965",
+        "problem": "CTSS kept each user's files in one flat directory, with no way to group them or share them selectively.",
+        "idea": "Multics arranges files in a tree of directories named by paths, with an access control list on each.",
+        "impact": "Unix kept the tree and its path names, and every major OS has used it since."
+      },
+      {
+        "id": "vms",
+        "label": "Virtual machines",
+        "era": "Time-sharing",
+        "lane": "Virtualization",
+        "year": "1967",
+        "problem": "Testing a new operating system needed a whole machine to itself, often at night or on weekends.",
+        "idea": "IBM's CP gives each user a virtual System/360 that runs its own OS, usually the single-user CMS.",
+        "impact": "Several systems, test versions included, could share one machine, and it grew into IBM's VM/370."
+      },
+      {
+        "id": "workingset",
+        "label": "Working sets",
+        "era": "Time-sharing",
+        "lane": "Memory",
+        "year": "1968",
+        "idea": "Denning tracks the pages each program used recently, and runs a program only while that set fits in memory.",
+        "impact": "Thrashing could be avoided, and later page replacement, Linux's LRU lists included, still approximates recent use.",
+        "from": [
+          {
+            "id": "vm",
+            "why": "Paging let many programs share memory, but with too many of them the machine spent its time paging."
+          }
+        ]
+      },
+      {
+        "id": "unix",
+        "label": "Unix",
+        "era": "Unix",
+        "lane": "Kernels",
+        "year": "1969",
+        "idea": "Thompson and Ritchie build a small system where fork and exec start processes, and files, devices and pipes share one interface.",
+        "impact": "Rewritten in C, it moved easily to new machines, and its interface became POSIX, which Linux and macOS follow.",
+        "from": [
+          {
+            "id": "timesharing",
+            "why": "Bell Labs quit Multics, leaving its programmers without the interactive system they had used."
+          },
+          {
+            "id": "hierfs",
+            "why": "Supplied the tree of directories, which Unix kept in a far smaller system."
+          }
+        ]
+      },
+      {
+        "id": "microkernel",
+        "label": "Microkernels",
+        "era": "Unix",
+        "lane": "Kernels",
+        "year": "1985",
+        "idea": "CMU's Mach keeps only threads, address spaces and message passing in the kernel, and moves file systems and drivers to user processes.",
+        "impact": "Mach's messages were slow, but it lives on inside the XNU kernel of macOS and iOS. L4 later showed messages could be fast, and seL4 was proved correct.",
+        "from": [
+          {
+            "id": "unix",
+            "why": "Unix kernels kept growing, and every driver and file system ran with full privilege."
+          }
+        ]
+      },
+      {
+        "id": "journal",
+        "label": "Journaling",
+        "era": "Unix",
+        "lane": "Files and I/O",
+        "year": "1987",
+        "problem": "After a crash, fsck had to scan the whole disk, which grew slower as disks grew.",
+        "idea": "Xerox's Cedar records each metadata update in a log first, a trick borrowed from databases.",
+        "impact": "Recovery became fast, and file systems such as ext4, XFS and NTFS adopted journaling."
+      },
+      {
+        "id": "linux",
+        "label": "Linux",
+        "era": "Commodity PCs",
+        "lane": "Kernels",
+        "year": "1991",
+        "idea": "Torvalds writes a free Unix-like kernel for the PC, developed openly with helpers worldwide.",
+        "impact": "Paired with GNU tools, it now runs Android, most internet companies' servers and every TOP500 supercomputer.",
+        "from": [
+          {
+            "id": "unix",
+            "why": "Unix source still required a costly AT&T license."
+          }
+        ]
+      },
+      {
+        "id": "lfs",
+        "label": "Log-structured FS",
+        "era": "Commodity PCs",
+        "lane": "Files and I/O",
+        "year": "1991",
+        "idea": "Berkeley's Sprite LFS writes every change, data included, sequentially to a log that is the file system itself.",
+        "impact": "Writing new copies instead of overwriting carried into NetApp's WAFL, ZFS and Btrfs, and suits flash, which cannot overwrite in place.",
+        "from": [
+          {
+            "id": "journal",
+            "why": "Journaling logged only metadata, and small data writes still seeked all over the disk."
+          }
+        ]
+      },
+      {
+        "id": "bt",
+        "label": "Binary translation",
+        "era": "Commodity PCs",
+        "lane": "Virtualization",
+        "year": "1999",
+        "idea": "VMware rewrites guest kernel code as it runs and lets guest applications run directly on the CPU.",
+        "impact": "Virtual machines returned on cheap x86 hardware, and VMware's ESX Server brought them to datacenters.",
+        "from": [
+          {
+            "id": "vms",
+            "why": "Mainframes trapped every privileged instruction, but some sensitive x86 instructions did not trap."
+          }
+        ]
+      },
+      {
+        "id": "events",
+        "label": "Event notification",
+        "era": "Commodity PCs",
+        "lane": "Files and I/O",
+        "year": "2000",
+        "problem": "select and poll scan every watched descriptor on each call, so servers with many idle connections spent their CPU scanning.",
+        "idea": "The kernel keeps each process's interest set and returns only the ready descriptors, as FreeBSD's kqueue and Linux's epoll do.",
+        "impact": "Event loops such as nginx and libuv serve many connections per thread. Linux's io_uring later moved the I/O calls themselves onto shared rings."
+      },
+      {
+        "id": "hwvirt",
+        "label": "Hardware virtualization",
+        "era": "Cloud",
+        "lane": "Virtualization",
+        "year": "2005",
+        "idea": "Intel VT-x and AMD-V add a CPU mode where guest kernels run directly and sensitive operations exit to the hypervisor.",
+        "impact": "Hypervisors became small, and Xen and KVM came to run the public clouds, including AWS's Firecracker.",
+        "from": [
+          {
+            "id": "bt",
+            "why": "Binary translation was complex, and every guest kernel path had to be rewritten."
+          },
+          {
+            "id": "linux",
+            "why": "Supplied a scheduler and memory manager, so KVM could run each VM as an ordinary process."
+          }
+        ]
+      },
+      {
+        "id": "containers",
+        "label": "Containers",
+        "era": "Cloud",
+        "lane": "Virtualization",
+        "year": "2013",
+        "idea": "Run apps isolated on one shared kernel, as FreeBSD jails and Solaris zones had. Docker added images that pack an app with its files.",
+        "impact": "Containers became a common way to ship software, and Google's Kubernetes came to run them across clusters.",
+        "from": [
+          {
+            "id": "hwvirt",
+            "why": "Each VM carries a full guest OS, which is heavy and slow to boot for one app."
+          },
+          {
+            "id": "linux",
+            "why": "Supplied namespaces and cgroups to isolate and limit groups of processes on one kernel."
+          }
+        ]
+      },
+      {
+        "id": "ebpf",
+        "label": "eBPF",
+        "era": "Cloud",
+        "lane": "Kernels",
+        "year": "2014",
+        "idea": "Grow the BSD packet filter into a general in-kernel virtual machine. A verifier checks each program before it runs.",
+        "impact": "Now used for fast networking, tracing and security tools, and through sched_ext even to replace the CPU scheduler.",
+        "from": [
+          {
+            "id": "linux",
+            "why": "Changing kernel behavior meant patches or modules, where one bug could crash production servers."
+          }
+        ]
+      }
+    ]
+  },
   "parts": [
     {
       "name": "Computer basics",
@@ -15,7 +255,15 @@
             "source": "CMU",
             "year": "2015",
             "why": "How C becomes machine code, and what memory, linking, processes and I/O look like to a program. In English."
-          }
+          },
+          "alternative": [
+            {
+              "type": "video",
+              "title": "CSAPP-深入理解计算机系统",
+              "url": "https://www.bilibili.com/video/BV1cD4y1D7uR/",
+              "year": "2020"
+            }
+          ]
         }
       ]
     },
@@ -29,17 +277,14 @@
             "url": "https://pdos.csail.mit.edu/6.1810/2025/schedule.html",
             "source": "MIT",
             "year": "2025",
-            "why": "Page tables, system calls, page faults, locking, thread switching and file systems, each built into the xv6 kernel in labs. In English."
-          },
-          "alternative": [
-            {
-              "type": "course",
-              "title": "MIT 6.S081: Operating System Engineering",
-              "url": "https://pdos.csail.mit.edu/6.S081/2020/schedule.html",
-              "source": "MIT",
-              "year": "2020"
-            }
-          ]
+            "why": "Page tables, system calls, page faults, locking, thread switching and file systems, each built into the xv6 kernel in labs. In English.",
+            "links": [
+              {
+                "label": "2020 videos",
+                "url": "https://pdos.csail.mit.edu/6.S081/2020/schedule.html"
+              }
+            ]
+          }
         }
       ]
     },
@@ -51,7 +296,6 @@
             "type": "article",
             "title": "Linux Kernel Internals: Processes",
             "url": "https://hackmd.io/@sysprog/linux-process",
-            "source": "NCKU",
             "year": "2026",
             "why": "From LinuxThreads to NPTL, then task_struct, the process lifecycle, fork and context switches. In Mandarin."
           },
@@ -72,34 +316,42 @@
       "steps": [
         {
           "main": {
-            "type": "article",
-            "title": "Linux Kernel Internals: CPU Scheduler",
-            "url": "https://hackmd.io/@sysprog/linux-scheduler",
-            "source": "NCKU",
-            "year": "2026",
-            "why": "From the O(n) and O(1) schedulers through CFS to EEVDF and sched_ext, plus load balancing and PREEMPT_RT. In Mandarin."
-          }
-        },
-        {
-          "main": {
-            "type": "article",
-            "title": "Avoiding CPU Throttling in a Containerized Environment",
-            "url": "https://www.uber.com/blog/avoiding-cpu-throttling-in-a-containerized-environment/",
-            "source": "Uber",
-            "year": "2022",
-            "why": "CFS bandwidth quotas throttled multi-threaded services in containers, so Uber pinned them to dedicated cores with cpusets."
-          }
-        },
-        {
-          "main": {
-            "type": "article",
-            "title": "Modernizing the Meta Ads Service With an Open-Source Kernel Scheduler",
-            "url": "https://engineering.fb.com/2026/07/13/ml-applications/modernizing-the-meta-ads-service-with-an-open-source-kernel-scheduler/",
-            "source": "Meta",
-            "year": "2026",
-            "why": "EEVDF regressed ads latency, so Meta wrote a sched_ext policy that splits CPUs into latency-critical and background pools."
+            "type": "paper",
+            "title": "The Linux Scheduler: a Decade of Wasted Cores",
+            "url": "https://people.ece.ubc.ca/sasha/papers/eurosys16-final29.pdf",
+            "year": "2016",
+            "why": "CFS load balancing across scheduling domains had bugs that left cores idle while threads waited, which the authors exposed with an online invariant checker."
           },
+          "alternative": [
+            {
+              "type": "article",
+              "title": "Linux Kernel Internals: CPU Scheduler",
+              "url": "https://hackmd.io/@sysprog/linux-scheduler",
+              "year": "2026"
+            }
+          ],
           "further": [
+            {
+              "type": "article",
+              "title": "An EEVDF CPU scheduler for Linux",
+              "url": "https://lwn.net/Articles/925371/",
+              "year": "2023"
+            },
+            {
+              "type": "article",
+              "title": "Avoiding CPU Throttling in a Containerized Environment",
+              "url": "https://www.uber.com/blog/avoiding-cpu-throttling-in-a-containerized-environment/",
+              "source": "Uber",
+              "year": "2022"
+            },
+            {
+              "type": "article",
+              "title": "Modernizing the Meta Ads Service With an Open-Source Kernel Scheduler",
+              "url": "https://engineering.fb.com/2026/07/13/ml-applications/modernizing-the-meta-ads-service-with-an-open-source-kernel-scheduler/",
+              "source": "Meta",
+              "year": "2026",
+              "why": "EEVDF regressed ads latency, so Meta wrote a sched_ext policy that splits CPUs into latency-critical and background pools."
+            },
             {
               "type": "paper",
               "title": "ghOSt: Fast & Flexible User-Space Delegation of Linux Scheduling",
@@ -116,13 +368,21 @@
       "steps": [
         {
           "main": {
-            "type": "article",
-            "title": "Linux Kernel Internals: Synchronization",
-            "url": "https://hackmd.io/@sysprog/linux-sync",
-            "source": "NCKU",
-            "year": "2018",
-            "why": "Spinlocks, semaphores, rwlocks, MCS locks and seqlocks, and why locks limit scalability. In Mandarin."
-          }
+            "type": "paper",
+            "title": "Non-scalable locks are dangerous",
+            "url": "https://www.kernel.org/doc/ols/2012/ols2012-zeldovich.pdf",
+            "source": "MIT",
+            "year": "2012",
+            "why": "Linux ticket spinlocks collapse under contention because each unlock invalidates every waiter's cached copy; a Markov model explains the collapse, and MCS locks avoid it."
+          },
+          "alternative": [
+            {
+              "type": "article",
+              "title": "Linux Kernel Internals: Synchronization",
+              "url": "https://hackmd.io/@sysprog/linux-sync",
+              "year": "2018"
+            }
+          ]
         }
       ]
     },
@@ -136,7 +396,12 @@
             "url": "https://lwn.net/Articles/856931/",
             "year": "2021",
             "why": "The active and inactive page lists often evicted the wrong pages, so MGLRU sorts pages into generations and reclaims from the oldest."
-          }
+          },
+          "further": [
+            {
+              "url": "https://www.linkedin.com/blog/engineering/feed/the-58-million-key-freeze-what-a-hashmap-resize-taught-us-about-memory-allocation-at-scale"
+            }
+          ]
         },
         {
           "main": {
@@ -156,18 +421,38 @@
               "year": "2023"
             }
           ]
-        },
-        {
-          "main": {
-            "url": "https://www.linkedin.com/blog/engineering/feed/the-58-million-key-freeze-what-a-hashmap-resize-taught-us-about-memory-allocation-at-scale",
-            "why": "LinkedIn traced silent freezes to a HashMap resize whose large mmap held the mmap_lock and stalled every thread's page faults, and fixed it by preallocating."
-          }
         }
       ]
     },
     {
-      "name": "Storage",
+      "name": "I/O models",
       "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "A Scalable and Explicit Event Delivery Mechanism for UNIX",
+            "url": "https://www.usenix.org/legacy/events/usenix99/full_papers/banga/banga.pdf",
+            "year": "1999",
+            "why": "select() costs grow with every file descriptor a server watches, so this mechanism lets applications register interest once and dequeue only new events."
+          },
+          "further": [
+            {
+              "url": "https://blog.cloudflare.com/how-we-scaled-nginx-and-saved-the-world-54-years-every-day/",
+              "why": "Disk reads and open() block nginx's event loop even with O_NONBLOCK, so Cloudflare moved them to thread pools."
+            },
+            {
+              "url": "https://blog.cloudflare.com/the-problem-with-event-loops/"
+            }
+          ],
+          "alternative": [
+            {
+              "type": "article",
+              "title": "I/O Model Evolution: Event-Driven Servers",
+              "url": "https://hackmd.io/@sysprog/event-driven-server",
+              "year": "2025"
+            }
+          ]
+        },
         {
           "main": {
             "type": "article",
@@ -175,6 +460,46 @@
             "url": "https://lwn.net/Articles/776703/",
             "year": "2019",
             "why": "Linux AIO worked well only for direct I/O and could still block, so io_uring passes requests and completions through rings shared with the kernel."
+          },
+          "alternative": [
+            {
+              "type": "article",
+              "title": "I/O Model Evolution: io_uring",
+              "url": "https://hackmd.io/@sysprog/iouring",
+              "year": "2025"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "File systems and storage",
+      "steps": [
+        {
+          "main": {
+            "type": "article",
+            "title": "PostgreSQL's fsync() surprise",
+            "url": "https://lwn.net/Articles/752063/",
+            "year": "2018",
+            "why": "PostgreSQL trusted fsync to report failed writes, but after a writeback error the kernel can drop the dirty pages and never report it."
+          },
+          "alternative": [
+            {
+              "type": "article",
+              "title": "Linux Kernel Internals: File Systems",
+              "url": "https://hackmd.io/@sysprog/linux-file-system",
+              "year": "2020"
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "File Systems Unfit as Distributed Storage Backends: Lessons from 10 Years of Ceph Evolution",
+            "url": "https://www.pdl.cmu.edu/PDL-FTP/Storage/ceph-exp-sosp19.pdf",
+            "source": "CMU",
+            "year": "2019",
+            "why": "Building on local file systems cost Ceph in transactions and metadata, so BlueStore writes to raw devices."
           },
           "further": [
             {
@@ -189,62 +514,24 @@
       ]
     },
     {
-      "name": "File systems",
-      "steps": [
-        {
-          "main": {
-            "type": "article",
-            "title": "Linux Kernel Internals: File Systems",
-            "url": "https://hackmd.io/@sysprog/linux-file-system",
-            "source": "NCKU",
-            "year": "2020",
-            "why": "Files and descriptors in the universal I/O model, then I/O multiplexing with select and epoll. In Mandarin."
-          }
-        },
-        {
-          "main": {
-            "url": "https://blog.cloudflare.com/how-we-scaled-nginx-and-saved-the-world-54-years-every-day/",
-            "why": "Disk reads and open() block nginx's event loop even with O_NONBLOCK, so Cloudflare moved them to thread pools."
-          },
-          "further": [
-            {
-              "url": "https://blog.cloudflare.com/the-problem-with-event-loops/"
-            }
-          ]
-        },
-        {
-          "main": {
-            "type": "article",
-            "title": "PostgreSQL's fsync() surprise",
-            "url": "https://lwn.net/Articles/752063/",
-            "year": "2018",
-            "why": "PostgreSQL trusted fsync to report failed writes, but after a writeback error the kernel can drop the dirty pages and never report it."
-          }
-        },
-        {
-          "main": {
-            "type": "paper",
-            "title": "File Systems Unfit as Distributed Storage Backends: Lessons from 10 Years of Ceph Evolution",
-            "url": "https://www.pdl.cmu.edu/PDL-FTP/Storage/ceph-exp-sosp19.pdf",
-            "source": "CMU",
-            "year": "2019",
-            "why": "Building on local file systems cost Ceph in transactions and metadata, so BlueStore writes to raw devices."
-          }
-        }
-      ]
-    },
-    {
       "name": "Virtualization",
       "steps": [
         {
           "main": {
-            "type": "article",
-            "title": "KVM: Linux Virtualization Infrastructure",
-            "url": "https://hackmd.io/@sysprog/linux-kvm",
-            "source": "NCKU",
-            "year": "2026",
-            "why": "How KVM and virtio work, read through a minimal KVM host, and what KVM gained in recent kernels. In Mandarin."
-          }
+            "type": "paper",
+            "title": "kvm: the Linux Virtual Machine Monitor",
+            "url": "https://www.kernel.org/doc/ols/2007/ols2007v1-pages-225-230.pdf",
+            "year": "2007",
+            "why": "x86 virtualization extensions made simple hypervisors possible, so kvm adds a guest mode to Linux and runs each virtual machine as an ordinary process."
+          },
+          "alternative": [
+            {
+              "type": "article",
+              "title": "KVM: Linux Virtualization Infrastructure",
+              "url": "https://hackmd.io/@sysprog/linux-kvm",
+              "year": "2026"
+            }
+          ]
         },
         {
           "main": {
@@ -254,13 +541,12 @@
             "source": "Amazon",
             "year": "2020",
             "why": "Serverless needs isolation stronger than containers without the weight of full VMs, so Firecracker is a minimal virtual machine monitor on KVM."
-          }
-        },
-        {
-          "main": {
-            "url": "https://shopify.engineering/spin-infrastructure-adventures-containers-systemd-cgroups",
-            "why": "Containers running systemd escaped their cgroup limits until the runtime used the systemd cgroup driver."
-          }
+          },
+          "further": [
+            {
+              "url": "https://shopify.engineering/spin-infrastructure-adventures-containers-systemd-cgroups"
+            }
+          ]
         }
       ]
     },
@@ -275,13 +561,12 @@
             "source": "Cornell",
             "year": "2021",
             "why": "Link speeds have outgrown what one core can process, and this study finds that copying data to the application now dominates the Linux stack's cost."
-          }
-        },
-        {
-          "main": {
-            "url": "https://dropbox.tech/infrastructure/optimizing-web-servers-for-high-throughput-and-low-latency",
-            "why": "A guide to tuning Linux web servers layer by layer, from the NIC, CPU affinity and NUMA up to TCP pacing and congestion control."
-          }
+          },
+          "further": [
+            {
+              "url": "https://dropbox.tech/infrastructure/optimizing-web-servers-for-high-throughput-and-low-latency"
+            }
+          ]
         },
         {
           "main": {
@@ -310,6 +595,5 @@
         }
       ]
     }
-  ],
-  "_fc": null
+  ]
 }

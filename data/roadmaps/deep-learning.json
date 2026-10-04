@@ -190,19 +190,25 @@
         {
           "main": {
             "type": "course",
-            "title": "Machine Learning 2021",
-            "url": "https://www.youtube.com/playlist?list=PLJV_el3uVTsMhtt7_Y6sgTHGHp1Vb2P2J",
-            "source": "NTU",
-            "year": "2021",
-            "why": "Training tricks, CNN, self-attention, Transformer and GAN. In Mandarin."
+            "title": "CMU 11-785: Introduction to Deep Learning",
+            "url": "https://deeplearning.cs.cmu.edu/S26/index.html",
+            "source": "CMU",
+            "year": "2026",
+            "why": "Backpropagation and optimization, CNNs, RNNs and LSTMs, attention and Transformers, then VAEs, diffusion and GANs. In English."
           },
           "alternative": [
             {
               "type": "course",
-              "title": "CMU 11-785: Introduction to Deep Learning",
-              "url": "https://deeplearning.cs.cmu.edu/S25/index.html",
-              "source": "CMU",
-              "year": "2025"
+              "title": "Machine Learning 2021",
+              "url": "https://www.youtube.com/playlist?list=PLJV_el3uVTsMhtt7_Y6sgTHGHp1Vb2P2J",
+              "source": "NTU",
+              "year": "2021",
+              "links": [
+                {
+                  "label": "Website",
+                  "url": "https://speech.ee.ntu.edu.tw/~hylee/ml/2021-spring.php"
+                }
+              ]
             }
           ]
         },
@@ -330,24 +336,15 @@
             "source": "University of Toronto",
             "year": "2012",
             "why": "AlexNet trained a large CNN on GPUs with ReLU and dropout, won the ImageNet challenge and started the deep learning boom."
-          }
-        },
-        {
-          "main": {
-            "type": "paper",
-            "title": "Very Deep Convolutional Networks for Large-Scale Image Recognition",
-            "url": "https://arxiv.org/abs/1409.1556",
-            "source": "University of Oxford",
-            "year": "2014",
-            "why": "VGG stacks many small convolutions instead of large filters and shows that depth alone buys accuracy."
           },
           "further": [
             {
               "type": "paper",
-              "title": "Going Deeper with Convolutions",
-              "url": "https://arxiv.org/abs/1409.4842",
-              "source": "Google",
-              "year": "2014"
+              "title": "Very Deep Convolutional Networks for Large-Scale Image Recognition",
+              "url": "https://arxiv.org/abs/1409.1556",
+              "source": "University of Oxford",
+              "year": "2014",
+              "why": "VGG stacks many small convolutions instead of large filters and shows that depth alone buys accuracy."
             }
           ]
         },
@@ -446,12 +443,12 @@
         },
         {
           "main": {
-            "url": "https://shopify.engineering/evolution-product-classification",
-            "why": "Shopify's product classification grew from TF-IDF with logistic regression to image and text models, and then a VLM."
+            "url": "https://shopify.engineering/using-rich-image-text-data-categorize-products",
+            "why": "Shopify's product categorizer read only English text, so it moved to pretrained image and multilingual text embeddings feeding chained heads, one per taxonomy level."
           },
           "further": [
             {
-              "url": "https://shopify.engineering/using-rich-image-text-data-categorize-products"
+              "url": "https://shopify.engineering/evolution-product-classification"
             }
           ]
         }

@@ -221,7 +221,13 @@
             "url": "https://www.youtube.com/playlist?list=PLoROMvodv4rOmsNzYBMe0gJY2XS8AQg16",
             "source": "Stanford",
             "year": "2025",
-            "why": "Detection and segmentation, video, self-supervised learning, generative models, 3D and vision-language. In English."
+            "why": "Detection and segmentation, video, self-supervised learning, generative models, 3D and vision-language. In English.",
+            "links": [
+              {
+                "label": "Website",
+                "url": "https://cs231n.stanford.edu/2025/"
+              }
+            ]
           }
         }
       ]
@@ -255,6 +261,10 @@
               "url": "https://arxiv.org/abs/2502.14786",
               "source": "Google",
               "year": "2025"
+            },
+            {
+              "url": "https://careersatdoordash.com/blog/doordash-dashclip-multimodal-models-for-generating-semantic-embeddings/",
+              "why": "Off-the-shelf CLIP and BLIP failed on short product queries, so embeddings tuned on the catalog now rank ads."
             }
           ]
         },
@@ -291,7 +301,15 @@
             "source": "University of Washington",
             "year": "2015",
             "why": "Two-stage detectors were too slow for real time, so YOLO predicts all boxes and classes in a single pass."
-          }
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "Ultralytics YOLO26: Unified Real-Time End-to-End Vision Models",
+              "url": "https://arxiv.org/abs/2606.03748",
+              "year": "2026"
+            }
+          ]
         },
         {
           "main": {
@@ -306,31 +324,21 @@
         {
           "main": {
             "type": "paper",
-            "title": "Ultralytics YOLO26: Unified Real-Time End-to-End Vision Models",
-            "url": "https://arxiv.org/abs/2606.03748",
-            "year": "2026",
-            "why": "NMS adds latency to real-time detection, so YOLO26 removes it and handles detection, segmentation and pose in one pipeline."
-          }
-        },
-        {
-          "main": {
-            "type": "paper",
             "title": "Segment Anything",
             "url": "https://arxiv.org/abs/2304.02643",
             "source": "Meta",
             "year": "2023",
             "why": "Segmentation models were trained per task, so SAM is a promptable model trained on a huge mask dataset that segments new images zero-shot."
-          }
-        },
-        {
-          "main": {
-            "type": "paper",
-            "title": "SAM 3: Segment Anything with Concepts",
-            "url": "https://arxiv.org/abs/2511.16719",
-            "source": "Meta",
-            "year": "2025",
-            "why": "SAM segments one object per prompt, so SAM 3 finds, segments and tracks every object matching a noun phrase or example image."
-          }
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "SAM 3: Segment Anything with Concepts",
+              "url": "https://arxiv.org/abs/2511.16719",
+              "source": "Meta",
+              "year": "2025"
+            }
+          ]
         }
       ]
     },
@@ -345,17 +353,16 @@
             "source": "University of Wisconsin-Madison",
             "year": "2023",
             "why": "LLMs could not see images, so LLaVA feeds CLIP image features through a linear layer into an LLM tuned on GPT-4-written instructions."
-          }
-        },
-        {
-          "main": {
-            "type": "paper",
-            "title": "Qwen3-VL Technical Report",
-            "url": "https://arxiv.org/abs/2511.21631",
-            "source": "Alibaba",
-            "year": "2025",
-            "why": "For long documents and video, Qwen3-VL feeds a SigLIP 2 encoder's features through an MLP into Qwen3 LLMs with long context."
-          }
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "Qwen3-VL Technical Report",
+              "url": "https://arxiv.org/abs/2511.21631",
+              "source": "Alibaba",
+              "year": "2025"
+            }
+          ]
         }
       ]
     },
@@ -389,17 +396,17 @@
             "url": "https://arxiv.org/abs/2403.03206",
             "year": "2024",
             "why": "Stable Diffusion 3 trains with rectified flow for straighter sampling paths and uses MM-DiT, a Transformer with separate text and image weights."
-          }
-        },
-        {
-          "main": {
-            "type": "paper",
-            "title": "Wan: Open and Advanced Large-Scale Video Generative Models",
-            "url": "https://arxiv.org/abs/2503.20314",
-            "source": "Alibaba",
-            "year": "2025",
-            "why": "Wan brings the diffusion transformer to video with its own video VAE, released as open models for text-to-video, image-to-video and editing."
-          }
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "Wan: Open and Advanced Large-Scale Video Generative Models",
+              "url": "https://arxiv.org/abs/2503.20314",
+              "source": "Alibaba",
+              "year": "2025",
+              "why": "Wan brings the diffusion transformer to video with its own video VAE, released as open models for text-to-video, image-to-video and editing."
+            }
+          ]
         }
       ]
     },
@@ -441,12 +448,6 @@
     {
       "name": "In practice",
       "steps": [
-        {
-          "main": {
-            "url": "https://careersatdoordash.com/blog/doordash-dashclip-multimodal-models-for-generating-semantic-embeddings/",
-            "why": "Off-the-shelf CLIP and BLIP failed on short product queries, so embeddings tuned on the catalog now rank ads."
-          }
-        },
         {
           "main": {
             "url": "https://careersatdoordash.com/blog/doordash-llm-transcribe-menu/",

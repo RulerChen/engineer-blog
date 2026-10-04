@@ -1,0 +1,486 @@
+{
+  "id": "parallel-computing",
+  "title": "Parallel computing",
+  "before": ["operating-systems", "computer-architecture"],
+  "next": ["ml-systems"],
+  "evolution": {
+    "eras": [
+      {
+        "name": "Supercomputers",
+        "text": "Custom machines for science",
+        "background": "Parallel machines were built for weapons labs and scientific computing. Vector processors sped up loops over arrays, while other designs linked many processors that each had their own memory. Amdahl warned that the part of a program that runs serially caps what more processors can gain."
+      },
+      {
+        "name": "Standards",
+        "text": "Portable programs, smarter runtimes",
+        "background": "Commodity microprocessors became fast enough that clusters of them displaced custom supercomputers. Standards such as MPI and OpenMP let one program run on many vendors' machines. Researchers worked out how threads could share data without locks and how to balance irregular work."
+      },
+      {
+        "name": "Multicore",
+        "text": "Every chip is parallel",
+        "background": "In the early 2000s, power limits stopped clock rates from rising, so chips added cores instead. GPUs opened their hundreds of cores to general programs, and web companies spread data processing over thousands of machines. Parallel programming became every programmer's problem."
+      },
+      {
+        "name": "Specialization",
+        "text": "Languages for specialized hardware",
+        "background": "With energy now the limit, speedups came from hardware built for one kind of work, above all deep learning. Tuning code by hand for each chip did not scale. Languages and compilers began separating what a program computes from how it maps onto the hardware."
+      }
+    ],
+    "lanes": ["Shared memory", "Data parallel", "Message passing", "Programming models"],
+    "nodes": [
+      {
+        "id": "vector",
+        "label": "Vector machines",
+        "era": "Supercomputers",
+        "lane": "Data parallel",
+        "year": "1976",
+        "problem": "Scientific programs repeated one operation over long arrays, yet the processor fetched and decoded an instruction for every element.",
+        "idea": "The Cray-1 applies one instruction to 64-element vector registers and chains one unit's results straight into the next.",
+        "impact": "Vector supercomputers led scientific computing into the 1990s, and the SIMD units in today's CPUs carry the idea."
+      },
+      {
+        "id": "cube",
+        "label": "Message passing",
+        "era": "Supercomputers",
+        "lane": "Message passing",
+        "year": "1983",
+        "problem": "Shared-memory machines put a switch between every processor and memory, which slowed each access and grew costly as processors were added.",
+        "idea": "Caltech's Cosmic Cube links 64 microprocessors, each with its own memory, in a hypercube where they cooperate only by sending messages.",
+        "impact": "Intel's iPSC and later massively parallel machines followed the design, and today's clusters still work this way."
+      },
+      {
+        "id": "dataparallel",
+        "label": "Data parallel",
+        "era": "Supercomputers",
+        "lane": "Data parallel",
+        "year": "1986",
+        "idea": "The Connection Machine runs tens of thousands of simple processors in lockstep, programmed with operations over whole arrays such as scan.",
+        "impact": "Its style of whole-array operations like reduce and scan carried over to GPU programming.",
+        "from": [
+          {
+            "id": "vector",
+            "why": "A few deep pipelines limited vector machines, while many problems had parallelism across millions of elements."
+          }
+        ]
+      },
+      {
+        "id": "lockfree",
+        "label": "Lock-free",
+        "era": "Standards",
+        "lane": "Shared memory",
+        "year": "1991",
+        "problem": "A thread descheduled or crashed while holding a lock blocked every thread waiting for it.",
+        "idea": "Herlihy shows compare-and-swap can build any shared object without locks, and ranks primitives by how many threads they can coordinate.",
+        "impact": "Lock-free queues and maps built on this work fill libraries such as Java's java.util.concurrent."
+      },
+      {
+        "id": "tm",
+        "label": "Transactional memory",
+        "era": "Standards",
+        "lane": "Shared memory",
+        "year": "1993",
+        "idea": "Herlihy and Moss let a thread run a short transaction over several memory words, catching conflicts through cache coherence.",
+        "impact": "IBM and Intel shipped it in hardware twenty years later, though Intel has since disabled it on many chips.",
+        "from": [
+          {
+            "id": "lockfree",
+            "why": "Lock-free structures built from single-word compare-and-swap were awkward to write and often slower than locks."
+          }
+        ]
+      },
+      {
+        "id": "mpi",
+        "label": "MPI",
+        "era": "Standards",
+        "lane": "Message passing",
+        "year": "1994",
+        "idea": "A forum of vendors, national labs and universities defines one portable interface for sends, receives and collective operations.",
+        "impact": "MPI became the standard for supercomputer programs, and its collectives such as all-reduce reappear in GPU libraries like NCCL.",
+        "from": [
+          {
+            "id": "cube",
+            "why": "Every vendor of message-passing machines shipped its own library, so programs were rewritten for each new machine."
+          }
+        ]
+      },
+      {
+        "id": "workstealing",
+        "label": "Work stealing",
+        "era": "Standards",
+        "lane": "Programming models",
+        "year": "1995",
+        "problem": "Splitting work evenly ahead of time left cores idle when tasks varied in size or spawned more tasks.",
+        "idea": "In MIT's Cilk, each worker keeps its own pool of ready tasks, and an idle worker steals the oldest task from a worker picked at random.",
+        "impact": "Intel's TBB, Java's fork/join framework, .NET's task library and Go's scheduler all balance load this way."
+      },
+      {
+        "id": "openmp",
+        "label": "OpenMP",
+        "era": "Standards",
+        "lane": "Programming models",
+        "year": "1997",
+        "problem": "Each shared-memory vendor had its own directives for parallel loops, so code tuned for one machine did not port.",
+        "idea": "OpenMP standardizes compiler directives that turn loops in existing Fortran code into parallel ones, with C and C++ following a year later.",
+        "impact": "It became the usual way to use all the cores of one node in scientific code, later adding tasks and GPU offload."
+      },
+      {
+        "id": "mapreduce",
+        "label": "MapReduce",
+        "era": "Multicore",
+        "lane": "Message passing",
+        "year": "2004",
+        "idea": "Google's MapReduce runs user map and reduce functions across thousands of machines, rerunning tasks lost to failures.",
+        "impact": "Hadoop spread it through industry, and Spark later kept data in memory between steps.",
+        "from": [
+          {
+            "id": "mpi",
+            "why": "Message-passing programs were hard to write and could not survive the routine machine failures of commodity clusters."
+          }
+        ]
+      },
+      {
+        "id": "multicore",
+        "label": "Multicore",
+        "era": "Multicore",
+        "lane": "Shared memory",
+        "year": "2005",
+        "problem": "Higher clock rates pushed chips past the power they could shed, so single-threaded programs no longer got much faster with each new chip.",
+        "idea": "Intel and AMD ship dual-core processors, adding cores instead of raising clock rates.",
+        "impact": "Threads, tasks and their races moved from supercomputers into ordinary applications."
+      },
+      {
+        "id": "gpu",
+        "label": "GPU computing",
+        "era": "Multicore",
+        "lane": "Data parallel",
+        "year": "2007",
+        "idea": "NVIDIA's CUDA runs C functions as thousands of threads, grouped into blocks that share fast on-chip memory.",
+        "impact": "GPUs became general parallel processors and, after AlexNet, the default hardware for deep learning.",
+        "from": [
+          {
+            "id": "dataparallel",
+            "why": "Data-parallel machines had been costly supercomputers, while cheap GPUs hid dozens of parallel units behind graphics APIs."
+          },
+          {
+            "id": "multicore",
+            "why": "Programs now needed parallelism to keep getting faster, and GPUs had far more cores than CPUs."
+          }
+        ]
+      },
+      {
+        "id": "schedules",
+        "label": "Scheduling languages",
+        "era": "Specialization",
+        "lane": "Programming models",
+        "year": "2012",
+        "idea": "Halide separates what an image pipeline computes from a schedule that sets the order, tiling and storage of each stage.",
+        "impact": "TVM and other deep learning compilers adopted the split, and autoschedulers now search for good schedules.",
+        "from": [
+          {
+            "id": "gpu",
+            "why": "Fast code for each CPU and GPU was tuned by hand, tangling the algorithm with tiling, fusion and vectorization."
+          }
+        ]
+      },
+      {
+        "id": "matrix",
+        "label": "Matrix units",
+        "era": "Specialization",
+        "lane": "Data parallel",
+        "year": "2017",
+        "idea": "Google's TPU and NVIDIA's Volta GPUs add units that multiply whole matrix tiles in hardware, doing far more work per instruction.",
+        "impact": "Matrix units now supply most of an accelerator's throughput, so kernels are designed around keeping them fed.",
+        "from": [
+          {
+            "id": "gpu",
+            "why": "Deep learning spent most of its time multiplying matrices, and each GPU instruction did little work for the energy spent issuing it."
+          }
+        ]
+      },
+      {
+        "id": "tiles",
+        "label": "Tile languages",
+        "era": "Specialization",
+        "lane": "Programming models",
+        "year": "2021",
+        "idea": "OpenAI's Triton lets programs operate on blocks of data, and its compiler handles memory coalescing, shared memory and tensor cores.",
+        "impact": "PyTorch 2 compiles models into Triton kernels, and JAX's Pallas adopted its block-level model.",
+        "from": [
+          {
+            "id": "schedules",
+            "why": "Scheduling languages handled regular loop nests but struggled with the irregular, block-level work of GPU kernels."
+          },
+          {
+            "id": "matrix",
+            "why": "Keeping matrix units busy took expert CUDA, with data staged by hand through shared memory and registers."
+          }
+        ]
+      }
+    ]
+  },
+  "parts": [
+    {
+      "name": "Foundations",
+      "steps": [
+        {
+          "main": {
+            "type": "course",
+            "title": "Stanford CS149: Parallel Computing",
+            "url": "https://gfxcourses.stanford.edu/cs149/fall25",
+            "source": "Stanford",
+            "year": "2025",
+            "why": "Multicore, SIMD and GPU hardware, then work scheduling, locality, CUDA, data-parallel thinking, cache coherence, memory consistency, lock-free code and transactional memory. In English.",
+            "links": [
+              {
+                "label": "2023 videos",
+                "url": "https://www.youtube.com/playlist?list=PLoROMvodv4rMp7MTFr4hQsDEcX7Bx6Odp"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Origins",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Validity of the Single Processor Approach to Achieving Large Scale Computing Capabilities",
+            "url": "https://dl.acm.org/doi/10.1145/1465482.1465560",
+            "source": "IBM",
+            "year": "1967",
+            "why": "Parallel machines promised large speedups, but Amdahl argues the part of a program that must run serially caps them, the argument now called Amdahl's law."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "Reevaluating Amdahl's Law",
+              "url": "https://dl.acm.org/doi/10.1145/42411.42415",
+              "source": "Sandia National Laboratories",
+              "year": "1988"
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "article",
+            "title": "The Free Lunch Is Over: A Fundamental Turn Toward Concurrency in Software",
+            "url": "http://www.gotw.ca/publications/concurrency-ddj.htm",
+            "year": "2005",
+            "why": "Clock rates stopped rising around 2003 while core counts began to grow, so Sutter warns that programs must become concurrent to keep getting faster."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Task parallelism",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "The Implementation of the Cilk-5 Multithreaded Language",
+            "url": "https://dl.acm.org/doi/10.1145/277650.277725",
+            "source": "MIT",
+            "year": "1998",
+            "why": "Spawning a task for each bit of parallelism costs too much, so Cilk-5 keeps a spawn within a few times the cost of a call and moves scheduling costs onto rare steals by idle workers."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "Scheduling Multithreaded Computations by Work Stealing",
+              "url": "https://dl.acm.org/doi/10.1145/324133.324234",
+              "source": "MIT",
+              "year": "1999"
+            },
+            {
+              "type": "article",
+              "title": "Making the Tokio scheduler 10x faster",
+              "url": "https://tokio.rs/blog/2019-10-scheduler",
+              "year": "2019"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Data parallelism",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Data Parallel Algorithms",
+            "url": "https://dl.acm.org/doi/10.1145/7902.7903",
+            "source": "Thinking Machines",
+            "year": "1986",
+            "why": "Programs walked data one element at a time, so Hillis and Steele show how sums, prefix sums and even linked-list operations take logarithmic steps with a processor per element."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "Prefix Sums and Their Applications",
+              "url": "https://www.cs.cmu.edu/~scandal/papers/CMU-CS-90-190.html",
+              "source": "CMU",
+              "year": "1990"
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "ispc: A SPMD Compiler for High-Performance CPU Programming",
+            "url": "https://pharr.org/matt/assets/ispc.pdf",
+            "source": "Intel",
+            "year": "2012",
+            "why": "Auto-vectorizers often fail on loops with branches or function calls, so ispc compiles programs written like GPU shaders, one program instance per SIMD lane, into CPU vector instructions."
+          },
+          "further": [
+            {
+              "type": "article",
+              "title": "The Story of ispc",
+              "url": "https://pharr.org/matt/blog/2018/04/30/ispc-all",
+              "year": "2018"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GPU programming",
+      "steps": [
+        {
+          "main": {
+            "type": "article",
+            "title": "How to Optimize a CUDA Matmul Kernel for cuBLAS-like Performance: a Worklog",
+            "url": "https://siboehm.com/articles/22/CUDA-MMM",
+            "year": "2022",
+            "why": "A naive CUDA matrix multiply wastes most of the GPU, and this worklog closes most of the gap to cuBLAS step by step with coalescing, shared-memory tiling, register blocking and warp tiling."
+          },
+          "further": [
+            {
+              "type": "article",
+              "title": "Outperforming cuBLAS on H100: a Worklog",
+              "url": "https://cudaforfun.substack.com/p/outperforming-cublas-on-h100-a-worklog",
+              "year": "2024"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Synchronization",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms",
+            "url": "https://www.cs.rochester.edu/u/scott/papers/1996_PODC_queues.pdf",
+            "source": "University of Rochester",
+            "year": "1996",
+            "why": "A thread holding a queue's lock can stall all the others, so the Michael-Scott queue updates head and tail with compare-and-swap and lets threads finish each other's half-done updates."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "Wait-Free Synchronization",
+              "url": "https://dl.acm.org/doi/10.1145/114005.102808",
+              "source": "DEC",
+              "year": "1991"
+            },
+            {
+              "type": "paper",
+              "title": "Transactional Memory: Architectural Support for Lock-Free Data Structures",
+              "url": "https://dl.acm.org/doi/10.1145/165123.165164",
+              "source": "DEC",
+              "year": "1993"
+            },
+            {
+              "type": "article",
+              "title": "Software Transactional Memory: Why Is It Only a Research Toy?",
+              "url": "https://queue.acm.org/detail.cfm?id=1454466",
+              "source": "IBM",
+              "year": "2008"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Message passing",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Optimization of Collective Communication Operations in MPICH",
+            "url": "https://web.cels.anl.gov/~thakur/papers/ijhpca-coll.pdf",
+            "source": "Argonne National Laboratory",
+            "year": "2005",
+            "why": "All-reduce and reduce took a large share of the time programs spent in MPI, so MPICH picks an algorithm by message size, recursive doubling for short messages and reduce-scatter plus all-gather for long ones."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "Bandwidth Optimal All-reduce Algorithms for Clusters of Workstations",
+              "url": "https://www.cs.fsu.edu/~xyuan/paper/09jpdc.pdf",
+              "source": "Florida State University",
+              "year": "2009"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Domain-specific languages",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Halide: A Language and Compiler for Optimizing Parallelism, Locality, and Recomputation in Image Processing Pipelines",
+            "url": "https://people.csail.mit.edu/jrk/halide-pldi13.pdf",
+            "source": "MIT",
+            "year": "2013",
+            "why": "Fast image pipelines tangled the algorithm with hand-tuned tiling, fusion and vectorization, so Halide separates the algorithm from a schedule that sets each stage's order and storage."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "TVM: An Automated End-to-End Optimizing Compiler for Deep Learning",
+              "url": "https://www.usenix.org/system/files/osdi18-chen.pdf",
+              "source": "University of Washington",
+              "year": "2018"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Specialization",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Understanding Sources of Inefficiency in General-Purpose Chips",
+            "url": "https://dl.acm.org/doi/10.1145/1815961.1815968",
+            "source": "Stanford",
+            "year": "2010",
+            "why": "Chips had become power limited, and this H.264 study shows general-purpose cores spend most of their energy fetching instructions and data, overhead that only specialized units remove."
+          }
+        }
+      ]
+    },
+    {
+      "name": "In practice",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Scalability! But at what COST?",
+            "url": "https://www.usenix.org/system/files/conference/hotos15/hotos15-paper-mcsherry.pdf",
+            "year": "2015",
+            "why": "Papers reported graph systems scaling across many cores, but a single laptop thread often beat them, so the authors propose COST: the cores a system needs to outperform one good thread."
+          }
+        }
+      ]
+    }
+  ]
+}

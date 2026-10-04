@@ -1,0 +1,79 @@
+{
+  "id": "calculus",
+  "title": "Calculus & optimization",
+  "before": [],
+  "next": ["machine-learning", "computer-graphics"],
+  "parts": [
+    {
+      "name": "Foundations",
+      "steps": [
+        {
+          "main": {
+            "type": "course",
+            "title": "MIT 18.01: Single Variable Calculus",
+            "url": "https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/",
+            "source": "MIT",
+            "year": "2010",
+            "why": "Limits and derivatives, approximation and optimization, the definite integral and the fundamental theorems, integration techniques, and infinite series. In English."
+          },
+          "background": [
+            {
+              "type": "video",
+              "title": "Essence of calculus",
+              "url": "https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr",
+              "year": "2017"
+            }
+          ],
+          "alternative": [
+            {
+              "type": "book",
+              "title": "基礎微積分",
+              "url": "https://math.ntnu.edu.tw/~li/Cal/CalculusB.pdf",
+              "year": "2025"
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "course",
+            "title": "MIT 18.02: Multivariable Calculus",
+            "url": "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/",
+            "source": "MIT",
+            "year": "2010",
+            "why": "Vectors and matrices, partial derivatives, gradients and the chain rule, Lagrange multipliers, multiple integrals, and the theorems of Green, Gauss and Stokes. In English."
+          }
+        },
+        {
+          "main": {
+            "type": "course",
+            "title": "MIT 18.063: Matrix Calculus for Machine Learning and Beyond",
+            "url": "https://github.com/mitmath/matrixcalc",
+            "source": "MIT",
+            "year": "2026",
+            "why": "Derivatives as linear maps, gradients and Jacobians of matrix functions, forward- and reverse-mode chain rules, and adjoint methods. In English."
+          }
+        },
+        {
+          "main": {
+            "type": "book",
+            "title": "Convex Optimization",
+            "url": "https://web.stanford.edu/~boyd/cvxbook/",
+            "source": "Stanford",
+            "year": "2024",
+            "why": "Convex sets and functions, convex problems such as least squares, linear and semidefinite programs, duality, and interior-point methods. In English.",
+            "links": [
+              {
+                "label": "EE364A",
+                "url": "https://stanford.edu/class/ee364a/"
+              },
+              {
+                "label": "Videos",
+                "url": "https://www.youtube.com/playlist?list=PLoROMvodv4rMJqxxviPa4AmDClvcbHi6h"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

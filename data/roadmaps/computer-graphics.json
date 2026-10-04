@@ -1,0 +1,431 @@
+{
+  "id": "computer-graphics",
+  "title": "Computer graphics",
+  "before": ["linear-algebra", "calculus"],
+  "next": [],
+  "evolution": {
+    "eras": [
+      {
+        "name": "Beginnings",
+        "text": "Pictures drawn by computer",
+        "background": "Sketchpad showed in 1963 that people could draw with a computer. Raster displays then raised two questions: which surface shows at each pixel, and how light makes it look round. Researchers at the University of Utah answered both in the early 1970s."
+      },
+      {
+        "name": "Photorealism",
+        "text": "Simulating light, 3D in hardware",
+        "background": "Ray tracing showed that following rays of light gives reflections and shadows directly, and the rendering equation framed all light transport as one integral. Film needed huge, detailed scenes with motion blur, which Pixar's Reyes delivered. Custom chips at Silicon Graphics brought real-time 3D to workstations."
+      },
+      {
+        "name": "GPUs and film",
+        "text": "Hardware for games, path tracing for film",
+        "background": "Games pushed 3D hardware from workstations into cheap single chips that ran the whole pipeline, and fixed lighting gave way to programmable shaders. In film, characters moved to subdivision surfaces, and the first feature rendered entirely with path tracing appeared."
+      },
+      {
+        "name": "Physically based",
+        "text": "Real light in real time",
+        "background": "Physically based materials let one asset look right under any lighting, in film and in games. GPUs gained ray tracing hardware, and neural networks began reconstructing frames and representing whole scenes."
+      }
+    ],
+    "lanes": ["Rasterization", "Ray tracing", "Shading", "Geometry"],
+    "nodes": [
+      {
+        "id": "sketchpad",
+        "label": "Sketchpad",
+        "era": "Beginnings",
+        "lane": "Geometry",
+        "year": "1963",
+        "problem": "Most communication with a computer had to be typed, which made describing a shape or a circuit cumbersome.",
+        "idea": "Ivan Sutherland's Sketchpad lets a user draw shapes on screen with a light pen and keeps them as linked objects bound by constraints.",
+        "impact": "It pioneered interactive computer graphics, computer-aided design and the graphical user interface."
+      },
+      {
+        "id": "zbuffer",
+        "label": "Z-buffer",
+        "era": "Beginnings",
+        "lane": "Rasterization",
+        "year": "1974",
+        "problem": "Showing the nearest surface at each pixel meant sorting surfaces by depth, which grew costly as scenes grew.",
+        "idea": "Catmull keeps a depth value per pixel and writes a new pixel only when it is nearer than the stored one.",
+        "impact": "Simple enough for hardware, it is how every GPU still resolves visibility."
+      },
+      {
+        "id": "phong",
+        "label": "Phong shading",
+        "era": "Beginnings",
+        "lane": "Shading",
+        "year": "1975",
+        "problem": "Curved surfaces built from flat polygons looked faceted, and their highlights were smeared or missing.",
+        "idea": "Phong interpolates the surface normal across each polygon and adds a specular term that peaks near the mirror direction.",
+        "impact": "Its lighting model, in Blinn's variant, was the built-in lighting of OpenGL and Direct3D."
+      },
+      {
+        "id": "raytracing",
+        "label": "Ray tracing",
+        "era": "Photorealism",
+        "lane": "Ray tracing",
+        "year": "1980",
+        "idea": "Whitted traces rays from the eye and, at each hit, spawns rays toward the lights and along reflected and refracted directions.",
+        "impact": "Reflections, refraction and shadows came from one mechanism, and every later ray tracer builds on it.",
+        "from": [
+          {
+            "id": "phong",
+            "why": "Its lighting used only the light sources, so it could not show reflections, refraction or shadows cast by other objects."
+          }
+        ]
+      },
+      {
+        "id": "geometryengine",
+        "label": "Geometry Engine",
+        "era": "Photorealism",
+        "lane": "Rasterization",
+        "year": "1982",
+        "problem": "Fast 3D transforms and clipping needed costly special-purpose hardware, and software on a general-purpose computer was too slow.",
+        "idea": "Jim Clark's Geometry Engine puts the transform, clipping and scaling pipeline on custom VLSI chips.",
+        "impact": "Silicon Graphics was founded on it, and its IRIS GL graphics library became OpenGL."
+      },
+      {
+        "id": "pathtracing",
+        "label": "Path tracing",
+        "era": "Photorealism",
+        "lane": "Ray tracing",
+        "year": "1986",
+        "idea": "Kajiya writes all light transport as one integral, the rendering equation, and estimates it by tracing random light paths.",
+        "impact": "The rendering equation became the basis of physically based rendering.",
+        "from": [
+          {
+            "id": "raytracing",
+            "why": "Whitted's rays followed only perfect mirrors and direct light, missing soft shadows, blur and light bounced off matte surfaces."
+          }
+        ]
+      },
+      {
+        "id": "reyes",
+        "label": "Reyes",
+        "era": "Photorealism",
+        "lane": "Shading",
+        "year": "1987",
+        "problem": "Film needed scenes of enormous geometric and shading detail, free of aliasing, at a scale earlier renderers could not handle.",
+        "idea": "Pixar's Reyes dices every surface into micropolygons smaller than a pixel, shades them, then samples them at jittered points.",
+        "impact": "As RenderMan, it rendered Toy Story and was for many years the workhorse of CG animation and visual effects at major studios."
+      },
+      {
+        "id": "subdivision",
+        "label": "Subdivision surfaces",
+        "era": "GPUs and film",
+        "lane": "Geometry",
+        "year": "1998",
+        "problem": "Characters built from NURBS patches were hard to keep smooth at the seams when animated, and one patch could only form a sheet, cylinder or torus.",
+        "idea": "Pixar models characters as Catmull-Clark subdivision surfaces, refining a coarse mesh of any shape toward a smooth surface, with semi-sharp creases where needed.",
+        "impact": "Subdivision became standard in film and modeling tools, helped by Pixar's open-source OpenSubdiv."
+      },
+      {
+        "id": "gpu",
+        "label": "Consumer GPU",
+        "era": "GPUs and film",
+        "lane": "Rasterization",
+        "year": "1999",
+        "idea": "NVIDIA's GeForce 256 puts transform, lighting and rasterization on one consumer chip.",
+        "impact": "Hardware transform and lighting became standard on PC graphics cards, under NVIDIA's name for such a chip, the GPU.",
+        "from": [
+          {
+            "id": "geometryengine",
+            "why": "3D workstations cost tens of thousands of dollars, and early PC cards only drew triangles, leaving the geometry to the CPU."
+          }
+        ]
+      },
+      {
+        "id": "shaders",
+        "label": "Programmable shaders",
+        "era": "GPUs and film",
+        "lane": "Shading",
+        "year": "2001",
+        "idea": "GPUs run short user programs on every vertex and then every pixel, starting with NVIDIA's GeForce 3 under DirectX 8.",
+        "impact": "Shaders became how all real-time graphics is written, and the same programmable cores later ran general computing.",
+        "from": [
+          {
+            "id": "gpu",
+            "why": "Fixed-function chips offered one lighting model, so any other look was impossible or faked."
+          },
+          {
+            "id": "reyes",
+            "why": "RenderMan's shading language had shown that letting artists program shading gives any look."
+          }
+        ]
+      },
+      {
+        "id": "filmpathtracing",
+        "label": "Film path tracing",
+        "era": "GPUs and film",
+        "lane": "Ray tracing",
+        "year": "2006",
+        "idea": "The Arnold renderer path traces whole feature films, starting with Monster House, trading machine time for artist time.",
+        "impact": "A dozen or more film renderers moved to path tracing, and Pixar's RenderMan computed all the light in Finding Dory this way.",
+        "from": [
+          {
+            "id": "pathtracing",
+            "why": "Path tracing gave correct light but was too noisy and slow for the scale of film scenes."
+          },
+          {
+            "id": "reyes",
+            "why": "Reyes needed shadow maps made in a pre-pass and faked indirect light with hand-placed bounce lights, which cost artists time on every shot."
+          }
+        ]
+      },
+      {
+        "id": "pbr",
+        "label": "Physically based",
+        "era": "Physically based",
+        "lane": "Shading",
+        "year": "2012",
+        "idea": "Disney designs one physically based model with a small set of intuitive parameters, guided by measured materials.",
+        "impact": "Unreal Engine and other game engines adopted the approach, so one material looks right under any lighting.",
+        "from": [
+          {
+            "id": "shaders",
+            "why": "Shaders let every studio write ad hoc lighting models, which artists retuned for each scene and lighting setup."
+          }
+        ]
+      },
+      {
+        "id": "hwraytracing",
+        "label": "Real-time ray tracing",
+        "era": "Physically based",
+        "lane": "Ray tracing",
+        "year": "2018",
+        "idea": "NVIDIA's Turing GPUs add units that traverse bounding volume hierarchies, exposed through DirectX Raytracing and Vulkan.",
+        "impact": "Games began ray tracing shadows, reflections and global illumination, with denoisers and upscalers filling the gaps.",
+        "from": [
+          {
+            "id": "filmpathtracing",
+            "why": "Film had moved to path-traced light, while games still faked shadows, reflections and indirect light."
+          },
+          {
+            "id": "shaders",
+            "why": "Shader cores could trace rays, but walking scene hierarchies on them was too slow for a game's frame budget."
+          }
+        ]
+      },
+      {
+        "id": "neuralscenes",
+        "label": "Neural scenes",
+        "era": "Physically based",
+        "lane": "Geometry",
+        "year": "2020",
+        "problem": "Rebuilding a real scene from photos as meshes or voxel grids lost fine geometry and view-dependent effects like reflections.",
+        "idea": "NeRF fits a network to a scene's photos through volume rendering, then renders the scene from new viewpoints.",
+        "impact": "Neural fields and then 3D Gaussian splats, which rasterize in real time, became a new way to capture and render real scenes."
+      },
+      {
+        "id": "upscaling",
+        "label": "Neural upscaling",
+        "era": "Physically based",
+        "lane": "Rasterization",
+        "year": "2020",
+        "idea": "Games render fewer pixels, and a neural network rebuilds a sharp frame from them, motion vectors and past frames.",
+        "impact": "NVIDIA, AMD and Intel all ship such upscalers, and they became standard in demanding games.",
+        "from": [
+          {
+            "id": "hwraytracing",
+            "why": "Ray tracing every pixel at full resolution was too slow for games."
+          }
+        ]
+      }
+    ]
+  },
+  "parts": [
+    {
+      "name": "Foundations",
+      "steps": [
+        {
+          "main": {
+            "type": "course",
+            "title": "CMU 15-362/662: Computer Graphics",
+            "url": "https://15362.courses.cs.cmu.edu/spring2026/",
+            "source": "CMU",
+            "year": "2026",
+            "why": "Rasterization, transforms and texture mapping, meshes and geometry processing, physically based ray tracing, and animation and simulation, built in Scotty3D. In English.",
+            "links": [
+              {
+                "label": "2020 videos",
+                "url": "https://www.youtube.com/playlist?list=PL9_jI1bdZmz2emSh0UQ5iOdT2xRHFHL7E"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Rasterization",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "A Closer Look at GPUs",
+            "url": "https://graphics.stanford.edu/~kayvonf/papers/fatahalianCACM.pdf",
+            "source": "Stanford",
+            "year": "2008",
+            "why": "Rendering shades millions of independent fragments per frame, so GPUs use many simple cores, wide SIMD and many threads per core to hide memory latency."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "A Survey of Temporal Antialiasing Techniques",
+            "url": "https://research.nvidia.com/labs/rtr/publication/yang2020survey/",
+            "source": "NVIDIA",
+            "year": "2020",
+            "why": "Supersampling every pixel costs too much in real time, so TAA jitters samples across frames, reprojects history with motion vectors and rejects stale history, which also enables temporal upsampling."
+          }
+        },
+        {
+          "main": {
+            "type": "article",
+            "title": "Nanite: A Deep Dive",
+            "url": "https://advances.realtimerendering.com/s2021/Karis_Nanite_SIGGRAPH_Advances_2021_final.pdf",
+            "source": "Epic Games",
+            "year": "2021",
+            "why": "Film-quality meshes overwhelmed triangle budgets and hand-made levels of detail, so Nanite streams clusters from a hierarchy and rasterizes tiny triangles in compute shaders."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Shading",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Physically-Based Shading at Disney",
+            "url": "https://media.disneyanimation.com/uploads/production/publication_asset/48/asset/s2012_pbs_disney_brdf_notes_v3.pdf",
+            "source": "Disney",
+            "year": "2012",
+            "why": "Ad hoc shading models made artists retune materials for every lighting setup, so Disney builds one physically based model with a small set of intuitive parameters, checked against measured materials."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "Real Shading in Unreal Engine 4",
+              "url": "https://cdn2.unrealengine.com/Resources/files/2013SiggraphPresentationsNotes-26915738.pdf",
+              "source": "Epic Games",
+              "year": "2013"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ray tracing",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "A Survey on Bounding Volume Hierarchies for Ray Tracing",
+            "url": "https://diglib.eg.org/handle/10.1111/cgf142662",
+            "year": "2021",
+            "why": "Testing every ray against every triangle is far too slow, so BVHs group geometry into nested boxes; the survey covers how to build and traverse them, up to GPU ray tracing hardware."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "The Rendering Equation",
+            "url": "https://dl.acm.org/doi/10.1145/15886.15902",
+            "source": "Caltech",
+            "year": "1986",
+            "why": "Rendering methods each captured a different part of how light moves, so Kajiya writes all of it as one integral equation and estimates it by tracing random paths."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Optimally Combining Sampling Techniques for Monte Carlo Rendering",
+            "url": "https://dl.acm.org/doi/10.1145/218380.218498",
+            "source": "Stanford",
+            "year": "1995",
+            "why": "No single way of sampling light paths works in every scene, so multiple importance sampling weights several strategies so each covers where the others are noisy."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "The Path to Path-Traced Movies",
+            "url": "https://cs.dartmouth.edu/~wjarosz/publications/christensen16path.pdf",
+            "source": "Pixar",
+            "year": "2016",
+            "why": "Studios long rendered with Reyes, using shadow maps for shadows and bounce lights or caches for indirect light, and this survey explains how and why they switched to path tracing."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Spatiotemporal Reservoir Resampling for Real-Time Ray Tracing with Dynamic Direct Lighting",
+            "url": "https://benedikt-bitterli.me/restir/bitterli20restir.pdf",
+            "source": "Dartmouth",
+            "year": "2020",
+            "why": "Real-time budgets allow a few rays per pixel, too few for scenes with many dynamic lights, so ReSTIR reuses light samples across nearby pixels and past frames by resampling."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "Spatiotemporal Variance-Guided Filtering: Real-Time Reconstruction for Path-Traced Global Illumination",
+              "url": "https://research.nvidia.com/publication/2017-07_spatiotemporal-variance-guided-filtering-real-time-reconstruction-path-traced",
+              "source": "NVIDIA",
+              "year": "2017"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Geometry",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Surface Simplification Using Quadric Error Metrics",
+            "url": "https://www.cs.cmu.edu/~garland/Papers/quadrics.pdf",
+            "source": "CMU",
+            "year": "1997",
+            "why": "Detailed meshes have too many triangles to draw from afar, so this method contracts vertex pairs, mostly edges, in order of the error they add, tracked as one quadric per vertex."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Animation",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Stable Fluids",
+            "url": "https://dl.acm.org/doi/10.1145/311535.311548",
+            "source": "Alias|Wavefront",
+            "year": "1999",
+            "why": "Explicit fluid solvers blew up unless time steps were tiny, so Stable Fluids traces velocities backward along the flow and projects out divergence, stable at any step."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "XPBD: Position-Based Simulation of Compliant Constrained Dynamics",
+            "url": "https://matthias-research.github.io/pages/publications/XPBD.pdf",
+            "source": "NVIDIA",
+            "year": "2016",
+            "why": "Position-based dynamics moves particles straight onto their constraints to stay stable at game time steps, but stiffness drifted with iteration count, so XPBD adds compliance to fix it."
+          }
+        }
+      ]
+    },
+    {
+      "name": "In practice",
+      "steps": [
+        {
+          "main": {
+            "url": "https://www.figma.com/blog/figma-rendering-powered-by-webgpu/",
+            "why": "WebGPU drops WebGL's global state and per-uniform calls, so Figma made draw state explicit, translated its GLSL shaders to WGSL and batched uniform uploads per submit."
+          }
+        }
+      ]
+    }
+  ]
+}

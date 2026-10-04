@@ -191,21 +191,37 @@
         {
           "main": {
             "type": "course",
-            "title": "Machine Learning 2026",
-            "url": "https://speech.ee.ntu.edu.tw/~hylee/ml/2026-spring.php",
-            "source": "NTU",
+            "title": "Stanford CS336: Language Modeling from Scratch",
+            "url": "https://stanford-cs336.github.io/",
+            "source": "Stanford",
             "year": "2026",
-            "why": "Agents and harness engineering, fast inference, long context, self-correcting and self-improving models. In Mandarin."
+            "why": "Tokenizers, Transformer architectures and mixture of experts, GPU kernels and parallelism, scaling laws, inference, data, and post-training with RL. In English.",
+            "links": [
+              {
+                "label": "Videos",
+                "url": "https://www.youtube.com/playlist?list=PLoROMvodv4rMqXOcazWaTUHhq-yembLCV"
+              }
+            ]
           },
-          "further": [
+          "alternative": [
             {
               "type": "course",
-              "title": "CS336: Language Modeling from Scratch",
-              "url": "https://stanford-cs336.github.io/",
-              "source": "Stanford",
+              "title": "Machine Learning 2026",
+              "url": "https://speech.ee.ntu.edu.tw/~hylee/ml/2026-spring.php",
+              "source": "NTU",
               "year": "2026"
             }
           ]
+        },
+        {
+          "main": {
+            "type": "article",
+            "title": "The Smol Training Playbook: The Secrets to Building World-Class LLMs",
+            "url": "https://huggingface.co/spaces/HuggingFaceTB/smol-training-playbook",
+            "source": "Hugging Face",
+            "year": "2025",
+            "why": "Papers give the final recipe but hide the decisions, so this playbook walks through SmolLM3's ablations, architecture, data mixture, infrastructure, loss spikes and post-training."
+          }
         }
       ]
     },
@@ -311,18 +327,16 @@
               "source": "DeepSeek",
               "year": "2024"
             }
-          ]
-        },
-        {
-          "main": {
-            "type": "paper",
-            "title": "Qwen3 Technical Report",
-            "url": "https://arxiv.org/abs/2505.09388",
-            "source": "Alibaba",
-            "year": "2025",
-            "why": "Thinking is wasted on simple questions, so Qwen3 puts thinking and non-thinking modes in one model with a budget for thinking tokens."
-          },
+          ],
           "further": [
+            {
+              "type": "paper",
+              "title": "Qwen3 Technical Report",
+              "url": "https://arxiv.org/abs/2505.09388",
+              "source": "Alibaba",
+              "year": "2025",
+              "why": "Thinking is wasted on simple questions, so Qwen3 puts thinking and non-thinking modes in one model with a budget for thinking tokens."
+            },
             {
               "type": "paper",
               "title": "OpenAI GPT-5 System Card",
@@ -337,6 +351,31 @@
     {
       "name": "Agents",
       "steps": [
+        {
+          "main": {
+            "type": "course",
+            "title": "CMU 11-768: AI Agents",
+            "url": "https://www.cmu-agents.com/",
+            "source": "CMU",
+            "year": "2026",
+            "why": "Tool use, context management, skills and memory, planning, coding and computer-use agents, SFT and RL for agents, sandboxing, multi-agent interaction and search. In English.",
+            "links": [
+              {
+                "label": "Videos",
+                "url": "https://www.youtube.com/playlist?list=PLSN0qpDfUvTM"
+              }
+            ]
+          },
+          "further": [
+            {
+              "type": "course",
+              "title": "Stanford CS329Z: Engineering AI Agents",
+              "url": "https://cs329z.stanford.edu/",
+              "source": "Stanford",
+              "year": "2026"
+            }
+          ]
+        },
         {
           "main": {
             "type": "paper",
@@ -354,17 +393,17 @@
               "source": "Google",
               "year": "2022"
             }
+          ],
+          "further": [
+            {
+              "type": "paper",
+              "title": "GLM-5: from Vibe Coding to Agentic Engineering",
+              "url": "https://arxiv.org/abs/2602.15763",
+              "source": "Zhipu AI",
+              "year": "2026",
+              "why": "Long agent tasks make RL rollouts slow, so GLM-5 runs asynchronous RL that decouples rollouts from training."
+            }
           ]
-        },
-        {
-          "main": {
-            "type": "paper",
-            "title": "GLM-5: from Vibe Coding to Agentic Engineering",
-            "url": "https://arxiv.org/abs/2602.15763",
-            "source": "Zhipu AI",
-            "year": "2026",
-            "why": "Long agent tasks make RL rollouts slow, so GLM-5 runs asynchronous RL that decouples rollouts from training."
-          }
         }
       ]
     },
@@ -397,36 +436,32 @@
               "source": "DeepSeek",
               "year": "2025"
             }
-          ]
-        },
-        {
-          "main": {
-            "type": "paper",
-            "title": "Kimi K3 Technical Report",
-            "url": "https://github.com/MoonshotAI/Kimi-K3/blob/main/k3_tech_report.pdf",
-            "source": "Moonshot AI",
-            "year": "2026",
-            "why": "To add capacity at lower cost, Kimi K3 combines linear and full attention, attention residuals and a mixture of experts with many more experts."
-          },
-          "background": [
+          ],
+          "further": [
             {
               "type": "paper",
               "title": "Kimi Linear: An Expressive, Efficient Attention Architecture",
               "url": "https://arxiv.org/abs/2510.26692",
               "source": "Moonshot AI",
               "year": "2025"
+            },
+            {
+              "type": "paper",
+              "title": "Kimi K3 Technical Report",
+              "url": "https://github.com/MoonshotAI/Kimi-K3/blob/main/k3_tech_report.pdf",
+              "source": "Moonshot AI",
+              "year": "2026",
+              "why": "To add capacity at lower cost, Kimi K3 combines linear and full attention, attention residuals and a mixture of experts with many more experts."
+            },
+            {
+              "type": "paper",
+              "title": "On the Design of Qwen3.8-Next Architecture: Evaluation, Efficiency, and Training Stability",
+              "url": "https://arxiv.org/abs/2608.30320",
+              "source": "Alibaba",
+              "year": "2026",
+              "why": "Architecture changes trade quality against cost and stability, so this paper judges a linear-attention hybrid, sparse attention and n-gram embeddings on each."
             }
           ]
-        },
-        {
-          "main": {
-            "type": "paper",
-            "title": "On the Design of Qwen3.8-Next Architecture: Evaluation, Efficiency, and Training Stability",
-            "url": "https://arxiv.org/abs/2608.30320",
-            "source": "Alibaba",
-            "year": "2026",
-            "why": "Architecture changes trade quality against cost and stability, so this paper judges a linear-attention hybrid, sparse attention and n-gram embeddings on each."
-          }
         }
       ]
     },
@@ -437,12 +472,6 @@
           "main": {
             "url": "https://netflixtechblog.com/scaling-llm-post-training-at-netflix-0046f8790194",
             "why": "Post-training open models at scale is mostly an engineering problem, so Netflix built a framework covering loss masking, sequence packing and RL orchestration."
-          }
-        },
-        {
-          "main": {
-            "url": "https://engineering.atspotify.com/2025/11/spotifys-background-coding-agent-part-1",
-            "why": "Scripted code migrations could handle only simple changes, so Spotify's background coding agent takes a prompt and opens pull requests across the codebase."
           }
         }
       ]

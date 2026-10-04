@@ -33,11 +33,20 @@ defineEmits<{ toggle: [] }>();
         }}</a>
         <span v-if="item.scope" class="rm-scope">{{ item.scope }}</span>
         <p v-if="main && item.why" class="rm-why">{{ item.why }}</p>
-        <span v-if="item.source || item.year" class="rm-source">
+        <span v-if="item.source || item.year || item.links" class="rm-source">
           <SourceIcon class="rm-mark" :icon="item.icon" :icon-dark="item.iconDark" />
           {{ item.source
           }}<span v-if="item.year" class="rm-year"
             >{{ item.source ? "· " : "" }}{{ item.year }}</span
+          >
+          <a
+            v-for="link in item.links"
+            :key="link.url"
+            class="rm-link"
+            :href="link.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{{ link.label }}</a
           >
         </span>
       </div>

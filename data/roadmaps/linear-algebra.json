@@ -1,0 +1,64 @@
+{
+  "id": "linear-algebra",
+  "title": "Linear algebra",
+  "before": [],
+  "next": ["machine-learning", "computer-graphics"],
+  "parts": [
+    {
+      "name": "Foundations",
+      "steps": [
+        {
+          "main": {
+            "type": "course",
+            "title": "MIT 18.06SC: Linear Algebra",
+            "url": "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/",
+            "source": "MIT",
+            "year": "2011",
+            "why": "Elimination and LU, the four subspaces, orthogonality and least squares, determinants, eigenvalues, positive definite matrices and the SVD. In English."
+          },
+          "background": [
+            {
+              "type": "video",
+              "title": "Essence of linear algebra",
+              "url": "https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab",
+              "year": "2016"
+            }
+          ],
+          "alternative": [
+            {
+              "type": "course",
+              "title": "Linear Algebra 2021",
+              "url": "https://speech.ee.ntu.edu.tw/~hylee/la/2021-fall.php",
+              "source": "NTU",
+              "year": "2021"
+            },
+            {
+              "type": "book",
+              "title": "線性代數",
+              "url": "https://math.ntnu.edu.tw/~li/Linear/LinearAlgebra.pdf",
+              "year": "2026"
+            }
+          ],
+          "further": [
+            {
+              "type": "book",
+              "title": "大學線性代數再探",
+              "url": "https://math.ntnu.edu.tw/~li/AdvLin/AdvLinear.pdf",
+              "year": "2012"
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "course",
+            "title": "MIT 18.065: Matrix Methods in Data Analysis, Signal Processing, and Machine Learning",
+            "url": "https://github.com/mitmath/18065",
+            "source": "MIT",
+            "year": "2023",
+            "why": "Factorizations, the SVD and Eckart-Young low-rank approximation, norms, least squares, eigenvalue and SVD computation, randomized methods. In English."
+          }
+        }
+      ]
+    }
+  ]
+}

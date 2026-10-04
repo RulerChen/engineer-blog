@@ -3,6 +3,212 @@
   "title": "Database systems",
   "before": ["operating-systems", "dsa"],
   "next": ["data-systems"],
+  "evolution": {
+    "eras": [
+      {
+        "name": "Navigational",
+        "text": "Programs follow record links",
+        "background": "The first database systems, such as IBM's IMS, stored business records in trees or networks of links. Programs walked those links one record at a time, so changes to the structure often meant rewriting them."
+      },
+      {
+        "name": "Relational",
+        "text": "Declarative queries over tables",
+        "background": "Codd proposed storing data as tables and letting the system find it, which set off a long debate. IBM's System R and Berkeley's INGRES then showed such systems could run efficiently, and System R introduced SQL."
+      },
+      {
+        "name": "Commercial SQL",
+        "text": "One engine for every workload",
+        "background": "IBM's DB2 ended the debate, and SQL products from IBM, Oracle and others came to run business data. Vendors kept one engine design for every workload, while research hardened it with better recovery and new data types."
+      },
+      {
+        "name": "Specialized engines",
+        "text": "Different engines for different workloads",
+        "background": "Stonebraker argued that one engine built for business transactions no longer fit every market. Analytics moved to engines that store and process data by column, while web developers adopted document stores."
+      },
+      {
+        "name": "Embedded analytics",
+        "text": "Analytics inside the application",
+        "background": "Data scientists analyzed files in R and Python, whose tools lacked full query optimization. Analytic databases ran as separate servers that took effort to set up, so engines moved into the analyst's own process."
+      }
+    ],
+    "lanes": ["Data models", "Query engines", "Storage", "Transactions"],
+    "nodes": [
+      {
+        "id": "nav",
+        "label": "IMS and CODASYL",
+        "era": "Navigational",
+        "lane": "Data models",
+        "year": "1968",
+        "problem": "Each business built its own tools to store and update shared data.",
+        "idea": "IMS stores records in trees and CODASYL in networks, which programs walk a record at a time.",
+        "impact": "IMS became the database of choice across industries, but programs were tied to its structure."
+      },
+      {
+        "id": "codd",
+        "label": "Relational model",
+        "era": "Relational",
+        "lane": "Data models",
+        "year": "1970",
+        "idea": "Codd represents all data as tables of values, with no links visible to programs.",
+        "impact": "Separated what data means from how it is stored, and set off a long debate.",
+        "from": [
+          {
+            "id": "nav",
+            "why": "Programs depended on stored trees and pointers, so reorganizing the data broke them."
+          }
+        ]
+      },
+      {
+        "id": "btree",
+        "label": "B-tree",
+        "era": "Relational",
+        "lane": "Storage",
+        "year": "1972",
+        "problem": "Indexes on disk had to stay cheap to search while records were inserted and deleted.",
+        "idea": "Bayer and McCreight keep a balanced tree of wide nodes that split as they fill.",
+        "impact": "Within a decade it was the standard index structure in database systems."
+      },
+      {
+        "id": "locking",
+        "label": "Two-phase locking",
+        "era": "Relational",
+        "lane": "Transactions",
+        "year": "1976",
+        "problem": "Concurrent users could interleave updates and leave shared data inconsistent.",
+        "idea": "IBM researchers require each transaction to take no new lock once it releases one.",
+        "impact": "Interleaved transactions then behave as if run one at a time, and most SQL products used locking."
+      },
+      {
+        "id": "mvcc",
+        "label": "MVCC",
+        "era": "Relational",
+        "lane": "Transactions",
+        "year": "1978",
+        "idea": "Keep several versions of each item, so readers see a snapshot while writers add new ones.",
+        "impact": "Oracle and Postgres adopted it early, and almost every new engine now uses it.",
+        "from": [
+          {
+            "id": "locking",
+            "why": "Under locking, readers and writers of the same data had to wait for each other."
+          }
+        ]
+      },
+      {
+        "id": "sysr",
+        "label": "System R",
+        "era": "Relational",
+        "lane": "Query engines",
+        "year": "1979",
+        "idea": "IBM's prototype pairs the SQL language with an optimizer that picks plans by estimated cost.",
+        "impact": "SQL became the de facto standard, and many commercial optimizers adopted its methods.",
+        "from": [
+          {
+            "id": "codd",
+            "why": "Skeptics doubted a system could choose query plans as well as a skilled programmer."
+          }
+        ]
+      },
+      {
+        "id": "postgres",
+        "label": "Postgres",
+        "era": "Commercial SQL",
+        "lane": "Data models",
+        "year": "1986",
+        "idea": "Stonebraker's Postgres lets users add their own data types, operators and index methods.",
+        "impact": "Extensible relational systems outlasted object databases, and the code became PostgreSQL.",
+        "from": [
+          {
+            "id": "sysr",
+            "why": "Engines hard-wired a few business data types, so maps and other new data fit badly."
+          }
+        ]
+      },
+      {
+        "id": "aries",
+        "label": "ARIES",
+        "era": "Commercial SQL",
+        "lane": "Transactions",
+        "year": "1992",
+        "problem": "Each system recovered from crashes with its own complex, ad hoc method.",
+        "idea": "Pair write-ahead logging with one recipe: after a crash, repeat history from the log, then undo unfinished work.",
+        "impact": "Most commercial engines, SQL Server included, still recover this way."
+      },
+      {
+        "id": "lsm",
+        "label": "LSM-tree",
+        "era": "Commercial SQL",
+        "lane": "Storage",
+        "year": "1996",
+        "idea": "Buffer writes in memory, then merge them into sorted runs on disk in batches.",
+        "impact": "RocksDB, forked from Google's LevelDB, now runs it under many databases and stream processors.",
+        "from": [
+          {
+            "id": "btree",
+            "why": "Under heavy inserts, keeping a B-tree index current cost many random disk writes."
+          }
+        ]
+      },
+      {
+        "id": "cstore",
+        "label": "C-Store",
+        "era": "Specialized engines",
+        "lane": "Storage",
+        "year": "2005",
+        "idea": "Store each column separately and compressed, so a query reads only the columns it needs.",
+        "impact": "Became Vertica, and warehouse vendors have since moved from row stores to column stores.",
+        "from": [
+          {
+            "id": "sysr",
+            "why": "Engines stored whole rows together, so analytic scans read columns they did not need."
+          }
+        ]
+      },
+      {
+        "id": "x100",
+        "label": "MonetDB/X100",
+        "era": "Specialized engines",
+        "lane": "Query engines",
+        "year": "2005",
+        "problem": "Engines passed one row at a time between operators, wasting modern CPUs on overhead.",
+        "idea": "Operators work on small, cache-resident vectors of column values instead of single rows.",
+        "impact": "Spun out as Vectorwise, and vectorized execution became a mainstream engine design."
+      },
+      {
+        "id": "docs",
+        "label": "Document stores",
+        "era": "Specialized engines",
+        "lane": "Data models",
+        "year": "2009",
+        "idea": "Systems such as MongoDB store schemaless JSON documents behind a simple, record-at-a-time API.",
+        "impact": "Within about a decade nearly all had added SQL, and the SQL standard had added JSON.",
+        "from": [
+          {
+            "id": "sysr",
+            "why": "SQL databases struggled to scale for web apps, whose developers saw joins as slow and schemas as rigid."
+          }
+        ]
+      },
+      {
+        "id": "duckdb",
+        "label": "DuckDB",
+        "era": "Embedded analytics",
+        "lane": "Query engines",
+        "year": "2019",
+        "idea": "Like SQLite, it runs inside the host process, but stores columns and executes in vectors.",
+        "impact": "Grew popular, partly because it queries local and cloud files in place.",
+        "from": [
+          {
+            "id": "x100",
+            "why": "Supplied the vectorized execution that DuckDB's engine adopted."
+          },
+          {
+            "id": "cstore",
+            "why": "Fast column stores ran as servers that took effort to set up and load."
+          }
+        ]
+      }
+    ]
+  },
   "parts": [
     {
       "name": "Foundations",
@@ -14,7 +220,13 @@
             "url": "https://www.youtube.com/playlist?list=PLSE8ODhjZXjYMAgsGH-GtY5rJYZ6zjsd5",
             "source": "CMU",
             "year": "2025",
-            "why": "Storage, indexes, query execution and optimization, concurrency control and recovery. In English."
+            "why": "Storage, indexes, query execution and optimization, concurrency control and recovery. In English.",
+            "links": [
+              {
+                "label": "Website",
+                "url": "https://15445.courses.cs.cmu.edu/fall2025/"
+              }
+            ]
           },
           "further": [
             {
@@ -22,7 +234,13 @@
               "title": "CMU 15-721: Advanced Database Systems",
               "url": "https://www.youtube.com/playlist?list=PLSE8ODhjZXjYa_zX-KeMJui7pcN1rIaIJ",
               "source": "CMU",
-              "year": "2024"
+              "year": "2024",
+              "links": [
+                {
+                  "label": "Website",
+                  "url": "https://15721.courses.cs.cmu.edu/spring2024/"
+                }
+              ]
             }
           ]
         },
@@ -52,28 +270,17 @@
         {
           "main": {
             "type": "paper",
-            "title": "Are You Sure You Want to Use MMAP in Your Database Management System?",
-            "url": "https://www.cidrdb.org/cidr2022/papers/p13-crotty.pdf",
-            "source": "CMU",
-            "year": "2022",
-            "why": "mmap looks like a free buffer pool, but letting the OS manage pages breaks transaction safety and stalls threads."
-          }
-        },
-        {
-          "main": {
-            "type": "paper",
             "title": "Evolution of Development Priorities in Key-value Stores Serving Large-scale Applications: The RocksDB Experience",
             "url": "https://www.usenix.org/conference/fast21/presentation/dong",
             "source": "Meta",
             "year": "2021",
             "why": "RocksDB's priorities shifted from write amplification to space to CPU as its hardware and workloads changed."
-          }
-        },
-        {
-          "main": {
-            "url": "https://engineering.fb.com/2016/08/31/core-infra/myrocks-a-space-and-write-optimized-mysql-database/",
-            "why": "InnoDB's B+tree wasted space and flash writes, so Facebook swapped it for RocksDB's LSM tree under MySQL."
-          }
+          },
+          "further": [
+            {
+              "url": "https://engineering.fb.com/2016/08/31/core-infra/myrocks-a-space-and-write-optimized-mysql-database/"
+            }
+          ]
         },
         {
           "main": {
@@ -146,12 +353,6 @@
             "year": "2008",
             "why": "Snapshot isolation still allows write skew, so SSI detects dangerous patterns at runtime and aborts a transaction, as PostgreSQL does."
           }
-        },
-        {
-          "main": {
-            "url": "https://planetscale.com/blog/concurrency-vs-throughput-vitess-mysql",
-            "why": "Too many concurrent transactions lowered throughput, and a smaller connection pool fixed it."
-          }
         }
       ]
     },
@@ -209,26 +410,28 @@
         },
         {
           "main": {
-            "url": "https://github.blog/engineering/infrastructure/upgrading-github-com-to-mysql-8-0/",
-            "why": "GitHub upgraded its whole MySQL fleet in stages, replicas first, while replicating back to the old version so it could roll back."
-          }
-        },
-        {
-          "main": {
             "url": "https://www.figma.com/blog/pgkeeper-building-the-bouncer-we-needed-for-postgres/",
             "why": "Postgres uses one process per connection, so Figma built a pooler that sheds load."
-          }
-        },
-        {
-          "main": {
-            "url": "https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/",
-            "why": "Clients connecting straight to ZippyDB hosts formed a fragile many-to-many mesh, so a proxy tier now bounds connections and batches requests across clients."
-          }
+          },
+          "further": [
+            {
+              "url": "https://planetscale.com/blog/concurrency-vs-throughput-vitess-mysql"
+            },
+            {
+              "url": "https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/"
+            }
+          ]
         },
         {
           "main": {
             "url": "https://github.blog/engineering/infrastructure/mysql-high-availability-at-github/",
             "why": "VIP and DNS based failover was slow and fragile, so GitHub uses orchestrator to promote a replica and Consul with GLB to route clients to it."
+          }
+        },
+        {
+          "main": {
+            "url": "https://github.blog/engineering/infrastructure/upgrading-github-com-to-mysql-8-0/",
+            "why": "GitHub upgraded its whole MySQL fleet in stages, replicas first, while replicating back to the old version so it could roll back."
           }
         },
         {

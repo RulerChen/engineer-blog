@@ -1,0 +1,449 @@
+{
+  "id": "security",
+  "title": "Security",
+  "before": ["operating-systems", "networking"],
+  "next": [],
+  "evolution": {
+    "eras": [
+      {
+        "name": "Time-sharing",
+        "text": "Keeping users apart",
+        "background": "Time-sharing machines held many users' programs and files, so systems had to keep them apart. A US Air Force review found that even Multics was not secure. Encryption still needed secret keys delivered in advance through couriers or other secure channels."
+      },
+      {
+        "name": "The Internet",
+        "text": "Attacks over the network",
+        "background": "The Internet linked university and military computers whose network services had exploitable bugs. The Morris worm slowed much of the network, and later recipes made buffer overflows easy to exploit. SSL then brought encryption and server certificates to the web."
+      },
+      {
+        "name": "Defense in depth",
+        "text": "Assume breach, contain damage",
+        "background": "Software kept shipping with exploitable bugs, and attackers got past perimeter firewalls. Defenders stopped trusting any single wall, so they sandboxed risky code, checked every request and fuzzed code continuously. Encryption became the default for web traffic and chat apps."
+      },
+      {
+        "name": "Shared foundations",
+        "text": "Defending what everyone builds on",
+        "background": "Attackers moved upstream into the open-source code that everyone builds on, as the xz backdoor showed. Quantum computers threatened the public-key cryptography behind secure connections. AI models began finding serious vulnerabilities on their own, for defenders and attackers alike."
+      }
+    ],
+    "lanes": ["Isolation", "Software", "Cryptography", "Networks"],
+    "nodes": [
+      {
+        "id": "protect",
+        "label": "Design principles",
+        "era": "Time-sharing",
+        "lane": "Isolation",
+        "year": "1975",
+        "problem": "Time-sharing let many users share one machine, so one user's program could reach another's data.",
+        "idea": "Saltzer and Schroeder distill design principles such as least privilege, complete mediation and fail-safe defaults.",
+        "impact": "Their principles are still taught as the basis of secure system design."
+      },
+      {
+        "id": "pubkey",
+        "label": "Public-key crypto",
+        "era": "Time-sharing",
+        "lane": "Cryptography",
+        "year": "1976",
+        "problem": "Encryption needed keys delivered in advance over a secure channel, a barrier for large computer networks.",
+        "idea": "Diffie and Hellman show that strangers can agree on a secret key over an open channel.",
+        "impact": "It started public-key cryptography, and RSA soon made encryption and signatures practical."
+      },
+      {
+        "id": "worm",
+        "label": "Morris worm",
+        "era": "The Internet",
+        "lane": "Networks",
+        "year": "1988",
+        "problem": "Machines on the young Internet ran network services with exploitable bugs and backdoors.",
+        "idea": "A self-spreading program exploits a bug in finger and a backdoor in the mail system.",
+        "impact": "It slowed military and university networks for days, and prompted the first US computer emergency response team."
+      },
+      {
+        "id": "ssl",
+        "label": "SSL",
+        "era": "The Internet",
+        "lane": "Cryptography",
+        "year": "1995",
+        "idea": "Netscape's SSL encrypts web connections and proves the server's identity with certificates.",
+        "impact": "SSL became the basis of TLS, the protocol under every HTTPS connection.",
+        "from": [
+          {
+            "id": "pubkey",
+            "why": "Supplied public-key methods to authenticate a server and agree on a key with it."
+          }
+        ]
+      },
+      {
+        "id": "stack",
+        "label": "Stack smashing",
+        "era": "The Internet",
+        "lane": "Software",
+        "year": "1996",
+        "idea": "Aleph One's Phrack tutorial shows step by step how to overwrite a return address and run injected code.",
+        "impact": "Such recipes made overflow exploits easy to build, and compilers answered with stack canaries.",
+        "from": [
+          {
+            "id": "worm",
+            "why": "The worm had made buffer overflow attacks notorious across the young Internet."
+          }
+        ]
+      },
+      {
+        "id": "sandbox",
+        "label": "Browser sandbox",
+        "era": "Defense in depth",
+        "lane": "Isolation",
+        "year": "2008",
+        "idea": "Chromium runs its rendering engine in a sandbox, apart from a privileged browser kernel.",
+        "impact": "Many browsers then shifted to sandboxed, multi-process designs like it.",
+        "from": [
+          {
+            "id": "protect",
+            "why": "Supplied least privilege, so each part of a program gets only the access it needs."
+          },
+          {
+            "id": "stack",
+            "why": "Exploitable bugs kept appearing in browsers, so the damage of an exploit had to be contained."
+          }
+        ]
+      },
+      {
+        "id": "zerotrust",
+        "label": "Zero trust",
+        "era": "Defense in depth",
+        "lane": "Networks",
+        "year": "2014",
+        "problem": "Firewalls trusted everything inside the network, so one breach exposed the whole intranet.",
+        "idea": "Google's BeyondCorp drops the privileged network and checks device and user credentials on every request.",
+        "impact": "Trust based on identity, not network location, is the core of zero trust as NIST later defined it."
+      },
+      {
+        "id": "fuzz",
+        "label": "OSS-Fuzz",
+        "era": "Defense in depth",
+        "lane": "Software",
+        "year": "2016",
+        "idea": "Google runs fuzzers with sanitizers continuously on critical open-source projects.",
+        "impact": "Continuous fuzzing became a standard defense for critical open-source projects.",
+        "from": [
+          {
+            "id": "stack",
+            "why": "Memory bugs are hard to find in code review, even for experienced developers."
+          }
+        ]
+      },
+      {
+        "id": "e2e",
+        "label": "End-to-end chat",
+        "era": "Defense in depth",
+        "lane": "Cryptography",
+        "year": "2016",
+        "idea": "Signal's Double Ratchet repeats Diffie-Hellman exchanges, so every message gets a fresh key only the two ends hold.",
+        "impact": "WhatsApp turned it on for all its users, and Messenger later made end-to-end encryption the default.",
+        "from": [
+          {
+            "id": "ssl",
+            "why": "TLS protects the link to a server, but the service itself can still read every message."
+          }
+        ]
+      },
+      {
+        "id": "siteiso",
+        "label": "Site Isolation",
+        "era": "Defense in depth",
+        "lane": "Isolation",
+        "year": "2018",
+        "idea": "Chrome locks each renderer process to a single site and filters cross-site data from it.",
+        "impact": "Chrome turned it on by default on desktop as its best defense against Spectre-style leaks.",
+        "from": [
+          {
+            "id": "sandbox",
+            "why": "A sandboxed renderer still held pages from many sites, which Spectre could read."
+          }
+        ]
+      },
+      {
+        "id": "ai",
+        "label": "AI bug hunting",
+        "era": "Shared foundations",
+        "lane": "Software",
+        "year": "2024",
+        "idea": "Google's Big Sleep agent uses a language model to find an exploitable SQLite bug before release.",
+        "impact": "AI systems soon found and patched real bugs on their own, as DARPA's AI Cyber Challenge showed.",
+        "from": [
+          {
+            "id": "fuzz",
+            "why": "Fuzzers miss bugs that need reasoning about code, such as variants of past fixes."
+          }
+        ]
+      },
+      {
+        "id": "supply",
+        "label": "xz backdoor",
+        "era": "Shared foundations",
+        "lane": "Software",
+        "year": "2024",
+        "problem": "Most software builds on open-source components, many kept up by unpaid volunteers.",
+        "idea": "An attacker spends years earning a maintainer's trust, then hides an ssh backdoor in xz releases.",
+        "impact": "A developer noticed extra CPU use in ssh, and it showed why releases must be checked against source."
+      },
+      {
+        "id": "pq",
+        "label": "Post-quantum",
+        "era": "Shared foundations",
+        "lane": "Cryptography",
+        "year": "2024",
+        "problem": "A large quantum computer running Shor's algorithm would break the Diffie-Hellman and RSA behind secure connections.",
+        "idea": "NIST standardizes lattice-based ML-KEM, and browsers pair it with classical key exchange.",
+        "impact": "Most human web traffic to Cloudflare now resists harvest-now, decrypt-later attacks."
+      }
+    ]
+  },
+  "parts": [
+    {
+      "name": "Foundations",
+      "steps": [
+        {
+          "main": {
+            "type": "course",
+            "title": "UC Berkeley CS 161: Computer Security",
+            "url": "https://fa25.cs161.org/",
+            "source": "UC Berkeley",
+            "year": "2025",
+            "why": "Security principles, memory-safety exploits and defenses, cryptography, web attacks, network attacks and TLS, DoS, intrusion detection and Tor. In English."
+          },
+          "further": [
+            {
+              "type": "course",
+              "title": "MIT 6.5660: Computer Systems Security",
+              "url": "https://css.csail.mit.edu/6.5660/2026/",
+              "source": "MIT",
+              "year": "2026"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Software vulnerabilities",
+      "steps": [
+        {
+          "main": {
+            "type": "article",
+            "title": "Smashing The Stack For Fun And Profit",
+            "url": "https://phrack.org/issues/49/smashing-the-stack-for-fun-and-profit",
+            "year": "1996",
+            "why": "Unchecked copies into stack buffers can overwrite the return address, and this tutorial shows how to exploit that to run injected code."
+          },
+          "further": [
+            {
+              "type": "article",
+              "title": "Memory Integrity Enforcement: A complete vision for memory safety in Apple devices",
+              "url": "https://security.apple.com/blog/memory-integrity-enforcement/",
+              "source": "Apple",
+              "year": "2025",
+              "why": "Mercenary spyware keeps exploiting memory-corruption bugs, so Apple pairs type-aware secure allocators with always-on EMTE hardware memory tagging."
+            },
+            {
+              "type": "article",
+              "title": "A deep dive into an NSO zero-click iMessage exploit: Remote Code Execution",
+              "url": "https://projectzero.google/2021/12/a-deep-dive-into-nso-zero-click.html",
+              "source": "Google",
+              "year": "2021"
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Fuzzing: Hack, Art, and Science",
+            "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2020/03/Fuzzing-101-CACM2020.pdf",
+            "source": "Microsoft",
+            "year": "2020",
+            "why": "Reviews and static analysis miss parser bugs, so fuzzing runs programs on generated inputs, from blackbox mutation to whitebox and greybox search."
+          },
+          "further": [
+            {
+              "type": "article",
+              "title": "From Naptime to Big Sleep: Using Large Language Models To Catch Vulnerabilities In Real-World Code",
+              "url": "https://projectzero.google/2024/10/from-naptime-to-big-sleep.html",
+              "source": "Google",
+              "year": "2024",
+              "why": "Fuzzing misses variants of fixed bugs, so Big Sleep's language-model agent studies past fixes and found an exploitable SQLite bug before release."
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "The Security Architecture of the Chromium Browser",
+            "url": "https://seclab.stanford.edu/websec/chromium/chromium-security-architecture.pdf",
+            "source": "Google",
+            "year": "2008",
+            "why": "In a monolithic browser one exploited bug exposes the user's files, so Chromium confines its rendering engine to a sandbox."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "Site Isolation: Process Separation for Web Sites within the Browser",
+              "url": "https://www.usenix.org/system/files/sec19-reis.pdf",
+              "source": "Google",
+              "year": "2019"
+            },
+            {
+              "type": "video",
+              "title": "Hacking Discord for $5000 Bounty",
+              "url": "https://www.youtube.com/watch?v=R3SE4VKj678",
+              "year": "2024"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cryptography",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Let's Encrypt: An Automated Certificate Authority to Encrypt the Entire Web",
+            "url": "https://jhalderm.com/pub/papers/letsencrypt-ccs19.pdf",
+            "year": "2019",
+            "why": "Costly manual certificates kept much of the web unencrypted, so Let's Encrypt issues them free and automatically through ACME."
+          },
+          "further": [
+            {
+              "type": "article",
+              "title": "Certificate Transparency",
+              "url": "https://queue.acm.org/detail.cfm?id=2668154",
+              "source": "Google",
+              "year": "2014"
+            },
+            {
+              "type": "article",
+              "title": "Addressing the unauthorized issuance of multiple TLS certificates for 1.1.1.1",
+              "url": "https://blog.cloudflare.com/unauthorized-issuance-of-certificates-for-1-1-1-1/",
+              "source": "Cloudflare",
+              "year": "2025"
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "article",
+            "title": "The Double Ratchet Algorithm",
+            "url": "https://signal.org/docs/specifications/doubleratchet/",
+            "year": "2016",
+            "why": "To limit what a stolen key reveals, Signal derives a new key for every message and keeps mixing in fresh Diffie-Hellman outputs."
+          },
+          "further": [
+            {
+              "type": "article",
+              "title": "Building end-to-end security for Messenger",
+              "url": "https://engineering.fb.com/2023/12/06/security/building-end-to-end-security-for-messenger/",
+              "source": "Meta",
+              "year": "2023"
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "article",
+            "title": "State of the post-quantum Internet in 2025",
+            "url": "https://blog.cloudflare.com/pq-2025/",
+            "source": "Cloudflare",
+            "year": "2025",
+            "why": "Recorded traffic could be decrypted once quantum computers break RSA and elliptic curves, so TLS is moving to hybrid ML-KEM key agreement."
+          },
+          "further": [
+            {
+              "type": "article",
+              "title": "iMessage with PQ3: The new state of the art in quantum-secure messaging at scale",
+              "url": "https://security.apple.com/blog/imessage-pq3/",
+              "source": "Apple",
+              "year": "2024"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Identity and access",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Security Keys: Practical Cryptographic Second Factors for the Modern Web",
+            "url": "https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/45409.pdf",
+            "source": "Google",
+            "year": "2016",
+            "why": "Phishing defeats passwords and one-time codes, so security keys sign each login bound to the site's origin, a design FIDO standardized."
+          },
+          "further": [
+            {
+              "type": "article",
+              "title": "The mechanics of a sophisticated phishing scam and how we stopped it",
+              "url": "https://blog.cloudflare.com/2022-07-sms-phishing-attacks/",
+              "source": "Cloudflare",
+              "year": "2022"
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "article",
+            "title": "Thanksgiving 2023 security incident",
+            "url": "https://blog.cloudflare.com/thanksgiving-2023-security-incident/",
+            "year": "2024",
+            "why": "Credentials stolen in Okta's breach were never rotated, and Cloudflare traces how an attacker used them and how zero-trust controls limited the spread."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Zanzibar: Google's Consistent, Global Authorization System",
+            "url": "https://www.usenix.org/system/files/atc19-pang.pdf",
+            "source": "Google",
+            "year": "2019",
+            "why": "Per-app permission systems made sharing inconsistent, so Zanzibar stores Google's access control lists as relation tuples in one consistent global service."
+          },
+          "further": [
+            {
+              "url": "https://medium.com/airbnb-engineering/himeji-a-scalable-centralized-system-for-authorization-at-airbnb-341664924574"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Network attacks",
+      "steps": [
+        {
+          "main": {
+            "type": "paper",
+            "title": "Understanding the Mirai Botnet",
+            "url": "https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-antonakakis.pdf",
+            "source": "UIUC",
+            "year": "2017",
+            "why": "Default passwords made IoT devices easy to hijack, and this study traces how the Mirai botnet grew from them into record DDoS floods."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Supply chain",
+      "steps": [
+        {
+          "main": {
+            "type": "article",
+            "title": "Fifty Years of Open Source Software Supply Chain Security",
+            "url": "https://dl.acm.org/doi/pdf/10.1145/3722542",
+            "source": "Google",
+            "year": "2025",
+            "why": "The xz backdoor showed open-source supply chains remain easy to poison, so this essay surveys defenses like authenticated downloads and reproducible builds."
+          }
+        }
+      ]
+    }
+  ]
+}

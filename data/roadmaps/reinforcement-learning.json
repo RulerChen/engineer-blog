@@ -190,30 +190,27 @@
             "url": "https://www.youtube.com/playlist?list=PLoROMvodv4rN4wG6Nk6sNpTEbuOSosZdX",
             "source": "Stanford",
             "year": "2024",
-            "why": "MDPs, TD and Q-learning up to DQN, policy gradients up to PPO, imitation, RLHF and DPO, offline RL, bandits and tree search. In English."
+            "why": "MDPs, TD and Q-learning up to DQN, policy gradients up to PPO, imitation, RLHF and DPO, offline RL, bandits and tree search. In English.",
+            "links": [
+              {
+                "label": "Website",
+                "url": "https://web.stanford.edu/class/archive/cs/cs234/cs234.1246/"
+              }
+            ]
           },
-          "alternative": [
-            {
-              "type": "course",
-              "title": "UCL COMPM050: Reinforcement Learning",
-              "url": "https://www.youtube.com/playlist?list=PLqYmG7hTraZDM-OYHWgPebj2MfCFzFObQ",
-              "source": "UCL",
-              "year": "2015"
-            }
-          ],
           "further": [
             {
               "type": "course",
               "title": "UC Berkeley CS 285: Deep Reinforcement Learning",
               "url": "https://rail.eecs.berkeley.edu/deeprlcourse-fa23/",
               "source": "UC Berkeley",
-              "year": "2023"
-            },
-            {
-              "type": "book",
-              "title": "Reinforcement Learning: An Introduction",
-              "url": "http://incompleteideas.net/book/the-book-2nd.html",
-              "year": "2018"
+              "year": "2023",
+              "links": [
+                {
+                  "label": "Videos",
+                  "url": "https://www.youtube.com/playlist?list=PL_iWQOsE6TfVYGEGiAOMaOzzv41Jfm_Ps"
+                }
+              ]
             }
           ]
         }
@@ -230,17 +227,17 @@
             "source": "GTE Laboratories",
             "year": "1988",
             "why": "Waiting for final outcomes makes learning slow, so temporal-difference methods learn from the difference between successive predictions."
-          }
-        },
-        {
-          "main": {
-            "type": "paper",
-            "title": "Q-learning",
-            "url": "https://link.springer.com/content/pdf/10.1007/BF00992698.pdf",
-            "source": "University of Edinburgh",
-            "year": "1992",
-            "why": "Q-learning learns optimal action values while following any exploring policy, converging as long as every action keeps being tried."
-          }
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "A Better Match for Drivers and Riders: Reinforcement Learning at Lyft",
+              "url": "https://arxiv.org/abs/2310.13810",
+              "source": "Lyft",
+              "year": "2023",
+              "why": "To find more efficient matches, Lyft estimates each driver's future earnings in real time with online RL and matches on them."
+            }
+          ]
         },
         {
           "main": {
@@ -279,16 +276,6 @@
         {
           "main": {
             "type": "paper",
-            "title": "Trust Region Policy Optimization",
-            "url": "https://arxiv.org/abs/1502.05477",
-            "source": "UC Berkeley",
-            "year": "2015",
-            "why": "Large policy-gradient steps can collapse a policy, so TRPO keeps each update inside a KL-divergence trust region."
-          }
-        },
-        {
-          "main": {
-            "type": "paper",
             "title": "Proximal Policy Optimization Algorithms",
             "url": "https://arxiv.org/abs/1707.06347",
             "source": "OpenAI",
@@ -302,6 +289,14 @@
               "url": "https://arxiv.org/abs/2005.12729",
               "source": "MIT",
               "year": "2020"
+            },
+            {
+              "type": "paper",
+              "title": "Trust Region Policy Optimization",
+              "url": "https://arxiv.org/abs/1502.05477",
+              "source": "UC Berkeley",
+              "year": "2015",
+              "why": "Large policy-gradient steps can collapse a policy, so TRPO keeps each update inside a KL-divergence trust region."
             }
           ]
         },
@@ -323,22 +318,22 @@
         {
           "main": {
             "type": "paper",
-            "title": "Mastering the Game of Go with Deep Neural Networks and Tree Search",
-            "url": "https://storage.googleapis.com/deepmind-media/alphago/AlphaGoNaturePaper.pdf",
-            "source": "DeepMind",
-            "year": "2016",
-            "why": "Go is too large for brute-force search, so AlphaGo guides tree search with policy and value networks trained on human games and self-play."
-          }
-        },
-        {
-          "main": {
-            "type": "paper",
             "title": "Mastering the Game of Go without Human Knowledge",
             "url": "https://discovery.ucl.ac.uk/id/eprint/10045895/1/agz_unformatted_nature.pdf",
             "source": "DeepMind",
             "year": "2017",
             "why": "AlphaGo Zero drops human games and learns from self-play alone, with tree search as the teacher for its network."
-          }
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "Mastering the Game of Go with Deep Neural Networks and Tree Search",
+              "url": "https://storage.googleapis.com/deepmind-media/alphago/AlphaGoNaturePaper.pdf",
+              "source": "DeepMind",
+              "year": "2016",
+              "why": "Go is too large for brute-force search, so AlphaGo guides tree search with policy and value networks trained on human games and self-play."
+            }
+          ]
         },
         {
           "main": {
@@ -407,16 +402,7 @@
             "source": "OpenAI",
             "year": "2017",
             "why": "Many tasks lack a reward function, so a reward model fit to human comparisons of short clips trains the agent instead."
-          },
-          "further": [
-            {
-              "type": "paper",
-              "title": "Learning to Summarize from Human Feedback",
-              "url": "https://arxiv.org/abs/2009.01325",
-              "source": "OpenAI",
-              "year": "2020"
-            }
-          ]
+          }
         }
       ]
     },
@@ -448,14 +434,12 @@
               "url": "https://proceedings.neurips.cc/paper_files/paper/2011/file/e53a0a2978c28872a4505bdb51db06dc-Paper.pdf",
               "source": "Yahoo",
               "year": "2011"
+            },
+            {
+              "url": "https://medium.com/airbnb-engineering/transforming-location-retrieval-at-airbnb-a-journey-from-heuristics-to-reinforcement-learning-d33ffc4ddb8f",
+              "why": "Heuristics decided which map area to search, so Airbnb frames it as a contextual bandit that explores with UCB on dropout-based uncertainty."
             }
           ]
-        },
-        {
-          "main": {
-            "url": "https://medium.com/airbnb-engineering/transforming-location-retrieval-at-airbnb-a-journey-from-heuristics-to-reinforcement-learning-d33ffc4ddb8f",
-            "why": "Heuristics decided which map area to search, so Airbnb frames it as a contextual bandit that explores with UCB on dropout-based uncertainty."
-          }
         }
       ]
     },
@@ -470,16 +454,7 @@
             "source": "Google",
             "year": "2021",
             "why": "Point estimates from a few runs per task mislead, so report bootstrap intervals, performance profiles and interquartile means."
-          },
-          "background": [
-            {
-              "type": "paper",
-              "title": "Deep Reinforcement Learning that Matters",
-              "url": "https://arxiv.org/abs/1709.06560",
-              "source": "McGill University",
-              "year": "2017"
-            }
-          ]
+          }
         },
         {
           "main": {
@@ -489,16 +464,6 @@
             "source": "Google",
             "year": "2018",
             "why": "Logs from older recommenders bias policy learning, so YouTube trains a REINFORCE recommender with off-policy correction."
-          }
-        },
-        {
-          "main": {
-            "type": "paper",
-            "title": "A Better Match for Drivers and Riders: Reinforcement Learning at Lyft",
-            "url": "https://arxiv.org/abs/2310.13810",
-            "source": "Lyft",
-            "year": "2023",
-            "why": "To find more efficient matches, Lyft estimates each driver's future earnings in real time with online RL and matches on them."
           }
         }
       ]

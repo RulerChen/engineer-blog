@@ -1,5 +1,12 @@
 import type { EntryType } from "./entry.js";
 
+/** Another way into the same item, such as a course's video playlist or an older run. */
+export interface RoadmapLink {
+  /** A word or two, like "Videos" or "2020 videos". */
+  label: string;
+  url: string;
+}
+
 /** One item as written in data/roadmaps/: a url alone for an entry on the list, full fields otherwise. */
 export interface RoadmapItemInput {
   url: string;
@@ -12,6 +19,8 @@ export interface RoadmapItemInput {
   scope?: string;
   /** One line on why this step is here, main-line items only. */
   why?: string;
+  /** Shown beside the item instead of as items of their own. */
+  links?: RoadmapLink[];
 }
 
 export interface RoadmapStepInput {
@@ -90,6 +99,7 @@ export interface RoadmapItem {
   iconDark?: string;
   scope?: string;
   why?: string;
+  links?: RoadmapLink[];
 }
 
 export interface RoadmapStep {

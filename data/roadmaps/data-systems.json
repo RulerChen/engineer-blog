@@ -3,6 +3,215 @@
   "title": "Data systems",
   "before": ["distributed-systems", "database-systems"],
   "next": [],
+  "evolution": {
+    "eras": [
+      {
+        "name": "Warehouses",
+        "text": "Parallel databases for analytics",
+        "background": "Companies copied data from operational databases into central warehouses for reporting. Parallel databases spread each table over many machines, but they ran as costly appliances that tied storage to compute."
+      },
+      {
+        "name": "Big data",
+        "text": "Batch jobs on cheap clusters",
+        "background": "Web companies gathered crawls and logs too large to keep in warehouses affordably. Google ran batch jobs on clusters of commodity machines, Hadoop copied the design, and SQL soon returned on top."
+      },
+      {
+        "name": "Low latency",
+        "text": "Interactive queries and live streams",
+        "background": "Batch jobs were too slow for analysts exploring data and for products reacting to events. Engines moved work into memory and columnar files, and a durable log let stream processors handle events as they arrived."
+      },
+      {
+        "name": "Cloud lakehouse",
+        "text": "Elastic compute over object storage",
+        "background": "Cloud object stores offered cheap, durable storage, and compute could scale separately from it. Snowflake built a warehouse on them, and open table formats turned lake files into tables that many engines share."
+      }
+    ],
+    "lanes": ["Programming models", "SQL engines", "Storage formats", "Logs and streams"],
+    "nodes": [
+      {
+        "id": "mpp",
+        "label": "Shared nothing",
+        "era": "Warehouses",
+        "lane": "SQL engines",
+        "year": "1986",
+        "problem": "The largest databases outgrew single machines, and special database hardware had failed.",
+        "idea": "Teradata and Gamma split each table across machines with their own CPU, memory and disks.",
+        "impact": "Became the dominant design for data warehouses, though it tied storage to compute."
+      },
+      {
+        "id": "mr",
+        "label": "MapReduce",
+        "era": "Big data",
+        "lane": "Programming models",
+        "year": "2004",
+        "problem": "Every job over crawled pages and logs had to handle distribution and machine failures itself.",
+        "idea": "Users write map and reduce functions; the library spreads the work and reruns failed tasks.",
+        "impact": "Its open-source clone, Hadoop, spread batch processing on cheap clusters across industry."
+      },
+      {
+        "id": "hive",
+        "label": "Hive",
+        "era": "Big data",
+        "lane": "SQL engines",
+        "year": "2009",
+        "idea": "Facebook compiles SQL-like queries into MapReduce jobs over tables kept as directories of files.",
+        "impact": "SQL returned to big data, and Hive's directory tables became the usual lake layout.",
+        "from": [
+          {
+            "id": "mr",
+            "why": "Every query had to be a custom MapReduce program, hard to maintain and reuse."
+          },
+          {
+            "id": "mpp",
+            "why": "Commercial warehouses became too expensive for rapidly growing data."
+          }
+        ]
+      },
+      {
+        "id": "dremel",
+        "label": "Dremel",
+        "era": "Low latency",
+        "lane": "Storage formats",
+        "year": "2010",
+        "idea": "Google stores nested records column by column and runs SQL through a tree of servers.",
+        "impact": "Queries over huge tables returned in seconds, and Dremel came to power BigQuery.",
+        "from": [
+          {
+            "id": "mr",
+            "why": "Ad hoc questions needed chains of MapReduce jobs, far too slow for interactive use."
+          }
+        ]
+      },
+      {
+        "id": "kafka",
+        "label": "Kafka",
+        "era": "Low latency",
+        "lane": "Logs and streams",
+        "year": "2011",
+        "problem": "Log pipelines loaded Hadoop in batches, and message queues could not keep up with activity data.",
+        "idea": "LinkedIn stores each topic as partitioned, append-only logs that consumers pull and can rewind.",
+        "impact": "Became the common log that feeds both real-time and offline systems."
+      },
+      {
+        "id": "spark",
+        "label": "Spark",
+        "era": "Low latency",
+        "lane": "Programming models",
+        "year": "2012",
+        "idea": "Keep datasets in memory as RDDs and rebuild lost partitions from their lineage.",
+        "impact": "Became the most active open-source big data project, with SQL, streaming and machine learning.",
+        "from": [
+          {
+            "id": "mr",
+            "why": "Jobs shared data only by writing it to disk, so iterative and interactive work was slow."
+          }
+        ]
+      },
+      {
+        "id": "parquet",
+        "label": "Parquet",
+        "era": "Low latency",
+        "lane": "Storage formats",
+        "year": "2013",
+        "idea": "Twitter and Cloudera build an open columnar file format for Hadoop, tied to no engine.",
+        "impact": "With ORC, it became one of the two most popular file formats in data lakes.",
+        "from": [
+          {
+            "id": "dremel",
+            "why": "Supplied a published way to store nested records column by column."
+          }
+        ]
+      },
+      {
+        "id": "presto",
+        "label": "Presto",
+        "era": "Low latency",
+        "lane": "SQL engines",
+        "year": "2013",
+        "idea": "Facebook's engine runs SQL in memory, pipelined across workers, and reads many stores through connectors.",
+        "impact": "Interactive SQL on the lake spread to many companies, and Amazon Athena is built on it.",
+        "from": [
+          {
+            "id": "hive",
+            "why": "Hive was tuned for overall throughput, while analysts needed interactive queries with low latency."
+          }
+        ]
+      },
+      {
+        "id": "dataflow",
+        "label": "Dataflow model",
+        "era": "Low latency",
+        "lane": "Programming models",
+        "year": "2015",
+        "problem": "Events arrive late and out of order, and teams ran separate batch and stream systems.",
+        "idea": "Google windows events by when they happened, using watermarks and triggers to decide when to emit.",
+        "impact": "Apache Beam implements the model, and Flink adopted many of its techniques."
+      },
+      {
+        "id": "flink",
+        "label": "Flink",
+        "era": "Low latency",
+        "lane": "Logs and streams",
+        "year": "2015",
+        "idea": "One engine treats batch as bounded streams and checkpoints state with barriers for exactly-once results.",
+        "impact": "Made exactly-once stateful stream processing practical at large scale.",
+        "from": [
+          {
+            "id": "kafka",
+            "why": "Supplied replayable streams, so a failed job can rewind to its last snapshot."
+          },
+          {
+            "id": "dataflow",
+            "why": "Supplied the event-time model for handling late, out-of-order events."
+          }
+        ]
+      },
+      {
+        "id": "snowflake",
+        "label": "Snowflake",
+        "era": "Cloud lakehouse",
+        "lane": "SQL engines",
+        "year": "2016",
+        "problem": "Shared-nothing warehouses tied storage to compute, so resizing a cluster meant reshuffling its data.",
+        "idea": "Keep tables in cloud object storage and run queries on separate compute clusters that resize on demand.",
+        "impact": "Elastic compute over cloud storage became the norm, and Redshift too moved its data to object storage."
+      },
+      {
+        "id": "tables",
+        "label": "Table formats",
+        "era": "Cloud lakehouse",
+        "lane": "Storage formats",
+        "year": "2017",
+        "idea": "Delta Lake, Iceberg and Hudi record which files form a table in atomically committed metadata.",
+        "impact": "Lakes gained ACID updates and time travel, on one copy of data that many engines read.",
+        "from": [
+          {
+            "id": "parquet",
+            "why": "Lakes kept Parquet files in Hive-style directories, with no atomic commits and slow listing on object stores."
+          }
+        ]
+      },
+      {
+        "id": "lakehouse",
+        "label": "Lakehouse",
+        "era": "Cloud lakehouse",
+        "lane": "SQL engines",
+        "year": "2021",
+        "idea": "Run warehouse-speed SQL and machine learning directly on open table formats in the lake.",
+        "impact": "Snowflake, BigQuery and Redshift now also query Iceberg tables kept in customers' own storage.",
+        "from": [
+          {
+            "id": "tables",
+            "why": "Supplied reliable tables on cheap storage that any engine could read."
+          },
+          {
+            "id": "snowflake",
+            "why": "Teams still copied lake data into a warehouse, where it was often days stale."
+          }
+        ]
+      }
+    ]
+  },
   "parts": [
     {
       "name": "Batch processing",
@@ -11,7 +220,12 @@
           "main": {
             "url": "https://research.google.com/archive/mapreduce-osdi04.pdf",
             "why": "Every batch job re-solved distribution and failures, so MapReduce lets programmers write map and reduce and leaves the rest to the framework."
-          }
+          },
+          "further": [
+            {
+              "url": "https://www.uber.com/blog/ubers-highly-scalable-and-distributed-shuffle-as-a-service/"
+            }
+          ]
         },
         {
           "main": {
@@ -21,12 +235,6 @@
             "source": "UC Berkeley",
             "year": "2012",
             "why": "MapReduce rereads data from disk between iterations, so Spark keeps it in memory as RDDs and rebuilds lost pieces from lineage."
-          }
-        },
-        {
-          "main": {
-            "url": "https://www.uber.com/blog/ubers-highly-scalable-and-distributed-shuffle-as-a-service/",
-            "why": "Spark shuffle writes wore out the SSDs on compute hosts, so Uber moved shuffle data to a dedicated remote shuffle service."
           }
         }
       ]
@@ -48,13 +256,12 @@
           "main": {
             "url": "https://pages.cs.wisc.edu/~akella/CS744/F17/838-CloudPapers/Kafka.pdf",
             "why": "LinkedIn needed one pipeline for huge volumes of activity data, so Kafka brokers store it as a log that consumers pull at their own pace."
-          }
-        },
-        {
-          "main": {
-            "url": "https://www.linkedin.com/blog/engineering/infrastructure/introducing-northguard-and-xinfra",
-            "why": "Whole Kafka partitions grew too heavy to manage at LinkedIn's scale, so Northguard splits each log into small segments."
-          }
+          },
+          "further": [
+            {
+              "url": "https://www.linkedin.com/blog/engineering/infrastructure/introducing-northguard-and-xinfra"
+            }
+          ]
         },
         {
           "main": {
@@ -75,6 +282,16 @@
             "source": "Google",
             "year": "2015",
             "why": "Events arrive late and out of order, so the Dataflow model handles them with windows, watermarks and triggers."
+          }
+        },
+        {
+          "main": {
+            "type": "paper",
+            "title": "Apache Flink: Stream and Batch Processing in a Single Engine",
+            "url": "https://asterios.katsifodimos.com/assets/publications/flink-deb.pdf",
+            "source": "KTH",
+            "year": "2015",
+            "why": "Separate batch and streaming engines duplicate work, so Flink runs both in one engine, treating batch as a bounded stream."
           },
           "further": [
             {
@@ -85,16 +302,6 @@
               "year": "2013"
             }
           ]
-        },
-        {
-          "main": {
-            "type": "paper",
-            "title": "Apache Flink: Stream and Batch Processing in a Single Engine",
-            "url": "https://asterios.katsifodimos.com/assets/publications/flink-deb.pdf",
-            "source": "KTH",
-            "year": "2015",
-            "why": "Separate batch and streaming engines duplicate work, so Flink runs both in one engine, treating batch as a bounded stream."
-          }
         },
         {
           "main": {
@@ -112,13 +319,12 @@
               "url": "https://lamport.azurewebsites.net/pubs/chandy.pdf",
               "year": "1985"
             }
+          ],
+          "further": [
+            {
+              "url": "https://www.uber.com/blog/real-time-exactly-once-ad-event-processing/"
+            }
           ]
-        },
-        {
-          "main": {
-            "url": "https://www.uber.com/blog/real-time-exactly-once-ad-event-processing/",
-            "why": "Ad events must be counted exactly once in near real time, so Uber pairs Flink checkpoints with Kafka transactions."
-          }
         }
       ]
     },
@@ -141,6 +347,13 @@
               "url": "https://www.vldb.org/pvldb/vol13/p3461-melnik.pdf",
               "source": "Google",
               "year": "2020"
+            },
+            {
+              "url": "https://www.uber.com/blog/cost-efficiency-big-data/"
+            },
+            {
+              "url": "https://engineering.atspotify.com/2026/7/indexing-the-data-lake-for-online-point-queries",
+              "why": "Point lookups on a Parquet data lake meant full scans, so Spotify builds an external index that turns each lookup into one small read."
             }
           ]
         },
@@ -152,18 +365,6 @@
             "source": "Ohio State University",
             "year": "2014",
             "why": "Hive scanned whole files, so the ORC format stores column statistics that let a query skip data its filter rules out."
-          }
-        },
-        {
-          "main": {
-            "url": "https://www.uber.com/blog/cost-efficiency-big-data/",
-            "why": "Data lake storage kept growing, so Uber recompressed Parquet with ZSTD and sorted rows so they compress better."
-          }
-        },
-        {
-          "main": {
-            "url": "https://engineering.atspotify.com/2026/7/indexing-the-data-lake-for-online-point-queries",
-            "why": "Point lookups on a Parquet data lake meant full scans, so Spotify builds an external index that turns each lookup into one small read."
           }
         }
       ]
@@ -187,31 +388,27 @@
               "url": "https://www.cidrdb.org/cidr2021/papers/cidr2021_paper17.pdf",
               "source": "Databricks",
               "year": "2021"
+            },
+            {
+              "url": "https://medium.com/airbnb-engineering/upgrading-data-warehouse-infrastructure-at-airbnb-a4e18f09b6d5",
+              "why": "Hive tables overloaded the metastore and depended on S3 listings, so Airbnb moved ingestion to Iceberg tables and Spark 3."
             }
           ]
         },
         {
           "main": {
-            "url": "https://medium.com/airbnb-engineering/upgrading-data-warehouse-infrastructure-at-airbnb-a4e18f09b6d5",
-            "why": "Hive tables overloaded the metastore and depended on S3 listings, so Airbnb moved ingestion to Iceberg tables and Spark 3."
-          }
-        },
-        {
-          "main": {
-            "url": "https://www.uber.com/blog/uber-big-data-platform/",
-            "why": "Rewriting whole partitions kept Uber's lake data stale, so it built Hudi to apply incremental upserts."
+            "url": "https://www.uber.com/blog/apache-hudi-graduation/",
+            "why": "Copy-on-write tables rewrite whole files for each update, so Hudi's merge-on-read appends updates to logs and compacts them later."
           },
           "further": [
             {
-              "url": "https://www.uber.com/blog/apache-hudi-graduation/"
+              "url": "https://www.uber.com/blog/uber-big-data-platform/",
+              "why": "Rewriting whole partitions kept Uber's lake data stale, so it built Hudi to apply incremental upserts."
+            },
+            {
+              "url": "https://www.notion.com/blog/building-and-scaling-notions-data-lake"
             }
           ]
-        },
-        {
-          "main": {
-            "url": "https://www.notion.com/blog/building-and-scaling-notions-data-lake",
-            "why": "Notion's data is mostly updated rather than appended, which made Snowflake costly, so it built a lake on S3 with Hudi."
-          }
         }
       ]
     },
@@ -228,13 +425,12 @@
           "main": {
             "url": "https://info.snowflake.net/rs/252-RFO-227/images/Snowflake_SIGMOD.pdf",
             "why": "Shared-nothing warehouses tie storage to compute, so Snowflake keeps data in S3 and runs queries on separate clusters that scale on their own."
-          }
-        },
-        {
-          "main": {
-            "url": "https://cdn.amazon.science/4b/37/223ac61e450898244a31bed53734/amazon-redshift-re-invented.pdf",
-            "why": "Redshift kept its MPP engine but moved storage to S3 and added serverless, so compute scales apart from data."
-          }
+          },
+          "further": [
+            {
+              "url": "https://cdn.amazon.science/4b/37/223ac61e450898244a31bed53734/amazon-redshift-re-invented.pdf"
+            }
+          ]
         },
         {
           "main": {

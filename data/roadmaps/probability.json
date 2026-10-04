@@ -1,0 +1,107 @@
+{
+  "id": "probability",
+  "title": "Probability",
+  "before": [],
+  "next": ["machine-learning"],
+  "parts": [
+    {
+      "name": "Foundations",
+      "steps": [
+        {
+          "main": {
+            "type": "course",
+            "title": "Harvard Statistics 110: Probability",
+            "url": "https://stat110.hsites.harvard.edu/",
+            "source": "Harvard",
+            "year": "2013",
+            "why": "Counting and conditional probability, random variables and expectation, continuous and joint distributions, conditional expectation, limit theorems and Markov chains. In English.",
+            "links": [
+              {
+                "label": "Book",
+                "url": "http://probabilitybook.net"
+              },
+              {
+                "label": "Videos",
+                "url": "https://www.youtube.com/playlist?list=PL2SOU6wwxB0uwwH80KTQ6ht66KWxbzTIo"
+              }
+            ]
+          },
+          "alternative": [
+            {
+              "type": "course",
+              "title": "MIT RES.6-012: Introduction to Probability",
+              "url": "https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/",
+              "source": "MIT",
+              "year": "2018"
+            },
+            {
+              "type": "course",
+              "title": "NTHU MATH 2810: Probability",
+              "url": "http://www.stat.nthu.edu.tw/~swcheng/Teaching/math2810/index.php",
+              "year": "2026"
+            }
+          ]
+        },
+        {
+          "main": {
+            "type": "course",
+            "title": "Information Theory, Pattern Recognition, and Neural Networks",
+            "url": "http://www.inference.org.uk/itprnn_lectures/",
+            "source": "University of Cambridge",
+            "year": "2012",
+            "why": "Entropy, source and channel coding, Bayesian inference and Monte Carlo methods, tied to the models machine learning uses. In English.",
+            "links": [
+              {
+                "label": "Book",
+                "url": "https://www.inference.org.uk/itila/book.html"
+              },
+              {
+                "label": "Videos",
+                "url": "https://www.youtube.com/playlist?list=PLruBu5BI5n4aFpG32iMbdWoRVAA-Vcso6"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Statistical inference",
+      "steps": [
+        {
+          "main": {
+            "type": "course",
+            "title": "UC Berkeley Stat 135: Concepts of Statistics",
+            "url": "https://stat135.berkeley.edu/spring-2026/",
+            "source": "UC Berkeley",
+            "year": "2026",
+            "why": "Method of moments and maximum likelihood with their asymptotics, Cramer-Rao and sufficiency, hypothesis tests, chi-square and two-sample tests, and linear regression. In English."
+          },
+          "alternative": [
+            {
+              "type": "course",
+              "title": "MIT 18.05: Introduction to Probability and Statistics",
+              "url": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/",
+              "source": "MIT",
+              "year": "2022"
+            },
+            {
+              "type": "course",
+              "title": "NTHU MATH 2820: Statistics",
+              "url": "http://www.stat.nthu.edu.tw/~swcheng/Teaching/math2820/index.php",
+              "year": "2026"
+            }
+          ],
+          "further": [
+            {
+              "type": "course",
+              "title": "UC Berkeley Stat 210A: Theoretical Statistics",
+              "url": "https://stat210a.berkeley.edu/fall-2025/",
+              "source": "UC Berkeley",
+              "year": "2025"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

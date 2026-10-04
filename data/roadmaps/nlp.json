@@ -243,7 +243,13 @@
             "url": "https://www.youtube.com/playlist?list=PLoROMvodv4rOaMFbaqxPDoLWjDaRAdP9D",
             "source": "Stanford",
             "year": "2024",
-            "why": "Word vectors, parsing, language models, translation, Transformers and pretraining. In English."
+            "why": "Word vectors, parsing, language models, translation, Transformers and pretraining. In English.",
+            "links": [
+              {
+                "label": "Website",
+                "url": "https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1244/"
+              }
+            ]
           },
           "alternative": [
             {
@@ -263,22 +269,22 @@
         {
           "main": {
             "type": "paper",
-            "title": "Term Weighting Approaches in Automatic Text Retrieval",
-            "url": "https://ecommons.cornell.edu/server/api/core/bitstreams/fc18789c-6a03-48e6-8226-7dba0ce94e32/content",
-            "source": "Cornell",
-            "year": "1987",
-            "why": "Not every word matters equally for retrieval, so TF-IDF weights each term by its frequency in the document and its rarity in the collection."
-          }
-        },
-        {
-          "main": {
-            "type": "paper",
             "title": "Simple, Proven Approaches to Text Retrieval",
             "url": "https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-356.pdf",
             "source": "University of Cambridge",
             "year": "1994",
             "why": "Raw term counts favor long documents, so BM25 combines IDF with saturating term frequency and length normalization, still Elasticsearch's default."
-          }
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "Term Weighting Approaches in Automatic Text Retrieval",
+              "url": "https://ecommons.cornell.edu/server/api/core/bitstreams/fc18789c-6a03-48e6-8226-7dba0ce94e32/content",
+              "source": "Cornell",
+              "year": "1987",
+              "why": "Not every word matters equally for retrieval, so TF-IDF weights each term by its frequency in the document and its rarity in the collection."
+            }
+          ]
         },
         {
           "main": {
@@ -420,17 +426,17 @@
             "source": "OpenAI",
             "year": "2019",
             "why": "GPT-2 shows that a large language model trained on web text handles many tasks zero-shot, without task-specific fine-tuning."
-          }
-        },
-        {
-          "main": {
-            "type": "paper",
-            "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer",
-            "url": "https://jmlr.org/papers/volume21/20-074/20-074.pdf",
-            "source": "Google",
-            "year": "2019",
-            "why": "Transfer learning methods were hard to compare, so T5 casts every task as text in, text out and tests pretraining choices one at a time."
-          }
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer",
+              "url": "https://jmlr.org/papers/volume21/20-074/20-074.pdf",
+              "source": "Google",
+              "year": "2019",
+              "why": "Transfer learning methods were hard to compare, so T5 casts every task as text in, text out and tests pretraining choices one at a time."
+            }
+          ]
         }
       ]
     },
@@ -470,22 +476,26 @@
         {
           "main": {
             "type": "paper",
-            "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
-            "url": "https://aclanthology.org/D19-1410.pdf",
-            "source": "TU Darmstadt",
-            "year": "2019",
-            "why": "Comparing sentence pairs with BERT is too slow for search, so Sentence-BERT embeds each sentence once and compares embeddings by cosine."
-          }
-        },
-        {
-          "main": {
-            "type": "paper",
             "title": "Dense Passage Retrieval for Open-Domain Question Answering",
             "url": "https://aclanthology.org/2020.emnlp-main.550.pdf",
             "source": "Meta",
             "year": "2020",
             "why": "Term matching misses paraphrases, so DPR trains a dual encoder on question-passage pairs and retrieves by embedding similarity."
-          }
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+              "url": "https://aclanthology.org/D19-1410.pdf",
+              "source": "TU Darmstadt",
+              "year": "2019",
+              "why": "Comparing sentence pairs with BERT is too slow for search, so Sentence-BERT embeds each sentence once and compares embeddings by cosine."
+            },
+            {
+              "url": "https://engineering.atspotify.com/2022/3/introducing-natural-language-search-for-podcast-episodes",
+              "why": "Term matching failed on natural-language podcast queries, so Spotify retrieves episodes with a fine-tuned multilingual sentence encoder."
+            }
+          ]
         },
         {
           "main": {
@@ -495,12 +505,6 @@
             "source": "Meta",
             "year": "2020",
             "why": "Knowledge stored in model weights is hard to update, so RAG retrieves passages with DPR and has BART write answers from them."
-          }
-        },
-        {
-          "main": {
-            "url": "https://engineering.atspotify.com/2022/3/introducing-natural-language-search-for-podcast-episodes",
-            "why": "Term matching failed on natural-language podcast queries, so Spotify retrieves episodes with a fine-tuned multilingual sentence encoder."
           }
         }
       ]

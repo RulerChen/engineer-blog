@@ -2,7 +2,213 @@
   "id": "computer-architecture",
   "title": "Computer architecture",
   "before": ["operating-systems"],
-  "next": ["compilers"],
+  "next": ["compilers", "parallel-computing"],
+  "evolution": {
+    "eras": [
+      {
+        "name": "Early computers",
+        "text": "Stored programs, compatible families",
+        "background": "The first modern computers kept their programs in memory alongside data. IBM then defined one instruction set for a whole family of machines. Its fastest models introduced caches and out-of-order execution."
+      },
+      {
+        "name": "Microprocessors",
+        "text": "One chip, faster every year",
+        "background": "Integrated circuits put a whole processor on one chip, and Moore's law kept doubling the transistors on it. Simple RISC instruction sets let those chips pipeline well. Growing transistor budgets went into caches, branch prediction and out-of-order execution."
+      },
+      {
+        "name": "Multicore",
+        "text": "Many cores per chip",
+        "background": "Faster clocks and deeper speculation made chips too hot and wasted energy on discarded work. Vendors put several cores on each chip instead, and GPUs opened their many simple cores to general programs. Finding the parallelism became the job of software."
+      },
+      {
+        "name": "Specialization",
+        "text": "Chips built for one domain",
+        "background": "With Moore's law slowing and Dennard scaling over, general-purpose chips gained only a few percent a year. Architects turned to chips built for one domain and to open instruction sets. RowHammer and Spectre exposed the security cost of density and speculation."
+      }
+    ],
+    "lanes": ["Instruction sets", "Core design", "Memory", "Parallel chips"],
+    "nodes": [
+      {
+        "id": "stored",
+        "label": "Stored program",
+        "era": "Early computers",
+        "lane": "Instruction sets",
+        "year": "1948",
+        "problem": "ENIAC's programs were set up by hand on plugboards and switches.",
+        "idea": "Keep instructions in read-write memory beside the data, as Manchester's Baby first did.",
+        "impact": "Most early computers drew on von Neumann's EDVAC report, and the idea still defines a modern computer."
+      },
+      {
+        "id": "s360",
+        "label": "System/360",
+        "era": "Early computers",
+        "lane": "Instruction sets",
+        "year": "1964",
+        "idea": "IBM runs one instruction set across a family of models, cheap to fast, using microcode.",
+        "impact": "It defined architecture as what programmers see, separate from how each model is built.",
+        "from": [
+          {
+            "id": "stored",
+            "why": "Each machine line had its own instruction set, and IBM alone had four incompatible lines."
+          }
+        ]
+      },
+      {
+        "id": "tomasulo",
+        "label": "Tomasulo",
+        "era": "Early computers",
+        "lane": "Core design",
+        "year": "1967",
+        "problem": "Fast arithmetic units sat idle while instructions waited on results from earlier ones.",
+        "idea": "IBM's Model 91 tags pending results, so each instruction starts as soon as its operands arrive.",
+        "impact": "Its tagging scheme later made out-of-order processors possible."
+      },
+      {
+        "id": "cache",
+        "label": "Cache",
+        "era": "Early computers",
+        "lane": "Memory",
+        "year": "1968",
+        "problem": "Main memory large enough for programs was far slower than the processor.",
+        "idea": "IBM's Model 85 keeps recently used memory in a small, fast cache that programs cannot see.",
+        "impact": "Programs ran unchanged but faster, and CPUs today use several levels of cache."
+      },
+      {
+        "id": "risc",
+        "label": "RISC",
+        "era": "Microprocessors",
+        "lane": "Instruction sets",
+        "year": "1980",
+        "idea": "Patterson and Ditzel propose a few simple instructions one chip can run fast, with compilers doing the rest.",
+        "impact": "Berkeley's RISC-I and Stanford's MIPS proved it, and nearly all processors today are RISC.",
+        "from": [
+          {
+            "id": "s360",
+            "why": "Microcoded instruction sets kept growing, yet compilers used only a few simple instructions."
+          }
+        ]
+      },
+      {
+        "id": "mesi",
+        "label": "MESI",
+        "era": "Microprocessors",
+        "lane": "Memory",
+        "year": "1984",
+        "idea": "Papamarcos and Patel mark each cached block exclusive or shared and invalidate other copies only when shared.",
+        "impact": "Its four states were later named MESI, and almost all commercial protocols keep its exclusive state.",
+        "from": [
+          {
+            "id": "cache",
+            "why": "With a private cache per processor, one could change its copy while others kept stale ones."
+          }
+        ]
+      },
+      {
+        "id": "ppro",
+        "label": "Pentium Pro",
+        "era": "Microprocessors",
+        "lane": "Core design",
+        "year": "1995",
+        "idea": "Intel's Pentium Pro decodes x86 into micro-ops and runs them out of order, speculating past branches.",
+        "impact": "Intel and AMD closed the gap with RISC, and most fast processors still work this way.",
+        "from": [
+          {
+            "id": "tomasulo",
+            "why": "Supplied out-of-order scheduling, which growing transistor budgets could now fit on one chip."
+          },
+          {
+            "id": "risc",
+            "why": "Simple RISC instructions pipelined well, while complex x86 instructions did not."
+          }
+        ]
+      },
+      {
+        "id": "multicore",
+        "label": "Multicore",
+        "era": "Multicore",
+        "lane": "Parallel chips",
+        "year": "2005",
+        "idea": "Intel and AMD ship dual-core processors, adding cores instead of raising clock rates.",
+        "impact": "Software now had to find the parallelism, and Amdahl's law capped the gains.",
+        "from": [
+          {
+            "id": "ppro",
+            "why": "Higher clock rates and deeper speculation pushed power and heat past what chips could shed."
+          }
+        ]
+      },
+      {
+        "id": "cuda",
+        "label": "CUDA",
+        "era": "Multicore",
+        "lane": "Parallel chips",
+        "year": "2007",
+        "idea": "NVIDIA's CUDA runs C programs as many threads, grouped into blocks that share memory.",
+        "impact": "GPUs became general parallel processors, and AlexNet was trained on them with CUDA code.",
+        "from": [
+          {
+            "id": "multicore",
+            "why": "Chips were now parallel and GPUs had the most cores, but they were programmed through awkward graphics APIs."
+          }
+        ]
+      },
+      {
+        "id": "riscv",
+        "label": "RISC-V",
+        "era": "Specialization",
+        "lane": "Instruction sets",
+        "year": "2010",
+        "idea": "Berkeley researchers design an open, royalty-free instruction set with a small base and optional extensions.",
+        "impact": "A nonprofit foundation now runs it, and anyone can build RISC-V cores without fees.",
+        "from": [
+          {
+            "id": "risc",
+            "why": "Successful RISC sets such as ARM required licenses that shut out academia and small companies."
+          }
+        ]
+      },
+      {
+        "id": "rowhammer",
+        "label": "RowHammer",
+        "era": "Specialization",
+        "lane": "Memory",
+        "year": "2014",
+        "problem": "DRAM cells packed ever closer began to leak charge into their neighbors.",
+        "idea": "CMU and Intel researchers show that activating one row repeatedly flips bits in nearby rows of most modules.",
+        "impact": "Google's Project Zero turned it into a kernel exploit, so memory reliability became a security issue."
+      },
+      {
+        "id": "tpu",
+        "label": "TPU",
+        "era": "Specialization",
+        "lane": "Parallel chips",
+        "year": "2017",
+        "idea": "Google's TPU trades caches and speculation for a large matrix unit and software-managed memory.",
+        "impact": "It served Google search, translation and AlphaGo, and made the case for domain-specific chips.",
+        "from": [
+          {
+            "id": "cuda",
+            "why": "CPUs and GPUs spent hardware on average throughput, while serving neural networks needs fast, predictable responses."
+          }
+        ]
+      },
+      {
+        "id": "spectre",
+        "label": "Spectre",
+        "era": "Specialization",
+        "lane": "Core design",
+        "year": "2018",
+        "idea": "Mistrain the branch predictor so a victim speculatively reads secrets, then recover them through cache timing.",
+        "impact": "Most fast CPUs were affected, and kernels, compilers and chips added defenses that cost speed.",
+        "from": [
+          {
+            "id": "ppro",
+            "why": "Speculative work was assumed invisible once discarded, yet it left traces in the caches."
+          }
+        ]
+      }
+    ]
+  },
   "parts": [
     {
       "name": "Foundations",
@@ -25,22 +231,16 @@
             "source": "Stanford",
             "year": "2019",
             "why": "How instruction sets went from microcode to RISC, why general-purpose speedups stalled, and why domain-specific chips and open ISAs come next."
-          }
-        }
-      ]
-    },
-    {
-      "name": "Instruction sets",
-      "steps": [
-        {
-          "main": {
-            "type": "paper",
-            "title": "The Case for the Reduced Instruction Set Computer",
-            "url": "https://dl.acm.org/doi/10.1145/641914.641917",
-            "source": "UC Berkeley",
-            "year": "1980",
-            "why": "Compilers used little of ever larger instruction sets, whose complexity slowed single-chip designs, so RISC keeps a few simple instructions."
-          }
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "The Case for the Reduced Instruction Set Computer",
+              "url": "https://dl.acm.org/doi/10.1145/641914.641917",
+              "source": "UC Berkeley",
+              "year": "1980"
+            }
+          ]
         }
       ]
     },
@@ -121,9 +321,6 @@
               "url": "https://www.uber.com/blog/adopting-arm-at-scale-transitioning-to-a-multi-architecture-environment/",
               "source": "Uber",
               "year": "2025"
-            },
-            {
-              "url": "https://blog.cloudflare.com/getting-to-the-core/"
             }
           ]
         }
@@ -140,7 +337,16 @@
             "source": "UIUC",
             "year": "1984",
             "why": "Broadcasting every cache write saturated the shared bus, so the protocol later named MESI marks blocks exclusive or shared and invalidates only for shared ones."
-          }
+          },
+          "further": [
+            {
+              "type": "article",
+              "title": "Seeing through hardware counters: a journey to threefold performance increase",
+              "url": "https://netflixtechblog.com/seeing-through-hardware-counters-a-journey-to-threefold-performance-increase-2721924a2822",
+              "source": "Netflix",
+              "year": "2022"
+            }
+          ]
         },
         {
           "main": {
@@ -168,11 +374,7 @@
           },
           "further": [
             {
-              "type": "article",
-              "title": "Seeing through hardware counters: a journey to threefold performance increase",
-              "url": "https://netflixtechblog.com/seeing-through-hardware-counters-a-journey-to-threefold-performance-increase-2721924a2822",
-              "source": "Netflix",
-              "year": "2022"
+              "url": "https://blog.cloudflare.com/getting-to-the-core/"
             }
           ]
         }
@@ -181,16 +383,6 @@
     {
       "name": "Accelerators",
       "steps": [
-        {
-          "main": {
-            "type": "paper",
-            "title": "Scalable Parallel Programming with CUDA",
-            "url": "https://queue.acm.org/detail.cfm?id=1365500",
-            "source": "NVIDIA",
-            "year": "2008",
-            "why": "GPUs had become many-core processors, so CUDA exposes them through thread blocks, shared memory and barriers that scale across any number of cores."
-          }
-        },
         {
           "main": {
             "type": "paper",

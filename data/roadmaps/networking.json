@@ -3,6 +3,217 @@
   "title": "Networking",
   "before": [],
   "next": ["distributed-systems", "security"],
+  "evolution": {
+    "eras": [
+      {
+        "name": "Early networks",
+        "text": "Packets instead of circuits",
+        "background": "Telephone networks reserved a circuit for each call, a poor fit for bursty computer traffic. Packet switching shared links instead, and ARPANET proved it in daily use. The next problem was joining many different packet networks into one."
+      },
+      {
+        "name": "Internet growth",
+        "text": "Fixing what growth broke",
+        "background": "After the switch to TCP/IP, NSFNET opened the Internet to the whole academic community, and it grew fast. Its central host table, TCP's sending behavior and tree-shaped exterior routing all broke and were redesigned."
+      },
+      {
+        "name": "The Web",
+        "text": "The Internet goes public",
+        "background": "The Web gave the Internet an application anyone could use, and its backbone passed to commercial networks. Popular sites that served everyone from one place began to buckle under crowds and distance."
+      },
+      {
+        "name": "Cloud fabrics",
+        "text": "Commodity switches, central control",
+        "background": "Cloud and web companies built huge datacenters and private WANs that only they operated. Trees of costly routers could not give servers full bandwidth to each other. Closed routers also blocked new ways to run a network."
+      },
+      {
+        "name": "New transports",
+        "text": "Providers redesign transport",
+        "background": "Controlling their servers, and often the clients too, big providers redesigned transport themselves. They rebuilt congestion control for datacenters and the WAN, and moved web transport into user space."
+      },
+      {
+        "name": "AI clusters",
+        "text": "Networks built for GPU training",
+        "background": "Training one large model ties a huge number of GPUs into one job that trades data in bursts. Operators now build separate networks just for this traffic. Its few, huge flows strain designs made for many small ones."
+      }
+    ],
+    "lanes": ["Applications", "Transport", "Routing", "Datacenters"],
+    "nodes": [
+      {
+        "id": "packet",
+        "label": "Packet switching",
+        "era": "Early networks",
+        "lane": "Routing",
+        "year": "1964",
+        "problem": "Phone circuits sat idle between bursts of computer traffic, and central switches were easy to knock out.",
+        "idea": "Baran and Davies independently proposed small blocks of data that share links and are routed hop by hop.",
+        "impact": "ARPANET adopted it, and that network grew into the Internet."
+      },
+      {
+        "id": "tcpip",
+        "label": "TCP/IP",
+        "era": "Early networks",
+        "lane": "Transport",
+        "year": "1974",
+        "idea": "Cerf and Kahn join networks through simple gateways and leave reliability to the end hosts.",
+        "impact": "Later split into TCP and IP, it replaced ARPANET's own protocol in a single flag-day switch.",
+        "from": [
+          {
+            "id": "packet",
+            "why": "Packet networks worked, but each was built differently and they could not exchange traffic."
+          }
+        ]
+      },
+      {
+        "id": "dns",
+        "label": "DNS",
+        "era": "Internet growth",
+        "lane": "Applications",
+        "year": "1983",
+        "idea": "Mockapetris splits the name space into delegated zones held by many servers, with caching resolvers in front.",
+        "impact": "Became the Internet's naming system, and later the way CDNs steer users to servers.",
+        "from": [
+          {
+            "id": "tcpip",
+            "why": "Many independently run networks joined, and one central host table could no longer keep up."
+          }
+        ]
+      },
+      {
+        "id": "cc",
+        "label": "Congestion control",
+        "era": "Internet growth",
+        "lane": "Transport",
+        "year": "1988",
+        "idea": "Jacobson's slow start and additive-increase, multiplicative-decrease windows treat packet loss as the congestion signal.",
+        "impact": "Became mandatory for every TCP, and loss-based control stayed the norm for decades.",
+        "from": [
+          {
+            "id": "tcpip",
+            "why": "TCP implementations kept sending into a full network, and throughput collapsed under load."
+          }
+        ]
+      },
+      {
+        "id": "bgp",
+        "label": "BGP",
+        "era": "Internet growth",
+        "lane": "Routing",
+        "year": "1989",
+        "problem": "EGP assumed networks formed a tree around one core, but NSFNET had grown into a mesh.",
+        "idea": "Routers exchange full paths of autonomous systems, so they can prune loops and apply policy.",
+        "impact": "BGP-4 added classless addressing and still ties the Internet's independent networks together."
+      },
+      {
+        "id": "web",
+        "label": "Web",
+        "era": "The Web",
+        "lane": "Applications",
+        "year": "1991",
+        "problem": "Documents sat on many kinds of computers, with no common way to link or reach them.",
+        "idea": "Berners-Lee links hypertext pages across servers by URL, fetched over HTTP and read in a browser.",
+        "impact": "Graphical browsers such as Mosaic brought the Internet to the general public."
+      },
+      {
+        "id": "cdn",
+        "label": "CDN",
+        "era": "The Web",
+        "lane": "Applications",
+        "year": "1999",
+        "idea": "Akamai places caches inside many networks and uses DNS to send each user to a nearby one.",
+        "impact": "Content moved to the edge of the Internet, and Akamai alone carried a large share of web traffic.",
+        "from": [
+          {
+            "id": "web",
+            "why": "Popular sites served everyone from one place, so crowds and distance overwhelmed them."
+          }
+        ]
+      },
+      {
+        "id": "fattree",
+        "label": "Fat-tree",
+        "era": "Cloud fabrics",
+        "lane": "Datacenters",
+        "year": "2008",
+        "problem": "Datacenter networks were trees of ever pricier switches, yet still could not give every server full bandwidth.",
+        "idea": "Wire many cheap, identical switches into a Clos topology with many equal paths between servers.",
+        "impact": "Clos fabrics of commodity switches became standard, as at Google and Facebook."
+      },
+      {
+        "id": "openflow",
+        "label": "OpenFlow",
+        "era": "Cloud fabrics",
+        "lane": "Routing",
+        "year": "2008",
+        "problem": "Routers were closed boxes, so new ways to control a network could not be tried on real traffic.",
+        "idea": "A standard interface lets a central controller program the flow table in every switch.",
+        "impact": "Google's B4 WAN ran on it, with central traffic engineering driving links near full."
+      },
+      {
+        "id": "dctcp",
+        "label": "DCTCP",
+        "era": "New transports",
+        "lane": "Datacenters",
+        "year": "2010",
+        "idea": "Switches mark packets with ECN early, and senders slow down in proportion to the marks.",
+        "impact": "Windows Server, Linux and FreeBSD ship it, keeping datacenter queues short.",
+        "from": [
+          {
+            "id": "cc",
+            "why": "Loss-based TCP kept switch queues full, so short query replies waited behind bulk transfers."
+          },
+          {
+            "id": "fattree",
+            "why": "Its commodity switches had shallow buffers that bursts of replies quickly overflowed."
+          }
+        ]
+      },
+      {
+        "id": "quic",
+        "label": "QUIC",
+        "era": "New transports",
+        "lane": "Transport",
+        "year": "2017",
+        "idea": "Google runs an encrypted, multiplexed transport over UDP in user space, so it can change without OS upgrades.",
+        "impact": "The IETF standardized it, and HTTP/3 now runs on top of it.",
+        "from": [
+          {
+            "id": "cdn",
+            "why": "Edge servers cut distance, but new connections still waited on handshakes, and one loss stalled every stream."
+          }
+        ]
+      },
+      {
+        "id": "bbr",
+        "label": "BBR",
+        "era": "New transports",
+        "lane": "Transport",
+        "year": "2016",
+        "idea": "Measure bottleneck bandwidth and minimum round-trip time, then pace sending to match them.",
+        "impact": "Google switched B4 to it and began deploying it on web servers, changing only the sender.",
+        "from": [
+          {
+            "id": "cc",
+            "why": "Treating loss as congestion filled deep buffers and starved paths with shallow ones."
+          }
+        ]
+      },
+      {
+        "id": "roce",
+        "label": "RoCE for AI",
+        "era": "AI clusters",
+        "lane": "Datacenters",
+        "year": "2024",
+        "idea": "Meta builds a separate RDMA-over-Ethernet network for GPUs, with routing that spreads training's few huge flows evenly.",
+        "impact": "Ethernet now carries large-model training, and AI training is reshaping datacenter network design.",
+        "from": [
+          {
+            "id": "dctcp",
+            "why": "It ran in host software at high CPU cost, and its RDMA descendant DCQCN proved hard to tune."
+          }
+        ]
+      }
+    ]
+  },
   "parts": [
     {
       "name": "Foundations",
@@ -14,22 +225,13 @@
             "url": "https://sp25.cs168.io/",
             "source": "UC Berkeley",
             "year": "2025",
-            "why": "Layers, routing and BGP, TCP and congestion control, DNS and HTTP, then datacenters and SDN. In English."
-          }
-        }
-      ]
-    },
-    {
-      "name": "Architecture",
-      "steps": [
-        {
-          "main": {
-            "type": "paper",
-            "title": "End-to-End Arguments in System Design",
-            "url": "https://web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf",
-            "source": "MIT",
-            "year": "1984",
-            "why": "Why reliability and correctness belong at the endpoints, the argument behind a simple network core."
+            "why": "Layers, routing and BGP, TCP and congestion control, DNS and HTTP, then datacenters and SDN. In English.",
+            "links": [
+              {
+                "label": "Videos",
+                "url": "https://www.youtube.com/playlist?list=PL0_XloRC3MWs5MylcqPFEeTCx0RQocrD7"
+              }
+            ]
           }
         },
         {
@@ -40,23 +242,23 @@
             "source": "MIT",
             "year": "1988",
             "why": "The Internet's goals in priority order, and how that order produced datagrams, TCP/IP layering and weak accounting."
-          }
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "End-to-End Arguments in System Design",
+              "url": "https://web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf",
+              "source": "MIT",
+              "year": "1984",
+              "why": "Why reliability and correctness belong at the endpoints, the argument behind a simple network core."
+            }
+          ]
         }
       ]
     },
     {
       "name": "Application layer",
       "steps": [
-        {
-          "main": {
-            "type": "paper",
-            "title": "Development of the Domain Name System",
-            "url": "https://dl.acm.org/doi/10.1145/52325.52338",
-            "source": "USC",
-            "year": "1988",
-            "why": "A single hosts file could not keep up with the growing Internet, so DNS delegates names to a hierarchy of zones served with caching resolvers."
-          }
-        },
         {
           "main": {
             "type": "article",
@@ -74,19 +276,19 @@
       "steps": [
         {
           "main": {
-            "type": "paper",
-            "title": "Congestion Avoidance and Control",
-            "url": "https://ee.lbl.gov/papers/congavoid.pdf",
-            "source": "UC Berkeley",
-            "year": "1988",
-            "why": "After the Internet's congestion collapse, slow start, AIMD and RTT estimation made TCP back off when the network fills."
-          }
-        },
-        {
-          "main": {
             "url": "https://research.google/pubs/bbr-congestion-based-congestion-control/",
             "why": "Loss is a poor congestion signal on deep buffers, so BBR paces to measured bandwidth and RTT instead."
-          }
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "Congestion Avoidance and Control",
+              "url": "https://ee.lbl.gov/papers/congavoid.pdf",
+              "source": "UC Berkeley",
+              "year": "1988",
+              "why": "After the Internet's congestion collapse, slow start, AIMD and RTT estimation made TCP back off when the network fills."
+            }
+          ]
         },
         {
           "main": {
@@ -96,17 +298,16 @@
             "source": "Google",
             "year": "2017",
             "why": "TCP and TLS cost extra round trips and stall every stream on a loss, so Google's pre-IETF QUIC runs transport and crypto over UDP in userspace."
-          }
-        },
-        {
-          "main": {
-            "type": "article",
-            "title": "How Facebook is bringing QUIC to billions",
-            "url": "https://engineering.fb.com/2020/10/21/networking-traffic/how-facebook-is-bringing-quic-to-billions/",
-            "source": "Meta",
-            "year": "2020",
-            "why": "Meta moved its apps to IETF QUIC on its own implementation, and had to retune app heuristics that assumed TCP."
-          }
+          },
+          "further": [
+            {
+              "type": "article",
+              "title": "How Facebook is bringing QUIC to billions",
+              "url": "https://engineering.fb.com/2020/10/21/networking-traffic/how-facebook-is-bringing-quic-to-billions/",
+              "source": "Meta",
+              "year": "2020"
+            }
+          ]
         }
       ]
     },
@@ -125,19 +326,18 @@
         },
         {
           "main": {
-            "url": "https://blog.cloudflare.com/going-bgp-zombie-hunting/",
-            "why": "Why withdrawn BGP routes linger as zombies during path hunting, and why withdrawing a more-specific prefix makes it worse."
-          }
-        },
-        {
-          "main": {
             "type": "article",
             "title": "More details about the October 4 outage",
             "url": "https://engineering.fb.com/2021/10/05/networking-traffic/outage-details/",
             "source": "Meta",
             "year": "2021",
             "why": "A backbone command cut every datacenter link, DNS servers withdrew their BGP routes, and Facebook vanished from the Internet."
-          }
+          },
+          "further": [
+            {
+              "url": "https://blog.cloudflare.com/going-bgp-zombie-hunting/"
+            }
+          ]
         }
       ]
     },
@@ -176,19 +376,19 @@
         },
         {
           "main": {
-            "type": "paper",
-            "title": "Empowering Azure Storage with RDMA",
-            "url": "https://www.usenix.org/system/files/nsdi23-bai.pdf",
-            "source": "Microsoft",
-            "year": "2023",
-            "why": "Azure runs storage traffic over RDMA across whole regions to save CPU, which took PFC watchdogs, DCQCN tuning across different NICs and long-haul support."
-          }
-        },
-        {
-          "main": {
             "url": "https://engineering.fb.com/2024/08/05/data-center-engineering/roce-network-distributed-ai-training-at-scale/",
-            "why": "AI training sends few, huge flows that ECMP spreads badly, so Meta's RoCE fabric splits each flow over more queue pairs and uses PFC without DCQCN."
-          }
+            "why": "Training's few huge flows defeat ECMP hashing, so Meta built a separate RoCE backend, spread flows over more queue pairs and let receivers admit traffic instead of DCQCN."
+          },
+          "further": [
+            {
+              "type": "paper",
+              "title": "Empowering Azure Storage with RDMA",
+              "url": "https://www.usenix.org/system/files/nsdi23-bai.pdf",
+              "source": "Microsoft",
+              "year": "2023",
+              "why": "Azure runs storage traffic over RDMA across whole regions to save CPU, which took PFC watchdogs, DCQCN tuning across different NICs and long-haul support."
+            }
+          ]
         }
       ]
     },
@@ -207,18 +407,15 @@
               "url": "https://dl.acm.org/doi/10.1145/3230543.3230545",
               "source": "Google",
               "year": "2018"
+            },
+            {
+              "type": "paper",
+              "title": "Orion: Google's Software-Defined Networking Control Plane",
+              "url": "https://www.usenix.org/system/files/nsdi21-ferguson.pdf",
+              "source": "Google",
+              "year": "2021"
             }
           ]
-        },
-        {
-          "main": {
-            "type": "paper",
-            "title": "Orion: Google's Software-Defined Networking Control Plane",
-            "url": "https://www.usenix.org/system/files/nsdi21-ferguson.pdf",
-            "source": "Google",
-            "year": "2021",
-            "why": "To run Google's datacenter and WAN networks from software reliably, Orion splits the control plane into microservices that share state through a pub-sub database."
-          }
         }
       ]
     },
