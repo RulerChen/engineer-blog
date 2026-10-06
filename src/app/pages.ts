@@ -30,7 +30,6 @@ export function openPage(page: Page): void {
   if (page === currentPage.value) return;
   history.pushState(null, "", PAGES[page].path);
   show(page);
-  window.scrollTo({ top: 0 });
 }
 
 window.addEventListener("popstate", () => show(pageAt(window.location.pathname)));

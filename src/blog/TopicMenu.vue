@@ -59,7 +59,10 @@ const sections = computed(() => {
     <input v-model="search" type="text" placeholder="Find a topic…" autofocus />
     <div class="filter-menu-mode">
       <span class="mode-label">Match</span>
-      <div class="mode-toggle">
+      <div
+        class="mode-toggle segmented"
+        :style="{ '--count': MODES.length, '--index': MODES.findIndex((m) => m.mode === mode) }"
+      >
         <button
           v-for="option in MODES"
           :key="option.mode"

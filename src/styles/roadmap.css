@@ -40,9 +40,13 @@
   cursor: pointer;
   outline: none;
 }
-.tm-node.built:hover rect,
 .tm-node.built:focus-visible rect {
   stroke-width: 2.5;
+}
+@media (hover: hover) {
+  .tm-node.built:hover rect {
+    stroke-width: 2.5;
+  }
 }
 .tm-title {
   fill: var(--chip-ink);
@@ -55,12 +59,14 @@
 }
 .rm-back {
   align-self: flex-start;
-  font-size: 13px;
+  font-size: var(--text-md);
   font-weight: 800;
   color: var(--muted);
 }
-.rm-back:hover {
-  color: var(--accent);
+@media (hover: hover) {
+  .rm-back:hover {
+    color: var(--accent);
+  }
 }
 .rm-view {
   display: flex;
@@ -75,7 +81,8 @@
 }
 .rm-top h2 {
   margin: 0;
-  font-size: 26px;
+  font-size: var(--text-3xl);
+  letter-spacing: -0.015em;
   font-weight: 800;
   line-height: 1.15;
 }
@@ -84,7 +91,7 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 6px 8px;
-  font-size: 12.5px;
+  font-size: var(--text-sm);
   color: var(--muted);
 }
 .rm-rel-row b {
@@ -101,13 +108,13 @@
   border-radius: 999px;
   background: transparent;
   color: var(--chip-ink);
-  font-size: 12px;
+  font-size: var(--text-sm);
   font-weight: 700;
   line-height: 1.6;
 }
 .rm-rel i {
   font-style: normal;
-  font-size: 10.5px;
+  font-size: var(--text-xs);
   color: var(--muted);
 }
 .rm-rel.built {
@@ -145,7 +152,7 @@
   border-radius: 14px 14px 0 0;
 }
 .rm-evo-label {
-  font-size: 12px;
+  font-size: var(--text-sm);
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -182,10 +189,14 @@
 .evo-era-hit {
   fill: transparent;
 }
-.evo-era:hover .evo-era-name,
 .evo-era:focus-visible .evo-era-name,
 .evo-era.active .evo-era-name {
   fill: var(--accent);
+}
+@media (hover: hover) {
+  .evo-era:hover .evo-era-name {
+    fill: var(--accent);
+  }
 }
 .evo-era.active .evo-era-hit {
   fill: color-mix(in srgb, var(--accent) 10%, transparent);
@@ -237,9 +248,13 @@
   stroke: color-mix(in srgb, var(--accent) 30%, var(--line));
   stroke-width: 1.5;
 }
-.evo-node:hover rect:first-child,
 .evo-node:focus-visible rect:first-child {
   stroke: var(--accent);
+}
+@media (hover: hover) {
+  .evo-node:hover rect:first-child {
+    stroke: var(--accent);
+  }
 }
 .evo-node.active rect:first-child {
   fill: color-mix(in srgb, var(--accent) 12%, var(--card));
@@ -268,7 +283,7 @@
   margin: 0;
   padding: 12px 16px 0;
   list-style: none;
-  font-size: 12px;
+  font-size: var(--text-sm);
   font-weight: 700;
   color: var(--chip-ink);
 }
@@ -298,17 +313,17 @@
   gap: 4px 10px;
 }
 .rm-evo-card-head b {
-  font-size: 16px;
+  font-size: var(--text-xl);
   font-weight: 700;
 }
 .rm-evo-card-year {
-  font-size: 12px;
+  font-size: var(--text-sm);
   font-weight: 800;
   color: var(--muted);
   font-variant-numeric: tabular-nums;
 }
 .rm-evo-card-lane {
-  font-size: 12px;
+  font-size: var(--text-sm);
   font-weight: 700;
   color: var(--chip-ink);
 }
@@ -317,11 +332,11 @@
   grid-template-columns: auto minmax(0, 1fr);
   gap: 4px 14px;
   margin: 8px 0 0;
-  font-size: 13.5px;
+  font-size: var(--text-lg);
   line-height: 1.5;
 }
 .rm-evo-card dt {
-  font-size: 10.5px;
+  font-size: var(--text-xs);
   font-weight: 800;
   letter-spacing: 0.08em;
   line-height: 2;
@@ -336,7 +351,7 @@
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  font-size: 12px;
+  font-size: var(--text-sm);
   font-weight: 800;
   letter-spacing: 0;
   text-transform: none;
@@ -350,13 +365,13 @@
 }
 .rm-evo-background {
   margin: 8px 0 0;
-  font-size: 13.5px;
+  font-size: var(--text-lg);
   line-height: 1.6;
   color: var(--ink);
 }
 .rm-evo-hint {
   margin: 0;
-  font-size: 13px;
+  font-size: var(--text-md);
   color: var(--muted);
 }
 .rm-part {
@@ -371,7 +386,7 @@
 }
 .rm-part-head h3 {
   margin: 0;
-  font-size: 12px;
+  font-size: var(--text-sm);
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -447,13 +462,13 @@
 .rm-title {
   font-family: "Bricolage Grotesque", sans-serif;
   font-weight: 600;
-  font-size: 13px;
+  font-size: var(--text-md);
   line-height: 1.35;
   text-wrap: pretty;
 }
 .rm-item.main .rm-title {
   font-weight: 700;
-  font-size: 16.5px;
+  font-size: var(--text-xl);
   line-height: 1.3;
 }
 .rm-item.done .rm-title {
@@ -466,7 +481,7 @@
   border-radius: 999px;
   background: color-mix(in srgb, var(--accent) 12%, var(--card));
   color: var(--accent);
-  font-size: 10.5px;
+  font-size: var(--text-xs);
   font-weight: 700;
   line-height: 1.7;
   max-width: 100%;
@@ -474,7 +489,7 @@
 }
 .rm-why {
   margin: 4px 0 0;
-  font-size: 13.5px;
+  font-size: var(--text-lg);
   line-height: 1.5;
   color: var(--muted);
 }
@@ -484,13 +499,13 @@
   align-items: center;
   gap: 5px;
   margin-top: 3px;
-  font-size: 11.5px;
+  font-size: var(--text-xs);
   font-weight: 800;
   color: var(--chip-ink);
 }
 .rm-item.main .rm-source {
   margin-top: 7px;
-  font-size: 12px;
+  font-size: var(--text-sm);
 }
 .rm-year {
   font-weight: 700;
@@ -501,12 +516,14 @@
   border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line));
   border-radius: 999px;
   color: var(--accent);
-  font-size: 10.5px;
+  font-size: var(--text-xs);
   font-weight: 700;
   line-height: 1.6;
 }
-.rm-link:hover {
-  background: color-mix(in srgb, var(--accent) 12%, var(--card));
+@media (hover: hover) {
+  .rm-link:hover {
+    background: color-mix(in srgb, var(--accent) 12%, var(--card));
+  }
 }
 .rm-mark {
   display: inline-grid;
@@ -535,8 +552,10 @@
   height: 18px;
   border-radius: 5px;
 }
-.rm-check:hover {
-  border-color: var(--accent);
+@media (hover: hover) {
+  .rm-check:hover {
+    border-color: var(--accent);
+  }
 }
 .rm-check:checked {
   background: var(--accent);
@@ -569,7 +588,7 @@
 }
 .rm-side-head {
   padding: 3px 0;
-  font-size: 10.5px;
+  font-size: var(--text-xs);
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;

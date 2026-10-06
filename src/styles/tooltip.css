@@ -32,7 +32,7 @@
   background: var(--card);
   color: var(--ink);
   box-shadow: var(--shadow-hover);
-  font-size: 12px;
+  font-size: var(--text-sm);
   font-weight: 700;
   line-height: 1.35;
   text-align: center;

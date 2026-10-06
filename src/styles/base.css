@@ -54,6 +54,16 @@
   --lane-2: #008300;
   --lane-3: #e87ba4;
   --lane-4: #eda100;
+  /* Close to a critically damped spring: fast out of the gate, settling without overshoot. */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  /* The type scale, in rem so text follows the reader's font size setting: 11, 12, 13, 14, 16, 18, 26px. */
+  --text-xs: 0.6875rem;
+  --text-sm: 0.75rem;
+  --text-md: 0.8125rem;
+  --text-lg: 0.875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.625rem;
   font-family:
     "Nunito Sans",
     system-ui,
@@ -82,14 +92,6 @@
 * {
   box-sizing: border-box;
 }
-*,
-*::before,
-*::after {
-  transition:
-    background-color 0.25s ease,
-    border-color 0.25s ease,
-    color 0.25s ease;
-}
 /* Keep the scrollbar's space reserved, so pages of different length do not shift sideways. */
 html {
   scrollbar-gutter: stable;
@@ -105,8 +107,10 @@ a {
   color: var(--ink);
   text-decoration: none;
 }
-a:hover {
-  color: var(--accent);
+@media (hover: hover) {
+  a:hover {
+    color: var(--accent);
+  }
 }
 button {
   font: inherit;
@@ -120,10 +124,9 @@ input::placeholder {
   font-family: "Bricolage Grotesque", "Nunito Sans", sans-serif;
 }
 
-/* A monochrome logo ships as a light/dark pair, stacked and cross-faded with the theme on the colours' own curve. */
+/* A monochrome logo ships as a light/dark pair, stacked; the theme's view transition cross-fades them with the page. */
 .source-icon img {
   grid-area: 1 / 1;
-  transition: opacity 0.25s ease;
 }
 .source-icon img.dark-only,
 [data-theme="dark"] .source-icon img.light-only {
@@ -146,30 +149,85 @@ input::placeholder {
   gap: 18px;
 }
 
-/* Switching pages: out then in, so the incoming page is never drawn over the outgoing one. */
+/* Switching pages: out then in, so the incoming page is never drawn over the outgoing one; the header's thumb carries the direction. */
 .page-enter-active {
-  transition:
-    opacity 0.16s ease,
-    transform 0.16s ease;
+  transition: opacity 0.16s ease-out;
 }
 .page-leave-active {
-  transition: opacity 0.1s ease;
+  transition: opacity 0.1s ease-in;
 }
-.page-enter-from {
-  opacity: 0;
-  transform: translateY(4px);
-}
+.page-enter-from,
 .page-leave-to {
   opacity: 0;
 }
 
+/* A segmented control: equal slots and one thumb that slides to the active one; set --count and --index inline. */
+.segmented {
+  position: relative;
+  isolation: isolate;
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  padding: var(--pad);
+  gap: var(--gap);
+}
+.segmented::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: var(--pad);
+  bottom: var(--pad);
+  left: var(--pad);
+  width: calc((100% - 2 * var(--pad) - (var(--count) - 1) * var(--gap)) / var(--count));
+  border-radius: 999px;
+  background: var(--thumb, var(--card));
+  box-shadow: var(--thumb-shadow, var(--shadow));
+  transform: translateX(calc(var(--index) * (100% + var(--gap))));
+  transition: transform 0.3s var(--ease-out);
+}
+
+/* Pressed on pointer-down, so a tap answers before the click lands; released on the same curve. */
+:is(
+  .filter-trigger,
+  .header-button,
+  .card-action,
+  .tag-filter,
+  .commentary-chip,
+  .load-more,
+  .empty-clear,
+  .date-preset,
+  .month-cell,
+  .year-nav,
+  .series-name,
+  .series-active,
+  .rm-rel.built,
+  .rm-check
+) {
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.1s var(--ease-out);
+}
+:is(
+  .filter-trigger,
+  .header-button,
+  .card-action,
+  .tag-filter,
+  .commentary-chip,
+  .load-more,
+  .empty-clear,
+  .date-preset,
+  .month-cell,
+  .year-nav,
+  .series-name,
+  .series-active,
+  .rm-rel.built,
+  .rm-check
+):active:not(:disabled) {
+  transform: scale(0.97);
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .page-enter-active,
-  .page-leave-active {
+  .segmented::before {
     transition: none;
-  }
-  .page-enter-from {
-    transform: none;
   }
 }
 
@@ -184,12 +242,12 @@ input::placeholder {
   gap: 10px;
   align-items: center;
   color: var(--muted);
-  font-size: 14px;
+  font-size: var(--text-lg);
 }
 .empty .empty-title {
   font-family: "Bricolage Grotesque", sans-serif;
   font-weight: 700;
-  font-size: 20px;
+  font-size: var(--text-2xl);
   color: var(--ink);
 }
 .empty .empty-clear {
@@ -200,10 +258,12 @@ input::placeholder {
   background: var(--accent);
   color: #fff8f0;
   font-weight: 800;
-  font-size: 14px;
+  font-size: var(--text-lg);
   cursor: pointer;
   font-family: inherit;
 }
-.empty .empty-clear:hover {
-  filter: brightness(1.08);
+@media (hover: hover) {
+  .empty .empty-clear:hover {
+    filter: brightness(1.08);
+  }
 }

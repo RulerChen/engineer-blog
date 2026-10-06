@@ -1,10 +1,9 @@
 <script setup lang="ts">
+import { computed, onBeforeUnmount, onMounted, ref } from "vue";
 import { useArticles } from "../blog/data.js";
 import { useRoadmapIds } from "../roadmap/data.js";
 import { type Page, PAGES, currentPage, openPage } from "./pages.js";
 import { useTheme } from "./useTheme.js";
-
-defineProps<{ count?: number }>();
 
 const { theme, toggleTheme } = useTheme();
 
@@ -12,6 +11,18 @@ const TABS: { page: Page; label: string }[] = [
   { page: "blog", label: "Articles" },
   { page: "roadmap", label: "Roadmaps" },
 ];
+const activeTab = computed(() => TABS.findIndex((tab) => tab.page === currentPage.value));
+
+/** Only the blog page counts its entries, and only it asks for them. */
+const count = computed(() => (currentPage.value === "blog" ? useArticles().data.value.length : 0));
+
+/** Whether content runs under the header, which is when its bottom edge shows. */
+const scrolled = ref(window.scrollY > 0);
+const onScroll = (): void => {
+  scrolled.value = window.scrollY > 0;
+};
+onMounted(() => window.addEventListener("scroll", onScroll, { passive: true }));
+onBeforeUnmount(() => window.removeEventListener("scroll", onScroll));
 
 /** A real link, so middle and modifier clicks open a new tab; only a plain left click switches in place. */
 function switchTo(event: MouseEvent, page: Page): void {
@@ -29,7 +40,7 @@ function warm(page: Page): void {
 </script>
 
 <template>
-  <header class="site-header">
+  <header class="site-header" :class="{ scrolled }">
     <div class="header-inner">
       <a class="logo-mark heading-font" :href="PAGES.blog.path" aria-label="Home">E</a>
       <h1 class="heading-font">{{ PAGES[currentPage].title }}</h1>
@@ -42,7 +53,11 @@ function warm(page: Page): void {
         data-tip-pos="bottom"
         >{{ count.toLocaleString("en-US") }} entries</span
       >
-      <nav class="page-nav" aria-label="Which list">
+      <nav
+        class="page-nav segmented"
+        :style="{ '--count': TABS.length, '--index': activeTab }"
+        aria-label="Which list"
+      >
         <a
           v-for="tab in TABS"
           :key="tab.page"

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, ref } from "vue";
-import SiteHeader from "../app/SiteHeader.vue";
 import { PAGES } from "../app/pages.js";
 import RoadmapView from "./RoadmapView.vue";
 import TopicMap from "./TopicMap.vue";
@@ -33,6 +32,10 @@ const roadmap = computed(() => opened.value?.data.value ?? null);
 function go(id: string | null): void {
   history.pushState(null, "", id ? `?topic=${id}` : window.location.pathname);
   current.value = id;
+}
+
+/** Once the old view is gone, so it never jumps to the top while still fading out. */
+function toTop(): void {
   window.scrollTo({ top: 0 });
 }
 
@@ -44,24 +47,18 @@ onBeforeUnmount(() => window.removeEventListener("popstate", onPopState));
 </script>
 
 <template>
-  <div class="container">
-    <SiteHeader />
-
-    <p v-if="loading" class="loading">Loading roadmaps…</p>
-    <p v-else-if="failed" class="error">Could not load roadmaps. Try refreshing.</p>
-    <div v-else-if="roadmap" class="layout wide">
-      <a class="rm-back" :href="PAGES.roadmap.path" @click.prevent="go(null)">← All topics</a>
-      <RoadmapView
-        :key="roadmap.id"
-        :roadmap="roadmap"
-        :done="done"
-        :built="built"
-        @toggle="toggle"
-        @open="go"
-      />
-    </div>
-    <div v-else class="layout wide">
-      <TopicMap :built="built" @open="go" />
-    </div>
+  <div>
+    <!-- The same fade as switching pages, so going into a topic and back reads like the level above. -->
+    <Transition name="page" mode="out-in" @after-leave="toTop">
+      <p v-if="loading" class="loading">Loading roadmaps…</p>
+      <p v-else-if="failed" class="error">Could not load roadmaps. Try refreshing.</p>
+      <div v-else-if="roadmap" :key="roadmap.id" class="layout wide">
+        <a class="rm-back" :href="PAGES.roadmap.path" @click.prevent="go(null)">← All topics</a>
+        <RoadmapView :roadmap="roadmap" :done="done" :built="built" @toggle="toggle" @open="go" />
+      </div>
+      <div v-else class="layout wide">
+        <TopicMap :built="built" @open="go" />
+      </div>
+    </Transition>
   </div>
 </template>

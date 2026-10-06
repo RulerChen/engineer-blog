@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, ref } from "vue";
 import EntryTypeIcon from "../app/EntryTypeIcon.vue";
 import Icon from "../app/Icon.vue";
 import SourceIcon from "../app/SourceIcon.vue";
@@ -8,6 +8,7 @@ import type { Article } from "../shared/entry.js";
 import { sourceName } from "../shared/sources.js";
 import { domainLabel } from "../shared/tags.js";
 import type { Series } from "./series.js";
+import type { EntryState } from "./useEntryState.js";
 
 /** Shared, because toLocaleDateString builds a formatter per call: 18 ms vs 0.6 ms across 390 cards. */
 const DATE_FORMAT = new Intl.DateTimeFormat("en-US", {
@@ -26,8 +27,10 @@ const props = withDefaults(
     series?: Series;
     /** Tags being filtered on, so their chips can say so. */
     activeTags?: string[];
+    /** The marks whose toggle takes this card out of the list it is in. */
+    removes?: EntryState[];
   }>(),
-  { series: undefined, activeTags: () => [] },
+  { series: undefined, activeTags: () => [], removes: () => [] },
 );
 
 const emit = defineEmits<{
@@ -36,6 +39,53 @@ const emit = defineEmits<{
   selectSeries: [id: string];
   selectTag: [tag: string];
 }>();
+
+const root = ref<HTMLElement | null>(null);
+let leaving = false;
+
+/** Folds the card shut, gap and all, so the cards below slide up instead of jumping. */
+function collapse(el: HTMLElement): Promise<unknown> {
+  const style = getComputedStyle(el);
+  const gap = el.parentElement ? getComputedStyle(el.parentElement).rowGap : "0px";
+  el.style.overflow = "hidden";
+  el.style.pointerEvents = "none";
+  const open = {
+    height: `${el.offsetHeight}px`,
+    paddingTop: style.paddingTop,
+    paddingBottom: style.paddingBottom,
+    borderTopWidth: style.borderTopWidth,
+    borderBottomWidth: style.borderBottomWidth,
+    marginBottom: "0px",
+    opacity: 1,
+  };
+  const shut = {
+    height: "0px",
+    paddingTop: "0px",
+    paddingBottom: "0px",
+    borderTopWidth: "0px",
+    borderBottomWidth: "0px",
+    marginBottom: `-${gap}`,
+    opacity: 0,
+  };
+  // Held shut until the list drops the card, so it never flashes back for a frame.
+  return el.animate([open, shut], {
+    duration: 240,
+    easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+    fill: "forwards",
+  }).finished;
+}
+
+/** A toggle that takes the card out of the list folds it first; a second click while it folds is ignored. */
+async function act(state: EntryState): Promise<void> {
+  if (leaving) return;
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (props.removes.includes(state) && root.value && !reduce) {
+    leaving = true;
+    await collapse(root.value);
+  }
+  if (state === "saved") emit("toggleSaved", props.article.id);
+  else emit("toggleHidden", props.article.id);
+}
 
 const displayDate = computed(() => DATE_FORMAT.format(new Date(props.article.publishedAt)));
 
@@ -68,7 +118,7 @@ const avatarLetter = computed(() => sourceName(props.article.source).charAt(0) |
 </script>
 
 <template>
-  <article class="entry-card article-card" :class="{ 'is-hidden': hidden }">
+  <article ref="root" class="entry-card article-card" :class="{ 'is-hidden': hidden }">
     <SourceIcon
       class="avatar"
       :icon="article.icon"
@@ -135,7 +185,7 @@ const avatarLetter = computed(() => sourceName(props.article.source).charAt(0) |
         data-tip-align="right"
         :aria-label="saved ? 'Remove bookmark' : 'Save for later'"
         :data-tip="saved ? 'Remove bookmark' : 'Save for later'"
-        @click="emit('toggleSaved', article.id)"
+        @click="act('saved')"
       >
         <Icon :paths="ICONS.bookmark" :filled="saved" />
       </button>
@@ -145,7 +195,7 @@ const avatarLetter = computed(() => sourceName(props.article.source).charAt(0) |
         :class="{ active: hidden }"
         :aria-label="hidden ? 'Put this back in the list' : 'Ignore this entry'"
         :data-tip="hidden ? 'Put this back in the list' : 'Ignore — stop showing this entry'"
-        @click="emit('toggleHidden', article.id)"
+        @click="act('hidden')"
       >
         <Icon :paths="hidden ? ICONS.eye : ICONS.eyeOff" />
       </button>

@@ -12,6 +12,8 @@ const props = defineProps<{
   seriesIndex: Map<string, Series>;
   states: Readonly<Record<string, EntryState>>;
   activeTags: string[];
+  /** The marks whose toggle takes a card out of this list. */
+  removes: EntryState[];
 }>();
 
 const emit = defineEmits<{
@@ -82,6 +84,7 @@ onBeforeUnmount(() => observer?.disconnect());
         :hidden="states[article.id] === 'hidden'"
         :series="article.series ? seriesIndex.get(article.series) : undefined"
         :active-tags="activeTags"
+        :removes="removes"
         @toggle-saved="emit('toggleSaved', $event)"
         @toggle-hidden="emit('toggleHidden', $event)"
         @select-series="emit('selectSeries', $event)"

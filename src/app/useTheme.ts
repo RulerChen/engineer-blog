@@ -1,4 +1,4 @@
-import { ref, watch, type Ref } from "vue";
+import { nextTick, ref, type Ref } from "vue";
 import { STORAGE_KEYS, save } from "./storage.js";
 
 export type Theme = "light" | "dark";
@@ -12,13 +12,22 @@ export interface ThemeControls {
 export function useTheme(): ThemeControls {
   const theme = ref<Theme>(document.documentElement.dataset.theme === "dark" ? "dark" : "light");
 
-  watch(theme, (value) => {
+  async function apply(value: Theme): Promise<void> {
+    theme.value = value;
     document.documentElement.dataset.theme = value;
     save(STORAGE_KEYS.theme, value);
-  });
+    // The new snapshot is taken once this settles, so it must include the button's own redraw.
+    await nextTick();
+  }
 
+  /** Cross-faded as two snapshots on the compositor; an instant switch where that is missing or motion is reduced. */
   function toggleTheme(): void {
-    theme.value = theme.value === "dark" ? "light" : "dark";
+    const next = theme.value === "dark" ? "light" : "dark";
+    if (!document.startViewTransition || matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      void apply(next);
+      return;
+    }
+    document.startViewTransition(() => apply(next));
   }
 
   return { theme, toggleTheme };

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import Icon from "../app/Icon.vue";
-import SiteHeader from "../app/SiteHeader.vue";
 import { ICONS } from "../app/icons.js";
 import ArticleList from "./ArticleList.vue";
 import FilterBar from "./FilterBar.vue";
@@ -20,6 +19,10 @@ const { states, toggle } = useEntryState();
 /** Ignored is a list of its own, never mixed back into All, and the standing way back to anything dismissed. */
 type View = "all" | EntryState;
 const view = ref<View>("all");
+/** The marks whose toggle takes a card out of this tab: only an ignore in All, either one elsewhere. */
+const removes = computed<EntryState[]>(() =>
+  view.value === "all" ? ["hidden"] : ["saved", "hidden"],
+);
 
 const TABS: {
   view: View;
@@ -78,28 +81,32 @@ const empty = computed(() => {
 function selectSeries(id: string): void {
   state.series = id;
   view.value = "all";
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  window.scrollTo({ top: 0 });
 }
 
-/** Toggles like the topic menu; adding scrolls up because the list under the pointer is about to change. */
+/** Toggles like the topic menu; adding jumps up, since the list under the pointer is replaced and there is nothing to scroll past. */
 function selectTag(tag: string): void {
   const adding = !state.tags.includes(tag);
   state.tags = toggled(state.tags, tag);
-  if (adding) window.scrollTo({ top: 0, behavior: "smooth" });
+  if (adding) window.scrollTo({ top: 0 });
 }
 </script>
 
 <template>
-  <div class="container">
-    <SiteHeader :count="articles.length" />
-
+  <div>
     <p v-if="loading" class="loading">Loading entries…</p>
     <p v-else-if="failed" class="error">Could not load entries. Try refreshing.</p>
     <div v-else class="layout">
       <SearchBar v-model="state.query" />
       <FilterBar :state="state" :companies="companies" :tags="tags" :min-year="earliestYear">
         <template #end>
-          <div class="tabs">
+          <div
+            class="tabs segmented"
+            :style="{
+              '--count': TABS.length,
+              '--index': TABS.findIndex((tab) => tab.view === view),
+            }"
+          >
             <button
               v-for="tab in TABS"
               :key="tab.view"
@@ -132,6 +139,7 @@ function selectTag(tag: string): void {
         :series-index="seriesIndex"
         :states="states"
         :active-tags="state.tags"
+        :removes="removes"
         @toggle-saved="toggle($event, 'saved')"
         @toggle-hidden="toggle($event, 'hidden')"
         @select-series="selectSeries"

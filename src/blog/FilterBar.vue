@@ -67,14 +67,18 @@ function clearAll(): void {
 </script>
 
 <template>
-  <div class="filter-bar">
+  <div class="filter-bar" :class="{ 'menu-open': openMenu }">
     <div v-if="openMenu" class="filter-backdrop" @click="closeMenu"></div>
 
-    <FilterDropdown :label="companyLabel" @toggle="toggleMenu('company')">
+    <FilterDropdown
+      :label="companyLabel"
+      :open="openMenu === 'company'"
+      @toggle="toggleMenu('company')"
+    >
       <CompanyMenu v-if="openMenu === 'company'" v-model="state.companies" :companies="companies" />
     </FilterDropdown>
 
-    <FilterDropdown :label="topicLabel" @toggle="toggleMenu('topic')">
+    <FilterDropdown :label="topicLabel" :open="openMenu === 'topic'" @toggle="toggleMenu('topic')">
       <TopicMenu
         v-if="openMenu === 'topic'"
         v-model="state.tags"
@@ -83,7 +87,7 @@ function clearAll(): void {
       />
     </FilterDropdown>
 
-    <FilterDropdown :label="dateLabel" @toggle="toggleMenu('date')">
+    <FilterDropdown :label="dateLabel" :open="openMenu === 'date'" @toggle="toggleMenu('date')">
       <DateMenu
         v-if="openMenu === 'date'"
         :from="state.dateFrom"

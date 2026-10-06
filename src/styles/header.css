@@ -5,7 +5,26 @@
   z-index: 20;
   backdrop-filter: blur(12px);
   background: color-mix(in srgb, var(--bg) 82%, transparent);
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+/* The edge only shows once content runs under the header; at the top there is nothing to separate. */
+.site-header.scrolled {
+  border-bottom-color: var(--line);
+}
+@media (prefers-reduced-transparency: reduce) {
+  .site-header {
+    background: var(--bg);
+    backdrop-filter: none;
+  }
+}
+@media (prefers-contrast: more) {
+  .site-header,
+  .site-header.scrolled {
+    background: var(--bg);
+    backdrop-filter: none;
+    border-bottom-color: var(--muted);
+  }
 }
 .site-header .header-inner {
   max-width: 1200px;
@@ -29,7 +48,7 @@
 }
 .site-header h1 {
   font-weight: 700;
-  font-size: 19px;
+  font-size: var(--text-2xl);
   line-height: 1;
   min-width: 0;
   margin: 0;
@@ -37,7 +56,7 @@
 .header-count {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 600;
-  font-size: 12px;
+  font-size: var(--text-sm);
   color: var(--muted);
   background: var(--card);
   border: 1px solid var(--line);
@@ -51,28 +70,29 @@
 }
 /* Links, so middle and modifier clicks open the other page in a tab and crawlers follow them; a left click switches in place. */
 .page-nav {
-  display: inline-flex;
-  gap: 2px;
+  --pad: 3px;
+  --gap: 2px;
   background: var(--chip);
   border-radius: 999px;
-  padding: 3px;
   flex-shrink: 0;
 }
 .page-tab {
   padding: 5px 14px;
   border-radius: 999px;
-  font-size: 13px;
+  font-size: var(--text-md);
   font-weight: 800;
   line-height: 1.4;
+  text-align: center;
   color: var(--muted);
+  -webkit-tap-highlight-color: transparent;
 }
-.page-tab:hover {
-  color: var(--accent);
+@media (hover: hover) {
+  .page-tab:hover {
+    color: var(--accent);
+  }
 }
 .page-tab.active {
-  background: var(--card);
   color: var(--accent);
-  box-shadow: var(--shadow);
 }
 .header-button {
   width: 36px;
@@ -87,9 +107,11 @@
   place-items: center;
   flex-shrink: 0;
 }
-.header-button:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+@media (hover: hover) {
+  .header-button:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
 }
 
 @media (max-width: 560px) {
@@ -118,7 +140,7 @@
   }
   .page-tab {
     padding: 4px 7px;
-    font-size: 12px;
+    font-size: var(--text-sm);
   }
   .header-button {
     width: 30px;
