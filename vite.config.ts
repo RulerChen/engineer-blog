@@ -2,12 +2,15 @@ import type { ServerResponse } from "node:http";
 import vue from "@vitejs/plugin-vue";
 import { type HtmlTagDescriptor, type Plugin, defineConfig } from "vite";
 import { DATA_DIR } from "./scripts/lib/paths.js";
-import { readEntries } from "./scripts/lib/read.js";
+import { readEntries, readRoadmaps } from "./scripts/lib/read.js";
 import { siteFiles } from "./scripts/lib/site.js";
 import { entryProblems } from "./scripts/lib/validate.js";
 import { STORAGE_KEYS } from "./src/app/storage.js";
 import { ROADMAP_INDEX_FILE } from "./src/shared/roadmap.js";
 import { PAGE_TITLES, ROADMAP_PATH } from "./src/shared/site.js";
+
+/** The host GitHub Pages serves the base under; sitemap URLs must be absolute. */
+const SITE_ORIGIN = "https://rulerchen.github.io";
 
 /** The latin halves of the two faces in base.css; every page draws text in both. */
 const FONTS = ["bricolage-grotesque-latin.woff2", "nunito-sans-latin.woff2"];
@@ -90,6 +93,33 @@ function roadmapPage(): Plugin {
   };
 }
 
+/** Build only: both pages and every roadmap topic; blog filter queries are subsets of one list, so they stay out. */
+function sitemap(): Plugin {
+  let base = "/";
+  return {
+    name: "sitemap",
+    apply: "build",
+    configResolved(config) {
+      base = config.base;
+    },
+    async generateBundle() {
+      const root = SITE_ORIGIN + base;
+      const roadmap = root + ROADMAP_PATH;
+      const topics = (await readRoadmaps()).map(
+        (road) => `${roadmap}?topic=${encodeURIComponent(road.id)}`,
+      );
+      const source = [
+        `<?xml version="1.0" encoding="UTF-8"?>`,
+        `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`,
+        ...[root, roadmap, ...topics].map((url) => `  <url><loc>${url}</loc></url>`),
+        `</urlset>`,
+        "",
+      ].join("\n");
+      this.emitFile({ type: "asset", fileName: "sitemap.xml", source });
+    },
+  };
+}
+
 /** Dev only: builds the data files per request straight from data/, reports entry problems, and reloads on edits. */
 function liveData(): Plugin {
   return {
@@ -141,5 +171,5 @@ function liveData(): Plugin {
 
 export default defineConfig({
   base: "/engineer-blog/",
-  plugins: [vue(), sharedHead(), roadmapPage(), liveData()],
+  plugins: [vue(), sharedHead(), roadmapPage(), sitemap(), liveData()],
 });

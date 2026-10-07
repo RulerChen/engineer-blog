@@ -1,5 +1,14 @@
 [
   {
+    "title": "Designing Neki for performance",
+    "url": "https://planetscale.com/blog/designing-neki-for-performance",
+    "source": "PlanetScale",
+    "publishedAt": "2026-10-01",
+    "domain": "database",
+    "tags": ["sharding", "proxy", "postgresql"],
+    "summary": "Spares Neki's router from decoding every shard row by keeping Postgres wire bytes and decoding only what a query needs."
+  },
+  {
     "title": "The lifecycle of a sharded Postgres query",
     "url": "https://planetscale.com/blog/the-lifecycle-of-a-sharded-postgres-query",
     "source": "PlanetScale",

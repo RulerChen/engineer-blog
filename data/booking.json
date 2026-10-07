@@ -1,5 +1,14 @@
 [
   {
+    "title": "Node.js at scale, rebalanced: how we cut cost by 38%",
+    "url": "https://medium.com/booking-com-development/node-js-at-scale-rebalanced-how-we-cut-cost-by-38-62ce247a3002",
+    "source": "Booking",
+    "publishedAt": "2026-09-29",
+    "domain": "programming",
+    "tags": ["garbage-collection", "load-balancing", "ssr", "cost", "nodejs"],
+    "summary": "Drops pm2's supervisor hop for wattpm worker threads, then cures SO_REUSEPORT skew from recycled ports with nginx."
+  },
+  {
     "title": "Anomaly Detection in Time Series Using Statistical Analysis",
     "url": "https://medium.com/booking-com-development/anomaly-detection-in-time-series-using-statistical-analysis-cc587b21d008",
     "source": "Booking",
