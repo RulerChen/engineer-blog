@@ -393,7 +393,7 @@
   }
 }
 
-/* Tabs + result count */
+/* Tabs */
 .filter-bar-end {
   margin-left: auto;
 }
@@ -404,7 +404,7 @@
   border-radius: 999px;
 }
 .tab-button {
-  padding: 6px 16px;
+  padding: 6px 12px;
   border-radius: 999px;
   border: none;
   cursor: pointer;
@@ -761,6 +761,27 @@
   .series-active:hover {
     background: color-mix(in srgb, var(--accent) 18%, var(--card));
   }
+}
+/* At the full 820px column the filter row stays on one line and only the series label gives way; the cards carry the full name. */
+@media (min-width: 820px) {
+  .filter-bar {
+    flex-wrap: nowrap;
+  }
+  .filter-bar > * {
+    flex-shrink: 0;
+  }
+  .filter-bar > .series-active {
+    flex-shrink: 1;
+    min-width: 0;
+  }
+}
+.series-active > :not(.series-active-label) {
+  flex-shrink: 0;
+}
+.series-active-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .series-active .series-x {
   font-size: 10px;

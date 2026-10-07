@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
+import Icon from "../app/Icon.vue";
+import { ICONS } from "../app/icons.js";
 import CompanyMenu from "./CompanyMenu.vue";
 import DateMenu from "./DateMenu.vue";
 import FilterDropdown from "./FilterDropdown.vue";
 import TopicMenu from "./TopicMenu.vue";
 import { type Count, type FilterState, isFiltered, resetFilter } from "./filter.js";
 import { rangeLabel } from "./months.js";
-import { seriesLabel } from "./series.js";
 
 const props = defineProps<{
   /** The page's filter state, which this bar edits in place. */
@@ -15,6 +16,8 @@ const props = defineProps<{
   tags: Count[];
   /** Year of the oldest entry. */
   minYear: number;
+  /** The active series' label, worked out by the page that holds the series index. */
+  seriesLabel: string | null;
 }>();
 
 type Menu = "company" | "topic" | "date";
@@ -105,7 +108,8 @@ function clearAll(): void {
       data-tip="Stop showing only this series"
       @click="state.series = null"
     >
-      <span>{{ seriesLabel(state.series) }}</span>
+      <Icon :paths="ICONS.series" :size="12" />
+      <span class="series-active-label">{{ seriesLabel }}</span>
       <span class="series-x">✕</span>
     </button>
 

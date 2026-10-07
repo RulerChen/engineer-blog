@@ -7,7 +7,7 @@ import FilterBar from "./FilterBar.vue";
 import SearchBar from "./SearchBar.vue";
 import { useArticles } from "./data.js";
 import { resetFilter, toggled } from "./filter.js";
-import { buildSeriesIndex } from "./series.js";
+import { buildSeriesIndex, seriesLabel } from "./series.js";
 import { stateToQuery } from "./urlState.js";
 import { useArticleFilter } from "./useArticleFilter.js";
 import { type EntryState, useEntryState } from "./useEntryState.js";
@@ -35,6 +35,10 @@ const TABS: {
 ];
 
 const seriesIndex = computed(() => buildSeriesIndex(articles.value));
+/** A URL can name a series the index dropped, which still needs a label. */
+const activeSeriesLabel = computed(() =>
+  state.series ? (seriesIndex.value.get(state.series)?.label ?? seriesLabel(state.series)) : null,
+);
 
 /** The list is newest first, so the last entry dates the far end of the date picker. */
 const earliestYear = computed(() => {
@@ -98,7 +102,13 @@ function selectTag(tag: string): void {
     <p v-else-if="failed" class="error">Could not load entries. Try refreshing.</p>
     <div v-else class="layout">
       <SearchBar v-model="state.query" />
-      <FilterBar :state="state" :companies="companies" :tags="tags" :min-year="earliestYear">
+      <FilterBar
+        :state="state"
+        :companies="companies"
+        :tags="tags"
+        :min-year="earliestYear"
+        :series-label="activeSeriesLabel"
+      >
         <template #end>
           <div
             class="tabs segmented"
@@ -107,15 +117,18 @@ function selectTag(tag: string): void {
               '--index': TABS.findIndex((tab) => tab.view === view),
             }"
           >
+            <!-- Icon-only past All, so the tabs fit the filter row; the tooltip names them. -->
             <button
               v-for="tab in TABS"
               :key="tab.view"
               class="tab-button"
               :class="{ active: view === tab.view }"
+              :aria-label="tab.icon ? tab.label : undefined"
+              :data-tip="tab.icon ? tab.label : undefined"
               @click="view = tab.view"
             >
-              <Icon v-if="tab.icon" v-bind="tab.icon" :size="12" />
-              <span>{{ tab.label }}</span>
+              <Icon v-if="tab.icon" v-bind="tab.icon" :size="14" />
+              <span v-else>{{ tab.label }}</span>
             </button>
           </div>
         </template>

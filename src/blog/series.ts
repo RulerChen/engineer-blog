@@ -1,8 +1,10 @@
 import type { Article } from "../shared/entry.js";
 
-/** "storing-messages" → "Storing messages". */
-export function seriesLabel(id: string): string {
-  const words = id.replace(/-/g, " ").trim();
+/** "uber-storing-messages" from Uber → "Storing messages"; the card and the list already name the source. */
+export function seriesLabel(id: string, source = ""): string {
+  const prefix = `${source.toLowerCase()}-`;
+  const slug = source && id.startsWith(prefix) ? id.slice(prefix.length) : id;
+  const words = slug.replace(/-/g, " ").trim();
   return words.charAt(0).toUpperCase() + words.slice(1);
 }
 
@@ -26,7 +28,7 @@ export function buildSeriesIndex(articles: Article[]): Map<string, Series> {
   for (const [id, group] of parts) {
     if (group.length < 2) continue;
     const ordered = group.toSorted((a, b) => Date.parse(a.publishedAt) - Date.parse(b.publishedAt));
-    index.set(id, { id, label: seriesLabel(id), parts: ordered });
+    index.set(id, { id, label: seriesLabel(id, ordered[0].source), parts: ordered });
   }
   return index;
 }
