@@ -50,7 +50,7 @@
     "source": "Atlassian",
     "publishedAt": "2025-11-04",
     "domain": "infrastructure",
-    "tags": ["hardware", "migration", "graviton", "java"],
+    "tags": ["hardware", "migration", "java"],
     "summary": "Traces Jira's Graviton slowdown to L3 misses and TLB walks with PMU counters, then tunes the JIT code cache and THP."
   },
   {
@@ -86,7 +86,7 @@
     "source": "Atlassian",
     "publishedAt": "2020-10-08",
     "domain": "database",
-    "tags": ["replication", "postgresql"],
+    "tags": ["replication", "postgresql", "consistency"],
     "summary": "Relieves a Postgres primary serving nearly all traffic by reading from replicas caught up to the user's last write LSN."
   },
   {

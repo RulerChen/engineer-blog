@@ -49,17 +49,13 @@ for (const id of CROSS_DOMAIN) {
   );
 }
 
-const single = (ids: string[]): string[] => ids.filter((id) => carrying(id).length === 1);
 const concepts = DOMAINS.flatMap((d) => d.concepts);
+const blogs = (id: string): number => new Set(carrying(id).map((e) => e.source)).size;
 console.log(
-  `\nconcepts on one entry, absorb after a full pass unless a named subfield: ${single(concepts).join(", ") || "none"}`,
+  `\nconcepts on fewer than two entries, absorb: ${concepts.filter((c) => carrying(c).length < 2).join(", ") || "none"}`,
 );
 console.log(
-  `concepts on none, reserved: ${concepts.filter((c) => !carrying(c).length).join(", ") || "none"}`,
-);
-console.log(`technologies on one entry: ${single(TECHNOLOGIES).length} of ${TECHNOLOGIES.length}`);
-console.log(
-  `technologies on none: ${TECHNOLOGIES.filter((t) => !carrying(t).length).join(", ") || "none"}`,
+  `technologies from fewer than two blogs, absorb: ${TECHNOLOGIES.filter((t) => blogs(t) < 2).join(", ") || "none"}`,
 );
 
 const queue = entries.filter((e) => e.domain === "other");

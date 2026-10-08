@@ -23,7 +23,7 @@
     "source": "LinkedIn",
     "publishedAt": "2026-05-21",
     "domain": "programming",
-    "tags": ["infrastructure", "memory-management", "debugging", "java"],
+    "tags": ["infrastructure", "memory-management", "debugging", "rust"],
     "summary": "Traces FishDB freezes to a HashMap resize whose mmap held mmap_lock and froze Tokio, fixed by pre-sizing the map."
   },
   {
@@ -41,7 +41,7 @@
     "source": "LinkedIn",
     "publishedAt": "2026-02-20",
     "domain": "machine-learning",
-    "tags": ["inference", "llm", "sglang"],
+    "tags": ["inference", "llm"],
     "summary": "Removes decode loops and per-item query prefill from SGLang ranking via a scoring path that reuses query KV in-batch."
   },
   {
@@ -68,7 +68,7 @@
     "source": "LinkedIn",
     "publishedAt": "2025-12-09",
     "domain": "machine-learning",
-    "tags": ["inference", "recommendation", "sglang"],
+    "tags": ["inference", "recommendation"],
     "summary": "Swaps per-item prompts repeating the member prefix for multi-item prompts under an item-isolating FlashInfer mask."
   },
   {
@@ -131,7 +131,7 @@
     "source": "LinkedIn",
     "publishedAt": "2021-09-08",
     "domain": "data",
-    "tags": ["hadoop", "yarn"],
+    "tags": ["hadoop"],
     "summary": "Fixes YARN job delays from starved queues and partition-blind heartbeat scans, then splits the cluster behind Robin."
   },
   {
@@ -140,7 +140,7 @@
     "source": "LinkedIn",
     "publishedAt": "2021-06-03",
     "domain": "machine-learning",
-    "tags": ["training", "recommendation", "tensorflow", "xgboost"],
+    "tags": ["training", "recommendation", "tensorflow"],
     "summary": "Merges per-objective models, whose latency grew with each objective, into one network with passive and active towers."
   },
   {

@@ -68,7 +68,6 @@
     "source": "Netflix",
     "publishedAt": "2026-02-09",
     "domain": "database",
-    "tags": ["graph"],
     "summary": "Prevents wide rows on highly connected nodes by storing edge links apart from edge properties in the KV Abstraction."
   },
   {
@@ -78,7 +77,7 @@
     "publishedAt": "2025-12-15",
     "series": "netflix-live",
     "domain": "network",
-    "tags": ["edge"],
+    "tags": ["edge", "overload-control"],
     "summary": "Shields non-autoscaling storage from request storms, using the segment template to cache early 404s and shed DVR first."
   },
   {
@@ -87,7 +86,7 @@
     "source": "Netflix",
     "publishedAt": "2025-12-15",
     "domain": "distributed-systems",
-    "tags": ["workflow", "temporal"],
+    "tags": ["workflow"],
     "summary": "Stops deploys failing on transient faults by moving Clouddriver cloud operations off instance-local state to Temporal."
   },
   {
@@ -115,7 +114,7 @@
     "source": "Netflix",
     "publishedAt": "2025-09-22",
     "domain": "data",
-    "tags": ["query-engine", "druid"],
+    "tags": ["query-engine"],
     "summary": "Swaps costly exact distinct counts over long date ranges for HLL sketches built at Druid ingest and merged in Spark."
   },
   {

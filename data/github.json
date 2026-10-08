@@ -5,7 +5,7 @@
     "source": "GitHub",
     "publishedAt": "2026-05-14",
     "domain": "frontend",
-    "tags": ["indexeddb", "react"],
+    "tags": ["react"],
     "summary": "Cuts redundant fetches on issue navigations by rendering from a preheated stale-while-revalidate IndexedDB cache."
   },
   {

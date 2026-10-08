@@ -23,7 +23,7 @@
     "source": "Notion",
     "publishedAt": "2026-02-12",
     "domain": "data",
-    "tags": ["infrastructure", "cost", "kubernetes", "spark"],
+    "tags": ["infrastructure", "kubernetes", "spark"],
     "summary": "Stops a spot interruption from killing many of a Spark job's executors at once with Spot Balancer's per-job spot cap."
   },
   {
@@ -32,7 +32,7 @@
     "source": "Notion",
     "publishedAt": "2025-12-11",
     "domain": "frontend",
-    "tags": ["offline", "sqlite"],
+    "tags": ["offline"],
     "summary": "Prevents pages kept offline for several reasons from losing access when one is cleared by storing a row per reason."
   },
   {
@@ -41,7 +41,7 @@
     "source": "Notion",
     "publishedAt": "2024-07-10",
     "domain": "frontend",
-    "tags": ["sqlite", "webassembly"],
+    "tags": ["webassembly"],
     "summary": "Ends SQLite corruption from concurrent OPFS writers by routing all tabs' queries via a SharedWorker to one active tab."
   },
   {
@@ -50,7 +50,7 @@
     "source": "Notion",
     "publishedAt": "2024-07-01",
     "domain": "data",
-    "tags": ["data-lake", "hudi", "spark"],
+    "tags": ["data-lake", "hudi", "spark", "cdc"],
     "summary": "Replaces Snowflake ingestion, slow and costly for update-heavy blocks, with Debezium CDC via Kafka into Hudi on S3."
   },
   {

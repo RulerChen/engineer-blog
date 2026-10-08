@@ -6,7 +6,7 @@
     "publishedAt": "2026-04-02",
     "series": "dropbox-magic-pocket",
     "domain": "database",
-    "tags": ["object-storage", "erasure-coding"],
+    "tags": ["object-storage"],
     "summary": "Reclaims sparse volumes that host-and-donor compaction drained too slowly via DP packing and Live Coder re-encoding."
   },
   {
@@ -71,7 +71,7 @@
     "source": "Dropbox",
     "publishedAt": "2021-03-04",
     "domain": "distributed-systems",
-    "tags": ["microservice", "monolith", "migration", "python"],
+    "tags": ["microservice", "monolith", "migration"],
     "summary": "Splits Metaserver, where any critical bug forced a full rollback, into Atlasservlet clusters the Atlas team runs."
   },
   {
@@ -80,7 +80,7 @@
     "source": "Dropbox",
     "publishedAt": "2020-12-17",
     "domain": "database",
-    "tags": ["tiering", "cost", "s3"],
+    "tags": ["tiering", "s3"],
     "summary": "Eases Edgestore's capacity crunch by moving cold audit logs into Alki, an LSM tree with DynamoDB and S3 tiers."
   },
   {
@@ -99,7 +99,7 @@
     "publishedAt": "2020-08-04",
     "series": "dropbox-sync-engine",
     "domain": "database",
-    "tags": ["compression", "file-sync"],
+    "tags": ["file-sync"],
     "summary": "Trims sync bytes zlib left on the wire with Broccoli, a Rust Brotli whose chunks concatenate for multicore encoding."
   },
   {
@@ -157,7 +157,7 @@
     "source": "Dropbox",
     "publishedAt": "2019-01-08",
     "domain": "distributed-systems",
-    "tags": ["rpc", "migration", "grpc"],
+    "tags": ["rpc", "migration", "grpc", "overload-control"],
     "summary": "Curbs cascading overload, once left to custom client backoff, with Courier's mandatory deadlines and LIFO queue."
   },
   {

@@ -14,7 +14,7 @@
     "source": "Canva",
     "publishedAt": "2025-01-06",
     "domain": "data",
-    "tags": ["ingestion", "kinesis", "snowflake"],
+    "tags": ["ingestion", "kinesis"],
     "summary": "Swaps Firehose, whose per-record billing floor inflated costs, for Snowpipe Streaming with one client per KCL shard."
   },
   {
@@ -41,7 +41,7 @@
     "source": "Canva",
     "publishedAt": "2024-03-14",
     "domain": "frontend",
-    "tags": ["rendering", "svg"],
+    "tags": ["rendering"],
     "summary": "Shrinks strokes that hit the design size limit with coordinate rounding, Ramer-Douglas-Peucker and polygon union."
   },
   {
@@ -69,7 +69,7 @@
     "source": "Canva",
     "publishedAt": "2021-09-16",
     "domain": "machine-learning",
-    "tags": ["training", "argo-workflows"],
+    "tags": ["training"],
     "summary": "Ends sequential tuning on vertically scaled trainers with Optuna map-reduce rounds of parallel trainers on Argo."
   },
   {
@@ -78,7 +78,7 @@
     "source": "Canva",
     "publishedAt": "2021-05-27",
     "domain": "network",
-    "tags": ["load-balancing", "websocket", "real-time", "rsocket"],
+    "tags": ["load-balancing", "websocket", "real-time"],
     "summary": "Avoids a WebSocket per service with a gateway multiplexing RSocket channels whose backpressure isolates failures."
   }
 ]

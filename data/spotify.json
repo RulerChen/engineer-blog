@@ -53,7 +53,7 @@
     "source": "Spotify",
     "publishedAt": "2022-03-17",
     "domain": "search",
-    "tags": ["vector", "vespa"],
+    "tags": ["vector"],
     "summary": "Finds episodes that term-matching Elasticsearch missed with fine-tuned dense embeddings served by Vespa ANN."
   },
   {
@@ -62,7 +62,7 @@
     "source": "Spotify",
     "publishedAt": "2021-02-11",
     "domain": "data",
-    "tags": ["etl", "google-dataflow", "scio"],
+    "tags": ["etl", "google-dataflow"],
     "summary": "Avoids costly shuffles and Bigtable scale-ups for Wrapped with Sort Merge Bucket files sorted by user_id."
   },
   {
@@ -71,7 +71,7 @@
     "source": "Spotify",
     "publishedAt": "2017-03-31",
     "domain": "network",
-    "tags": ["dns", "bind"],
+    "tags": ["dns"],
     "summary": "Runs Unbound on each host so DNS discovery cannot flood resolvers, and traces outages to firewall and Docker changes."
   },
   {
@@ -91,7 +91,7 @@
     "publishedAt": "2016-03-03",
     "series": "spotify-event-delivery",
     "domain": "data",
-    "tags": ["ingestion", "migration", "google-pubsub", "kafka"],
+    "tags": ["ingestion", "migration", "kafka"],
     "summary": "Picks Cloud Pub/Sub after Kafka 0.8 failed in production, with Mirror Maker dropping data while reporting success."
   },
   {

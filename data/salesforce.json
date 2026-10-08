@@ -14,7 +14,7 @@
     "source": "Salesforce",
     "publishedAt": "2021-10-28",
     "domain": "reliability",
-    "tags": ["metrics", "graphite"],
+    "tags": ["metrics"],
     "summary": "Replaces Graphite's whisper files, whose random per-metric writes maxed out SSD I/O, with CarbonJ on embedded RocksDB."
   },
   {
@@ -72,7 +72,7 @@
     "publishedAt": "2021-04-08",
     "series": "salesforce-phoenix-secondary-indexes",
     "domain": "database",
-    "tags": ["secondary-index", "consistency", "hbase", "phoenix"],
+    "tags": ["secondary-index", "consistency", "hbase"],
     "summary": "Stops racing updates from duplicating index rows without deadlock by freeing locks before index RPCs and caching state."
   },
   {
@@ -82,7 +82,7 @@
     "publishedAt": "2021-04-06",
     "series": "salesforce-phoenix-secondary-indexes",
     "domain": "database",
-    "tags": ["secondary-index", "consistency", "hbase", "phoenix"],
+    "tags": ["secondary-index", "consistency", "hbase"],
     "summary": "Keeps index tables on other servers consistent with data by writing index rows unverified first and repairing on read."
   },
   {
@@ -120,7 +120,7 @@
     "source": "Salesforce",
     "publishedAt": "2020-10-14",
     "domain": "data",
-    "tags": ["data-lake", "delta-lake", "spark"],
+    "tags": ["data-lake", "spark"],
     "summary": "Ends Conflicting Commits errors among Spark streams on a Delta table with a ZooKeeper lock and predecessor check."
   },
   {
@@ -129,7 +129,7 @@
     "source": "Salesforce",
     "publishedAt": "2020-09-23",
     "domain": "data",
-    "tags": ["data-lake", "delta-lake", "spark"],
+    "tags": ["data-lake", "spark"],
     "summary": "Fixes slow mutations that hit many date partitions by partitioning engagement data by org alone, Z-ordered by date."
   }
 ]

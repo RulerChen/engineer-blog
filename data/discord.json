@@ -5,7 +5,6 @@
     "source": "Discord",
     "publishedAt": "2026-05-08",
     "domain": "database",
-    "tags": ["scylladb"],
     "summary": "Replaces unchecked scripts that restarted from scratch on failure with the Scylla Control Plane's resumable jobs."
   },
   {
@@ -34,7 +33,7 @@
     "publishedAt": "2023-10-25",
     "series": "discord-elixir-scaling",
     "domain": "programming",
-    "tags": ["concurrency", "real-time", "elixir"],
+    "tags": ["concurrency", "real-time"],
     "summary": "Tames quadratic fanout in a huge guild's process by skipping passive sessions and splitting work across relays."
   },
   {
@@ -44,7 +43,7 @@
     "publishedAt": "2023-03-06",
     "series": "discord-message-storage",
     "domain": "database",
-    "tags": ["migration", "cassandra", "rust", "scylladb"],
+    "tags": ["migration", "cassandra", "rust"],
     "summary": "Escapes Cassandra's hot partitions and GC pauses by moving to ScyllaDB behind Rust services that coalesce reads.",
     "commentary": [
       {
@@ -69,7 +68,7 @@
     "publishedAt": "2017-07-06",
     "series": "discord-elixir-scaling",
     "domain": "programming",
-    "tags": ["concurrency", "real-time", "elixir"],
+    "tags": ["concurrency", "real-time"],
     "summary": "Fixes big guild processes stalling on costly per-session sends by having Manifold send once per remote node."
   },
   {

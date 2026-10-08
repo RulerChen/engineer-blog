@@ -1,0 +1,222 @@
+/* Search palette: a modal dialog, so focus, Escape and the inert page behind come from the browser */
+.palette {
+  width: min(600px, calc(100vw - 32px));
+  max-width: none;
+  max-height: min(520px, 76dvh);
+  margin: 12vh auto auto;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--card);
+  color: var(--ink);
+  box-shadow:
+    0 2px 6px rgba(40, 25, 10, 0.08),
+    0 28px 70px -20px rgba(40, 25, 10, 0.45);
+  overflow: hidden;
+  /* The closed state, which it shrinks back into on the way out, a little faster than it came. */
+  opacity: 0;
+  transform: scale(0.97);
+  transition:
+    opacity 0.15s var(--ease-out),
+    transform 0.15s var(--ease-out),
+    overlay 0.15s allow-discrete,
+    display 0.15s allow-discrete;
+}
+.palette[open] {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  transform: none;
+  transition-duration: 0.2s;
+}
+@starting-style {
+  .palette[open] {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+}
+/* A literal color, since older browsers give ::backdrop none of the page's custom properties. */
+.palette::backdrop {
+  background: rgba(35, 24, 14, 0.32);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  transition:
+    opacity 0.15s var(--ease-out),
+    overlay 0.15s allow-discrete,
+    display 0.15s allow-discrete;
+}
+.palette[open]::backdrop {
+  opacity: 1;
+  transition-duration: 0.2s;
+}
+@starting-style {
+  .palette[open]::backdrop {
+    opacity: 0;
+  }
+}
+/* Opened or closed from the keyboard, so at once, like the shortcut. */
+.palette.instant,
+.palette.instant::backdrop {
+  transition: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .palette {
+    transform: none;
+  }
+  @starting-style {
+    .palette[open] {
+      transform: none;
+    }
+  }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .palette::backdrop {
+    backdrop-filter: none;
+  }
+}
+
+.pal-field {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+}
+/* 16px, so a phone does not zoom in on focus. */
+.pal-field input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: var(--text-xl);
+}
+.pal-results {
+  flex: 1;
+  min-height: 0;
+  margin: 0;
+  padding: 6px;
+  overflow-y: auto;
+  list-style: none;
+  scroll-padding-block: 6px;
+}
+.pal-group {
+  padding: 10px 10px 4px;
+  color: var(--muted);
+  font-size: var(--text-xs);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+/* The selection jumps rather than glides: arrowing through a list is too frequent to wait on. */
+.pal-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.pal-row.active {
+  background: var(--chip);
+}
+/* One 24px column on every row, centred on a one-line title and its meta, so a wrapped title does not drag its icon down. */
+.pal-icon,
+.pal-enter {
+  width: 24px;
+  height: 24px;
+  margin-top: 6px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+}
+.pal-icon {
+  border-radius: 6px;
+  color: var(--muted);
+  overflow: hidden;
+}
+.pal-icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+/* Drawn icons get a tile the size of a logo, so they line up with the logos around them. */
+.pal-topic {
+  background: color-mix(in srgb, var(--accent) 12%, var(--card));
+  color: var(--accent);
+}
+/* The inset edge keeps the tile visible on the selected row, whose background is the same chip color. */
+.pal-icon.lettered,
+.pal-list {
+  background: var(--chip);
+  box-shadow: inset 0 0 0 1px var(--line);
+  color: var(--chip-ink);
+}
+.pal-text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+/* Two lines, so a long title still says what it is on a phone. */
+.pal-title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  font-size: var(--text-lg);
+  font-weight: 700;
+  line-height: 1.35;
+}
+.pal-meta {
+  color: var(--muted);
+  font-size: var(--text-sm);
+  line-height: 1.35;
+}
+.pal-enter {
+  color: var(--muted);
+  visibility: hidden;
+}
+.pal-row.active .pal-enter {
+  visibility: visible;
+}
+.pal-empty {
+  margin: 0;
+  padding: 28px 18px;
+  color: var(--muted);
+  font-size: var(--text-lg);
+  text-align: center;
+}
+.pal-foot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  padding: 10px 18px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: var(--text-sm);
+}
+.pal-foot span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+/* No keyboard to point at. */
+@media (hover: none) {
+  .pal-foot,
+  .pal-field kbd,
+  .pal-enter {
+    display: none;
+  }
+}
+@media (max-width: 560px) {
+  .palette {
+    margin-top: 16px;
+  }
+}

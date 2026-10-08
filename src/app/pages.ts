@@ -25,11 +25,36 @@ function show(page: Page): void {
   document.title = PAGES[page].title;
 }
 
-/** Switches in place rather than loading the other file; the query belongs to the page that set it, so it is dropped. */
+/** Each page's query as it was left, so coming back through the tabs finds the same filters or topic. */
+const leftQuery: Record<Page, string> = { blog: "", roadmap: "" };
+
+/** Switches in place rather than loading the other file; the query belongs to the page that set it, so it waits for that page. */
 export function openPage(page: Page): void {
   if (page === currentPage.value) return;
-  history.pushState(null, "", PAGES[page].path);
+  leftQuery[currentPage.value] = window.location.search;
+  history.pushState(null, "", PAGES[page].path + leftQuery[page]);
   show(page);
+}
+
+/** Pushed, then announced as a popstate, which both pages already answer by re-reading the url. */
+function navigate(page: Page, query: string): void {
+  if (page !== currentPage.value) leftQuery[currentPage.value] = window.location.search;
+  history.pushState(null, "", PAGES[page].path + query);
+  window.dispatchEvent(new PopStateEvent("popstate"));
+}
+
+/** Straight to one roadmap topic from either page. */
+export function openTopic(id: string): void {
+  navigate("roadmap", `?topic=${encodeURIComponent(id)}`);
+}
+
+/** The blog list narrowed to a text search, keeping whatever other filters it had. */
+export function searchList(text: string): void {
+  const query = new URLSearchParams(
+    currentPage.value === "blog" ? window.location.search : leftQuery.blog,
+  );
+  query.set("q", text);
+  navigate("blog", `?${query}`);
 }
 
 window.addEventListener("popstate", () => show(pageAt(window.location.pathname)));

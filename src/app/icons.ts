@@ -15,6 +15,24 @@ export const ICONS = {
   ],
   search: ["M18 11a7 7 0 1 1-14 0 7 7 0 0 1 14 0z", "M16.5 16.5 21 21"],
   series: ["M4 6h10M4 12h10M4 18h10M18 5v14M18 19l-2.5-2.5M18 19l2.5-2.5"],
+  sun: [
+    "M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z",
+    "M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41",
+  ],
+  moon: ["M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"],
+  // Keycap glyphs, drawn because the font's arrows sit above the middle of a key and it has no return or command sign.
+  arrowUp: ["M12 19V5", "M6 11l6-6 6 6"],
+  arrowDown: ["M12 5v14", "M6 13l6 6 6-6"],
+  enter: ["M19 5v6a4 4 0 0 1-4 4H5", "M9 11l-4 4 4 4"],
+  command: ["M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3z"],
+  // Three boxes joined like the topic map's, for a roadmap topic.
+  roadmap: [
+    "M3 4h6v4H3z",
+    "M15 10h6v4h-6z",
+    "M3 16h6v4H3z",
+    "M9 6c3 0 3 6 6 6",
+    "M9 18c3 0 3-6 6-6",
+  ],
 } satisfies Record<string, string[]>;
 
 /** A new entry type needs an icon here, which is why the set is closed. */

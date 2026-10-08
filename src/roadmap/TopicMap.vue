@@ -36,6 +36,21 @@ const nodes = computed(() =>
     built: props.built.has(node.id),
   })),
 );
+
+/** The map for narrow screens: column by column, top to bottom, each topic naming what to read first. */
+const columns = computed(() =>
+  COLUMN_X.map((_, col) =>
+    nodes.value
+      .filter((node) => node.col === col)
+      .toSorted((a, b) => a.y - b.y)
+      .map((node) => ({
+        ...node,
+        after: TOPIC_EDGES.filter((edge) => edge.to === node.id).map((edge) =>
+          topicLabel(edge.from),
+        ),
+      })),
+  ),
+);
 </script>
 
 <template>
@@ -88,6 +103,25 @@ const nodes = computed(() =>
           </text>
         </g>
       </svg>
+    </div>
+    <div class="topic-list">
+      <ul v-for="(column, col) in columns" :key="col" class="tl-column">
+        <li v-for="node in column" :key="node.id">
+          <component
+            :is="node.built ? 'button' : 'div'"
+            class="tl-topic"
+            :class="{ built: node.built }"
+            @click="node.built && emit('open', node.id)"
+            @pointerenter="node.built && useRoadmap(node.id)"
+            @focus="node.built && useRoadmap(node.id)"
+          >
+            {{ topicLabel(node.id) }}
+            <span v-if="node.after.length" class="tl-after"
+              >Read first: {{ node.after.join(", ") }}</span
+            >
+          </component>
+        </li>
+      </ul>
     </div>
   </figure>
 </template>

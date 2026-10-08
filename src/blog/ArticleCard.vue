@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from "vue";
+import { computed, onMounted, ref } from "vue";
 import EntryTypeIcon from "../app/EntryTypeIcon.vue";
 import Icon from "../app/Icon.vue";
 import SourceIcon from "../app/SourceIcon.vue";
@@ -29,8 +29,10 @@ const props = withDefaults(
     activeTags?: string[];
     /** The marks whose toggle takes this card out of the list it is in. */
     removes?: EntryState[];
+    /** Set when an undo brings the card back into the list. */
+    arriving?: boolean;
   }>(),
-  { series: undefined, activeTags: () => [], removes: () => [] },
+  { series: undefined, activeTags: () => [], removes: () => [], arriving: false },
 );
 
 const emit = defineEmits<{
@@ -43,12 +45,12 @@ const emit = defineEmits<{
 const root = ref<HTMLElement | null>(null);
 let leaving = false;
 
-/** Folds the card shut, gap and all, so the cards below slide up instead of jumping. */
-function collapse(el: HTMLElement): Promise<unknown> {
+const FOLD_TIMING = { duration: 240, easing: "cubic-bezier(0.22, 1, 0.36, 1)" };
+
+/** The card open, then folded shut gap and all, so the cards below slide instead of jumping. */
+function foldFrames(el: HTMLElement): Keyframe[] {
   const style = getComputedStyle(el);
   const gap = el.parentElement ? getComputedStyle(el.parentElement).rowGap : "0px";
-  el.style.overflow = "hidden";
-  el.style.pointerEvents = "none";
   const open = {
     height: `${el.offsetHeight}px`,
     paddingTop: style.paddingTop,
@@ -67,13 +69,28 @@ function collapse(el: HTMLElement): Promise<unknown> {
     marginBottom: `-${gap}`,
     opacity: 0,
   };
-  // Held shut until the list drops the card, so it never flashes back for a frame.
-  return el.animate([open, shut], {
-    duration: 240,
-    easing: "cubic-bezier(0.22, 1, 0.36, 1)",
-    fill: "forwards",
-  }).finished;
+  return [open, shut];
 }
+
+function collapse(el: HTMLElement): Promise<unknown> {
+  el.style.overflow = "hidden";
+  el.style.pointerEvents = "none";
+  // Held shut until the list drops the card, so it never flashes back for a frame.
+  return el.animate(foldFrames(el), { ...FOLD_TIMING, fill: "forwards" }).finished;
+}
+
+/** A card brought back by an undo unfolds along the path it folded away on. */
+onMounted(() => {
+  const el = root.value;
+  if (!props.arriving || !el || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  // A card this new has not been laid out yet, so it would measure as its placeholder size.
+  el.style.contentVisibility = "visible";
+  el.style.overflow = "hidden";
+  el.animate(foldFrames(el).toReversed(), FOLD_TIMING).onfinish = () => {
+    el.style.removeProperty("content-visibility");
+    el.style.removeProperty("overflow");
+  };
+});
 
 /** A toggle that takes the card out of the list folds it first; a second click while it folds is ignored. */
 async function act(state: EntryState): Promise<void> {
@@ -128,7 +145,11 @@ const avatarLetter = computed(() => sourceName(props.article.source).charAt(0) |
     >
     <div class="body">
       <div class="meta">
-        <span class="entry-type" :data-tip="entryTypeIcon(article.type).label">
+        <span
+          class="entry-type"
+          data-tip-pos="bottom"
+          :data-tip="entryTypeIcon(article.type).label"
+        >
           <EntryTypeIcon :type="article.type" :size="16" />
         </span>
         <template v-if="article.source">
@@ -182,7 +203,7 @@ const avatarLetter = computed(() => sourceName(props.article.source).charAt(0) |
     <div class="card-actions">
       <button
         class="card-action bookmark-button"
-        data-tip-align="right"
+        data-tip-pos="left"
         :aria-label="saved ? 'Remove bookmark' : 'Save for later'"
         :data-tip="saved ? 'Remove bookmark' : 'Save for later'"
         @click="act('saved')"
@@ -191,7 +212,7 @@ const avatarLetter = computed(() => sourceName(props.article.source).charAt(0) |
       </button>
       <button
         class="card-action ignore-button"
-        data-tip-align="right"
+        data-tip-pos="left"
         :class="{ active: hidden }"
         :aria-label="hidden ? 'Put this back in the list' : 'Ignore this entry'"
         :data-tip="hidden ? 'Put this back in the list' : 'Ignore — stop showing this entry'"

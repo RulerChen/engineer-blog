@@ -5,7 +5,7 @@
     "source": "OpenAI",
     "publishedAt": "2026-09-11",
     "domain": "database",
-    "tags": ["cosmos-db", "envoy", "rust"],
+    "tags": ["envoy", "rust"],
     "summary": "Traces Habitat's tail stalls to asyncio scheduling delay and LIFO pool reuse, then caps per-process load and uses FIFO."
   },
   {

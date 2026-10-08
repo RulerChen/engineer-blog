@@ -5,7 +5,7 @@
     "source": "Booking",
     "publishedAt": "2026-09-29",
     "domain": "programming",
-    "tags": ["garbage-collection", "load-balancing", "ssr", "cost", "nodejs"],
+    "tags": ["garbage-collection", "load-balancing", "ssr", "nodejs"],
     "summary": "Drops pm2's supervisor hop for wattpm worker threads, then cures SO_REUSEPORT skew from recycled ports with nginx."
   },
   {
@@ -14,7 +14,7 @@
     "source": "Booking",
     "publishedAt": "2025-04-15",
     "domain": "reliability",
-    "tags": ["alerting"],
+    "tags": ["metrics"],
     "summary": "Stops past incidents from skewing alert baselines with Granomaly percentile bands that exclude z-score outliers."
   },
   {
@@ -23,7 +23,6 @@
     "source": "Booking",
     "publishedAt": "2025-02-05",
     "domain": "reliability",
-    "tags": ["cost", "mimir", "zstd"],
     "summary": "Cuts the cross-AZ bill of Mimir's replicated gRPC writes with S2 compression, since zstd blew up ingester memory."
   },
   {
@@ -32,6 +31,7 @@
     "source": "Booking",
     "publishedAt": "2024-11-11",
     "domain": "machine-learning",
+    "tags": ["training"],
     "summary": "Stops delayed cancellation labels from pinning models to pre-pandemic data with a survival net that uses open bookings."
   },
   {

@@ -28,6 +28,12 @@ const numbered = computed(() => {
   }));
 });
 
+/** Main-line steps ticked off, the same ones whose numbers fill in. */
+const progress = computed(() => {
+  const steps = numbered.value.flatMap((part) => part.steps);
+  return { read: steps.filter(({ step }) => isDone(step.main)).length, total: steps.length };
+});
+
 const relations = computed(() =>
   [
     { label: "Read first", ids: props.roadmap.before },
@@ -49,6 +55,7 @@ function sideGroups(step: RoadmapStep): { name: string; items: RoadmapItem[] }[]
   <article class="rm-view">
     <header class="rm-top">
       <h2 class="heading-font">{{ roadmap.title }}</h2>
+      <p class="rm-progress">{{ progress.read }} of {{ progress.total }} steps read</p>
       <div v-for="row in relations" :key="row.label" class="rm-rel-row">
         <b>{{ row.label }}</b>
         <template v-for="id in row.ids" :key="id">

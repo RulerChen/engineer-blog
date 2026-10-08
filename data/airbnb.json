@@ -25,7 +25,7 @@
     "publishedAt": "2025-09-24",
     "series": "airbnb-key-value-store",
     "domain": "database",
-    "tags": ["key-value", "migration"],
+    "tags": ["key-value", "migration", "sharding"],
     "summary": "Moves Mussel off hotspot-prone hash sharding to range-sharded NewSQL, seeding presplit tables from backups and Kafka."
   },
   {
@@ -34,7 +34,7 @@
     "source": "Airbnb",
     "publishedAt": "2025-08-07",
     "domain": "network",
-    "tags": ["service-mesh", "migration", "istio"],
+    "tags": ["service-mesh", "migration"],
     "summary": "Stops Istio upgrades from waiting on team deploys by having Krispr inject the revision label at CI and pod admission."
   },
   {
@@ -88,7 +88,7 @@
     "source": "Airbnb",
     "publishedAt": "2023-03-23",
     "domain": "network",
-    "tags": ["service-mesh", "istio"],
+    "tags": ["service-mesh"],
     "summary": "Traces rising Istio push delay to a read-locking LRU xDS cache and reflection deep copies in debounce, then cuts both."
   },
   {
@@ -191,7 +191,7 @@
     "publishedAt": "2017-12-12",
     "series": "airbnb-building-services",
     "domain": "distributed-systems",
-    "tags": ["microservice", "thrift"],
+    "tags": ["microservice", "thrift", "rpc"],
     "summary": "Replaces untyped JSON APIs and hand-written clients with Thrift IDL codegen inside Dropwizard, keeping the HTTP stack."
   },
   {

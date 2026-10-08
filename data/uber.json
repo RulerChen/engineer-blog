@@ -116,7 +116,7 @@
     "source": "Uber",
     "publishedAt": "2024-08-26",
     "domain": "programming",
-    "tags": ["monorepo", "ci-cd"],
+    "tags": ["monorepo"],
     "summary": "Replaces custom CD pipelines lacking enforced checks with Up CD, scoping each service's commits via the Bazel graph."
   },
   {
@@ -200,7 +200,7 @@
     "source": "Uber",
     "publishedAt": "2022-11-10",
     "domain": "reliability",
-    "tags": ["profiling", "go"],
+    "tags": ["go"],
     "summary": "Finds goroutine leaks that tests miss by flagging channel ops where goroutines pile up in production profiles."
   },
   {
@@ -245,7 +245,7 @@
     "source": "Uber",
     "publishedAt": "2022-01-25",
     "domain": "data",
-    "tags": ["file-format", "cost", "parquet"],
+    "tags": ["file-format", "parquet"],
     "summary": "Curbs rising Parquet storage cost by recompressing to high-level ZSTD, since read time stays flat across levels."
   },
   {
@@ -281,7 +281,7 @@
     "source": "Uber",
     "publishedAt": "2021-09-09",
     "domain": "database",
-    "tags": ["tiering", "cost"],
+    "tags": ["tiering"],
     "summary": "Cuts the cost of cold Schemaless data on fast storage by packing it into compressed batches behind unchanged APIs."
   },
   {
@@ -291,7 +291,7 @@
     "publishedAt": "2021-06-08",
     "series": "uber-api-gateway",
     "domain": "network",
-    "tags": ["api-gateway"],
+    "tags": ["proxy"],
     "summary": "Ends merge conflicts and ever-slower codegen by landing only configs and regenerating just the changed modules."
   },
   {
@@ -310,7 +310,7 @@
     "source": "Uber",
     "publishedAt": "2021-02-19",
     "domain": "reliability",
-    "tags": ["logging", "clickhouse", "elasticsearch"],
+    "tags": ["clickhouse", "elasticsearch"],
     "summary": "Replaces ELK, where type conflicts dropped logs, with ClickHouse key-value arrays whose types resolve at query time."
   },
   {
@@ -347,7 +347,7 @@
     "source": "Uber",
     "publishedAt": "2018-10-17",
     "domain": "data",
-    "tags": ["data-lake", "hadoop"],
+    "tags": ["data-lake", "hadoop", "hudi"],
     "summary": "Trades slow full snapshot rebuilds, forced by updates to old partitions, for Hudi upserts and incremental pulls."
   },
   {
@@ -365,7 +365,7 @@
     "source": "Uber",
     "publishedAt": "2018-06-27",
     "domain": "data",
-    "tags": ["geospatial", "h3"],
+    "tags": ["geospatial"],
     "summary": "Avoids Mercator distortion and squares' unequal neighbor distances with hierarchical hexagons on icosahedron faces."
   },
   {
@@ -413,7 +413,7 @@
     "publishedAt": "2016-01-12",
     "series": "uber-schemaless",
     "domain": "database",
-    "tags": ["mysql"],
+    "tags": ["mysql", "sharding"],
     "summary": "Replaces Postgres, nearly out of space for trips, with sharded append-only MySQL cells that form a change log."
   }
 ]

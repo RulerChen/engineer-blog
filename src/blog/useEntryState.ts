@@ -8,6 +8,8 @@ export interface EntryStates {
   states: Readonly<Ref<Readonly<Record<string, EntryState>>>>;
   /** Sets the mark, or clears it when the entry already has it. */
   toggle: (id: string, state: EntryState) => void;
+  /** Puts the mark back exactly as it was, none included. */
+  set: (id: string, state: EntryState | undefined) => void;
 }
 
 const isEntryState = (value: unknown): value is EntryState =>
@@ -30,13 +32,17 @@ function read(): Record<string, EntryState> {
 export function useEntryState(): EntryStates {
   const states = ref(read());
 
-  function toggle(id: string, state: EntryState): void {
+  function set(id: string, state: EntryState | undefined): void {
     const next = { ...states.value };
-    if (next[id] === state) delete next[id];
-    else next[id] = state;
+    if (state) next[id] = state;
+    else delete next[id];
     states.value = next;
     save(STORAGE_KEYS.entryState, JSON.stringify(next));
   }
 
-  return { states: readonly(states), toggle };
+  function toggle(id: string, state: EntryState): void {
+    set(id, states.value[id] === state ? undefined : state);
+  }
+
+  return { states: readonly(states), toggle, set };
 }

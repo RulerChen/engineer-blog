@@ -12,13 +12,13 @@ Every blog entry carries one `domain` and up to five `tags`. The vocabulary itse
 
 ## Four kinds of id
 
-**Domain.** A field of engineering: an area with its own body of knowledge, several concepts of its own, and posts from many blogs. There are twelve, `other` included, and each has a one-line note in `tags.ts` on where its edge is. A component (`job-queue`) or a practice (`testing`, `api-design`) is never a domain; it is a concept inside one, or a cross-domain concept when it spans several. A product category is not a tag at all: `messaging` and `media` were tried as domains and removed. Messaging became the concepts `pub-sub` and `job-queue`, and a video or voice post is described by what it works on, such as `webrtc` or `edge`. `platform`, `developer-experience` and `sync` were removed earlier because they name a team, a goal or a product.
+**Domain.** A field of engineering: an area with its own body of knowledge, several concepts of its own, and posts from many blogs. There are twelve, `other` included, and each has a one-line note in `tags.ts` on where its edge is. A component (`job-queue`) or a practice (`testing`, `static-analysis`) is never a domain; it is a concept inside one, or a cross-domain concept when it spans several. A product category is not a tag at all: `messaging` and `media` were tried as domains and removed. Messaging became the concepts `pub-sub` and `job-queue`, and a video or voice post is described by what it works on, such as `webrtc` or `edge`. `platform`, `developer-experience` and `sync` were removed earlier because they name a team, a goal or a product.
 
 **Concept.** A technique or a problem, never a product: `sharding`, not `vitess`. Every concept is listed under one domain in the topic menu, and that is all the listing means. Any entry may carry any concept, and carrying one never puts the entry in another domain. The one exception to "never a product" is network protocols defined by a standards body (IETF, W3C, IEEE), which are concepts under `network`: `dns`, `http`, `websocket`.
 
-**Cross-domain concept.** A concept no domain lists. Most describe the kind of story (`migration`, `incident`, `debugging`, `cost`). The rest are subjects that live in several fields at once (`real-time`, `multi-region`, `geospatial`). The set is closed. A new one has to pass two tests: its entries span at least three domains, and it still narrows, sitting on roughly a tenth of the entries or fewer. `performance` fails the second test: so many posts are about speed that the tag would narrow nothing.
+**Cross-domain concept.** A concept no domain lists. Most describe the kind of story (`migration`, `incident`, `debugging`). The rest are subjects that live in several fields at once (`real-time`, `multi-region`, `geospatial`). The set is closed. A new one has to pass two tests: its entries span at least three domains, and it still narrows, sitting on roughly a tenth of the entries or fewer. `performance` fails the second test: so many posts are about speed that the tag would narrow nothing. A goal is never a cross-domain concept: `cost` was removed because most posts can claim it, so it landed on some cost-cutting posts and missed others.
 
-**Technology.** Something a reader outside the company could run: an open-source project or a product you can buy. An in-house system is not a tag unless it was open-sourced (LogDevice, H3 and Vitess are tags; Manhattan and Magic Pocket are not). Its name belongs in the title and the summary, where search finds it.
+**Technology.** Something a reader outside the company could run: an open-source project or a product you can buy. An in-house system is not a tag unless it was open-sourced (Vitess is a tag; Manhattan and Magic Pocket are not). A technology becomes a tag only once posts from two blogs work on it. Until then its name belongs in the title and the summary, where search finds it: a tag that gathers one post, or one blog's series, adds a menu row and narrows nothing search cannot.
 
 ## Filing an entry
 
@@ -26,7 +26,7 @@ Every blog entry carries one `domain` and up to five `tags`. The vocabulary itse
 2. Add the concepts the post works on, from any domain.
 3. If the post belongs as much to a second field, put that domain's id in `tags`. Only one is allowed. It is the only way onto a second shelf, because the site lists an entry under a domain only when its card shows that domain.
 4. Add a cross-domain concept if the story is one.
-5. Add the technologies the post works on.
+5. Add the technologies the post works on that are in the vocabulary. If one is missing and another blog's entry works on it too, add it and tag both.
 
 Five tags is the ceiling, not counting the domain. Two or three is the normal shape, and zero is fine when no concept fits. Tag only what the post actually works on: `mysql` belongs on "Upgrading MySQL at Shopify", not on a post that merely stores something in MySQL along the way. The same holds for `migration`: the post has to be about moving from A to B (why, how, or the cut-over). A post that only mentions the old system as the reason for a new design does not qualify, and neither does resharding inside one system.
 
@@ -34,18 +34,18 @@ Order does not matter. The build sorts the tags as a second domain, the entry's 
 
 ## Naming
 
-Ids are lowercase and dashed. A concept is a noun: `load-balancing`, not `load-balance`. A technology drops its foundation or vendor prefix (`phoenix`, not `apache-phoenix`) unless the bare name is a generic word (`google-pubsub`, `google-dataflow`). When a technology is a component of a larger one, tag the component the post works on: `hdfs` or `yarn` rather than `hadoop`, which is for the ecosystem as a whole.
+Ids are lowercase and dashed. A concept is a noun: `load-balancing`, not `load-balance`. A technology drops its foundation or vendor prefix (`kafka`, not `apache-kafka`) unless the bare name is a generic word (`google-dataflow`). When a technology is a component of a larger one, tag the component the post works on: `hdfs` rather than `hadoop`, which is for the ecosystem as a whole and for a component that is not a tag yet.
 
 ## Changing it
 
 `npm run tag-stats` prints the numbers these rules are judged by.
 
-- **Add a technology** with one line in `TECHNOLOGIES`. The build error names the id that is missing.
-- **Add a concept** under the domain readers would look for it in. A concept with no entries yet is a reservation: the menus are built from the data, so it costs nothing on the page, and it tells the next person which id to use.
+- **Add a technology** with one line in `TECHNOLOGIES`, once posts from two blogs work on it. The build error names the id that is missing.
+- **Add a concept** under the domain readers would look for it in, once two entries work on it. Until then the post takes the nearest broader concept, or none.
 - **Add a domain** only for a field as defined above, once its posts come from several blogs and already need several concepts of their own. A concept that grows large stays a concept: `job-queue` and `pub-sub` were once promoted to a `messaging` domain, and they belong under distributed systems and data.
 - **Move a concept** when readers would look for it under another domain. Where its entries live is a hint, not the rule: `consistency` is listed under distributed systems although every entry carrying it is a database post.
 - **Never split a domain because it is large.** `database` is over a quarter of the list, and its concepts narrow it. Split a domain when it is incoherent, which shows as a high "no concept" share and a high "second domain" share together. `architecture` once looked like that.
-- **Absorb a concept** that is still on a single entry after a full pass, unless it names a recognized subfield such as `ddos` or `erasure-coding`.
+- **Absorb a concept** that falls to one entry, and a technology that falls to one entry or one blog. When a broader concept fits, retag its entries with that and alias the old id to it; otherwise drop it.
 - **Rename** by adding the old id to `ALIASES` in the same change. Old `?tags=` links keep working, and the build rejects the old id in data.
 - **`other` is a queue, not a domain.** More than five entries there means something is missing: read them together and see what they share.
 - **Do not let one company's output drive a domain.** A field has posts from many blogs; a shelf one blog fills is a label for that blog.

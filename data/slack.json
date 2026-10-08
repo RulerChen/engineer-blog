@@ -5,7 +5,6 @@
     "source": "Slack",
     "publishedAt": "2024-09-17",
     "domain": "infrastructure",
-    "tags": ["config-management", "chef"],
     "summary": "Replaces a single Chef stack that updated all environments at once with shards and Chef Librarian's staged promotion."
   },
   {
@@ -23,7 +22,7 @@
     "source": "Slack",
     "publishedAt": "2020-06-29",
     "domain": "reliability",
-    "tags": ["incident", "consul", "haproxy"],
+    "tags": ["incident"],
     "summary": "Traces an outage to stale HAProxy backends after webapps outgrew its slots and the sync quit before freeing dead ones."
   },
   {

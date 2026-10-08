@@ -188,3 +188,15 @@ export function scoreArticle(article: Article, query: Query): number | null {
   const combined = scoreIndexed(entry.combined, query, false);
   return combined === null ? null : combined * CROSS_FIELD_WEIGHT;
 }
+
+/** A roadmap item by its title, or else its source at the meta weight; the same scale as scoreArticle, so the two rank together. */
+export function scoreRoadmapItem(
+  item: { title: string; source?: string },
+  query: Query,
+): number | null {
+  const title = scoreIndexed(indexOf(item.title), query);
+  if (title !== null) return title;
+  if (!item.source) return null;
+  const source = scoreIndexed(indexOf(item.source), query, false);
+  return source === null ? null : source * META_WEIGHT;
+}

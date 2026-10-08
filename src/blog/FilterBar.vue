@@ -101,16 +101,26 @@ function clearAll(): void {
       />
     </FilterDropdown>
 
-    <!-- The one filter with no menu: it is set from a card's series row. -->
+    <!-- The filters with no menu: a series is set from a card's series row, a text search from the search palette. -->
     <button
       v-if="state.series"
-      class="series-active"
+      class="filter-chip"
       data-tip="Stop showing only this series"
       @click="state.series = null"
     >
       <Icon :paths="ICONS.series" :size="12" />
-      <span class="series-active-label">{{ seriesLabel }}</span>
-      <span class="series-x">✕</span>
+      <span class="filter-chip-label">{{ seriesLabel }}</span>
+      <span class="filter-chip-x">✕</span>
+    </button>
+    <button
+      v-if="state.query.trim()"
+      class="filter-chip"
+      data-tip="Stop searching the list"
+      @click="state.query = ''"
+    >
+      <Icon :paths="ICONS.search" :size="12" />
+      <span class="filter-chip-label">“{{ state.query.trim() }}”</span>
+      <span class="filter-chip-x">✕</span>
     </button>
 
     <button v-if="isFiltered(state)" class="filter-clear-all" @click="clearAll">Clear all</button>

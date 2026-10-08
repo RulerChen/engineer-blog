@@ -14,7 +14,7 @@
     "source": "DoorDash",
     "publishedAt": "2025-06-18",
     "domain": "network",
-    "tags": ["service-mesh", "migration", "envoy"],
+    "tags": ["service-mesh", "migration", "envoy", "overload-control"],
     "summary": "Stops retry-storm cascades with load-shedding Envoy sidecars, then fixes the hidden behaviors injection exposed."
   },
   {
@@ -32,7 +32,7 @@
     "source": "DoorDash",
     "publishedAt": "2024-02-27",
     "domain": "search",
-    "tags": ["indexing", "migration", "elasticsearch", "lucene"],
+    "tags": ["indexing", "migration", "elasticsearch"],
     "summary": "Replaces Elasticsearch, bottlenecked by document replication, with a Lucene engine that ships segments via S3."
   },
   {
@@ -41,7 +41,6 @@
     "source": "DoorDash",
     "publishedAt": "2023-05-10",
     "domain": "database",
-    "tags": ["cockroachdb"],
     "summary": "Fixes heavy CockroachDB load from per-item writes by batching each layer and merging JDBI batches into one UPSERT."
   },
   {
@@ -50,7 +49,7 @@
     "source": "DoorDash",
     "publishedAt": "2023-03-21",
     "domain": "database",
-    "tags": ["feature-store", "migration", "cost", "cockroachdb", "redis"],
+    "tags": ["feature-store", "migration", "redis"],
     "summary": "Offloads features from costly, slow-to-resize Redis to CockroachDB, packed as JSON rows that touch fewer ranges."
   },
   {

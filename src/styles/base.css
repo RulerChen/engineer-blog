@@ -115,6 +115,39 @@ a {
 button {
   font: inherit;
 }
+/* A key in a shortcut; flex, so a drawn glyph and a letter sit in the middle of the face together. */
+kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  border: 1px solid var(--line);
+  border-bottom-width: 2px;
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--muted);
+  font-family: inherit;
+  font-size: var(--text-xs);
+  font-weight: 800;
+  line-height: 1;
+}
+/* Measured on the face: lowercase ink sits half a pixel under its middle and capitals half a pixel over it; drawn glyphs need nothing. */
+kbd .lower {
+  position: relative;
+  top: -0.5px;
+}
+kbd .upper {
+  position: relative;
+  top: 0.5px;
+}
+/* One keyboard focus ring in the page's own color, instead of each browser's default. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
 input::placeholder {
   color: var(--muted);
   opacity: 0.8;
@@ -124,7 +157,14 @@ input::placeholder {
   font-family: "Bricolage Grotesque", "Nunito Sans", sans-serif;
 }
 
-/* A monochrome logo ships as a light/dark pair, stacked; the theme's view transition cross-fades them with the page. */
+/* The theme switch reveals the new page in a growing circle (useTheme.ts), so the default cross-fade is off. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+/* A monochrome logo ships as a light/dark pair, stacked; the theme's view transition swaps them with the page. */
 .source-icon img {
   grid-area: 1 / 1;
 }
@@ -154,7 +194,7 @@ input::placeholder {
   transition: opacity 0.16s ease-out;
 }
 .page-leave-active {
-  transition: opacity 0.1s ease-in;
+  transition: opacity 0.1s var(--ease-out);
 }
 .page-enter-from,
 .page-leave-to {
@@ -199,9 +239,11 @@ input::placeholder {
   .month-cell,
   .year-nav,
   .series-name,
-  .series-active,
+  .filter-chip,
   .rm-rel.built,
-  .rm-check
+  .rm-check,
+  .tl-topic.built,
+  .undo-button
 ) {
   -webkit-tap-highlight-color: transparent;
   transition: transform 0.1s var(--ease-out);
@@ -218,9 +260,11 @@ input::placeholder {
   .month-cell,
   .year-nav,
   .series-name,
-  .series-active,
+  .filter-chip,
   .rm-rel.built,
-  .rm-check
+  .rm-check,
+  .tl-topic.built,
+  .undo-button
 ):active:not(:disabled) {
   transform: scale(0.97);
 }

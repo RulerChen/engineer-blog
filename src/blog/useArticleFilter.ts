@@ -30,6 +30,13 @@ export function useArticleFilter(articles: Ref<Article[]>): ArticleFilter {
   });
   onScopeDispose(() => clearTimeout(timer));
 
+  // Back, forward and the palette's "show all in the list" push urls; the bar's own edits only replace them.
+  const onPopState = (): void => {
+    if (currentPage.value === "blog") Object.assign(state, queryToState(window.location.search));
+  };
+  window.addEventListener("popstate", onPopState);
+  onScopeDispose(() => window.removeEventListener("popstate", onPopState));
+
   return {
     state,
     filtered: computed(() => applyFilters(articles.value, state)),

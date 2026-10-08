@@ -14,6 +14,8 @@ const props = defineProps<{
   activeTags: string[];
   /** The marks whose toggle takes a card out of this list. */
   removes: EntryState[];
+  /** The entry an undo just brought back, which unfolds into place. */
+  arriving: string | null;
 }>();
 
 const emit = defineEmits<{
@@ -85,6 +87,7 @@ onBeforeUnmount(() => observer?.disconnect());
         :series="article.series ? seriesIndex.get(article.series) : undefined"
         :active-tags="activeTags"
         :removes="removes"
+        :arriving="article.id === arriving"
         @toggle-saved="emit('toggleSaved', $event)"
         @toggle-hidden="emit('toggleHidden', $event)"
         @select-series="emit('selectSeries', $event)"

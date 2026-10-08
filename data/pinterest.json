@@ -5,7 +5,7 @@
     "source": "Pinterest",
     "publishedAt": "2026-09-11",
     "domain": "search",
-    "tags": ["indexing", "vector", "spann"],
+    "tags": ["indexing", "vector"],
     "summary": "Frees Manas from HNSW's need to hold whole indexes in RAM by quantizing vectors and serving SPANN from SSD."
   },
   {
@@ -32,7 +32,7 @@
     "source": "Pinterest",
     "publishedAt": "2024-11-18",
     "domain": "data",
-    "tags": ["cdc", "debezium", "kafka"],
+    "tags": ["cdc", "kafka"],
     "summary": "Fits single-shard Debezium to sharded databases without a fork by reconciling per-shard connectors to ZooKeeper."
   },
   {
@@ -60,7 +60,7 @@
     "source": "Pinterest",
     "publishedAt": "2024-07-19",
     "domain": "database",
-    "tags": ["migration", "hbase", "tidb"],
+    "tags": ["migration", "hbase"],
     "summary": "Breaks a benchmark tie among NewSQL stores to replace HBase by shadowing Ixia traffic, which only TiDB sustained."
   },
   {
@@ -78,7 +78,7 @@
     "source": "Pinterest",
     "publishedAt": "2022-08-18",
     "domain": "database",
-    "tags": ["migration", "hbase", "tidb"],
+    "tags": ["migration", "hbase"],
     "summary": "Repairs drift in a live HBase-to-TiDB move, as failed dual writes never roll back, with repeated MapReduce diffs."
   },
   {

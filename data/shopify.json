@@ -42,7 +42,7 @@
     "source": "Shopify",
     "publishedAt": "2024-01-17",
     "domain": "database",
-    "tags": ["sharding", "mysql", "rails", "vitess"],
+    "tags": ["sharding", "mysql", "vitess"],
     "summary": "Relieves a maxed-out MySQL with slow schema migrations by sharding on user_id in Vitess, gated by query verifiers."
   },
   {
@@ -52,7 +52,7 @@
     "publishedAt": "2023-01-27",
     "series": "shopify-bfcm-perf-testing",
     "domain": "reliability",
-    "tags": ["load-testing"],
+    "tags": ["testing"],
     "summary": "Picks full-scale BFCM load tests over a scaled model because added connections alone overloaded upstreams at idle."
   },
   {
@@ -70,7 +70,7 @@
     "source": "Shopify",
     "publishedAt": "2022-07-15",
     "domain": "infrastructure",
-    "tags": ["isolation", "kubernetes", "systemd"],
+    "tags": ["isolation", "kubernetes"],
     "summary": "Traces Spin pods exceeding memory limits to in-container systemd escaping the pod cgroup under the cgroupfs driver."
   },
   {
@@ -153,7 +153,7 @@
     "source": "Shopify",
     "publishedAt": "2019-10-01",
     "domain": "database",
-    "tags": ["backup", "mysql"],
+    "tags": ["disaster-recovery", "mysql"],
     "summary": "Replaces Xtrabackup, whose restores were too slow for the recovery target, with Persistent Disk snapshots."
   },
   {

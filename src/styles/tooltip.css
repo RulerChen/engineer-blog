@@ -14,8 +14,8 @@
   pointer-events: none;
   z-index: 80;
   transition:
-    opacity 0.14s ease,
-    transform 0.14s ease,
+    opacity 0.14s var(--ease-out),
+    transform 0.14s var(--ease-out),
     visibility 0s linear 0.14s;
 }
 [data-tip]::after {
@@ -67,6 +67,11 @@
   visibility: visible;
   transition-delay: 0.35s;
 }
+/* Set by tooltips.ts once a tip has shown: the next one appears and goes without delay or fade. */
+[data-tips-warm] [data-tip]::before,
+[data-tips-warm] [data-tip]::after {
+  transition: none;
+}
 [data-tip-pos="bottom"] {
   --tip-y: -3px;
   --tip-arrow-rot: 225deg;
@@ -90,6 +95,30 @@
 [data-tip-align="right"]::before {
   left: auto;
   right: 11px;
+}
+/* Beside the element, sliding in from the right; for controls on a card edge, since a card clips what sticks out of it. */
+[data-tip-pos="left"] {
+  --tip-x: 3px;
+  --tip-y: 0px;
+  --tip-arrow-x: var(--tip-x);
+  --tip-arrow-rot: -45deg;
+}
+[data-tip-pos="left"]:hover,
+[data-tip-pos="left"]:focus-visible {
+  --tip-x: 0px;
+}
+[data-tip-pos="left"]::after,
+[data-tip-pos="left"]::before {
+  top: 50%;
+  bottom: auto;
+  left: auto;
+  translate: 0 -50%;
+}
+[data-tip-pos="left"]::after {
+  right: calc(100% + 9px);
+}
+[data-tip-pos="left"]::before {
+  right: calc(100% + 4px);
 }
 /* Nothing to hover with, and a tap would leave the bubble stuck open. */
 @media (hover: none) {

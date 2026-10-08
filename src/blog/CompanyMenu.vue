@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from "vue";
+import { computed, onMounted, ref } from "vue";
 import { sourceName } from "../shared/sources.js";
 import FilterOption from "./FilterOption.vue";
 import { type Count, toggled } from "./filter.js";
@@ -11,6 +11,12 @@ const selected = defineModel<string[]>({ required: true });
 const search = ref("");
 /** Pinned to the top as the menu opens, so checking a row never moves it; unchecking drops it back into the list. */
 const pinned = ref(new Set(selected.value));
+
+const input = ref<HTMLInputElement | null>(null);
+// The autofocus attribute is ignored once the page has focus; a touch keyboard would cover the list, so fine pointers only.
+onMounted(() => {
+  if (matchMedia("(pointer: fine)").matches) input.value?.focus({ preventScroll: true });
+});
 
 function toggle(id: string): void {
   selected.value = toggled(selected.value, id);
@@ -32,7 +38,7 @@ const pinnedShown = computed(
 
 <template>
   <div class="filter-menu">
-    <input v-model="search" type="text" placeholder="Find a company…" autofocus />
+    <input ref="input" v-model="search" type="text" placeholder="Find a company…" />
     <div class="filter-menu-list">
       <template v-for="(company, index) in rows" :key="company.id">
         <FilterOption

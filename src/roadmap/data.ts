@@ -1,5 +1,16 @@
 import { type JsonData, useJson } from "../app/fetchJson.js";
-import { ROADMAP_INDEX_FILE, type Roadmap, roadmapFile } from "../shared/roadmap.js";
+import {
+  ROADMAP_INDEX_FILE,
+  ROADMAP_SEARCH_FILE,
+  type Roadmap,
+  type RoadmapSearchItem,
+  roadmapFile,
+} from "../shared/roadmap.js";
+
+/** Every roadmap item once, which only the search palette asks for. */
+export function useRoadmapSearch(): JsonData<RoadmapSearchItem[]> {
+  return useJson<RoadmapSearchItem[]>(ROADMAP_SEARCH_FILE, []);
+}
 
 /** Topic ids that have a roadmap, which is all the topic map needs. */
 export function useRoadmapIds(): JsonData<string[]> {

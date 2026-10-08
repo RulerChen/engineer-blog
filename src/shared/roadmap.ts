@@ -147,6 +147,22 @@ export interface Roadmap {
 /** The ids of every built roadmap, all the topic map needs; each roadmap is a file of its own. */
 export const ROADMAP_INDEX_FILE = "roadmaps/index.json";
 
+/** Every roadmap item once, for the search palette; under roadmaps/ so the build's clean-up and the dev route cover it. */
+export const ROADMAP_SEARCH_FILE = "roadmaps/search.json";
+
+/** What the palette needs to find, show and open an item, plus the roadmaps that list it. */
+export interface RoadmapSearchItem {
+  url: string;
+  type: EntryType;
+  title: string;
+  source?: string;
+  year?: string;
+  icon?: string;
+  iconDark?: string;
+  /** Topic ids, in the order the roadmaps were built. */
+  topics: string[];
+}
+
 export function roadmapFile(id: string): string {
   return `roadmaps/${encodeURIComponent(id)}.json`;
 }

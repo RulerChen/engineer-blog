@@ -104,7 +104,7 @@
     "source": "Meta",
     "publishedAt": "2022-11-21",
     "domain": "network",
-    "tags": ["ptp", "hardware"],
+    "tags": ["hardware"],
     "summary": "Replaces NTP, too imprecise to swap quorum reads for timestamp waits, with PTP and fbclock's window of uncertainty."
   },
   {
@@ -195,7 +195,7 @@
     "source": "Meta",
     "publishedAt": "2020-08-24",
     "domain": "distributed-systems",
-    "tags": ["coordination"],
+    "tags": ["coordination", "sharding"],
     "summary": "Moves teams off partial home-grown sharding onto Shard Manager, where apps implement add_shard and drop_shard."
   },
   {
@@ -213,7 +213,7 @@
     "source": "Meta",
     "publishedAt": "2018-06-26",
     "domain": "database",
-    "tags": ["migration", "hbase", "myrocks"],
+    "tags": ["migration", "hbase"],
     "summary": "Avoids lost writes when copying live accounts from HBase to MyRocks by retrying any whose log position moved."
   },
   {
@@ -222,7 +222,7 @@
     "source": "Meta",
     "publishedAt": "2017-09-25",
     "domain": "database",
-    "tags": ["storage-engine", "migration", "myrocks", "mysql"],
+    "tags": ["storage-engine", "migration", "mysql"],
     "summary": "Migrates space-bound UDB from InnoDB to MyRocks via cross-engine replication, which keeps InnoDB as a fallback."
   },
   {
@@ -231,7 +231,7 @@
     "source": "Meta",
     "publishedAt": "2017-08-31",
     "domain": "data",
-    "tags": ["pub-sub", "logdevice", "rocksdb"],
+    "tags": ["pub-sub", "rocksdb"],
     "summary": "Keeps appends flowing when nodes fail or logs spike by decoupling sequencing from storage so copies land on any node."
   },
   {
@@ -240,7 +240,7 @@
     "source": "Meta",
     "publishedAt": "2016-08-31",
     "domain": "database",
-    "tags": ["storage-engine", "myrocks", "mysql"],
+    "tags": ["storage-engine", "mysql"],
     "summary": "Replaces InnoDB, whose fixed-size compressed pages waste space and random writes wear flash, with RocksDB under MySQL."
   },
   {
@@ -267,7 +267,7 @@
     "source": "Meta",
     "publishedAt": "2014-04-10",
     "domain": "data",
-    "tags": ["data-lake", "hive"],
+    "tags": ["data-lake", "file-format"],
     "summary": "Fixes ORCFile bloating high-entropy columns by dictionary-encoding a stripe only when it has few distinct values."
   },
   {

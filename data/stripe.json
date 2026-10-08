@@ -14,7 +14,7 @@
     "source": "Stripe",
     "publishedAt": "2024-06-06",
     "domain": "database",
-    "tags": ["sharding", "migration", "mongodb"],
+    "tags": ["sharding", "migration"],
     "summary": "Scales DocDB past MongoDB's vertical limits by moving live chunks between shards, cutting over with version tokens."
   },
   {
@@ -23,7 +23,6 @@
     "source": "Stripe",
     "publishedAt": "2020-12-15",
     "domain": "distributed-systems",
-    "tags": ["api-design"],
     "summary": "Swaps card-shaped Charges and Sources, which broke on async and redirect methods, for one PaymentIntents state machine."
   }
 ]

@@ -14,6 +14,19 @@ function onKey(event: KeyboardEvent): void {
 }
 onMounted(() => window.addEventListener("keydown", onKey));
 onBeforeUnmount(() => window.removeEventListener("keydown", onKey));
+
+/** Shifted left by however far it would run past the filter row, still growing from under its trigger. */
+function fit(el: Element): void {
+  const menu = el as HTMLElement;
+  const bar = menu.closest(".filter-bar");
+  if (!bar) return;
+  // offsetWidth, because the entering scale already shrinks the rect.
+  const overflow =
+    menu.getBoundingClientRect().left + menu.offsetWidth - bar.getBoundingClientRect().right;
+  if (overflow <= 0) return;
+  menu.style.left = `${-overflow}px`;
+  menu.style.transformOrigin = `${overflow}px 0`;
+}
 </script>
 
 <template>
@@ -23,7 +36,7 @@ onBeforeUnmount(() => window.removeEventListener("keydown", onKey));
       <span class="chevron">▾</span>
     </button>
     <!-- The open menu, which mounts fresh each time so its search box and pins start over. -->
-    <Transition name="menu">
+    <Transition name="menu" @enter="fit">
       <slot />
     </Transition>
   </div>

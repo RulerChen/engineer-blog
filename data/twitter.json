@@ -32,7 +32,7 @@
     "source": "Twitter",
     "publishedAt": "2021-03-18",
     "domain": "distributed-systems",
-    "tags": ["microservice"],
+    "tags": ["microservice", "sharding"],
     "summary": "Replaces per-shard announcements, which made resharding a group deploy, with ShardLib's single path for all shards."
   },
   {
@@ -142,7 +142,7 @@
     "source": "Twitter",
     "publishedAt": "2015-09-16",
     "domain": "data",
-    "tags": ["pub-sub", "bookkeeper"],
+    "tags": ["pub-sub"],
     "summary": "Stops Manhattan replicas diverging on compare-and-set with DistributedLog, built on BookKeeper for its I/O isolation."
   },
   {

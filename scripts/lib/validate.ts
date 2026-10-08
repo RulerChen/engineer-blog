@@ -20,7 +20,9 @@ function blogProblems(input: EntryInput): string[] {
   for (const id of tags) {
     if (ALIASES.has(id)) problems.push(`"${id}" was renamed to "${ALIASES.get(id)}"`);
     else if (!facetOf(id))
-      problems.push(`unknown tag "${id}"; a new technology goes in TECHNOLOGIES`);
+      problems.push(
+        `unknown tag "${id}"; a technology goes in TECHNOLOGIES once two blogs' posts work on it`,
+      );
   }
   if (tags.length > TAGS_MAX) problems.push(`${tags.length} tags, at most ${TAGS_MAX}`);
   if (new Set(tags).size < tags.length) problems.push("a tag is listed twice");

@@ -1,8 +1,8 @@
 import type { EntryInput } from "../../src/shared/entry.js";
-import { ROADMAP_INDEX_FILE, roadmapFile } from "../../src/shared/roadmap.js";
+import { ROADMAP_INDEX_FILE, ROADMAP_SEARCH_FILE, roadmapFile } from "../../src/shared/roadmap.js";
 import { buildArticles, isBlogEntry } from "./articles.js";
 import { readIcons, readRoadmaps } from "./read.js";
-import { buildRoadmaps } from "./roadmaps.js";
+import { buildRoadmaps, roadmapSearchItems } from "./roadmaps.js";
 
 /** Every file the site fetches, by its path under public/; the build writes them and the dev server serves them. */
 export async function siteFiles(inputs: EntryInput[]): Promise<Map<string, unknown>> {
@@ -12,6 +12,7 @@ export async function siteFiles(inputs: EntryInput[]): Promise<Map<string, unkno
   return new Map<string, unknown>([
     ["articles.json", articles.filter(isBlogEntry)],
     [ROADMAP_INDEX_FILE, roadmaps.map((road) => road.id)],
+    [ROADMAP_SEARCH_FILE, roadmapSearchItems(roadmaps)],
     ...roadmaps.map((road) => [roadmapFile(road.id), road] as const),
   ]);
 }

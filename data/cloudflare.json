@@ -23,7 +23,6 @@
     "source": "Cloudflare",
     "publishedAt": "2025-10-31",
     "domain": "network",
-    "tags": ["bgp"],
     "summary": "Ties stuck routes to path hunting after a more-specific withdrawal, then drains by pre-announcing a same-length prefix."
   },
   {
@@ -32,7 +31,7 @@
     "source": "Cloudflare",
     "publishedAt": "2025-09-25",
     "domain": "data",
-    "tags": ["query-engine"],
+    "tags": ["query-engine", "iceberg"],
     "summary": "Avoids full-plan delays on huge Iceberg tables by streaming pruned row groups in ORDER BY order so top-K ends early."
   },
   {
@@ -41,7 +40,7 @@
     "source": "Cloudflare",
     "publishedAt": "2025-07-08",
     "domain": "database",
-    "tags": ["time-series", "migration", "timescaledb"],
+    "tags": ["time-series", "migration"],
     "summary": "Tackles slow raw device-log queries in Postgres with TimescaleDB's columnstore, as ClickHouse needs batched inserts."
   },
   {
@@ -113,7 +112,7 @@
     "source": "Cloudflare",
     "publishedAt": "2021-02-03",
     "domain": "programming",
-    "tags": ["database", "memory-management", "rocksdb", "tcmalloc"],
+    "tags": ["database", "memory-management", "rocksdb"],
     "summary": "Traces Quicksilver's RSS far above its heap to glibc arenas that can't share freed memory, then moves to TCMalloc."
   },
   {
@@ -132,7 +131,7 @@
     "publishedAt": "2020-11-25",
     "series": "cloudflare-quicksilver",
     "domain": "database",
-    "tags": ["key-value"],
+    "tags": ["key-value", "migration"],
     "summary": "Retires Kyoto Tycoon without downtime via a bridge, then traces replication lag to SSDs worn by LMDB copy-on-write."
   },
   {
@@ -186,7 +185,7 @@
     "source": "Cloudflare",
     "publishedAt": "2018-11-28",
     "domain": "security",
-    "tags": ["network", "ddos", "ebpf"],
+    "tags": ["network"],
     "summary": "Replaces Floodgate, whose Solarflare bypass fails on new NICs, with L4Drop compiling Gatebot rules into XDP eBPF."
   },
   {

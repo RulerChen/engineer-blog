@@ -7,6 +7,7 @@ import type {
   RoadmapItem,
   RoadmapItemInput,
   RoadmapLink,
+  RoadmapSearchItem,
 } from "../../src/shared/roadmap.js";
 import { topicLabel } from "../../src/shared/topicMap.js";
 import { iconFields, normalizeUrl } from "./articles.js";
@@ -137,4 +138,22 @@ export function buildRoadmaps(
       ...(evolution ? { evolution } : {}),
     };
   });
+}
+
+/** Each item once by url, however many steps and roadmaps list it; undefined fields drop out of the JSON. */
+export function roadmapSearchItems(roadmaps: Roadmap[]): RoadmapSearchItem[] {
+  const byUrl = new Map<string, RoadmapSearchItem>();
+  for (const road of roadmaps) {
+    for (const step of road.parts.flatMap((part) => part.steps)) {
+      for (const item of [step.main, ...step.background, ...step.alternative, ...step.further]) {
+        const key = normalizeUrl(item.url);
+        const found = byUrl.get(key);
+        if (!found) {
+          const { url, type, title, source, year, icon, iconDark } = item;
+          byUrl.set(key, { url, type, title, source, year, icon, iconDark, topics: [road.id] });
+        } else if (!found.topics.includes(road.id)) found.topics.push(road.id);
+      }
+    }
+  }
+  return [...byUrl.values()];
 }

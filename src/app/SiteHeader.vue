@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref } from "vue";
-import { useArticles } from "../blog/data.js";
+import { shownCount, useArticles } from "../blog/data.js";
 import { useRoadmapIds } from "../roadmap/data.js";
+import Icon from "./Icon.vue";
+import SearchPalette from "./SearchPalette.vue";
+import { ICONS } from "./icons.js";
 import { type Page, PAGES, currentPage, openPage } from "./pages.js";
 import { useTheme } from "./useTheme.js";
 
@@ -13,8 +16,20 @@ const TABS: { page: Page; label: string }[] = [
 ];
 const activeTab = computed(() => TABS.findIndex((tab) => tab.page === currentPage.value));
 
-/** Only the blog page counts its entries, and only it asks for them. */
-const count = computed(() => (currentPage.value === "blog" ? useArticles().data.value.length : 0));
+/** Only the blog page counts its entries, and only it asks for them; a narrowed list says how many it kept. */
+const count = computed(() => {
+  if (currentPage.value !== "blog") return null;
+  const total = useArticles().data.value.length;
+  if (!total) return null;
+  const shown = shownCount.value;
+  const all = total.toLocaleString("en-US");
+  return shown === null || shown === total
+    ? { text: `${all} entries`, tip: "Blog entries on the list" }
+    : {
+        text: `${shown.toLocaleString("en-US")} of ${all}`,
+        tip: "Entries shown, of all on the list",
+      };
+});
 
 /** Whether content runs under the header, which is when its bottom edge shows. */
 const scrolled = ref(window.scrollY > 0);
@@ -46,13 +61,9 @@ function warm(page: Page): void {
       <h1 class="heading-font">{{ PAGES[currentPage].title }}</h1>
       <div class="header-spacer"></div>
       <!-- Left of the tabs, so the tabs sit in the same place on every page. -->
-      <span
-        v-if="count"
-        class="header-count"
-        data-tip="Blog entries on the list"
-        data-tip-pos="bottom"
-        >{{ count.toLocaleString("en-US") }} entries</span
-      >
+      <span v-if="count" class="header-count" :data-tip="count.tip" data-tip-pos="bottom">{{
+        count.text
+      }}</span>
       <nav
         class="page-nav segmented"
         :style="{ '--count': TABS.length, '--index': activeTab }"
@@ -70,6 +81,7 @@ function warm(page: Page): void {
           >{{ tab.label }}</a
         >
       </nav>
+      <SearchPalette />
       <a
         class="header-button repo-link"
         href="https://github.com/RulerChen/engineer-blog"
@@ -92,9 +104,9 @@ function warm(page: Page): void {
         data-tip-align="right"
         :aria-label="theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
         :data-tip="theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
-        @click="toggleTheme"
+        @click="toggleTheme($event.currentTarget as Element)"
       >
-        {{ theme === "dark" ? "☀" : "☾" }}
+        <Icon :paths="theme === 'dark' ? ICONS.sun : ICONS.moon" :size="17" />
       </button>
     </div>
   </header>

@@ -14,7 +14,7 @@
     "source": "Amazon",
     "publishedAt": "2026-08-05",
     "domain": "infrastructure",
-    "tags": ["failover", "kubernetes"],
+    "tags": ["failover", "kubernetes", "eks"],
     "summary": "Ends manual repair of nodes with dead GPUs or wedged runtimes via agent-set node conditions that Karpenter acts on."
   },
   {
@@ -70,7 +70,7 @@
     "publishedAt": "2017-08-21",
     "series": "aurora-quorum",
     "domain": "database",
-    "tags": ["replication", "cost", "aurora"],
+    "tags": ["replication", "aurora"],
     "summary": "Cuts the cost of storing every copy in full by mixing full and log-only tail segments under Boolean quorum rules."
   },
   {

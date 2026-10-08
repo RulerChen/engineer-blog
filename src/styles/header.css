@@ -26,8 +26,9 @@
     border-bottom-color: var(--muted);
   }
 }
+/* Narrower than the roadmap's 1200px, so the chrome sits nearer the middle; wide enough for every item with some room to spare. */
 .site-header .header-inner {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 14px 24px;
   display: flex;
@@ -46,12 +47,22 @@
   font-size: 19px;
   flex-shrink: 0;
 }
+/* The global link hover would paint the letter the same accent as its tile. */
+@media (hover: hover) {
+  .logo-mark:hover {
+    color: #fff8f0;
+  }
+}
 .site-header h1 {
   font-weight: 700;
   font-size: var(--text-2xl);
-  line-height: 1;
+  line-height: 1.2;
   min-width: 0;
   margin: 0;
+  /* The one item that gives way when the row is short, on one line rather than two. */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .header-count {
   font-family: "Nunito Sans", sans-serif;
@@ -64,6 +75,7 @@
   padding: 3px 9px;
   line-height: 1.4;
   flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
 }
 .header-spacer {
   flex: 1;
@@ -114,15 +126,17 @@
   }
 }
 
-@media (max-width: 560px) {
-  /* Two tabs and two buttons fill a phone on their own, so the page name and count give way. */
-  .site-header .header-inner {
-    padding: 12px 16px;
-    gap: 8px;
-  }
+/* Below this the tabs and three buttons leave the page name too little room to read, so it and the count give way. */
+@media (max-width: 840px) {
   .site-header h1,
   .header-count {
     display: none;
+  }
+}
+@media (max-width: 560px) {
+  .site-header .header-inner {
+    padding: 12px 16px;
+    gap: 8px;
   }
   .page-tab {
     padding: 5px 10px;
@@ -138,13 +152,44 @@
     height: 30px;
     font-size: 17px;
   }
+  /* Narrow enough to leave room for three buttons on a 320px screen. */
   .page-tab {
-    padding: 4px 7px;
+    padding: 4px 5px;
     font-size: var(--text-sm);
   }
   .header-button {
     width: 30px;
     height: 30px;
     font-size: 14px;
+  }
+}
+/* The search button grows a label and its shortcut where the header has room for them; the tooltip then says nothing new. */
+.search-trigger-label,
+.search-trigger kbd {
+  display: none;
+}
+/* From the width where the header reaches its full 1000px. */
+@media (min-width: 1000px) {
+  .header-button.search-trigger {
+    width: auto;
+    padding: 0 6px 0 12px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted);
+    font-size: var(--text-md);
+    font-weight: 700;
+  }
+  .search-trigger-label {
+    display: inline;
+    margin-right: 14px;
+  }
+  .search-trigger kbd {
+    display: inline-flex;
+  }
+  .search-trigger::before,
+  .search-trigger::after {
+    display: none;
   }
 }

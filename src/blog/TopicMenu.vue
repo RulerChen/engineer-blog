@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from "vue";
+import { computed, onMounted, ref } from "vue";
 import { domainLabel, filterGroup } from "../shared/tags.js";
 import FilterOption from "./FilterOption.vue";
 import { type Count, type TagMode, toggled } from "./filter.js";
@@ -17,6 +17,12 @@ const MODES: { mode: TagMode; label: string; tip: string }[] = [
 const search = ref("");
 /** Pinned to the top as the menu opens, so checking a row never moves it; unchecking drops it back into the list. */
 const pinned = ref(new Set(selected.value));
+
+const input = ref<HTMLInputElement | null>(null);
+// The autofocus attribute is ignored once the page has focus; a touch keyboard would cover the list, so fine pointers only.
+onMounted(() => {
+  if (matchMedia("(pointer: fine)").matches) input.value?.focus({ preventScroll: true });
+});
 
 function toggle(id: string): void {
   selected.value = toggled(selected.value, id);
@@ -56,7 +62,7 @@ const sections = computed(() => {
 
 <template>
   <div class="filter-menu">
-    <input v-model="search" type="text" placeholder="Find a topic…" autofocus />
+    <input ref="input" v-model="search" type="text" placeholder="Find a topic…" />
     <div class="filter-menu-mode">
       <span class="mode-label">Match</span>
       <div

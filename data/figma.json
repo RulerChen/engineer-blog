@@ -22,7 +22,7 @@
     "source": "Figma",
     "publishedAt": "2026-03-25",
     "domain": "database",
-    "tags": ["caching", "redis"],
+    "tags": ["caching", "redis", "connection-pooling"],
     "summary": "Stops thundering herds of Redis connections on client scale-ups by pooling them in FigCache, a stateless RESP proxy."
   },
   {
@@ -31,7 +31,7 @@
     "source": "Figma",
     "publishedAt": "2025-09-18",
     "domain": "frontend",
-    "tags": ["rendering", "webgpu"],
+    "tags": ["rendering"],
     "summary": "Prevents per-uniform buffer uploads from slowing a WebGPU port by reworking the graphics API to batch them per submit."
   },
   {
@@ -79,7 +79,7 @@
     "publishedAt": "2024-05-17",
     "series": "figma-livegraph",
     "domain": "distributed-systems",
-    "tags": ["real-time", "graphql", "postgresql"],
+    "tags": ["real-time", "postgresql"],
     "summary": "Ends LiveGraph's fan-out of all database updates to all servers with an invalidation cache and stateless invalidators."
   },
   {
@@ -88,7 +88,7 @@
     "source": "Figma",
     "publishedAt": "2024-04-25",
     "domain": "programming",
-    "tags": ["build-system", "cpp"],
+    "tags": ["static-analysis"],
     "summary": "Ties build times outpacing code growth to unneeded includes bloating preprocessed bytes, then flags them with DIWYDU."
   },
   {
@@ -146,7 +146,7 @@
     "publishedAt": "2021-10-14",
     "series": "figma-livegraph",
     "domain": "distributed-systems",
-    "tags": ["real-time", "graphql"],
+    "tags": ["real-time", "postgresql"],
     "summary": "Replaces ad hoc update events, which caused consistency bugs, with LiveGraph routing Postgres WAL rows to subqueries."
   },
   {
