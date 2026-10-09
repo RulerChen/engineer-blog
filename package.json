@@ -17,7 +17,6 @@
     "tag-stats": "tsx scripts/tagStats.ts"
   },
   "dependencies": {
-    "@vercel/analytics": "^2.0.1",
     "vue": "^3.5.39"
   },
   "devDependencies": {

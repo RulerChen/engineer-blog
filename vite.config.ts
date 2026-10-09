@@ -10,7 +10,7 @@ import { ROADMAP_INDEX_FILE } from "./src/shared/roadmap.js";
 import { PAGE_TITLES, ROADMAP_PATH } from "./src/shared/site.js";
 
 /** The production host; sitemap and share-preview URLs must be absolute. */
-const SITE_ORIGIN = "https://awesome-engineering-blogs.vercel.app";
+const SITE_ORIGIN = "https://awesome-engineering-blogs.pages.dev";
 
 /** The latin halves of the two faces in base.css; every page draws text in both. */
 const FONTS = ["bricolage-grotesque-latin.woff2", "nunito-sans-latin.woff2"];
