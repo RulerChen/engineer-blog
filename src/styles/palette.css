@@ -147,7 +147,7 @@
 /* Drawn icons get a tile the size of a logo, so they line up with the logos around them. */
 .pal-topic {
   background: color-mix(in srgb, var(--accent) 12%, var(--card));
-  color: var(--accent);
+  color: var(--accent-ink);
 }
 /* The inset edge keeps the tile visible on the selected row, whose background is the same chip color. */
 .pal-icon.lettered,

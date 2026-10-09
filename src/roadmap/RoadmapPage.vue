@@ -53,7 +53,7 @@ onBeforeUnmount(() => window.removeEventListener("popstate", onPopState));
 </script>
 
 <template>
-  <div>
+  <main>
     <!-- The same fade as switching pages, so going into a topic and back reads like the level above. -->
     <Transition name="page" mode="out-in" @after-leave="toTop">
       <p v-if="loading" class="loading">Loading roadmaps…</p>
@@ -66,5 +66,5 @@ onBeforeUnmount(() => window.removeEventListener("popstate", onPopState));
         <TopicMap :built="built" @open="go" />
       </div>
     </Transition>
-  </div>
+  </main>
 </template>

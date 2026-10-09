@@ -139,7 +139,7 @@ function selectTag(tag: string): void {
 </script>
 
 <template>
-  <div>
+  <main>
     <!-- The list fades in like a page; the loading line leaves at once, so it never holds up a list that is ready. -->
     <Transition
       mode="out-in"
@@ -217,5 +217,5 @@ function selectTag(tag: string): void {
         </div>
       </Transition>
     </div>
-  </div>
+  </main>
 </template>

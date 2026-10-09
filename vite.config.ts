@@ -77,25 +77,25 @@ function sharedHead(): Plugin {
     transformIndexHtml(html) {
       const title = `<title>${PAGE_TITLES.blog}</title>`;
       if (!html.includes(title)) throw new Error("shared-head: index.html title not found");
+      // Written ahead of the stylesheet Vite injects: an inline script after a loading stylesheet waits for it.
+      const scripts = [THEME_SCRIPT, dataPreloadScript(base)].map(
+        (code) => `\n    <script>${code}</script>`,
+      );
       return {
-        html: html.replace(title, pageHead("blog", base)),
-        tags: [
-          { tag: "script", children: THEME_SCRIPT, injectTo: "head" },
-          { tag: "script", children: dataPreloadScript(base), injectTo: "head" },
-          ...FONTS.map(
-            (font): HtmlTagDescriptor => ({
-              tag: "link",
-              attrs: {
-                rel: "preload",
-                href: `${base}fonts/${font}`,
-                as: "font",
-                type: "font/woff2",
-                crossorigin: true,
-              },
-              injectTo: "head",
-            }),
-          ),
-        ],
+        html: html.replace(title, pageHead("blog", base) + scripts.join("")),
+        tags: FONTS.map(
+          (font): HtmlTagDescriptor => ({
+            tag: "link",
+            attrs: {
+              rel: "preload",
+              href: `${base}fonts/${font}`,
+              as: "font",
+              type: "font/woff2",
+              crossorigin: true,
+            },
+            injectTo: "head",
+          }),
+        ),
       };
     },
   };
@@ -152,6 +152,12 @@ function sitemap(): Plugin {
         "",
       ].join("\n");
       this.emitFile({ type: "asset", fileName: "sitemap.xml", source });
+      // Without it the host's SPA fallback answers /robots.txt with index.html, which crawlers read as garbage.
+      this.emitFile({
+        type: "asset",
+        fileName: "robots.txt",
+        source: `User-agent: *\nAllow: /\n\nSitemap: ${root}sitemap.xml\n`,
+      });
     },
   };
 }

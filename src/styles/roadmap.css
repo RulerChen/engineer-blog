@@ -55,7 +55,7 @@
     sans-serif;
 }
 .tm-node.built .tm-title {
-  fill: var(--accent);
+  fill: var(--accent-ink);
 }
 /* The map's columns as a list, for screens where the map would scroll sideways at a size too small to read. */
 .topic-list {
@@ -95,7 +95,7 @@
   border-style: solid;
   border-color: var(--accent);
   background: color-mix(in srgb, var(--accent) 12%, var(--card));
-  color: var(--accent);
+  color: var(--accent-ink);
   cursor: pointer;
 }
 @media (hover: hover) {
@@ -125,7 +125,7 @@
 }
 @media (hover: hover) {
   .rm-back:hover {
-    color: var(--accent);
+    color: var(--accent-ink);
   }
 }
 .rm-view {
@@ -188,7 +188,7 @@
   border-style: solid;
   border-color: color-mix(in srgb, var(--accent) 40%, transparent);
   background: color-mix(in srgb, var(--accent) 12%, var(--card));
-  color: var(--accent);
+  color: var(--accent-ink);
   cursor: pointer;
 }
 /* Folded to one line of era names until the reader opens it. */
@@ -238,12 +238,12 @@
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-ink);
 }
 .rm-evo .chevron {
   font-size: 15px;
   line-height: 1;
-  color: var(--accent);
+  color: var(--accent-ink);
   transform: rotate(-90deg);
   transition: transform 0.2s var(--ease-out);
 }
@@ -273,11 +273,11 @@
 }
 .evo-era:focus-visible .evo-era-name,
 .evo-era.active .evo-era-name {
-  fill: var(--accent);
+  fill: var(--accent-ink);
 }
 @media (hover: hover) {
   .evo-era:hover .evo-era-name {
-    fill: var(--accent);
+    fill: var(--accent-ink);
   }
 }
 .evo-era.active .evo-era-hit {
@@ -423,7 +423,7 @@
   letter-spacing: 0.08em;
   line-height: 2;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-ink);
 }
 .rm-evo-card dd {
   margin: 0;
@@ -472,7 +472,7 @@
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-ink);
 }
 /* Spine, main card, side box; the side box drops under the card on narrower screens. */
 .rm-row {
@@ -512,7 +512,7 @@
   border: 2px solid var(--accent);
   border-radius: 50%;
   background: var(--card);
-  color: var(--accent);
+  color: var(--accent-ink);
   display: grid;
   place-items: center;
   font-size: 13px;
@@ -565,7 +565,7 @@
   padding: 0 7px;
   border-radius: 999px;
   background: color-mix(in srgb, var(--accent) 12%, var(--card));
-  color: var(--accent);
+  color: var(--accent-ink);
   font-size: var(--text-xs);
   font-weight: 700;
   line-height: 1.7;
@@ -600,7 +600,7 @@
   padding: 0 7px;
   border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line));
   border-radius: 999px;
-  color: var(--accent);
+  color: var(--accent-ink);
   font-size: var(--text-xs);
   font-weight: 700;
   line-height: 1.6;

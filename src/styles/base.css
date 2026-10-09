@@ -40,10 +40,12 @@
 
 :root {
   --accent: #c4633a;
+  /* Accent for text: 4.5:1 up to a 20% accent tint over --card or 16% over --chip. */
+  --accent-ink: #944b2c;
   --bg: #faf4ea;
   --card: #fffdf8;
   --ink: #33251a;
-  --muted: #8f7a64;
+  --muted: #7a6855;
   --line: #ebdfcc;
   --chip: #f4ebdc;
   --chip-ink: #6b5843;
@@ -74,6 +76,7 @@
 }
 
 [data-theme="dark"] {
+  --accent-ink: #d69275;
   --bg: #1e1813;
   --card: #28211a;
   --ink: #f4eadc;
@@ -109,7 +112,7 @@ a {
 }
 @media (hover: hover) {
   a:hover {
-    color: var(--accent);
+    color: var(--accent-ink);
   }
 }
 button {
