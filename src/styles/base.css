@@ -1,7 +1,7 @@
-/* Self-hosted copies of the Google Fonts latin and latin-ext subsets; the data uses nothing outside them. */
+/* Google Fonts latin and latin-ext subsets, axes cut to what the CSS draws: Bricolage opsz 12-26 wght 600-800, Nunito opsz 10-12 wght 400-800. */
 @font-face {
   font-family: "Bricolage Grotesque";
-  font-weight: 400 800;
+  font-weight: 600 800;
   font-display: swap;
   src: url(/fonts/bricolage-grotesque-latin-ext.woff2) format("woff2");
   unicode-range:
@@ -11,7 +11,7 @@
 }
 @font-face {
   font-family: "Bricolage Grotesque";
-  font-weight: 400 800;
+  font-weight: 600 800;
   font-display: swap;
   src: url(/fonts/bricolage-grotesque-latin.woff2) format("woff2");
   unicode-range:
