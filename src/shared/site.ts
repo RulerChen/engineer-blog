@@ -7,3 +7,8 @@ export const PAGE_TITLES = {
 
 /** Under the site base; the build copies index.html there because the host serves real files only. */
 export const ROADMAP_PATH = "roadmap/";
+
+/** One topic's page under the site base, with its own copy of index.html; topic ids are slugs, so no encoding. */
+export function topicPath(id: string): string {
+  return `${ROADMAP_PATH}${id}/`;
+}

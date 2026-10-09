@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, ref, watchEffect } from "vue";
-import { PAGES } from "../app/pages.js";
+import { PAGES, topicInUrl, topicUrl } from "../app/pages.js";
 import RoadmapView from "./RoadmapView.vue";
 import TopicMap from "./TopicMap.vue";
 import { useRoadmap, useRoadmapIds } from "./data.js";
@@ -8,8 +8,6 @@ import { useProgress } from "./useProgress.js";
 
 const index = useRoadmapIds();
 const { done, toggle } = useProgress();
-
-const topicInUrl = (): string | null => new URLSearchParams(window.location.search).get("topic");
 
 /** The roadmap being read, or null for the topic map. */
 const current = ref(topicInUrl());
@@ -36,7 +34,7 @@ watchEffect(() => {
 
 /** Pushed, not replaced, so the back button returns to the map. */
 function go(id: string | null): void {
-  history.pushState(null, "", id ? `?topic=${id}` : window.location.pathname);
+  history.pushState(null, "", id ? topicUrl(id) : PAGES.roadmap.path);
   current.value = id;
 }
 

@@ -6,8 +6,8 @@ import { readEntries, readRoadmaps } from "./scripts/lib/read.js";
 import { siteFiles } from "./scripts/lib/site.js";
 import { entryProblems } from "./scripts/lib/validate.js";
 import { STORAGE_KEYS } from "./src/app/storage.js";
-import { ROADMAP_INDEX_FILE } from "./src/shared/roadmap.js";
-import { PAGE_TITLES, ROADMAP_PATH } from "./src/shared/site.js";
+import { ROADMAP_INDEX_FILE, type RoadmapInput } from "./src/shared/roadmap.js";
+import { PAGE_TITLES, ROADMAP_PATH, topicPath } from "./src/shared/site.js";
 
 /** The production host; sitemap and share-preview URLs must be absolute. */
 const SITE_ORIGIN = "https://awesome-engineering-blogs.pages.dev";
@@ -23,16 +23,16 @@ const THEME_SCRIPT = `try {
   document.documentElement.dataset.theme = theme;
 } catch {}`;
 
-/** The page's data, fetched alongside the bundle instead of after it; the roadmap file path matches roadmapFile. */
+/** The page's data, fetched alongside the bundle instead of after it; the paths match topicInUrl and roadmapFile. */
 function dataPreloadScript(base: string): string {
   return `{
   const base = ${JSON.stringify(base)};
   const roadmap = ${JSON.stringify(base + ROADMAP_PATH)};
-  const onRoadmap = location.pathname === roadmap || location.pathname === roadmap.slice(0, -1);
-  const topic = new URLSearchParams(location.search).get("topic");
+  const onRoadmap = location.pathname.startsWith(roadmap) || location.pathname === roadmap.slice(0, -1);
+  const topic = onRoadmap && location.pathname.slice(roadmap.length).split("/")[0];
   const files = !onRoadmap
     ? ["articles.json"]
-    : [${JSON.stringify(ROADMAP_INDEX_FILE)}, ...(topic ? [\`roadmaps/\${encodeURIComponent(topic)}.json\`] : [])];
+    : [${JSON.stringify(ROADMAP_INDEX_FILE)}, ...(topic ? [\`roadmaps/\${topic}.json\`] : [])];
   for (const file of files) {
     const link = Object.assign(document.createElement("link"), { rel: "preload", as: "fetch", crossOrigin: "anonymous", href: base + file });
     document.head.append(link);
@@ -42,24 +42,60 @@ function dataPreloadScript(base: string): string {
 
 type PageName = keyof typeof PAGE_TITLES;
 
-/** Link-preview crawlers never run the app, so what they show has to be in the HTML file. */
-const PAGE_DESCRIPTIONS: Record<PageName, string> = {
-  blog: "A hand-curated reading list of posts from big tech engineering blogs, each with a one-line summary and tags to filter by.",
-  roadmap:
-    "Self-study roadmaps for computer science subjects, from operating systems to large language models, built from public courses, books and papers.",
+/** What a crawler reads off one HTML file, since neither search nor link-preview crawlers can count on the app running. */
+interface Head {
+  title: string;
+  description: string;
+  /** Under the site base. */
+  path: string;
+  /** The preview image is public/og-<image>.png. */
+  image: PageName;
+}
+
+const PAGE_HEADS: Record<PageName, Head> = {
+  blog: {
+    title: PAGE_TITLES.blog,
+    description:
+      "A hand-curated reading list of posts from big tech engineering blogs, each with a one-line summary and tags to filter by.",
+    path: "",
+    image: "blog",
+  },
+  roadmap: {
+    title: PAGE_TITLES.roadmap,
+    description:
+      "Self-study roadmaps for computer science subjects, from operating systems to large language models, built from public courses, books and papers.",
+    path: ROADMAP_PATH,
+    image: "roadmap",
+  },
 };
 
-/** The page's title plus its description and share-preview tags; the preview image is public/og-<page>.png. */
-function pageHead(page: PageName, base: string): string {
+/** The same title the app puts in the tab once the topic loads. */
+function topicHead(road: RoadmapInput): Head {
+  const parts = road.parts.map((part) => part.name).join(", ");
+  return {
+    title: `${road.title} · ${PAGE_TITLES.roadmap}`,
+    description: `${road.title}: a self-study roadmap built from public courses, books and papers. Parts: ${parts}.`,
+    path: topicPath(road.id),
+    image: "roadmap",
+  };
+}
+
+const escapeHtml = (text: string): string =>
+  text.replaceAll("&", "&amp;").replaceAll('"', "&quot;").replaceAll("<", "&lt;");
+
+/** The page's title plus its description and share-preview tags. */
+function pageHead(head: Head, base: string): string {
   const root = SITE_ORIGIN + base;
+  const title = escapeHtml(head.title);
+  const description = escapeHtml(head.description);
   return [
-    `<title>${PAGE_TITLES[page]}</title>`,
-    `<meta name="description" content="${PAGE_DESCRIPTIONS[page]}" />`,
+    `<title>${title}</title>`,
+    `<meta name="description" content="${description}" />`,
     `<meta property="og:type" content="website" />`,
-    `<meta property="og:title" content="${PAGE_TITLES[page]}" />`,
-    `<meta property="og:description" content="${PAGE_DESCRIPTIONS[page]}" />`,
-    `<meta property="og:url" content="${page === "blog" ? root : root + ROADMAP_PATH}" />`,
-    `<meta property="og:image" content="${root}og-${page}.png" />`,
+    `<meta property="og:title" content="${title}" />`,
+    `<meta property="og:description" content="${description}" />`,
+    `<meta property="og:url" content="${root}${head.path}" />`,
+    `<meta property="og:image" content="${root}og-${head.image}.png" />`,
     `<meta property="og:image:width" content="1200" />`,
     `<meta property="og:image:height" content="630" />`,
     `<meta name="twitter:card" content="summary_large_image" />`,
@@ -82,7 +118,7 @@ function sharedHead(): Plugin {
         (code) => `\n    <script>${code}</script>`,
       );
       return {
-        html: html.replace(title, pageHead("blog", base) + scripts.join("")),
+        html: html.replace(title, pageHead(PAGE_HEADS.blog, base) + scripts.join("")),
         tags: FONTS.map(
           (font): HtmlTagDescriptor => ({
             tag: "link",
@@ -101,11 +137,11 @@ function sharedHead(): Plugin {
   };
 }
 
-/** Build only: the roadmap page is index.html under its own head; in dev, Vite's SPA fallback serves index.html there. */
-function roadmapPage(): Plugin {
+/** Build only: the roadmap page and each topic are index.html under their own head; in dev, Vite's SPA fallback serves index.html there. */
+function roadmapPages(): Plugin {
   let base = "/";
   return {
-    name: "roadmap-page",
+    name: "roadmap-pages",
     apply: "build",
     configResolved(config) {
       base = config.base;
@@ -113,17 +149,19 @@ function roadmapPage(): Plugin {
     generateBundle: {
       // After vite:build-html, which is what puts index.html in the bundle.
       order: "post",
-      handler(_options, bundle) {
+      async handler(_options, bundle) {
         const index = bundle["index.html"];
-        if (index?.type !== "asset") throw new Error("roadmap-page: no index.html in the bundle");
+        if (index?.type !== "asset") throw new Error("roadmap-pages: no index.html in the bundle");
         const source = String(index.source);
-        const blogHead = pageHead("blog", base);
-        if (!source.includes(blogHead)) throw new Error("roadmap-page: index.html head not found");
-        this.emitFile({
-          type: "asset",
-          fileName: `${ROADMAP_PATH}index.html`,
-          source: source.replace(blogHead, pageHead("roadmap", base)),
-        });
+        const blogHead = pageHead(PAGE_HEADS.blog, base);
+        if (!source.includes(blogHead)) throw new Error("roadmap-pages: index.html head not found");
+        const heads = [PAGE_HEADS.roadmap, ...(await readRoadmaps()).map(topicHead)];
+        for (const head of heads)
+          this.emitFile({
+            type: "asset",
+            fileName: `${head.path}index.html`,
+            source: source.replace(blogHead, pageHead(head, base)),
+          });
       },
     },
   };
@@ -141,9 +179,7 @@ function sitemap(): Plugin {
     async generateBundle() {
       const root = SITE_ORIGIN + base;
       const roadmap = root + ROADMAP_PATH;
-      const topics = (await readRoadmaps()).map(
-        (road) => `${roadmap}?topic=${encodeURIComponent(road.id)}`,
-      );
+      const topics = (await readRoadmaps()).map((road) => root + topicPath(road.id));
       const source = [
         `<?xml version="1.0" encoding="UTF-8"?>`,
         `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`,
@@ -213,5 +249,5 @@ function liveData(): Plugin {
 
 export default defineConfig({
   base: "/",
-  plugins: [vue(), sharedHead(), roadmapPage(), sitemap(), liveData()],
+  plugins: [vue(), sharedHead(), roadmapPages(), sitemap(), liveData()],
 });
