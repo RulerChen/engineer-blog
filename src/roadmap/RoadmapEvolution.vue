@@ -6,7 +6,24 @@ import { NODE_HEIGHT, NODE_WIDTH, layoutEvolution } from "./evolutionLayout.js";
 
 const props = defineProps<{ evolution: Evolution }>();
 
-const layout = computed(() => layoutEvolution(props.evolution));
+/** .evo-node-label's font, so labels wrap by the width they will really take. */
+const LABEL_FONT = '700 12.5px "Bricolage Grotesque"';
+const context = document.createElement("canvas").getContext("2d");
+/** Measured again once the web font is in, since a fallback font measures differently. */
+const fontsLoaded = ref(document.fonts.status === "loaded");
+void document.fonts.ready.then(() => (fontsLoaded.value = true));
+
+function measure(text: string): number {
+  if (!context) return text.length * 7.3;
+  context.font = LABEL_FONT;
+  return context.measureText(text).width;
+}
+
+const layout = computed(() => {
+  // Read only so the layout runs again when the font arrives.
+  void fontsLoaded.value;
+  return layoutEvolution(props.evolution, measure);
+});
 
 /** The clicked box or era, whose story the card below tells; hovering only lights arrows. */
 const selected = ref<string | null>(null);
@@ -114,7 +131,7 @@ function selectEra(index: number): void {
                 v-for="(line, row) in era.nameLines"
                 :key="row"
                 :x="era.x + 12"
-                :y="22 + row * 17"
+                :y="era.nameY[row]"
               >
                 {{ line }}
               </tspan>
@@ -125,7 +142,7 @@ function selectEra(index: number): void {
                 v-for="(line, row) in era.textLines"
                 :key="row"
                 :x="era.x + 12"
-                :y="era.textY + row * 14"
+                :y="era.textY[row]"
               >
                 {{ line }}
               </tspan>
@@ -176,17 +193,13 @@ function selectEra(index: number): void {
               <tspan
                 v-for="(line, row) in node.lines"
                 :key="row"
-                :x="node.x + NODE_WIDTH / 2 + 3"
-                :y="node.y + (node.lines.length > 1 ? 18 : 23) + row * 13"
+                :x="node.textX"
+                :y="node.lineY[row]"
               >
                 {{ line }}
               </tspan>
             </text>
-            <text
-              class="evo-node-year"
-              :x="node.x + NODE_WIDTH / 2 + 3"
-              :y="node.y + (node.lines.length > 1 ? 42 : 38)"
-            >
+            <text class="evo-node-year" :x="node.textX" :y="node.yearY">
               {{ node.year }}
             </text>
           </g>

@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <b><a href="https://rulerchen.github.io/engineer-blog/">Browse the list →</a></b>
+  <b><a href="https://awesome-engineering-blogs.vercel.app/">Browse the list →</a></b>
 </p>
 
 ## Sources

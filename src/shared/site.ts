@@ -5,5 +5,5 @@ export const PAGE_TITLES = {
   roadmap: "Awesome Engineering Roadmaps",
 } as const;
 
-/** Under the site base; the build copies index.html there because GitHub Pages serves real files only. */
+/** Under the site base; the build copies index.html there because the host serves real files only. */
 export const ROADMAP_PATH = "roadmap/";

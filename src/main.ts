@@ -1,3 +1,4 @@
+import { inject } from "@vercel/analytics";
 import { createApp } from "vue";
 import App from "./App.vue";
 import { warmTooltips } from "./app/tooltips.js";
@@ -10,3 +11,5 @@ import "./styles/roadmap.css";
 
 createApp(App).mount("#app");
 warmTooltips();
+// Counts loads and pushState navigations; the blog filters use replaceState, so they never count.
+inject();

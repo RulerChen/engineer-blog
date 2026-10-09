@@ -9,8 +9,8 @@ import { STORAGE_KEYS } from "./src/app/storage.js";
 import { ROADMAP_INDEX_FILE } from "./src/shared/roadmap.js";
 import { PAGE_TITLES, ROADMAP_PATH } from "./src/shared/site.js";
 
-/** The host GitHub Pages serves the base under; sitemap URLs must be absolute. */
-const SITE_ORIGIN = "https://rulerchen.github.io";
+/** The production host; sitemap and share-preview URLs must be absolute. */
+const SITE_ORIGIN = "https://awesome-engineering-blogs.vercel.app";
 
 /** The latin halves of the two faces in base.css; every page draws text in both. */
 const FONTS = ["bricolage-grotesque-latin.woff2", "nunito-sans-latin.woff2"];
@@ -40,6 +40,32 @@ function dataPreloadScript(base: string): string {
 }`;
 }
 
+type PageName = keyof typeof PAGE_TITLES;
+
+/** Link-preview crawlers never run the app, so what they show has to be in the HTML file. */
+const PAGE_DESCRIPTIONS: Record<PageName, string> = {
+  blog: "A hand-curated reading list of posts from big tech engineering blogs, each with a one-line summary and tags to filter by.",
+  roadmap:
+    "Self-study roadmaps for computer science subjects, from operating systems to large language models, built from public courses, books and papers.",
+};
+
+/** The page's title plus its description and share-preview tags; the preview image is public/og-<page>.png. */
+function pageHead(page: PageName, base: string): string {
+  const root = SITE_ORIGIN + base;
+  return [
+    `<title>${PAGE_TITLES[page]}</title>`,
+    `<meta name="description" content="${PAGE_DESCRIPTIONS[page]}" />`,
+    `<meta property="og:type" content="website" />`,
+    `<meta property="og:title" content="${PAGE_TITLES[page]}" />`,
+    `<meta property="og:description" content="${PAGE_DESCRIPTIONS[page]}" />`,
+    `<meta property="og:url" content="${page === "blog" ? root : root + ROADMAP_PATH}" />`,
+    `<meta property="og:image" content="${root}og-${page}.png" />`,
+    `<meta property="og:image:width" content="1200" />`,
+    `<meta property="og:image:height" content="630" />`,
+    `<meta name="twitter:card" content="summary_large_image" />`,
+  ].join("\n    ");
+}
+
 /** The head every page gets, written once here instead of in each HTML file. */
 function sharedHead(): Plugin {
   let base = "/";
@@ -48,46 +74,56 @@ function sharedHead(): Plugin {
     configResolved(config) {
       base = config.base;
     },
-    transformIndexHtml(): HtmlTagDescriptor[] {
-      return [
-        { tag: "script", children: THEME_SCRIPT, injectTo: "head" },
-        { tag: "script", children: dataPreloadScript(base), injectTo: "head" },
-        ...FONTS.map(
-          (font): HtmlTagDescriptor => ({
-            tag: "link",
-            attrs: {
-              rel: "preload",
-              href: `${base}fonts/${font}`,
-              as: "font",
-              type: "font/woff2",
-              crossorigin: true,
-            },
-            injectTo: "head",
-          }),
-        ),
-      ];
+    transformIndexHtml(html) {
+      const title = `<title>${PAGE_TITLES.blog}</title>`;
+      if (!html.includes(title)) throw new Error("shared-head: index.html title not found");
+      return {
+        html: html.replace(title, pageHead("blog", base)),
+        tags: [
+          { tag: "script", children: THEME_SCRIPT, injectTo: "head" },
+          { tag: "script", children: dataPreloadScript(base), injectTo: "head" },
+          ...FONTS.map(
+            (font): HtmlTagDescriptor => ({
+              tag: "link",
+              attrs: {
+                rel: "preload",
+                href: `${base}fonts/${font}`,
+                as: "font",
+                type: "font/woff2",
+                crossorigin: true,
+              },
+              injectTo: "head",
+            }),
+          ),
+        ],
+      };
     },
   };
 }
 
-/** Build only: the roadmap page is index.html under its own title; in dev, Vite's SPA fallback serves index.html there. */
+/** Build only: the roadmap page is index.html under its own head; in dev, Vite's SPA fallback serves index.html there. */
 function roadmapPage(): Plugin {
+  let base = "/";
   return {
     name: "roadmap-page",
     apply: "build",
+    configResolved(config) {
+      base = config.base;
+    },
     generateBundle: {
       // After vite:build-html, which is what puts index.html in the bundle.
       order: "post",
       handler(_options, bundle) {
         const index = bundle["index.html"];
         if (index?.type !== "asset") throw new Error("roadmap-page: no index.html in the bundle");
-        const source = String(index.source).replace(
-          `<title>${PAGE_TITLES.blog}</title>`,
-          `<title>${PAGE_TITLES.roadmap}</title>`,
-        );
-        if (!source.includes(PAGE_TITLES.roadmap))
-          throw new Error("roadmap-page: index.html title not found");
-        this.emitFile({ type: "asset", fileName: `${ROADMAP_PATH}index.html`, source });
+        const source = String(index.source);
+        const blogHead = pageHead("blog", base);
+        if (!source.includes(blogHead)) throw new Error("roadmap-page: index.html head not found");
+        this.emitFile({
+          type: "asset",
+          fileName: `${ROADMAP_PATH}index.html`,
+          source: source.replace(blogHead, pageHead("roadmap", base)),
+        });
       },
     },
   };
@@ -170,6 +206,6 @@ function liveData(): Plugin {
 }
 
 export default defineConfig({
-  base: "/engineer-blog/",
+  base: "/",
   plugins: [vue(), sharedHead(), roadmapPage(), sitemap(), liveData()],
 });
