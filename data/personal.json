@@ -1,0 +1,10 @@
+[
+  {
+    "title": "How to do distributed locking",
+    "url": "https://martin.kleppmann.com/2016/02/08/how-to-do-distributed-locking.html",
+    "publishedAt": "2016-02-08",
+    "domain": "distributed-systems",
+    "tags": ["coordination", "redis"],
+    "summary": "Shows Redlock granting rival clients a lock under pauses and clock jumps, and makes locks safe with fencing tokens."
+  }
+]
